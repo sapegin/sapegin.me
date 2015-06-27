@@ -1,0 +1,4 @@
+db.json
+*.log
+public/
+themes/sapegin/source/build

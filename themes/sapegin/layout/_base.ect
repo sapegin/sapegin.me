@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="<%= @config.language %>">
+<head>
+	<meta charset="utf-8">
+	<title><%= @page_title() %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<%- @open_graph({title: @page_title(false), twitter_id: @theme.twitter}) %>
+	<% if @page.noindex: %>
+		<meta name="robots" content="noindex follow">
+	<% end %>
+	<link href="<%- @fingerprint '/build/styles.css' %>" rel="stylesheet">
+	<!--
+	<script src="%- @fingerprint '/build/modernizr.js' %"></script>
+	<script>%- @embed_file 'build/inlines/counters.js' %</script>
+	-->
+</head>
+	<body class="<%= @body_class() %>">
+		<% content %>
+  </body>
+</html>
