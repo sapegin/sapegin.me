@@ -20,8 +20,14 @@ module.exports = function(grunt) {
 					proxy: 'http://localhost:4000/'
 				}
 			}
+		},
+		fontoptim: {
+			'Roboto-Light': {
+				src: 'fonts/Roboto-Light-webfont.*',
+				dest: 'themes/sapegin/source/build/Roboto-Light'
+			}
 		}
 	});
 
-	grunt.registerTask('default', ['styles']);
+	grunt.registerTask('default', ['fontoptim', 'styles', 'scripts']);
 };

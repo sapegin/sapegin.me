@@ -14,6 +14,8 @@
 	<script src="%- @fingerprint '/build/modernizr.js' %"></script>
 	<script>%- @embed_file 'build/inlines/counters.js' %</script>
 	-->
+	<script><%- @embed_file 'build/inlines/fontloader.js' %></script>
+	<script>loadFont('Roboto-Light','/build/Roboto-Light')</script>
 </head>
 	<body class="<%= @body_class() %>">
 		<% content %>
