@@ -8,7 +8,19 @@ module.exports = function(grunt) {
 			author: 'Artem Sapegin, http://sapegin.me',
 			dest: 'themes/sapegin/source'
 		},
-		// All other Grunt plugins
+		browserSync: {
+			dev: {
+				bsFiles: {
+					src: [
+						'themes/sapegin/**/*'
+					]
+				},
+				options: {
+					server: false,
+					proxy: 'http://localhost:4000/'
+				}
+			}
+		}
 	});
 
 	grunt.registerTask('default', ['styles']);
