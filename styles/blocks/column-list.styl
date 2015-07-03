@@ -1,0 +1,27 @@
+// Author: Artem Sapegin, http://sapegin.me, 2015
+
+.column-list {
+	layout-row();
+	margin-bottom:4vh;
+	font-size:1.2rem;
+	
+	&_primary {
+		font-size:1.4rem;
+	}
+	
+	&__column {
+		layout-left();
+		grid-padding();
+	}
+	
+	&__item {
+		space();
+	}
+	
+	&__title {
+		// font-weight:bold;
+	}
+	&__text {
+		font-size:.8em;
+	}
+}

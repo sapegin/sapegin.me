@@ -4,64 +4,68 @@
 @set_page_type 'index'
 %>
 
-<header class="header">
-	<div class="header__primary">Hi.</div>
-	<div class="header__secondary">My name is Artem. I’m a front-end developer, passionate photographer, coffee drinker and crazy dogs owner living in Berlin, Germany.</div>
-</header>
+<div class="text">
 
-<table width="100%" class="primary-projects">
-	<tr>
-		<td width="50%">
-			<b><a href="http://morning.photos/">My photography</a></b><br>
-			Gallery and blog about photography
-		</td>
-		<td width="50%">
-			<b><a href="http://blog.sapegin.me/">My nerdy writings</a></b><br>
-			Blog about front-end and geeky things
-		</td>
-	</tr>
-</table>
+	<header class="index-header">
+		<div class="index-header__primary">Hi.</div>
+		<div class="index-header__secondary">My name is Artem. I’m a front-end developer, passionate photographer, coffee drinker and crazy dogs owner living in Berlin, Germany.</div>
+	</header>
 
-<h2>My projects</h2>
+	<div class="column-list column-list_primary">
+		<div class="column-list__column">
+			<div class="column-list__item">
+				<div class="column-list__title"><a href="http://morning.photos/">My photography</a></div>
+				<div class="column-list__text">Gallery and blog about photography</div>
+			</div>
+		</div>
+		<div class="column-list__column">
+			<div class="column-list__item">
+				<div class="column-list__title"><a href="http://blog.sapegin.me/">My nerdy writings</a></div>
+				<div class="column-list__text">Blog about front-end and geeky things</div>
+			</div>
+		</div>
+	</div>
 
-<table width="100%" class="just-projects">
-	<tr>
-		<td width="50%">
-			<b><a href="http://sapegin.github.io/social-likes/">Social Likes</a></b><br>
-			Beautiful social like buttons for jQuery
-		</td>
-		<td width="50%">
-			<b><a href="https://github.com/sapegin/grunt-webfont">grunt-webfont</a></b><br>
-			<abbr>SVG</abbr> to webfont converter for Grunt
-		</td>
-	</tr>
-	<tr>
-		<td width="50%">
-			<b><a href="https://github.com/sapegin/grunt-bower-concat">grunt-bower-concat</a></b><br>
-			Bower components concatenator for Grunt
-		</td>
-		<td width="50%">
-			<b><a href="https://github.com/sapegin/shipit">shipit</a></b><br>
-			Minimalistic <abbr>SSH</abbr> deployment
-		</td>
-	</tr>
-</table>
+	<h2 class="beta">My projects</h2>
 
-<p class="also">And few other <a href="http://kovenkin.com/">open source projects</a> as well as <a href="/archive">ol’ dusty ones</a>.</p>
+	<div class="column-list">
+		<div class="column-list__column">
+			<div class="column-list__item">
+				<div class="column-list__title"><a href="http://sapegin.github.io/social-likes/">Social Likes</a></div>
+				<div class="column-list__text">Beautiful social like buttons for jQuery</div>
+			</div>
+			<div class="column-list__item">
+				<div class="column-list__title"><a href="https://github.com/sapegin/grunt-bower-concat">grunt-bower-concat</a></div>
+				<div class="column-list__text">Bower components concatenator for Grunt</div>
+			</div>
+		</div>
+		<div class="column-list__column">
+			<div class="column-list__item">
+				<div class="column-list__title"><a href="https://github.com/sapegin/grunt-webfont">grunt-webfont</a></div>
+				<div class="column-list__text"><abbr>SVG</abbr> to webfont converter for Grunt</div>
+			</div>
+			<div class="column-list__item">
+				<div class="column-list__title"><a href="https://github.com/sapegin/shipit">shipit</a></div>
+				<div class="column-list__text">Minimalistic <abbr>SSH</abbr> deployment</div>
+			</div>
+		</div>
+	</div>
 
-<p class="also">I also do a little freelance work for my awesome friends such as <a href="http://kovenkin.com/">Rodion Kovenkin</a>, <a href="http://genn.org/">Genn.org</a> and <a href="http://rememba.ru/">Rememba</a>.</p>
+	<div class="index-secondary">
+		<p>And few other <a href="http://kovenkin.com/">open source projects</a> as well as <a href="/archive">ol’ dusty ones</a>.</p>
 
-<div style="margin-bottom:50px"></div>
+		<p>I also do a little freelance work for my awesome friends such as <a href="http://kovenkin.com/">Rodion Kovenkin</a>, <a href="http://genn.org/">Genn.org</a> and <a href="http://rememba.ru/">Rememba</a>.</p>
+	</div>
 
-<h2>Contact me</h2>
+	<h2 class="beta">Contact me</h2>
 
-<p>Drop me a line <a href="mailto:artem@sapegin.ru">at artem@sapegin.ru</a> or ping me <a href="skype:artemsapegin">at Skype</a> if you just want to chat.</p>
+	<p>Drop me a line at <a href="mailto:artem@sapegin.ru">artem@sapegin.ru</a> or ping me at <a href="skype:artemsapegin">Skype</a> if you just want to chat.</p>
 
-<center>
-	<p class="socials">
-		<i class="fa fa-twitter"></i>
-		<i class="fa fa-facebook"></i>
-		<i class="fa fa-instagram"></i>
-		<i class="fa fa-github"></i>
-	</p>
-</center>
+</div>
+
+<div class="socials">
+	<i class="fa fa-twitter"></i>
+	<i class="fa fa-facebook"></i>
+	<i class="fa fa-instagram"></i>
+	<i class="fa fa-github"></i>
+</div>

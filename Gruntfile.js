@@ -22,9 +22,9 @@ module.exports = function(grunt) {
 			}
 		},
 		fontoptim: {
-			'Roboto-Light': {
-				src: 'fonts/Roboto-Light-webfont.*',
-				dest: 'themes/sapegin/source/build/Roboto-Light'
+			'Roboto': {
+				src: 'fonts/Roboto*.*',
+				dest: 'themes/sapegin/source/build/Roboto'
 			}
 		}
 	});
