@@ -1,0 +1,30 @@
+// Author: Artem Sapegin, http://sapegin.me, 2015
+
+.socials {
+	text-align:center;
+	
+	&__item {
+		display:inline-block;
+		margin-side:.3em;
+		vertical-align:middle;
+		
+		&_facebook {
+			margin-top:-2px;
+			padding-side:2px;
+		}
+		
+		svg path {
+			transition:fill .2s ease-in-out;
+		}
+		
+		+link-hovers() {
+			svg path {
+				fill:base_color;
+			} 
+		}
+	}
+	
+	a {
+		no-underline();
+	}
+}

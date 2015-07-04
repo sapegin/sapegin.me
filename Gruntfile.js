@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 	require('tamia-grunt')(grunt, {
 		tamia: {
 			author: 'Artem Sapegin, http://sapegin.me',
-			dest: 'themes/sapegin/source'
+			dest: 'themes/sapegin/source',
+			imagesDest: 'themes/sapegin/source/build/images'
 		},
 		browserSync: {
 			dev: {
