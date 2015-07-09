@@ -19,5 +19,13 @@
 </head>
 	<body class="<%= @body_class() %>">
 		<% content %>
-  </body>
+		<% if @page.jquery: %>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<% end %>
+		<% if @page.scripts: %>
+			<% for script in @page.scripts: %>
+				<script src="<%- @fingerprint "/build/#{script}.js" %>"></script>
+			<% end %>
+		<% end %>
+	</body>
 </html>

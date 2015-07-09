@@ -1,25 +1,5 @@
 <header class="header content">
 
-	<% if @is_home(): %>
-		<h1 class="logo"><%= @config.title %></h1>
-	<% else: %>
-		<div class="logo">
-			<a href="/" class="logo__link"><%= @config.title %></a>
-		</div>
-	<% end %>
-
-	<nav class="nav">
-		<ul><!--
-		<% for title, url of @theme.menu: %>
-			--><li class="nav__item">
-				<% if @is_current(url, true): %>
-					<span class="nav__label is-active"><%= title %></a>
-				<% else: %>
-					<a class="nav__label <% if @path.indexOf(url) is 0: %>is-active<% end %>" href="<%- if url.indexOf('http:') is 0 then url else "/#{url}" %>"><%= title %></a>
-				<% end %>
-			</li><!--
-		<% end %>
-		--></ul>
-	</nav>
+	<a href="/" class="link link_quoted">← <u><%= @config.title %></u></a>
 
 </header>

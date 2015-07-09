@@ -3,11 +3,36 @@
 module.exports = function(grunt) {
 	'use strict';
 
+	var dest = 'themes/sapegin/source';
+
 	require('tamia-grunt')(grunt, {
 		tamia: {
 			author: 'Artem Sapegin, http://sapegin.me',
-			dest: 'themes/sapegin/source',
-			imagesDest: 'themes/sapegin/source/build/images'
+			dest: dest,
+			imagesDest: dest + '/build/images'
+		},
+		concat: {
+			history: {
+				nonull: true,
+				src: [
+					'vendor/gamesoup/jsgamesoup.js',
+					'vendor/gamesoup/random.js',
+					'vendor/gamesoup/sprite.js',
+					'vendor/gamesoup/collisions.js',
+					'js/ironman.js'
+				],
+				dest: dest + '/build/history.js'
+			}
+		},
+		uglify: {
+			history: {
+				options: {
+					banner: '<%= banner %>'
+				},
+				files: {
+					'<%= concat.history.dest %>': '<%= concat.history.dest %>'
+				}
+			}
 		},
 		browserSync: {
 			dev: {
