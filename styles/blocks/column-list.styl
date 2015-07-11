@@ -2,25 +2,19 @@
 
 .column-list {
 	layout-row();
-	margin-bottom:4vh;
 	font-size:1.2rem;
 	
 	&_primary {
 		font-size:1.4rem;
 	}
 	
-	&__column {
-		layout-left();
-		grid-padding();
-	}
-	
 	&__item {
+		layout-nth(1/2);
 		space();
+		float:left;
+		width:50%;
 	}
 	
-	&__title {
-		// font-weight:bold;
-	}
 	&__text {
 		font-size:.8em;
 	}

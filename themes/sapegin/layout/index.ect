@@ -6,54 +6,40 @@
 
 <div class="text">
 
-	<header class="index-header">
+	<header class="index-header index-block index-block_last">
 		<div class="index-header__primary">Hi.</div>
 		<div class="index-header__secondary">My name is Artem. I’m a front-end developer, passionate photographer, coffee drinker and crazy dogs owner living in Berlin, Germany.</div>
 	</header>
 
-	<div class="column-list column-list_primary">
-		<div class="column-list__column">
-			<div class="column-list__item">
-				<div class="column-list__title"><a href="http://morning.photos/">My photography</a></div>
-				<div class="column-list__text">Gallery and blog about photography</div>
-			</div>
+	<div class="column-list column-list_primary index-block">
+		<div class="column-list__item">
+			<div class="column-list__title"><a href="http://morning.photos/">My photography</a></div>
+			<div class="column-list__text">Gallery and blog about photography</div>
 		</div>
-		<div class="column-list__column">
-			<div class="column-list__item">
-				<div class="column-list__title"><a href="http://blog.sapegin.me/">My nerdy writings</a></div>
-				<div class="column-list__text">Blog about front-end and geeky things</div>
-			</div>
+		<div class="column-list__item">
+			<div class="column-list__title"><a href="http://blog.sapegin.me/">My nerdy writings</a></div>
+			<div class="column-list__text">Blog about front-end and geeky things</div>
 		</div>
 	</div>
 
 	<h2 class="beta">My projects</h2>
 
-	<div class="column-list">
-		<div class="column-list__column">
-			<div class="column-list__item">
-				<div class="column-list__title"><a href="http://sapegin.github.io/social-likes/">Social Likes</a></div>
-				<div class="column-list__text">Beautiful social like buttons for jQuery</div>
-			</div>
-			<div class="column-list__item">
-				<div class="column-list__title"><a href="https://github.com/sapegin/grunt-bower-concat">grunt-bower-concat</a></div>
-				<div class="column-list__text">Bower components concatenator for Grunt</div>
-			</div>
-		</div>
-		<div class="column-list__column">
-			<div class="column-list__item">
-				<div class="column-list__title"><a href="https://github.com/sapegin/grunt-webfont">grunt-webfont</a></div>
-				<div class="column-list__text"><abbr>SVG</abbr> to webfont converter for Grunt</div>
-			</div>
-			<div class="column-list__item">
-				<div class="column-list__title"><a href="https://github.com/sapegin/shipit">shipit</a></div>
-				<div class="column-list__text">Minimalistic <abbr>SSH</abbr> deployment</div>
-			</div>
+	<script>function showMoreProjects(link) {
+		link.classList.add('is-hidden');
+		document.querySelector(link.getAttribute('href')).classList.remove('is-hidden');
+	}</script>
+
+	<div class="index-block">
+		<%- @partial '_partials/column-list', {items: @page.projects} %>
+
+		<div class="secondary-text"><a href="#projects-rest" onclick="showMoreProjects(this)">Show more projects</a></div>
+
+		<div id="projects-rest" class="is-hidden">
+			<%- @partial '_partials/column-list', {items: @page.projects_rest} %>
 		</div>
 	</div>
 
-	<div class="index-secondary">
-		<p>And few other <a href="http://kovenkin.com/">open source projects</a> as well as <a href="/archive">ol’ dusty ones</a>.</p>
-
+	<div class="index-block index-block_last secondary-text">
 		<p>I also do a little freelance work for my awesome friends such as <a href="http://kovenkin.com/">Rodion Kovenkin</a>, <a href="http://genn.org/">Genn.org</a> and <a href="http://rememba.ru/">Rememba</a>.</p>
 	</div>
 
@@ -64,10 +50,10 @@
 	</div>
 
 	<div class="socials">
-		<a href="https://twitter.com/iamsapegin" class="socials__item socials__item_twitter"><%- @embed_file 'build/images/twitter.svg' %></a>
-		<a href="https://www.facebook.com/artemsapegin" class="socials__item socials__item_facebook"><%- @embed_file 'build/images/facebook.svg' %></a>
-		<a href="https://instagram.com/sapegin/" class="socials__item socials__item_instagram"><%- @embed_file 'build/images/instagram.svg' %></a>
-		<a href="https://github.com/sapegin" class="socials__item socials__item_github"><%- @embed_file 'build/images/github.svg' %></a>
+		<a href="https://twitter.com/iamsapegin" class="socials__item socials__item_twitter" title="Twitter"><%- @embed_file 'build/images/twitter.svg' %></a>
+		<a href="https://www.facebook.com/artemsapegin" class="socials__item socials__item_facebook" title="Facebook"><%- @embed_file 'build/images/facebook.svg' %></a>
+		<a href="https://instagram.com/sapegin/" class="socials__item socials__item_instagram" title="Instagram"><%- @embed_file 'build/images/instagram.svg' %></a>
+		<a href="https://github.com/sapegin" class="socials__item socials__item_github" title="GitHub"><%- @embed_file 'build/images/github.svg' %></a>
 	</div>
 
 </div>

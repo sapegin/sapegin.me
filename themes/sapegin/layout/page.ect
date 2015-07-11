@@ -1,7 +1,0 @@
-<% extend '_page-with-title' %>
-
-<%- @rt @page.content %>
-
-<% if @page.likes: %>
-	<%- @partial '_partials/sociallikes', {title: @page.title} %>
-<% end %>

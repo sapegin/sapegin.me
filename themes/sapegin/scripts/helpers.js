@@ -47,6 +47,9 @@ helpers.theme_filepath = function(filepath) {
 helpers.body_class = function() {
 	var types = this.page.page_type;
 	if (types) {
+		if (!Array.isArray(types)) {
+			types = [types];
+		}
 		types = types.map(function(type) {
 			return 'page_' + type;
 		});
