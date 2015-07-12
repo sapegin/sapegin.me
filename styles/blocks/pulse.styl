@@ -1,0 +1,49 @@
+// Author:Artem Sapegin, http://sapegin.me, 2015
+
+.pulse {
+	_color_twitter = #a3cce2;
+	_color_instagram = #fcbb9f;
+	_color_github = #b2d8b9;
+	
+	&__info {
+		margin-top:-1em;
+		margin-bottom:-.5em;
+		text-align:center;
+		font-size:15px;
+		opacity:0;
+		transition:opacity .2s ease-in-out;
+	}
+	&:hover &__info {
+		opacity:1;
+	}
+	
+	&__legend_twitter {
+		color:darken(_color_twitter, 25%);
+	}
+	&__legend_instagram {
+		color:darken(_color_instagram, 20%);
+	}
+	&__legend_github {
+		color:darken(_color_github, 30%);
+	}
+	
+	svg {
+		width:100%;
+		height:200px;	
+	}
+	
+	path {
+		fill:none;
+		stroke-width:1;
+	}
+	
+	#twitter {
+		stroke:_color_twitter;
+	}
+	#instagram {
+		stroke:_color_instagram;
+	}
+	#github {
+		stroke:_color_github;
+	}
+}

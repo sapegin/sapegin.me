@@ -2,3 +2,5 @@ db.json
 *.log
 public/
 themes/sapegin/source/build
+gatherer/.secrets.json
+gatherer/data.json
