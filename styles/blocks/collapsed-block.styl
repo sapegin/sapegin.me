@@ -1,12 +1,14 @@
 // Author: Artem Sapegin, http://sapegin.me, 2015
 
-.collapsed-block {
-	overflow:hidden;
-	max-height:500px;
-	transition:all .4s ease-in-quint;
++above(600px) {
+	.collapsed-block {
+		overflow:hidden;
+		max-height:500px;
+		transition:all .4s ease-in-quint;
 
-	&.is-hidden {
-		display:block !important;
-		max-height:0;
+		&.is-hidden {
+			display:block !important;
+			max-height:0;
+		}
 	}
 }

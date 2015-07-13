@@ -6,8 +6,6 @@
 	&__item {
 		layout-nth(1/2);
 		space();
-		float:left;
-		width:50%;
 	}
 	
 	&__title {
@@ -22,5 +20,11 @@
 	}
 	&_primary &__text {
 		font-size:big_font;
+	}
+	
+	+below(600px) {
+		&__item {
+			layout-nth(1);
+		}
 	}
 }

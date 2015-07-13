@@ -12,6 +12,12 @@
 	&:hover &-i {
 		animation:_embed-tsott 4s infinite;
 	}
+	
+	+below(480px) {
+		&-i {
+			background-size:contain;
+		}
+	}
 }
 
 @keyframes _embed-tsott {
