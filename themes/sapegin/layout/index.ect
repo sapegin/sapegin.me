@@ -24,17 +24,17 @@
 
 	<h2 class="beta">My projects</h2>
 
-	<div class="index-block index-block_secondary">
+	<div class="l-double-space">
 		<%- @partial '_partials/column-list', {items: @page.projects} %>
 
-		<div class="secondary-text"><a href="#projects-rest" onclick="showMoreProjects(event,this)">Show more projects</a></div>
+		<div class="index-text secondary-text"><a href="#projects-rest" onclick="showMoreProjects(event,this)">Show more projects</a></div>
 
 		<div id="projects-rest" class="collapsed-block is-hidden">
 			<%- @partial '_partials/column-list', {items: @page.projects_rest} %>
 		</div>
 	</div>
 
-	<div class="index-block index-block_last secondary-text">
+	<div class="index-block secondary-text">
 		<p>I also do a little freelance work for my awesome friends such as <a href="http://kovenkin.com/">Rodion Kovenkin</a>, <a href="http://genn.org/">Genn.org</a> and <a href="http://rememba.ru/">Rememba</a>.</p>
 	</div>
 

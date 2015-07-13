@@ -2,12 +2,7 @@
 
 .column-list {
 	layout-row();
-	font-size:1.2rem;
-	
-	&_primary {
-		font-size:1.4rem;
-	}
-	
+		
 	&__item {
 		layout-nth(1/2);
 		space();
@@ -15,7 +10,17 @@
 		width:50%;
 	}
 	
+	&__title {
+		font-size:big_font;
+	}
 	&__text {
-		font-size:.8em;
+		font-size:small_font;
+	}
+
+	&_primary &__title {
+		font-size:big_font*1.25;
+	}
+	&_primary &__text {
+		font-size:big_font;
 	}
 }
