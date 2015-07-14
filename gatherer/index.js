@@ -16,7 +16,8 @@
 
 var tasksDir = './tasks',
 	outFile = './data.json',
-	svgFile = '../themes/sapegin/source/build/pulse.svg',
+	svgFileDev = '../themes/sapegin/source/build/pulse.svg',
+	svgFileProd = '../public/build/pulse.svg',
 	options = {
 		weeksCount: 12,
 		githubUser: 'sapegin',
@@ -37,6 +38,7 @@ var tasksDir = './tasks',
 
 var fs = require('fs'),
 	log = require('winston'),
+	mkdirp = require('mkdirp'),
 	taskrunner = require('./libs/taskrunner'),
 	svgdrawer = require('./libs/draw');
 
@@ -61,6 +63,7 @@ taskrunner.run(tasksDir, options, function(results) {
 	}
 
 	// Save data as JSON file
+	mkdirp.sync(path.dirname(outFile));
 	fs.writeFile(outFile, JSON.stringify(results), function(err) {
 		if (err) {
 			log.error('Cannot write file ' + outFile + '.');
@@ -69,6 +72,9 @@ taskrunner.run(tasksDir, options, function(results) {
 
 	// Save chart to SVG file
 	svgdrawer.draw(results, function(svgText) {
-		fs.writeFileSync(svgFile, svgText);
+		mkdirp.sync(path.dirname(svgFileDev));
+		fs.writeFileSync(svgFileDev, svgText);
+		mkdirp.sync(path.dirname(svgFileProd));
+		fs.writeFileSync(svgFileProd, svgText);
 	});
 });
