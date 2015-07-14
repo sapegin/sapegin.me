@@ -16,11 +16,11 @@
 
 var tasksDir = './tasks',
 	outFile = './data.json',
+	svgFile = '../themes/sapegin/source/build/pulse.svg',
 	options = {
 		weeksCount: 12,
 		githubUser: 'sapegin',
 		instagramUser: 16919229,
-		instagramTags: ['coffee', 'tsiri', 'dessi', 'workhardanywhere'],
 		twitterUser: 'sapegin',
 
 		// Following options shoud be in ./.secrets.json
@@ -37,7 +37,8 @@ var tasksDir = './tasks',
 
 var fs = require('fs'),
 	log = require('winston'),
-	taskrunner = require('./libs/taskrunner');
+	taskrunner = require('./libs/taskrunner'),
+	svgdrawer = require('./libs/draw');
 
 log.add(log.transports.File, { filename: 'gatherer.log' });
 
@@ -59,9 +60,15 @@ taskrunner.run(tasksDir, options, function(results) {
 		}
 	}
 
+	// Save data as JSON file
 	fs.writeFile(outFile, JSON.stringify(results), function(err) {
 		if (err) {
 			log.error('Cannot write file ' + outFile + '.');
 		}
+	});
+
+	// Save chart to SVG file
+	svgdrawer.draw(results, function(svgText) {
+		fs.writeFileSync(svgFile, svgText);
 	});
 });

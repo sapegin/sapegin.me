@@ -1,39 +1,30 @@
 #!/usr/bin/env node
 
+// Author: Artem Sapegin, http://sapegin.me, 2015
+
 'use strict';
 
-var SVG_FILE = '../themes/sapegin/source/build/pulse.svg';
 var SVG_WIDTH = 800;
 var SVG_HEIGHT = 200;
 
 var options = {
-	style: {
-		'stroke-width': 1,
-		'fill': 'none'
-	},
 	twitter: {
 		key: 'tweets',
-		totalKey: 'totalTweets',
-		color: 'red'
+		totalKey: 'totalTweets'
 	},
 	github: {
 		key: 'commits',
-		totalKey: 'totalCommits',
-		color: 'blue'
+		totalKey: 'totalCommits'
 	},
 	instagram: {
 		key: 'photos',
-		totalKey: 'totalPhotos',
-		color: 'green'
+		totalKey: 'totalPhotos'
 	}
 };
 
 var d3 = require('d3');
 var jsdom = require('jsdom');
 var SVGO = require('svgo');
-var fs = require('fs');
-
-var data = require('./data.json');
 
 function draw(data, options) {
 	var highestPoint = getHighestPoint(data, options);
@@ -93,13 +84,21 @@ function getHighestPoint(data, options) {
 	return Math.max.apply(Math, highs);
 }
 
-var svgText = draw(data, options);
-var svgo = new SVGO({
-	plugins: [
-		{cleanupIDs: false}
-	]
-});
-console.log(svgText)
-svgo.optimize(svgText, function(result) {
-	fs.writeFileSync(SVG_FILE, result.data);	
-});
+/**
+ * Draws splines for tweets, commits and instagrams to an SVG string.
+ * 
+ * @param {Object} data
+ * @param {Function} callback
+ * @return {String}
+ */
+exports.draw = function(data, callback) {
+	var svgText = draw(data, options);
+	var svgo = new SVGO({
+		plugins: [
+			{cleanupIDs: false}
+		]
+	});
+	svgo.optimize(svgText, function(result) {
+		callback(result.data);
+	});
+};

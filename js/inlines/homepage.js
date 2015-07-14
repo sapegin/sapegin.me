@@ -1,3 +1,5 @@
+// Author: Artem Sapegin, http://sapegin.me, 2015
+
 function showMoreProjects(event, linkElem) {
 	event.preventDefault();
 	var hiddenClass = 'is-hidden';
