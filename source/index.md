@@ -3,7 +3,7 @@ title: 'Artem Sapegin: front-end developer, photographer &amp; dog lover'
 projects:
   -
     title: Social Likes
-    description: Beautiful social like buttons for jQuery
+    description: Beautiful social share buttons for jQuery
     link: http://sapegin.github.io/social-likes/
   -
     title: grunt-webfont
@@ -11,7 +11,7 @@ projects:
     link: https://github.com/sapegin/grunt-webfont
   -
     title: grunt-bower-concat
-    description: Bower components concatenator for Grunt
+    description: Bower components concatenation for Grunt
     link: https://github.com/sapegin/grunt-bower-concat
   -
     title: shipit
@@ -24,7 +24,7 @@ projects_rest:
     link: http://tamiadev.github.io/tamia/
   -
     title: jquery.mosaicflow
-    description: Pinterest like responsive image grid that doesn’t suck
+    description: Pinterest like responsive image grid
     link: https://github.com/sapegin/jquery.mosaicflow
   -
     title: bower-update
