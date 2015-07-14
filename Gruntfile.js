@@ -57,4 +57,5 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', ['fontoptim', 'styles', 'scripts']);
+	grunt.registerTask('deploy', ['default']);
 };
