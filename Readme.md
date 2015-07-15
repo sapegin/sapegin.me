@@ -1,5 +1,7 @@
 # Artem Sapegin’s Home Page version 2015
 
+[![Build Status](https://travis-ci.org/sapegin/sapegin.me.png)](https://travis-ci.org/sapegin/sapegin.me)
+
 Powered by [Hexo](http://hexo.io/).
 
 
