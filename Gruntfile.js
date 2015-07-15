@@ -9,6 +9,7 @@ module.exports = function(grunt) {
 		tamia: {
 			author: 'Artem Sapegin, http://sapegin.me',
 			modernizr: false,
+			pngquant: false,
 			dest: dest,
 			imagesDest: dest + '/build/images'
 		},

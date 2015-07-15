@@ -28,6 +28,6 @@
     "grunt-newer": "~1.1.1",
     "imagemin-pngquant": "~4.1.0",
     "stylobuild": "~0.7.0",
-    "tamia-grunt": "~0.5.0"
+    "tamia-grunt": "~0.5.1"
   }
 }
