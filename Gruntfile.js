@@ -56,6 +56,6 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('default', ['fontoptim', 'styles', 'scripts']);
+	grunt.registerTask('default', ['fontoptim', 'styles', 'concat', 'uglify']);
 	grunt.registerTask('deploy', ['default']);
 };
