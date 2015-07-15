@@ -63,7 +63,6 @@ taskrunner.run(tasksDir, options, function(results) {
 	}
 
 	// Save data as JSON file
-	mkdirp.sync(path.dirname(outFile));
 	fs.writeFile(outFile, JSON.stringify(results), function(err) {
 		if (err) {
 			log.error('Cannot write file ' + outFile + '.');
