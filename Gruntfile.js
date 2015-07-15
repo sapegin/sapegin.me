@@ -12,6 +12,12 @@ module.exports = function(grunt) {
 			dest: dest,
 			imagesDest: dest + '/build/images'
 		},
+		imagemin: {
+			options: {
+				optimizationLevel: 5,
+				progressive: true
+			}
+		},
 		concat: {
 			history: {
 				nonull: true,
