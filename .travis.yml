@@ -6,4 +6,3 @@ before_script:
 - ./node_modules/.bin/hexo generate
 - cd gatherer
 - npm install
-- node ./index.js
