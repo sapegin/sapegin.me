@@ -38,6 +38,7 @@ var tasksDir = './tasks',
 
 var fs = require('fs'),
 	log = require('winston'),
+	path = require('path'),
 	mkdirp = require('mkdirp'),
 	taskrunner = require('./libs/taskrunner'),
 	svgdrawer = require('./libs/draw');
