@@ -22,9 +22,6 @@
 </head>
 	<body class="page page_<%= @layout %>">
 		<% content %>
-		<% if @jquery: %>
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<% end %>
 		<% if @scripts: %>
 			<% for script in @scripts: %>
 				<script src="<%- @fingerprint "/build/#{script}.js" %>"></script>

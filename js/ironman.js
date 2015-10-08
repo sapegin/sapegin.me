@@ -1,9 +1,26 @@
 /* © 2012 Artem Sapegin http://sapegin.me */
 
-;(function($) {
-	/*jshint browser:true, jquery:true, white:false, smarttabs:true */
-	/*global jQuery:false, JSGameSoup:false, Sprite:false, SeedableRandom:false, collide:false */
+;(function() {
+	/*jshint browser:true, white:false, smarttabs:true */
+	/*global JSGameSoup:false, Sprite:false, SeedableRandom:false, collide:false */
 	'use strict';
+
+	// http://youmightnotneedjquery.com/#fade_in
+	function fadeIn(el, duration) {
+		el.style.opacity = 0;
+
+		var last = +new Date();
+		var tick = function() {
+			el.style.opacity = +el.style.opacity + (new Date() - last) / duration;
+			last = +new Date();
+
+			if (+el.style.opacity < 1) {
+				requestAnimationFrame(tick);
+			}
+		};
+
+		tick();
+	}
 
 	var WORLD_WIDTH = 1600,
 		PLAYGROUND_WIDTH,
@@ -19,7 +36,8 @@
 		BG_COLOR = '#000';
 
 	var r = getRandomGenerator(),
-		gs = new JSGameSoup(getCanvas(), 30);
+		canvasElem = getCanvas(),
+		gs = new JSGameSoup(canvasElem, 30);
 
 	// Preload sprites
 	Sprite.preload([
@@ -41,7 +59,7 @@
 		// Create the world when all sprites loaded
 		function() {
 			gs.addEntity(new World());
-			$('#ironman canvas').fadeIn(1200);
+			fadeIn(canvasElem, 1200);
 		}
 	);
 
@@ -411,7 +429,7 @@
 		resizeCanvas(container, canvas);
 		container.appendChild(canvas);
 
-		$(window).resize(function() {
+		window.addEventListener('resize', function() {
 			resizeCanvas(container, canvas);
 		});
 
@@ -457,4 +475,4 @@
 				sprite.action('stand left');
 		}
 	}
-})(jQuery);
+})();

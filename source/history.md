@@ -3,7 +3,6 @@ layout: page-with-title
 title: 'My History'
 pageTitle: 'Artem Sapegin’s Illustrated History'
 description: 'History of quite usual computer geek with not so usual interactive elements.'
-jquery: true
 scripts:
   - history
 ---
