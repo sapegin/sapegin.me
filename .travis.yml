@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - "0.10"
   - "0.12"
-  - "4"
 before_script:
 - node -e "require('grunt').cli()" _ deploy
 - npm run build
