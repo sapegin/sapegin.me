@@ -3,12 +3,12 @@
   Web developer: Artem Sapegin
   Email: artem@sapegin.ru
   Site: http://sapegin.me
-  Location: Moscow, Russia
+  Location: Berlin, Germany
 
 
 /* POWERED BY */
 
-  Hexo: http://hexo.io/
+  Sweet2: https://github.com/sapegin/sweet2
   Tâmia: http://sapegin.github.io/tamia/
 
   -_-_-_-_-_-_-_,------,

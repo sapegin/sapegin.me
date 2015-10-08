@@ -1,5 +1,6 @@
+---
 layout: index
-title: 'Artem Sapegin: front-end developer, photographer &amp; dog lover'
+pageTitle: 'Artem Sapegin: front-end developer, photographer &amp; dog lover'
 projects:
   -
     title: Social Likes
@@ -17,7 +18,7 @@ projects:
     title: shipit
     description: Minimalistic <abbr>SSH</abbr> deployment
     link: https://github.com/sapegin/shipit
-projects_rest:
+projectsRest:
   -
     title: Tâmia
     description: My tiny extremely opinionated front-end framework

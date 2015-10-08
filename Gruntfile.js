@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
 	'use strict';
 
-	var dest = 'themes/sapegin/source';
+	var dest = 'public';
 
 	require('tamia-grunt')(grunt, {
 		tamia: {
@@ -46,19 +46,19 @@ module.exports = function(grunt) {
 			dev: {
 				bsFiles: {
 					src: [
-						'themes/sapegin/**/*'
+						'public/**/*'
 					]
 				},
 				options: {
 					server: false,
-					proxy: 'http://localhost:4000/'
+					proxy: 'http://localhost:4242/'
 				}
 			}
 		},
 		fontoptim: {
 			'Roboto': {
 				src: 'fonts/Roboto*.*',
-				dest: 'themes/sapegin/source/build/Roboto'
+				dest: 'public/build/Roboto'
 			}
 		}
 	});

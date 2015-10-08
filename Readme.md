@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sapegin/sapegin.me.png)](https://travis-ci.org/sapegin/sapegin.me)
 
-Powered by [Hexo](http://hexo.io/).
+Powered by [Sweet2](https://github.com/sapegin/sweet2).
 
 
 ## Author

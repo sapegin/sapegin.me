@@ -1,0 +1,13 @@
+sourceFolder: source
+sourceTypes: 
+  - md
+  - html
+templatesFolder: templates
+assetsFolder: public
+publicFolder: public
+
+lang: en
+url: http://sapegin.me
+
+title: Artem Sapegin
+description: 'I’m a front-end developer, passionate photographer, coffee drinker and crazy dogs owner living in Berlin, Germany.'

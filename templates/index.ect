@@ -1,9 +1,5 @@
 <% extend '_base' %>
 
-<%
-@set_page_type 'index'
-%>
-
 <div class="content text">
 
 	<header class="index-header index-block index-block_last">
@@ -25,12 +21,12 @@
 	<h2 class="beta">My projects</h2>
 
 	<div class="l-double-space">
-		<%- @partial '_partials/column-list', {items: @page.projects} %>
+		<%- include '_partials/column-list', {items: @projects} %>
 
 		<div class="index-text secondary-text"><a href="#projects-rest" onclick="showMoreProjects(event,this)">Show more projects</a></div>
 
 		<div id="projects-rest" class="collapsed-block is-hidden">
-			<%- @partial '_partials/column-list', {items: @page.projects_rest} %>
+			<%- include '_partials/column-list', {items: @projectsRest} %>
 		</div>
 	</div>
 
@@ -45,10 +41,10 @@
 	</div>
 
 	<div class="socials">
-		<a href="https://twitter.com/iamsapegin" class="socials__item socials__item_twitter" title="Twitter"><%- @embed_file 'build/images/twitter.svg' %></a>
-		<a href="https://www.facebook.com/artemsapegin" class="socials__item socials__item_facebook" title="Facebook"><%- @embed_file 'build/images/facebook.svg' %></a>
-		<a href="https://instagram.com/sapegin/" class="socials__item socials__item_instagram" title="Instagram"><%- @embed_file 'build/images/instagram.svg' %></a>
-		<a href="https://github.com/sapegin" class="socials__item socials__item_github" title="GitHub"><%- @embed_file 'build/images/github.svg' %></a>
+		<a href="https://twitter.com/iamsapegin" class="socials__item socials__item_twitter" title="Twitter"><%- @embedFile 'build/images/twitter.svg' %></a>
+		<a href="https://www.facebook.com/artemsapegin" class="socials__item socials__item_facebook" title="Facebook"><%- @embedFile 'build/images/facebook.svg' %></a>
+		<a href="https://instagram.com/sapegin/" class="socials__item socials__item_instagram" title="Instagram"><%- @embedFile 'build/images/instagram.svg' %></a>
+		<a href="https://github.com/sapegin" class="socials__item socials__item_github" title="GitHub"><%- @embedFile 'build/images/github.svg' %></a>
 	</div>
 
 </div>
@@ -59,4 +55,4 @@
 	<div class="pulse__chart js-pulse-chart"></div>
 </div>
 
-<script><%- @embed_file 'build/inlines/homepage.js' %></script>
+<script><%- @embedFile 'build/inlines/homepage.js' %></script>

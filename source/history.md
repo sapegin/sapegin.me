@@ -1,6 +1,7 @@
+---
 layout: page-with-title
 title: 'My History'
-page_title: 'Artem Sapegin’s Illustrated History'
+pageTitle: 'Artem Sapegin’s Illustrated History'
 description: 'History of quite usual computer geek with not so usual interactive elements.'
 jquery: true
 scripts:
@@ -23,13 +24,13 @@ I got my first experience in real, sane programming at Children’s Creative Cen
 
 There weren’t enough computers for all pupils so we worked in pairs. In the end of the year we had to make a game. I worked with my neighbour and best friend Ivan. Programming wasn’t his passion but he drew very well, and due to our common love of metal music, blood and skeletons we were an awesome team. Unfortunately [game](http://museum.sapegin.ru/gpf/group/history/ironman.html) wasn’t finished.
 
-{% embed ironman "Use keys ← and →, mouse or thumbs and have the pleasure of Ivan’s sprites." %}
+<x-embed id="ironman" title="Use keys ← and →, mouse or thumbs and have the pleasure of Ivan’s sprites.">
 
 ## First Steps in Web Development
 
 My first introduction to HTML and web development began with articles in Russian “Submarine” magazine. Using that articles and without an internet connection at home I made my [first personal homepage](http://museum.sapegin.ru/tsott/).
 
-{% embed tsott 'The animation on the splash page of my first homepage looked like this.' %}
+<x-embed id="tsott" title="The animation on the splash page of my first homepage looked like this.">
 
 It was the beginning of the biggest passion in my life that became my work few years later. PHP, my own CMSs, a lot of free hosting providers, many versions of the homepage and thousands of lines of hodgie code.
 
