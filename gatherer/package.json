@@ -4,13 +4,13 @@
   "private": true,
   "dependencies": {
     "d3": "~3.5.6",
-    "github": "~0.1.14",
+    "github": "~0.2.4",
     "instagram-node-lib": "0.1.1",
     "jsdom": "~3.1.2",
     "mkdirp": "~0.5.1",
-    "q": "~1.0.0",
+    "q": "~1.4.1",
     "svgo": "~0.5.3",
-    "twit": "~1.1.12",
-    "winston": "~0.7.2"
+    "twit": "~2.1.1",
+    "winston": "~2.1.0"
   }
 }
