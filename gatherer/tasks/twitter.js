@@ -83,15 +83,20 @@ exports.task = function(options, callback) {
 				weeks[weekNum] = 1;
 		});
 
-		var dataset = { tweets: [], totalTweets: tweets.length };
+		var tweetsByWeeks = [];
+		var totalTweets = 0;
 		for (var weekNum = 0; weekNum <= options.weeksCount; weekNum++) {
-			dataset.tweets.push(weeks[weekNum] || 0);
+			var tweetsInWeek = weeks[weekNum] || 0;
+			tweetsByWeeks.push(tweetsInWeek);
+			totalTweets += tweetsInWeek;
 		}
-		dataset.tweets = dataset.tweets.reverse();
+		tweetsByWeeks = tweetsByWeeks.reverse();
 
-		callback(dataset);
+		callback({
+			tweets: tweetsByWeeks,
+			totalTweets: totalTweets
+		});
 	}
-
 
 	get();
 
