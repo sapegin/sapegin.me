@@ -40,8 +40,8 @@ var fs = require('fs'),
 	log = require('winston'),
 	path = require('path'),
 	mkdirp = require('mkdirp'),
-	taskrunner = require('./libs/taskrunner'),
-	svgdrawer = require('./libs/draw');
+	taskrunner = require('./lib/taskrunner'),
+	svgdrawer = require('./lib/draw');
 
 log.add(log.transports.File, { filename: 'gatherer.log' });
 
