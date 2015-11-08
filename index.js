@@ -1,4 +1,5 @@
 import {
+	start,
 	loadConfig,
 	loadSourceFiles,
 	generatePages,
@@ -8,8 +9,10 @@ import {
 	helpers
 } from 'sweet2';
 
+start('Building site...');
+
 let config = loadConfig('config');
-let options = config.default;
+let options = config.base;
 
 let renderMarkdown = createMarkdownRenderer({
 	customTags: {
@@ -29,7 +32,11 @@ let renderTemplate = createTemplateRenderer({
 	root: options.templatesFolder
 });
 
-let documents = loadSourceFiles(options.sourceFolder, options.sourceTypes, {md: renderMarkdown});
+let documents = loadSourceFiles(options.sourceFolder, options.sourceTypes, {
+	renderers: {
+		md: renderMarkdown
+	}
+});
 
 let pages = generatePages(documents, config, helpers, {ect: renderTemplate});
 

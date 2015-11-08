@@ -19,7 +19,7 @@
     "http-server": "~0.8.5",
     "imagemin-pngquant": "~4.1.0",
     "stylobuild": "~0.7.0",
-    "sweet2": "~0.1.1",
+    "sweet2": "~1.0.0",
     "tamia-grunt": "~0.5.1"
   },
   "scripts": {
