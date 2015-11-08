@@ -69,15 +69,20 @@ exports.task = function(options, callback) {
 			}
 		});
 
-		var dataset = { photos: [], totalPhotos: photos.length };
+		var photosByWeeks = [];
+		var totalPhotos = 0;
 		for (var weekNum = 0; weekNum <= options.weeksCount; weekNum++) {
-			dataset.photos.push(weeks[weekNum] || 0);
+			var photosInWeek = weeks[weekNum] || 0;
+			photosByWeeks.push(photosInWeek);
+			totalPhotos += photosInWeek;
 		}
-		dataset.photos = dataset.photos.reverse();
+		photosByWeeks = photosByWeeks.reverse();
 
-		callback(dataset);
+		callback({
+			photos: photosByWeeks,
+			totalPhotos: totalPhotos
+		});
 	}
-
 
 	get();
 
