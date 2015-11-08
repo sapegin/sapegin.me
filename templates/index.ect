@@ -7,16 +7,7 @@
 		<div class="index-header__secondary">My name is Artem<span class="is-hidden"> Sapegin</span>. I’m a front-end developer at <a href="https://www.here.com/">Here</a>, passionate photographer, coffee drinker and crazy dogs owner living in Berlin, Germany.</div>
 	</header>
 
-	<div class="column-list column-list_primary index-block">
-		<div class="column-list__item">
-			<div class="column-list__title"><a href="http://morning.photos/">My photography</a></div>
-			<div class="column-list__text">Gallery and blog about photography</div>
-		</div>
-		<div class="column-list__item">
-			<div class="column-list__title"><a href="http://blog.sapegin.me/">My nerdy writings</a></div>
-			<div class="column-list__text">Blog about front-end and geeky things</div>
-		</div>
-	</div>
+	<%- include '_partials/column-list', {items: @links, classes: 'column-list_primary index-block'} %>
 
 	<h2 class="beta">My projects</h2>
 
