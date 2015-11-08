@@ -64,7 +64,7 @@ taskrunner.run(tasksDir, options, function(results) {
 	}
 
 	// Save data as JSON file
-	fs.writeFile(outFile, JSON.stringify(results), function(err) {
+	fs.writeFile(outFile, JSON.stringify(results, null, 2), function(err) {
 		if (err) {
 			log.error('Cannot write file ' + outFile + '.');
 		}
