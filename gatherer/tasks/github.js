@@ -10,6 +10,7 @@
  */
 
 var WEEK = 1000 * 60 * 60 * 24 * 7;
+var MAX_PAGE = 10;
 
 var GitHub = require('github');
 
@@ -27,7 +28,6 @@ exports.task = function(options, callback) {
 		page = page || 1;
 		github.events.getFromUser({
 			user: options.githubUser,
-			per_page: 100,
 			page: page
 		}, function(err, events) {
 			if (err) {
@@ -40,7 +40,7 @@ exports.task = function(options, callback) {
 					pushes = pushes.concat(parseResponse(events));
 
 					var lastEventDate = new Date(lastEvent.created_at).getTime();
-					if (lastEventDate > oldestDate) {
+					if (lastEventDate > oldestDate && page < MAX_PAGE) {
 						get(page + 1);
 						return;
 					}
