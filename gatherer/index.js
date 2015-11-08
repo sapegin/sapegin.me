@@ -19,7 +19,7 @@ var tasksDir = './tasks',
 	svgFileDev = '../themes/sapegin/source/build/pulse.svg',
 	svgFileProd = '../public/build/pulse.svg',
 	options = {
-		weeksCount: 12,
+		weeksCount: 25,
 		githubUser: 'sapegin',
 		instagramUser: 16919229,
 		twitterUser: 'sapegin',
