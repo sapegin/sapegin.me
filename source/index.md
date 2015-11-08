@@ -7,13 +7,13 @@ projects:
     description: Beautiful social share buttons for jQuery
     link: http://sapegin.github.io/social-likes/
   -
+    title: React Styleguidist
+    description: React components style guide generator with hot reload
+    link: https://github.com/sapegin/react-styleguidist
+  -
     title: grunt-webfont
     description: <abbr>SVG</abbr> to webfont converter for Grunt
     link: https://github.com/sapegin/grunt-webfont
-  -
-    title: grunt-bower-concat
-    description: Bower components concatenation for Grunt
-    link: https://github.com/sapegin/grunt-bower-concat
   -
     title: shipit
     description: Minimalistic <abbr>SSH</abbr> deployment
@@ -28,9 +28,9 @@ projectsRest:
     description: Pinterest like responsive image grid
     link: https://github.com/sapegin/jquery.mosaicflow
   -
-    title: bower-update
-    description: Updates Bower components to the really latest versions
-    link: https://github.com/sapegin/bower-update
+    title: grunt-bower-concat
+    description: Bower components concatenation for Grunt
+    link: https://github.com/sapegin/grunt-bower-concat
   -
     title: richtypo.js
     description: Typography enhancer for Node.js
