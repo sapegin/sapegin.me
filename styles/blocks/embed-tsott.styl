@@ -1,27 +1,27 @@
 // Author: Artem Sapegin, http://sapegin.me, 2015
 
 .embed-tsott {
-	height:140px;
-	background:#000;
+	height: 140px;
+	background: #000;
 
 	&-i {
-		height:inherit;
-		background:url(/build/images/embeds/tsott/tsott-logo.png) no-repeat center center;
+		height: inherit;
+		background: url(/build/images/embeds/tsott/tsott-logo.png) no-repeat center center;
 	}
 
-	&:hover &-i {
-		animation:_embed-tsott 4s infinite;
+	&: hover &-i {
+		animation: _embed-tsott 4s infinite;
 	}
 	
 	+below(480px) {
 		&-i {
-			background-size:contain;
+			background-size: contain;
 		}
 	}
 }
 
 @keyframes _embed-tsott {
 	50% {
-		opacity:0;
+		opacity: 0;
 	}
 }
