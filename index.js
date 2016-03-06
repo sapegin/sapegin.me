@@ -7,7 +7,7 @@ import {
 	createMarkdownRenderer,
 	createTemplateRenderer,
 	helpers
-} from 'sweet2';
+} from 'fledermaus';
 
 start('Building site...');
 

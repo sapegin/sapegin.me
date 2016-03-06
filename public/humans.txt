@@ -8,7 +8,7 @@
 
 /* POWERED BY */
 
-  Sweet2: https://github.com/sapegin/sweet2
+  Fledermaus: https://github.com/sapegin/fledermaus
   Tâmia: http://sapegin.github.io/tamia/
 
   -_-_-_-_-_-_-_,------,

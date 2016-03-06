@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sapegin/sapegin.me.png)](https://travis-ci.org/sapegin/sapegin.me)
 
-Powered by [Sweet2](https://github.com/sapegin/sweet2).
+Powered by [Fledermaus](https://github.com/sapegin/fledermaus).
 
 
 ## Author
@@ -13,4 +13,4 @@ Powered by [Sweet2](https://github.com/sapegin/sweet2).
 
 ## License
 
-You can use the code (HTML/JS/CoffeeScript) of this site, but you *can’t* use the design, Stylus/CSS, images and content.
+You can use the code (HTML/JS) of this site, but you *can’t* use the design, Stylus/CSS, images and content.
