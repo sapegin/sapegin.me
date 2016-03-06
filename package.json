@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "babel-node index.js",
-    "start": "http-server public -p 4242 -o"
-  },
-  "dependencies": {}
+    "start": "http-server public -p 4242 -o",
+    "bundle": "tamia build"
+  }
 }
