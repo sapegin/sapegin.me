@@ -1,4 +1,4 @@
-/** 
+/**
 	@namespace
 	Test for collisions between arrays of entities. Each collision method accept two arrays of entities. Every entity in the first array will be tested for collisions against every entity in the second array. The two arrays can also be the same to test every entity against every other. When a collision is found between two entities, the collide_xxxx() method will be called on each entity involved in the collision, where "xxxx" is the type of collision (e.g. collide_aabb(), collide_circle(), collide_polygon()). The first argument is the other entity in the collision, and the second argument is the result returned from the collision, which depends on the type of collision (e.g. might be penetration depth or points or just boolean).
 */
@@ -38,10 +38,10 @@ collide.collide_aabb_entities = function(a, b) {
 	if (b.get_collision_aabb && a.get_collision_aabb) {
 		var aaabb = a.get_collision_aabb();
 		var baabb = b.get_collision_aabb();
-		
-		return (!(aaabb[0] > baabb[0] + baabb[2] || 
-		baabb[0] > aaabb[0] + aaabb[2] || 
-		aaabb[1] > baabb[1] + baabb[3] || 
+
+		return (!(aaabb[0] > baabb[0] + baabb[2] ||
+		baabb[0] > aaabb[0] + aaabb[2] ||
+		aaabb[1] > baabb[1] + baabb[3] ||
 		baabb[1] > aaabb[1] + aaabb[3]));
 	}
 }
@@ -87,7 +87,7 @@ var pointInPoly = function(pos, poly) {
 /**
 	Helper function which tests whether two lines intersect.
 	@param l1 is a line of the form [[x1, y1], [x2, y2]]
-	@param l2 is a line of the form [[x1, y1], [x2, y2]]	
+	@param l2 is a line of the form [[x1, y1], [x2, y2]]
 */
 var lineOnLine = function(l1, l2) {
 	// Detects the intersection of two lines
@@ -104,15 +104,15 @@ var lineOnLine = function(l1, l2) {
 	var b1y = b1[1];
 	var b2x = b2[0];
 	var b2y = b2[1];
-	
+
 	var ua_t = (b2x - b1x) * (a1y - b1y) - (b2y - b1y) * (a1x - b1x);
 	var ub_t = (a2x - a1x) * (a1y - b1y) - (a2y - a1y) * (a1x - b1x);
 	var u_b  = (b2y - b1y) * (a2x - a1x) - (b2x - b1x) * (a2y - a1y);
-	
+
 	if (u_b) {
 		var ua = ua_t / u_b;
 		var ub = ub_t / u_b;
-		
+
 		if (0 <= ua && ua <= 1 && 0 <= ub && ub <= 1) {
 			// intersection
 			return [a1x + ua * (a2x - a1x), a1y + ua * (a2y - a1y)];
@@ -159,3 +159,5 @@ collide.collide_poly_entities = function(a, b) {
 }
 
 collide.polys = collide.collideall(collide.collide_poly_entities, "poly");
+
+module.exports = collide;

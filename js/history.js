@@ -4,7 +4,7 @@
 
 var SeedableRandom = require('../vendor/gamesoup/random');
 var Sprite = require('../vendor/gamesoup/sprite');
-//require('../vendor/gamesoup/collisions');
+var collide = require('../vendor/gamesoup/collisions');
 var JSGameSoup = require('../vendor/gamesoup/jsgamesoup');
 
 /*global JSGameSoup:false, Sprite:false, SeedableRandom:false, collide:false */
