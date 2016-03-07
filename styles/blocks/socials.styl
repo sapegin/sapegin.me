@@ -2,12 +2,12 @@
 
 .socials {
 	text-align: center;
-	
+
 	&__item {
 		display: inline-block;
 		margin-side: .4em;
 		vertical-align: middle;
-		
+
 		&_facebook {
 			margin-top: -2px;
 			padding-side: 2px;
@@ -16,18 +16,18 @@
 		svg {
 			vertical-align: baseline;
 		}
-		
+
 		svg path {
 			transition: fill .2s ease-in-out;
 		}
-		
+
 		+link-hovers() {
 			svg path {
 				fill: base_color;
-			} 
+			}
 		}
 	}
-	
+
 	a {
 		+link-all-states() {
 			no-underline();
