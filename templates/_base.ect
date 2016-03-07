@@ -15,10 +15,9 @@
 	<meta name="twitter:title" content="<%- @option 'title' %>">
 	<meta name="twitter:description" content="<%= @option 'description' %>">
 	<meta name="twitter:creator" content="@sapegin">
-	<link href="<%- @fingerprint '/build/styles.css' %>" rel="stylesheet">
-	<script><%- @inlineFile 'build/inlines/counters.js' %></script>
-	<script><%- @inlineFile 'build/inlines/fontloader.js' %></script>
-	<script>loadFont('Roboto','/build/Roboto')</script>
+	<style><%- @embedFile 'build/Roboto.woff.css' %></style>
+	<style><%- @inlineFile 'build/styles.css' %></style>
+	<script><%- @inlineFile 'build/counters.js' %></script>
 </head>
 	<body class="page page_<%= @layout %>">
 		<% content %>
