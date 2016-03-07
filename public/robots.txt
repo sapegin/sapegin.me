@@ -1,4 +1,2 @@
 User-agent: *
 Disallow: /build/
-Disallow: /data/
-Disallow: /fonts/
