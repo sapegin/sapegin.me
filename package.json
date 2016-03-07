@@ -2,6 +2,7 @@
   "name": "sapegin",
   "version": "0.0.0",
   "private": true,
+  "license": "See license in <Readme.md>",
   "scripts": {
     "start": "tamia server & npm run build:watch",
     "test": "npm run lint",
