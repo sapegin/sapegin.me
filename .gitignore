@@ -1,7 +1,8 @@
-*.log
+node_modules
 public/index.html
 public/history.html
 public/build
 gatherer/.secrets.json
 gatherer/data.json
-node_modules
+lib
+*.log
