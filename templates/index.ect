@@ -13,12 +13,6 @@
 
 	<div class="projects">
 		<%- include '_partials/column-list', {items: @projects} %>
-
-		<div class="index-text secondary-text"><a href="#projects-rest" onclick="showMoreProjects(event,this)">Show more projects</a></div>
-
-		<div id="projects-rest" class="collapsed-block is-hidden">
-			<%- include '_partials/column-list', {items: @projectsRest} %>
-		</div>
 	</div>
 
 	<h2 class="beta">Contact me</h2>

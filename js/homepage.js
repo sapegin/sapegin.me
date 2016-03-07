@@ -1,15 +1,5 @@
 // Author: Artem Sapegin, http://sapegin.me, 2015
 
-window.showMoreProjects = function(event, linkElem) {
-	event.preventDefault();
-	window.requestAnimationFrame(function() {
-		let hiddenClass = 'is-hidden';
-		linkElem.classList.add(hiddenClass);
-		let projectsElem = document.querySelector(linkElem.getAttribute('href'));
-		projectsElem.classList.remove(hiddenClass);
-	});
-};
-
 function loadPulse() {
 	let pulseUrl = '/build/pulse.svg';
 	let xhr = new XMLHttpRequest();
