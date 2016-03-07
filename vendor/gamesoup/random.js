@@ -89,3 +89,5 @@ function SeedableRandom(seed) {
 	// seed the generator with the seed we were passed, or the time as a last resort
 	this.seed(seed == null ? (new Date()).getTime() : seed);
 }
+
+module.exports = SeedableRandom;

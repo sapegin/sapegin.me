@@ -237,3 +237,5 @@ Sprite.preload = function(images, completedcallback, progresscallback) {
 		img[i].src = images[i];
 	}
 }
+
+module.exports = Sprite;

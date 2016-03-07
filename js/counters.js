@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 (function (d, w, c) {
 	(w[c] = w[c] || []).push(function() {
 		try {

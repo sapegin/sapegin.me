@@ -12,6 +12,10 @@
 			margin-top: -2px;
 			padding-side: 2px;
 		}
+
+		svg {
+			vertical-align: baseline;
+		}
 		
 		svg path {
 			transition: fill .2s ease-in-out;
@@ -25,6 +29,8 @@
 	}
 	
 	a {
-		no-underline();
+		+link-all-states() {
+			no-underline();
+		}
 	}
 }

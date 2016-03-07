@@ -11,7 +11,7 @@
 
 	<h2 class="beta">My projects</h2>
 
-	<div class="l-double-space">
+	<div class="projects">
 		<%- include '_partials/column-list', {items: @projects} %>
 
 		<div class="index-text secondary-text"><a href="#projects-rest" onclick="showMoreProjects(event,this)">Show more projects</a></div>
@@ -42,4 +42,4 @@
 	<div class="pulse__chart js-pulse-chart"></div>
 </div>
 
-<script><%- @embedFile 'build/inlines/homepage.js' %></script>
+<script><%- @inlineFile 'build/inlines/homepage.js' %></script>

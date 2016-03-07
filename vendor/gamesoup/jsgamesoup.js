@@ -893,3 +893,5 @@ if (typeof(console) == "undefined") {
 		};
 	}
 }
+
+module.exports = JSGameSoup;

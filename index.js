@@ -6,7 +6,7 @@ import {
 	savePages,
 	createMarkdownRenderer,
 	createTemplateRenderer,
-	helpers
+	helpers,
 } from 'fledermaus';
 
 start('Building site...');
@@ -25,19 +25,19 @@ let renderMarkdown = createMarkdownRenderer({
 					<div class="embed__description">${title}</div>
 				</div>
 			`;
-		}
-	}
+		},
+	},
 });
 let renderTemplate = createTemplateRenderer({
-	root: options.templatesFolder
+	root: options.templatesFolder,
 });
 
 let documents = loadSourceFiles(options.sourceFolder, options.sourceTypes, {
 	renderers: {
-		md: renderMarkdown
-	}
+		md: renderMarkdown,
+	},
 });
 
-let pages = generatePages(documents, config, helpers, {ect: renderTemplate});
+let pages = generatePages(documents, config, helpers, { ect: renderTemplate });
 
 savePages(pages, options.publicFolder);
