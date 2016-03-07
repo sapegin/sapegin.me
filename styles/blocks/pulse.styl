@@ -6,6 +6,8 @@
 	_color_github = #b2d8b9;
 
 	&__info {
+		position: relative;
+		z-index: 100;
 		margin-top: -1em;
 		margin-bottom: -.5em;
 		text-align: center;
@@ -16,6 +18,15 @@
 
 	&:hover &__info {
 		opacity: 1;
+	}
+
+	&__legend {
+		text-decoration: none;
+	}
+	&__legend {
+		+link-hovers() {
+			text-decoration: underline;
+		}
 	}
 
 	&__legend_twitter {
