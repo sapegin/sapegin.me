@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sapegin/sapegin.me.png)](https://travis-ci.org/sapegin/sapegin.me)
 
-Powered by [Fledermaus](https://github.com/sapegin/fledermaus).
+Powered by [Tâmia](http://tamiadev.github.io/tamia/) and [Fledermaus](https://github.com/sapegin/fledermaus).
 
 
 ## Author
