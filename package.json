@@ -24,6 +24,6 @@
     "eslint": "~1.10.3",
     "eslint-config-tamia": "~1.1.0",
     "fledermaus": "~4.1.0",
-    "tamia-build": "~0.2.0"
+    "tamia-build": "~0.2.1"
   }
 }
