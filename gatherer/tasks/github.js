@@ -15,7 +15,7 @@
 var WEEK = 1000 * 60 * 60 * 24 * 7;
 
 var request = require('request');
-var parser = require('xml2json');
+var xml2json = require('simple-xml2json');
 
 exports.task = function(options, callback) {
 	'use strict';
@@ -31,11 +31,7 @@ exports.task = function(options, callback) {
 			return;
 		}
 
-		var json = parser.toJson(xml, {
-			object: true,
-			coerce: true,
-		});
-
+		var json = xml2json.parser(xml);
 		parseContributions(json.svg.g.g);
 	}
 

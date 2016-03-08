@@ -9,9 +9,9 @@
     "mkdirp": "~0.5.1",
     "q": "~1.4.1",
     "request": "~2.69.0",
+    "simple-xml2json": "~1.2.3",
     "svgo": "~0.6.1",
     "twit": "~2.2.3",
-    "winston": "~2.2.0",
-    "xml2json": "~0.9.0"
+    "winston": "~2.2.0"
   }
 }
