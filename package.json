@@ -14,16 +14,16 @@
     "lint": "eslint js lib"
   },
   "dependencies": {
-    "tamia": "~2.0.0"
+    "tamia": "~2.0.1"
   },
   "devDependencies": {
-    "babel-cli": "~6.4.0",
+    "babel-cli": "~6.6.5",
     "babel-eslint": "~5.0.0",
     "babel-preset-tamia": "~6.5.0",
     "chokidar-cli": "~1.2.0",
     "eslint": "~1.10.3",
     "eslint-config-tamia": "~1.1.0",
     "fledermaus": "~4.1.0",
-    "tamia-build": "~0.1.0"
+    "tamia-build": "~0.2.0"
   }
 }
