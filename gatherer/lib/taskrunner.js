@@ -18,23 +18,20 @@
  * @license MIT
  */
 
-/*jshint node:true, white:false, smarttabs:true */
-
 'use strict';
 
-var fs = require('fs'),
-	path = require('path'),
-	Q = require('q');
-
+var fs = require('fs');
+var path = require('path');
+var Q = require('q');
 
 function runTasks(tasksDir, options, callback) {
-	var tasks = getTasksList(tasksDir),
-		promises = [],
-		data = {};
+	var tasks = getTasksList(tasksDir);
+	var promises = [];
+	var data = {};
 
 	tasks.forEach(function(filename) {
-		var filepath = path.join(tasksDir, filename),
-			taskId = path.basename(filename, '.js');
+		var filepath = path.join(tasksDir, filename);
+		var taskId = path.basename(filename, '.js');
 		promises.push(runTask(taskId, filepath, options));
 	});
 
@@ -58,8 +55,8 @@ function getTasksList(tasksDir) {
 }
 
 function runTask(taskId, filepath, options) {
-	var task = require(path.join(process.cwd(), filepath)),
-		deferred = Q.defer();
+	var task = require(path.join(process.cwd(), filepath));
+	var deferred = Q.defer();
 
 	process.nextTick(function() {
 		task.task(options, function(data) {
@@ -69,6 +66,5 @@ function runTask(taskId, filepath, options) {
 
 	return deferred.promise;
 }
-
 
 exports.run = runTasks;

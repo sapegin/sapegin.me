@@ -11,7 +11,7 @@
     "build:watch": "chokidar templates source -c 'node lib'",
     "compile": "babel -d lib src",
     "compile:watch": "babel --watch -d lib src",
-    "lint": "eslint js lib"
+    "lint": "eslint js src gatherer/*.js gatherer/lib gatherer/tasks"
   },
   "dependencies": {
     "tamia": "~2.0.1"

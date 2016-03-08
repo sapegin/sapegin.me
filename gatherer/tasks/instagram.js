@@ -13,6 +13,8 @@
  * @license MIT
  */
 
+/* eslint-disable no-console */
+
 var WEEK = 1000 * 60 * 60 * 24 * 7;
 
 var Instagram = require('instagram-node-lib');
@@ -23,10 +25,10 @@ exports.task = function(options, callback) {
 	Instagram.set('client_id', options.instagramCientId);
 	Instagram.set('client_secret', options.instagramClientSecret);
 
-	var now = new Date().getTime(),
-		dateRange = WEEK * options.weeksCount,
-		oldestDate = Math.round((now - dateRange) / 1000),
-		photos = [];
+	var now = new Date().getTime();
+	var dateRange = WEEK * options.weeksCount;
+	var oldestDate = Math.round((now - dateRange) / 1000);
+	var photos = [];
 
 	function get(maxId) {
 		Instagram.users.recent({
@@ -37,8 +39,8 @@ exports.task = function(options, callback) {
 			complete: function(items, pagination) {
 				photos = photos.concat(items);
 				if (pagination && pagination.next_max_id) {
-					var lastItem = items[items.length-1],
-						lastItemDate = parseInt(lastItem.created_time, 10);
+					var lastItem = items[items.length - 1];
+					var lastItemDate = parseInt(lastItem.created_time, 10);
 					if (lastItemDate > oldestDate) {
 						get(pagination.next_max_id);
 						return;
@@ -46,10 +48,10 @@ exports.task = function(options, callback) {
 				}
 				parsePhotos(photos);
 			},
-			error: function(errorMessage, errorObject, caller) {
+			error: function(errorMessage) {
 				console.log(errorMessage);
 				callback(null);
-			}
+			},
 		});
 	}
 
@@ -58,8 +60,8 @@ exports.task = function(options, callback) {
 
 		photos.forEach(function(photo) {
 			// Photos per week
-			var date = parseInt(photo.created_time, 10) * 1000,
-				weekNum = Math.floor((now - date) / WEEK);
+			var date = parseInt(photo.created_time, 10) * 1000;
+			var weekNum = Math.floor((now - date) / WEEK);
 
 			if (weeks[weekNum]) {
 				weeks[weekNum]++;
@@ -80,10 +82,9 @@ exports.task = function(options, callback) {
 
 		callback({
 			photos: photosByWeeks,
-			totalPhotos: totalPhotos
+			totalPhotos: totalPhotos,
 		});
 	}
 
 	get();
-
 };

@@ -3,15 +3,18 @@
  * - Number of tweets for last N weeks
  * - Total number of tweets in N weeks
  *
- * Required options: weeksCount, twitterUser, twitterConsumerKey, twitterConsumerSecret, twitterAccessToken, twitterAccessTokenSecret
- * 
+ * Required options: weeksCount, twitterUser, twitterConsumerKey, twitterConsumerSecret, twitterAccessToken,
+ * twitterAccessTokenSecret
+ *
  * How to obtain OAuth token:
  * https://dev.twitter.com/apps/new
- * 
+ *
  * @author Artem Sapegin
  * @copyright 2012 Artem Sapegin (sapegin.me)
  * @license MIT
  */
+
+/* eslint-disable no-console */
 
 var WEEK = 1000 * 60 * 60 * 24 * 7;
 
@@ -20,10 +23,10 @@ var Twit = require('twit');
 exports.task = function(options, callback) {
 	'use strict';
 
-	var now = new Date().getTime(),
-		dateRange = WEEK * options.weeksCount,
-		oldestDate = now - dateRange,
-		tweets = [];
+	var now = new Date().getTime();
+	var dateRange = WEEK * options.weeksCount;
+	var oldestDate = now - dateRange;
+	var tweets = [];
 
 	var T = new Twit({
 		consumer_key: options.twitterConsumerKey,
@@ -37,7 +40,7 @@ exports.task = function(options, callback) {
 			trim_user: 1,
 			exclude_replies: 1,
 			count: 200,
-			screen_name: options.twitterUser
+			screen_name: options.twitterUser,
 		};
 		if (maxId) {
 			params.max_id = maxId;
@@ -49,7 +52,7 @@ exports.task = function(options, callback) {
 				callback(null);
 			}
 			else {
-				var lastEvent = events[events.length-1];
+				var lastEvent = events[events.length - 1];
 				if (lastEvent) {
 					// Remove first tweet (id === maxId) because it exists in two pages
 					if (maxId) {
@@ -74,13 +77,15 @@ exports.task = function(options, callback) {
 		var weeks = {};
 
 		tweets.forEach(function(tweet) {
-			var date = new Date(tweet.created_at).getTime(),
-				weekNum = Math.floor((now - date) / WEEK);
+			var date = new Date(tweet.created_at).getTime();
+			var weekNum = Math.floor((now - date) / WEEK);
 
-			if (weeks[weekNum])
+			if (weeks[weekNum]) {
 				weeks[weekNum]++;
-			else
+			}
+			else {
 				weeks[weekNum] = 1;
+			}
 		});
 
 		var tweetsByWeeks = [];
@@ -94,10 +99,9 @@ exports.task = function(options, callback) {
 
 		callback({
 			tweets: tweetsByWeeks,
-			totalTweets: totalTweets
+			totalTweets: totalTweets,
 		});
 	}
 
 	get();
-
 };

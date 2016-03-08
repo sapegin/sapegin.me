@@ -8,44 +8,40 @@
  * @license MIT
  */
 
-/*jshint node:true, white:false, smarttabs:true */
-
 // @todo log errors
 
-'use strict';
+var tasksDir = './tasks';
+var outFile = './data.json';
+var svgFile = '../public/build/pulse.svg';
+var options = {
+	weeksCount: 25,
+	githubUser: 'sapegin',
+	instagramUser: 16919229,
+	twitterUser: 'sapegin',
 
-var tasksDir = './tasks',
-	outFile = './data.json',
-	svgFile = '../public/build/pulse.svg',
-	options = {
-		weeksCount: 25,
-		githubUser: 'sapegin',
-		instagramUser: 16919229,
-		twitterUser: 'sapegin',
-
-		// Following options shoud be in ./.secrets.json
-		instagramClientId: null,
-		instagramClientSecret: null,
-		instagramToken: null,
-		twitterConsumerKey: null,
-		twitterConsumerSecret: null,
-		twitterAccessToken: null,
-		twitterAccessTokenSecret: null
-	},
-	oldData;
+	// Following options shoud be in ./.secrets.json
+	instagramClientId: null,
+	instagramClientSecret: null,
+	instagramToken: null,
+	twitterConsumerKey: null,
+	twitterConsumerSecret: null,
+	twitterAccessToken: null,
+	twitterAccessTokenSecret: null,
+};
+var oldData;
 
 
-var fs = require('fs'),
-	log = require('winston'),
-	path = require('path'),
-	mkdirp = require('mkdirp'),
-	taskrunner = require('./lib/taskrunner'),
-	svgdrawer = require('./lib/draw');
+var fs = require('fs');
+var log = require('winston');
+var path = require('path');
+var mkdirp = require('mkdirp');
+var taskrunner = require('./lib/taskrunner');
+var svgdrawer = require('./lib/draw');
 
 log.add(log.transports.File, { filename: 'gatherer.log' });
 
 var secrets = require('./.secrets.json');
-for (var key in secrets) if (secrets.hasOwnProperty(key)) {
+for (var key in secrets) {
 	options[key] = secrets[key];
 }
 
@@ -55,7 +51,7 @@ if (fs.existsSync(outFile)) {
 
 
 taskrunner.run(tasksDir, options, function(results) {
-	for (var id in results) if (results.hasOwnProperty(id)) {
+	for (var id in results) {
 		if (results[id] === null && oldData[id]) {
 			log.warn('No results for ' + id + '. Old data used.');
 			results[id] = oldData[id];

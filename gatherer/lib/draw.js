@@ -10,16 +10,16 @@ var SVG_HEIGHT = 200;
 var options = {
 	twitter: {
 		key: 'tweets',
-		totalKey: 'totalTweets'
+		totalKey: 'totalTweets',
 	},
 	github: {
 		key: 'commits',
-		totalKey: 'totalCommits'
+		totalKey: 'totalCommits',
 	},
 	instagram: {
 		key: 'photos',
-		totalKey: 'totalPhotos'
-	}
+		totalKey: 'totalPhotos',
+	},
 };
 
 var d3 = require('d3');
@@ -53,12 +53,12 @@ function draw(data, options) {
 
 function drawLine(svg, key, data, highestPoint) {
 	var line = d3.svg.line()
-		.x(function(d) { return d.x; })
-		.y(function(d) { return d.y; })
+		.x(d => d.x)
+		.y(d => d.y)
 		.interpolate('basis')  // cardinal
 	;
 
-	var path = svg.append('path')
+	svg.append('path')
 		.attr('d', line(convertData(data, highestPoint)))
 		.attr('id', key)
 	;
@@ -69,7 +69,7 @@ function convertData(data, highestPoint) {
 	return data.map(function(y, x) {
 		return {
 			x: SVG_WIDTH / length * x,
-			y: SVG_HEIGHT - SVG_HEIGHT / highestPoint * y
+			y: SVG_HEIGHT - SVG_HEIGHT / highestPoint * y,
 		};
 	});
 }
@@ -86,17 +86,18 @@ function getHighestPoint(data, options) {
 
 /**
  * Draws splines for tweets, commits and instagrams to an SVG string.
- * 
+ *
  * @param {Object} data
  * @param {Function} callback
- * @return {String}
  */
 exports.draw = function(data, callback) {
 	var svgText = draw(data, options);
 	var svgo = new SVGO({
 		plugins: [
-			{cleanupIDs: false}
-		]
+			{
+				cleanupIDs: false,
+			},
+		],
 	});
 	svgo.optimize(svgText, function(result) {
 		callback(result.data);
