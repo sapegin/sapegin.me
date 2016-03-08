@@ -1,7 +1,9 @@
 node_modules
 public/index.html
 public/history.html
-public/build
+public/build/*.js
+public/build/styles.css
+public/build/pulse.svg
 gatherer/.secrets.json
 gatherer/data.json
 lib
