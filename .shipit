@@ -4,7 +4,9 @@ path='sites/sapegin.me'
 [deploy:local]
 npm run bundle
 npm run build
+echo "Syncing site..."
 rsync --archive --compress --force --delete public/ $SSH_HOST:$SSH_PATH/public
+echo "Syncing gatherer..."
 rsync --archive --compress --force --delete --exclude node_modules/ gatherer/ $SSH_HOST:$SSH_PATH/gatherer
 
 [deploy]
