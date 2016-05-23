@@ -7,10 +7,8 @@
     "start": "tamia server & npm run build:watch",
     "test": "npm run lint",
     "bundle": "tamia bundle",
-    "build": "node lib",
-    "build:watch": "chokidar templates source -c 'node lib'",
-    "compile": "babel -d lib src",
-    "compile:watch": "babel --watch -d lib src",
+    "build": "babel-node src",
+    "build:watch": "chokidar templates source -c 'babel-node src'",
     "lint": "eslint js src gatherer/*.js gatherer/lib gatherer/tasks"
   },
   "dependencies": {
@@ -24,6 +22,6 @@
     "eslint": "~2.10.2",
     "eslint-config-tamia": "~2.0.1",
     "fledermaus": "~4.1.0",
-    "tamia-build": "~0.2.1"
+    "tamia-build": "~0.4.0"
   }
 }
