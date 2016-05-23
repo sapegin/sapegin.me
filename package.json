@@ -14,15 +14,15 @@
     "lint": "eslint js src gatherer/*.js gatherer/lib gatherer/tasks"
   },
   "dependencies": {
-    "tamia": "~2.0.1"
+    "tamia": "~2.0.6"
   },
   "devDependencies": {
-    "babel-cli": "~6.6.5",
-    "babel-eslint": "~5.0.0",
-    "babel-preset-tamia": "~6.5.0",
+    "babel-cli": "~6.9.0",
+    "babel-eslint": "~6.0.4",
+    "babel-preset-tamia": "~6.8.0",
     "chokidar-cli": "~1.2.0",
-    "eslint": "~1.10.3",
-    "eslint-config-tamia": "~1.1.0",
+    "eslint": "~2.10.2",
+    "eslint-config-tamia": "~2.0.1",
     "fledermaus": "~4.1.0",
     "tamia-build": "~0.2.1"
   }
