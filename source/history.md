@@ -1,5 +1,5 @@
 ---
-layout: page-with-title
+layout: PageWithTitle
 title: 'My History'
 pageTitle: 'Artem Sapegin’s Interactive History'
 scripts:

@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: Index
 pageTitle: 'Artem Sapegin: front-end developer, photographer &amp; dog lover'
 links:
   -
@@ -21,11 +21,11 @@ projects:
     link: https://github.com/sapegin/react-styleguidist
   -
     title: grunt-webfont
-    description: <abbr>SVG</abbr> to webfont converter for Grunt
+    description: SVG to webfont converter for Grunt
     link: https://github.com/sapegin/grunt-webfont
   -
     title: shipit
-    description: Minimalistic <abbr>SSH</abbr> deployment
+    description: Minimalistic SSH deployment
     link: https://github.com/sapegin/shipit
   -
     title: Tâmia
@@ -41,6 +41,6 @@ projects:
     link: https://github.com/sapegin/fledermaus
   -
     title: Fontoptim
-    description: Generates <abbr>CSS</abbr> with <abbr>WOFF(2)</abbr> Base64 fonts
+    description: Generates CSS with WOFF(2) Base64 fonts
     link: https://github.com/sapegin/fontoptim
 ---

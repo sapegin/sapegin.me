@@ -1,5 +1,10 @@
 {
   "presets": [
-  	"tamia"
-  ]
+    "tamia"
+  ],
+	"plugins": [
+		["transform-react-jsx", {
+			"pragma": "vdo"
+		}]
+	]
 }

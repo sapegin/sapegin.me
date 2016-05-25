@@ -6,8 +6,9 @@ import {
 	savePages,
 	createMarkdownRenderer,
 	createTemplateRenderer,
-	helpers,
+	helpers as defaultHelpers,
 } from 'fledermaus';
+import * as customHelpers from './helpers';
 
 start('Building site...');
 
@@ -32,12 +33,14 @@ let renderTemplate = createTemplateRenderer({
 	root: options.templatesFolder,
 });
 
+const helpers = { ...defaultHelpers, ...customHelpers };
+
 let documents = loadSourceFiles(options.sourceFolder, options.sourceTypes, {
 	renderers: {
 		md: renderMarkdown,
 	},
 });
 
-let pages = generatePages(documents, config, helpers, { ect: renderTemplate });
+let pages = generatePages(documents, config, helpers, { jsx: renderTemplate });
 
 savePages(pages, options.publicFolder);

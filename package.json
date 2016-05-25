@@ -17,11 +17,13 @@
   "devDependencies": {
     "babel-cli": "~6.9.0",
     "babel-eslint": "~6.0.4",
+    "babel-plugin-transform-react-jsx": "~6.8.0",
     "babel-preset-tamia": "~6.8.0",
     "chokidar-cli": "~1.2.0",
     "eslint": "~2.10.2",
     "eslint-config-tamia": "~2.0.1",
-    "fledermaus": "~4.1.0",
+    "eslint-plugin-react": "~5.1.1",
+    "fledermaus": "~5.0.1",
     "tamia-build": "~0.4.0"
   }
 }
