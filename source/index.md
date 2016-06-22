@@ -40,7 +40,7 @@ projects:
     description: Infinitely extensible simple ES6 static site generator
     link: https://github.com/sapegin/fledermaus
   -
-    title: Fontoptim
-    description: Generates CSS with WOFF(2) Base64 fonts
-    link: https://github.com/sapegin/fontoptim
+    title: Squirrelsong
+    description: Dark terminal color scheme
+    link: https://github.com/sapegin/squirrelsong
 ---
