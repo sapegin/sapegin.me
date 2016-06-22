@@ -12,9 +12,9 @@ links:
     link: http://blog.sapegin.me/
 projects:
   -
-    title: Social Likes
-    description: Beautiful social share buttons for jQuery
-    link: http://sapegin.github.io/social-likes/
+    title: Social Likes Next
+    description: Modern social share buttons
+    link: http://social-likes-next.js.org/
   -
     title: React Styleguidist
     description: React components style guide generator with hot reload
