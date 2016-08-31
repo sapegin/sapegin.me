@@ -7,8 +7,7 @@
 				id:218044,
 				clickmap:true,
 				trackLinks:true,
-				accurateTrackBounce:true,
-				webvisor:true
+				accurateTrackBounce:true
 			});
 		} catch(e) { }
 	});
