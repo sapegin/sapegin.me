@@ -1,5 +1,5 @@
 sourceFolder: source
-sourceTypes: 
+sourceTypes:
   - md
   - html
 templatesFolder: templates
