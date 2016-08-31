@@ -1,8 +1,8 @@
 export default function($, children) {
-	const { lang, pageTitle, layout, scripts } = $;
+	const { pageTitle, layout, scripts } = $;
 	const { Style, Script, option } = $;
 	return (
-		<html lang={lang}>
+		<html lang={option('lang')}>
 			<head>
 				<meta charset="utf-8" />
 				<title>{pageTitle}</title>
