@@ -17,7 +17,7 @@ projects:
     link: http://social-likes-next.js.org/
   -
     title: React Styleguidist
-    description: React components style guide generator with hot reload
+    description: React style guide generator with hot reload
     link: https://github.com/sapegin/react-styleguidist
   -
     title: grunt-webfont
