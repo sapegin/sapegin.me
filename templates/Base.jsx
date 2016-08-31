@@ -18,7 +18,6 @@ export default function($, children) {
 				<meta name="twitter:title" content={option('title')} />
 				<meta name="twitter:description" content={option('description')} />
 				<meta name="twitter:creator" content="@sapegin" />
-				<Style src="/build/Roboto.woff.css" />
 				<Style src="/build/styles.css" />
 				<Script src="/build/counters.js" inline />
 			</head>
