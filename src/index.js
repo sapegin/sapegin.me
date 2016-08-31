@@ -17,10 +17,10 @@ let options = config.base;
 
 let renderMarkdown = createMarkdownRenderer({
 	customTags: {
-		embed: ({ id, title }) => {
+		embed: ({ id, title, background, height }) => {
 			return `
 				<div class="embed">
-					<div class="embed__content embed-${id}">
+					<div class="embed__content embed-${id}" style="background-image:url(${background}); height:${height}px">
 						<div class="embed-${id}-i" id="${id}"></div>
 					</div>
 					<div class="embed__description">${title}</div>
