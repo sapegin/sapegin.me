@@ -49,7 +49,7 @@ export default function($) {
 
 			</div>
 
-			<div class="pulse" id="pulse">
+			<div class="pulse" id="pulse" role="presentation">
 				<script class="js-pulse-template" type="text/template">In the last 25 weeks I’ve shot <a href="https://instagram.com/sapegin/" class="pulse__legend pulse__legend_instagram">{'{instagram} instagrams'}</a>, wrote <a href="https://twitter.com/iamsapegin" class="pulse__legend pulse__legend_twitter">{'{twitter} tweets'}</a> and pushed <a href="https://github.com/sapegin" class="pulse__legend pulse__legend_github">{'{github} commits'}</a> to GitHub</script>
 				<div class="pulse__info js-pulse-info"></div>
 				<div class="pulse__chart js-pulse-chart"></div>
