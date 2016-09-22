@@ -11,7 +11,7 @@ export default function($) {
 			<div class="content text h-card">
 				<header class="index-header index-block index-block_last">
 					<div class="index-header__primary">Hi.</div>
-					<div class="index-header__secondary">My name is <span class="p-given-name">Artem</span><span class="is-hidden p-family-name"> Sapegin</span>. I’m a <span class="p-job-title">front-end developer</span> at <a href="https://www.here.com/" class="p-org">Here</a>, passionate photographer, coffee drinker and crazy dogs’ owner living in <span class="p-region">Berlin, Germany</span>.</div>
+					<div class="index-header__secondary">My name is <span class="p-given-name" title="Pronounced as [ar'tiyom]">Artem</span><span class="is-hidden p-family-name"> Sapegin</span>. I’m a <span class="p-job-title">front-end developer</span> at <a href="https://www.here.com/" class="p-org" title="Yep, “Here” is a company name ;–)">Here</a>, passionate photographer, coffee drinker and crazy dogs’ owner living in <span class="p-region">Berlin, Germany</span>.</div>
 				</header>
 
 				<ColumnList {...$} items={links} class="column-list_primary index-block" />
