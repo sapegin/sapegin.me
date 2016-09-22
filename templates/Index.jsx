@@ -8,10 +8,10 @@ export default function($) {
 	const { Script, Icon } = $;
 	return (
 		<Base {...$}>
-			<div class="content text">
+			<div class="content text h-card">
 				<header class="index-header index-block index-block_last">
 					<div class="index-header__primary">Hi.</div>
-					<div class="index-header__secondary">My name is Artem<span class="is-hidden"> Sapegin</span>. I’m a front-end developer at <a href="https://www.here.com/">Here</a>, passionate photographer, coffee drinker and crazy dogs’ owner living in Berlin, Germany.</div>
+					<div class="index-header__secondary">My name is <span class="p-given-name">Artem</span><span class="is-hidden p-family-name"> Sapegin</span>. I’m a <span class="p-job-title">front-end developer</span> at <a href="https://www.here.com/" class="p-org">Here</a>, passionate photographer, coffee drinker and crazy dogs’ owner living in <span class="p-region">Berlin, Germany</span>.</div>
 				</header>
 
 				<ColumnList {...$} items={links} class="column-list_primary index-block" />
@@ -29,7 +29,7 @@ export default function($) {
 				<h2 class="beta">Contact me</h2>
 
 				<div class="index-contacts">
-					<p>Drop me a line at <a href="mailto:artem@sapegin.ru">artem@sapegin.ru</a> or ping me at <a href="skype:artemsapegin">Skype</a> if you just want to chat.</p>
+					<p>Drop me a line at <a href="mailto:artem@sapegin.ru" class="u-email">artem@sapegin.ru</a> or ping me at <a href="skype:artemsapegin">Skype</a> if you just want to chat.</p>
 				</div>
 
 				<div class="socials">
