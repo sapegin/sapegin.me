@@ -23,7 +23,7 @@ export default function($) {
 				</div>
 
 				<div class="footer">
-					<a href="https://github.com/sapegin/sapegin.me">Site‘s source</a> ∙ <a href="/history">My interactive history</a>
+					<a href="https://github.com/sapegin/sapegin.me">Site’s source</a> ∙ <a href="/history">My interactive history</a>
 				</div>
 
 				<h2 class="beta">Contact me</h2>
