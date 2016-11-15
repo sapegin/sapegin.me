@@ -29,7 +29,7 @@ export default function($) {
 				<h2 class="beta">Contact me</h2>
 
 				<div class="index-contacts">
-					<p>Drop me a line at <a href="mailto:artem@sapegin.ru" class="u-email">artem@sapegin.ru</a> or ping me at <a href="skype:artemsapegin">Skype</a> if you just want to chat.</p>
+					<p>Drop me a line at <a href="mailto:artem@sapegin.ru" class="u-email">artem@sapegin.ru</a>, ping me at <a href="skype:artemsapegin">Skype</a> or <a href="https://github.com/sapegin/ama">ask me anything</a>.</p>
 				</div>
 
 				<div class="socials">
