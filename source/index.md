@@ -43,4 +43,21 @@ projects:
     title: Squirrelsong
     description: Dark terminal color scheme
     link: https://github.com/sapegin/squirrelsong
+socials:
+  -
+    id: twitter
+    name: Twitter
+    url: https://twitter.com/iamsapegin
+  -
+    id: facebook
+    name: Facebook
+    url: https://www.facebook.com/artemsapegin
+  -
+    id: instagram
+    name: Instagram
+    url: https://instagram.com/sapegin/
+  -
+    id: github
+    name: GitHub
+    url: https://github.com/sapegin
 ---

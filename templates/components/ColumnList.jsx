@@ -1,16 +1,29 @@
-export default function($) {
-	let { items } = $;
-	let { typo, typoTitle } = $;
+import component from 'tamia/lib/components/component';
+import Block from 'tamia/lib/components/Block';
+import Layout from 'tamia/lib/components/Layout';
+import Link from 'tamia/lib/components/Link';
+import s from './ColumnList.pcss';
+
+const Wrapper = component(({ primary }) => [s.root, {
+	[s.isPrimary]: primary,
+	[s.isSecondary]: !primary,
+}]);
+
+export default function({ items, primary }, children, { typo, typoTitle }) {
 	return (
-		<div class={`column-list ${$.class}`}>
-			{items.map(item => (
-				<div class="column-list__item">
-					<div class="column-list__title">
-						<a href={item.link}>{typoTitle(item.title)}</a>
-					</div>
-					<div class="column-list__text">{typo(item.description)}</div>
-				</div>
-			))}
-		</div>
+		<Wrapper primary={primary}>
+			<Layout>
+				{items.map(item => (
+					<Layout sm={1 / 2}>
+						<Block>
+							<div class={s.title}>
+								<Link href={item.link}>{typoTitle(item.title)}</Link>
+							</div>
+							<div class={s.text}>{typo(item.description)}</div>
+						</Block>
+					</Layout>
+				))}
+			</Layout>
+		</Wrapper>
 	);
 }

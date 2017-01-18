@@ -1,0 +1,28 @@
+.root {
+	text-align: center;
+}
+
+.item {
+	display: inline-block;
+	margin-left: .6em;
+	margin-right: .6em;
+	vertical-align: middle;
+}
+
+.item svg {
+	vertical-align: baseline;
+}
+
+.item svg path {
+	transition: fill .2s ease-in-out;
+}
+
+.item:--link-hovers svg path {
+	fill: var(--baseColor);
+}
+
+.itemFacebook {
+	margin-top: -2px;
+	padding-left: 2px;
+	padding-right: 2px;
+}

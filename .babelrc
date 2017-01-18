@@ -1,10 +1,23 @@
 {
-  "presets": [
-    "tamia"
-  ],
+	"presets": [
+		["env", {
+			"targets": {
+				"node": "current"
+			}
+		}]
+	],
 	"plugins": [
+		["transform-object-rest-spread", {
+			"useBuiltIns": true
+		}],
 		["transform-react-jsx", {
+			"useBuiltIns": true,
 			"pragma": "vdo"
+		}],
+		["css-modules-transform", {
+			"devMode": true,
+			"extensions": [".pcss"],
+			"generateScopedName": "[name]--[local]"
 		}]
 	]
 }

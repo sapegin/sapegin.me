@@ -1,6 +1,4 @@
-export default function($, children) {
-	const { pageTitle, layout, scripts } = $;
-	const { Style, Script, option } = $;
+export default function(props, children, { pageTitle, layout, scripts, Style, Script, option }) {
 	return (
 		<html lang={option('lang')}>
 			<head>
@@ -21,7 +19,7 @@ export default function($, children) {
 				<Style src="/build/styles.css" />
 				<Script src="/build/counters.js" inline />
 			</head>
-			<body class={`page page_${layout.toLowerCase()}`}>
+			<body class={`page${layout}`}>
 				{children}
 				{scripts && scripts.map(script => (
 					<Script src={`/build/${script}.js`} inline />

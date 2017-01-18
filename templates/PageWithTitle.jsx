@@ -1,5 +1,5 @@
 import Base from './Base';
-import PageHeader from './components/PageHeader';
+import Header from './components/Header';
 import PageFooter from './components/PageFooter';
 
 export default function($) {
@@ -7,7 +7,7 @@ export default function($) {
 	const { typo, typoTitle } = $;
 	return (
 		<Base {...$}>
-			<PageHeader />
+			<Header />
 
 			<div class="page-content content text">
 				<h1 class="alpha">{typoTitle(title)}</h1>

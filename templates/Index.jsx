@@ -1,61 +1,57 @@
-import Base from './Base';
+import { Beta } from 'tamia/lib/components/Text';
+import Block from 'tamia/lib/components/Block';
+import Container from 'tamia/lib/components/Container';
+import Link from 'tamia/lib/components/Link';
+import Script from 'tamia/lib/components/Script';
 import ColumnList from './components/ColumnList';
+import Socials from './components/Socials';
+import Lead from './components/Lead';
+import Section from './components/Section';
+import Text from './components/Text';
+import Pulse from './components/Pulse';
+import Base from './Base';
 
-/* eslint-disable max-len */
+/* eslint-disable max-len s */
 
-export default function($) {
-	const { links, projects } = $;
-	const { Script, Icon } = $;
+export default function({ links, projects, socials }) {
 	return (
-		<Base {...$}>
-			<div class="content text h-card">
-				<header class="index-header index-block index-block_last">
-					<div class="index-header__primary">Hi.</div>
-					<div class="index-header__secondary">My name is <span class="p-given-name" title="Pronounced as [ar'tiyom]">Artem</span><span class="is-hidden p-family-name"> Sapegin</span>. I’m a <span class="p-job-title">front-end developer</span> at <a href="https://www.here.com/" class="p-org" title="Yep, “Here” is a company name ;–)">Here</a>, passionate photographer, coffee drinker and crazy dogs’ owner living in <span class="p-region">Berlin, Germany</span>.</div>
-				</header>
+		<Base>
+			<Container class="h-card">
+				<Section level={1}>
+					<Lead head={'Hi.'}>
+						My name is <span class="p-given-name" title="Pronounced as [ar'tiyom]">Artem</span><span class="is-hidden p-family-name"> Sapegin</span>. I’m a <span class="p-job-title">front-end developer</span> at <Link href="https://www.here.com/" class="p-org" title="Yep, “Here” is a company name ;–)">Here</Link>, passionate photographer, coffee drinker and crazy dogs’ owner living in <span class="p-region">Berlin, Germany</span>.
+					</Lead>
+				</Section>
 
-				<ColumnList {...$} items={links} class="column-list_primary index-block" />
+				<Section level={1}>
+					<ColumnList items={links} primary />
+				</Section>
 
-				<h2 class="beta">My projects</h2>
+				<Section level={2}>
+					<Beta>My projects</Beta>
+					<Block>
+						<ColumnList items={projects} />
+					</Block>
+					<Text small>
+						<Link href="https://github.com/sapegin/sapegin.me">Site’s source</Link> ∙ <Link href="/history">My interactive history</Link>
+					</Text>
+				</Section>
 
-				<div class="projects">
-					<ColumnList {...$} items={projects} />
-				</div>
+				<Section level={3}>
+					<Beta>Contact me</Beta>
+					<Text big>
+						Drop me a line at <Link href="mailto:artem@sapegin.ru" class="u-email">artem@sapegin.ru</Link>, ping me at <Link href="skype:artemsapegin">Skype</Link> or <Link href="https://github.com/sapegin/ama">ask me anything</Link>.
+					</Text>
+				</Section>
 
-				<div class="footer">
-					<a href="https://github.com/sapegin/sapegin.me">Site’s source</a> ∙ <a href="/history">My interactive history</a>
-				</div>
+				<Section level={3}>
+					<Socials items={socials} />
+				</Section>
+			</Container>
 
-				<h2 class="beta">Contact me</h2>
+			<Pulse />
 
-				<div class="index-contacts">
-					<p>Drop me a line at <a href="mailto:artem@sapegin.ru" class="u-email">artem@sapegin.ru</a>, ping me at <a href="skype:artemsapegin">Skype</a> or <a href="https://github.com/sapegin/ama">ask me anything</a>.</p>
-				</div>
-
-				<div class="socials">
-					<a href="https://twitter.com/iamsapegin" class="socials__item socials__item_twitter" title="Twitter">
-						<Icon name="twitter" />
-					</a>
-					<a href="https://www.facebook.com/artemsapegin" class="socials__item socials__item_facebook" title="Facebook">
-						<Icon name="facebook" />
-					</a>
-					<a href="https://instagram.com/sapegin/" class="socials__item socials__item_instagram" title="Instagram">
-						<Icon name="instagram" />
-					</a>
-					<a href="https://github.com/sapegin" class="socials__item socials__item_github" title="GitHub">
-						<Icon name="github" />
-					</a>
-				</div>
-
-			</div>
-
-			<div class="pulse" id="pulse" role="presentation">
-				<script class="js-pulse-template" type="text/template">In the last 25 weeks I’ve shot <a href="https://instagram.com/sapegin/" class="pulse__legend pulse__legend_instagram">{'{instagram} instagrams'}</a>, wrote <a href="https://twitter.com/iamsapegin" class="pulse__legend pulse__legend_twitter">{'{twitter} tweets'}</a> and pushed <a href="https://github.com/sapegin" class="pulse__legend pulse__legend_github">{'{github} commits'}</a> to GitHub</script>
-				<div class="pulse__info js-pulse-info"></div>
-				<div class="pulse__chart js-pulse-chart"></div>
-			</div>
-
-			<Script src="/build/homepage.js" inline />
+			<Script entry="homepage" inline />
 		</Base>
 	);
 }
