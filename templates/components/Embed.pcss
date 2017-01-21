@@ -1,0 +1,52 @@
+:root {
+	--margin: calc(var(--spacer) * -1.5);
+}
+
+.content {
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	margin-bottom: 2px;
+	background: #000 no-repeat center center;
+}
+
+@media(--huge) {
+	.content {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+/* Iron Man */
+
+.embedIronMan canvas {
+	opacity: 0;
+}
+
+/* TSOTT */
+
+.embedInnerTsott {
+	height: inherit;
+	background-size: contain;
+	background: #000;
+	opacity: 0;
+}
+.embedTsott:hover .embedInnerTsott {
+	animation: --embedTsott 4s infinite;
+}
+@media (hover:none) {
+	.embedInnerTsott {
+		animation: --embedTsott 4s infinite;
+	}
+}
+
+@media (min-width: 480px) {
+	.embedInnerTsott {
+		background-size: auto auto;
+	}
+}
+
+@keyframes --embedTsott {
+	50% {
+		opacity: 1;
+	}
+}

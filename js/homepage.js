@@ -1,9 +1,9 @@
 // Author: Artem Sapegin, http://sapegin.me, 2015
 
 function loadPulse() {
-	let pulseUrl = '/build/pulse.svg';
-	let xhr = new XMLHttpRequest();
-	let timestamp = (new Date())
+	const pulseUrl = '/build/pulse.svg';
+	const xhr = new XMLHttpRequest();
+	const timestamp = (new Date())
 		.toISOString()
 		.slice(0, 10)
 	;
@@ -17,18 +17,18 @@ function loadPulse() {
 }
 
 function onPulseLoaded(svgText) {
-	let container = document.getElementById('pulse');
-	let chartElem = container.querySelector('.js-pulse-chart');
+	const container = document.getElementById('pulse');
+	const chartElem = container.querySelector('.js-pulse-chart');
 	chartElem.innerHTML = svgText;
 
-	let infoElem = container.querySelector('.js-pulse-info');
-	let template = container.querySelector('.js-pulse-template').textContent;
-	let data = JSON.parse(container.querySelector('desc').textContent);
+	const infoElem = container.querySelector('.js-pulse-info');
+	const template = container.querySelector('.js-pulse-template').textContent;
+	const data = JSON.parse(container.querySelector('desc').textContent);
 	infoElem.innerHTML = tmpl(template, data);
 }
 
 function tmpl(template, data) {
-	return template.replace(/\{([^\}]+)\}/g, function tmplReplace(m, key) {
+	return template.replace(/\{([^}]+)}/g, function tmplReplace(m, key) {
 		return data[key] || '';
 	});
 }

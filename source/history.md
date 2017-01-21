@@ -22,13 +22,13 @@ I got my first experience in real, sane programming at Children’s Creative Cen
 
 There weren’t enough computers for all pupils so we worked in pairs. During the year we had to make a game. I worked with my neighbour and best friend Ivan. Programming wasn’t his passion but he drew very well, and due to our common love of metal music, blood and skeletons we were an awesome team. Unfortunately we didn’t finish [our game](http://museum.sapegin.ru/gpf/group/history/ironman.html).
 
-<x-embed id="ironman" title="Use keys ← and →, mouse or thumbs and have the pleasure of Ivan’s sprites." background="/build/images/embeds/ironman/logo.png" height="201">
+<x-embed id="IronMan" title="Use keys ← and →, mouse or thumbs and have the pleasure of Ivan’s sprites." background="/build/images/embeds/ironman/logo.png" height="201">
 
 ## First Steps in Web Development
 
 I discovered HTML in Russian “Submarine” magazine in 1999. Using articles in the magazine and without the internet at home I made my [first personal homepage](http://museum.sapegin.ru/tsott/).
 
-<x-embed id="tsott" title="The animation on the splash page of my first homepage looked like this." background="/build/images/embeds/tsott/tsott-logo.png" height="140">
+<x-embed id="Tsott" title="The animation on the splash page of my first homepage looked like this." background="/build/images/embeds/tsott/tsott-logo.png" height="140">
 
 It was the beginning of the biggest passion in my life that became my work a few years later. PHP, my own CMSs, a lot of free hostings, many versions of my homepage and thousands of lines of hodgie code.
 

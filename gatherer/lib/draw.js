@@ -69,7 +69,7 @@ function convertData(data, highestPoint) {
 	return data.map(function(y, x) {
 		return {
 			x: SVG_WIDTH / length * x,
-			y: SVG_HEIGHT - SVG_HEIGHT / highestPoint * y,
+			y: SVG_HEIGHT - (SVG_HEIGHT / highestPoint * y),
 		};
 	});
 }

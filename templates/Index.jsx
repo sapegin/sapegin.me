@@ -1,4 +1,4 @@
-import { Beta } from 'tamia/lib/components/Text';
+import { Beta, Big, Small } from 'tamia/lib/components/Text';
 import Block from 'tamia/lib/components/Block';
 import Container from 'tamia/lib/components/Container';
 import Link from 'tamia/lib/components/Link';
@@ -7,11 +7,10 @@ import ColumnList from './components/ColumnList';
 import Socials from './components/Socials';
 import Lead from './components/Lead';
 import Section from './components/Section';
-import Text from './components/Text';
 import Pulse from './components/Pulse';
 import Base from './Base';
 
-/* eslint-disable max-len s */
+/* eslint-disable max-len */
 
 export default function({ links, projects, socials }) {
 	return (
@@ -32,16 +31,16 @@ export default function({ links, projects, socials }) {
 					<Block>
 						<ColumnList items={projects} />
 					</Block>
-					<Text small>
+					<Small>
 						<Link href="https://github.com/sapegin/sapegin.me">Site’s source</Link> ∙ <Link href="/history">My interactive history</Link>
-					</Text>
+					</Small>
 				</Section>
 
 				<Section level={3}>
 					<Beta>Contact me</Beta>
-					<Text big>
+					<Big>
 						Drop me a line at <Link href="mailto:artem@sapegin.ru" class="u-email">artem@sapegin.ru</Link>, ping me at <Link href="skype:artemsapegin">Skype</Link> or <Link href="https://github.com/sapegin/ama">ask me anything</Link>.
-					</Text>
+					</Big>
 				</Section>
 
 				<Section level={3}>

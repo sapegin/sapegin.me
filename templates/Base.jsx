@@ -1,4 +1,7 @@
-export default function(props, children, { pageTitle, layout, scripts, Style, Script, option }) {
+import Script from 'tamia/lib/components/Script';
+import Style from 'tamia/lib/components/Style';
+
+export default function(props, children, { pageTitle, scripts, option }) {
 	return (
 		<html lang={option('lang')}>
 			<head>
@@ -16,13 +19,13 @@ export default function(props, children, { pageTitle, layout, scripts, Style, Sc
 				<meta name="twitter:title" content={option('title')} />
 				<meta name="twitter:description" content={option('description')} />
 				<meta name="twitter:creator" content="@sapegin" />
-				<Style src="/build/styles.css" />
-				<Script src="/build/counters.js" inline />
+				<Style />
+				<Script entry="counters" inline />
 			</head>
-			<body class={`page${layout}`}>
+			<body>
 				{children}
 				{scripts && scripts.map(script => (
-					<Script src={`/build/${script}.js`} inline />
+					<Script entry={script} inline />
 				))}
 			</body>
 		</html>

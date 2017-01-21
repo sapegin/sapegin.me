@@ -9,26 +9,20 @@
     "bundle": "tamia bundle",
     "build": "BABEL_DISABLE_CACHE=1 babel-node src",
     "build:watch": "chokidar source 'templates/**/*.jsx' -c 'BABEL_DISABLE_CACHE=1 babel-node src'",
-    "lint": "eslint js src gatherer/*.js gatherer/lib gatherer/tasks"
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "dependencies": {
     "tamia": "~2.0.6"
   },
   "devDependencies": {
-    "babel-cli": "~6.18.0",
-    "babel-core": "~6.21.0",
+    "babel-cli": "~6.22.2",
+    "babel-core": "~6.22.1",
     "babel-eslint": "~7.1.1",
-    "babel-plugin-css-modules-transform": "~1.1.0",
-    "babel-plugin-transform-class-properties": "~6.19.0",
-    "babel-plugin-transform-object-rest-spread": "~6.20.2",
-    "babel-plugin-transform-react-jsx": "~6.8.0",
-    "babel-preset-env": "~1.1.8",
-    "babel-preset-tamia": "~6.8.0",
     "chokidar-cli": "~1.2.0",
     "classnames": "~2.2.5",
-    "eslint": "~2.10.2",
-    "eslint-config-tamia": "~2.0.1",
-    "eslint-plugin-react": "~5.1.1",
+    "eslint": "~3.14.0",
+    "eslint-config-tamia": "~3.3.2",
+    "eslint-plugin-react": "~6.9.0",
     "fledermaus": "~5.0.1",
     "tamia-build": "~0.4.0"
   }

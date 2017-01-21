@@ -1,10 +1,10 @@
-import Container from 'tamia/lib/components/Container';
+import Block from 'tamia/lib/components/Block';
 import Link from 'tamia/lib/components/Link';
 
-import s from './Header.pcss';
-
-export default () => (
-	<Container component="header" class={s.header}>
-		<Link href="/" quoted>← <u>Home</u></Link>
-	</Container>
-);
+export default function() {
+	return (
+		<Block component="header" bottom={2}>
+			<Link href="/" quoted>← <u>Home</u></Link>
+		</Block>
+	);
+}

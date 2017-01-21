@@ -427,7 +427,7 @@ function World() {
  * Canvas initialization
  */
 function getCanvas() {
-	var container = document.getElementById('ironman'),
+	var container = document.getElementById('IronMan'),
 		canvas = document.createElement('canvas');
 
 	resizeCanvas(container, canvas);

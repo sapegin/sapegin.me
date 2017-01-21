@@ -1,20 +1,27 @@
+import { Alpha } from 'tamia/lib/components/Text';
+import Block from 'tamia/lib/components/Block';
+import Container from 'tamia/lib/components/Container';
 import Base from './Base';
 import Header from './components/Header';
-import PageFooter from './components/PageFooter';
+import Footer from './components/Footer';
 
-export default function($) {
-	const { title, content } = $;
-	const { typo, typoTitle } = $;
+/* Manually import styles for custom Fledermaus tags */
+import './components/Embed.pcss';
+
+export default function({ title, content, typo, typoTitle }) {
 	return (
-		<Base {...$}>
-			<Header />
+		<Base>
+			<Container>
+				<Header />
 
-			<div class="page-content content text">
-				<h1 class="alpha">{typoTitle(title)}</h1>
-				{typo(content)}
-			</div>
+				<Block class="text" bottom={2}>
+					<Alpha>{typoTitle(title)}</Alpha>
+					{typo(content)}
+				</Block>
 
-			<PageFooter />
+				<Footer />
+			</Container>
 		</Base>
 	);
 }
+

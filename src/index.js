@@ -6,41 +6,30 @@ import {
 	savePages,
 	createMarkdownRenderer,
 	createTemplateRenderer,
-	helpers as defaultHelpers,
+	helpers,
 } from 'fledermaus';
-import * as customHelpers from './helpers';
+import Embed from '../templates/components/Embed';
 
 start('Building site...');
 
-let config = loadConfig('config');
-let options = config.base;
+const config = loadConfig('config');
+const options = config.base;
 
-let renderMarkdown = createMarkdownRenderer({
+const renderMarkdown = createMarkdownRenderer({
 	customTags: {
-		embed: ({ id, title, background, height }) => {
-			return `
-				<div class="embed">
-					<div class="embed__content embed-${id}" style="background-image:url(${background}); height:${height}px">
-						<div class="embed-${id}-i" id="${id}"></div>
-					</div>
-					<div class="embed__description">${title}</div>
-				</div>
-			`;
-		},
+		embed: Embed,
 	},
 });
-let renderTemplate = createTemplateRenderer({
+const renderTemplate = createTemplateRenderer({
 	root: options.templatesFolder,
 });
 
-const helpers = { ...defaultHelpers, ...customHelpers };
-
-let documents = loadSourceFiles(options.sourceFolder, options.sourceTypes, {
+const documents = loadSourceFiles(options.sourceFolder, options.sourceTypes, {
 	renderers: {
 		md: renderMarkdown,
 	},
 });
 
-let pages = generatePages(documents, config, helpers, { jsx: renderTemplate });
+const pages = generatePages(documents, config, helpers, { jsx: renderTemplate });
 
 savePages(pages, options.publicFolder);
