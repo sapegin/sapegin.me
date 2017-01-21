@@ -9,7 +9,7 @@
 	background: #000 no-repeat center center;
 }
 
-@media(--huge) {
+@media (--huge) {
 	.content {
 		margin-left: 0;
 		margin-right: 0;
@@ -27,13 +27,14 @@
 .embedInnerTsott {
 	height: inherit;
 	background-size: contain;
-	background: #000;
 	opacity: 0;
 }
+
 .embedTsott:hover .embedInnerTsott {
 	animation: --embedTsott 4s infinite;
 }
-@media (hover:none) {
+
+@media (hover: none) {
 	.embedInnerTsott {
 		animation: --embedTsott 4s infinite;
 	}

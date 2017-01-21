@@ -4,9 +4,6 @@
 	--colorGitHub: #b2d8b9;
 }
 
-.root {
-}
-
 .root svg {
 	width: 100%;
 	height: 200px;
@@ -21,9 +18,11 @@
 .root :global(#twitter) {
 	stroke: var(--colorTwitter);
 }
+
 .root :global(#instagram) {
 	stroke: var(--colorInstagram);
 }
+
 .root :global(#github) {
 	stroke: var(--colorGitHub);
 }
@@ -32,18 +31,20 @@
 	position: relative;
 	z-index: 100;
 	margin-top: -1em;
-	margin-bottom: -.5em;
+	margin-bottom: -0.5em;
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: center;
 	font-size: var(--smallFont);
 	opacity: 0;
-	transition: opacity .2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
 }
+
 .root:hover .info {
 	opacity: 1;
 }
-@media (hover:none) {
+
+@media (hover: none) {
 	.info {
 		margin-top: 0;
 		opacity: 1;
@@ -53,15 +54,19 @@
 .legend {
 	text-decoration: none;
 }
+
 .legend:--link-hovers {
 	text-decoration: underline;
 }
+
 .legendTwitter {
 	color: color(var(--colorTwitter) lightness(-25%));
 }
+
 .legendInstagram {
 	color: color(var(--colorInstagram) lightness(-20%));
 }
+
 .legendGitHub {
 	color: color(var(--colorGitHub) lightness(-30%));
 }
