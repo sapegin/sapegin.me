@@ -50,7 +50,7 @@ export default function({ links, projects, socials }) {
 
 			<Pulse />
 
-			<Script entry="homepage" inline />
+			<Script entry="main" inline />
 		</Base>
 	);
 }
