@@ -18,7 +18,7 @@ export default function({ links, projects, socials }) {
 			<Container class="h-card">
 				<Section level={1}>
 					<Lead head={'Hi.'}>
-						My name is <span class="p-given-name" title="Pronounced as [ar'tiyom]">Artem</span><span class="is-hidden p-family-name"> Sapegin</span>. I’m a <span class="p-job-title">front-end developer</span> at <Link href="https://www.here.com/" class="p-org" title="Yep, “Here” is a company name ;–)">Here</Link>, passionate photographer, coffee drinker and crazy dogs’ owner living in <span class="p-region">Berlin, Germany</span>.
+						My name is <span class="p-given-name" title="Pronounced as [ar'tiyom]">Artem</span><span class="is-hidden p-family-name"> Sapegin</span>. I’m a <span class="p-job-title">frontend developer</span> at <Link href="https://www.here.com/" class="p-org" title="Yep, “Here” is a company name ;–)">Here</Link>, passionate photographer, coffee drinker and crazy dogs’ owner living in <span class="p-region">Berlin, Germany</span>.
 					</Lead>
 				</Section>
 
@@ -32,7 +32,7 @@ export default function({ links, projects, socials }) {
 						<ColumnList items={projects} />
 					</Block>
 					<Small>
-						<Link href="https://github.com/sapegin/sapegin.me">Site’s source</Link> ∙ <Link href="/history">My interactive history</Link>
+						<Link href="https://github.com/sapegin/sapegin.me">Site’s source code</Link> ∙ <Link href="/history">My interactive story</Link>
 					</Small>
 				</Section>
 

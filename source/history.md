@@ -1,16 +1,16 @@
 ---
 layout: PageWithTitle
-title: 'My History'
-pageTitle: 'Artem Sapegin’s Interactive History'
+title: 'My story'
+pageTitle: 'Artem Sapegin’s interactive story'
 scripts:
   - history
 ---
 
-## Pre-computer Life
+## Pre-computer life
 
 I don’t remember much about my life before I met computers, but it wouldn’t be very interesting anyway. I remember my parents wanted to teach me (without success) to draw. And how I pulled a goose by its neck in a zoo but it didn’t get through the grating. But… I heard this story later on.
 
-## First Computer
+## First computer
 
 I got my first computer from my uncle as a gift. It was Soviet clone of the legendary [ZX Spectrum](http://en.wikipedia.org/wiki/ZX_Spectrum) in orange case. With the computer I got cassettes with games, a tape player and a book about computer internals and introduction to Basic, which was embedded in the Spectrum.
 
@@ -24,7 +24,7 @@ There weren’t enough computers for all pupils so we worked in pairs. During th
 
 <x-embed id="IronMan" title="Use keys ← and →, mouse or thumbs and have the pleasure of Ivan’s sprites." background="/build/images/embeds/ironman/logo.png" height="201">
 
-## First Steps in Web Development
+## First steps in web development
 
 I discovered HTML in Russian “Submarine” magazine in 1999. Using articles in the magazine and without the internet at home I made my [first personal homepage](http://museum.sapegin.ru/tsott/).
 
@@ -34,7 +34,7 @@ It was the beginning of the biggest passion in my life that became my work a few
 
 Meanwhile I entered the Moscow State College of Information Technology where I learned touch typing and Microsoft Office. My classmate and I started there another Project of the Century (indeed unfinished) — [a game](http://museum.sapegin.ru/lotr/) based on “The Lord of the Rings” book.
 
-## First Job
+## First job
 
 Studying in the college became a work there as a computer class manager, teacher and web developer. I shared a room on a computer class’  balcony with a guy who fixed hardware and who came to work afternoon. I made the college’s new website but necessity to scold students and to look after the class distracted me from the coding.
 
@@ -42,9 +42,9 @@ Studying in the college became a work there as a computer class manager, teacher
 
 For unknown reason I bought a camera after one of my first salaries. Eventually it became [my second big passion](http://morning.photos/).
 
-## Front-end
+## Frontend
 
-After a year of working at SEO oriented web design studio I suddenly changed PHP and back-end to JavaScript and front-end.
+After a year of working at SEO oriented web design studio I suddenly changed PHP and backend to JavaScript and frontend.
 
 ## Dogs
 

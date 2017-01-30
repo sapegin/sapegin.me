@@ -1,6 +1,6 @@
 ---
 layout: Index
-pageTitle: 'Artem Sapegin: front-end developer, photographer &amp; dog lover'
+pageTitle: 'Artem Sapegin: frontend developer, photographer &amp; dog lover'
 links:
   -
     title: My photography
@@ -8,28 +8,28 @@ links:
     link: http://morning.photos/
   -
     title: My nerdy writings
-    description: Blog about front-end and geeky things
+    description: Blog about frontend and geeky things
     link: http://blog.sapegin.me/
 projects:
+  -
+    title: React Styleguidist
+    description: React style guide generator with hot reload
+    link: https://github.com/styleguidist/react-styleguidist
   -
     title: Social Likes Next
     description: Modern social share buttons
     link: http://social-likes-next.js.org/
   -
-    title: React Styleguidist
-    description: React style guide generator with hot reload
-    link: https://github.com/sapegin/react-styleguidist
-  -
-    title: grunt-webfont
-    description: SVG to webfont converter for Grunt
-    link: https://github.com/sapegin/grunt-webfont
+    title: Marmot (mrm)
+    description: Codemods for your project config files
+    link: https://github.com/sapegin/mrm
   -
     title: shipit
     description: Minimalistic SSH deployment
     link: https://github.com/sapegin/shipit
   -
     title: Tâmia
-    description: My tiny opinionated front-end framework
+    description: My tiny opinionated frontend framework
     link: http://tamiadev.github.io/tamia/
   -
     title: Richtypo
