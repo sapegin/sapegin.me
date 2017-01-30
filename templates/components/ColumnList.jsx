@@ -1,7 +1,7 @@
-import component from 'tamia/lib/components/component';
-import Block from 'tamia/lib/components/Block';
-import Layout from 'tamia/lib/components/Layout';
-import Link from 'tamia/lib/components/Link';
+import component from 'tamia/src/components/component';
+import Block from 'tamia/src/components/Block';
+import Layout from 'tamia/src/components/Layout';
+import Link from 'tamia/src/components/Link';
 import s from './ColumnList.pcss';
 
 const Wrapper = component(({ primary }) => [s.root, {

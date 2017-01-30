@@ -1,10 +1,10 @@
 node_modules
-public/index.html
-public/history.html
+*.log
+public/*.html
 public/build/*.js
-public/build/styles.css
+public/build/*.css
 public/build/pulse.svg
+!public/google*.html
+!public/mywot*.html
 gatherer/.secrets.json
 gatherer/data.json
-lib
-*.log

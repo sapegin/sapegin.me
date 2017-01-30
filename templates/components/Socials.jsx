@@ -1,4 +1,4 @@
-import Icon from 'tamia/lib/components/Icon';
+import Icon from 'tamia/src/components/Icon';
 import cx from 'classnames';
 import s from './Socials.pcss';
 

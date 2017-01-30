@@ -1,5 +1,5 @@
-import { Small } from 'tamia/lib/components/Text';
-import Block from 'tamia/lib/components/Block';
+import { Small } from 'tamia/src/components/Text';
+import Block from 'tamia/src/components/Block';
 
 export default function() {
 	return (
