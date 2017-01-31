@@ -29,7 +29,7 @@ projects:
     link: https://github.com/sapegin/shipit
   -
     title: Tâmia
-    description: My tiny opinionated frontend framework
+    description: Personal opinionated frontend framework
     link: http://tamiadev.github.io/tamia/
   -
     title: Richtypo
@@ -37,7 +37,7 @@ projects:
     link: https://github.com/sapegin/richtypo.js
   -
     title: Fledermaus
-    description: Infinitely extensible simple ES6 static site generator
+    description: Simple extensible static site generator
     link: https://github.com/sapegin/fledermaus
   -
     title: Squirrelsong
