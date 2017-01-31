@@ -1,4 +1,4 @@
-import component from 'tamia/src/components/component';
+import component from 'tamia/lib/components/component';
 import cx from 'classnames';
 import s from './Pulse.pcss';
 

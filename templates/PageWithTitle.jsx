@@ -1,6 +1,6 @@
-import { Alpha } from 'tamia/src/components/Text';
-import Block from 'tamia/src/components/Block';
-import Container from 'tamia/src/components/Container';
+import { Alpha } from 'tamia/lib/components/Text';
+import Block from 'tamia/lib/components/Block';
+import Container from 'tamia/lib/components/Container';
 import Base from './Base';
 import Header from './components/Header';
 import Footer from './components/Footer';

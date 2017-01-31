@@ -1,8 +1,8 @@
-import { Beta, Big, Small } from 'tamia/src/components/Text';
-import Block from 'tamia/src/components/Block';
-import Container from 'tamia/src/components/Container';
-import Link from 'tamia/src/components/Link';
-import Script from 'tamia/src/components/Script';
+import { Beta, Big, Small } from 'tamia/lib/components/Text';
+import Block from 'tamia/lib/components/Block';
+import Container from 'tamia/lib/components/Container';
+import Link from 'tamia/lib/components/Link';
+import Script from 'tamia/lib/components/Script';
 import ColumnList from './components/ColumnList';
 import Socials from './components/Socials';
 import Lead from './components/Lead';

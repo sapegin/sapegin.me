@@ -1,5 +1,5 @@
-import Block from 'tamia/src/components/Block';
-import Link from 'tamia/src/components/Link';
+import Block from 'tamia/lib/components/Block';
+import Link from 'tamia/lib/components/Link';
 
 export default function() {
 	return (
