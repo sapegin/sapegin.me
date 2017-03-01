@@ -8,6 +8,7 @@ export default function(props, children, { pageTitle, scripts, option }) {
 			<head>
 				<meta charset="utf-8" />
 				<title>{pageTitle}</title>
+				<Style inline />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="format-detection" content="telephone=no" />
 				<meta name="description" content={option('description')} />
@@ -20,11 +21,10 @@ export default function(props, children, { pageTitle, scripts, option }) {
 				<meta name="twitter:title" content={option('title')} />
 				<meta name="twitter:description" content={option('description')} />
 				<meta name="twitter:creator" content="@sapegin" />
-				<Style />
-				<Script entry="counters" inline />
 			</head>
 			<body>
 				{children}
+				<Script entry="counters" inline />
 				{scripts && scripts.map(script => (
 					<Script entry={script} inline />
 				))}

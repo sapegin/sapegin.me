@@ -13,10 +13,10 @@
     "lint:css": "stylelint '**/*.pcss'"
   },
   "engines": {
-    "node": ">=7"
+    "node": ">=7.6"
   },
   "dependencies": {
-    "tamia": "^3.0.0-aplha.5"
+    "tamia": "^3.0.0-aplha.6"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
