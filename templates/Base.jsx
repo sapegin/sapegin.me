@@ -20,7 +20,7 @@ export default function(props, children, { pageTitle, scripts, option }) {
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:title" content={option('title')} />
 				<meta name="twitter:description" content={option('description')} />
-				<meta name="twitter:creator" content="@sapegin" />
+				<meta name="twitter:creator" content="@iamsapegin" />
 			</head>
 			<body>
 				{children}
