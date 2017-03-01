@@ -3,13 +3,13 @@ layout: Index
 pageTitle: 'Artem Sapegin: frontend developer, photographer &amp; dog lover'
 links:
   -
-    title: My photography
-    description: Gallery and blog about photography
-    link: http://morning.photos/
-  -
     title: My nerdy writings
     description: Blog about frontend and geeky things
     link: http://blog.sapegin.me/
+  -
+    title: My photography
+    description: Gallery and blog about photography
+    link: http://morning.photos/
 projects:
   -
     title: React Styleguidist
