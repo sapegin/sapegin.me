@@ -13,20 +13,24 @@ links:
 projects:
   -
     title: React Styleguidist
-    description: React style guide generator with hot reload
-    link: https://github.com/styleguidist/react-styleguidist
+    description: React component development environment
+    link: https://react-styleguidist.js.org/
   -
-    title: Social Likes Next
-    description: Modern social share buttons
-    link: http://social-likes-next.js.org/
-  -
-    title: Marmot (mrm)
+    title: Mrm
     description: Codemods for your project config files
     link: https://github.com/sapegin/mrm
   -
     title: shipit
     description: Minimalistic SSH deployment
     link: https://github.com/sapegin/shipit
+  -
+    title: q-i
+    description: Node.js objects inspector with color highlighting
+    link: https://github.com/sapegin/q-i
+  -
+    title: React Spaceman
+    description: React component to manage whitespace
+    link: https://github.com/sapegin/react-spaceman
   -
     title: Tâmia
     description: Personal opinionated frontend framework
@@ -36,6 +40,10 @@ projects:
     description: Typography enhancer for Node.js
     link: https://github.com/sapegin/richtypo.js
   -
+    title: textlint-rule-terminology
+    description: Check and fix your tech writing with Textlint
+    link: https://github.com/sapegin/textlint-rule-terminology
+  -
     title: Fledermaus
     description: Simple extensible static site generator
     link: https://github.com/sapegin/fledermaus
@@ -43,6 +51,15 @@ projects:
     title: Squirrelsong
     description: Dark terminal color scheme
     link: https://github.com/sapegin/squirrelsong
+  -
+    title: webpack-blocks
+    description: Webpack configs with feature blocks (maintainer)
+    link: https://github.com/andywer/webpack-blocks
+  -
+    title: git-friendly
+    description: Scripts for better Git workflow (maintainer)
+    link: https://github.com/jamiew/git-friendly
+
 socials:
   -
     id: twitter
