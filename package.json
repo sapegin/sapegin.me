@@ -13,7 +13,7 @@
     "lint:css": "stylelint '**/*.pcss'"
   },
   "engines": {
-    "node": ">=7.6"
+    "node": ">=8"
   },
   "dependencies": {
     "tamia": "^3.0.0-aplha.13"

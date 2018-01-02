@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-  - 7
+  - 9
 before_script:
-- yarn run bundle
-- yarn run build
+- npm run bundle
+- npm run build
 - cd gatherer
-- yarn install
+- npm install
