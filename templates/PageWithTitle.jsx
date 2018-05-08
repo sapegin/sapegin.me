@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 /* Manually import styles for custom Fledermaus tags */
 import './components/Embed.pcss';
 
-export default function({ title, content, typo, typoTitle }) {
+export default function({ title, content, typo, typoTitle }, children) {
 	return (
 		<Base>
 			<Container>
@@ -16,7 +16,7 @@ export default function({ title, content, typo, typoTitle }) {
 
 				<Block class="text" bottom={2}>
 					<Alpha>{typoTitle(title)}</Alpha>
-					{typo(content)}
+					{children ? children : typo(content)}
 				</Block>
 
 				<Footer />
@@ -24,4 +24,3 @@ export default function({ title, content, typo, typoTitle }) {
 		</Base>
 	);
 }
-
