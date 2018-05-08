@@ -30,7 +30,6 @@ var options = {
 };
 var oldData;
 
-
 var fs = require('fs');
 var log = require('winston');
 var path = require('path');
@@ -48,7 +47,6 @@ for (var key in secrets) {
 if (fs.existsSync(outFile)) {
 	oldData = require(outFile);
 }
-
 
 taskrunner.run(tasksDir, options, function(results) {
 	for (var id in results) {

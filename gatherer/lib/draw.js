@@ -30,11 +30,12 @@ function draw(data, options) {
 	var highestPoint = getHighestPoint(data, options);
 
 	var document = jsdom.jsdom();
-	var svg = d3.select(document.body).append('svg')
+	var svg = d3
+		.select(document.body)
+		.append('svg')
 		.attr('xmlns', 'http://www.w3.org/2000/svg')
 		.attr('viewBox', [0, 0, SVG_WIDTH, SVG_HEIGHT].join(' '))
-		.attr('preserveAspectRatio', 'none')
-	;
+		.attr('preserveAspectRatio', 'none');
 
 	var totals = {};
 	for (var key in data) {
@@ -44,24 +45,22 @@ function draw(data, options) {
 		totals[key] = currentData[currentOptions.totalKey];
 	}
 
-	svg.append('desc')
-		.text(JSON.stringify(totals))
-	;
+	svg.append('desc').text(JSON.stringify(totals));
 
 	return svg.node().outerHTML;
 }
 
 function drawLine(svg, key, data, highestPoint) {
-	var line = d3.svg.line()
+	var line = d3.svg
+		.line()
 		.x(d => d.x)
 		.y(d => d.y)
-		.interpolate('basis')  // cardinal
-	;
+		.interpolate('basis'); // cardinal
 
-	svg.append('path')
+	svg
+		.append('path')
 		.attr('d', line(convertData(data, highestPoint)))
-		.attr('id', key)
-	;
+		.attr('id', key);
 }
 
 function convertData(data, highestPoint) {
@@ -69,7 +68,7 @@ function convertData(data, highestPoint) {
 	return data.map(function(y, x) {
 		return {
 			x: SVG_WIDTH / length * x,
-			y: SVG_HEIGHT - (SVG_HEIGHT / highestPoint * y),
+			y: SVG_HEIGHT - SVG_HEIGHT / highestPoint * y,
 		};
 	});
 }

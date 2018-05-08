@@ -4,7 +4,6 @@
 
 Powered by [Tâmia](http://tamiadev.github.io/tamia/) and [Fledermaus](https://github.com/sapegin/fledermaus).
 
-
 ## Running locally
 
 First clone the repo, install dependencies and build the site:
@@ -31,4 +30,4 @@ npm start
 
 ## License
 
-You can use the code (HTML/JS) of this site, but you *can’t* use the design, Stylus/CSS, images and content.
+You can use the code (HTML/JS) of this site, but you _can’t_ use the design, Stylus/CSS, images and content.

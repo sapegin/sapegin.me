@@ -30,6 +30,8 @@ const documents = loadSourceFiles(options.sourceFolder, options.sourceTypes, {
 	},
 });
 
-const pages = generatePages(documents, config, helpers, { jsx: renderTemplate });
+const pages = generatePages(documents, config, helpers, {
+	jsx: renderTemplate,
+});
 
 savePages(pages, options.publicFolder);

@@ -35,23 +35,21 @@ function runTasks(tasksDir, options, callback) {
 		promises.push(runTask(taskId, filepath, options));
 	});
 
-	Q.allSettled(promises)
-		.then(function(results) {
-			results.forEach(function(result) {
-				if (result.state === 'fulfilled') {
-					var value = result.value;
-					data[value[0]] = value[1];
-				}
-			});
-			callback(data);
+	Q.allSettled(promises).then(function(results) {
+		results.forEach(function(result) {
+			if (result.state === 'fulfilled') {
+				var value = result.value;
+				data[value[0]] = value[1];
+			}
 		});
+		callback(data);
+	});
 }
 
 function getTasksList(tasksDir) {
-	return fs.readdirSync(tasksDir)
-		.filter(function(filename) {
-			return path.extname(filename) === '.js';
-		});
+	return fs.readdirSync(tasksDir).filter(function(filename) {
+		return path.extname(filename) === '.js';
+	});
 }
 
 function runTask(taskId, filepath, options) {

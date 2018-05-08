@@ -36,7 +36,7 @@ Meanwhile I entered the Moscow State College of Information Technology where I l
 
 ## First job
 
-Studying in the college became a work there as a computer class manager, teacher and web developer. I shared a room on a computer class’  balcony with a guy who fixed hardware and who came to work afternoon. I made the college’s new website but necessity to scold students and to look after the class distracted me from the coding.
+Studying in the college became a work there as a computer class manager, teacher and web developer. I shared a room on a computer class’ balcony with a guy who fixed hardware and who came to work afternoon. I made the college’s new website but necessity to scold students and to look after the class distracted me from the coding.
 
 ## Photography
 

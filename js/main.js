@@ -3,10 +3,7 @@
 function loadPulse() {
 	const pulseUrl = '/build/pulse.svg';
 	const xhr = new XMLHttpRequest();
-	const timestamp = (new Date())
-			.toISOString()
-			.slice(0, 10)
-		;
+	const timestamp = new Date().toISOString().slice(0, 10);
 	xhr.open('GET', pulseUrl + '?' + timestamp);
 	xhr.onload = function() {
 		if (xhr.status === 200) {

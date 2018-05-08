@@ -50,8 +50,7 @@ exports.task = function(options, callback) {
 			if (err) {
 				console.log(err.message);
 				callback(null);
-			}
-			else {
+			} else {
 				var lastEvent = events[events.length - 1];
 				if (lastEvent) {
 					// Remove first tweet (id === maxId) because it exists in two pages
@@ -82,8 +81,7 @@ exports.task = function(options, callback) {
 
 			if (weeks[weekNum]) {
 				weeks[weekNum]++;
-			}
-			else {
+			} else {
 				weeks[weekNum] = 1;
 			}
 		});

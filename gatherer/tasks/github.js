@@ -21,7 +21,10 @@ exports.task = function(options, callback) {
 	'use strict';
 
 	function get() {
-		request('https://github.com/users/' + options.githubUser + '/contributions', parseResponse);
+		request(
+			'https://github.com/users/' + options.githubUser + '/contributions',
+			parseResponse
+		);
 	}
 
 	function parseResponse(err, response, xml) {
@@ -43,14 +46,16 @@ exports.task = function(options, callback) {
 					date: json.rect['data-date'],
 					count: json.rect['data-count'],
 				});
-			}
-			else if (Array.isArray(json.rect)) {
-				Array.prototype.push.apply(contributionsByDay, json.rect.map(function(json) {
-					return {
-						date: json['data-date'],
-						count: json['data-count'],
-					};
-				}));
+			} else if (Array.isArray(json.rect)) {
+				Array.prototype.push.apply(
+					contributionsByDay,
+					json.rect.map(function(json) {
+						return {
+							date: json['data-date'],
+							count: json['data-count'],
+						};
+					})
+				);
 			}
 		});
 

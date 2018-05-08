@@ -30,12 +30,7 @@ var WORLD_WIDTH = 1600,
 	PLAYGROUND_WIDTH,
 	PLAYGROUND_HEIGHT = 201,
 	DIR = '/build/images/embeds/ironman/',
-	SPIDERS = [
-		[522, 77],
-		[649, 60],
-		[869, 62],
-		[1048, 60]
-	],
+	SPIDERS = [[522, 77], [649, 60], [869, 62], [1048, 60]],
 	BLOOD_DROPS = 3,
 	BG_COLOR = '#000';
 
@@ -44,7 +39,8 @@ var r = getRandomGenerator(),
 	gs = new JSGameSoup(canvasElem, 30);
 
 // Preload sprites
-Sprite.preload([
+Sprite.preload(
+	[
 		DIR + 'map.png',
 		DIR + 'sceleton_right.png',
 		DIR + 'sceleton_left.png',
@@ -58,7 +54,7 @@ Sprite.preload([
 		DIR + 'enemy_walk-right_2.png',
 		DIR + 'enemy_walk-left_1.png',
 		DIR + 'enemy_walk-left_2.png',
-		DIR + 'spider.png'
+		DIR + 'spider.png',
 	],
 	// Create the world when all sprites loaded
 	function() {
@@ -71,13 +67,14 @@ if (gs) {
 	gs.launch();
 }
 
-
 /**
  * Labyrinth
  */
 function Labyrinth(world) {
-	var sprite = new Sprite(['left', 'top'], {
-			'normal': [[DIR + 'map.png', 0]]
+	var sprite = new Sprite(
+		['left', 'top'],
+		{
+			normal: [[DIR + 'map.png', 0]],
 		},
 		function() {
 			sprite.action('normal');
@@ -88,7 +85,6 @@ function Labyrinth(world) {
 		sprite.draw(ctx, world.camera([0, 0]));
 	};
 }
-
 
 /**
  * Player
@@ -101,24 +97,22 @@ function Player(world) {
 		MIN_X = 218,
 		MAX_X = 1358;
 
-	var pos = this.pos = [360, 189],
-		vx = 0;  // Velocity
+	var pos = (this.pos = [360, 189]),
+		vx = 0; // Velocity
 
-	var sprite = new Sprite(['center', 'bottom'], {
-			'stand': [
-				[DIR + 'sceleton_right.png', 0]
-			],
-			'stand left': [
-				[DIR + 'sceleton_left.png', 0]
-			],
+	var sprite = new Sprite(
+		['center', 'bottom'],
+		{
+			stand: [[DIR + 'sceleton_right.png', 0]],
+			'stand left': [[DIR + 'sceleton_left.png', 0]],
 			'walk right': [
 				[DIR + 'sceleton_walk-right_1.png', WALK_FRAMES],
-				[DIR + 'sceleton_walk-right_2.png', WALK_FRAMES]
+				[DIR + 'sceleton_walk-right_2.png', WALK_FRAMES],
 			],
 			'walk left': [
 				[DIR + 'sceleton_walk-left_1.png', WALK_FRAMES],
-				[DIR + 'sceleton_walk-left_2.png', WALK_FRAMES]
-			]
+				[DIR + 'sceleton_walk-left_2.png', WALK_FRAMES],
+			],
 		},
 		function() {
 			sprite.action('stand');
@@ -134,7 +128,7 @@ function Player(world) {
 	};
 
 	this.update = function() {
-		if ((pos[0] + vx < MIN_X) || (pos[0] + vx > MAX_X)) vx = 0;
+		if (pos[0] + vx < MIN_X || pos[0] + vx > MAX_X) vx = 0;
 		pos[0] += vx;
 		this.updateanimation();
 		sprite.update();
@@ -146,10 +140,8 @@ function Player(world) {
 	};
 
 	this.collide_aabb = function(who) {
-		if (who.type === 'spider')
-			damage();
+		if (who.type === 'spider') damage();
 	};
-
 
 	/* Input events */
 
@@ -178,17 +170,16 @@ function Player(world) {
 			var offset = frame * velocity,
 				done = true;
 
-			if (!offset)
-				return false;
+			if (!offset) return false;
 
 			for (var i = 0; i < data.length; i += 4) {
-				if (data[i] + data[i+1] + data[i+2]) {
+				if (data[i] + data[i + 1] + data[i + 2]) {
 					data[i] += offset;
-					data[i+1] -= offset;
-					data[i+2] -= offset;
+					data[i + 1] -= offset;
+					data[i + 2] -= offset;
 
 					if (forward) {
-						if (data[i] !== 255 ||data[i+1] + data[i+2] !== 0)
+						if (data[i] !== 255 || data[i + 1] + data[i + 2] !== 0)
 							done = false;
 					}
 				}
@@ -202,7 +193,6 @@ function Player(world) {
 	}
 }
 
-
 /**
  * Enemy
  */
@@ -214,24 +204,22 @@ function Enemy(world) {
 		MIN_X = 1430,
 		MAX_X = 1550;
 
-	var pos = this.pos = [1440, 189],
-		vx = WALK_VX;  // Velocity
+	var pos = (this.pos = [1440, 189]),
+		vx = WALK_VX; // Velocity
 
-	var sprite = new Sprite(['center', 'bottom'], {
-			'stand': [
-				[DIR + 'enemy_right.png', 0]
-			],
-			'stand left': [
-				[DIR + 'enemy_left.png', 0]
-			],
+	var sprite = new Sprite(
+		['center', 'bottom'],
+		{
+			stand: [[DIR + 'enemy_right.png', 0]],
+			'stand left': [[DIR + 'enemy_left.png', 0]],
 			'walk right': [
 				[DIR + 'enemy_walk-right_1.png', WALK_FRAMES],
-				[DIR + 'enemy_walk-right_2.png', WALK_FRAMES]
+				[DIR + 'enemy_walk-right_2.png', WALK_FRAMES],
 			],
 			'walk left': [
 				[DIR + 'enemy_walk-left_1.png', WALK_FRAMES],
-				[DIR + 'enemy_walk-left_2.png', WALK_FRAMES]
-			]
+				[DIR + 'enemy_walk-left_2.png', WALK_FRAMES],
+			],
 		},
 		function() {
 			sprite.action('walk right');
@@ -247,13 +235,12 @@ function Enemy(world) {
 	};
 
 	this.update = function() {
-		if ((pos[0] + vx < MIN_X) || (pos[0] + vx > MAX_X)) vx = -vx;
+		if (pos[0] + vx < MIN_X || pos[0] + vx > MAX_X) vx = -vx;
 		pos[0] += vx;
 		this.updateanimation();
 		sprite.update();
 	};
 }
-
 
 /**
  * Spider
@@ -271,8 +258,10 @@ function Spider(world, pos) {
 	// Random initial position
 	pos[1] = r.nextInt(MIN_Y, MAX_Y);
 
-	var sprite = new Sprite(['center', 'top'], {
-			'normal': [[DIR + 'spider.png', 0]]
+	var sprite = new Sprite(
+		['center', 'top'],
+		{
+			normal: [[DIR + 'spider.png', 0]],
 		},
 		function() {
 			sprite.action('normal');
@@ -289,7 +278,7 @@ function Spider(world, pos) {
 	};
 
 	this.update = function() {
-		if ((pos[1] + vy < MIN_Y) || (pos[1] + vy > MAX_Y)) vy = -vy;
+		if (pos[1] + vy < MIN_Y || pos[1] + vy > MAX_Y) vy = -vy;
 		pos[1] += vy;
 		sprite.update();
 	};
@@ -299,7 +288,6 @@ function Spider(world, pos) {
 		return sprite.aabb(pos);
 	};
 }
-
 
 /**
  * Falling drop
@@ -330,13 +318,11 @@ function Drop(world, options) {
 					paused = false;
 				}, r.nextInt(options.minPause, options.maxPause));
 			}
-		}
-		else if (!paused) {
+		} else if (!paused) {
 			pos[1] += vy;
 		}
 	};
 }
-
 
 /**
  * World
@@ -360,13 +346,29 @@ function World() {
 
 	this.init = function() {
 		function addDrop() {
-			gs.addEntity(new Drop(that, { x: 157, minY: 16, color: '#a00', minPause: 0, maxPause: 1000 }));
+			gs.addEntity(
+				new Drop(that, {
+					x: 157,
+					minY: 16,
+					color: '#a00',
+					minPause: 0,
+					maxPause: 1000,
+				})
+			);
 		}
 
 		// Background
 		gs.addEntity(new Labyrinth(that));
 		// Water drop
-		gs.addEntity(new Drop(that, { x: 486, minY: 50, color: '#5656fd', minPause: 200, maxPause: 2000 }));
+		gs.addEntity(
+			new Drop(that, {
+				x: 486,
+				minY: 50,
+				color: '#5656fd',
+				minPause: 200,
+				maxPause: 2000,
+			})
+		);
 		// Blood drops
 		for (var dropIdx = 1; dropIdx <= BLOOD_DROPS; dropIdx++) {
 			setTimeout(addDrop, r.nextInt(dropIdx * 1000, dropIdx * 1000 + 1000));
@@ -395,22 +397,20 @@ function World() {
 		var x = player.pos[0] - this.cameraX;
 		if (x > gs.width - CAMERA_THRESHOLD) {
 			this.cameraX += CAMERA_STEP;
-		}
-		else if (x < CAMERA_THRESHOLD) {
+		} else if (x < CAMERA_THRESHOLD) {
 			this.cameraX -= CAMERA_STEP;
 		}
 
 		// Detect window resize
 		if (gs.width + this.cameraX > WORLD_WIDTH - CAMERA_THRESHOLD)
-			 this.cameraX = WORLD_WIDTH - CAMERA_THRESHOLD - gs.width;
+			this.cameraX = WORLD_WIDTH - CAMERA_THRESHOLD - gs.width;
 	};
 
 	// Mouse/touch detection
 	this.pointerDown = function() {
 		if (gs.pointerPosition[0] < player.pos[0] - this.cameraX)
 			player.keyDown_37();
-		else
-			player.keyDown_39();
+		else player.keyDown_39();
 	};
 
 	this.pointerUp = function() {
@@ -421,7 +421,6 @@ function World() {
 		return [0, 0, gs.width, gs.height];
 	};
 }
-
 
 /**
  * Canvas initialization
@@ -440,7 +439,6 @@ function getCanvas() {
 	return canvas;
 }
 
-
 /**
  * Resizes canvas according to container width
  */
@@ -452,13 +450,12 @@ function resizeCanvas(container, canvas) {
 	if (gs) gs.width = PLAYGROUND_WIDTH;
 }
 
-
 /**
  * Seedable random number generator
  */
 function getRandomGenerator() {
 	var r = new SeedableRandom();
-	r.seed((new Date()).getTime());
+	r.seed(new Date().getTime());
 	return r;
 }
 
@@ -467,15 +464,11 @@ function getRandomGenerator() {
 function chooseWalkingSprite(vx, walkX, sprite) {
 	if (vx >= walkX) {
 		sprite.action('walk right');
-	}
-	else if (vx <= -walkX) {
+	} else if (vx <= -walkX) {
 		sprite.action('walk left');
-	}
-	else {
+	} else {
 		var action = sprite.get_action();
-		if (action === 'walk right')
-			sprite.action('stand');
-		else if (action === 'walk left')
-			sprite.action('stand left');
+		if (action === 'walk right') sprite.action('stand');
+		else if (action === 'walk left') sprite.action('stand left');
 	}
 }

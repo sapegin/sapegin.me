@@ -25,9 +25,7 @@ export default function(props, children, { pageTitle, scripts, option }) {
 			<body>
 				{children}
 				<Script entry="counters" inline />
-				{scripts && scripts.map(script => (
-					<Script entry={script} inline />
-				))}
+				{scripts && scripts.map(script => <Script entry={script} inline />)}
 			</body>
 		</html>
 	);

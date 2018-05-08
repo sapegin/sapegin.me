@@ -4,10 +4,13 @@ import Layout from 'tamia/lib/components/Layout';
 import Link from 'tamia/lib/components/Link';
 import s from './ColumnList.pcss';
 
-const Wrapper = component(({ primary }) => [s.root, {
-	[s.isPrimary]: primary,
-	[s.isSecondary]: !primary,
-}]);
+const Wrapper = component(({ primary }) => [
+	s.root,
+	{
+		[s.isPrimary]: primary,
+		[s.isSecondary]: !primary,
+	},
+]);
 
 export default function({ items, primary }, children, { typo, typoTitle }) {
 	return (

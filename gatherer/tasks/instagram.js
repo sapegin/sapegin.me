@@ -65,8 +65,7 @@ exports.task = function(options, callback) {
 
 			if (weeks[weekNum]) {
 				weeks[weekNum]++;
-			}
-			else {
+			} else {
 				weeks[weekNum] = 1;
 			}
 		});
