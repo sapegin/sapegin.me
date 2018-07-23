@@ -24,7 +24,7 @@ module.exports = {
 				],
 			},
 		},
-		'gatsby-plugin-remove-trailing-slashes',
+		// 'gatsby-plugin-remove-trailing-slashes',
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
