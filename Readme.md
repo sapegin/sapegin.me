@@ -1,8 +1,8 @@
-# Artem Sapegin’s Home Page version 2015
+# Artem Sapegin’s home page version 2018
 
 [![Build Status](https://travis-ci.org/sapegin/sapegin.me.png)](https://travis-ci.org/sapegin/sapegin.me)
 
-Powered by [Tâmia](http://tamiadev.github.io/tamia/) and [Fledermaus](https://github.com/sapegin/fledermaus).
+Powered by [Tâmia](http://tamiadev.github.io/tamia/), [Gatsby](https://www.gatsbyjs.org/) and [Emotion](https://emotion.sh/).
 
 ## Running locally
 
@@ -12,7 +12,6 @@ First clone the repo, install dependencies and build the site:
 git clone https://github.com/sapegin/sapegin.me.git
 cd sapegin.me
 npm install
-npm run bundle
 npm run build
 ```
 
@@ -24,7 +23,7 @@ npm start
 
 ## Author
 
-* [Artem Sapegin](http://sapegin.me)
+- [Artem Sapegin](http://sapegin.me)
 
 ---
 
