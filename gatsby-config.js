@@ -11,6 +11,21 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-emotion',
 		{
+			resolve: 'gatsby-plugin-lodash',
+			options: {
+				disabledFeatures: [
+					'shorthands',
+					'cloning',
+					'currying',
+					'exotics',
+					'guards',
+					'chaining',
+					'placeholders',
+				],
+			},
+		},
+		'gatsby-plugin-remove-trailing-slashes',
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				path: `${__dirname}/content`,
