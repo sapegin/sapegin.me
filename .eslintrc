@@ -1,6 +1,13 @@
 {
 	"parser": "babel-eslint",
-	"extends": "tamia/react",
+	"extends": [
+		"tamia/react",
+		"plugin:import/errors",
+		"plugin:import/warnings"
+	],
+	"plugins": [
+		"import"
+	],
 	"rules": {
 		"valid-jsdoc": 0,
 		"react/prop-types": 0
