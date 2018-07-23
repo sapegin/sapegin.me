@@ -15,7 +15,9 @@ const PageWithTitle = ({ children, title }) => (
 			</Heading>
 			<Box mb="l">{children}</Box>
 		</main>
-		<Page.Footer is={Footer} />
+		<Page.Footer is="div">
+			<Footer />
+		</Page.Footer>
 	</Base>
 );
 
