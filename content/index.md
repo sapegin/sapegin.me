@@ -4,7 +4,7 @@ pageTitle: 'Artem Sapegin: frontend developer, photographer & dog lover'
 links:
   -
     title: My nerdy writings
-    description: Blog about frontend and geeky things
+    description: Blog about frontend
     link: http://blog.sapegin.me/
   -
     title: My photography
@@ -52,13 +52,13 @@ projects:
     description: Dark terminal color scheme
     link: https://github.com/sapegin/squirrelsong
   -
-    title: webpack-blocks
-    description: Webpack configs with feature blocks (maintainer)
-    link: https://github.com/andywer/webpack-blocks
-  -
     title: git-friendly
     description: Scripts for better Git workflow (maintainer)
     link: https://github.com/jamiew/git-friendly
+  -
+    title: SurviveJS — Maintenance
+    description: Book on project maintenance (co-author)
+    link: https://survivejs.com/maintenance/
 secondary:
   -
     title: My talks and workshops
