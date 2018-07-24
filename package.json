@@ -37,6 +37,7 @@
     "gatsby": "2.0.0-beta.55",
     "gatsby-plugin-emotion": "2.0.0-beta.2",
     "gatsby-plugin-lodash": "^3.0.1-beta.3",
+    "gatsby-plugin-netlify": "^2.0.0-beta.4",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-remove-trailing-slashes": "^2.0.0-beta.3",
     "gatsby-source-filesystem": "2.0.1-beta.9",
