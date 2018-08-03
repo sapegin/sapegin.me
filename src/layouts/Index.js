@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import { Box, Text, Heading, VisuallyHidden } from 'tamia';
-import { Link } from '../components/Link';
+import { Link } from 'tamia-gatsby-link';
 import ColumnList from '../components/ColumnList';
 import InlineList from '../components/InlineList';
 import Socials from '../components/Socials';

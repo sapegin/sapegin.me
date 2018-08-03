@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { themeGet } from 'tamia';
-import { Link } from './Link';
+import { Link } from 'tamia-gatsby-link';
 
 const List = styled.ul`
 	font-size: ${themeGet('fontSizes.s')};
