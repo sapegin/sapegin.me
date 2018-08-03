@@ -32,6 +32,10 @@ projects:
     description: React component to manage whitespace
     link: https://github.com/sapegin/react-spaceman
   -
+    title: React Group
+    description: Render React children with a separator
+    link: https://github.com/sapegin/react-group
+  -
     title: Tâmia
     description: Personal opinionated frontend framework
     link: http://tamiadev.github.io/tamia/
@@ -43,10 +47,6 @@ projects:
     title: textlint-rule-terminology
     description: Check and fix your tech writing with Textlint
     link: https://github.com/sapegin/textlint-rule-terminology
-  -
-    title: Fledermaus
-    description: Simple extensible static site generator
-    link: https://github.com/sapegin/fledermaus
   -
     title: Squirrelsong
     description: Dark terminal color scheme
@@ -63,6 +63,9 @@ secondary:
   -
     title: My talks and workshops
     link: /speaking
+  -
+    title: My Egghead lessons
+    link: https://egghead.io/instructors/artem-sapegin
   -
     title: Site’s source code
     link: https://github.com/sapegin/sapegin.me
