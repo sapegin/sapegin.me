@@ -4,17 +4,23 @@ title: Speaking
 pageTitle: "Artem Sapegin is speaking: conference talks and workshops"
 events:
   -
-    ref: react-finland-2018
-    name: React Open Source Meetup
-    date: May 8, 2018
-    location: Berlin, Germany
-    link: https://www.meetup.com/React-Open-Source/events/250174334/
+    ref: inconsistent-styles
+    name: React Boston
+    date: Sep 29, 2018
+    location: Boston, US
+    link: http://www.reactboston.com/
   -
     ref: cdd-workshop
     name: React Alicante
     date: Sep 13, 2018
     location: Alicante, Spain
     link: http://reactalicante.es/
+  -
+    ref: react-finland-2018
+    name: React Open Source Meetup
+    date: May 8, 2018
+    location: Berlin, Germany
+    link: https://www.meetup.com/React-Open-Source/events/250174334/
   -
     ref: cdd-workshop
     name: React Finland
@@ -28,7 +34,7 @@ events:
     location: Berlin, Germany
     link: https://www.meetup.com/React-Open-Source/events/245304799/
   -
-    ref: inconsistent-styles
+    ref: inconsistent-styles-light
     name: React Alicante
     date: Sep 13, 2017
     location: Alicante, Spain
@@ -49,9 +55,12 @@ talks:
     slides: https://sapegin.github.io/slides/mrm.html
     video: https://youtu.be/5tHfAf4bRcM
   -
-    id: inconsistent-styles
+    id: inconsistent-styles-light
     type: lightning
     title: "Custom CSS is the path to inconsistent UI by Artem Sapegin"
     slides: https://sapegin.github.io/slides/inconsistent-styles.html
     video: https://youtu.be/Cdtwz3PbW7M
+  -
+    id: inconsistent-styles
+    title: "Custom CSS is the path to inconsistent UI by Artem Sapegin"
 ---
