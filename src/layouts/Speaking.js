@@ -33,6 +33,16 @@ const getPastEvents = flow(
 	reverse
 );
 
+const EventSection = ({ title, items }) =>
+	items.length > 0 && (
+		<Section level={2}>
+			<Heading level={2} mb="m">
+				{title}
+			</Heading>
+			<EventList items={items} />
+		</Section>
+	);
+
 const Speaking = ({
 	data: {
 		markdownRemark: {
@@ -40,21 +50,13 @@ const Speaking = ({
 		},
 	},
 }) => {
-	events = parseEvents(events, talks);
+	const allEvents = parseEvents(events, talks);
+	const upcomingEvents = getUpcomingEvents(allEvents);
+	const pastEvents = getPastEvents(allEvents);
 	return (
 		<PageWithTitle title=" is speaking">
-			<Section level={2}>
-				<Heading level={2} mb="m">
-					Upcoming events
-				</Heading>
-				<EventList items={getUpcomingEvents(events)} />
-			</Section>
-			<Section level={2}>
-				<Heading level={2} mb="m">
-					Past events
-				</Heading>
-				<EventList items={getPastEvents(events)} />
-			</Section>
+			<EventSection title="Upcoming events" items={upcomingEvents} />
+			<EventSection title="Past events" items={pastEvents} />
 		</PageWithTitle>
 	);
 };
