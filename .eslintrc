@@ -8,7 +8,12 @@
 	"plugins": [
 		"import"
 	],
-	"rules": {
+	"settings": {
+		"react": {
+		  "version": "16.6"
+		}
+	  },
+		"rules": {
 		"valid-jsdoc": 0,
 		"react/prop-types": 0
 	}
