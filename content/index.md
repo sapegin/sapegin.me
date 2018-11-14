@@ -21,6 +21,9 @@ projects:
   - title: q-i
     description: Node.js objects inspector with color highlighting
     link: https://github.com/sapegin/q-i
+  - title: Stack Styled
+    description: React component to make stack layouts easy
+    link: https://sapegin.github.io/stack-styled/
   - title: React Spaceman
     description: React component to manage whitespace
     link: https://github.com/sapegin/react-spaceman
@@ -33,11 +36,11 @@ projects:
   - title: Richtypo
     description: Typography enhancer for Node.js
     link: https://github.com/sapegin/richtypo.js
-  - title: textlint-rule-terminology
+  - title: Textlint rules
     description: Check and fix your tech writing with Textlint
-    link: https://github.com/sapegin/textlint-rule-terminology
+    link: https://github.com/search?utf8=%E2%9C%93&q=textlint-rule+user%3Asapegin&type=Repositories&ref=advsearch&l=&l=
   - title: Squirrelsong
-    description: Dark terminal color scheme
+    description: Dark and light code color schemes
     link: https://github.com/sapegin/squirrelsong
   - title: git-friendly
     description: Scripts for better Git workflow (maintainer)
@@ -45,6 +48,15 @@ projects:
   - title: SurviveJS — Maintenance
     description: Book on project maintenance (co-author)
     link: https://survivejs.com/maintenance/
+  - title: Jest cheat sheet
+    description: Everything you need to write tests
+    link: https://github.com/sapegin/jest-cheat-sheet
+  - title: Awesome component-driven development
+    description: Curated list of links on design systems
+    link: https://github.com/component-driven/awesome-list
+  - title: dotfiles
+    description: "My macOS environment: zsh, Git, VS Code, etc."
+    link: https://github.com/sapegin/dotfiles
 secondary:
   - title: My talks and workshops
     link: /speaking
