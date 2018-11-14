@@ -3,6 +3,11 @@ layout: Speaking
 title: Speaking
 pageTitle: 'Artem Sapegin is speaking: conference talks and workshops'
 events:
+  - ref: cdd-workshop
+    name: React Finland 2019
+    date: April 24, 2019
+    location: Helsinki, Finland
+    link: https://react-finland.fi/
   - ref: inconsistent-styles
     name: React Boston 2018
     date: Sep 29, 2018
