@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const MARGINS = ['', '6vh', '4vh', '2.85vh'];
 

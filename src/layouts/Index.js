@@ -28,7 +28,7 @@ const Index = ({
 			<Helmet title={pageTitle} />
 			<main>
 				<Section level={1}>
-					<VisuallyHidden is="h1">Artem Sapegin</VisuallyHidden>
+					<VisuallyHidden as="h1">Artem Sapegin</VisuallyHidden>
 					<Lead head="Hi.">
 						I’m&nbsp;
 						<span className="p-given-name" title="Pronounced as [ar'tiyom]">

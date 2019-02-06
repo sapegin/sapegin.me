@@ -13,7 +13,7 @@ const TextPage = ({
 }) => {
 	return (
 		<PageWithTitle title={title}>
-			<TextContent is={Html}>{html}</TextContent>
+			<TextContent as={Html}>{html}</TextContent>
 		</PageWithTitle>
 	);
 };

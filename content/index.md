@@ -55,7 +55,7 @@ projects:
     description: Curated list of links on design systems
     link: https://github.com/component-driven/awesome-list
   - title: dotfiles
-    description: "My macOS environment: zsh, Git, VS Code, etc."
+    description: 'My macOS environment: zsh, Git, VS Code, etc.'
     link: https://github.com/sapegin/dotfiles
 secondary:
   - title: My talks and workshops

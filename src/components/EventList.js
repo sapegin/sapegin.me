@@ -13,7 +13,7 @@ const EventList = ({ items }) =>
 				<TalkName type={item.type}>{item.title}</TalkName>
 			</Text>
 			<Text size="xs">
-				<Group separator=", " inline>
+				<Group separator=", ">
 					{item.date}
 					{item.location}
 					{item.slides && <Link href={item.slides}>slides</Link>}
