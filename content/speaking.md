@@ -4,8 +4,18 @@ title: Speaking
 pageTitle: 'Artem Sapegin is speaking: conference talks and workshops'
 events:
   - ref: cdd-workshop
+    name: React Amsterdam 2019
+    date: April 10, 2019
+    location: Amsterdam, Netherlands
+    link: https://react.amsterdam/
+  - ref: cdd-workshop
     name: React Finland 2019
     date: April 24, 2019
+    location: Helsinki, Finland
+    link: https://react-finland.fi/
+  - ref: inconsistent-styles
+    name: React Finland 2019
+    date: April 26, 2019
     location: Helsinki, Finland
     link: https://react-finland.fi/
   - ref: inconsistent-styles
@@ -52,11 +62,11 @@ talks:
     video: https://youtu.be/5tHfAf4bRcM
   - id: inconsistent-styles-light
     type: lightning
-    title: 'Custom CSS is the path to inconsistent UI by Artem Sapegin'
+    title: 'Custom CSS is the path to inconsistent UI'
     slides: https://sapegin.github.io/slides/inconsistent-styles.html
     video: https://youtu.be/Cdtwz3PbW7M
   - id: inconsistent-styles
-    title: 'Custom CSS is the path to inconsistent UI by Artem Sapegin'
+    title: 'Custom CSS is the path to inconsistent UI'
     slides: https://sapegin.github.io/slides/inconsistent-styles-full/
     video: https://youtu.be/t5VTLwAias8
 ---
