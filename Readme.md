@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sapegin/sapegin.me.png)](https://travis-ci.org/sapegin/sapegin.me)
 
-Powered by [Tâmia](http://tamiadev.github.io/tamia/), [Gatsby](https://www.gatsbyjs.org/) and [Emotion](https://emotion.sh/).
+Powered by [Tâmia](https://tamiadev.github.io/tamia/), [Gatsby](https://www.gatsbyjs.org/) and [Emotion](https://emotion.sh/).
 
 ## Running locally
 
@@ -23,7 +23,7 @@ npm start
 
 ## Author
 
-- [Artem Sapegin](http://sapegin.me)
+- [Artem Sapegin](https://sapegin.me)
 
 ---
 

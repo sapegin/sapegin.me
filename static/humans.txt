@@ -2,14 +2,15 @@
 
   Web developer: Artem Sapegin
   Email: artem@sapegin.ru
-  Site: http://sapegin.me
+  Site: https://sapegin.me
   Location: Berlin, Germany
 
 
 /* POWERED BY */
 
-  Fledermaus: https://github.com/sapegin/fledermaus
-  Tâmia: http://sapegin.github.io/tamia/
+  Gatsby: https://www.gatsbyjs.org/
+	Emotion: https://emotion.sh/
+  Tâmia: https://sapegin.github.io/tamia/
 
   -_-_-_-_-_-_-_,------,
   _-_-_-_-_-_-_-|   /\_/\\

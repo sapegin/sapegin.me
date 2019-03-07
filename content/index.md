@@ -4,10 +4,10 @@ pageTitle: 'Artem Sapegin: frontend developer, photographer & dog lover'
 links:
   - title: My nerdy writings
     description: Blog about frontend
-    link: http://blog.sapegin.me/
+    link: https://blog.sapegin.me/
   - title: My photography
     description: Gallery and blog about photography
-    link: http://morning.photos/
+    link: https://morning.photos/
 projects:
   - title: React Styleguidist
     description: React component development environment
@@ -32,7 +32,7 @@ projects:
     link: https://github.com/sapegin/react-group
   - title: Tâmia
     description: Personal opinionated frontend framework
-    link: http://tamiadev.github.io/tamia/
+    link: https://tamiadev.github.io/tamia/
   - title: Richtypo
     description: Typography enhancer for Node.js
     link: https://github.com/sapegin/richtypo.js

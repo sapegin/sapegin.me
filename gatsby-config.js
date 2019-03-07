@@ -4,7 +4,7 @@ module.exports = {
 		description:
 			'I’m a frontend developer, passionate photographer, coffee drinker and crazy dogs’ owner living in Berlin, Germany.',
 		lang: 'en',
-		url: 'http://sapegin.me',
+		url: 'https://sapegin.me',
 		twitter: '@iamsapegin',
 	},
 	plugins: [
