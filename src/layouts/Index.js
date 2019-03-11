@@ -39,8 +39,8 @@ const Index = ({
 						<Link href="https://www.wayfair.com/" className="p-org">
 							Wayfair
 						</Link>
-						, award-losing photographer, bouldering enthusiast, coffee drinker
-						and&nbsp;crazy dogs’ owner, living in&nbsp;
+						, award-losing photographer, bouldering enthusiast, coffee consumer
+						and&nbsp;dog friend, living in&nbsp;
 						<span className="p-region">Berlin, Germany</span>.
 					</Lead>
 				</Section>
