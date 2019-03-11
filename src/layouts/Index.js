@@ -33,13 +33,13 @@ const Index = ({
 						I’m&nbsp;
 						<span className="p-given-name" title="Pronounced as [ar'tiyom]">
 							Artem
-						</span>
-						<span className="p-family-name"> Sapegin</span>, a&nbsp;
+						</span>{' '}
+						<span className="p-family-name">Sapegin</span>, a&nbsp;
 						<span className="p-job-title">frontend developer</span> at&nbsp;
 						<Link href="https://www.wayfair.com/" className="p-org">
 							Wayfair
 						</Link>
-						, passionate photographer, coffee drinker
+						, award-losing photographer, bouldering enthusiast, coffee drinker
 						and&nbsp;crazy dogs’ owner, living in&nbsp;
 						<span className="p-region">Berlin, Germany</span>.
 					</Lead>
