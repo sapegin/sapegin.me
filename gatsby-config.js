@@ -21,5 +21,12 @@ module.exports = {
 		},
 		'gatsby-transformer-remark',
 		'gatsby-plugin-netlify',
+		{
+			resolve: 'gatsby-plugin-fathom',
+			options: {
+				trackingUrl: 'stats.sapegin.me',
+				siteId: 'DUNEQ',
+			},
+		},
 	],
 };

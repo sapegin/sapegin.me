@@ -42,6 +42,7 @@
     "eslint-plugin-react": "^7.12.4",
     "gatsby": "2.1.29",
     "gatsby-plugin-emotion": "4.0.4",
+    "gatsby-plugin-fathom": "^1.0.4",
     "gatsby-plugin-lodash": "3.0.4",
     "gatsby-plugin-netlify": "2.0.11",
     "gatsby-plugin-react-helmet": "^3.0.8",
