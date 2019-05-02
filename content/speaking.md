@@ -13,7 +13,7 @@ events:
     date: April 24, 2019
     location: Helsinki, Finland
     link: https://react-finland.fi/
-  - ref: inconsistent-styles
+  - ref: inconsistent-styles-2
     name: React Finland 2019
     date: April 26, 2019
     location: Helsinki, Finland
@@ -67,6 +67,10 @@ talks:
     video: https://youtu.be/Cdtwz3PbW7M
   - id: inconsistent-styles
     title: 'Custom CSS is the path to inconsistent UI'
-    slides: https://sapegin.github.io/slides/inconsistent-styles-full/
+    slides: https://stopwritingcss.netlify.com/
     video: https://youtu.be/t5VTLwAias8
+  - id: inconsistent-styles-2
+    title: 'Custom CSS is the path to inconsistent UI'
+    slides: https://stopwritingcss.netlify.com/
+    video: https://youtu.be/_CsBRkRTzIA
 ---
