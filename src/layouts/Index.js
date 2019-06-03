@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import { Box, Text, Heading, VisuallyHidden } from 'tamia';
 import { Link } from 'tamia-gatsby-link';
+import Books from '../components/Books';
 import ColumnList from '../components/ColumnList';
 import InlineList from '../components/InlineList';
 import Socials from '../components/Socials';
@@ -19,7 +20,7 @@ const Subheading = ({ children }) => (
 const Index = ({
 	data: {
 		markdownRemark: {
-			frontmatter: { pageTitle, links, projects, secondary, socials },
+			frontmatter: { pageTitle, books, links, projects, secondary, socials },
 		},
 	},
 }) => {
@@ -48,6 +49,10 @@ const Index = ({
 					<ColumnList items={links} primary />
 				</Section>
 				<Section level={2}>
+					<Subheading>My books</Subheading>
+					<Books items={books} />
+				</Section>
+				<Section level={2}>
 					<Subheading>My projects</Subheading>
 					<Box mb="m">
 						<ColumnList items={projects} />
@@ -57,7 +62,7 @@ const Index = ({
 				<Section level={3}>
 					<Subheading>Contact me</Subheading>
 					<Text size="l">
-						Drop me a line at 
+						Drop me a line at
 						<Link href="mailto:artem@sapegin.ru" className="u-email">
 							artem@sapegin.ru
 						</Link>{' '}
@@ -80,6 +85,12 @@ export const pageQuery = graphql`
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			frontmatter {
 				pageTitle
+				books {
+					title
+					description
+					link
+					cover
+				}
 				links {
 					title
 					description

@@ -8,6 +8,15 @@ links:
   - title: My photography
     description: Gallery and blog about photography
     link: https://morning.photos/
+books:
+  - title: Washing your code. Write once, read seven times
+    description: Writing clean JavaScript code
+    link: https://leanpub.com/washingcode/
+    cover: washing-your-code-cover-small.jpg
+  - title: SurviveJS — Maintenance (co-author)
+    description: JavaScript open source project maintenance
+    link: https://survivejs.com/maintenance/
+    cover: survivejs-maintenance-cover-small.png
 projects:
   - title: React Styleguidist
     description: React component development environment
@@ -24,9 +33,6 @@ projects:
   - title: Stack Styled
     description: React component to make stack layouts easy
     link: https://sapegin.github.io/stack-styled/
-  - title: React Spaceman
-    description: React component to manage whitespace
-    link: https://github.com/sapegin/react-spaceman
   - title: React Group
     description: Render React children with a separator
     link: https://github.com/sapegin/react-group
@@ -45,9 +51,6 @@ projects:
   - title: git-friendly
     description: Scripts for better Git workflow (maintainer)
     link: https://github.com/jamiew/git-friendly
-  - title: SurviveJS — Maintenance
-    description: Book on project maintenance (co-author)
-    link: https://survivejs.com/maintenance/
   - title: Jest cheat sheet
     description: Everything you need to write tests
     link: https://github.com/sapegin/jest-cheat-sheet
