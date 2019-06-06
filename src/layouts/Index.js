@@ -62,7 +62,7 @@ const Index = ({
 				<Section level={3}>
 					<Subheading>Contact me</Subheading>
 					<Text size="l">
-						Drop me a line at
+						Drop me a line at{' '}
 						<Link href="mailto:artem@sapegin.ru" className="u-email">
 							artem@sapegin.ru
 						</Link>{' '}

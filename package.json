@@ -6,7 +6,7 @@
     "start": "gatsby develop",
     "test": "npm run lint:js && npm run lint:css",
     "posttest": "npm run format",
-    "build": "gatbsy build",
+    "build": "gatsby build",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint 'src/**/*.js'",
     "format": "prettier --write '**/*.{js,md}'",
