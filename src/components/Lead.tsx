@@ -25,11 +25,11 @@ const Body = styled.span`
 	font-size: ${themeGet('fontSizes.xl')};
 `;
 
-const Lead = ({ head, children }: Props) => (
-	<Container>
-		<Head>{head}</Head>
-		<Body>{children}</Body>
-	</Container>
-);
-
-export default Lead;
+export default function Lead({ head, children }: Props) {
+	return (
+		<Container>
+			<Head>{head}</Head>
+			<Body>{children}</Body>
+		</Container>
+	);
+}

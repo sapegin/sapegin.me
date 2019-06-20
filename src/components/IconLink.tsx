@@ -20,10 +20,10 @@ type Props = React.ComponentProps<typeof Link> & {
 	icon: IconName;
 };
 
-const IconLink = ({ icon, ...props }: Props) => (
-	<Link {...props}>
-		<Icon icon={icon} />
-	</Link>
-);
-
-export default IconLink;
+export default function IconLink({ icon, ...props }: Props) {
+	return (
+		<Link {...props}>
+			<Icon icon={icon} />
+		</Link>
+	);
+}

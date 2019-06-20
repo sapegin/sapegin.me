@@ -18,12 +18,12 @@ const Item = styled(IconLink)`
 	vertical-align: middle;
 `;
 
-const Socials = ({ items }: Props) => (
-	<Container>
-		{items.map(({ id, link, name }) => (
-			<Item key={id} href={link} icon={id} title={name} aria-label={name} />
-		))}
-	</Container>
-);
-
-export default Socials;
+export default function Socials({ items }: Props) {
+	return (
+		<Container>
+			{items.map(({ id, link, name }) => (
+				<Item key={id} href={link} icon={id} title={name} aria-label={name} />
+			))}
+		</Container>
+	);
+}
