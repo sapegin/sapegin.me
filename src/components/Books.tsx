@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Box, Row, Column, Link, Text } from 'tamia';
+import { Book } from '../types';
+
+type Props = {
+	items: Book[];
+};
 
 const Cover = styled.img`
 	max-width: 100%;
 	height: auto;
 `;
 
-export default function Books({ items }) {
+export default function Books({ items }: Props) {
 	return (
 		<Row as="ul">
 			{items.map(item => (

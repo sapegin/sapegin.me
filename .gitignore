@@ -1,4 +1,12 @@
-node_modules
 .cache/
 public/
 *.log
+node_modules/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+yarn.lock
+.eslintcache

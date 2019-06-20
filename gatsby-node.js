@@ -49,7 +49,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
 					createPage({
 						path: slug,
 						component: path.resolve(
-							`${__dirname}/src/layouts/${layout || 'Page'}.js`
+							`${__dirname}/src/layouts/${layout || 'Page'}.tsx`
 						),
 						context: {
 							slug,

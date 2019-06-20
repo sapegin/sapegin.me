@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import IconLink from './IconLink';
+import { Social } from '../types';
+
+type Props = {
+	items: Social[];
+};
 
 const Container = styled.div`
 	text-align: center;
@@ -13,7 +18,7 @@ const Item = styled(IconLink)`
 	vertical-align: middle;
 `;
 
-const Socials = ({ items }) => (
+const Socials = ({ items }: Props) => (
 	<Container>
 		{items.map(({ id, link, name }) => (
 			<Item key={id} href={link} icon={id} title={name} aria-label={name} />

@@ -6,10 +6,11 @@
     "start": "gatsby develop",
     "test": "npm run lint:js && npm run lint:css",
     "posttest": "npm run format",
+    "typecheck": "tsc",
     "build": "gatsby build",
-    "lint:js": "eslint . --fix",
-    "lint:css": "stylelint 'src/**/*.js'",
-    "format": "prettier --write '**/*.{js,md}'",
+    "lint:js": "eslint . --ext .js,.tsx --cache --fix",
+    "lint:css": "stylelint \"src/**/*.tsx\"",
+    "format": "prettier --write \"**/*.{js,tsx,md}\"",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
@@ -28,16 +29,20 @@
     "emotion-theming": "^10.0.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-group": "^3.0.0",
+    "react-group": "^3.0.2",
     "react-helmet": "^5.2.1",
     "tamia": "4.0.0-alpha.48",
-    "tamia-gatsby-link": "^1.0.2"
+    "tamia-gatsby-link": "^1.0.5"
   },
   "devDependencies": {
+    "@types/react": "^16.8.21",
+    "@types/react-helmet": "^5.0.8",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
     "babel-eslint": "^10.0.2",
     "emotion-server": "^10.0.9",
     "eslint": "^5.16.0",
-    "eslint-config-tamia": "^6.2.0",
+    "eslint-config-tamia": "^6.2.1",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-react": "^7.13.0",
     "gatsby": "2.9.11",
@@ -47,13 +52,33 @@
     "gatsby-plugin-netlify": "2.0.17",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-remove-trailing-slashes": "2.0.11",
+    "gatsby-plugin-typescript": "^2.1.0",
     "gatsby-source-filesystem": "2.0.43",
     "gatsby-transformer-remark": "2.4.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
-    "react-styleguidist": "^9.1.7",
+    "react-styleguidist": "^9.1.9",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0"
+    "stylelint-processor-styled-components": "^1.8.0",
+    "typescript": "^3.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,tsx,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,tsx}": [
+      "stylelint --fix",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

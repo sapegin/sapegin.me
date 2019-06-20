@@ -5,6 +5,20 @@ import { Heading } from 'tamia';
 import Section from '../components/Section';
 import EventList from '../components/EventList';
 import PageWithTitle from './PageWithTitle';
+import { Talk, Event, Gig } from '../types';
+
+type Frontmatter = {
+	events: Event[];
+	talks: Talk[];
+};
+
+type Props = {
+	data: {
+		markdownRemark: {
+			frontmatter: Frontmatter;
+		};
+	};
+};
 
 const NOW = new Date();
 const TODAY = new Date(
@@ -13,9 +27,10 @@ const TODAY = new Date(
 	NOW.getDate()
 ).getTime();
 
-const findById = (events, id) => events.find(event => event.id === id);
+const findById = (events: Talk[], id: string): Talk =>
+	events.find(event => event.id === id) as Talk;
 
-const parseEvents = (events, talks) =>
+const parseEvents = (events: Event[], talks: Talk[]): Gig[] =>
 	events.map(event => ({
 		...event,
 		...findById(talks, event.ref),
@@ -23,33 +38,33 @@ const parseEvents = (events, talks) =>
 	}));
 
 const getUpcomingEvents = flow(
-	filter(event => event.timestamp >= TODAY),
+	filter((event: Gig) => event.timestamp >= TODAY),
 	sortBy('timestamp')
 );
 
 const getPastEvents = flow(
-	filter(event => event.timestamp < TODAY),
+	filter((event: Gig) => event.timestamp < TODAY),
 	sortBy('timestamp'),
 	reverse
 );
 
-const EventSection = ({ title, items }) =>
-	items.length > 0 && (
+const EventSection = ({ title, items }: { title: string; items: Gig[] }) =>
+	items.length > 0 ? (
 		<Section level={2}>
 			<Heading level={2} mb="m">
 				{title}
 			</Heading>
 			<EventList items={items} />
 		</Section>
-	);
+	) : null;
 
-const Speaking = ({
+export default function Speaking({
 	data: {
 		markdownRemark: {
 			frontmatter: { events, talks },
 		},
 	},
-}) => {
+}: Props) {
 	const allEvents = parseEvents(events, talks);
 	const upcomingEvents = getUpcomingEvents(allEvents);
 	const pastEvents = getPastEvents(allEvents);
@@ -59,9 +74,7 @@ const Speaking = ({
 			<EventSection title="Past events" items={pastEvents} />
 		</PageWithTitle>
 	);
-};
-
-export default Speaking;
+}
 
 export const pageQuery = graphql`
 	query SpeakingPage($slug: String!) {

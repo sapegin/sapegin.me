@@ -1,8 +1,14 @@
 import React from 'react';
 import { Icon as IconBase } from 'tamia';
 
+type IconInfo = {
+	width?: number;
+	height?: number;
+	path: string;
+};
+
 const SIZE = 32;
-const ICONS = {
+const ICONS: { [key: string]: IconInfo } = {
 	facebook: {
 		width: 448,
 		path:
@@ -36,7 +42,13 @@ const ICONS = {
 	},
 };
 
-const Icon = ({ icon }) => {
+export type IconName = keyof typeof ICONS;
+
+type Props = {
+	icon: IconName;
+};
+
+export default function Icon({ icon }: Props) {
 	const { path, width, height } = ICONS[icon];
 	return (
 		<IconBase
@@ -49,6 +61,4 @@ const Icon = ({ icon }) => {
 			height={SIZE}
 		/>
 	);
-};
-
-export default Icon;
+}

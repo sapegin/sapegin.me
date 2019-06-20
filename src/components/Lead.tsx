@@ -2,6 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from 'tamia';
 
+type Props = {
+	head: React.ReactNode;
+	children: React.ReactNode;
+};
+
 const Container = styled.p`
 	-webkit-font-smoothing: antialiased;
 `;
@@ -20,7 +25,7 @@ const Body = styled.span`
 	font-size: ${themeGet('fontSizes.xl')};
 `;
 
-const Lead = ({ head, children }) => (
+const Lead = ({ head, children }: Props) => (
 	<Container>
 		<Head>{head}</Head>
 		<Body>{children}</Body>

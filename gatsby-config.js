@@ -12,6 +12,7 @@ module.exports = {
 		'gatsby-plugin-emotion',
 		'gatsby-plugin-lodash',
 		'gatsby-plugin-remove-trailing-slashes',
+		'gatsby-plugin-typescript',
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {

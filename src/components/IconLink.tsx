@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from 'tamia';
-import Icon from './Icon';
+import Icon, { IconName } from './Icon';
 
 const Link = styled.a`
 	color: ${themeGet('colors.light')};
@@ -16,7 +16,11 @@ const Link = styled.a`
 	}
 `;
 
-const IconLink = ({ icon, ...props }) => (
+type Props = React.ComponentProps<typeof Link> & {
+	icon: IconName;
+};
+
+const IconLink = ({ icon, ...props }: Props) => (
 	<Link {...props}>
 		<Icon icon={icon} />
 	</Link>

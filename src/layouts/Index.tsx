@@ -10,20 +10,38 @@ import Socials from '../components/Socials';
 import Lead from '../components/Lead';
 import Section from '../components/Section';
 import Base from './Base';
+import { Book, Resource, Social } from '../types';
 
-const Subheading = ({ children }) => (
+const Subheading = ({ children }: { children: React.ReactNode }) => (
 	<Heading level={2} mb="m">
 		{children}
 	</Heading>
 );
 
-const Index = ({
+type Frontmatter = {
+	pageTitle: string;
+	books: Book[];
+	links: Resource[];
+	projects: Resource[];
+	secondary: Resource[];
+	socials: Social[];
+};
+
+type Props = {
+	data: {
+		markdownRemark: {
+			frontmatter: Frontmatter;
+		};
+	};
+};
+
+export default function Index({
 	data: {
 		markdownRemark: {
 			frontmatter: { pageTitle, books, links, projects, secondary, socials },
 		},
 	},
-}) => {
+}: Props) {
 	return (
 		<Base className="h-card">
 			<Helmet title={pageTitle} />
@@ -40,8 +58,8 @@ const Index = ({
 						<Link href="https://www.wayfair.com/" className="p-org">
 							Wayfair
 						</Link>
-						, award-losing photographer, bouldering enthusiast, coffee consumer
-						and&nbsp;dog friend, living in&nbsp;
+						, award-losing photographer, bouldering enthusiast, coffee consumer
+						and&nbsp;dog&nbsp;friend, living in&nbsp;
 						<span className="p-region">Berlin, Germany</span>.
 					</Lead>
 				</Section>
@@ -76,9 +94,7 @@ const Index = ({
 			</main>
 		</Base>
 	);
-};
-
-export default Index;
+}
 
 export const pageQuery = graphql`
 	query IndexPage($slug: String!) {
