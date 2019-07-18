@@ -2,12 +2,14 @@ import React from 'react';
 import { Box } from 'tamia';
 
 type Props = {
-	level: 1 | 2 | 3;
+	level: 1 | 2;
 	children: React.ReactNode;
 };
 
-const MARGINS = ['', '6vh', '4vh', '2.85vh'];
+const MARGINS = ['', 'calc(2rem + 2vh)', 'calc(2rem + 1vh)'];
 
-const Section = (props: Props) => <Box mb={MARGINS[props.level]} {...props} />;
+const Section = (props: Props) => (
+	<Box as="section" mb={MARGINS[props.level]} {...props} />
+);
 
 export default Section;

@@ -46,8 +46,9 @@ export default function Index({
 		<Base className="h-card">
 			<Helmet title={pageTitle} />
 			<main>
+				<VisuallyHidden as="h1">Artem Sapegin</VisuallyHidden>
 				<Section level={1}>
-					<VisuallyHidden as="h1">Artem Sapegin</VisuallyHidden>
+					<VisuallyHidden as="h2">About me</VisuallyHidden>
 					<Lead head="Hi.">
 						I’m&nbsp;
 						<span className="p-given-name" title="Pronounced as [ar'tiyom]">
@@ -64,6 +65,7 @@ export default function Index({
 					</Lead>
 				</Section>
 				<Section level={1}>
+					<VisuallyHidden as="h2">My sites</VisuallyHidden>
 					<ColumnList items={links} primary />
 				</Section>
 				<Section level={2}>
@@ -77,9 +79,9 @@ export default function Index({
 					</Box>
 					<InlineList items={secondary} />
 				</Section>
-				<Section level={3}>
+				<Section level={2}>
 					<Subheading>Contact me</Subheading>
-					<Text variant="large">
+					<Text mb="l" variant="large">
 						Drop me a line at{' '}
 						<Link href="mailto:artem@sapegin.ru" className="u-email">
 							artem@sapegin.ru
@@ -87,8 +89,6 @@ export default function Index({
 						or{' '}
 						<Link href="https://github.com/sapegin/ama">ask me anything</Link>.
 					</Text>
-				</Section>
-				<Section level={3}>
 					<Socials items={socials} />
 				</Section>
 			</main>

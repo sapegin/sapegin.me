@@ -24,7 +24,7 @@ export default function Books({ items }: Props) {
 	return (
 		<Stack as="ul" gridGap="l" minColumnWidth={300}>
 			{items.map(item => (
-				<Box as="li" mb="l" key={item.link}>
+				<Box as="li" key={item.link}>
 					<StackLink href={item.link} gridTemplateColumns="1fr 2fr" gridGap="m">
 						<Cover src={`/images/${item.cover}`} alt="" />
 						<div>

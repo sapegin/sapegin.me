@@ -10,10 +10,11 @@ export default function Lead({ head, children }: Props) {
 	return (
 		<p>
 			<Text
-				as="span"
+				as="strong"
 				display="block"
 				marginLeft="-0.05ex"
 				letterSpacing="0.05ex"
+				fontWeight={300}
 				lineHeight="1.2"
 				fontSize="xxxl"
 			>

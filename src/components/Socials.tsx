@@ -10,19 +10,22 @@ type Props = {
 export default function Socials({ items }: Props) {
 	return (
 		<Stack
+			as="ul"
 			justifyContent="center"
 			gridAutoFlow="column"
 			gridColumnGap={['m', 'l']}
 			gridRowGap="m"
 		>
 			{items.map(({ id, link, name }) => (
-				<IconLink
-					key={id}
-					href={link}
-					icon={id}
-					title={name}
-					aria-label={name}
-				/>
+				<li>
+					<IconLink
+						key={id}
+						href={link}
+						icon={id}
+						title={name}
+						aria-label={name}
+					/>
+				</li>
 			))}
 		</Stack>
 	);

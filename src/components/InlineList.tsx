@@ -15,7 +15,16 @@ type Props = {
 const Item = styled.li`
 	display: inline;
 	& + &::before {
-		content: ' ∙ ';
+		/* Draw a bullet with CSS because pseudo content is read by
+		   screen readers */
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 1ch;
+		width: 3px;
+		height: 3px;
+		border-radius: 50%;
+		background-color: currentColor;
 	}
 `;
 
