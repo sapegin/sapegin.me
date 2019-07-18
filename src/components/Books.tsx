@@ -1,39 +1,41 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { Box, Row, Column, Link, Text } from 'tamia';
+import { Box, Stack, Text, QuotedLink } from 'tamia';
 import { Book } from '../types';
 
 type Props = {
 	items: Book[];
 };
 
-const Cover = styled.img`
-	max-width: 100%;
-	height: auto;
-`;
+type CoverProps = React.ComponentProps<typeof Box> &
+	React.ComponentProps<'img'>;
+
+const Cover = (props: CoverProps) => (
+	<Box as="img" maxWidth="100%" height="auto" boxShadow="cover" {...props} />
+);
+
+type StackLinkProps = React.ComponentProps<typeof Stack> &
+	React.ComponentProps<typeof QuotedLink>;
+
+const StackLink = (props: StackLinkProps) => (
+	<Stack as={QuotedLink} {...props} />
+);
 
 export default function Books({ items }: Props) {
 	return (
-		<Row as="ul">
+		<Stack as="ul" gridGap="l" minColumnWidth={300}>
 			{items.map(item => (
-				<Column as="li" key={item.link} width={[1, 1 / 2]}>
-					<Box mb="l">
-						<Row narrow>
-							<Column width={[1 / 3]} aria-hidden="true">
-								<Link href={item.link}>
-									<Cover src={`/images/${item.cover}`} alt="" />
-								</Link>
-							</Column>
-							<Column width={[2 / 3]}>
-								<Text as={Link} href={item.link} size="l">
-									{item.title}
-								</Text>
-								<Text size="m">{item.description}</Text>
-							</Column>
-						</Row>
-					</Box>
-				</Column>
+				<Box as="li" mb="l" key={item.link}>
+					<StackLink href={item.link} gridTemplateColumns="1fr 2fr" gridGap="m">
+						<Cover src={`/images/${item.cover}`} alt="" />
+						<div>
+							<Text as="u" variant="large">
+								{item.title}
+							</Text>
+							<Text>{item.description}</Text>
+						</div>
+					</StackLink>
+				</Box>
 			))}
-		</Row>
+		</Stack>
 	);
 }

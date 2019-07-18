@@ -1,31 +1,125 @@
-import getTheme from 'tamia/lib/theme';
+const baseFont = ['Helvetica', 'sans-serif'].join(',');
+const space = {
+	xxs: '0.125rem', // 2px
+	xs: '0.25rem', // 4px
+	s: '0.5rem', // 8px
+	m: '1rem', // 16px
+	l: '2rem', // 32px
+	xl: '4rem', // 64px
+	xxl: '8rem', // 128px
+	xxxl: '16rem', // 256px
+};
+const breakpoints = [
+	'38rem', // 608px
+	'48rem', // 768px
+	'62rem', // 992px
+	'75rem', // 1200px
+];
+const fonts = {
+	base: baseFont,
+	heading: baseFont,
+};
+const fontSizes = {
+	base: '1rem',
+	xxxxl: '4.2rem',
+	xxxl: '3.2rem',
+	xxl: '2.4rem',
+	xl: '1.8rem',
+	l: '1.3rem',
+	m: '1rem',
+	s: '0.85rem',
+	xs: '0.75rem',
+};
+const colors = {
+	bg: '#fff',
+	base: '#222',
+	light: '#999',
+	primary: '#c25400',
+	hover: '#f56a00',
+	selection: 'rgb(255,237,117)',
+	selectionAlpha: 'rgba(255,237,117,0.25)',
+};
+const shadows = {
+	cover: '0 0 3px rgba(0, 0, 0, 0.05)',
+};
+const fontWeights = {
+	base: 300,
+	heading: 300,
+};
+const lineHeights = {
+	base: 1.5,
+	heading: 1.1,
+};
+const letterSpacings = {
+	base: 0,
+	heading: 0,
+};
+const headingBaseStyles = {
+	color: colors.base,
+	fontFamily: fonts.base,
+	fontWeight: fontWeights.heading,
+	lineHeight: lineHeights.heading,
+	letterSpacing: letterSpacings.heading,
+};
+const textBaseStyles = {
+	color: colors.base,
+	fontFamily: fonts.heading,
+	fontWeight: fontWeights.base,
+	lineHeight: lineHeights.base,
+	letterSpacing: letterSpacings.base,
+};
 
-const font = ['Helvetica', 'sans-serif'];
-
-const theme = getTheme({
+export default {
 	baseFontSize: '1.125em',
+	blockMarginBottom: space.m,
+	headingMarginTop: space.l,
+	listMargin: '1.3em',
 	page: {
 		maxWidth: '52rem',
+		xPadding: space.m,
 		yPadding: '4vh',
+		// contentMaxWidth: null,
+		textMaxWidth: '40rem',
 	},
-	fonts: {
-		base: font,
-		heading: font,
+	fonts,
+	space,
+	fontSizes,
+	fontWeights,
+	lineHeights,
+	letterSpacings,
+	colors,
+	shadows,
+	breakpoints,
+	headingStyles: {
+		1: {
+			...headingBaseStyles,
+			fontSize: fontSizes.xxl,
+		},
+		2: {
+			...headingBaseStyles,
+			fontSize: fontSizes.xl,
+		},
+		3: {
+			...headingBaseStyles,
+			fontSize: fontSizes.l,
+		},
 	},
-	fontWeights: {
-		base: 300,
-		heading: 300,
+	textStyles: {
+		custom: {},
+		base: {
+			...textBaseStyles,
+		},
+		xsmall: {
+			...textBaseStyles,
+			fontSize: fontSizes.xs,
+		},
+		small: {
+			...textBaseStyles,
+			fontSize: fontSizes.s,
+		},
+		large: {
+			...textBaseStyles,
+			fontSize: fontSizes.l,
+		},
 	},
-	lineHeights: {
-		base: 1.5,
-	},
-	colors: {
-		bg: '#fff',
-		base: '#222',
-		light: '#999',
-		primary: '#c25400',
-		hover: '#f56a00',
-	},
-});
-
-export default theme;
+} as const;

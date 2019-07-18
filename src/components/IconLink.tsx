@@ -1,18 +1,17 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { themeGet } from 'tamia';
+import styled from 'styled-components';
 import Icon, { IconName } from './Icon';
 
 const Link = styled.a`
-	color: ${themeGet('colors.light')};
+	color: ${p => p.theme.colors.light};
 	transition: color 0.2s ease-in-out;
 	&:focus {
-		outline: 2px dotted ${themeGet('colors.hover')};
+		outline: 2px dotted ${p => p.theme.colors.hover};
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: ${themeGet('colors.base')};
+		color: ${p => p.theme.colors.base};
 	}
 `;
 

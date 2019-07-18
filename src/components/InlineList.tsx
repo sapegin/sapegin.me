@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { themeGet } from 'tamia';
+import styled from 'styled-components';
+import { Text } from 'tamia';
 import { Link } from 'tamia-gatsby-link';
 
 type Item = {
@@ -12,10 +12,6 @@ type Props = {
 	items: Item[];
 };
 
-const List = styled.ul`
-	font-size: ${themeGet('fontSizes.s')};
-`;
-
 const Item = styled.li`
 	display: inline;
 	& + &::before {
@@ -25,12 +21,12 @@ const Item = styled.li`
 
 export default function InlineList({ items }: Props) {
 	return (
-		<List>
+		<Text as="ul" variant="small">
 			{items.map(item => (
 				<Item key={item.link}>
 					<Link href={item.link}>{item.title}</Link>
 				</Item>
 			))}
-		</List>
+		</Text>
 	);
 }

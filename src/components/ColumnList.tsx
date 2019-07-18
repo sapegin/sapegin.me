@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { Box, Row, Column, Link } from 'tamia';
+import { Stack, Link, Text, Heading } from 'tamia';
 import { Resource } from '../types';
 
 type Props = {
@@ -8,27 +7,33 @@ type Props = {
 	primary?: boolean;
 };
 
-const TitleLink = styled(Link)<Partial<Props> & React.ComponentProps<Link>>`
-	font-size: ${props => props.theme.fontSizes[props.primary ? 'xl' : 'l']};
-`;
+const LinkHeading = Heading.withComponent(Link);
 
-const Description = styled.p<Partial<Props>>`
-	font-size: ${props => props.theme.fontSizes[props.primary ? 'l' : 'm']};
-`;
+const getVariantProps = (primary: boolean) =>
+	primary
+		? ({
+				headingLevel: 2,
+				descriptionVariant: 'large',
+				gap: 's',
+		  } as const)
+		: ({
+				headingLevel: 3,
+				descriptionVariant: 'base',
+				gap: 'xs',
+		  } as const);
 
-export default function ColumnList({ items, primary }: Props) {
+export default function ColumnList({ items, primary = false }: Props) {
+	const { headingLevel, descriptionVariant, gap } = getVariantProps(primary);
 	return (
-		<Row>
+		<Stack as="ul" gridColumnGap="l" gridRowGap="m" minColumnWidth={300}>
 			{items.map(item => (
-				<Column key={item.link} width={[1, 1 / 2]}>
-					<Box mb="s">
-						<TitleLink primary={primary} href={item.link}>
-							{item.title}
-						</TitleLink>
-						<Description primary={primary}>{item.description}</Description>
-					</Box>
-				</Column>
+				<Stack key={item.link} as="li" gridGap={gap} alignContent="start">
+					<LinkHeading href={item.link} level={headingLevel}>
+						{item.title}
+					</LinkHeading>
+					<Text variant={descriptionVariant}>{item.description}</Text>
+				</Stack>
 			))}
-		</Row>
+		</Stack>
 	);
 }

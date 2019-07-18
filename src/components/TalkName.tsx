@@ -11,7 +11,7 @@ export default function TalkName({ type, children }: Props) {
 	return (
 		<Group>
 			{type === 'lightning' && (
-				<span role="img" title="Lightning talk" aria-label="Lightning talk">
+				<span title="Lightning talk" aria-label="Lightning talk">
 					⚡️
 				</span>
 			)}

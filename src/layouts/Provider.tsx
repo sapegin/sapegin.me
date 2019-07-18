@@ -3,7 +3,6 @@ import { TamiaRoot } from 'tamia';
 import theme from '../theme';
 
 type Props = {
-	title: string;
 	children: React.ReactNode;
 };
 

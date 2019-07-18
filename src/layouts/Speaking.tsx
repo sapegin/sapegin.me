@@ -38,13 +38,13 @@ const parseEvents = (events: Event[], talks: Talk[]): Gig[] =>
 	}));
 
 const getUpcomingEvents = flow(
-	filter((event: Gig) => event.timestamp >= TODAY),
-	sortBy('timestamp')
+	filter<Gig>(event => event.timestamp >= TODAY),
+	sortBy<Gig>('timestamp')
 );
 
 const getPastEvents = flow(
-	filter((event: Gig) => event.timestamp < TODAY),
-	sortBy('timestamp'),
+	filter<Gig>(event => event.timestamp < TODAY),
+	sortBy<Gig>('timestamp'),
 	reverse
 );
 
@@ -68,6 +68,7 @@ export default function Speaking({
 	const allEvents = parseEvents(events, talks);
 	const upcomingEvents = getUpcomingEvents(allEvents);
 	const pastEvents = getPastEvents(allEvents);
+
 	return (
 		<PageWithTitle title=" is speaking">
 			<EventSection title="Upcoming events" items={upcomingEvents} />

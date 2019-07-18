@@ -19,7 +19,7 @@ export default function EventList({ items }: Props) {
 					<Text>
 						<TalkName type={item.type}>{item.title}</TalkName>
 					</Text>
-					<Text size="xs">
+					<Text variant="xsmall">
 						<Group separator=", ">
 							{item.date}
 							{item.location}

@@ -9,7 +9,7 @@ module.exports = {
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
-		'gatsby-plugin-emotion',
+		'gatsby-plugin-styled-components',
 		'gatsby-plugin-lodash',
 		'gatsby-plugin-remove-trailing-slashes',
 		'gatsby-plugin-typescript',

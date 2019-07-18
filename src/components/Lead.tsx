@@ -1,35 +1,27 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { themeGet } from 'tamia';
+import { Text } from 'tamia';
 
 type Props = {
 	head: React.ReactNode;
 	children: React.ReactNode;
 };
 
-const Container = styled.p`
-	-webkit-font-smoothing: antialiased;
-`;
-
-const Head = styled.span`
-	display: block;
-	margin-left: -0.05ex;
-	letter-spacing: 0.05ex;
-	line-height: 1.2;
-	font-size: ${themeGet('fontSizes.xxxl')};
-`;
-
-const Body = styled.span`
-	display: block;
-	line-height: 1.4;
-	font-size: ${themeGet('fontSizes.xl')};
-`;
-
 export default function Lead({ head, children }: Props) {
 	return (
-		<Container>
-			<Head>{head}</Head>
-			<Body>{children}</Body>
-		</Container>
+		<p>
+			<Text
+				as="span"
+				display="block"
+				marginLeft="-0.05ex"
+				letterSpacing="0.05ex"
+				lineHeight="1.2"
+				fontSize="xxxl"
+			>
+				{head}
+			</Text>
+			<Text as="span" display="block" lineHeight="1.4" fontSize="xl">
+				{children}
+			</Text>
+		</p>
 	);
 }

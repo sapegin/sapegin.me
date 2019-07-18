@@ -79,7 +79,7 @@ export default function Index({
 				</Section>
 				<Section level={3}>
 					<Subheading>Contact me</Subheading>
-					<Text size="l">
+					<Text variant="large">
 						Drop me a line at{' '}
 						<Link href="mailto:artem@sapegin.ru" className="u-email">
 							artem@sapegin.ru

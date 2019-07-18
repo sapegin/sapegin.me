@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import { Stack } from 'tamia';
 import IconLink from './IconLink';
 import { Social } from '../types';
 
@@ -7,23 +7,23 @@ type Props = {
 	items: Social[];
 };
 
-const Container = styled.div`
-	text-align: center;
-`;
-
-const Item = styled(IconLink)`
-	display: inline-block;
-	margin-left: 0.6em;
-	margin-right: 0.6em;
-	vertical-align: middle;
-`;
-
 export default function Socials({ items }: Props) {
 	return (
-		<Container>
+		<Stack
+			justifyContent="center"
+			gridAutoFlow="column"
+			gridColumnGap={['m', 'l']}
+			gridRowGap="m"
+		>
 			{items.map(({ id, link, name }) => (
-				<Item key={id} href={link} icon={id} title={name} aria-label={name} />
+				<IconLink
+					key={id}
+					href={link}
+					icon={id}
+					title={name}
+					aria-label={name}
+				/>
 			))}
-		</Container>
+		</Stack>
 	);
 }
