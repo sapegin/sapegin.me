@@ -17,14 +17,8 @@ export default function Socials({ items }: Props) {
 			gridRowGap="m"
 		>
 			{items.map(({ id, link, name }) => (
-				<li>
-					<IconLink
-						key={id}
-						href={link}
-						icon={id}
-						title={name}
-						aria-label={name}
-					/>
+				<li key={id}>
+					<IconLink href={link} icon={id} title={name} aria-label={name} />
 				</li>
 			))}
 		</Stack>
