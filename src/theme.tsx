@@ -56,14 +56,14 @@ const letterSpacings = {
 };
 const headingBaseStyles = {
 	color: colors.base,
-	fontFamily: fonts.base,
+	fontFamily: fonts.heading,
 	fontWeight: fontWeights.heading,
 	lineHeight: lineHeights.heading,
 	letterSpacing: letterSpacings.heading,
 };
 const textBaseStyles = {
 	color: colors.base,
-	fontFamily: fonts.heading,
+	fontFamily: fonts.base,
 	fontWeight: fontWeights.base,
 	lineHeight: lineHeights.base,
 	letterSpacing: letterSpacings.base,
