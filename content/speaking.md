@@ -4,6 +4,16 @@ title: Speaking
 pageTitle: 'Artem Sapegin is speaking: conference talks and workshops'
 events:
   - ref: cdd-workshop
+    name: React Day Berlin 2019
+    date: December 5, 2019
+    location: Berlin, Germany
+    link: https://reactday.berlin/
+  - ref: inconsistent-styles-2
+    name: React Boston 2019
+    date: September 22, 2019
+    location: Boston, US
+    link: https://www.reactboston.com/
+- ref: cdd-workshop
     name: React Amsterdam 2019
     date: April 10, 2019
     location: Amsterdam, Netherlands
@@ -51,7 +61,7 @@ events:
 talks:
   - id: cdd-workshop
     type: workshop
-    title: Component-driven development
+    title: Design systems for React developers
   - id: react-finland-2018
     type: lightning
     title: 'React Finland 2018: the new best practices and the future of React'
