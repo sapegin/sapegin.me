@@ -13,7 +13,7 @@ events:
     date: September 22, 2019
     location: Boston, US
     link: https://www.reactboston.com/
-- ref: cdd-workshop
+  - ref: cdd-workshop
     name: React Amsterdam 2019
     date: April 10, 2019
     location: Amsterdam, Netherlands
