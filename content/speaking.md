@@ -8,7 +8,7 @@ events:
     date: December 5, 2019
     location: Berlin, Germany
     link: https://reactday.berlin/
-  - ref: inconsistent-styles-2
+  - ref: hello-box-flex-stack
     name: React Boston 2019
     date: September 22, 2019
     location: Boston, US
@@ -83,4 +83,6 @@ talks:
     title: 'Custom CSS is the path to inconsistent UI'
     slides: https://stopwritingcss.netlify.com/
     video: https://youtu.be/_CsBRkRTzIA
+  - id: hello-box-flex-stack
+    title: 'Say hello to Box, Flex and Stack: layouts in the component era'
 ---
