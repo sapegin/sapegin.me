@@ -84,5 +84,6 @@ talks:
     slides: https://stopwritingcss.netlify.com/
     video: https://youtu.be/_CsBRkRTzIA
   - id: hello-box-flex-stack
-    title: 'Say hello to Box, Flex and Stack: layouts in the component era'
+    title: 'Say hello to Box, Flex and Stack: layouts in the component age'
+    slides: https://heybox.sapegin.me
 ---
