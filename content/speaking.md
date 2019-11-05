@@ -4,6 +4,11 @@ title: Speaking
 pageTitle: 'Artem Sapegin is speaking: conference talks and workshops'
 events:
   - ref: cdd-workshop
+    name: React Finland 2020
+    date: May 26, 2020
+    location: Helsinki, Finland
+    link: https://react-finland.fi/
+  - ref: cdd-workshop
     name: React Day Berlin 2019
     date: December 5, 2019
     location: Berlin, Germany
