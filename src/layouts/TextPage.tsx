@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { TextContent, Html } from 'tamia';
+import { TextContent } from 'tamia';
 import PageWithTitle from './PageWithTitle';
 
 type Frontmatter = {
@@ -26,7 +26,7 @@ export default function TextPage({
 }: Props) {
 	return (
 		<PageWithTitle title={title}>
-			<TextContent as={Html}>{html}</TextContent>
+			<TextContent dangerouslySetInnerHTML={{ __html: html }} />
 		</PageWithTitle>
 	);
 }

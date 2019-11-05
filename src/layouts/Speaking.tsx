@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { flow, sortBy, reverse, filter } from 'lodash/fp';
-import { Heading } from 'tamia';
+import { Heading, TextContent } from 'tamia';
 import Section from '../components/Section';
 import EventList from '../components/EventList';
 import PageWithTitle from './PageWithTitle';
@@ -16,6 +16,7 @@ type Props = {
 	data: {
 		markdownRemark: {
 			frontmatter: Frontmatter;
+			html: string;
 		};
 	};
 };
@@ -62,6 +63,7 @@ export default function Speaking({
 	data: {
 		markdownRemark: {
 			frontmatter: { events, talks },
+			html,
 		},
 	},
 }: Props) {
@@ -71,6 +73,7 @@ export default function Speaking({
 
 	return (
 		<PageWithTitle title=" is speaking">
+			<TextContent dangerouslySetInnerHTML={{ __html: html }} />
 			<EventSection title="Upcoming events" items={upcomingEvents} />
 			<EventSection title="Past events" items={pastEvents} />
 		</PageWithTitle>
@@ -98,6 +101,7 @@ export const pageQuery = graphql`
 					video
 				}
 			}
+			html
 		}
 	}
 `;
