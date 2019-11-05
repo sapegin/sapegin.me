@@ -94,6 +94,7 @@ talks:
     type: talk
     title: 'Say hello to Box, Flex and Stack: layouts in the component age'
     slides: https://heybox.sapegin.me
+    video: https://youtu.be/zvuKuFgp96o
 ---
 
 I occasionally speak at conferences on design systems, component-driven development and React. I also run workshops on design systems in React with my friend [Andrey&nbsp;Okonetchnikov](https://component-driven.io/). If you want me to speak at your event or if you want our workshop at your event or your company, drop me a line at [artem@sapegin.ru](mailto:artem@sapegin.ru).
