@@ -11,7 +11,6 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-styled-components',
 		'gatsby-plugin-lodash',
-		'gatsby-plugin-remove-trailing-slashes',
 		'gatsby-plugin-typescript',
 		{
 			resolve: 'gatsby-source-filesystem',

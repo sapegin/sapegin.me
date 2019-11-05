@@ -91,4 +91,4 @@ talks:
     slides: https://heybox.sapegin.me
 ---
 
-I occasionally speak at conferences on design systems, component-driven development and React. I also run workshops on design systems in React with my friend [Andrey&nbsp;Okonetchnikov](http://okonet.ru/). If you want me to speak at your event or if you want our workshop at your event or your company, drop me a line at [artem@sapegin.ru](mailto:artem@sapegin.ru).
+I occasionally speak at conferences on design systems, component-driven development and React. I also run workshops on design systems in React with my friend [Andrey&nbsp;Okonetchnikov](https://component-driven.io/). If you want me to speak at your event or if you want our workshop at your event or your company, drop me a line at [artem@sapegin.ru](mailto:artem@sapegin.ru).

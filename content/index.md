@@ -62,7 +62,7 @@ projects:
     link: https://github.com/sapegin/dotfiles
 secondary:
   - title: My talks and workshops
-    link: /speaking
+    link: /speaking/
   - title: My Egghead lessons
     link: https://egghead.io/instructors/artem-sapegin?af=54ocv7
   - title: Site’s source code
