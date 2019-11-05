@@ -76,14 +76,17 @@ talks:
     slides: https://sapegin.github.io/slides/inconsistent-styles.html
     video: https://youtu.be/Cdtwz3PbW7M
   - id: inconsistent-styles
+    type: talk
     title: 'Custom CSS is the path to inconsistent UI'
     slides: https://stopwritingcss.netlify.com/
     video: https://youtu.be/t5VTLwAias8
   - id: inconsistent-styles-2
+    type: talk
     title: 'Custom CSS is the path to inconsistent UI'
     slides: https://stopwritingcss.netlify.com/
     video: https://youtu.be/_CsBRkRTzIA
   - id: hello-box-flex-stack
+    type: talk
     title: 'Say hello to Box, Flex and Stack: layouts in the component age'
     slides: https://heybox.sapegin.me
 ---
