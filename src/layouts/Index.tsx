@@ -54,13 +54,13 @@ export default function Index({
 						<span className="p-given-name" title="Pronounced as [ar'tiyom]">
 							Artem
 						</span>{' '}
-						<span className="p-family-name">Sapegin</span>, a&nbsp;
-						<span className="p-job-title">frontend developer</span> at&nbsp;
-						<Link href="https://www.wayfair.com/" className="p-org">
-							Wayfair
+						<span className="p-family-name">Sapegin</span>, a&nbsp;coffee first{' '}
+						<span className="p-job-title">frontend engineer</span> at&nbsp;
+						<Link href="https://www.omio.com/" className="p-org">
+							Omio
 						</Link>
-						, award-losing photographer, bouldering enthusiast, coffee consumer
-						and&nbsp;dog&nbsp;friend, living in&nbsp;
+						, award-losing photographer, and&nbsp;dog&nbsp;friend, living
+						in&nbsp;
 						<span className="p-region">Berlin, Germany</span>.
 					</Lead>
 				</Section>

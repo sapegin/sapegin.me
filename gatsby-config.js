@@ -2,7 +2,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'Artem Sapegin',
 		description:
-			'I’m a frontend developer, passionate photographer, coffee drinker and crazy dogs’ owner living in Berlin, Germany.',
+			'I’m a coffee first frontend engineer, award-losing photographer, and dog friend, living in Berlin, Germany.',
 		lang: 'en',
 		url: 'https://sapegin.me',
 		twitter: '@iamsapegin',
