@@ -1,6 +1,6 @@
 ---
 layout: Index
-pageTitle: 'Artem Sapegin: frontend engineer, photographer & dog friend'
+pageTitle: 'Artem Sapegin: frontend engineer, photographer & friend of dogs'
 links:
   - title: My nerdy writings
     description: Blog about frontend
