@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { flow, sortBy, reverse, filter } from 'lodash/fp';
+// eslint-disable-next-line import/default
+import sortOn from 'sort-on';
 import { Heading, TextContent } from 'tamia';
 import Section from '../components/Section';
 import EventList from '../components/EventList';
@@ -38,16 +39,15 @@ const parseEvents = (events: Event[], talks: Talk[]): Gig[] =>
 		timestamp: Date.parse(event.date),
 	}));
 
-const getUpcomingEvents = flow(
-	filter<Gig>(event => event.timestamp >= TODAY),
-	sortBy<Gig>('timestamp')
-);
+const getUpcomingEvents = (events: Gig[]) => {
+	const upcomingEvents = events.filter(event => event.timestamp >= TODAY);
+	return sortOn(upcomingEvents, 'timestamp');
+};
 
-const getPastEvents = flow(
-	filter<Gig>(event => event.timestamp < TODAY),
-	sortBy<Gig>('timestamp'),
-	reverse
-);
+const getPastEvents = (events: Gig[]) => {
+	const pastEvents = events.filter(event => event.timestamp < TODAY);
+	return sortOn(pastEvents, '-timestamp');
+};
 
 const EventSection = ({ title, items }: { title: string; items: Gig[] }) =>
 	items.length > 0 ? (

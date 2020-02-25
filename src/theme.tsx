@@ -108,6 +108,7 @@ export default {
 		custom: {},
 		base: {
 			...textBaseStyles,
+			fontSize: fontSizes.m,
 		},
 		xsmall: {
 			...textBaseStyles,

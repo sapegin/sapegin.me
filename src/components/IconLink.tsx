@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import css from '@styled-system/css';
 import Icon, { IconName } from './Icon';
 
-const Link = styled.a`
-	color: ${p => p.theme.colors.light};
-	transition: color 0.2s ease-in-out;
-	&:focus {
-		outline: 2px dotted ${p => p.theme.colors.hover};
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: ${p => p.theme.colors.base};
-	}
-`;
+const Link = styled.a(
+	css({
+		color: 'light',
+		transition: 'color 0.2s ease-in-out',
+		'&:focus': {
+			outline: '2px dotted',
+			outlineColor: 'hover',
+		},
+		'&:hover, &:focus, &:active': {
+			color: 'base',
+		},
+	})
+);
 
 type Props = React.ComponentProps<typeof Link> & {
 	icon: IconName;

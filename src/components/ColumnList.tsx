@@ -7,8 +7,6 @@ type Props = {
 	primary?: boolean;
 };
 
-const LinkHeading = Heading.withComponent(Link);
-
 const getVariantProps = (primary: boolean) =>
 	primary
 		? ({
@@ -28,9 +26,9 @@ export default function ColumnList({ items, primary = false }: Props) {
 		<Stack as="ul" gridColumnGap="l" gridRowGap="m" minColumnWidth={300}>
 			{items.map(item => (
 				<Stack key={item.link} as="li" gridGap={gap} alignContent="start">
-					<LinkHeading href={item.link} level={headingLevel}>
-						{item.title}
-					</LinkHeading>
+					<Heading as="div" level={headingLevel}>
+						<Link href={item.link}>{item.title}</Link>
+					</Heading>
 					<Text variant={descriptionVariant}>{item.description}</Text>
 				</Stack>
 			))}
