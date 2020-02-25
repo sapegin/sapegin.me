@@ -74,9 +74,9 @@ socials:
   - id: facebook
     name: Facebook
     link: https://www.facebook.com/artemsapegin
-  - id: medium
-    name: Medium
-    link: https://medium.com/@sapegin
+  - id: devto
+    name: DEV
+    link: https://dev.to/sapegin
   - id: instagram
     name: Instagram
     link: https://instagram.com/sapegin/
