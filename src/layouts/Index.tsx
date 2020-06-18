@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { Box, Text, Heading, VisuallyHidden } from 'tamia';
 import { Link } from 'tamia-gatsby-link';
 import Books from '../components/Books';

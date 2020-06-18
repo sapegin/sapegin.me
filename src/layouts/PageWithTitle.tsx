@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { Page, Box, Heading } from 'tamia';
 import { Link } from 'tamia-gatsby-link';
 import Footer from '../components/Footer';

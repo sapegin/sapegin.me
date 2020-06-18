@@ -75,10 +75,9 @@ export default {
 	headingMarginTop: space.l,
 	listMargin: '1.3em',
 	page: {
-		maxWidth: '52rem',
-		xPadding: space.m,
-		yPadding: '4vh',
-		// contentMaxWidth: null,
+		bodyMaxWidth: '52rem',
+		bodyPaddingX: space.m,
+		bodyPaddingY: '4vh',
 		textMaxWidth: '40rem',
 	},
 	fonts,

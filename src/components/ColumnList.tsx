@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Link, Text, Heading } from 'tamia';
+import { Grid, Stack, Link, Text, Heading } from 'tamia';
 import { Resource } from '../types';
 
 type Props = {
@@ -23,15 +23,15 @@ const getVariantProps = (primary: boolean) =>
 export default function ColumnList({ items, primary = false }: Props) {
 	const { headingLevel, descriptionVariant, gap } = getVariantProps(primary);
 	return (
-		<Stack as="ul" gridColumnGap="l" gridRowGap="m" minColumnWidth={300}>
+		<Grid as="ul" gridColumnGap="l" gridRowGap="m" minColumnWidth={300}>
 			{items.map(item => (
-				<Stack key={item.link} as="li" gridGap={gap} alignContent="start">
+				<Stack key={item.link} as="li" gap={gap}>
 					<Heading as="div" level={headingLevel}>
 						<Link href={item.link}>{item.title}</Link>
 					</Heading>
 					<Text variant={descriptionVariant}>{item.description}</Text>
 				</Stack>
 			))}
-		</Stack>
+		</Grid>
 	);
 }
