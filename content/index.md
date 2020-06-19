@@ -23,7 +23,7 @@ projects:
     link: https://react-styleguidist.js.org/
   - title: Mrm
     description: Codemods for your project config files
-    link: https://github.com/sapegin/mrm
+    link: https://mrm.js.org/
   - title: shipit
     description: Minimalistic SSH deployment
     link: https://github.com/sapegin/shipit
@@ -32,7 +32,7 @@ projects:
     link: https://github.com/sapegin/q-i
   - title: Stack Styled
     description: React component to make stack layouts easy
-    link: https://sapegin.github.io/stack-styled/
+    link: https://stack-styled.js.org/
   - title: React Group
     description: Render React children with a separator
     link: https://github.com/sapegin/react-group
@@ -54,9 +54,15 @@ projects:
   - title: Jest cheat sheet
     description: Everything you need to write tests
     link: https://github.com/sapegin/jest-cheat-sheet
-  - title: Awesome component-driven development
-    description: Curated list of links on design systems
-    link: https://github.com/component-driven/awesome-list
+  - title: Coffee timer
+    description: 'Timer app to brew pour over coffee'
+    link: https://coffee.morning.photos/
+  - title: Instagram photos from this day
+    description: 'My Instagram photos made on this day in past years'
+    link: https://every.morning.photos/
+  - title: Named CSS colors
+    description: 'All named CSS colors on one page'
+    link: https://sapegin.github.io/csscolors/
   - title: dotfiles
     description: 'My macOS environment: zsh, Git, VS Code, etc.'
     link: https://github.com/sapegin/dotfiles
@@ -65,6 +71,8 @@ secondary:
     link: /speaking/
   - title: My Egghead lessons
     link: https://egghead.io/instructors/artem-sapegin?af=54ocv7
+  - title: My résumé
+    link: https://cv.sapegin.me/
   - title: Site’s source code
     link: https://github.com/sapegin/sapegin.me
 socials:
