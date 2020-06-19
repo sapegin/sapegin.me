@@ -10,7 +10,7 @@
     "typecheck": "tsc",
     "build": "gatsby build",
     "lint": "eslint . --ext .js,.tsx --cache --fix",
-    "format": "prettier --write \"**/*.{js,tsx,md}\"",
+    "format": "prettier --loglevel warn --write \"**/*.{js,md}\"",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
@@ -56,8 +56,8 @@
     "gatsby-source-filesystem": "2.3.11",
     "gatsby-transformer-remark": "2.8.16",
     "husky": "^4.2.5",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.19.1",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
     "react-styleguidist": "^11.0.8",
     "typescript": "^3.9.5"
   },
@@ -67,13 +67,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,tsx,md}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{js,tsx}": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.{js,tsx,md}": "prettier --write",
+    "*.{js,tsx}": "eslint --cache --fix"
   }
 }
