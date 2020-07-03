@@ -20,5 +20,12 @@ module.exports = {
 		},
 		'gatsby-transformer-remark',
 		'gatsby-plugin-netlify',
+		{
+			resolve: 'gatsby-plugin-goatcounter',
+			options: {
+				code: 'sapegin',
+				allowLocal: false,
+			},
+		},
 	],
 };
