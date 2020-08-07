@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from 'tamia';
 
-type Props = {
+type Props = React.ComponentProps<typeof Box> & {
 	level: 1 | 2;
 	children: React.ReactNode;
 };

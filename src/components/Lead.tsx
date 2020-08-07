@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import css from '@styled-system/css';
-import { Text } from 'tamia';
+import { Text, Stack } from 'tamia';
 
 type Props = {
 	head: React.ReactNode;
+	details: React.ReactNode;
 	children: React.ReactNode;
 };
 
@@ -27,11 +28,21 @@ const Message = styled(Text)(
 	})
 );
 
-export default function Lead({ head, children }: Props) {
+const Details = styled(Text)(
+	css({
+		lineHeight: 1.4,
+		fontSize: 'l',
+	})
+);
+
+export default function Lead({ head, details, children }: Props) {
 	return (
-		<p>
-			<Hi as="strong">{head}</Hi>
-			<Message as="span">{children}</Message>
-		</p>
+		<Stack gap="m">
+			<p>
+				<Hi as="strong">{head}</Hi>
+				<Message as="span">{children}</Message>
+			</p>
+			<Details>{details}</Details>
+		</Stack>
 	);
 }

@@ -1,13 +1,6 @@
 ---
 layout: Index
 pageTitle: 'Artem Sapegin: frontend engineer, photographer & friend of dogs'
-links:
-  - title: My nerdy writings
-    description: Blog about frontend
-    link: https://blog.sapegin.me/
-  - title: My photography
-    description: Gallery and blog about photography
-    link: https://morning.photos/
 books:
   - title: Washing your code. Write once, read seven times
     description: Writing clean JavaScript code
@@ -67,8 +60,6 @@ projects:
     description: 'My macOS environment: zsh, Git, VS Code, etc.'
     link: https://github.com/sapegin/dotfiles
 secondary:
-  - title: My talks and workshops
-    link: /speaking/
   - title: My Egghead lessons
     link: https://egghead.io/instructors/artem-sapegin?af=54ocv7
   - title: My résumé

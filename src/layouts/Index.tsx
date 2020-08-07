@@ -8,6 +8,7 @@ import ColumnList from '../components/ColumnList';
 import InlineList from '../components/InlineList';
 import Socials from '../components/Socials';
 import Lead from '../components/Lead';
+import Menu from '../components/Menu';
 import Section from '../components/Section';
 import Base from './Base';
 import { Book, Resource, Social } from '../types';
@@ -21,7 +22,6 @@ const Subheading = ({ children }: { children: React.ReactNode }) => (
 type Frontmatter = {
 	pageTitle: string;
 	books: Book[];
-	links: Resource[];
 	projects: Resource[];
 	secondary: Resource[];
 	socials: Social[];
@@ -38,7 +38,7 @@ type Props = {
 export default function Index({
 	data: {
 		markdownRemark: {
-			frontmatter: { pageTitle, books, links, projects, secondary, socials },
+			frontmatter: { pageTitle, books, projects, secondary, socials },
 		},
 	},
 }: Props) {
@@ -49,24 +49,31 @@ export default function Index({
 				<VisuallyHidden as="h1">Artem Sapegin</VisuallyHidden>
 				<Section level={1}>
 					<VisuallyHidden as="h2">About me</VisuallyHidden>
-					<Lead head="Hi.">
+					<Lead
+						head="Hi."
+						details={
+							<>
+								I live in&nbsp;
+								<span className="p-region">Berlin, Germany</span>, work at{' '}
+								<Link href="https://www.omio.com/" className="p-org">
+									Omio
+								</Link>
+								, and interested in design systems, testing
+								and&nbsp;accessibility.
+							</>
+						}
+					>
 						I’m&nbsp;
 						<span className="p-given-name" title="Pronounced as [ar'tiyom]">
 							Artem
 						</span>{' '}
 						<span className="p-family-name">Sapegin</span>, a&nbsp;coffee first{' '}
-						<span className="p-job-title">frontend engineer</span> at&nbsp;
-						<Link href="https://www.omio.com/" className="p-org">
-							Omio
-						</Link>
-						, award-losing photographer, and&nbsp;dog&nbsp;friend, living
-						in&nbsp;
-						<span className="p-region">Berlin, Germany</span>.
+						<span className="p-job-title">frontend engineer</span>, award-losing
+						photographer, and&nbsp;dog&nbsp;friend.
 					</Lead>
 				</Section>
-				<Section level={1}>
-					<VisuallyHidden as="h2">My sites</VisuallyHidden>
-					<ColumnList items={links} primary />
+				<Section as="nav" level={1}>
+					<Menu current="/" />
 				</Section>
 				<Section level={2}>
 					<Subheading>My books</Subheading>
@@ -106,11 +113,6 @@ export const pageQuery = graphql`
 					description
 					link
 					cover
-				}
-				links {
-					title
-					description
-					link
 				}
 				projects {
 					title
