@@ -32,7 +32,7 @@
     "react-helmet": "^6.1.0",
     "sort-on": "^4.1.0",
     "styled-components": "^5.1.1",
-    "tamia": "5.9.4",
+    "tamia": "5.10.1",
     "tamia-gatsby-link": "^1.0.6"
   },
   "devDependencies": {

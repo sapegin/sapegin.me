@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import css from '@styled-system/css';
 import Icon, { IconName } from './Icon';
 
-const Link = styled.a(
+const Link = styled.a((p) =>
 	css({
 		color: 'light',
 		transition: 'color 0.2s ease-in-out',
 		'&:focus': {
-			outline: '2px dotted',
-			outlineColor: 'hover',
+			outline: p.theme.borders.focus,
+			outlineColor: p.theme.colors.focus,
+			outlineOffset: p.theme.focusOutlineOffset,
 		},
-		'&:hover, &:focus, &:active': {
+		'&:hover, &:active': {
 			color: 'base',
 		},
 	})

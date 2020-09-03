@@ -35,12 +35,16 @@ const colors = {
 	base: '#222',
 	light: '#999',
 	primary: '#c25400',
-	hover: '#f56a00',
+	hover: '#ff7d1a',
+	focus: '#ff7d1a',
 	selection: 'rgb(255,237,117)',
 	selectionAlpha: 'rgba(255,237,117,0.25)',
 };
 const shadows = {
 	cover: '0 0 3px rgba(0, 0, 0, 0.05)',
+};
+const borders = {
+	focus: '3px solid',
 };
 const fontWeights = {
 	base: 300,
@@ -74,6 +78,7 @@ export default {
 	blockMarginBottom: space.m,
 	headingMarginTop: space.l,
 	listMargin: '1.3em',
+	focusOutlineOffset: '2px',
 	page: {
 		bodyMaxWidth: '52rem',
 		bodyPaddingX: space.m,
@@ -88,6 +93,7 @@ export default {
 	letterSpacings,
 	colors,
 	shadows,
+	borders,
 	breakpoints,
 	headingStyles: {
 		1: {
