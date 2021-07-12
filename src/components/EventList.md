@@ -5,8 +5,7 @@
       name: 'React Open Source Meetup',
       date: 'May 8, 2018',
       location: 'Berlin, Germany',
-      link:
-        'https://www.meetup.com/React-Open-Source/events/250174334/',
+      link: 'https://www.meetup.com/React-Open-Source/events/250174334/',
       type: 'lightning',
       title: 'Component-driven development'
     },

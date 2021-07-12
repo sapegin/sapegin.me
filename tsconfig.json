@@ -8,9 +8,7 @@
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["react"]
+    "types": ["react", "node"]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
