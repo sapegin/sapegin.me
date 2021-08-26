@@ -58,7 +58,7 @@ export default function Index({
 								<Link href="https://www.omio.com/" className="p-org">
 									Omio
 								</Link>
-								, and interested in food, design systems, testing
+								, and interested in cooking, design systems, testing
 								and&nbsp;accessibility.
 							</>
 						}
