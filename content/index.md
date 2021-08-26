@@ -11,6 +11,9 @@ books:
     link: https://survivejs.com/maintenance/
     cover: survivejs-maintenance-cover-small.png
 projects:
+  - title: Tacohuaco
+    description: 'Our recipes'
+    link: https://tacohuaco.co/
   - title: React Styleguidist
     description: React component development environment
     link: https://react-styleguidist.js.org/
@@ -50,9 +53,6 @@ projects:
   - title: Coffee timer
     description: 'Timer app to brew pour over coffee'
     link: https://coffee.morning.photos/
-  - title: Instagram photos from this day
-    description: 'My Instagram photos made on this day in past years'
-    link: https://every.morning.photos/
   - title: Named CSS colors
     description: 'All named CSS colors on one page'
     link: https://sapegin.github.io/csscolors/
