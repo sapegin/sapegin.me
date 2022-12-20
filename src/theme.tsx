@@ -1,5 +1,6 @@
 const baseFont = ['Helvetica', 'sans-serif'].join(',');
 const space = {
+	0: 0,
 	xxs: '0.125rem', // 2px
 	xs: '0.25rem', // 4px
 	s: '0.5rem', // 8px
@@ -8,6 +9,14 @@ const space = {
 	xl: '4rem', // 64px
 	xxl: '8rem', // 128px
 	xxxl: '16rem', // 256px
+	'-xxs': '0.125rem', // -2px
+	'-xs': '0.25rem', // -4px
+	'-s': '0.5rem', // -8px
+	'-m': '1rem', // -16px
+	'-l': '2rem', // -32px
+	'-xl': '4rem', // -64px
+	'-xxl': '8rem', // -128px
+	'-xxxl': '16rem', // -256px
 };
 const breakpoints = [
 	'38rem', // 608px
@@ -83,6 +92,8 @@ export default {
 		bodyMaxWidth: '52rem',
 		bodyPaddingX: space.m,
 		bodyPaddingY: '4vh',
+		contentPaddingX: 0,
+		contentPaddingY: 0,
 		textMaxWidth: '40rem',
 	},
 	fonts,

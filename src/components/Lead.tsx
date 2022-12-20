@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import css from '@styled-system/css';
 import { Text, Stack } from 'tamia';
 
 type Props = {
@@ -9,31 +8,25 @@ type Props = {
 	children: React.ReactNode;
 };
 
-const Hi = styled(Text)(
-	css({
-		display: 'block',
-		marginLeft: '-0.05ex',
-		letterSpacing: '0.05ex',
-		fontWeight: 300,
-		lineHeight: 1.2,
-		fontSize: 'xxxl',
-	})
-);
+const Hi = styled(Text)`
+	display: block;
+	margin-left: -0.05ex;
+	letter-spacing: 0.05ex;
+	font-weight: 300;
+	line-height: 1.2;
+	font-size: ${(p) => p.theme.fontSizes.xxxl};
+`;
 
-const Message = styled(Text)(
-	css({
-		display: 'block',
-		lineHeight: 1.4,
-		fontSize: 'xl',
-	})
-);
+const Message = styled(Text)`
+	display: block;
+	line-height: 1.4;
+	font-size: ${(p) => p.theme.fontSizes.xl};
+`;
 
-const Details = styled(Text)(
-	css({
-		lineHeight: 1.4,
-		fontSize: 'l',
-	})
-);
+const Details = styled(Text)`
+	line-height: 1.4;
+	font-size: ${(p) => p.theme.fontSizes.l};
+`;
 
 export default function Lead({ head, details, children }: Props) {
 	return (

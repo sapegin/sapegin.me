@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sapegin/sapegin.me.png)](https://travis-ci.org/sapegin/sapegin.me)
 
-Powered by [Tâmia](https://tamiadev.github.io/tamia/), [Gatsby](https://www.gatsbyjs.org/), [styled-components](https://www.styled-components.com/) and [styled-system](https://styled-system.com/).
+Powered by [Tâmia](https://tamiadev.github.io/tamia/), [Gatsby](https://www.gatsbyjs.org/), [styled-components](https://www.styled-components.com/).
 
 ## Running locally
 

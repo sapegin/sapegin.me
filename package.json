@@ -25,15 +25,13 @@
     "not dead"
   ],
   "dependencies": {
-    "@styled-system/css": "^5.1.5",
-    "@types/styled-system__css": "^5.0.13",
     "react": "^16.14",
     "react-dom": "^16.14",
     "react-group": "^3.0.2",
     "react-helmet": "^6.1.0",
     "sort-on": "^4.1.0",
     "styled-components": "^5.1.1",
-    "tamia": "5.10.1",
+    "tamia": "6.0.10",
     "tamia-gatsby-link": "^1.0.6"
   },
   "devDependencies": {

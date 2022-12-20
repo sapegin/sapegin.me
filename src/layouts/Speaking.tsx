@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 // eslint-disable-next-line import/default
 import sortOn from 'sort-on';
-import { Heading, TextContent } from 'tamia';
+import { Box, Heading, TextContent } from 'tamia';
 import Section from '../components/Section';
 import EventList from '../components/EventList';
 import PageWithTitle from './PageWithTitle';
@@ -30,22 +30,22 @@ const TODAY = new Date(
 ).getTime();
 
 const findById = (events: Talk[], id: string): Talk =>
-	events.find(event => event.id === id) as Talk;
+	events.find((event) => event.id === id) as Talk;
 
 const parseEvents = (events: Event[], talks: Talk[]): Gig[] =>
-	events.map(event => ({
+	events.map((event) => ({
 		...event,
 		...findById(talks, event.ref),
 		timestamp: Date.parse(event.date),
 	}));
 
 const getUpcomingEvents = (events: Gig[]) => {
-	const upcomingEvents = events.filter(event => event.timestamp >= TODAY);
+	const upcomingEvents = events.filter((event) => event.timestamp >= TODAY);
 	return sortOn(upcomingEvents, 'timestamp');
 };
 
 const getPastEvents = (events: Gig[]) => {
-	const pastEvents = events.filter(event => event.timestamp < TODAY);
+	const pastEvents = events.filter((event) => event.timestamp < TODAY);
 	return sortOn(pastEvents, '-timestamp');
 };
 
@@ -73,7 +73,9 @@ export default function Speaking({
 
 	return (
 		<PageWithTitle title=" is speaking">
-			<TextContent dangerouslySetInnerHTML={{ __html: html }} />
+			<Box mb="m">
+				<TextContent dangerouslySetInnerHTML={{ __html: html }} />
+			</Box>
 			<EventSection title="Upcoming events" items={upcomingEvents} />
 			<EventSection title="Past events" items={pastEvents} />
 		</PageWithTitle>

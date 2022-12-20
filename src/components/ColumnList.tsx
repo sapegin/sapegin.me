@@ -8,7 +8,12 @@ type Props = {
 
 export default function ColumnList({ items }: Props) {
 	return (
-		<Grid as="ul" gridColumnGap="l" gridRowGap="m" minColumnWidth={300}>
+		<Grid
+			as="ul"
+			gridColumnGap="l"
+			gridRowGap="m"
+			gridTemplateColumns="repeat(auto-fit, minmax(300px,1fr))"
+		>
 			{items.map((item) => (
 				<Stack key={item.link} as="li" gap="xs">
 					<Heading as="div" level={3}>

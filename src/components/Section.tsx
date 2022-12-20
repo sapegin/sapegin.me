@@ -9,7 +9,7 @@ type Props = React.ComponentProps<typeof Box> & {
 const MARGINS = ['', 'calc(2rem + 2vh)', 'calc(2rem + 1vh)'];
 
 const Section = (props: Props) => (
-	<Box as="section" mb={MARGINS[props.level]} {...props} />
+	<Box as="section" sx={{ mb: MARGINS[props.level] }} {...props} />
 );
 
 export default Section;
