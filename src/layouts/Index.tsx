@@ -58,8 +58,10 @@ export default function Index({
 								<Link href="https://www.omio.com/" className="p-org">
 									Omio
 								</Link>
-								, and interested in cooking, design systems, testing
-								and&nbsp;accessibility.
+								, and interested in{' '}
+								<Link href="https://morning.photos/">photography</Link>,{' '}
+								<Link href="https://tacohuaco.co/">cooking</Link>,
+								and&nbsp;leathercraft.
 							</>
 						}
 					>
