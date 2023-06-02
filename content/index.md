@@ -2,12 +2,12 @@
 layout: Index
 pageTitle: 'Artem Sapegin: frontend engineer, photographer & friend of dogs'
 books:
-  - title: Washing your code. Write once, read seven times
-    description: Writing clean JavaScript code
-    link: https://leanpub.com/washingcode/
+  - title: Washing your code
+    description: Clean code for frontend developers
+    link: https://blog.sapegin.me/book/
     cover: washing-your-code-cover-small.jpg
-  - title: SurviveJS — Maintenance (co-author)
-    description: JavaScript open source project maintenance
+  - title: 'SurviveJS: Maintenance'
+    description: JavaScript open source project maintenance (co-author)
     link: https://survivejs.com/maintenance/
     cover: survivejs-maintenance-cover-small.png
 projects:
@@ -70,15 +70,9 @@ socials:
   - id: twitter
     name: Twitter
     link: https://twitter.com/iamsapegin
-  - id: facebook
-    name: Facebook
-    link: https://www.facebook.com/artemsapegin
   - id: devto
     name: DEV
     link: https://dev.to/sapegin
-  - id: instagram
-    name: Instagram
-    link: https://instagram.com/sapegin/
   - id: unsplash
     name: Unsplash
     link: https://unsplash.com/@sapegin

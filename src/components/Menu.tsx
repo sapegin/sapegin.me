@@ -25,8 +25,8 @@ const ITEMS: Item[] = [
 		href: 'https://blog.sapegin.me/til/',
 	},
 	{
-		title: 'Speaking',
-		href: '/speaking/',
+		title: 'Book',
+		href: 'https://blog.sapegin.me/book/',
 	},
 	{
 		title: 'Photography',
