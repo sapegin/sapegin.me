@@ -72,5 +72,12 @@ globalStyle(`${inputGroup} button:last-of-type::after`, {
 // HACK: ::after doesn't work on <input>, so we change the color of the button's
 // border instead
 globalStyle(`${inputGroup}:focus-within button:last-of-type::after`, {
-	borderLeftColor: vars.colors.hover,
+	'@media': {
+		[mediaQueries.mobileOnly]: {
+			borderTopColor: vars.colors.hover,
+		},
+		[mediaQueries.tablet]: {
+			borderLeftColor: vars.colors.hover,
+		},
+	},
 });
