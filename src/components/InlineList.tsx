@@ -1,25 +1,19 @@
-import React from 'react';
-import { Text } from 'tamia';
-import { Link } from 'tamia-gatsby-link';
-import InlineListItem from './InlineListItem';
+import { Box, type BoxProps } from '../tamia/components/Box';
+import { Text, type TextProps } from './Text';
+import { listItem } from './InlineList.css';
 
-type Item = {
-	title: string;
-	link: string;
-};
+export function InlineList(props: BoxProps<'p'>) {
+	return <Box as="p" display={{ tablet: 'flex' }} {...props} />;
+}
 
-type Props = {
-	items: Item[];
-};
-
-export default function InlineList({ items }: Props) {
+export function InlineListItem(props: TextProps<'span'>) {
 	return (
-		<Text as="ul" variant="small">
-			{items.map(item => (
-				<InlineListItem as="li" key={item.link}>
-					<Link href={item.link}>{item.title}</Link>
-				</InlineListItem>
-			))}
-		</Text>
+		<Text
+			as="span"
+			fontStyle="italic"
+			mb="xs"
+			className={listItem}
+			{...props}
+		/>
 	);
 }

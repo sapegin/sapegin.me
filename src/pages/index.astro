@@ -1,0 +1,106 @@
+---
+import { sortBy } from 'lodash';
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { MainPage } from '../templates/MainPage';
+import type { Resource } from '../types/Resource';
+import { blogEntryToPost } from '../util/blogEntryToPost';
+import { tilEntryToPost } from '../util/tilEntryToPost';
+
+const NUM_RECENT_POSTS = 5;
+
+const blogEntries = await getCollection('blog');
+const blogPosts = sortBy(
+	blogEntries.map(blogEntryToPost),
+	(x) => -x.date
+).slice(0, NUM_RECENT_POSTS);
+
+const tilEntries = await getCollection('til');
+const tilPosts = sortBy(tilEntries.map(tilEntryToPost), (x) => -x.date).slice(
+	0,
+	NUM_RECENT_POSTS
+);
+
+const books: Resource[] = [
+	{
+		title: 'Washing your code',
+		description: 'Clean code for frontend developers',
+		url: '/book/',
+		image: 'washing-your-code',
+	},
+	{
+		title: 'SurviveJS: Maintenance',
+		description: 'JavaScript open source project maintenance (co-author)',
+		url: 'https://survivejs.com/maintenance/',
+		image: 'survivejs-maintenance',
+	},
+];
+
+const writing: Resource[] = [
+	{
+		title: 'Jest cheat sheet',
+		description: 'Everything you need to write Jest tests',
+		url: 'https://github.com/sapegin/jest-cheat-sheet',
+	},
+	{
+		title: 'Frontend pull request checklist',
+		description:
+			'Or how to get looks-good-to-me on your pull request seven times faster',
+		url: 'https://github.com/sapegin/frontend-pull-request-checklist',
+	},
+];
+
+const projects: Resource[] = [
+	{
+		title: 'React Styleguidist',
+		description: 'React component development environment',
+		url: 'https://react-styleguidist.js.org/',
+	},
+	{
+		title: 'Mrm',
+		description: 'Codemods for your project config files',
+		url: 'https://mrm.js.org/',
+	},
+	{
+		title: 'Squirrelsong',
+		description: 'Dark and light code color schemes for coding',
+		url: 'https://github.com/sapegin/squirrelsong',
+	},
+	{
+		title: 'Named CSS colors',
+		description: 'All named CSS colors on one page',
+		url: 'https://sapegin.github.io/csscolors/',
+	},
+	{
+		title: 'React Group',
+		description: 'Render React children with a separator',
+		url: 'https://github.com/sapegin/react-group',
+	},
+	{
+		title: 'Richtypo',
+		description: 'Typography enhancer for Node.js',
+		url: 'https://github.com/sapegin/richtypo.js',
+	},
+	{
+		title: 'Textlint rules',
+		description: 'Check and fix your tech writing with Textlint',
+		url: 'https://github.com/search?utf8=%E2%9C%93&q=textlint-rule+user%3Asapegin&type=Repositories&ref=advsearch&l=&l=',
+	},
+	{
+		title: 'git-friendly',
+		description: 'Scripts for better Git workflow (maintainer)',
+		url: 'https://github.com/jamiew/git-friendly',
+	},
+];
+---
+
+<Layout>
+	<MainPage
+		url="/"
+		blogPosts={blogPosts}
+		tilPosts={tilPosts}
+		books={books}
+		writing={writing}
+		projects={projects}
+	/>
+</Layout>

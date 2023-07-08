@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+import { themeClass } from '../styles/theme.css';
+
+export interface Props {
+	url?: string;
+	title?: string;
+	pageTitle?: string;
+	description?: string;
+}
+
+// TODO: Twitter cards
+
+// TODO: How to have trailing slashes?
+
+// TODO: It's not only blog now
+const SITE_URL = 'https://sapegin.me';
+const SITE_TITLE = 'Artem Sapegin’s Blog';
+const DEFAULT_DESCRIPTION =
+	'Blog of a Berlin based coffee first frontend engineer, who makes photos and hangs out with his dogs.';
+
+const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
+	if (pageTitle) {
+		return pageTitle;
+	}
+
+	if (title) {
+		return `${title} — ${SITE_TITLE}`;
+	}
+
+	return SITE_TITLE;
+};
+
+const { title, url = '/', description = DEFAULT_DESCRIPTION } = Astro.props;
+
+const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');
+const canonicalUrl = `${SITE_URL}${url}`;
+const imageUrl = isBlogPost && `${canonicalUrl}/twitter-card.jpg`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{getTitle(Astro.props)}</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="description" content={description} />
+		{imageUrl && <meta property="og:image" content={imageUrl} />}
+		<meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
+		<meta property="og:title" content={title} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:site_name" content={SITE_TITLE} />
+		<meta property="og:description" content={description} />
+		{imageUrl && <meta name="twitter:card" content="summary_large_image" />}
+		{imageUrl && <meta name="twitter:image" content={imageUrl} />}
+		<meta name="twitter:creator" content="@iamsapegin" />
+		<link
+			rel="canonical"
+			href={canonicalUrl}
+			data-baseprotocol="https:"
+			data-basehost="sapegin.me"
+		/>
+	</head>
+	<body class={themeClass}>
+		<slot />
+	</body>
+</html>

@@ -1,0 +1,11 @@
+/* TEAM */
+
+  Web developer: Artem Sapegin
+  Email: artem@sapegin.ru
+  Site: https://sapegin.me
+  Location: Berlin, Germany
+
+  -_-_-_-_-_-_-_,------,
+  _-_-_-_-_-_-_-|   /\_/\\
+  -_-_-_-_-_-_-~|__( ^ .^)
+  -_-_-_-_-_-_-""  ""

@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'tamia-gatsby-link';
-import { Text, Stack } from 'tamia';
+import { Fragment } from 'react';
+import { Box, Grid, Text, Link } from '.';
+import { menu, HALF } from './Menu.css';
 
 type Props = {
 	current: string;
 };
 
-type Item = {
+interface Item {
 	title: string;
 	href: string;
-};
+}
 
 const ITEMS: Item[] = [
 	{
@@ -18,34 +18,54 @@ const ITEMS: Item[] = [
 	},
 	{
 		title: 'Blog',
-		href: 'https://blog.sapegin.me/',
+		href: '/blog/',
 	},
 	{
+		// TODO: Today I learned tooltip / aria-label
 		title: 'TIL',
-		href: 'https://blog.sapegin.me/til/',
+		href: '/til/',
 	},
 	{
 		title: 'Book',
-		href: 'https://blog.sapegin.me/book/',
+		href: '/book/',
 	},
 	{
-		title: 'Photography',
+		title: 'Photos',
 		href: 'https://morning.photos/',
+	},
+	{
+		title: 'Leather',
+		href: 'https://www.etsy.com/de-en/shop/KlatzLeatherGoods',
 	},
 ];
 
-export default function Menu({ current }: Props) {
+export function Menu({ current }: Props) {
 	return (
-		<Stack as="ul" gap="m" direction={['column', 'row']}>
-			{ITEMS.map(({ title, href }) => (
-				<Text
-					key={href}
-					as="li"
-					fontWeight={href === current ? 'bold' : undefined}
-				>
-					<Link href={href}>{title}</Link>
-				</Text>
+		<Grid
+			as="ul"
+			columnGap="m"
+			rowGap={{ mobile: 0, tablet: 'm' }}
+			justifyItems="center"
+			className={menu}
+		>
+			{ITEMS.map(({ title, href }, index) => (
+				<Fragment key={href}>
+					{index === HALF && (
+						<Box
+							as="li"
+							aria-hidden="true"
+							display={{ mobile: 'none', tablet: 'block' }}
+						/>
+					)}
+					<Text
+						as="li"
+						variant="menu"
+						fontWeight={href === current ? 'bold' : undefined}
+					>
+						<Link href={href}>{title}</Link>
+					</Text>
+				</Fragment>
 			))}
-		</Stack>
+		</Grid>
 	);
 }

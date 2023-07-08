@@ -1,22 +1,23 @@
 {
   "name": "sapegin",
+  "type": "module",
   "private": true,
   "license": "See license in <Readme.md>",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "astro dev",
+    "build": "astro check && tsc --noEmit && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint . --cache --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --loglevel warn --write \"**/*.{js,ts,tsx,md}\"",
     "pretest": "npm run lint",
     "test": "npm run typecheck",
-    "posttest": "npm run format",
-    "typecheck": "tsc",
-    "build": "gatsby build",
-    "lint": "eslint . --ext .js,.tsx --cache --fix",
-    "format": "prettier --loglevel warn --write \"**/*.{js,md}\"",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "prepare": "husky install"
+    "sync": "node scripts/sync-til.js; node scripts/sync-book.js",
+    "posttest": "npm run format"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "browserslist": [
     ">1%",
@@ -25,44 +26,40 @@
     "not dead"
   ],
   "dependencies": {
-    "react": "^16.14",
-    "react-dom": "^16.14",
+    "@astrojs/react": "^2.2.1",
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.2.14",
+    "@vanilla-extract/css": "^1.12.0",
+    "@vanilla-extract/recipes": "^0.4.0",
+    "@vanilla-extract/sprinkles": "^1.6.1",
+    "@vanilla-extract/vite-plugin": "^3.8.2",
+    "astro": "^2.8.0",
+    "clsx": "^1.2.1",
+    "csstype": "^3.1.2",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-group": "^3.0.2",
-    "react-helmet": "^6.1.0",
-    "sort-on": "^4.1.0",
-    "styled-components": "^5.1.1",
-    "tamia": "6.0.10",
-    "tamia-gatsby-link": "^1.0.6"
+    "richtypo": "^4.1.17",
+    "richtypo-rules-en": "^4.0.23",
+    "romanize": "^1.1.1",
+    "unist-util-visit": "^4.1.2"
   },
   "devDependencies": {
-    "@types/node": "^16.3.1",
-    "@types/react": "^16",
-    "@types/react-dom": "^16",
-    "@types/react-helmet": "^6.1.2",
-    "@types/styled-components": "^5.1.2",
-    "@typescript-eslint/eslint-plugin": "^4.28.2",
-    "@typescript-eslint/parser": "^4.28.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.30.0",
-    "eslint-config-tamia": "^7.2.6",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-react": "^7.24.0",
-    "gatsby": "3.15.0",
-    "gatsby-plugin-goatcounter": "0.4.0",
-    "gatsby-plugin-netlify": "3.9.0",
-    "gatsby-plugin-react-helmet": "4.9.0",
-    "gatsby-plugin-styled-components": "4.9.0",
-    "gatsby-plugin-typescript": "3.9.0",
-    "gatsby-source-filesystem": "3.9.0",
-    "gatsby-transformer-remark": "4.6.0",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.2",
-    "react-styleguidist": "^11.0.8",
-    "typescript": "^4.3.5"
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "eslint-config-tamia": "^8.0.4",
+    "eslint-plugin-react": "^7.32.2",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.1",
+    "gray-matter": "^4.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0"
   },
   "lint-staged": {
-    "*.{js,tsx,md}": "prettier --write",
-    "*.{js,tsx}": "eslint --cache --fix"
+    "*.{js,ts,tsx,md}": "prettier --write",
+    "*.{js,ts,tsx}": "eslint --cache --fix"
   }
 }

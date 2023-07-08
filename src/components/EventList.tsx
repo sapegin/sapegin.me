@@ -1,23 +1,21 @@
-import React from 'react';
 import Group from 'react-group';
-import { Box, Heading, Text, Link } from 'tamia';
-import TalkName from './TalkName';
-import { Gig } from '../types';
+import { Box, Stack, Heading, Text, Link, EventName } from '.';
+import type { Gig } from '../types/Gig';
 
 type Props = {
 	items: Gig[];
 };
 
-export default function EventList({ items }: Props) {
+export function EventList({ items }: Props) {
 	return (
-		<>
-			{items.map(item => (
-				<Box key={item.date} mb="m">
+		<Stack gap="m">
+			{items.map((item) => (
+				<Box key={item.date}>
 					<Heading level={3} mb="s">
-						<Link href={item.link}>{item.name}</Link>
+						<Link href={item.url}>{item.name}</Link>
 					</Heading>
 					<Text>
-						<TalkName type={item.type}>{item.title}</TalkName>
+						<EventName type={item.type}>{item.title}</EventName>
 					</Text>
 					<Text variant="xsmall">
 						<Group separator=", ">
@@ -29,6 +27,6 @@ export default function EventList({ items }: Props) {
 					</Text>
 				</Box>
 			))}
-		</>
+		</Stack>
 	);
 }

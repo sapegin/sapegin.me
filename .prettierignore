@@ -1,3 +1,2 @@
-.cache/
-public/
-*.json
+.astro/
+dist/

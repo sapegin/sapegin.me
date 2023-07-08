@@ -1,0 +1,88 @@
+[
+  {
+    "title": "Preface"
+  },
+  {
+    "title": "Acknowledgments"
+  },
+  {
+    "title": "Avoid loops",
+    "url": "/blog/avoid-loops/"
+  },
+  {
+    "title": "Avoid conditions",
+    "url": "/blog/avoid-conditions/"
+  },
+  {
+    "title": "Avoid reassigning variables",
+    "url": "/blog/avoid-reassigning-variables/"
+  },
+  {
+    "title": "Avoid mutation",
+    "url": "/blog/avoid-mutation/"
+  },
+  {
+    "title": "Avoid comments",
+    "url": "/blog/avoid-comments/"
+  },
+  {
+    "title": "Naming is hard"
+  },
+  {
+    "title": "Code style"
+  },
+  {
+    "title": "Constants"
+  },
+  {
+    "title": "Separate “what” and “how”"
+  },
+  {
+    "title": "Don’t be clever"
+  },
+  {
+    "title": "Divide and conquer, or merge and relax"
+  },
+  {
+    "title": "Don’t make me think"
+  },
+  {
+    "title": "Make impossible states impossible"
+  },
+  {
+    "title": "Don’t try to predict the future"
+  },
+  {
+    "title": "Become a code scout"
+  },
+  {
+    "title": "Make the code greppable"
+  },
+  {
+    "title": "Cargo cult programming"
+  },
+  {
+    "title": "Not invented here syndrome"
+  },
+  {
+    "title": "Refactoring is inevitable"
+  },
+  {
+    "title": "Code is evil"
+  },
+  {
+    "title": "Tooling"
+  },
+  {
+    "title": "Linters"
+  },
+  {
+    "title": "Other tools"
+  },
+  {
+    "title": "Resources"
+  },
+  {
+    "title": "Conclusion"
+  }
+]
