@@ -4,14 +4,12 @@ export const breakpoints = [
 	'38rem', // 608px
 	'48rem', // 768px
 	'62rem', // 992px
-	'75rem', // 1200px
 ];
 
 export const mediaQueries = {
 	mobile: '',
 	tablet: `screen and (min-width: ${breakpoints[1]})`,
 	desktop: `screen and (min-width: ${breakpoints[2]})`,
-	tv: `screen and (min-width: ${breakpoints[3]})`,
 	mobileOnly: `screen and (max-width: ${breakpoints[1]})`,
 };
 
@@ -19,7 +17,6 @@ export const conditions = {
 	mobile: {},
 	tablet: { '@media': mediaQueries.tablet },
 	desktop: { '@media': mediaQueries.desktop },
-	tv: { '@media': mediaQueries.tv },
 };
 
 export const space = {
