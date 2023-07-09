@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 import { Box, Stack, Heading, IconCoffee } from '.';
 import { name } from './Hola.css';
 
-interface Props {
+type Props = {
 	children: ReactNode;
-}
+};
 
 export function Hola({ children }: Props) {
 	return (

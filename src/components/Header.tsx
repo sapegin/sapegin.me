@@ -1,11 +1,11 @@
 import { Box, Logo, Menu } from '.';
 import { logo } from './Header.css';
 
-interface HeaderProps {
+type Props = {
 	url: string;
-}
+};
 
-export function Header({ url }: HeaderProps) {
+export function Header({ url }: Props) {
 	return (
 		<Box as="header">
 			<Box mx="auto" textAlign="center" className={logo}>
