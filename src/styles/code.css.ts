@@ -1,7 +1,6 @@
 import { globalStyle } from '@vanilla-extract/css';
 import { vars } from './theme.css';
 
-// Code
 globalStyle(`.astro-code`, {
 	display: 'block',
 	lineHeight: vars.lineHeights.code,
