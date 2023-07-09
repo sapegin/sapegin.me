@@ -36,7 +36,7 @@ export const theme = {
 		xl: '1.8rem',
 		l: '1.2rem',
 		m: '1rem',
-		s: '0.85rem',
+		s: '0.9rem',
 		xs: '0.75rem',
 		mplus: '1.1rem', // TODO: Shall we remove or rename this?
 		ui: '1.5rem', // UI font is very small
