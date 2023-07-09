@@ -14,7 +14,6 @@ export const text = recipe({
 	variants: {
 		variant: {
 			base: sprinkles({ fontSize: 'm' }),
-			xsmall: sprinkles({ fontSize: 'xs' }),
 			small: sprinkles({ fontSize: 's' }),
 			large: sprinkles({ fontSize: 'l', lineHeight: 'heading' }),
 			menu: sprinkles({
