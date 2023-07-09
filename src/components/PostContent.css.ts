@@ -1,8 +1,5 @@
-import { style } from '@vanilla-extract/css';
-// import { vars } from '../tamia/primitives/globalTheme.css';
+import { style, globalStyle } from '@vanilla-extract/css';
 import { sprinkles } from '../styles/sprinkles.css';
-
-// TODO: There's more: https://github.com/sapegin/blog.sapegin.me/blob/master/src/components/PostContent.tsx
 
 export const postContent = style([
 	sprinkles({
@@ -11,3 +8,16 @@ export const postContent = style([
 	}),
 	{},
 ]);
+
+globalStyle(`${postContent} hr`, {
+	textAlign: 'center',
+	backgroundColor: 'transparent',
+	border: 'none',
+	// Make top and bottom margins more or less the same
+	marginBlock: '2.5rem',
+});
+
+globalStyle(`${postContent} hr::after`, {
+	content: '···',
+	letterSpacing: '0.7em',
+});
