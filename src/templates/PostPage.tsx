@@ -29,33 +29,29 @@ export function PostPage({
 	return (
 		<Page url={url}>
 			<Stack gap="xl">
-				<Stack as="main" gap="m">
-					<Stack gap="l">
-						<Heading level={1}>{title}</Heading>
-						<Stack gap="m">
-							<PostContent>
-								{source && (
-									<>
-										<BookPostHeader />
-										<hr />
-									</>
-								)}
-								{children}
-								{source && (
-									<>
-										<hr />
-										<BookPostFooter />
-									</>
-								)}
-							</PostContent>
-						</Stack>
+				<Stack as="main" gap="l">
+					<Heading level={1}>{title}</Heading>
+					<Stack gap="m">
+						<PostContent>
+							{source && (
+								<>
+									<BookPostHeader />
+									<hr />
+								</>
+							)}
+							{children}
+							{source && (
+								<>
+									<hr />
+									<BookPostFooter />
+								</>
+							)}
+						</PostContent>
 					</Stack>
 					<footer>
 						<PostMeta url={url} date={date} />
 					</footer>
 					<MurderOfCrows />
-				</Stack>
-				<Stack gap="l">
 					<aside aria-label="Newsletter">
 						<Subscription />
 					</aside>
