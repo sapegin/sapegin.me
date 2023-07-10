@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { SpeakingPage } from '../templates/SpeakingPage';
 import { events, talks } from '../data/events.json';
-import { sortBy } from 'lodash';
+import _ from 'lodash';
 import type { Gig, Talk, Event } from '../types/Gig';
 
 const NOW = new Date();
@@ -24,12 +24,12 @@ const parseEvents = (events: Event[], talks: Talk[]): Gig[] =>
 
 const getUpcomingEvents = (events: Gig[]) => {
 	const upcomingEvents = events.filter((event) => event.timestamp >= TODAY);
-	return sortBy(upcomingEvents, 'timestamp');
+	return _.sortBy(upcomingEvents, 'timestamp');
 };
 
 const getPastEvents = (events: Gig[]) => {
 	const pastEvents = events.filter((event) => event.timestamp < TODAY);
-	return sortBy(pastEvents, '-timestamp');
+	return _.sortBy(pastEvents, '-timestamp');
 };
 
 const allEvents = parseEvents(events, talks as Talk[]);

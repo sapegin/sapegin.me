@@ -1,5 +1,5 @@
 ---
-import { groupBy, sortBy } from 'lodash';
+import _ from 'lodash';
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { TilPage } from '../../templates/TilPage';
@@ -8,7 +8,7 @@ import { tilEntryToPost } from '../../util/tilEntryToPost';
 
 const groupByCategory = (posts: Post[]) =>
 	// Get category from the slug: /til/react/bla-bla-bla → react
-	groupBy(posts, (post) => post.url.split('/')[2]);
+	_.groupBy(posts, (post) => post.url.split('/')[2]);
 
 const getCategories = (postsByCategory: Record<string, Post[]>): string[] => {
 	const categories = Object.keys(postsByCategory);
@@ -17,7 +17,7 @@ const getCategories = (postsByCategory: Record<string, Post[]>): string[] => {
 };
 
 const entries = await getCollection('til');
-const posts = sortBy(entries.map(tilEntryToPost), (x) => x.title);
+const posts = _.sortBy(entries.map(tilEntryToPost), (x) => x.title);
 const postsByCategory = groupByCategory(posts);
 const categories = getCategories(postsByCategory);
 ---

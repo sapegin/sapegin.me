@@ -1,5 +1,5 @@
 ---
-import { groupBy, sortBy } from 'lodash';
+import _ from 'lodash';
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { BlogPage } from '../../templates/BlogPage';
@@ -7,7 +7,7 @@ import type { Post } from '../../types/Post';
 import { blogEntryToPost } from '../../util/blogEntryToPost';
 
 const groupByYear = (posts: Post[]) =>
-	groupBy(posts, (post) => post.date.getFullYear());
+	_.groupBy(posts, (post) => post.date.getFullYear());
 
 const getYears = (postsByYear: Record<string, Post[]>): string[] => {
 	const years = Object.keys(postsByYear);
@@ -17,7 +17,7 @@ const getYears = (postsByYear: Record<string, Post[]>): string[] => {
 };
 
 const entries = await getCollection('blog');
-const posts = sortBy(entries.map(blogEntryToPost), (x) => -x.date);
+const posts = _.sortBy(entries.map(blogEntryToPost), (x) => -x.date);
 const postsByYear = groupByYear(posts);
 const years = getYears(postsByYear);
 ---

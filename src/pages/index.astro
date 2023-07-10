@@ -1,5 +1,5 @@
 ---
-import { sortBy } from 'lodash';
+import _ from 'lodash';
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { MainPage } from '../templates/MainPage';
@@ -10,13 +10,13 @@ import { tilEntryToPost } from '../util/tilEntryToPost';
 const NUM_RECENT_POSTS = 5;
 
 const blogEntries = await getCollection('blog');
-const blogPosts = sortBy(
+const blogPosts = _.sortBy(
 	blogEntries.map(blogEntryToPost),
 	(x) => -x.date
 ).slice(0, NUM_RECENT_POSTS);
 
 const tilEntries = await getCollection('til');
-const tilPosts = sortBy(tilEntries.map(tilEntryToPost), (x) => -x.date).slice(
+const tilPosts = _.sortBy(tilEntries.map(tilEntryToPost), (x) => -x.date).slice(
 	0,
 	NUM_RECENT_POSTS
 );

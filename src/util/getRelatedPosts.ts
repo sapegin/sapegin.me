@@ -1,4 +1,4 @@
-import { sortBy } from 'lodash';
+import _ from 'lodash';
 import type { Post } from '../types/Post';
 
 const MAX_RELATED = 5;
@@ -14,6 +14,6 @@ export function getRelatedPosts(posts: Post[], { url, tags }: Post): Post[] {
 			};
 		})
 		.filter((post) => post.weight > 0);
-	const sorted = sortBy(weighted, 'weight').reverse();
+	const sorted = _.sortBy(weighted, 'weight').reverse();
 	return sorted.slice(0, MAX_RELATED);
 }

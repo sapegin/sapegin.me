@@ -1,5 +1,5 @@
 import { Stack, Heading, PostList } from '../components';
-import { upperFirst } from 'lodash';
+import _ from 'lodash';
 import type { Post } from '../types/Post';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -9,7 +9,7 @@ const CATEGORY_TITLES: Record<string, string> = {
 };
 
 const getCategoryTitle = (key: string) => {
-	return CATEGORY_TITLES[key] ?? upperFirst(key);
+	return CATEGORY_TITLES[key] ?? _.upperFirst(key);
 };
 
 type Props = {

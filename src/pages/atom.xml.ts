@@ -1,4 +1,4 @@
-import { sortBy } from 'lodash';
+import _ from 'lodash';
 import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
@@ -12,7 +12,7 @@ const NUM_POSTS = 20;
 export async function get() {
 	const blogEntries = await getCollection('blog');
 	const tilEntries = await getCollection('til');
-	const entries = sortBy(
+	const entries = _.sortBy(
 		[...blogEntries, ...tilEntries],
 		(x) => -x.data.date
 	).slice(0, NUM_POSTS);
