@@ -27,6 +27,7 @@
   ],
   "dependencies": {
     "@astrojs/react": "^2.2.1",
+    "@astrojs/rss": "^2.4.3",
     "@types/lodash": "^4.14.195",
     "@types/react": "^18.2.14",
     "@vanilla-extract/css": "^1.12.0",
@@ -37,15 +38,19 @@
     "clsx": "^1.2.1",
     "csstype": "^3.1.2",
     "lodash": "^4.17.21",
+    "markdown-it": "^13.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-group": "^3.0.2",
     "richtypo": "^4.1.17",
     "richtypo-rules-en": "^4.0.23",
     "romanize": "^1.1.1",
+    "sanitize-html": "^2.11.0",
     "unist-util-visit": "^4.1.2"
   },
   "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "@types/sanitize-html": "^2.9.0",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "eslint": "^8.44.0",

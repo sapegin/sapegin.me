@@ -2,6 +2,7 @@
 import { themeClass } from '../styles/theme.css';
 import '../styles/code.css';
 import '../styles/tips.css';
+import { SITE_DESCRIPTION, SITE_HOST, SITE_TITLE, SITE_URL } from '../constants';
 
 export interface Props {
 	url?: string;
@@ -14,25 +15,19 @@ export interface Props {
 
 // TODO: How to have trailing slashes?
 
-// TODO: It's not only blog now
-const SITE_URL = 'https://sapegin.me';
-const SITE_TITLE = 'Artem Sapegin’s Blog';
-const DEFAULT_DESCRIPTION =
-	'Blog of a Berlin based coffee first frontend engineer, who makes photos and hangs out with his dogs.';
-
 const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
 	if (pageTitle) {
 		return pageTitle;
 	}
 
 	if (title) {
-		return `${title} — ${SITE_TITLE}`;
+		return `${title} by ${SITE_TITLE}`;
 	}
 
 	return SITE_TITLE;
 };
 
-const { title, url = '/', description = DEFAULT_DESCRIPTION } = Astro.props;
+const { title, url = '/', description = SITE_DESCRIPTION } = Astro.props;
 
 const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');
 const canonicalUrl = `${SITE_URL}${url}`;
@@ -62,7 +57,7 @@ const imageUrl = isBlogPost && `${canonicalUrl}/twitter-card.jpg`;
 			rel="canonical"
 			href={canonicalUrl}
 			data-baseprotocol="https:"
-			data-basehost="sapegin.me"
+			data-basehost={SITE_HOST}
 		/>
 	</head>
 	<body class={themeClass}>
