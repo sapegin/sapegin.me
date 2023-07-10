@@ -59,6 +59,12 @@ const imageUrl = isBlogPost && `${canonicalUrl}/twitter-card.jpg`;
 			data-baseprotocol="https:"
 			data-basehost={SITE_HOST}
 		/>
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="RSS Feed"
+			href={`${SITE_URL}/atom.xml`}
+		/>
 	</head>
 	<body class={themeClass}>
 		<slot />
