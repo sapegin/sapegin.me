@@ -65,6 +65,7 @@ const imageUrl = isBlogPost && `${canonicalUrl}/twitter-card.jpg`;
 			title="RSS Feed"
 			href={`${SITE_URL}/atom.xml`}
 		/>
+		<link rel="sitemap" href={`${SITE_URL}/sitemap-index.xml`}" />
 	</head>
 	<body class={themeClass}>
 		<slot />
