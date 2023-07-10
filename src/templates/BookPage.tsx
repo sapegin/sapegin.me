@@ -10,12 +10,12 @@ import {
 	BookCover,
 	BookFeedback,
 } from '../components';
+import type { Resource } from '../types/Resource';
 import { Page } from './Page';
-import type { PostWithOptionalUrl } from '../types/Post';
 
 type Props = {
 	url: string;
-	chapters: PostWithOptionalUrl[];
+	chapters: Resource[];
 };
 
 export function BookPage({ url, chapters }: Props) {

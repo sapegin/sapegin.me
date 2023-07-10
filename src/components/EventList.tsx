@@ -17,7 +17,7 @@ export function EventList({ items }: Props) {
 					<Text>
 						<EventName type={item.type}>{item.title}</EventName>
 					</Text>
-					<Text variant="xsmall">
+					<Text variant="small">
 						<Group separator=", ">
 							{item.date}
 							{item.location}

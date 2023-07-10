@@ -16,7 +16,6 @@ export interface Theme {
 		primary: string;
 		hover: string;
 		focus: string;
-		border: string;
 		selection: string;
 		[key: string]: string | Tokens;
 	};
