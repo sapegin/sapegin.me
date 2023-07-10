@@ -40,11 +40,11 @@ globalStyle('a', {
 
 // Remove default margins and paddings
 globalStyle(
-	':is(h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, p, figure, figcaption, pre, table, fieldset, blockquote, form, iframe, img, hr, address)',
+	':is(body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, p, figure, figcaption, pre, table, fieldset, blockquote, form, iframe, img, hr, address)',
 	{
 		margin: 0,
 		padding: 0,
-	}
+	},
 );
 
 // Remove bullets
