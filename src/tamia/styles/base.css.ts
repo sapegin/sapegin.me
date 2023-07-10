@@ -44,7 +44,7 @@ globalStyle(
 	{
 		margin: 0,
 		padding: 0,
-	},
+	}
 );
 
 // Remove bullets

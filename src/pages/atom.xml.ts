@@ -14,7 +14,7 @@ export async function get() {
 	const tilEntries = await getCollection('til');
 	const entries = sortBy(
 		[...blogEntries, ...tilEntries],
-		(x) => -x.data.date,
+		(x) => -x.data.date
 	).slice(0, NUM_POSTS);
 
 	return rss({
