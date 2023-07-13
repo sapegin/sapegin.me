@@ -2,18 +2,18 @@ import { globalFontFace } from '@vanilla-extract/css';
 
 export const fonts = {
 	base: 'Helvetica',
-	heading: 'PPMondwest-Regular',
-	ui: 'PPNeueBit',
+	heading: 'Mondwest-Regular',
+	ui: 'NeueBit',
 	code: 'MonoLisa',
 };
 
 globalFontFace(fonts.heading, {
-	src: 'url("/fonts/PPMondwest-Regular.otf")',
+	src: 'url("/fonts/Mondwest-Regular.woff2")',
 	fontDisplay: 'fallback',
 });
 
 globalFontFace(fonts.ui, {
-	src: 'url("/fonts/PPNeueBit-Bold.otf")',
+	src: 'url("/fonts/NeueBit-Bold.woff2")',
 	fontDisplay: 'fallback',
 });
 

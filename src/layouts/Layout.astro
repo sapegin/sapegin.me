@@ -2,7 +2,8 @@
 import { themeClass } from '../styles/theme.css';
 import '../styles/code.css';
 import '../styles/tips.css';
-import { SITE_DESCRIPTION, SITE_HOST, SITE_TITLE, SITE_URL } from '../constants';
+import { SITE_TITLE } from '../constants';
+import Metatags from '../components/Metatags.astro';
 
 export interface Props {
 	url?: string;
@@ -10,10 +11,6 @@ export interface Props {
 	pageTitle?: string;
 	description?: string;
 }
-
-// TODO: Twitter cards
-
-// TODO: How to have trailing slashes?
 
 const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
 	if (pageTitle) {
@@ -26,46 +23,13 @@ const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
 
 	return SITE_TITLE;
 };
-
-const { title, url = '/', description = SITE_DESCRIPTION } = Astro.props;
-
-const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');
-const canonicalUrl = `${SITE_URL}${url}`;
-const imageUrl = isBlogPost && `${canonicalUrl}/twitter-card.jpg`;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>{getTitle(Astro.props)}</title>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<meta name="description" content={description} />
-		{imageUrl && <meta property="og:image" content={imageUrl} />}
-		<meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
-		<meta property="og:title" content={title} />
-		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:site_name" content={SITE_TITLE} />
-		<meta property="og:description" content={description} />
-		{imageUrl && <meta name="twitter:card" content="summary_large_image" />}
-		{imageUrl && <meta name="twitter:image" content={imageUrl} />}
-		<meta name="twitter:creator" content="@iamsapegin" />
-		<link
-			rel="canonical"
-			href={canonicalUrl}
-			data-baseprotocol="https:"
-			data-basehost={SITE_HOST}
-		/>
-		<link
-			rel="alternate"
-			type="application/rss+xml"
-			title="RSS Feed"
-			href={`${SITE_URL}/atom.xml`}
-		/>
-		<link rel="sitemap" href={`${SITE_URL}/sitemap-index.xml`}" />
+		<Metatags {...Astro.props} />
 	</head>
 	<body class={themeClass}>
 		<slot />

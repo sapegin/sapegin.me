@@ -38,6 +38,7 @@
     "astro": "^2.8.0",
     "clsx": "^1.2.1",
     "csstype": "^3.1.2",
+    "jimp": "^0.22.8",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "react": "^18.2.0",
@@ -47,7 +48,8 @@
     "richtypo-rules-en": "^4.0.23",
     "romanize": "^1.1.1",
     "sanitize-html": "^2.11.0",
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "^4.1.2",
+    "wasm-twitter-card": "^0.3.0"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",

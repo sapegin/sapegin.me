@@ -4,6 +4,7 @@ dist/
 til-master/
 washingcode-book-master/
 src/content/til/
+public/cards/
 .idea/
 .vscode/
 npm-debug.log*

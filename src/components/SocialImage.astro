@@ -1,0 +1,11 @@
+---
+import { SITE_URL } from '../constants';
+import { generateSocialImage, type Props } from '../util/generateSocialImage';
+
+const imageFilepath = await generateSocialImage(Astro.props);
+const imageUrl = imageFilepath.replace(/^public/, SITE_URL);
+---
+
+<meta property="og:image" content={imageUrl}>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content={imageUrl}>
