@@ -33,5 +33,8 @@ const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
 	</head>
 	<body class={themeClass}>
 		<slot />
+		{import.meta.env.PROD && (
+			<script data-goatcounter="https://sapegin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+		)}
 	</body>
 </html>
