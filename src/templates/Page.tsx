@@ -8,7 +8,7 @@ type Props = {
 
 export function Page({ children, url }: Props) {
 	return (
-		<Container>
+		<Container py="m">
 			<Stack gap="l">
 				<Header url={url} />
 				{children}
