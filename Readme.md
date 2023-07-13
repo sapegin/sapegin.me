@@ -1,5 +1,7 @@
 # [Artem Sapegin’s home page and blog version 2023](https://sapegin.me/)
 
+[![Node.js CI status](https://github.com/sapegin/sapegin.me/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/sapegin.me/actions)
+
 [WordPress](https://wordpress.org/) (2008) → [Aegea](http://blogengine.ru/) (2012) → [DocPad](http://docpad.org/) (2013) → [Hexo](https://hexo.io/) (2015, unpublished) → [Fledermaus](https://github.com/sapegin/fledermaus) (2015) → [Gatsby](https://www.gatsbyjs.org/) (2018) → [Astro](https://astro.build/) (2023).
 
 ## Running locally
