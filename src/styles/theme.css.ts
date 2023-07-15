@@ -20,6 +20,7 @@ export const theme = {
 		contentPaddingX: defaultTheme.space.m,
 		contentPaddingY: '4vh',
 		contentMaxWidth: '52rem',
+		listMargin: '0',
 	},
 	colors,
 	fonts: {
@@ -50,9 +51,6 @@ export const theme = {
 		small: '1.4',
 		heading: '1.1',
 		code: '1.3',
-	},
-	shadows: {
-		cover: '0 0 3px rgba(0, 0, 0, 0.05)',
 	},
 } as const;
 

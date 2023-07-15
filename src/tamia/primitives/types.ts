@@ -5,8 +5,6 @@ export type Tokens = {
 
 export interface Theme {
 	// Media queries
-	// breakpoints: string[];
-	// mediaQueries: Record<string, string>;
 	conditions: Tokens;
 
 	// Design tokens
