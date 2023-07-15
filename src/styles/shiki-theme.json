@@ -1,129 +1,53 @@
 {
 	"name": "Squirrelsong Light",
 	"type": "light",
-	"colors": {
-		"editor.background": "#ffffff",
-		"editor.findRangeHighlightBackground": "#dddddd",
-		"editor.foreground": "#555555",
-		"editor.selectionBackground": "#f8e596",
-		"editor.selectionHighlightBackground": "#f8e59666",
-		"editor.inactiveSelectionBackground": "#f8e59666",
-		"editor.wordHighlightBackground": "#f8e59666",
-		"editor.wordHighlightStrongBackground": "#f8e59666",
-		"editor.hoverHighlightBackground": "#f8e59666",
-		"editor.lineHighlightBackground": "#efefef",
-		"editor.rangeHighlightBackground": "#f8e59666",
-		"editor.findMatchBorder": "#fb4084",
-		"editor.findMatchBackground": "#fb408433",
-		"editor.findMatchHighlightBackground": "#fb408433",
-		"editorBracketMatch.background": "#fb408433",
-		"editorBracketMatch.border": "#ffffff00",
-		"editorIndentGuide.background": "#ffffff00",
-		"editorIndentGuide.activeBackground": "#dddddd88",
-		"peekViewEditor.matchHighlightBackground": "#fac894",
-		"peekViewResult.matchHighlightBackground": "#faebaf"
-	},
 	"tokenColors": [
 		{
-			"scope":[ "comment"],
+			"scope":[ "comment", "invalid.deprecated", "token.debug-token","keyword.operator.class", "constant.other", "source.php.embedded.line", "support.other.variable", "constant.other.symbol", "entity.other.inherited-class", "markup.heading"],
 			"settings": {
-				"foreground": "#999999"
+				"foreground": "#8e93a4"
 			}
 		},
 		{
-			"scope":[ "keyword.operator.class", "constant.other", "source.php.embedded.line"],
+			"scope":[ "variable"],
 			"settings": {
-				"foreground": "#639999"
+				"foreground": "#00805e"
 			}
 		},
 		{
-			"scope":[ "variable", "support.other.variable", "string.other.link", "string.regexp"],
+			"scope":[ "constant.numeric", "constant.language", "support.constant", "constant.character", "variable.parameter", "punctuation.section.embedded", "keyword.other.unit", "string","token.warn-token"],
 			"settings": {
-				"foreground": "#CC5C52"
-			}
-		},
-		{
-			"scope":[ "constant.numeric", "constant.language", "support.constant", "constant.character", "variable.parameter", "punctuation.section.embedded", "keyword.other.unit"],
-			"settings": {
-				"foreground": "#DE9E59"
+				"foreground": "#ad5528"
 			}
 		},
 		{
 			"scope":[ "entity.name.class", "entity.name.type.class", "support.type", "support.class"],
 			"settings": {
-				"foreground": "#E6C565"
+				"foreground": "#917218"
 			}
 		},
 		{
-			"scope":[ "string", "constant.other.symbol", "entity.other.inherited-class", "markup.heading"],
+			"scope":[ "entity.name.function", "meta.function-call", "support.function", "keyword.other.special-method", "meta.block-level", "string.other.link", "string.regexp" , "token.info-token"],
 			"settings": {
-				"foreground": "#A7B386"
+				"foreground": "#0f73a7"
 			}
 		},
 		{
-			"scope":[ "keyword.operator", "constant.other.color"],
+			"scope":[ "keyword", "storage", "storage.type", "entity.name.tag", "entity.other.attribute-name", "meta.tag", "declaration.tag" ],
 			"settings": {
-				"foreground": "#82B9BB"
+				"foreground": "#6d5b88"
 			}
 		},
 		{
-			"scope":[ "entity.name.function", "meta.function-call", "support.function", "keyword.other.special-method", "meta.block-level"],
+			"scope":[ "keyword.operator", "constant.other.color", "meta.separator" ],
 			"settings": {
-				"foreground": "#80A4BE"
+				"foreground": "#343741"
 			}
 		},
 		{
-			"scope":[ "keyword", "storage", "storage.type"],
+			"scope":[ "invalid.illegal", "token.error-token" ],
 			"settings": {
-				"foreground": "#AF9FC7"
-			}
-		},
-		{
-			"scope":[ "entity.name.tag", "entity.other.attribute-name", "meta.tag", "declaration.tag"],
-			"settings": {
-				"foreground": "#AF9FC7"
-			}
-		},
-		{
-			"scope":[ "meta.separator"],
-			"settings": {
-				"foreground": "#555555"
-			}
-		},
-		{
-			"scope":[ "invalid.deprecated"],
-			"settings": {
-				"foreground": "#CC5C52"
-			}
-		},
-		{
-			"scope":[ "invalid.illegal"],
-			"settings": {
-				"foreground": "#B3362D"
-			}
-		},
-		{
-			"scope":[ "token.info-token"],
-			"settings": {
-				"foreground": "#316BCD"
-			}
-		},
-		{
-			"scope":[ "token.warn-token"],
-			"settings": {
-				"foreground": "#CD9731"
-			}
-		},
-		{
-			"scope":[ "token.error-token"],
-			"settings": {
-				"foreground": "#CD3131"
-			}
-		},
-		{
-			"scope":[ "token.debug-token"],
-			"settings": {
-				"foreground": "#800080"
+				"foreground": "#b71818"
 			}
 		}
 	]
