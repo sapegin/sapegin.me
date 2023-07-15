@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
+import clsx from 'clsx';
 import { Box, Grid, Text, Link } from '.';
-import { menu, HALF } from './Menu.css';
+import { menu, link, active, HALF } from './Menu.css';
 
 type Props = {
 	current: string;
@@ -39,6 +40,14 @@ const ITEMS: Item[] = [
 	},
 ];
 
+function isCurrent(href: string, current: string) {
+	if (href === '/') {
+		return href === current;
+	}
+
+	return current.startsWith(href);
+}
+
 export function Menu({ current }: Props) {
 	return (
 		<Grid
@@ -57,12 +66,13 @@ export function Menu({ current }: Props) {
 							display={{ mobile: 'none', tablet: 'block' }}
 						/>
 					)}
-					<Text
-						as="li"
-						variant="menu"
-						fontWeight={href === current ? 'bold' : undefined}
-					>
-						<Link href={href}>{title}</Link>
+					<Text as="li" variant="menu">
+						<Link
+							href={href}
+							className={clsx(link, isCurrent(href, current) && active)}
+						>
+							{title}
+						</Link>
 					</Text>
 				</Fragment>
 			))}
