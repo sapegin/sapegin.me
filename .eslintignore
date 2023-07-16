@@ -1,3 +1,6 @@
 node_modules/
 .astro/
 dist/
+til-master/
+washingcode-book-master/
+src/content/til/

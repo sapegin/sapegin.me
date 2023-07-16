@@ -1,5 +1,4 @@
 import { style } from '@vanilla-extract/css';
-import { mediaQueries } from '../tamia/primitives/theme';
 import { vars } from '../styles/theme.css';
 
 export const container = style({
