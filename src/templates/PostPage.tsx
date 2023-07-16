@@ -28,8 +28,8 @@ export function PostPage({
 }: Props) {
 	return (
 		<Page url={url}>
-			<Stack gap="xl">
-				<Stack as="main" gap="l">
+			<Stack as="main" gap="xl">
+				<Stack gap="l">
 					<Heading level={1}>{title}</Heading>
 					{source && <BookPostHeader />}
 					<PostContent>{children}</PostContent>
@@ -37,16 +37,16 @@ export function PostPage({
 					<footer>
 						<PostMeta url={url} date={date} />
 					</footer>
-					<MurderOfCrows />
-					<aside aria-label="Newsletter">
-						<Subscription />
-					</aside>
-					{related.length > 0 && (
-						<aside aria-label="Related posts">
-							<RelatedPosts posts={related} />
-						</aside>
-					)}
 				</Stack>
+				<MurderOfCrows />
+				<aside aria-label="Newsletter">
+					<Subscription />
+				</aside>
+				{related.length > 0 && (
+					<aside aria-label="Related posts">
+						<RelatedPosts posts={related} />
+					</aside>
+				)}
 			</Stack>
 		</Page>
 	);
