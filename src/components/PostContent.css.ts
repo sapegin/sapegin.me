@@ -43,3 +43,22 @@ globalStyle(`${postContent} hr::after`, {
 	content: '···',
 	letterSpacing: '0.7em',
 });
+
+globalStyle(`.tip`, {
+	marginBlock: vars.space.l,
+	fontSize: vars.fontSizes.s,
+	fontFamily: vars.fonts.base,
+	fontStyle: 'italic',
+});
+globalStyle(`.tip:first-child`, {
+	marginTop: 0,
+});
+globalStyle(`.tip + .tip`, {
+	marginTop: vars.space.m,
+});
+
+globalStyle(`.tip__title`, {
+	display: 'block',
+	marginBottom: vars.space.xxs,
+	fontStyle: 'normal',
+});
