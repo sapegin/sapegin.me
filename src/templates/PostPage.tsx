@@ -31,23 +31,9 @@ export function PostPage({
 			<Stack gap="xl">
 				<Stack as="main" gap="l">
 					<Heading level={1}>{title}</Heading>
-					<Stack gap="m">
-						<PostContent>
-							{source && (
-								<>
-									<BookPostHeader />
-									<hr />
-								</>
-							)}
-							{children}
-							{source && (
-								<>
-									<hr />
-									<BookPostFooter />
-								</>
-							)}
-						</PostContent>
-					</Stack>
+					{source && <BookPostHeader />}
+					<PostContent>{children}</PostContent>
+					{source && <BookPostFooter />}
 					<footer>
 						<PostMeta url={url} date={date} />
 					</footer>
