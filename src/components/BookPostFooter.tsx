@@ -5,7 +5,9 @@ export function BookPostFooter() {
 		<PostAddon>
 			<Stack direction="row" gap="m">
 				<Stack gap="m">
-					<BookFeedback>If you have any feedback,</BookFeedback>
+					<BookFeedback>
+						If you have any feedback, drop me a line at
+					</BookFeedback>
 					<Text>
 						<Link href="/book/">Preorder the book now</Link> with 20% discount!
 					</Text>

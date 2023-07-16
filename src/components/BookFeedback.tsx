@@ -8,8 +8,7 @@ type Props = {
 export function BookFeedback({ children }: Props) {
 	return (
 		<Text variant="intro">
-			{children} write me at{' '}
-			<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>,{' '}
+			{children} <Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>,{' '}
 			<Link href="https://mastodon.cloud/@sapegin" rel="me">
 				@sapegin@mastodon.cloud
 			</Link>
