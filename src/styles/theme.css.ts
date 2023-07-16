@@ -5,6 +5,7 @@ export const colors = {
 	bg: '#fff',
 	base: '#343c46',
 	light: '#999',
+	border: '#343c46',
 	primary: '#577290',
 	hover: '#c45a8d',
 	focus: '#c45a8d',
