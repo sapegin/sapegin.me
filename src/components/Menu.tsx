@@ -10,6 +10,7 @@ type Props = {
 interface Item {
 	title: string;
 	href: string;
+	alt?: string;
 }
 
 const ITEMS: Item[] = [
@@ -22,9 +23,9 @@ const ITEMS: Item[] = [
 		href: '/blog/',
 	},
 	{
-		// TODO: Today I learned tooltip / aria-label
 		title: 'TIL',
 		href: '/til/',
+		alt: 'Today I learned',
 	},
 	{
 		title: 'Book',
@@ -57,7 +58,7 @@ export function Menu({ current }: Props) {
 			justifyItems="center"
 			className={menu}
 		>
-			{ITEMS.map(({ title, href }, index) => (
+			{ITEMS.map(({ title, href, alt }, index) => (
 				<Fragment key={href}>
 					{index === HALF && (
 						<Box
@@ -70,6 +71,8 @@ export function Menu({ current }: Props) {
 						<Link
 							href={href}
 							className={clsx(link, isCurrent(href, current) && active)}
+							title={alt}
+							aria-label={alt}
 						>
 							{title}
 						</Link>
