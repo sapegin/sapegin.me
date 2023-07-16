@@ -1,9 +1,13 @@
 {
 	"name": "Squirrelsong Light",
 	"type": "light",
+  "colors": {
+    "editor.foreground": "iherit",
+    "editor.background": "transparent"
+  },
 	"tokenColors": [
 		{
-			"scope":[ "comment", "invalid.deprecated", "token.debug-token","keyword.operator.class", "constant.other", "source.php.embedded.line", "support.other.variable", "constant.other.symbol", "entity.other.inherited-class", "markup.heading"],
+			"scope":[ "comment", "invalid.deprecated", "token.debug-token","keyword.operator.class", "constant.other", "source.php.embedded.line", "support.other.variable", "constant.other.symbol", "entity.other.inherited-class", "markup.heading" ],
 			"settings": {
 				"foreground": "#8e93a4"
 			}
@@ -15,7 +19,7 @@
 			}
 		},
 		{
-			"scope":[ "constant.numeric", "constant.language", "support.constant", "constant.character", "variable.parameter", "punctuation.section.embedded", "keyword.other.unit", "string","token.warn-token"],
+			"scope":[ "constant.numeric", "constant.language", "support.constant", "constant.character", "variable.parameter", "keyword.other.unit", "string","token.warn-token"],
 			"settings": {
 				"foreground": "#ad5528"
 			}
@@ -27,21 +31,21 @@
 			}
 		},
 		{
-			"scope":[ "entity.name.function", "meta.function-call", "support.function", "keyword.other.special-method", "meta.block-level", "string.other.link", "string.regexp" , "token.info-token"],
+			"scope":[ "entity.name.function", "meta.function-call", "support.function", "keyword.other.special-method", "meta.block-level", "string.other.link", "string.regexp" , "token.info-token", "entity.name.tag", "meta.tag", "declaration.tag" ],
 			"settings": {
 				"foreground": "#0f73a7"
 			}
 		},
 		{
-			"scope":[ "keyword", "storage", "storage.type", "entity.name.tag", "entity.other.attribute-name", "meta.tag", "declaration.tag" ],
+			"scope":[ "keyword", "storage", "storage.type",  "entity.other.attribute-name"],
 			"settings": {
 				"foreground": "#6d5b88"
 			}
 		},
 		{
-			"scope":[ "keyword.operator", "constant.other.color", "meta.separator" ],
+			"scope":[ "keyword.operator", "constant.other.color", "meta.separator", "punctuation.section.embedded" ],
 			"settings": {
-				"foreground": "#343741"
+				"foreground": "#666c7f"
 			}
 		},
 		{

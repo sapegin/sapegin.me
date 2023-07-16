@@ -15,3 +15,8 @@ globalStyle(`.astro-code code`, {
 	fontSize: 'inherit',
 	color: 'inherit',
 });
+
+// HACK: Override default Astro/Shiki styles
+globalStyle(`.astro-code[style]`, {
+	overflowX: 'visible',
+});
