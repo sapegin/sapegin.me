@@ -276,7 +276,7 @@ All queries are also available with the `findAll*` prefix, for example, `cy.find
 
 Let’s see how to use query methods. To select this button in a test:
 
-```jsx
+```html
 <button data-testid="cookButton">Cook pizza!</button>
 ```
 

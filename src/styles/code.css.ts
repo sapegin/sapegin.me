@@ -13,10 +13,11 @@ globalStyle(`.astro-code`, {
 globalStyle(`.astro-code code`, {
 	display: 'block',
 	fontSize: 'inherit',
+	fontStyle: 'inherit',
 	color: 'inherit',
 });
 
 // HACK: Override default Astro/Shiki styles
 globalStyle(`.astro-code[style]`, {
-	overflowX: 'visible',
+	overflowX: 'visible!important' as 'visible',
 });

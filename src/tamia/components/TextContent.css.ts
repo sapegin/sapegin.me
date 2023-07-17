@@ -175,6 +175,7 @@ globalStyle(`${textContent} ol`, {
 // Code
 globalStyle(`${textContent} :is(code, kbd)`, {
 	fontFamily: 'inherit',
+	fontStyle: 'italic',
 	fontFeatureSettings: 'normal',
 	hyphens: 'none',
 });

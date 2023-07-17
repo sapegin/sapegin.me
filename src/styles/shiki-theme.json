@@ -2,36 +2,30 @@
 	"name": "Squirrelsong Light",
 	"type": "light",
   "colors": {
-    "editor.foreground": "iherit",
+    "editor.foreground": "inherit",
     "editor.background": "transparent"
   },
 	"tokenColors": [
 		{
-			"scope":[ "comment", "invalid.deprecated", "token.debug-token","keyword.operator.class", "constant.other", "source.php.embedded.line", "support.other.variable", "constant.other.symbol", "entity.other.inherited-class", "markup.heading" ],
+			"scope":[ "comment", "invalid.deprecated", "token.debug-token","keyword.operator.class", "constant.other", "source.php.embedded.line", "support.other.variable", "constant.other.symbol", "entity.other.inherited-class", "markup.heading" , "punctuation.definition.block.js", "meta.block.js", "meta.parameters.js", "punctuation.definition.block.tsx", "source.js", "source.js.jsx", "source.ts", "source.tsx", "source.css", "source.css.scss", "source.coffee", "source.yaml", "source.json" ],
 			"settings": {
 				"foreground": "#8e93a4"
 			}
 		},
 		{
-			"scope":[ "variable"],
+			"scope":[ "variable", "markup.inserted.diff", "entity.name.class", "entity.name.type.class", "support.type" ],
 			"settings": {
 				"foreground": "#00805e"
 			}
 		},
 		{
-			"scope":[ "constant.numeric", "constant.language", "support.constant", "constant.character", "variable.parameter", "keyword.other.unit", "string","token.warn-token"],
+			"scope":[ "constant.numeric", "constant.language", "support.constant", "constant.character", "variable.parameter", "keyword.other.unit", "string","token.warn-token", "meta.object-literal.key.tsx" ],
 			"settings": {
 				"foreground": "#ad5528"
 			}
 		},
 		{
-			"scope":[ "entity.name.class", "entity.name.type.class", "support.type", "support.class"],
-			"settings": {
-				"foreground": "#917218"
-			}
-		},
-		{
-			"scope":[ "entity.name.function", "meta.function-call", "support.function", "keyword.other.special-method", "meta.block-level", "string.other.link", "string.regexp" , "token.info-token", "entity.name.tag", "meta.tag", "declaration.tag" ],
+			"scope":[ "entity.name.function", "meta.function-call", "support.function", "keyword.other.special-method", "string.other.link", "string.regexp" , "token.info-token", "entity.name.tag", "meta.tag", "declaration.tag", "meta.object-literal.key.js", "meta.function.js", "entity.name.type.tsx", "entity.name.type.enum.tsx", "entity.name.type.alias.tsx", "meta.var.expr.tsx", "support.variable.property.js" ],
 			"settings": {
 				"foreground": "#0f73a7"
 			}
@@ -39,17 +33,17 @@
 		{
 			"scope":[ "keyword", "storage", "storage.type",  "entity.other.attribute-name"],
 			"settings": {
-				"foreground": "#6d5b88"
+				"foreground": "#7859a6"
 			}
 		},
 		{
-			"scope":[ "keyword.operator", "constant.other.color", "meta.separator", "punctuation.section.embedded" ],
+			"scope":[ "keyword.operator", "constant.other.color", "meta.separator", "punctuation.section.embedded", "text.html.basic", "meta.jsx.children.js.jsx", "meta.jsx.children.tsx", "source.pascal", "source.shell" ],
 			"settings": {
 				"foreground": "#666c7f"
 			}
 		},
 		{
-			"scope":[ "invalid.illegal", "token.error-token" ],
+			"scope":[ "invalid.illegal", "token.error-token", "markup.deleted.diff" ],
 			"settings": {
 				"foreground": "#b71818"
 			}
