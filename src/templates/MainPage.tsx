@@ -102,6 +102,9 @@ function Writing({
 					<PostList posts={writing} showDescriptions />
 				</Stack>
 			</Stack>
+			<Text>
+				Sometimes, I also <Link href="/speaking/">speak on coferences</Link>.
+			</Text>
 		</Stack>
 	);
 }
