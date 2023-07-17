@@ -17,7 +17,7 @@ export default function remarkRichtypo() {
 		visit(tree, 'text', (node: Text | HTML) => {
 			node.value = richtypo(rules, node.value);
 
-			if (node.value.includes('<')) {
+			if (node.value.includes('<') || node.value.includes('&#')) {
 				node.type = 'html';
 			}
 		});
