@@ -53,6 +53,11 @@ export const theme = {
 		heading: '1.1',
 		code: '1.3',
 	},
+	letterSpacings: {
+		base: '0',
+		heading: '0',
+		menu: '0.1ch',
+	},
 } as const;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

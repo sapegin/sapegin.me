@@ -20,6 +20,7 @@ export const text = recipe({
 				fontFamily: 'ui',
 				fontSize: 'ui',
 				textTransform: 'uppercase',
+				letterSpacing: 'menu',
 			}),
 			intro: sprinkles({ fontSize: 'mplus', fontStyle: 'italic' }),
 		},
