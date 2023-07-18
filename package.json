@@ -5,6 +5,7 @@
   "license": "See license in <Readme.md>",
   "scripts": {
     "start": "astro dev",
+    "prebuild": "npm run sync",
     "build": "astro check && npm run typecheck && astro build",
     "preview": "astro preview",
     "astro": "astro",
