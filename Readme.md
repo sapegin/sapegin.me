@@ -1,6 +1,6 @@
 # [Artem Sapegin’s home page and blog version 2023](https://sapegin.me/)
 
-[![Node.js CI status](https://github.com/sapegin/sapegin.me/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/sapegin.me/actions)
+[![Node.js CI status](https://github.com/sapegin/sapegin.me/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/sapegin.me/actions) [![Netlify Status](https://api.netlify.com/api/v1/badges/2f9e1773-89f3-49a9-aa07-367687293d09/deploy-status)](https://app.netlify.com/sites/sapegin/deploys)
 
 [WordPress](https://wordpress.org/) (2008) → [Aegea](http://blogengine.ru/) (2012) → [DocPad](http://docpad.org/) (2013) → [Hexo](https://hexo.io/) (2015, unpublished) → [Fledermaus](https://github.com/sapegin/fledermaus) (2015) → [Gatsby](https://www.gatsbyjs.org/) (2018) → [Astro](https://astro.build/) (2023).
 
