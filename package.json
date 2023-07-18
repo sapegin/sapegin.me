@@ -5,14 +5,14 @@
   "license": "See license in <Readme.md>",
   "scripts": {
     "start": "astro dev",
-    "build": "astro check && tsc --noEmit && astro build",
+    "build": "astro check && npm run typecheck && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . --cache --fix",
     "typecheck": "tsc --noEmit",
     "format": "prettier --loglevel warn --write \"**/*.{js,ts,tsx,md}\"",
     "pretest": "npm run lint",
-    "test": "npm run typecheck",
+    "test": "astro check && npm run typecheck",
     "sync": "node scripts/sync-til.js; node scripts/sync-book.js",
     "posttest": "npm run format"
   },
