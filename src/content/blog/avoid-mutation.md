@@ -875,6 +875,7 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
+- [Naming is hard](/blog/naming/)
 - [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
 - _Avoid mutation (*this post*)_
 - [Avoid loops](/blog/avoid-loops/)

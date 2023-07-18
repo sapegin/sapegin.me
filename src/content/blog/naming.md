@@ -1548,9 +1548,9 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
-- [Avoid comments](/blog/avoid-comments/)
-- [Avoid conditions](/blog/avoid-conditions/)
-- [Avoid loops](/blog/avoid-loops/)
-- [Avoid mutation](/blog/avoid-mutation/)
-- [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
 - _Naming is hard (*this post*)_
+- [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
+- [Avoid mutation](/blog/avoid-mutation/)
+- [Avoid loops](/blog/avoid-loops/)
+- [Avoid conditions](/blog/avoid-conditions/)
+- [Avoid comments](/blog/avoid-comments/)

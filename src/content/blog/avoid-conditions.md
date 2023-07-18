@@ -757,13 +757,13 @@ const getSpecialOffersForBrand = brand =>
   ({
     [BRANDS.HORNS_AND_HOOVES]: getHornsAndHoovesSpecialOffers,
     [BRANDS.PAWS_AND_TAILS]: getPawsAndTailsSpecialOffers
-  })[brand]();
+  }[brand]());
 
 const getSessionKey = (key, brand, sku) =>
   ({
     [BRANDS.HORNS_AND_HOOVES]: `${key}_${sku}`,
     [BRANDS.PAWS_AND_TAILS]: key
-  })[brand];
+  }[brand]);
 
 const sessionGet = (key, brand, sku) =>
   Session.get(getSessionKey(key, brand, sku));
@@ -806,7 +806,7 @@ const getSessionKey = (key, brand, sku) =>
   ({
     [BRANDS.HORNS_AND_HOOVES]: `${key}_${sku}`,
     [BRANDS.PAWS_AND_TAILS]: key
-  })[brand];
+  }[brand]);
 
 const sessionGet = (key, brand, sku) =>
   Session.get(getSessionKey(key, brand, sku));
@@ -835,7 +835,7 @@ const getSpecialOffersArray = withSessionCache(
     ({
       [BRANDS.HORNS_AND_HOOVES]: getHornsAndHoovesSpecialOffers,
       [BRANDS.PAWS_AND_TAILS]: getPawsAndTailsSpecialOffers
-    })[brand]()
+    }[brand]())
 );
 ```
 
@@ -951,7 +951,7 @@ const getButtonLabel = decisionButton =>
     [DECISION_YES]: 'Yes',
     [DECISION_NO]: 'No',
     [DECISION_MAYBE]: 'Maybe'
-  })[decisionButton];
+  }[decisionButton]);
 
 // And later it's used like this
 const CtaButton = ({ decision }) => (
@@ -982,7 +982,7 @@ const ButtonLabel = ({ decision }) =>
     [DECISION_YES]: 'Yes',
     [DECISION_NO]: 'No',
     [DECISION_MAYBE]: 'Maybe'
-  })[decision];
+  }[decision]);
 
 // And later it can be used like this
 const CtaButton = ({ decision }) => (
@@ -1461,6 +1461,7 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
+- [Naming is hard](/blog/naming/)
 - [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
 - [Avoid mutation](/blog/avoid-mutation/)
 - [Avoid loops](/blog/avoid-loops/)

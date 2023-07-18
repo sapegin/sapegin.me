@@ -266,6 +266,7 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
+- [Naming is hard](/blog/naming/)
 - [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
 - [Avoid mutation](/blog/avoid-mutation/)
 - [Avoid loops](/blog/avoid-loops/)
