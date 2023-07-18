@@ -14,18 +14,20 @@ cd sapegin.me
 npm install
 ```
 
-Then run dev server (it will refresh the page after any changes in JS, styles or content):
+Then run dev server (it will refresh the page after any changes in code, or content):
 
 ```bash
 npm start
 ```
 
-## Author
+## Sponsoring
 
-- [Artem Sapegin](https://sapegin.me)
+Writing articles takes a lot of time and lots of coffee, buy me one more cup to keep it going.
 
----
+<a href="https://www.buymeacoffee.com/sapegin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-orange.png" alt="Buy Me A Coffee" height="51" width="217" ></a>
 
-## License
+## Authors and license
 
-You can use the code (HTML/JS) of this site, but you _can’t_ use the design, Stylus/CSS, images and content.
+[Artem Sapegin](https://sapegin.me) and [contributors](https://github.com/sapegin/sapegin.me/graphs/contributors).
+
+License: you can use the code (HTML/JS) of this site, but you _can’t_ use the design, CSS, images, or content.
