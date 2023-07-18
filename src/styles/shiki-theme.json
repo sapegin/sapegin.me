@@ -7,7 +7,7 @@
   },
 	"tokenColors": [
 		{
-			"scope":[ "comment", "invalid.deprecated", "token.debug-token","keyword.operator.class", "constant.other", "source.php.embedded.line", "support.other.variable", "constant.other.symbol", "entity.other.inherited-class", "markup.heading" , "punctuation.definition.block.js", "meta.block.js", "meta.parameters.js", "punctuation.definition.block.tsx", "source.js", "source.js.jsx", "source.ts", "source.tsx", "source.css", "source.css.scss", "source.coffee", "source.yaml", "source.json" ],
+			"scope":[ "comment", "invalid.deprecated", "token.debug-token","keyword.operator.class", "constant.other", "source.php.embedded.line", "support.other.variable", "constant.other.symbol", "entity.other.inherited-class", "markup.heading" , "punctuation.definition.block.js", "meta.block.js", "meta.parameters.js", "punctuation.definition.block.tsx", "source.js", "source.js.jsx", "source.ts", "source.tsx", "source.css", "source.css.scss", "source.coffee", "source.yaml", "source.json", "source.diff" ],
 			"settings": {
 				"foreground": "#8e93a4"
 			}
