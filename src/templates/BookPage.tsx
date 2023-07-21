@@ -81,8 +81,8 @@ export function BookPage({ url, chapters }: Props) {
 							<BookCover book="washing-your-code" variant="large" />
 						</Box>
 					</Stack>
-					<Heading level={2}>Table of contents</Heading>
-					<Stack>
+					<Stack gap="m">
+						<Heading level={2}>Table of contents</Heading>
 						<PostList posts={chapters} />
 					</Stack>
 					<Stack direction={{ mobile: 'column', tablet: 'row' }} gap="l">
