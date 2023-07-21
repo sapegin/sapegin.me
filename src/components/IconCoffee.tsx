@@ -3,9 +3,14 @@ import { Icon as IconBase } from '../tamia';
 
 const SIZE = 36;
 
-export function IconCoffee() {
+type Props = {
+	className?: string;
+};
+
+export function IconCoffee(props: Props) {
 	return (
 		<IconBase
+			{...props}
 			viewBox={{
 				width: SIZE,
 				height: SIZE,

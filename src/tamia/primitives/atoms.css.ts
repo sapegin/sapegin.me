@@ -20,7 +20,7 @@ export const responsiveProperties = defineProperties({
 		flexDirection: ['row', 'column'],
 		flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
 		flexShrink: [0],
-		alignItems: ['center', 'flex-end', 'flex-start', 'stretch'],
+		alignItems: ['center', 'flex-end', 'flex-start', 'stretch', 'baseline'],
 		alignSelf: ['auto', 'baseline', 'normal', 'stretch'],
 		justifyContent: [
 			'center',
