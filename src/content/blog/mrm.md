@@ -53,7 +53,7 @@ For example, the [Jest task](https://github.com/sapegin/mrm-tasks/tree/master/pa
 - tries to get rid of Mocha and AVA configs and dependencies;
 - suggests to us `jest-codemods` if projects used other test frameworks.
 
-![Running Mrm Jest task in terminal](/images/mrm-jest.png)
+![Running Mrm Jest task in terminal](/images/mrm-jest.webp)
 
 Or the [gitignore task](https://github.com/sapegin/mrm-tasks/tree/master/packages/mrm-task-gitignore) that will add new lines to the `.gitignore` file but won’t remove per-project customizations:
 

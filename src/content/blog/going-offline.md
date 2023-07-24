@@ -26,7 +26,7 @@ This all happened around the same time as the Coronavirus thing started, and I�
 
 First, we were all sent to work from home. I always liked to work from the office but that has changed after I’ve really tried to work from home for several months. Now I have a great home office setup with good hardware, great coffee, and homemade food, without constantly chatting colleagues, without always occupied toilet and everyday commute. I can better plan my day and my girlfriend Margarita is working next to me.
 
-![Our home office](/images/offline-home-office.jpg)
+![Our home office](/images/offline-home-office.webp)
 
 Second, my employer was seriously affected by the virus, and we had to work four days a week and for some time even two days a week instead of five. I’d never considered reducing my working hours before but here I am, working four days a week since last summer, and it feels great. 3/4 days distribution is much healthier than 2/5. Now I can [go to a forest in the early morning](https://www.onlandscape.co.uk/2022/03/morning-in-magical-forest/) for some nature photography, come back to have lunch with Margarita, and still have time to do something at home.
 

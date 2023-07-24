@@ -88,7 +88,7 @@ export function BookPage({ url, chapters }: Props) {
 					<Stack direction={{ mobile: 'column', tablet: 'row' }} gap="l">
 						<Box mx={{ mobile: 'auto', tablet: 0 }}>
 							<img
-								src="/images/artem-sapegin.jpg"
+								src="/images/artem-sapegin.webp"
 								alt="Artem Sapegin"
 								width="200"
 								height="200"

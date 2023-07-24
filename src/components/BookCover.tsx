@@ -15,7 +15,7 @@ export function BookCover({ book, variant = 'small' }: Props) {
 	return (
 		<Box className={bookCover}>
 			<img
-				src={`/images/${book}-cover-${variant}.jpg`}
+				src={`/images/${book}-cover-${variant}.webp`}
 				width={variant === 'large' ? 250 : 150}
 				height={variant === 'large' ? 324 : 194}
 				alt={`${TITLES[book]} book cover`}

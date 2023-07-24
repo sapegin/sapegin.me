@@ -48,9 +48,9 @@ For [Storybook](https://storybook.js.org/), there’s a [a11y addon](https://git
 
 ![Storybook a11y addon reports a missing label on a checkbox](/images/accessibility-storybook.png)
 
-For [React Styleguidist](https://react-styleguidist.js.org/), we could [add react-axe manually](https://react-styleguidist.js.org/docs/cookbook#how-to-use-react-axe-to-test-accessibility-of-components):
+For [React Styleguidist](https://react-styleguidist.js.org/), we could [add react-axe manually](https://react-styleguidist.js.gorg/docs/cookbook#how-to-use-react-axe-to-test-accessibility-of-components):
 
-![Axe in React Styleguidist reports insufficient color contrast on a button](/images/accessibility-styleguidist.png)
+![Axe in React Styleguidist reports insufficient color contrast on a button](/images/accessibility-styleguidist.webp)
 
 Both don’t check things like the document outline or landmark regions, which would require rendering a complete page. However, we could have quick feedback when we [develop new components in isolation](https://egghead.io/playlists/component-driven-development-in-react-e0bf). We could check each component variant’s accessibility, which is hard to do using the actual site or app.
 
@@ -82,7 +82,7 @@ Microsoft’s [Accessibility Insights](https://accessibilityinsights.io/) browse
 
 Accessibility Insights has automated checks similar to the Axe extension, but it also highlights all the issues directly on a page:
 
-![Accessibility Insights page analysis results](/images/accessibility-insights-page.jpg)
+![Accessibility Insights page analysis results](/images/accessibility-insights-page.webp)
 
 Accessibility Insights also has instructions for many manual checks that can’t be automated:
 
@@ -92,7 +92,7 @@ The FastPass feature finds two most common accessibility issues, and is a good f
 
 Finally, it could highlight headings, landmark regions, and tab stops (see “Tab key” below) on a page:
 
-![Accessibility Insights highlights highlight headings, landmark regions, and tab stops on a page](/images/accessibility-insights-highlights.jpg)
+![Accessibility Insights highlights highlight headings, landmark regions, and tab stops on a page](/images/accessibility-insights-highlights.webp)
 
 ## Contrast app and Chrome DevTools contrast checker
 
@@ -100,11 +100,11 @@ Sometimes we need to check the color contrast on a mockup or somewhere else, whe
 
 To check color contrast in the browser, Chrome DevTools contrast checker is a good option (inspect an element, and click a color swatch in the Styles tab):
 
-![Chrome DevTools color contrast checker](/images/accessibility-devtools-color.png)
+![Chrome DevTools color contrast checker](/images/accessibility-devtools-color.webp)
 
 For all other cases, use [Contrast app](https://usecontrast.com/), and pick any two colors using an eyedropper:
 
-![Contrast app shows the contrast ratio of two colors](/images/accessibility-contrast.png)
+![Contrast app shows the contrast ratio of two colors](/images/accessibility-contrast.webp)
 
 **Bonus:** [Contrast ratio](https://contrast-ratio.com/) web app by Lea Verou is another option when you want to [share a link](https://contrast-ratio.com/#%23fa6b6b-on-white) with the check results.
 
@@ -112,7 +112,7 @@ For all other cases, use [Contrast app](https://usecontrast.com/), and pick any 
 
 [Spectrum browser extension](https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb/related) allows us to check how folks with different types of color vision deficiency (color blindness) see our site or app, and make sure there’s enough contrast between different elements.
 
-![Simulating tritanopia with Spectrum Chrome extension](/images/accessibility-spectrum.jpg)
+![Simulating tritanopia with Spectrum Chrome extension](/images/accessibility-spectrum.webp)
 
 **Bonus:** Chrome DevTools can emulate some of these vision deficiencies. Press Escape, enable the Rendering tab from the three-dot menu button and scroll to the Emulate vision deficiencies section.
 
@@ -141,7 +141,7 @@ We should be able to complete all important actions in our site or app without t
 
 By zooming in our site or app, we can check how it handles, well, zooming. Try to zoom in to 200% in the browser, and see what breaks. Many people (myself included) zoom in when the text is too small for them, so we should make sure that the layout isn’t breaking, the text isn’t cropped, and elements aren’t overlapping each other.
 
-![A page on 200% zoom still looks good](/images/accessibility-zoom.jpg)
+![A page on 200% zoom still looks good](/images/accessibility-zoom.webp)
 
 **Tip:** Using `rem`s for all sizes in CSS, including media query breakpoints, is usually enough to avoid problems with zooming.
 
@@ -169,7 +169,7 @@ A few more things that are worth testing:
 
 - **Browser reading mode** is an accessibility tool itself: it helps readers concentrate on the main content, or make colors readable. We could also use it as a quick way to test the semantic markup of our pages: we should see the main page heading, complete main content, all content images but nothing extra like decorative images or banners.
 
-  ![Reading mode in Microsoft Edge](/images/accessibility-reading-more.png)
+  ![Reading mode in Microsoft Edge](/images/accessibility-reading-more.webp)
 
 - **Reduced motion** is an operating system option that tells sites and apps (via [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query) that the user prefers to minimize non-essential motion on the screen. We could use it to disable animation on things like reveal on scroll or carousels.
 
