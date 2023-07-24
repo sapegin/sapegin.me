@@ -3,7 +3,7 @@ import { vars } from '../primitives/globalTheme.css';
 import { mediaQueries } from '../primitives/theme';
 
 export const expander = style({
-	marginInline: `calc(${vars.page.contentPaddingX} * -2)`,
+	marginInline: `calc(${vars.page.contentPaddingX} * -1)`,
 	'@media': {
 		[mediaQueries.tablet]: {
 			marginInline: 0,
