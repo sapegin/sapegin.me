@@ -130,30 +130,30 @@ function Photography() {
 			<Heading level={2}>I make photos of trees, buildings, and things</Heading>
 			<Expander>
 				<Image
-					src="https://res.cloudinary.com/morningphotos/image/upload/dpr_auto,f_auto,q_auto:best,e_sharpen:70,w_2400,h_1800,c_fit/v1667981497000/photos/2021-11-06_8253_Artem_Sapegin.jpg"
+					src="/images/photos-1.jpg"
 					alt="Saxon Switzerland forest, Germany"
-					width={2400}
-					height={1350}
+					width={900}
+					height={505}
 				/>
 			</Expander>
 			<Expander>
 				<Grid gap="m" auto="narrow">
 					<Image
-						src="https://res.cloudinary.com/morningphotos/image/upload/dpr_auto,f_auto,q_auto:good,w_600,c_fit/v1667981492000/photos/2021-03-08_1475_Artem_Sapegin.jpg"
+						src="/images/photos-2.jpg"
 						alt="Dawn in Berlin, Germany"
 						width={600}
 						height={750}
 					/>
 					<Box display={{ mobile: 'none', tablet: 'block' }}>
 						<Image
-							src="https://res.cloudinary.com/morningphotos/image/upload/dpr_auto,f_auto,q_auto:good,w_600,c_fit/v1667981492000/photos/2021-02-16_8751_Artem_Sapegin.jpg"
+							src="/images/photos-3.jpg"
 							alt="Foggy Berliner Dom, Germany"
 							width={600}
 							height={750}
 						/>
 					</Box>
 					<Image
-						src="https://res.cloudinary.com/morningphotos/image/upload/dpr_auto,f_auto,q_auto:good,w_600,c_fit/v1667981492000/photos/2021-07-30_4525_Artem_Sapegin.jpg"
+						src="/images/photos-4.jpg"
 						alt="Sunrise in Rome, Italy"
 						width={600}
 						height={750}
@@ -215,8 +215,8 @@ function Cooking() {
 						<Image
 							src="/images/food-1.jpg"
 							alt="Tres leches cake"
-							width={700}
-							height={539}
+							width={600}
+							height={450}
 						/>
 					</Link>
 					<Box display={{ mobile: 'none', tablet: 'block' }}>
@@ -224,8 +224,8 @@ function Cooking() {
 							<Image
 								src="/images/food-2.jpg"
 								alt="Svekolnik (cold borscht)"
-								width={700}
-								height={539}
+								width={600}
+								height={450}
 							/>
 						</Link>
 					</Box>
@@ -233,8 +233,8 @@ function Cooking() {
 						<Image
 							src="/images/food-3.jpg"
 							alt="Cottage cheesecake"
-							width={700}
-							height={539}
+							width={600}
+							height={450}
 						/>
 					</Link>
 				</Grid>
