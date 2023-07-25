@@ -14,11 +14,11 @@ import rules from 'richtypo-rules-en';
  */
 export default function remarkRichtypo() {
 	return (tree: Root) =>
-		visit(tree, 'text', (node: Text | HTML) => {
+		visit(tree, 'text', (node: Text) => {
 			node.value = richtypo(rules, node.value);
 
 			if (node.value.includes('<') || node.value.includes('&#')) {
-				node.type = 'html';
+				(node as unknown as HTML).type = 'html';
 			}
 		});
 }
