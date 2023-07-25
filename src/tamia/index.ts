@@ -13,7 +13,6 @@ export { VisuallyHidden } from './components/VisuallyHidden';
 
 export { createTheme } from './primitives/createTheme';
 export { splitAtoms } from './primitives/splitAtoms';
-export { styled } from './primitives/styled';
 export { theme as defaultTheme } from './primitives/theme';
 
 export type { Theme } from './primitives/types';
