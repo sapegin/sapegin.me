@@ -27,6 +27,7 @@ export { Hola } from './Hola';
 export { Icon } from './Icon';
 export { IconCoffee } from './IconCoffee';
 export { InlineList, InlineListItem } from './InlineList';
+export { InlineSeparator } from './InlineSeparator';
 export { Input } from './Input';
 export { InputGroup } from './InputGroup';
 export { LinkWithIcon } from './LinkWithIcon';
