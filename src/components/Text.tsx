@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { splitAtoms } from '../tamia';
 import { Box, type BoxProps } from '../tamia/components/Box';
 import { text, type TextVariants } from './Text.css';
-import { sprinkles, Sprinkles } from '../styles/sprinkles.css';
+import { sprinkles, type Sprinkles } from '../styles/sprinkles.css';
 
 export type TextProps<C extends ElementType> = BoxProps<C> &
 	TextVariants &

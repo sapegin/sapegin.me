@@ -1,4 +1,4 @@
-import { Box, Stack, Text, Link, FormattedDate, InlineSeparator } from '.';
+import { Stack, Text, Link, FormattedDate, InlineSeparator } from '.';
 import type { Resource } from '../types/Resource';
 
 type Props = {
