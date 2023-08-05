@@ -11,7 +11,7 @@
     "astro": "astro",
     "lint": "eslint . --cache --fix",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --loglevel warn --write \"**/*.{js,ts,tsx,md}\"",
+    "format": "prettier --log-level warn --write \"**/*.{js,ts,tsx,md}\"",
     "pretest": "npm run lint",
     "test": "astro check && npm run typecheck",
     "sync": "node scripts/sync-til.js; node scripts/sync-book.js",
@@ -66,7 +66,7 @@
     "gray-matter": "^4.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "prettier": "^3.0.0"
+    "prettier": "3.0.1"
   },
   "lint-staged": {
     "*.{js,ts,tsx,md}": "prettier --write",

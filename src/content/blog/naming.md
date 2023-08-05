@@ -913,7 +913,10 @@ Such names are also okay for generic utility functions, like array filtering or 
 
 ```js
 function findFirstNonEmptyArray(...arrays) {
-  return arrays.find(array => Array.isArray(array) && array.length > 0) || [];
+  return (
+    arrays.find(array => Array.isArray(array) && array.length > 0) ||
+    []
+  );
 }
 ```
 
@@ -1111,7 +1114,6 @@ Recently, I found this name in our codebase: `depratureDateTime`, and I immediat
 
 Spellchecker helps me immensely, as I’m not a native English speaker. It also helps to make the code more greppable: when we search for a certain term, we likely won’t find misspelled occurrences of it.
 
-
 ## Use destructuring
 
 Often we end up with awkward names for intermediate values, like function parameters or function return values:
@@ -1305,7 +1307,7 @@ function x() {
 -->
 
 ```js
-      return response.json();
+return response.json();
 ```
 
 <!--
@@ -1372,10 +1374,10 @@ function Tip({ type, content }: TipProps) {
 
   return (
     <Flex alignItems="flex-start">
-        {shouldBeWrapped ? <Body type={type}>{content}</Body> : content}
+      {shouldBeWrapped ? <Body type={type}>{content}</Body> : content}
     </Flex>
   );
-};
+}
 ```
 
 <!--
@@ -1503,7 +1505,11 @@ interface User {
 }
 
 export function User({ user }: { user: User }) {
-  return <p>{user.name} ({user.email})</p>
+  return (
+    <p>
+      {user.name} ({user.email})
+    </p>
+  );
 }
 ```
 
@@ -1523,7 +1529,11 @@ interface User {
 }
 
 export function UserProfile({ user }: { user: User }) {
-  return <p>{user.name} ({user.email})</p>
+  return (
+    <p>
+      {user.name} ({user.email})
+    </p>
+  );
 }
 ```
 
