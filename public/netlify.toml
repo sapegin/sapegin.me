@@ -1,0 +1,9 @@
+[[headers]]
+    # Cache fonts forever
+    for = "/fonts/*"
+    [headers.values]
+      cache-control = "public, max-age=365000000, immutable"
+	# Cache images for a week
+    for = "/images/*"
+    [headers.values]
+      cache-control = "public, max-age=604800"
