@@ -42,7 +42,8 @@ import type { Post } from '../types/Post';
 
 type Props = Post & { related: Post[] };
 
-const { url, title, description, date, tags, source, related } = Astro.props;
+const { url, title, description, date, tags, source, related } =
+  Astro.props;
 ---
 
 <Layout url={url} title={title} description={description}>
@@ -103,7 +104,7 @@ type Props = {
 const Name = styled.span({
   fontSize: 'clamp(2.6rem, 7vw, 4rem)',
   background: props =>
-    `-webkit-linear-gradient(${props.theme.colors.hover}, ${props.theme.colors.primary})`,
+    `linear-gradient(${props.theme.colors.hover}, ${props.theme.colors.primary})`,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent'
 });
@@ -137,7 +138,7 @@ import { vars } from '../styles/theme.css';
 
 export const name = style({
   fontSize: 'clamp(2.6rem, 7vw, 4rem)',
-  background: `-webkit-linear-gradient(${vars.colors.hover}, ${vars.colors.primary})`,
+  background: `linear-gradient(${vars.colors.hover}, ${vars.colors.primary})`,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent'
 });
