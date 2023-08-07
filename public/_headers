@@ -1,0 +1,9 @@
+# Cache fonts forever
+/fonts/*:
+  cache-control: public
+  cache-control: max-age=365000000
+  cache-control: immutable
+# Cache images for a week
+/images/*:
+  cache-control: public
+  cache-control: max-age=604800
