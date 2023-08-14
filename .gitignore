@@ -4,6 +4,8 @@ dist/
 til-master/
 washingcode-book-master/
 src/content/til/
+src/styles/shiki-themes/SquirrelsongLight.color-theme.json
+src/styles/shiki-themes/SquirrelsongDark.color-theme.json
 public/cards/
 .idea/
 .vscode/

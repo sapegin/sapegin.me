@@ -17,6 +17,7 @@ export { BookLink } from './BookLink';
 export { BookPostFooter } from './BookPostFooter';
 export { BookPostHeader } from './BookPostHeader';
 export { Button } from './Button';
+export { Code } from './Code';
 export { EventList } from './EventList';
 export { EventName } from './EventName';
 export { Footer } from './Footer';
