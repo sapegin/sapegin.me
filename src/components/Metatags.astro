@@ -1,5 +1,10 @@
 ---
-import { SITE_HOST, SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from '../constants';
+import {
+	SITE_HOST,
+	SITE_URL,
+	SITE_TITLE,
+	SITE_DESCRIPTION,
+} from '../constants';
 import SocialImage from './SocialImage.astro';
 
 export type Props = {
@@ -10,15 +15,14 @@ export type Props = {
 
 const { title = '', url = '/', description = SITE_DESCRIPTION } = Astro.props;
 
-
 const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');
 const canonicalUrl = `${SITE_URL}${url}`;
 ---
 
 <meta charset="utf-8" />
 <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no"
 />
 <meta name="description" content={description} />
 <meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
@@ -28,18 +32,28 @@ const canonicalUrl = `${SITE_URL}${url}`;
 <meta property="og:description" content={description} />
 <meta name="twitter:creator" content="@iamsapegin" />
 <link
-    rel="canonical"
-    href={canonicalUrl}
-    data-baseprotocol="https:"
-    data-basehost={SITE_HOST}
+	rel="canonical"
+	href={canonicalUrl}
+	data-baseprotocol="https:"
+	data-basehost={SITE_HOST}
 />
 <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="RSS Feed"
-    href={`${SITE_URL}/atom.xml`}
+	rel="alternate"
+	type="application/rss+xml"
+	title="RSS Feed"
+	href={`${SITE_URL}/atom.xml`}
 />
 <link rel="sitemap" href={`${SITE_URL}/sitemap-index.xml`} />
-<link rel="preload" href="/fonts/NeueBit-Bold.woff2" as="font" type="font/woff2" />
-<link rel="preload" href="/fonts/Mondwest-Regular.woff2" as="font" type="font/woff2" />
-{isBlogPost && <SocialImage title={title} url={url}/>}
+<link
+	rel="preload"
+	href="/fonts/NeueBit-Bold.woff2"
+	as="font"
+	type="font/woff2"
+/>
+<link
+	rel="preload"
+	href="/fonts/Mondwest-Regular.woff2"
+	as="font"
+	type="font/woff2"
+/>
+{isBlogPost && <SocialImage title={title} url={url} />}
