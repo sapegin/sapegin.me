@@ -5,7 +5,7 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import remarkTips from './src/util/remark/remarkTips';
 import remarkImages from './src/util/remark/remarkImages';
 import remarkRichtypo from './src/util/remark/remarkRichtypo';
-import theme from './src/styles/shiki-theme.json';
+import theme from './src/styles/shiki-themes/blog.color-theme.json';
 import { SITE_URL } from './src/constants';
 
 // https://astro.build/config
