@@ -1,11 +1,11 @@
 class Squirrel {
   private name: string;
 
-  constructor(name) {
+  public constructor(name) {
     this.name = name;
   }
 
-  greet() {
+  public greet() {
     console.log(
       `Hola, ${this.name}`,
     );
