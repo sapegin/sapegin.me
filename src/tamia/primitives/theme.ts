@@ -79,7 +79,9 @@ export const theme = {
 	},
 	borderStyles: {},
 	borderWidths: {},
-	radii: {},
+	radii: {
+		default: '2px',
+	},
 	shadows: {},
 	transitions: {},
 	sizes: {},
