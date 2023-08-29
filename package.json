@@ -14,7 +14,7 @@
     "format": "prettier --log-level warn --write \"**/*.{js,ts,tsx,astro,md}\"",
     "pretest": "npm run lint",
     "test": "astro check && npm run typecheck",
-    "sync": "node scripts/sync-til.js; node scripts/sync-book.js",
+    "sync": "node scripts/sync-til.js; node scripts/sync-book.js; tsx scripts/sync-squirrelsong.ts",
     "posttest": "npm run format"
   },
   "engines": {
@@ -50,6 +50,7 @@
     "richtypo-rules-en": "^4.0.23",
     "romanize": "^1.1.1",
     "sanitize-html": "^2.11.0",
+    "strip-json-comments": "^5.0.1",
     "unist-util-visit": "^5.0.0",
     "wasm-twitter-card": "^0.3.0"
   },
@@ -67,7 +68,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.1",
-    "prettier-plugin-astro": "^0.11.0"
+    "prettier-plugin-astro": "^0.11.0",
+    "tsx": "^3.12.7"
   },
   "lint-staged": {
     "*.{js,ts,tsx,astro,md}": "prettier --write",
