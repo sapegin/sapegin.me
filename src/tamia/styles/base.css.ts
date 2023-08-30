@@ -83,6 +83,11 @@ globalStyle('textarea', {
 	resize: 'vertical',
 });
 
+// Remove default borders
+globalStyle(':is(iframe, fieldset)', {
+	border: 0,
+});
+
 // Text selection
 globalStyle('::selection', {
 	color: vars.colors.base,
