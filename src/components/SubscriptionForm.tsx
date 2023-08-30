@@ -1,5 +1,3 @@
-import { Box, VisuallyHidden, Input, Button, InputGroup } from '.';
-
 export function SubscriptionForm() {
 	return (
 		<iframe
