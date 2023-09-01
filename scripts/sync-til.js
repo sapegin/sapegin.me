@@ -26,6 +26,9 @@ const getMeta = (contents) =>
 
 const stripTitle = (contents) => contents.replace(/^#.*?$/m, '');
 
+const updateImageLinks = (contents) =>
+	contents.replace(/\.\.\/images\//g, '../../../../til-master/images/');
+
 const template = ({ title, date, tags, contents }) => `---
 title: '${title}'
 description: ''
@@ -34,7 +37,7 @@ tags:
   - ${tags.join('\n  - ')}
 ---
 
-${stripTitle(contents)}`;
+${updateImageLinks(stripTitle(contents))}`;
 
 console.log('[TIL] Downloading source files...');
 
