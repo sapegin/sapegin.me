@@ -30,7 +30,7 @@ const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
 		<title>{getTitle(Astro.props)}</title>
 		<Metatags {...Astro.props} />
 	</head>
-	<body className={themeClass}>
+	<body class={themeClass}>
 		<slot />
 		{
 			import.meta.env.PROD && (
