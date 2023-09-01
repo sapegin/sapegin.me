@@ -1,0 +1,81 @@
+---
+import fs from 'fs';
+import path from 'path';
+import Layout from '../layouts/Layout.astro';
+import { SquirrelsongPage } from '../templates/SquirrelsongPage';
+import { highlightCode, type CodeLang } from '../util/highlightCode';
+
+const EXAMPLES_DIR = 'assets/squirrelsong/examples';
+
+const examples: { name: string; lang: CodeLang; code: string }[] = [
+	{
+		name: 'intro',
+		lang: 'tsx',
+		code: fs.readFileSync(path.join(EXAMPLES_DIR, 'intro.tsx')).toString(),
+	},
+	{
+		name: 'markdown',
+		lang: 'markdown',
+		code: fs.readFileSync(path.join(EXAMPLES_DIR, 'markdown.md')).toString(),
+	},
+	{
+		name: 'html',
+		lang: 'html',
+		code: fs
+			.readFileSync(path.join(EXAMPLES_DIR, 'narrow/html.html'))
+			.toString(),
+	},
+	{
+		name: 'css',
+		lang: 'css',
+		code: fs.readFileSync(path.join(EXAMPLES_DIR, 'narrow/css.css')).toString(),
+	},
+	{
+		name: 'json',
+		lang: 'json',
+		code: fs
+			.readFileSync(path.join(EXAMPLES_DIR, 'narrow/json.json'))
+			.toString(),
+	},
+	{
+		name: 'typescript',
+		lang: 'tsx',
+		code: fs
+			.readFileSync(path.join(EXAMPLES_DIR, 'narrow/typescript.ts'))
+			.toString(),
+	},
+	{
+		name: 'php',
+		lang: 'php',
+		code: fs.readFileSync(path.join(EXAMPLES_DIR, 'narrow/php.php')).toString(),
+	},
+	{
+		name: 'python',
+		lang: 'python',
+		code: fs
+			.readFileSync(path.join(EXAMPLES_DIR, 'narrow/python.py'))
+			.toString(),
+	},
+];
+
+let codes: {
+	light: Record<string, string>;
+	dark: Record<string, string>;
+} = {
+	light: {},
+	dark: {},
+};
+
+examples.forEach(({ name, lang, code }) => {
+	codes.light[name] = highlightCode(code, lang, 'light');
+	codes.dark[name] = highlightCode(code, lang, 'dark');
+});
+---
+
+<Layout
+	title="Squirrelsong"
+	pageTitle="Squirrelsong: a light & dark theme for web developers by Artem Sapegin"
+	description="A light & dark low contrast theme for web developers"
+>
+	<SquirrelsongPage url="/squirrelsong/" codes={codes} />
+</Layout>

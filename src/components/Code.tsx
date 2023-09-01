@@ -3,5 +3,7 @@ type Props = {
 };
 
 export function Code({ code }: Props) {
-	return <div dangerouslySetInnerHTML={{ __html: code }} />;
+	// TODO: Make arria-hidden optional if this component
+	// is ever used not as an illustration
+	return <div dangerouslySetInnerHTML={{ __html: code }} aria-hidden="true" />;
 }
