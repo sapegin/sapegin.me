@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Box, Stack, Heading, Text, Link } from '../components';
+import { Box, Stack, Heading, Text } from '../components';
 
 type Props = {
 	children: ReactNode;
