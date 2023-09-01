@@ -24,13 +24,13 @@ const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
 };
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<title>{getTitle(Astro.props)}</title>
 		<Metatags {...Astro.props} />
 	</head>
-	<body class={themeClass}>
+	<body className={themeClass}>
 		<slot />
 		{
 			import.meta.env.PROD && (

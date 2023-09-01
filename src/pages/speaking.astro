@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { SpeakingPage } from '../templates/SpeakingPage';
-import { events, talks } from '../data/events.json';
+import data from '../data/events.json';
 import _ from 'lodash';
 import type { Gig, Talk, Event } from '../types/Gig';
 
@@ -32,7 +32,7 @@ const getPastEvents = (events: Gig[]) => {
 	return _.sortBy(pastEvents, '-timestamp');
 };
 
-const allEvents = parseEvents(events, talks as Talk[]);
+const allEvents = parseEvents(data.events, data.talks as Talk[]);
 const upcomingEvents = getUpcomingEvents(allEvents);
 const pastEvents = getPastEvents(allEvents);
 ---
