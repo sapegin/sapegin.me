@@ -27,6 +27,7 @@
     "not dead"
   ],
   "dependencies": {
+    "@astrojs/check": "^0.2.0",
     "@astrojs/react": "^3.0.0",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
@@ -51,6 +52,7 @@
     "romanize": "^1.1.1",
     "sanitize-html": "^2.11.0",
     "strip-json-comments": "^5.0.1",
+    "typescript": "^5.2.2",
     "unist-util-visit": "^5.0.0",
     "wasm-twitter-card": "^0.3.0"
   },
