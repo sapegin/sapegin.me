@@ -33,7 +33,7 @@ const ITEMS: Item[] = [
 	},
 	{
 		title: 'Sqrlsng',
-		href: '/squirrelsong',
+		href: '/squirrelsong/',
 		alt: 'Squirrelsong',
 	},
 	{
