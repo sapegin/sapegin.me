@@ -58,6 +58,10 @@ export const theme = {
 		heading: '0',
 		menu: '0.1ch',
 	},
+	radii: {
+		default: '2px',
+		large: '3px',
+	},
 } as const;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

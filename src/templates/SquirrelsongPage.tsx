@@ -1,7 +1,11 @@
+import type { ReactNode } from 'react';
 import {
 	Stack,
 	Heading,
 	Text,
+	Link,
+	OrderedList,
+	Badge,
 	VisuallyHidden,
 	Button,
 	Feedback,
@@ -9,11 +13,16 @@ import {
 	CodeSpreadSupreme,
 	SquirelsongLogo,
 	About,
-	Link,
-	OrderedList,
 	OrderedListItem,
+	Grid,
+	Box,
 } from '../components';
 import { Page } from './Page';
+import {
+	instructions,
+	type Instructions,
+} from './SquirrelsongPageInstructions';
+import Group from 'react-group';
 
 type Props = {
 	url: string;
@@ -23,6 +32,42 @@ type Props = {
 	};
 };
 
+function InstallationSteps({
+	id,
+	app,
+	light,
+	dark,
+	comment,
+	url,
+	urlName,
+	steps,
+}: Instructions) {
+	return (
+		<Stack as="article" id={id} gap="s">
+			<Stack direction="row" gap="m" alignItems="center">
+				<Heading level={3}>{app}</Heading>
+				<Stack as="p" direction="row" gap="xs" alignItems="center">
+					{light && <Badge>light</Badge>}
+					{dark && <Badge variant="inverted">dark</Badge>}
+				</Stack>
+			</Stack>
+			{comment && <Text variant="small">{comment}</Text>}
+			{url && (
+				<Text>
+					<Link href={url}>Follow the instructions on {urlName}</Link>
+				</Text>
+			)}
+			{steps && (
+				<OrderedList>
+					{steps.map((step, index) => (
+						<OrderedListItem key={index}>{step}</OrderedListItem>
+					))}
+				</OrderedList>
+			)}
+		</Stack>
+	);
+}
+
 function Hero() {
 	return (
 		<Stack gap="m" alignItems="center">
@@ -30,7 +75,7 @@ function Hero() {
 			<Stack gap="s" alignItems="center">
 				<Heading level={1}>Squirrelsong</Heading>
 				<Heading level={3} as="p">
-					A light &amp; dark theme for web developers
+					Light &amp; dark themes for web developers
 				</Heading>
 			</Stack>
 			<Button as="a" variant="large" href="#download">
@@ -87,82 +132,52 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				/>
 			</Stack>
 			<Stack gap="s">
-				<Heading level={3}>Non-distracing UI</Heading>
+				<Heading level={3}>Non-distracting UI</Heading>
 				<Text>
-					Custom UI for Visual Studio Code and JetBrains: no oversaturated
-					bright colors to keep you focused on your code.
+					Custom UI for Visual Studio Code, JetBrains IDEs, and some other apps:
+					no oversaturated bright colors to keep you focused on your code.
 				</Text>
-				<CodeSpread codes={codes} name="markdown" />
+				<Grid auto="wide" gap="m">
+					<Box style={{ objectFit: 'cover', overflow: 'hidden' }}>
+						<img
+							src="/images/squirrelsong-vscode.png"
+							width={652}
+							height={459}
+							alt="Squirrelsong light theme for Visual Studio Code"
+						/>
+					</Box>
+					<Box style={{ objectFit: 'cover', overflow: 'hidden' }}>
+						<img
+							src="/images/squirrelsong-jetbrains.png"
+							width={652}
+							height={459}
+							alt="Squirrelsong light theme for JetBrains"
+						/>
+					</Box>
+				</Grid>
 			</Stack>
 		</Stack>
 	);
 }
 
-// TODO: Sublime Text
-// TODO: Terminal app
-// TODO: iTerm
-// TODO: Alfred
-// TODO: Slack
-// TODO: Chrome
-// TODO: DevTools
-// TODO: Telegram
-// TODO: Mark light / dark only themes (with icons?)
 function Installation() {
 	return (
-		<Stack gap="m" id="download">
-			<Heading level={2}>Get it for your editor</Heading>
+		<Stack gap="l" id="download">
 			<Stack gap="s">
-				<Heading level={3}>Visual Studio Code</Heading>
-				<OrderedList>
-					<OrderedListItem>
-						Open <strong>View → Command Palette</strong> or press{' '}
-						<strong>Cmd+Shift+P</strong>
-					</OrderedListItem>
-					<OrderedListItem>
-						Choose <strong>Install Extension</strong>
-					</OrderedListItem>
-					<OrderedListItem>
-						Type{' '}
-						<Link href="https://marketplace.visualstudio.com/items?itemName=sapegin.Theme-SquirrelsongLight">
-							Squirrelsong Light
-						</Link>{' '}
-						or{' '}
-						<Link href="https://marketplace.visualstudio.com/items?itemName=sapegin.Theme-SquirrelsongDark">
-							Squirrelsong Dark
-						</Link>
-					</OrderedListItem>
-					<OrderedListItem>Select it or press Enter to install</OrderedListItem>
-				</OrderedList>
-			</Stack>
-			<Stack gap="s">
-				<Heading level={3}>JetBrains</Heading>
+				<Heading level={2}>Get it for your editor, terminal, or app</Heading>
 				<Text>
-					Works in all JetBrains IDEs: IDEA, PhpStorm, PyCharm, RubyMine,
-					WebStorm, etc.
+					<Group separator=", ">
+						{instructions.map((app) => (
+							<Link key={app.id} href={`#${app.id}`}>
+								{app.app}
+							</Link>
+						))}
+					</Group>
 				</Text>
-				<OrderedList>
-					<OrderedListItem>
-						Open <strong>Settings</strong>
-					</OrderedListItem>
-					<OrderedListItem>
-						Choose <strong>Plugins</strong>, then <strong>Marketplace</strong>
-					</OrderedListItem>
-					<OrderedListItem>
-						Type{' '}
-						<Link href="https://plugins.jetbrains.com/plugin/22568-squirrelsong-light-theme">
-							Squirrelsong Light
-						</Link>
-					</OrderedListItem>
-					<OrderedListItem>
-						Press <strong>Install</strong>
-					</OrderedListItem>
-					<OrderedListItem>
-						Open <strong>Settings</strong>, choose <strong>Squirrelsong</strong>{' '}
-						in <strong>Appearance &amp; Behavior → Appearance → Theme</strong>{' '}
-						and <strong>Editor → Color Scheme → Scheme</strong>
-					</OrderedListItem>
-				</OrderedList>
 			</Stack>
+			{instructions.map((app) => (
+				<InstallationSteps key={app.id} {...app} />
+			))}
 			<Text>
 				If something is missing or broken, feel free to{' '}
 				<Link href="https://github.com/sapegin/squirrelsong">
@@ -193,7 +208,12 @@ export function SquirrelsongPage({ url, codes }: Props) {
 					</Stack>
 					<Text variant="small">
 						The font used in all examples is{' '}
-						<Link href="https://www.monolisa.dev/">MonoLisa</Link>.
+						<Link href="https://www.monolisa.dev/">MonoLisa</Link>. The icons on
+						the Visual Studio Code screenshots are from the{' '}
+						<Link href="https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons">
+							Catppuccin Icons
+						</Link>{' '}
+						extension.
 					</Text>
 				</Stack>
 			</main>

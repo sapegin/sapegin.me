@@ -32,12 +32,13 @@ const ITEMS: Item[] = [
 		href: '/book/',
 	},
 	{
-		title: 'Photos',
-		href: 'https://morning.photos/',
+		title: 'Sqrlsng',
+		href: '/squirrelsong',
+		alt: 'Squirrelsong',
 	},
 	{
-		title: 'Leather',
-		href: 'https://www.etsy.com/de-en/shop/KlatzLeatherGoods',
+		title: 'Photos',
+		href: 'https://morning.photos/',
 	},
 ];
 

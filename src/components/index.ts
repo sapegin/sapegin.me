@@ -12,6 +12,7 @@ export {
 	Expander,
 } from '../tamia';
 export { About } from './About';
+export { Badge } from './Badge';
 export { BookCover } from './BookCover';
 export { BookLink } from './BookLink';
 export { BookPostFooter } from './BookPostFooter';
