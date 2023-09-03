@@ -58,6 +58,8 @@ export async function generateSocialImage({
 
 	const filepath = path.join('public/', 'cards', `${urlToFilename(url)}.jpg`);
 
+	console.log(`[BLOG] Generating social image at ${filepath}`);
+
 	await image.writeAsync(filepath);
 
 	return filepath;
