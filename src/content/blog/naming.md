@@ -362,7 +362,7 @@ Let’s try to refactor this code a bit:
 
 ```js
 const hasDiscount = customers => {
-  return Object.entries(customers).some(([customerId, customer]) => {
+  return Object.values(customers).some(customer => {
     return customer.ages?.some(
       ageGroup => ageGroup.customerCards.length > 0
     );
@@ -1113,6 +1113,8 @@ Recently, I found this name in our codebase: `depratureDateTime`, and I immediat
 ![Spellchecker in WebStorm](/images/spellchecker.png)
 
 Spellchecker helps me immensely, as I’m not a native English speaker. It also helps to make the code more greppable: when we search for a certain term, we likely won’t find misspelled occurrences of it.
+
+
 
 ## Use destructuring
 
