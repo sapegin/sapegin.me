@@ -81,6 +81,7 @@ export const instructions: Instructions[] = [
 	{
 		id: 'sublime',
 		app: 'Sublime Text',
+		light: true,
 		dark: true,
 		steps: [
 			<>
@@ -95,8 +96,9 @@ export const instructions: Instructions[] = [
 				Sublime Text packages directory
 			</>,
 			<>
-				Copy the <strong>dark/Sublime Text/Squirrelsong Dark</strong> folder
-				into your Sublime Text packages directory
+				Copy the <strong>light/Sublime Text/Squirrelsong Light</strong> or{' '}
+				<strong>dark/Sublime Text/Squirrelsong Dark</strong> folder into your
+				Sublime Text packages directory
 			</>,
 			<>
 				Go to <strong>Preferences → Color Scheme → User</strong> and select the{' '}
