@@ -53,20 +53,21 @@ function InstallationSteps({
 				</Stack>
 			</Stack>
 			{comment && <Text variant="small">{comment}</Text>}
-			{light && dark && (
+			{urlLight && urlDark && (
 				<Text>
 					Follow the instructions on {urlName}:{' '}
 					<Link href={urlLight}>light theme</Link>,{' '}
 					<Link href={urlDark}>dark theme</Link>
 				</Text>
 			)}
-			{(!light || !dark) && (urlLight || urlDark) && (
-				<Text>
-					<Link href={urlLight || urlDark}>
-						Follow the instructions on {urlName}
-					</Link>
-				</Text>
-			)}
+			{(urlLight && !urlDark) ||
+				(!urlLight && urlDark && (
+					<Text>
+						<Link href={urlLight || urlDark}>
+							Follow the instructions on {urlName}
+						</Link>
+					</Text>
+				))}
 			{steps && (
 				<OrderedList>
 					{steps.map((step, index) => (
