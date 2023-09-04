@@ -7,7 +7,8 @@ export type Instructions = {
 	light?: boolean;
 	dark?: boolean;
 	comment?: ReactNode;
-	url?: string;
+	urlLight?: string;
+	urlDark?: string;
 	urlName?: string;
 	steps?: ReactNode[];
 };
@@ -177,7 +178,8 @@ export const instructions: Instructions[] = [
 		light: true,
 		comment:
 			'Also works for Microsoft Edge, and other Chromium-based browsers.',
-		url: 'https://github.com/sapegin/squirrelsong/tree/master/light/Chrome%20DevTools#readme',
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/Chrome%20DevTools#readme',
 		urlName: 'GitHub',
 	},
 
@@ -190,7 +192,8 @@ export const instructions: Instructions[] = [
 		light: true,
 		comment:
 			'Also works for Microsoft Edge, and other Chromium-based browsers.',
-		url: 'https://github.com/sapegin/squirrelsong/tree/master/light/Chrome#readme',
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/Chrome#readme',
 		urlName: 'GitHub',
 	},
 
@@ -201,7 +204,7 @@ export const instructions: Instructions[] = [
 		id: 'alfred',
 		app: 'Alfred',
 		light: true,
-		url: 'https://www.alfredapp.com/extras/theme/WD6QQfypb6/',
+		urlLight: 'https://www.alfredapp.com/extras/theme/WD6QQfypb6/',
 		urlName: 'Alfredapp.com',
 	},
 
@@ -212,7 +215,8 @@ export const instructions: Instructions[] = [
 		id: 'slack',
 		app: 'Slack',
 		light: true,
-		url: 'https://github.com/sapegin/squirrelsong/tree/master/light/Slack#readme',
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/Slack#readme',
 		urlName: 'GitHub',
 	},
 
@@ -223,7 +227,7 @@ export const instructions: Instructions[] = [
 		id: 'telegram',
 		app: 'Telegram',
 		light: true,
-		url: 'https://t.me/addtheme/squirrelsonglight',
+		urlLight: 'https://t.me/addtheme/squirrelsonglight',
 		urlName: 'Telegram',
 	},
 
@@ -234,7 +238,23 @@ export const instructions: Instructions[] = [
 		id: 'Bear',
 		app: 'Bear',
 		light: true,
-		url: 'https://github.com/sapegin/squirrelsong/tree/master/light/Bear#readme',
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/Bear#readme',
+		urlName: 'GitHub',
+	},
+
+	/**
+	 * Prism
+	 */
+	{
+		id: 'prismjs',
+		app: 'Prism',
+		light: true,
+		dark: true,
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/PrismJs#readme',
+		urlDark:
+			'https://github.com/sapegin/squirrelsong/tree/master/dark/PrismJs#readme',
 		urlName: 'GitHub',
 	},
 ];
