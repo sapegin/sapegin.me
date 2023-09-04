@@ -60,14 +60,13 @@ function InstallationSteps({
 					<Link href={urlDark}>dark theme</Link>
 				</Text>
 			)}
-			{(urlLight && !urlDark) ||
-				(!urlLight && urlDark && (
-					<Text>
-						<Link href={urlLight || urlDark}>
-							Follow the instructions on {urlName}
-						</Link>
-					</Text>
-				))}
+			{((urlLight && !urlDark) || (!urlLight && urlDark)) && (
+				<Text>
+					<Link href={urlLight || urlDark}>
+						Follow the instructions on {urlName}
+					</Link>
+				</Text>
+			)}
 			{steps && (
 				<OrderedList>
 					{steps.map((step, index) => (
