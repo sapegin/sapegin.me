@@ -104,8 +104,9 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				<Text>
 					Most themes, especially dark ones, have very high contrast which makes
 					them tiring for the eyes. Squirrelsong themes are low contrast but
-					still provide enough color difference to distinguish various elements
-					in the code, and avoid long chains of code printed in the same style.
+					still provide enough color and style variety to distinguish various
+					elements of the code and avoid long chains of code printed in the same
+					style.
 				</Text>
 				<CodeSpread codes={codes} name="intro" />
 			</Stack>
@@ -113,28 +114,31 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				<Heading level={3}>Made for web developers</Heading>
 				<Text>
 					Carefully crafted syntax highlighting for JavaScript, TypeScript,
-					HTML, CSS, Sass, Markdown, JSON, XML, React, and Astro. Also, works
-					well with PHP, Python, Ruby, Rust, Java, Swift, etc.
+					HTML, CSS, Sass, styled-components, Markdown, JSON, XML, React, and
+					Astro. Also, works well with PHP, Python, Ruby, Rust, Java, Swift,
+					etc.
 				</Text>
 				<CodeSpreadSupreme codes={codes} names={['html', 'css', 'json']} />
 			</Stack>
 			<Stack gap="s">
 				<Heading level={3}>Monochrome Markdown styles</Heading>
 				<Text>
-					Inspired by iA Writer monochrome Markdown styles to avoid distractions
-					while writing your next blog post, documentation, or a book.
+					Inspired by iA Writer, Markdown is styled in shades of gray to avoid
+					distractions while writing your next blog post, documentation, or
+					book.
 				</Text>
 				<CodeSpread codes={codes} name="markdown" />
 			</Stack>
 			<Stack gap="s">
 				<Heading level={3}>
-					Consistent highlighting for different programming languages
+					Consistent highlighting of different programming languages
 				</Heading>
 				<Text>
-					Colors are consistent among different programming languages: for
-					example, <code>this</code> in TypeScript is styled the same way as{' '}
-					<code>$this</code> in PHP and <code>self</code> in Python or Rust.
-					HTML looks the same as JSX in React or markup in Astro components.
+					Colors and styles are consistent among different programming
+					languages: for example, <code>this</code> in TypeScript is styled the
+					same way as <code>$this</code> in PHP and <code>self</code> in Python
+					or Rust. HTML looks the same as JSX in React or markup in Astro
+					components.
 				</Text>
 				<CodeSpreadSupreme
 					codes={codes}
@@ -144,8 +148,8 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 			<Stack gap="s">
 				<Heading level={3}>Non-distracting UI</Heading>
 				<Text>
-					Custom UI for Visual Studio Code, JetBrains IDEs, and some other apps:
-					no oversaturated bright colors to keep you focused on your code.
+					Custom UI for Visual Studio Code, JetBrains IDEs, and other apps
+					without oversaturated bright colors to keep you focused on your code.
 				</Text>
 				<Grid auto="wide" gap="m">
 					<Box style={{ objectFit: 'cover', overflow: 'hidden' }}>
@@ -209,15 +213,15 @@ export function SquirrelsongPage({ url, codes }: Props) {
 					<Installation />
 					<About>
 						I created the first version of this theme in 2016, and since then
-						use it every day at work and for pesonal projects. Seven years
-						later, I rebuild it almost from scratch and improved many things.
+						used it every day at work and for personal projects. Seven years
+						later, I rebuilt it almost from scratch and improved many things.
 					</About>
 					<Stack gap="m">
 						<Heading level={2}>Have a question?</Heading>
 						<Feedback github="squirrelsong" />
 					</Stack>
 					<Text variant="small">
-						The font used in all examples is{' '}
+						The font used in all examples and logo is{' '}
 						<Link href="https://www.monolisa.dev/">MonoLisa</Link>. The icons on
 						the Visual Studio Code screenshots are from the{' '}
 						<Link href="https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons">
