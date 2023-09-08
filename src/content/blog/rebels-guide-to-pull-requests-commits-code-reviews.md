@@ -13,7 +13,7 @@ tags:
 
 I happened to have a somewhat controversial approach to pull requests. This approach has worked well for me for many years, and my colleagues seem to be happy with it. However, many would consider these practices atrocious — read on to find out on which side you are!
 
-I’ve written before on [getting code reviewed faster](https://blog.sapegin.me/all/faster-code-reviews/) and have published a [frontend pull request checklist](https://github.com/sapegin/frontend-pull-request-checklist) — check them out!
+I’ve written before on [getting code reviewed faster](/blog/faster-code-reviews/) and have published a [frontend pull request checklist](https://github.com/sapegin/frontend-pull-request-checklist) — check them out!
 
 **Story time:** I once broke a deployment tool by adding an emoji into a commit message, and I still consider this a tiny victory in my programming career. Funnily, my colleagues split into two camps after this incident. The first camp was saying that I’m an idiot to use emojis in commit messages, and the second — that it shouldn’t be so easy to break the tool.
 

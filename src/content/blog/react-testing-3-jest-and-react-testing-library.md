@@ -16,14 +16,14 @@ tags:
 
 **March 2020:** Updated to [React Testing Library 10](https://github.com/testing-library/react-testing-library/releases/tag/v10.0.0) and [DOM Testing Library 7](https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0).
 
-React Testing Library is a library to test React components, that makes applying testing best practices, we’ve learned in [the first article](/all/react-testing-1-best-practices/), natural.
+React Testing Library is a library to test React components, that makes applying testing best practices, we’ve learned in [the first article](/blog/react-testing-1-best-practices/), natural.
 
 **This is the third article in a series**, where we learn how to test React components with Jest and React Testing Library.
 
-- [Modern React testing, part 1: best practices](/all/react-testing-1-best-practices/)
-- [Modern React testing, part 2: Jest and Enzyme](/all/react-testing-2-jest-and-enzyme/)
+- [Modern React testing, part 1: best practices](/blog/react-testing-1-best-practices/)
+- [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
 - **Modern React testing, part 3: Jest and React Testing Library (_this post_)**
-- [Modern React testing, part 4: Cypress and Cypress Testing Library](/all/react-testing-4-cypress/)
+- [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)
 
 **Examples:** Check out [the GitHub repository](https://github.com/sapegin/rtl-article-2019) with all the examples.
 
@@ -59,7 +59,7 @@ We’ll set up and use these tools:
 - Libraries for other frameworks with the same queries.
 - [Recommended by React team](https://reactjs.org/docs/test-utils.html#overview).
 
-React Testing Library helps us write [good tests](/all/react-testing-1-best-practices/) and makes writing bad tests difficult. It allows us to find elements in a way similar to how a user would do that: for example, find form elements and buttons by their labels.
+React Testing Library helps us write [good tests](/blog/react-testing-1-best-practices/) and makes writing bad tests difficult. It allows us to find elements in a way similar to how a user would do that: for example, find form elements and buttons by their labels.
 
 ### Setting up Jest and React Testing Library
 
@@ -164,7 +164,7 @@ Every time someone changes the markup, Jest shows a diff and asks whether to upd
 
 We can use snapshots to store any values: React tree, strings, numbers, object, etc.
 
-Snapshot testing sounds like a good idea, but has [several problems](https://blog.sapegin.me/all/snapshot-tests/):
+Snapshot testing sounds like a good idea, but has [several problems](/blog/snapshot-tests/):
 
 - easy to commit snapshots with bugs;
 - failures are hard to understand;
@@ -372,7 +372,7 @@ test('submits username and password', async () => {
 
 Here, we’re using `jest.fn()` to define a spy for the `onSubmit` prop of our [Login](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/Login.js) component, then we’re filling the form by [typing](https://testing-library.com/docs/user-event/utility#type) text into input fields, then we [click](https://testing-library.com/docs/user-event/convenience#click) the submit button, and check that the `onSubmit` function was called only once and it has received login and password.
 
-In comparison [to Enzyme](/all/react-testing-2-jest-and-enzyme/), we don’t have to call a form `submit` handler directly, which would be testing the implementation. User-event’s `click()` method will dispatch a click event on the DOM node which is captured and handled by React the same way a real click in a browser would be handled. For example, it will dispatch a form submit event when we “click” a `<button type="submit">`, and won’t dispatch it when we “click” a `<button type="button">`, which makes our tests more reliable.
+In comparison [to Enzyme](/blog/react-testing-2-jest-and-enzyme/), we don’t have to call a form `submit` handler directly, which would be testing the implementation. User-event’s `click()` method will dispatch a click event on the DOM node which is captured and handled by React the same way a real click in a browser would be handled. For example, it will dispatch a form submit event when we “click” a `<button type="submit">`, and won’t dispatch it when we “click” a `<button type="button">`, which makes our tests more reliable.
 
 ### Async tests
 

@@ -242,7 +242,7 @@ _(It wasn’t as easy as I thought.)_
 
 [Slides](http://varya.me/react-finland-2018/#)
 
-I’ve also spent a lot of time writing and rewriting my blog, instead of writing blog posts, and even ended up with my own [static site generator](https://blog.sapegin.me/all/why-fledermaus). It’s a good way of learning and trying new things.
+I’ve also spent a lot of time writing and rewriting my blog, instead of writing blog posts, and even ended up with my own [static site generator](/blog/why-fledermaus). It’s a good way of learning and trying new things.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Developing a blog instead of writing blog posts — that sounds very familiar. Great ⚡ talk by <a href="https://twitter.com/varya_en?ref_src=twsrc%5Etfw">@varya_en</a> at <a href="https://twitter.com/hashtag/reactfinland?src=hash&amp;ref_src=twsrc%5Etfw">#reactfinland</a> <a href="https://t.co/OHLkWRRQJ5">pic.twitter.com/OHLkWRRQJ5</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/989505704296960000?ref_src=twsrc%5Etfw">April 26, 2018</a></blockquote>
 

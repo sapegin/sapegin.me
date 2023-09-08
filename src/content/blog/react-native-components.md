@@ -27,7 +27,7 @@ Another issue is the **slowness and generally poor developer experience of the e
 
 My current approach is to develop on desktop web and then test on React Native on emulators and actual devices.
 
-This also allows me to use the same setup for end-to-end tests as I use for web: [Cypress and Cypress testing library](https://blog.sapegin.me/all/react-testing-4-cypress/), which is fast to run and easy to write and debug. Then I’d use end-to-end tests with emulators only for smoke tests or functionality that is very different on native platforms.
+This also allows me to use the same setup for end-to-end tests as I use for web: [Cypress and Cypress testing library](/blog/react-testing-4-cypress/), which is fast to run and easy to write and debug. Then I’d use end-to-end tests with emulators only for smoke tests or functionality that is very different on native platforms.
 
 Following are my solutions to develop cross-platform components for web and React Native, from better to worse.
 

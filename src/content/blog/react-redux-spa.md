@@ -36,7 +36,7 @@ Our view layer is [React](https://reactjs.org/).
 - [Presentational and container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) by Dan Abramov.
 - [React tips and best practices](http://aeflash.com/2015-02/react-tips-and-best-practices.html) by Alexander Early.
 - [Removing user interface complexity, or why React is awesome](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome) by James Long.
-- [Structuring React and Redux applications](http://blog.sapegin.me/all/react-structure).
+- [Structuring React and Redux applications](/blog/react-structure).
 - [React cheat sheet](https://reactcheatsheet.com/).
 - <span aria-label="Book" title="Book">📖</span> [SurviveJS: React](https://survivejs.com/react/introduction/) by Juho Vepsäläinen.
 
@@ -92,7 +92,7 @@ _Consider using [Create React App](https://github.com/facebookincubator/create-r
 To test React components we use [Jest](https://facebook.github.io/jest/) (a test runner) and [Enzyme](http://airbnb.io/enzyme/) (a testing utility for React).
 
 - [Approaches to testing React components — an overview](http://reactkungfu.com/2015/07/approaches-to-testing-react-components-an-overview/) by Marcin Grzywaczewski.
-- [Testing React components with Jest and Enzyme](http://blog.sapegin.me/all/react-jest).
+- [Testing React components with Jest and Enzyme](/blog/react-jest).
 - [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet).
 
 ## Other useful libraries

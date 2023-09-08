@@ -96,7 +96,7 @@ And the latest one, **leathercraft**, which I just piked up and finished only a 
 
 I also started to enjoy doing things at home, like fixing stuff or putting shelves on the wall, which I never liked before, and was never good at it (I still am!).
 
-I think it’s good to have different hobbies. If [you don’t feel like doing one thing](https://blog.sapegin.me/all/waves/), there’s always something else that may feel great doing.
+I think it’s good to have different hobbies. If [you don’t feel like doing one thing](/blog/waves/), there’s always something else that may feel great doing.
 
 ## Social networks
 

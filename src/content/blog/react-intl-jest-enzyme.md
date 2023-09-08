@@ -96,4 +96,4 @@ test('pink pony', () => {
 });
 ```
 
-P. S. You may also enjoy my more generic article on [testing React components with Jest and Enzyme](http://blog.sapegin.me/all/react-jest) and [Jest cheat sheet](https://github.com/sapegin/jest-cheat-sheet).
+P. S. You may also enjoy my more generic article on [testing React components with Jest and Enzyme](/blog/react-jest) and [Jest cheat sheet](https://github.com/sapegin/jest-cheat-sheet).

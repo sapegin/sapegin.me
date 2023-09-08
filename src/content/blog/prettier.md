@@ -92,7 +92,7 @@ I thought it improves readability but actually it just makes code base inconsist
 
 ## What JavaScript developers do
 
-Unfortunately JavaScript has no official code style but there are a few [popular code styles](http://blog.sapegin.me/all/javascript-code-styles), like Airbnb or Standard, that you could use to make you code look familiar to other developers.
+Unfortunately JavaScript has no official code style but there are a few [popular code styles](/blog/javascript-code-styles), like Airbnb or Standard, that you could use to make you code look familiar to other developers.
 
 You could use ESLint to enforce code style and even autoformat code in some cases. But it won’t make your code base 100% consistent. For example ESLint with Airbnb config would normalize only my first example and allow inconsistency in the other two.
 

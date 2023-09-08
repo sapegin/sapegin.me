@@ -10,7 +10,7 @@ tags:
   - testing
 ---
 
-**August 2019: This article is out of date, check [my new article about testing React components with Jest and Enzyme](/all/react-testing-2-jest-and-enzyme/).**
+**August 2019: This article is out of date, check [my new article about testing React components with Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/).**
 
 ---
 

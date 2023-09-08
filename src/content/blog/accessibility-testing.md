@@ -58,7 +58,7 @@ Both don’t check things like the document outline or landmark regions, which w
 
 Unless we test our site or app’s accessibility after every change, we’ll eventually introduce regressions. That’s why it’s essential to make accessibility testing a part of the continuous integration (CI) process. We should never merge the code to the codebase without testing its accessibility.
 
-[Cypress-axe](https://github.com/avanslaars/cypress-axe) is based on axe-core. It allows us to run accessibility checks inside [end-to-end Cypress tests](https://blog.sapegin.me/all/react-testing-4-cypress/), which is good because we likely already run end-to-end tests during continuous integration, and we render all our pages there. We could also run checks multiple times to test pages in different states. For example, with an open modal or an expanded content section.
+[Cypress-axe](https://github.com/avanslaars/cypress-axe) is based on axe-core. It allows us to run accessibility checks inside [end-to-end Cypress tests](/blog/react-testing-4-cypress/), which is good because we likely already run end-to-end tests during continuous integration, and we render all our pages there. We could also run checks multiple times to test pages in different states. For example, with an open modal or an expanded content section.
 
 ![Cypress-axe prints accessibility violations in the terminal](/images/cypress-axe-violations.png)
 

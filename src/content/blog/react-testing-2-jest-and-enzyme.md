@@ -13,10 +13,10 @@ Enzyme is probably the most popular tool to test React components. And though it
 
 **This is the second article in a series**, where we learn how to test React components with Jest and Enzyme and how to apply the best practices we’ve learned in the first article.
 
-- [Modern React testing, part 1: best practices](/all/react-testing-1-best-practices/)
+- [Modern React testing, part 1: best practices](/blog/react-testing-1-best-practices/)
 - **Modern React testing, part 2: Jest and Enzyme (_this post_)**
-- [Modern React testing, part 3: Jest and React Testing Library](/all/react-testing-3-jest-and-react-testing-library/)
-- [Modern React testing, part 4: Cypress and Cypress Testing Library](/all/react-testing-4-cypress/)
+- [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
+- [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)
 
 ## Getting started with Jest and Enzyme
 
@@ -154,7 +154,7 @@ Every time you, or someone in your team, change your markup Jest will show a dif
 
 You can use snapshots to store any values: React tree, strings, numbers, object, etc.
 
-Snapshot testing sounds like a good idea, but has [several problems](https://blog.sapegin.me/all/snapshot-tests/):
+Snapshot testing sounds like a good idea, but has [several problems](/blog/snapshot-tests/):
 
 - easy to commit snapshots with bugs;
 - failures are hard to understand;

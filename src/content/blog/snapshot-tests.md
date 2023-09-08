@@ -9,7 +9,7 @@ tags:
   - grumbles
 ---
 
-When Jest [announced snapshot tests](https://jestjs.io/blog/2016/07/27/jest-14) in 2016, I was [very excited](/all/react-jest). It felt like a perfect solution for testing React components. Since then I’ve written fewer and fewer snapshot tests. In this article I’ll try to explain why.
+When Jest [announced snapshot tests](https://jestjs.io/blog/2016/07/27/jest-14) in 2016, I was [very excited](/blog/react-jest). It felt like a perfect solution for testing React components. Since then I’ve written fewer and fewer snapshot tests. In this article I’ll try to explain why.
 
 I’ll talk mostly about testing React components, because that’s where I’ve used or have seen snapshots the most, but the same can be applied to testing other things.
 
@@ -83,7 +83,7 @@ test('show success message after submission', () => {
 
 The test intention is now clear: we click the submit button and instead of a form we see a success message. This test won’t fail because of primitive components or third-party dependencies updates. This test won’t fail because of the layout changes that don’t affect the behavior.
 
-**Tip:** I’m using the [Teact Testing Library](https://kentcdodds.com/blog/effective-snapshot-testing/) by Kent C. Dodds in this example. Read [my article on React Testing Library](/all/react-testing-3-jest-and-react-testing-library/).
+**Tip:** I’m using the [Teact Testing Library](https://kentcdodds.com/blog/effective-snapshot-testing/) by Kent C. Dodds in this example. Read [my article on React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/).
 
 ## When to use snapshots
 

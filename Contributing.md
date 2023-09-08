@@ -2,7 +2,7 @@
 
 I love pull requests. And following this guidelines will make your pull request easier to merge.
 
-_[Use GitHub interface](https://blog.sapegin.me/all/open-source-for-everyone/) for simple changes, otherwise follow the steps below._
+_[Use GitHub interface](https://sapegin.me/blog/open-source-for-everyone/) for simple changes, otherwise follow the steps below._
 
 ## Prerequisites
 

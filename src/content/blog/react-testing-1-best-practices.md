@@ -11,14 +11,14 @@ tags:
 
 This series of articles is an in-depth snapshot of the current state of testing React components and frontend in general, explaining many _whys_, not just _hows_. We’ll discuss why to write automated tests, what tests to write and how to write them. In practical articles we’ll learn how to use Jest, Enzyme and React Testing Library to test React components.
 
-I wrote [a similar article](https://blog.sapegin.me/all/react-jest/) three years ago, and now I look at it like at a handbook of bad practices. Almost everything I was recommending back then, I don’t do anymore.
+I wrote [a similar article](/blog/react-jest/) three years ago, and now I look at it like at a handbook of bad practices. Almost everything I was recommending back then, I don’t do anymore.
 
 **This is the first article in a series**, where we learn why test automation is useful, which types of tests to write, and testing best practices.
 
 - **Modern React testing, part 1: best practices (_this post_)**
-- [Modern React testing, part 2: Jest and Enzyme](/all/react-testing-2-jest-and-enzyme/)
-- [Modern React testing, part 3: Jest and React Testing Library](/all/react-testing-3-jest-and-react-testing-library/)
-- [Modern React testing, part 4: Cypress and Cypress Testing Library](/all/react-testing-4-cypress/)
+- [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
+- [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
+- [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)
 
 ## Why automate testing
 

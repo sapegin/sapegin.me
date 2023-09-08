@@ -17,9 +17,9 @@ Cypress is a framework-agnostic end-to-end testing (also known as E2E, or integr
 
 **This is the fourth article in the series**, where we learn how to test React apps end-to-end using Cypress and Cypress Testing Library, and how to mock network requests using Mock Service Worker.
 
-- [Modern React testing, part 1: best practices](/all/react-testing-1-best-practices/)
-- [Modern React testing, part 2: Jest and Enzyme](/all/react-testing-2-jest-and-enzyme/)
-- [Modern React testing, part 3: Jest and React Testing Library](/all/react-testing-3-jest-and-react-testing-library/)
+- [Modern React testing, part 1: best practices](/blog/react-testing-1-best-practices/)
+- [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
+- [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
 - **Modern React testing, part 4: Cypress and Cypress Testing Library (_this post_)**
 
 Check out [the GitHub repository](https://github.com/sapegin/cypress-article-2020) with all the examples.
@@ -48,7 +48,7 @@ We’ll set up and use these tools:
 - Convenient semantic queries, like finding elements by their label text or ARIA role.
 - Libraries for other frameworks with the same queries.
 
-Testing Library helps us write [good tests](/all/react-testing-1-best-practices/) and makes writing bad tests difficult. It allows us to interact with the app similar to how a real user would do that: for example, find form elements and buttons by their labels. It helps us to avoid testing implementation details, making our tests resilient to code changes that don’t change the behavior.
+Testing Library helps us write [good tests](/blog/react-testing-1-best-practices/) and makes writing bad tests difficult. It allows us to interact with the app similar to how a real user would do that: for example, find form elements and buttons by their labels. It helps us to avoid testing implementation details, making our tests resilient to code changes that don’t change the behavior.
 
 ### Setting up Cypress and Cypress Testing Library
 

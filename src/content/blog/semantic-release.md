@@ -10,7 +10,7 @@ tags:
 
 Making new releases is one of the most boring and tedious tasks in open source.
 
-There are many tools that try to automate publishing and one of the most interesting is [semantic-release](https://github.com/semantic-release/semantic-release). I was avoiding it for a long time because it makes publishing fully automated with change logs generated from commit messages, and I believe that [change logs must be written by humans](http://blog.sapegin.me/all/changelog).
+There are many tools that try to automate publishing and one of the most interesting is [semantic-release](https://github.com/semantic-release/semantic-release). I was avoiding it for a long time because it makes publishing fully automated with change logs generated from commit messages, and I believe that [change logs must be written by humans](/blog/changelog).
 
 But actually it’s very flexible and I was able to customize it to do exactly what I want:
 
@@ -145,6 +145,6 @@ git commit -m "Fix: Proper commit message" --allow-empty
 - [My commit message conventions](https://github.com/tamiadev/semantic-release-tamia/blob/master/Convention.md)
 - [AngularJS commit message conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
 - [How to Write an Open Source JavaScript Library Egghead course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-automating-releases-with-semantic-release)
-- [Why you need to write change logs yourself](http://blog.sapegin.me/all/changelog)
+- [Why you need to write change logs yourself](/blog/changelog)
 - [Keep a CHANGELOG: Don’t let your friends dump git logs into change logs](http://keepachangelog.com/)
 - [Semantic Versioning](http://semver.org/)

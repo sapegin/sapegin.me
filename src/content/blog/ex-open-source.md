@@ -16,7 +16,7 @@ I started [my first open source project](https://github.com/sapegin/richtypo.js)
 
 However, the hostility of the open source community made me stop contributing and even looking at issues and pull requests of most of my projects. I also lost interest in writing code as a hobby over the years.
 
-**My open source journey:** I’ve written about open source before: from [encouraging folks to do it](/all/open-source-for-everyone/), to [explaining why I keep my personal code on GitHub](/all/personal-open-source/), to [ranting about the culture](/all/no-complaints-oss/), and [not contributing anymore](/all/going-offline/).
+**My open source journey:** I’ve written about open source before: from [encouraging folks to do it](/blog/open-source-for-everyone/), to [explaining why I keep my personal code on GitHub](/blog/personal-open-source/), to [ranting about the culture](/blog/no-complaints-oss/), and [not contributing anymore](/blog/going-offline/).
 
 I liked many things about open source, and it was a bit sad to loose them. Luckily, around the same time I found a new hobby that turned out to be a great, and much more healthy, replacement for open source — leathercraft.
 

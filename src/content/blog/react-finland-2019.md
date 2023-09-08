@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-[A conference](https://react-finland.fi/) was held on April 24—26 in Helsinki, Finland. I was there with a workshop on [design systems for React developers](https://react-finland.fi/workshops/#design-systems-for-react-developers) and a talk. [Check out my notes](https://blog.sapegin.me/all/react-finland-2018/) on the last year.
+[A conference](https://react-finland.fi/) was held on April 24—26 in Helsinki, Finland. I was there with a workshop on [design systems for React developers](https://react-finland.fi/workshops/#design-systems-for-react-developers) and a talk. [Check out my notes](/blog/react-finland-2018/) on the last year.
 
 ![Sunset in Helsinki](/images/react-finland-2019.jpg)
 
