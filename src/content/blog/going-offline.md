@@ -32,7 +32,7 @@ Second, my employer was seriously affected by the virus, and we had to work four
 
 [![Friday morning photography](/images/offline-friday-photography.jpg)](https://morning.photos/albums/landscapes)
 
-I think it’s important to know what you like and don’t like at work and try to find a balance. When you do too much of what you don’t like, work gets depressing very fast. I always liked improving things: doing refactoring or [researching better ways to do something](https://blog.sapegin.me/), and never liked digging into complex business requirements.
+I think it’s important to know what you like and don’t like at work and try to find a balance. When you do too much of what you don’t like, work gets depressing very fast. I always liked improving things: doing refactoring or [researching better ways to do something](/blog/), and never liked digging into complex business requirements.
 
 It’s also important to know your limits: it’s better to do great work within your limits than poor work trying to go outside. My limits are: I’m good at frontend, not great at backend, and very poor at devops. I’m also not so great at talking to people.
 
@@ -92,7 +92,7 @@ And the latest one, **leathercraft**, which I just piked up and finished only a 
 
 ![My first leather projects](/images/offline-leathercraft.jpg)
 
-**Writing** is kind of a weird one. I like to [write articles](https://blog.sapegin.me/) and [even books](https://sapegin.me/), and I hope to start writing again after writing only my private journal for almost two years. Writing is also my favorite way of learning new things and understanding myself. Probably topics I’m writing about will change too.
+**Writing** is kind of a weird one. I like to [write articles](/blog/) and [even books](/book/), and I hope to start writing again after writing only my private journal for almost two years. Writing is also my favorite way of learning new things and understanding myself. Probably topics I’m writing about will change too.
 
 I also started to enjoy doing things at home, like fixing stuff or putting shelves on the wall, which I never liked before, and was never good at it (I still am!).
 

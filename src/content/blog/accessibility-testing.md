@@ -64,7 +64,7 @@ Unless we test our site or app’s accessibility after every change, we’ll eve
 
 Such tests could be a good accessibility _smoke test_ that makes sure we’re not breaking our site or app. However, cypress-axe is inconvenient to analyze pages that already have accessibility issues. For that, a browser extension, like Axe or Accessibility Insights, would be more convenient.
 
-Read more about [setting up and using cypress-axe](https://blog.sapegin.me/til/testing/detecting-accessibility-issues-on-ci-with-cypress-axe/).
+Read more about [setting up and using cypress-axe](/til/testing/detecting-accessibility-issues-on-ci-with-cypress-axe/).
 
 **Tip:** For automated accessibility testing of separate components, [jest-axe](https://github.com/nickcolley/jest-axe) could be a good option.
 
