@@ -100,7 +100,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 		<Stack gap="l">
 			<VisuallyHidden as="h2">Features</VisuallyHidden>
 			<Stack gap="s">
-				<Heading level={3}>Low-contrast with great readability</Heading>
+				<Heading level={3}>Low contrast with great readability</Heading>
 				<Text>
 					Most themes, especially dark ones, have very high contrast which makes
 					them tiring for the eyes. Squirrelsong themes are low-contrast but
