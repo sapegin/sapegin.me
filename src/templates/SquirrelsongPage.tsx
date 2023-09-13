@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import {
 	Stack,
 	Heading,
