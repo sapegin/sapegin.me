@@ -80,4 +80,4 @@ The overall quality of a pull request is much more important than the quality of
 
 And don’t forget to put some emojis in your commit messages once in a while — our work would be too sad without them!
 
-_Thanks to Margarita Diaz-Cortes._
+*Thanks to [Margarita Diaz](https://drtaco.net/).*
