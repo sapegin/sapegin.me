@@ -7,8 +7,6 @@ import { getRelatedPosts } from '../../util/getRelatedPosts';
 type Entry = CollectionEntry<'blog'>;
 type Props = Entry;
 
-// TODO: Typogarphy
-
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({
