@@ -1,6 +1,6 @@
 ---
 title: 'Why I quit open source'
-description: 'Four main reasons I stopped maintaining most of my open source projects after seven years of contributing regularly.'
+description: 'Four main reasons I stopped maintaining most of my open source projects after ten years of contributing regularly.'
 date: 2023-09-13
 tags:
   - open source
@@ -18,7 +18,7 @@ I think the most healthy solution for avoiding maintainer burnout is _quitting o
 
 I’ve talked before [on why open source was attractive to me](/blog/ex-open-source/), and a bit on why I [was contributing less](/blog/no-complaints-oss/), and eventually [quit open source](/blog/going-offline/).
 
-In this article I want to talk more about the reasons that led me to maintainer burnout, and to quitting open source after about seven years of contributing regularly, and publishing many projects.
+In this article I want to talk more about the reasons that led me to maintainer burnout, and to quitting open source after about ten years of contributing regularly, and publishing many projects.
 
 **So what are the reasons?**
 
