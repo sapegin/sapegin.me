@@ -1,12 +1,11 @@
 import { Text, Link } from '.';
 import romanize from 'romanize';
-import { SITE_URL } from '../constants';
 
 export function Footer() {
 	return (
 		<footer>
 			<Text variant="small" mb="xs">
-				© <Link href={SITE_URL}>Artem Sapegin</Link>
+				© Artem Sapegin
 				{', '}
 				{romanize(1999)}—{romanize(new Date().getFullYear())}
 			</Text>
