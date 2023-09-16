@@ -5,9 +5,9 @@ type Props = React.ComponentProps<typeof QuotedLink> & {
 	icon: IconName;
 };
 
-export function LinkWithIcon({ icon, href, children }: Props) {
+export function LinkWithIcon({ icon, href, children, ...rest }: Props) {
 	return (
-		<QuotedLink href={href}>
+		<QuotedLink href={href} {...rest}>
 			<Stack
 				as="span"
 				display="inline-flex"
