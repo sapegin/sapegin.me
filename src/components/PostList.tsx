@@ -1,4 +1,4 @@
-import { Stack, Text, Link, FormattedDate, InlineSeparator } from '.';
+import { Stack, Text, Link, FormattedDate, InlineSeparator, Box } from '.';
 import type { Resource } from '../types/Resource';
 
 type Props = {
@@ -16,14 +16,22 @@ export function PostList({
 		<Stack as="ul" direction="column" gap="s">
 			{posts.map((post) => (
 				<Text key={post.url ?? post.title} as="li">
-					<Stack as="span" direction="row" gap="s" alignItems="center">
+					<Stack
+						as="span"
+						direction={{ mobile: 'column', tablet: 'row' }}
+						columnGap="s"
+						alignItems={{ tablet: 'center' }}
+						flexWrap="wrap"
+					>
 						{post.url ? <Link href={post.url}>{post.title}</Link> : post.title}
 						{showDescriptions && post.description && (
 							<Text variant="small">{post.description}</Text>
 						)}
 						{showDates && post.date && (
 							<>
-								<InlineSeparator />
+								<Box as="span" display={{ mobile: 'none', tablet: 'flex' }}>
+									<InlineSeparator />
+								</Box>
 								<Text
 									as="time"
 									variant="small"
