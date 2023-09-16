@@ -103,7 +103,7 @@ function Writing({
 				</Stack>
 			</Stack>
 			<Text>
-				Sometimes, I also <Link href="/speaking/">speak on coferences</Link>.
+				Sometimes, I also <Link href="/speaking/">speak on conferences</Link>.
 			</Text>
 		</Stack>
 	);
