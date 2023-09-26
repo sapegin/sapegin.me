@@ -135,6 +135,6 @@ Instead of the default “Participating and @mentions”, choose “Ignore”:
 
 I think I found a good compromise that would allow me to work on my personal projects in public, and allow users (if there will be any) to help each other. This approach also keeps all the existing issues accessible and googlable.
 
-I hope this will be enough for me to feel calm, and I won’t have to remove all my work from the internets ([this has happened before](https://news.ycombinator.com/item?id=3073798) or unpublish all my npm packages ([this has happened too](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)).
+I hope this will be enough for me to feel calm, and I won’t have to remove all my work from the internets ([this has happened before](https://news.ycombinator.com/item?id=3073798)) or unpublish all my npm packages ([this has happened too](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)).
 
 _Thanks to [Dmitry Belyaev](https://twitter.com/blvdmitry), [Margarita Diaz](https://drtaco.net)._
