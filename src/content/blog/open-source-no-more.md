@@ -95,6 +95,6 @@ The worst part is that it’s getting worse, not better.
 
 Now I consider my open source projects as personal projects whose code happened to be open. It’s convenient to keep code on GitHub and use npm to share code among several projects. I only add features that I need myself, and when I need them. I don’t receive notifications on any activity on these projects. I rarely look at the issues or pull requests, and I almost never respond to them.
 
-Perhaps, I should either disable the issues entirely, or add a note explaining that they will likely be ignored and they may be more successful by forking the code. I guess, I still want projects to have a place for users to report bugs so that other users could suggest workarounds.
+Perhaps, I should either disable the issues entirely, or add a note explaining that they will likely be ignored and they may be more successful by forking the code. I guess, I still want projects to have a place for users to report bugs so that other users could suggest workarounds. (I explore this approach in [my next post](/blog/healthy-open-source/).)
 
 _Thanks to [Margarita Diaz](https://drtaco.net/)._
