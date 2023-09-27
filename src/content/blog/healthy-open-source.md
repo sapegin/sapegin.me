@@ -79,7 +79,7 @@ I can’t promise that the project will evolve the way you want it to, or that i
 
 And please don’t at-mention me anywhere, that blue dot makes me too anxious.
 
-_R’amen, Artem_
+_R’amen,<br/>Artem_
 
 ---
 
