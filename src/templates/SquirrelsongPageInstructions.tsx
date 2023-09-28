@@ -195,8 +195,8 @@ export const instructions: Instructions[] = [
 		comment:
 			'Also works for Microsoft Edge, and other Chromium-based browsers.',
 		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/Chrome#readme',
-		urlName: 'GitHub',
+			'https://chrome.google.com/webstore/detail/squirrelsong-light-theme/djifnfnaealajnoccbifhbgmkholgljn',
+		urlName: 'Chrome Web Store',
 	},
 
 	/**
