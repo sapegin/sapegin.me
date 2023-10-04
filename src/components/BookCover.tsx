@@ -1,24 +1,21 @@
 import { Box } from '.';
 import { bookCover } from './BookCover.css';
 
-const TITLES = {
-	'washing-your-code': 'Washing your code',
-	'survivejs-maintenance': 'SurviveJS: Maintenance',
-};
-
 type Props = {
-	book: 'washing-your-code' | 'survivejs-maintenance';
-	variant?: 'small' | 'large';
+	title: string;
+	image: string;
+	width?: number;
+	height?: number;
 };
 
-export function BookCover({ book, variant = 'small' }: Props) {
+export function BookCover({ title, image, width = 150, height = 194 }: Props) {
 	return (
 		<Box className={bookCover}>
 			<img
-				src={`/images/${book}-cover-${variant}.webp`}
-				width={variant === 'large' ? 250 : 150}
-				height={variant === 'large' ? 324 : 194}
-				alt={`${TITLES[book]} book cover`}
+				src={`/images/covers/${image}.jpg`}
+				width={width}
+				height={height}
+				alt={`${title} book cover`}
 			/>
 		</Box>
 	);

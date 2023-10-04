@@ -21,7 +21,24 @@ const til = defineCollection({
 	schema: baseSchema,
 });
 
+// Zines
+const zines = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		cover: z.string(),
+		video: z.string().optional(),
+		shop: z.string().optional(),
+		meta: z.string(),
+		price: z.number().optional(),
+		available: z.boolean(),
+		preorder: z.boolean(),
+	}),
+});
+
 export const collections = {
 	blog,
 	til,
+	zines,
 };

@@ -9,7 +9,7 @@ export function BookLink({ book: { url, image, title, description } }: Props) {
 	return (
 		<QuotedLink key={url} href={url} display="block">
 			<Stack gap="m" direction="row">
-				<BookCover book={image as any} />
+				{image && <BookCover image={image} title={title} />}
 				<Stack direction="column" gap="s">
 					<Text as="u" variant="large">
 						{title}

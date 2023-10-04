@@ -79,7 +79,12 @@ export function BookPage({ url, chapters }: Props) {
 							</Stack>
 						</Stack>
 						<Box mx={{ mobile: 'auto', tablet: 0 }} order={[-1, null, 0]}>
-							<BookCover book="washing-your-code" variant="large" />
+							<BookCover
+								image="washing-your-code-large"
+								title="Washing your code"
+								width={250}
+								height={324}
+							/>
 						</Box>
 					</Stack>
 					<Stack gap="m">

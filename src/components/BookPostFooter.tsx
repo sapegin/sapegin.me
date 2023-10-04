@@ -13,7 +13,7 @@ export function BookPostFooter() {
 					</Text>
 				</Stack>
 				<Link href="/book/">
-					<BookCover book="washing-your-code" />
+					<BookCover image="washing-your-code" title="Washing your code" />
 				</Link>
 			</Stack>
 		</PostAddon>
