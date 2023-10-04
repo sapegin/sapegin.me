@@ -294,10 +294,7 @@ function Leather() {
 			</Expander>
 			<Text>
 				Check out my digital leather patterns{' '}
-				<Link href="https://www.etsy.com/de-en/shop/KlatzLeatherGoods">
-					on Etsy
-				</Link>
-				.
+				<Link href="https://klatzleathergoods.etsy.com/">on Etsy</Link>.
 			</Text>
 		</Stack>
 	);
