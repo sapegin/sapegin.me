@@ -5,7 +5,6 @@ import {
 	SITE_TITLE,
 	SITE_DESCRIPTION,
 } from '../constants';
-import SocialImage from './SocialImage.astro';
 
 export type Props = {
 	title?: string;
@@ -17,6 +16,9 @@ const { title = '', url = '/', description = SITE_DESCRIPTION } = Astro.props;
 
 const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');
 const canonicalUrl = `${SITE_URL}${url}`;
+
+const imagePath = url.replace(/\/$/, '.png');
+const imageUrl = `${SITE_URL}/cards/src/content${imagePath}`;
 ---
 
 <meta charset="utf-8" />
@@ -56,4 +58,8 @@ const canonicalUrl = `${SITE_URL}${url}`;
 	as="font"
 	type="font/woff2"
 />
-{isBlogPost && <SocialImage title={title} url={url} />}
+{isBlogPost && (
+	<meta property="og:image" content={imageUrl} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content={imageUrl} />
+)}
