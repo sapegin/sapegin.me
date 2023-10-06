@@ -11,14 +11,16 @@ export const postContent = style([
 	{},
 ]);
 
-globalStyle(`${postContent} ol`, {
+// HACK: Increase specificity to override post content styles (Astro production
+// build imports CSS in a different order)
+globalStyle(`${postContent}${postContent} ol`, {
 	marginLeft: 0,
 });
 
-globalStyle(`${postContent} ul > li`, {
+globalStyle(`${postContent}${postContent} ul > li`, {
 	paddingLeft: '1em',
 });
-globalStyle(`${postContent} ul > li::before`, {
+globalStyle(`${postContent}${postContent} ul > li::before`, {
 	content: '',
 	top: '.5em',
 	left: '.1em',
@@ -32,7 +34,7 @@ globalStyle(`${postContent} ul > li::before`, {
 	},
 });
 
-globalStyle(`${postContent} hr`, {
+globalStyle(`${postContent}${postContent} hr`, {
 	textAlign: 'center',
 	backgroundColor: 'transparent',
 	border: 'none',

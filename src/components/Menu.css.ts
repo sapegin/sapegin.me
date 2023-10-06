@@ -15,7 +15,13 @@ export const menu = style({
 });
 
 export const link = style({
-	textDecoration: 'none',
+	selectors: {
+		// HACK: Increase specificity to override Link styles (Astro production
+		// build imports CSS in a different order)
+		'&&': {
+			textDecoration: 'none',
+		},
+	},
 });
 
 export const active = style({
