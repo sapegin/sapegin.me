@@ -1,7 +1,8 @@
 ---
 import { SITE_URL } from '../constants';
 
-const imageUrl = `${SITE_URL}/cards/src/content${Astro.props.url}`;
+const imagePath = Astro.props.url.replace(/\/$/, '.png');
+const imageUrl = `${SITE_URL}/cards/src/content${imagePath}`;
 ---
 
 <meta property="og:image" content={imageUrl} />
