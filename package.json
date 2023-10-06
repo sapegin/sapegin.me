@@ -38,10 +38,11 @@
     "@vanilla-extract/sprinkles": "^1.6.1",
     "@vanilla-extract/vite-plugin": "^3.8.2",
     "astro": "^3.0.5",
+    "astro-og-canvas": "^0.2.1",
     "clsx": "^2.0.0",
     "csstype": "^3.1.2",
+    "hex-rgb": "^5.0.0",
     "image-size": "^1.0.2",
-    "jimp": "^0.22.8",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "react": "^18.2.0",
@@ -53,8 +54,7 @@
     "sanitize-html": "^2.11.0",
     "strip-json-comments": "^5.0.1",
     "typescript": "^5.2.2",
-    "unist-util-visit": "^5.0.0",
-    "wasm-twitter-card": "^0.3.0"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",

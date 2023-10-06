@@ -1,9 +1,7 @@
 ---
 import { SITE_URL } from '../constants';
-import { generateSocialImage, type Props } from '../util/generateSocialImage';
 
-const imageFilepath = await generateSocialImage(Astro.props);
-const imageUrl = imageFilepath.replace(/^public/, SITE_URL);
+const imageUrl = `${SITE_URL}/cards/src/content${Astro.props.url}`;
 ---
 
 <meta property="og:image" content={imageUrl} />
