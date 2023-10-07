@@ -109,8 +109,8 @@ contact_links:
   - name: Get help
     url: https://github.com/sapegin/mrm/discussions/new?category=q-a
     about: >
-      If you can’t get something to work the way you expect,
-      open a question in our discussion forums.
+      If you can’t get something to work the way you expect, open a question in our discussion forums.
+
   - name: Report a bug
     url: https://github.com/sapegin/mrm/discussions/new?category=bugs
     about: >
