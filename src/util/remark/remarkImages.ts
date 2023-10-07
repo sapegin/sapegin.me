@@ -1,6 +1,6 @@
 import path from 'path';
 import { visit } from 'unist-util-visit';
-import type { Root, Image, HTML } from 'mdast';
+import type { Root, Image, Html } from 'mdast';
 import sizeOf from 'image-size';
 
 /*
@@ -22,7 +22,7 @@ export default function remarkImages() {
 
 			const img = `<img src="${node.url}" alt="${node.alt}" width="${width}" height="${height}" loading="lazy" />`;
 
-			(node as unknown as HTML).value = img;
-			(node as unknown as HTML).type = 'html';
+			(node as unknown as Html).value = img;
+			(node as unknown as Html).type = 'html';
 		});
 }

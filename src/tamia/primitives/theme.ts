@@ -96,8 +96,4 @@ export const theme = {
 		contentPaddingX: space.m,
 		contentPaddingY: space.m,
 	},
-} as const;
-
-// HACK: Enable type checking. Typing `theme` directly would cancel `as const`
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const typedTheme: Theme = theme;
+} as const satisfies Theme;

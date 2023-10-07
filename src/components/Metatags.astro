@@ -58,8 +58,12 @@ const imageUrl = `${SITE_URL}/cards/src/content${imagePath}`;
 	as="font"
 	type="font/woff2"
 />
-{isBlogPost && (
-	<meta property="og:image" content={imageUrl} />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content={imageUrl} />
-)}
+{
+	isBlogPost && (
+		<>
+			<meta property="og:image" content={imageUrl} />
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:image" content={imageUrl} />
+		</>
+	)
+}

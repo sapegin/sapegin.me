@@ -6,14 +6,13 @@
   "scripts": {
     "start": "astro dev",
     "prebuild": "npm run sync",
-    "build": "astro check && npm run typecheck && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint . --cache --fix",
-    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js,.ts,.tsx,.astro --cache --fix",
     "format": "prettier --log-level warn --write \"**/*.{js,ts,tsx,astro,md}\"",
     "pretest": "npm run lint",
-    "test": "astro check && npm run typecheck",
+    "test": "astro check",
     "sync": "node scripts/sync-til.js; node scripts/sync-book.js; tsx scripts/sync-squirrelsong.ts",
     "posttest": "npm run format"
   },
@@ -77,6 +76,6 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx,astro,md}": "prettier --write",
-    "*.{js,ts,tsx}": "eslint --cache --fix"
+    "*.{js,ts,tsx,astro}": "eslint --cache --fix"
   }
 }

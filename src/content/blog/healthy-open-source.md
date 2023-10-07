@@ -111,6 +111,7 @@ contact_links:
     about: >
       If you can’t get something to work the way you expect, open a question in our discussion forums.
 
+
   - name: Report a bug
     url: https://github.com/sapegin/mrm/discussions/new?category=bugs
     about: >

@@ -1,5 +1,5 @@
 import { visit } from 'unist-util-visit';
-import type { Root, Text, HTML } from 'mdast';
+import type { Root, Text, Html } from 'mdast';
 import richtypo from 'richtypo';
 import rules from 'richtypo-rules-en';
 
@@ -18,7 +18,7 @@ export default function remarkRichtypo() {
 			node.value = richtypo(rules, node.value);
 
 			if (node.value.includes('<') || node.value.includes('&#')) {
-				(node as unknown as HTML).type = 'html';
+				(node as unknown as Html).type = 'html';
 			}
 		});
 }

@@ -16,12 +16,12 @@ export const colors = {
 export const theme = {
 	...defaultTheme,
 	baseFontSize: '1.125em',
+	listMargin: '0',
 	page: {
 		textMaxWidth: '40rem',
 		contentPaddingX: defaultTheme.space.m,
 		contentPaddingY: '4vh',
 		contentMaxWidth: '52rem',
-		listMargin: '0',
 	},
 	colors,
 	fonts: {
@@ -62,9 +62,6 @@ export const theme = {
 		default: '2px',
 		large: '3px',
 	},
-} as const;
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const typedTheme: Theme = theme;
+} as const satisfies Theme;
 
 export const [themeClass, vars] = createTheme(theme);
