@@ -41,6 +41,7 @@ export { Menu } from './Menu';
 export { MurderOfCrows } from './MurderOfCrows';
 export { Nobr } from './Nobr';
 export { OrderedList, OrderedListItem } from './OrderedList';
+export { Photo } from './Photo';
 export { PostAddon } from './PostAddon';
 export { PostContent } from './PostContent';
 export { PostList } from './PostList';

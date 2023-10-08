@@ -1,0 +1,38 @@
+---
+import { orderBy } from 'lodash';
+import Layout from '../../layouts/Layout.astro';
+import { GalleryPage, type Image } from '../../templates/GalleryPage';
+
+type ImageRaw = {
+	default: {
+		src: string;
+		width: number;
+		height: number;
+		format: 'jpg';
+	};
+};
+
+const unwrap = (x: ImageRaw): Image => ({
+	url: x.default.src.replace(/^.*\/public(.*)\?.*$/, '$1'),
+	width: x.default.width,
+	height: x.default.height,
+});
+
+const photosRaw = await Astro.glob<ImageRaw>(
+	'../../../public/images/photos/*.{jpg,webp}'
+);
+const photos = orderBy(photosRaw.map(unwrap), ['url'], ['desc']);
+---
+
+<Layout
+	url="/photos/favorites/"
+	title="Favorite photos"
+	pageTitle="Favorite photos by Artem Sapegin"
+	description="TODO"
+>
+	<GalleryPage
+		url="/photos/favorites/"
+		title="Favorite photos"
+		photos={photos}
+	/>
+</Layout>
