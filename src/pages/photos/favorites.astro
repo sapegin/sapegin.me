@@ -1,5 +1,5 @@
 ---
-import { orderBy } from 'lodash';
+import _ from 'lodash';
 import Layout from '../../layouts/Layout.astro';
 import { GalleryPage, type Image } from '../../templates/GalleryPage';
 
@@ -21,7 +21,7 @@ const unwrap = (x: ImageRaw): Image => ({
 const photosRaw = await Astro.glob<ImageRaw>(
 	'../../../public/images/photos/*.{jpg,webp}'
 );
-const photos = orderBy(photosRaw.map(unwrap), ['url'], ['desc']);
+const photos = _.orderBy(photosRaw.map(unwrap), ['url'], ['desc']);
 ---
 
 <Layout
