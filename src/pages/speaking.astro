@@ -41,11 +41,6 @@ const pastEvents = getPastEvents(allEvents);
 	url="/speaking/"
 	title="Speaking"
 	pageTitle="Artem Sapegin is speaking: conference talks and workshops"
->
-	<SpeakingPage
-		url="/speaking/"
-		title="Speaking"
-		upcomingEvents={upcomingEvents}
-		pastEvents={pastEvents}
-	/>
-</Layout>
+	component={SpeakingPage}
+	props={{ upcomingEvents, pastEvents }}
+/>

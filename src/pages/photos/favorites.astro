@@ -29,10 +29,6 @@ const photos = _.orderBy(photosRaw.map(unwrap), ['url'], ['desc']);
 	title="Favorite photos"
 	pageTitle="Favorite photos by Artem Sapegin"
 	description="TODO"
->
-	<GalleryPage
-		url="/photos/favorites/"
-		title="Favorite photos"
-		photos={photos}
-	/>
-</Layout>
+	component={GalleryPage}
+	props={{ photos }}
+/>

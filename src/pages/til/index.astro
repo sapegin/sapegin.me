@@ -22,11 +22,9 @@ const postsByCategory = groupByCategory(posts);
 const categories = getCategories(postsByCategory);
 ---
 
-<Layout url="/til/" title="Today I learned">
-	<TilPage
-		url="/til/"
-		title="Today I learned"
-		postsByCategory={postsByCategory}
-		categories={categories}
-	/>
-</Layout>
+<Layout
+	url="/til/"
+	title="Today I learned"
+	component={TilPage}
+	props={{ postsByCategory, categories }}
+/>

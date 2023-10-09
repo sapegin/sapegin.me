@@ -3,13 +3,12 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { ZinePage } from '../templates/ZinePage';
 
-const entries = await getCollection('zines');
+const issues = await getCollection('zines');
 ---
 
-<Layout url="/zine/" title="From dawn till coffee photography zine">
-	<ZinePage
-		url="/zine/"
-		title="From dawn till coffee photography zine"
-		issues={entries}
-	/>
-</Layout>
+<Layout
+	url="/zine/"
+	title="From dawn till coffee photography zine"
+	component={ZinePage}
+	props={{ issues }}
+/>

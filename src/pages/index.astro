@@ -94,13 +94,14 @@ const projects: Resource[] = [
 ];
 ---
 
-<Layout>
-	<MainPage
-		url="/"
-		blogPosts={blogPosts}
-		tilPosts={tilPosts}
-		books={books}
-		writing={writing}
-		projects={projects}
-	/>
-</Layout>
+<Layout
+	url="/"
+	component={MainPage}
+	props={{
+		blogPosts,
+		tilPosts,
+		books,
+		writing,
+		projects,
+	}}
+/>

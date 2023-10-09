@@ -22,6 +22,12 @@ const postsByYear = groupByYear(posts);
 const years = getYears(postsByYear);
 ---
 
-<Layout url="/blog/" title="Blog">
-	<BlogPage url="/blog/" title="Blog" postsByYear={postsByYear} years={years} />
-</Layout>
+<Layout
+	url="/blog/"
+	title="Blog"
+	component={BlogPage}
+	props={{
+		postsByYear,
+		years,
+	}}
+/>

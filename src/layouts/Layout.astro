@@ -3,15 +3,23 @@ import { themeClass } from '../styles/theme.css';
 import '../styles/code.css';
 import { SITE_TITLE } from '../constants';
 import Metatags from '../components/Metatags.astro';
+import type { ComponentType } from 'react';
 
-export interface Props {
+export interface Props<P> {
 	url?: string;
 	title?: string;
 	pageTitle?: string;
 	description?: string;
+	component: ComponentType<P>;
+	props: Omit<P, 'title' | 'url'>;
 }
 
-const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
+const { component: Page } = Astro.props;
+
+const getTitle = ({
+	title,
+	pageTitle,
+}: Pick<Props<any>, 'title' | 'pageTitle'>) => {
 	if (pageTitle) {
 		return pageTitle;
 	}
@@ -31,7 +39,9 @@ const getTitle = ({ title, pageTitle }: Pick<Props, 'title' | 'pageTitle'>) => {
 		<Metatags {...Astro.props} />
 	</head>
 	<body class={themeClass}>
-		<slot />
+		<Page {...Astro.props.props} {...Astro.props}>
+			<slot />
+		</Page>
 		{
 			import.meta.env.PROD && (
 				<script
