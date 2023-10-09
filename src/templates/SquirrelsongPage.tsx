@@ -15,6 +15,8 @@ import {
 	OrderedListItem,
 	Grid,
 	Box,
+	Typo,
+	TextTypo,
 } from '../components';
 import { Page } from './Page';
 import {
@@ -100,45 +102,45 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 			<VisuallyHidden as="h2">Features</VisuallyHidden>
 			<Stack gap="s">
 				<Heading level={3}>Low contrast with great readability</Heading>
-				<Text>
+				<TextTypo>
 					Most themes, especially dark ones, have very high-contrast which makes
 					them tiring for the eyes. Squirrelsong themes are low-contrast but
 					still provide enough color and style variety to distinguish various
 					elements of the code and avoid long chains of code printed in the same
 					style.
-				</Text>
+				</TextTypo>
 				<CodeSpread codes={codes} name="intro" />
 			</Stack>
 			<Stack gap="s">
 				<Heading level={3}>Made for web developers</Heading>
-				<Text>
+				<TextTypo>
 					Carefully crafted syntax highlighting for JavaScript, TypeScript,
 					HTML, CSS, Sass, styled-components, Markdown, JSON, XML, React, and
 					Astro. Also, works well with PHP, Python, Ruby, Rust, Java, Swift,
 					etc.
-				</Text>
+				</TextTypo>
 				<CodeSpreadSupreme codes={codes} names={['html', 'css', 'json']} />
 			</Stack>
 			<Stack gap="s">
 				<Heading level={3}>Monochrome Markdown styles</Heading>
-				<Text>
+				<TextTypo>
 					Inspired by iA Writer, Markdown is styled in shades of gray to avoid
 					distractions while writing your next blog post, documentation, or
 					book.
-				</Text>
+				</TextTypo>
 				<CodeSpread codes={codes} name="markdown" />
 			</Stack>
 			<Stack gap="s">
 				<Heading level={3}>
 					Consistent highlighting of different programming languages
 				</Heading>
-				<Text>
+				<TextTypo>
 					Colors and styles are consistent among different programming
 					languages: for example, <code>this</code> in TypeScript is styled the
 					same way as <code>$this</code> in PHP and <code>self</code> in Python
 					or Rust. HTML looks the same as JSX in React or markup in Astro
 					components.
-				</Text>
+				</TextTypo>
 				<CodeSpreadSupreme
 					codes={codes}
 					names={['typescript', 'php', 'python']}
@@ -146,10 +148,10 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 			</Stack>
 			<Stack gap="s">
 				<Heading level={3}>Non-distracting UI</Heading>
-				<Text>
+				<TextTypo>
 					Custom UI for Visual Studio Code, JetBrains IDEs, and other apps
 					without oversaturated bright colors to keep you focused on your code.
-				</Text>
+				</TextTypo>
 				<Grid auto="wide" gap="m">
 					<Box style={{ objectFit: 'cover', overflow: 'hidden' }}>
 						<img
@@ -177,7 +179,9 @@ function Installation() {
 	return (
 		<Stack gap="l" id="download">
 			<Stack gap="s">
-				<Heading level={2}>Get it for your editor, terminal, or app</Heading>
+				<Heading level={2}>
+					Get it for your editor, terminal, or&nbsp;app
+				</Heading>
 				<Text>
 					<Group separator=", ">
 						{instructions.map((app) => (

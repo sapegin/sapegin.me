@@ -1,7 +1,6 @@
 import { visit } from 'unist-util-visit';
 import type { Root, Text, Html } from 'mdast';
-import richtypo from 'richtypo';
-import rules from 'richtypo-rules-en';
+import typo from '../typo';
 
 /*
  * Enhance typography.
@@ -15,7 +14,7 @@ import rules from 'richtypo-rules-en';
 export default function remarkRichtypo() {
 	return (tree: Root) =>
 		visit(tree, 'text', (node: Text) => {
-			node.value = richtypo(rules, node.value);
+			node.value = typo(node.value);
 
 			if (node.value.includes('<') || node.value.includes('&#')) {
 				(node as unknown as Html).type = 'html';

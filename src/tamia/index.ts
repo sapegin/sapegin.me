@@ -9,6 +9,7 @@ export { Link } from './components/Link';
 export { QuotedLink } from './components/QuotedLink';
 export { Stack } from './components/Stack';
 export { TextContent } from './components/TextContent';
+export { Typo } from './components/Typo';
 export { VisuallyHidden } from './components/VisuallyHidden';
 
 export { createTheme } from './primitives/createTheme';

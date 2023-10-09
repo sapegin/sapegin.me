@@ -1,6 +1,7 @@
 export {
 	Box,
 	Container,
+	Expander,
 	Flex,
 	Grid,
 	Image,
@@ -8,8 +9,8 @@ export {
 	QuotedLink,
 	Stack,
 	TextContent,
+	Typo,
 	VisuallyHidden,
-	Expander,
 } from '../tamia';
 export { About } from './About';
 export { Badge } from './Badge';
@@ -52,3 +53,4 @@ export { SquirelsongLogo } from './SquirelsongLogo';
 export { Subscription } from './Subscription';
 export { SubscriptionForm } from './SubscriptionForm';
 export { Text } from './Text';
+export { TextTypo } from './TextTypo';

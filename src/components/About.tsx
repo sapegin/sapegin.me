@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Box, Stack, Heading, Text } from '../components';
+import { Box, Stack, Heading, Text, TextTypo } from '../components';
 
 type Props = {
 	children: ReactNode;
@@ -21,14 +21,14 @@ export function About({ children }: Props) {
 				<Stack gap="m">
 					<Heading level={2}>About the author</Heading>
 					<Text>Hola! I’m Artem.</Text>
-					<Text>
+					<TextTypo>
 						I’m a software engineer with 20 years of experience in small
 						startups and large corporations, like Wayfair, Mail.ru, Here
 						Technologies, Omio, and Badoo, I created React Styleguidist (a tool
 						to create React components and share them with your team), among
 						many other open source projects.
-					</Text>
-					<Text>{children}</Text>
+					</TextTypo>
+					<TextTypo>{children}</TextTypo>
 				</Stack>
 			</Stack>
 		</Stack>

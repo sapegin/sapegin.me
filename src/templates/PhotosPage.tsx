@@ -7,6 +7,7 @@ import {
 	Link,
 	Image,
 	Expander,
+	TextTypo,
 } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -23,20 +24,17 @@ function Intro() {
 	return (
 		<Stack as="section" gap="m">
 			<Stack gap="m">
-				<Text variant="intro">
-					I love to&nbsp;make photos of&nbsp;nature, cities,{' '}
-					<Link href="https://tacohuaco.co/">food</Link>, and&nbsp;sometimes
-					people, or&nbsp;animals. I&nbsp;equally enjoy making quick snaps with
-					my&nbsp;iPhone, and&nbsp;waiting for&nbsp;minute-long exposures with
-					a&nbsp;big&nbsp;camera on&nbsp;a&nbsp;tripod. I&nbsp;love dawn
-					and&nbsp;mornings, and always have my&nbsp;reusable coffee mug
-					or&nbsp;a&nbsp;thermos full of&nbsp;fresh coffee with&nbsp;me.
-					I&nbsp;prefer quiet colors and&nbsp;subtle editing. However,
-					I&nbsp;don’t try to&nbsp;portray the world as&nbsp;it&nbsp;is,
-					I’m&nbsp;more interested in&nbsp;showing the&nbsp;hidden side
-					of&nbsp;the&nbsp;world&nbsp;— the&nbsp;one that’s full of&nbsp;beauty,
-					magic, and with a&nbsp;unicorn hiding behind that&nbsp;tree.
-				</Text>
+				<TextTypo variant="intro">
+					I love to make photos of nature, cities,{' '}
+					<Link href="https://tacohuaco.co/">food</Link>, and sometimes people,
+					or animals. I equally enjoy making quick snaps with my iPhone, and
+					waiting for minute-long exposures with a big camera on a tripod. I
+					love dawn and mornings, and always have my reusable coffee mug or a
+					thermos full of fresh coffee with me. I prefer quiet colors and subtle
+					editing. However, I don’t try to portray the world as it is, I’m more
+					interested in showing the hidden side of the world — the one that’s
+					full of beauty, magic, and with a unicorn hiding behind that tree.
+				</TextTypo>
 			</Stack>
 		</Stack>
 	);
