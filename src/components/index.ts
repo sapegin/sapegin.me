@@ -51,6 +51,5 @@ export { RelatedPosts } from './RelatedPosts';
 export { ResourceList } from './ResourceList';
 export { SquirelsongLogo } from './SquirelsongLogo';
 export { Subscription } from './Subscription';
-export { SubscriptionForm } from './SubscriptionForm';
 export { Text } from './Text';
 export { TextTypo } from './TextTypo';

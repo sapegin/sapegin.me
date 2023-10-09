@@ -8,6 +8,7 @@ import {
 	Image,
 	Expander,
 	TextTypo,
+	Subscription,
 } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -15,10 +16,6 @@ type Props = {
 	url: string;
 	title: string;
 };
-
-// TODO: Add subscription form
-
-// TODO: Text component can do typography automatically
 
 function Intro() {
 	return (
@@ -109,6 +106,7 @@ export function PhotosPage({ url, title }: Props) {
 				<Intro />
 				<Gallery />
 				<Zine />
+				<Subscription list="photo" />
 			</Stack>
 		</PageWithTitle>
 	);

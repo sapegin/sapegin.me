@@ -39,9 +39,7 @@ export function PostPage({
 					</footer>
 				</Stack>
 				<MurderOfCrows />
-				<aside aria-label="Newsletter">
-					<Subscription />
-				</aside>
+				<Subscription />
 				{related.length > 0 && (
 					<aside aria-label="Related posts">
 						<RelatedPosts posts={related} />

@@ -1,17 +1,36 @@
-import { Stack, Heading, Text, SubscriptionForm } from '.';
+import { Stack, Heading, TextTypo } from '.';
 
-export function Subscription() {
+type Props = {
+	list?: 'default' | 'photo';
+};
+
+export function Subscription({ list = 'default' }: Props) {
+	const substackId = list === 'default' ? 'sapegin' : 'morningphotos';
+	const iframeUrl = `https://${substackId}.substack.com/embed`;
 	return (
-		<Stack gap="m">
+		<Stack as="aside" gap="m" aria-label="Newsletter">
 			<Heading as="h2" level={3}>
 				Join the newsletter
 			</Heading>
-			<Text>
-				Enjoyed the article? Subscribe to get my latest articles, books, and
-				other content on testing, design systems, accessibility, and everything
-				frontend into your inbox. <i>No spam, unsubscribe at any time.</i>
-			</Text>
-			<SubscriptionForm />
+			<TextTypo>
+				{list === 'default' ? (
+					<>
+						Enjoyed the article? Subscribe to get my latest articles, books, and
+						other content on testing, design systems, accessibility, and
+						everything frontend into your inbox.
+						<br />
+						<i>No spam, unsubscribe at any time.</i>
+					</>
+				) : (
+					<>
+						Like my photos? Subscribe to get news about my photography projects,
+						zines, and so on into your inbox.
+						<br />
+						<i>No spam, very rare, unsubscribe at any time.</i>
+					</>
+				)}
+			</TextTypo>
+			<iframe src={iframeUrl} width="100%" height="320" loading="lazy" />
 		</Stack>
 	);
 }

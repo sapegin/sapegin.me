@@ -7,6 +7,7 @@ import {
 	Heading,
 	TextContent,
 	BookCover,
+	Subscription,
 } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -89,6 +90,7 @@ export function ZinePage({ url, title, issues }: Props) {
 						</Stack>
 					);
 				})}
+				<Subscription list="photo" />
 			</Stack>
 		</PageWithTitle>
 	);
