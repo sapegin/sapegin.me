@@ -106,7 +106,7 @@ However, I kept trying until I read Cal Newport’s book [Digital minimalism](ht
 
 I’ve tried many places to share my photography: 500px, [Instagram](http://instagram.com/sapegin/), [Unsplash](https://unsplash.com/@sapegin), and ended up buying photography books and publishing [my own photo zine](https://morning.photos/zine). And [my site](https://morning.photos/) now is the only place to see my photos online.
 
-![My photography zine](/images/offline-zine.jpg)
+![My photography zine](/images/zine.jpg)
 
 I try to limit my usage of social networks to a minimum and set up some rules for myself to limit mindless browsing and checking the feed every five minutes. For now, these networks and rules are:
 

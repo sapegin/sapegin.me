@@ -318,6 +318,7 @@ function BestViewed() {
 		</Stack>
 	);
 }
+
 export function MainPage({
 	url,
 	blogPosts,

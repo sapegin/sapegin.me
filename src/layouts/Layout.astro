@@ -11,7 +11,7 @@ export interface Props<P> {
 	pageTitle?: string;
 	description?: string;
 	component: ComponentType<P>;
-	props: Omit<P, 'title' | 'url'>;
+	props?: Omit<P, 'title' | 'url'>;
 }
 
 const { component: Page } = Astro.props;
