@@ -15,7 +15,6 @@ import {
 	OrderedListItem,
 	Grid,
 	Box,
-	Typo,
 	TextTypo,
 } from '../components';
 import { Page } from './Page';
