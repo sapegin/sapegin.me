@@ -9,7 +9,7 @@ const parser = new MarkdownIt();
 
 const NUM_POSTS = 20;
 
-export async function get() {
+export async function GET() {
 	const blogEntries = await getCollection('blog');
 	const tilEntries = await getCollection('til');
 	const entries = _.sortBy(
