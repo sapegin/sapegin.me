@@ -74,7 +74,7 @@ function Gallery() {
 				</Grid>
 			</Expander>
 			<Text>
-				<Link href="/photos/favorites">See my favorite photos</Link>.
+				<Link href="/photos/favorites/">See my favorite photos</Link>.
 			</Text>
 		</Stack>
 	);
@@ -93,7 +93,7 @@ function Zine() {
 				/>
 			</Expander>
 			<Text>
-				<Link href="/photos/zine">Check out my photography zine</Link>.
+				<Link href="/photos/zine/">Check out my photography zine</Link>.
 			</Text>
 		</Stack>
 	);
