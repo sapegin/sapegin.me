@@ -27,6 +27,7 @@ export { EventName } from './EventName';
 export { Feedback } from './Feedback';
 export { Footer } from './Footer';
 export { FormattedDate } from './FormattedDate';
+export { FullWidth } from './FullWidth';
 export { Header } from './Header';
 export { Heading } from './Heading';
 export { Hola } from './Hola';

@@ -21,14 +21,32 @@ const unwrap = (x: ImageRaw): Image => ({
 const photosRaw = await Astro.glob<ImageRaw>(
 	'../../../public/images/photos/*.{jpg,webp}'
 );
-const photos = _.orderBy(photosRaw.map(unwrap), ['url'], ['desc']);
+
+// Sort by date (all photos MUST BE named as YYYY-MM-DD_xxx)
+const allPhotos = _.orderBy(photosRaw.map(unwrap), ['url'], ['desc']);
+
+// Group by aspect ratio, but keep all horizontal photos in a single group
+const photosByAspectRatio = _.groupBy(allPhotos, (x) => {
+	const aspectRatio = x.width / x.height;
+	return aspectRatio < 1 ? aspectRatio : 0;
+});
+
+// Split each group of vertical photos into pairs
+const photoPairs = Object.entries(photosByAspectRatio)
+	.map(([aspectRatio, photos]) => {
+		return _.chunk(photos, aspectRatio === '0' ? 1 : 2);
+	})
+	.flat(1);
+
+// Sort by the date of the first photo in the pair
+const sortedPhotos = _.orderBy(photoPairs, [(x) => x[0].url], ['desc']);
 ---
 
 <Layout
 	url="/photos/favorites/"
 	title="Favorite photos"
 	pageTitle="Favorite photos by Artem Sapegin"
-	description="TODO"
+	description="Artem Sapegin’s favorite photos: landscapes, travel, cityscapes, nature, street"
 	component={GalleryPage}
-	props={{ photos }}
+	props={{ photos: sortedPhotos }}
 />
