@@ -14,7 +14,8 @@ export function Footer() {
 				<Link href="https://tamiadev.github.io/tamia/">Tâmia</Link>, hosted on{' '}
 				<Link href="https://www.netlify.com/">Netlify</Link>.{' '}
 				<Link href="https://github.com/sapegin/sapegin.me">Source code</Link>.{' '}
-				<Link href="/atom.xml">RSS</Link>
+				RSS: <Link href="/atom.xml">blog</Link>,{' '}
+				<Link href="/photos/atom.xml">photos</Link>
 			</Text>
 		</footer>
 	);

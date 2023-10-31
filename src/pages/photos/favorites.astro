@@ -1,29 +1,16 @@
 ---
 import _ from 'lodash';
 import Layout from '../../layouts/Layout.astro';
-import { GalleryPage, type Image } from '../../templates/GalleryPage';
-
-type ImageRaw = {
-	default: {
-		src: string;
-		width: number;
-		height: number;
-		format: 'jpg';
-	};
-};
-
-const unwrap = (x: ImageRaw): Image => ({
-	url: x.default.src.replace(/^.*\/public(.*)\?.*$/, '$1'),
-	width: x.default.width,
-	height: x.default.height,
-});
+import { GalleryPage } from '../../templates/GalleryPage';
+import type { ImageRaw } from '../../types/Image';
+import { unwrapImage } from '../../util/unwrapImage';
 
 const photosRaw = await Astro.glob<ImageRaw>(
 	'../../../public/images/photos/*.{jpg,webp}'
 );
 
 // Sort by date (all photos MUST BE named as YYYY-MM-DD_xxx)
-const allPhotos = _.orderBy(photosRaw.map(unwrap), ['url'], ['desc']);
+const allPhotos = _.orderBy(photosRaw.map(unwrapImage), ['url'], ['desc']);
 
 // Group by aspect ratio, but keep all horizontal photos in a single group
 const photosByAspectRatio = _.groupBy(allPhotos, (x) => {

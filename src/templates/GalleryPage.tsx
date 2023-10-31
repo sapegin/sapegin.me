@@ -1,11 +1,6 @@
-import { Stack, Photo, Expander, Box, Flex, FullWidth } from '../components';
+import { Stack, Photo, Expander, Flex, FullWidth } from '../components';
 import { PageWithTitle } from './PageWithTitle';
-
-export type Image = {
-	url: string;
-	width: number;
-	height: number;
-};
+import { type Image } from '../types/Image';
 
 type Props = {
 	url: string;
