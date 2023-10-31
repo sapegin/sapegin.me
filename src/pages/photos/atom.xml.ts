@@ -3,6 +3,7 @@ import rss from '@astrojs/rss';
 import { SITE_URL } from '../../constants';
 import type { Image, ImageRaw } from '../../types/Image';
 import { unwrapImage } from '../../util/unwrapImage';
+import { getPhotoId } from '../../util/getPhotoId';
 
 const PHOTOS_PAGE_URL = `${SITE_URL}/photos`;
 
@@ -30,6 +31,10 @@ function getPubDate(photo: Image) {
 		0
 	);
 }
+function getPermalink(photo: Image) {
+	const id = getPhotoId(photo.url);
+	return `${PHOTOS_PAGE_URL}/favorites/#${id}`;
+}
 
 export async function GET() {
 	const photosRaw = await import.meta.glob(
@@ -47,8 +52,7 @@ export async function GET() {
 			return {
 				title: '***',
 				pubDate: getPubDate(entry),
-				description: '',
-				link: PHOTOS_PAGE_URL,
+				link: getPermalink(entry),
 				content: `<img src="${SITE_URL}${entry.url}" alt="">`,
 			};
 		}),
