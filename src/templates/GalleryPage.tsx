@@ -1,4 +1,4 @@
-import { Stack, Photo, Expander, Flex, FullWidth } from '../components';
+import { Stack, Photo, Expander, Flex, FullWidth, Grid } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 import { type Image } from '../types/Image';
 import { getPhotoId } from '../util/getPhotoId';
@@ -14,11 +14,25 @@ export function GalleryPage({ url, title, photos }: Props) {
 		<PageWithTitle url={url} title={title}>
 			<FullWidth>
 				<Stack gap={{ mobile: 'xl', desktop: 'xxl' }}>
-					{photos.map((pair) => (
-						<Expander key={pair[0].url}>
+					{photos.map((pair) =>
+						pair.length === 1 ? (
+							<Flex
+								key={pair[0].url}
+								id={getPhotoId(pair[0].url)}
+								justifyContent="center"
+							>
+								<Photo
+									src={pair[0].url}
+									width={pair[0].width}
+									height={pair[0].height}
+									alt=""
+								/>
+							</Flex>
+						) : (
 							<Stack
-								direction={{ mobile: 'column', desktop: 'row' }}
-								gap={{ mobile: 'xl', desktop: 'm' }}
+								key={pair[0].url}
+								direction={{ mobile: 'column', tablet: 'row' }}
+								gap={{ mobile: 'xl', tablet: 'm' }}
 								justifyContent="center"
 							>
 								{pair.map((photo) => (
@@ -36,8 +50,8 @@ export function GalleryPage({ url, title, photos }: Props) {
 									</Flex>
 								))}
 							</Stack>
-						</Expander>
-					))}
+						)
+					)}
 				</Stack>
 			</FullWidth>
 		</PageWithTitle>
