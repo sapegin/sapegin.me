@@ -10,6 +10,7 @@ import {
 	Subscription,
 	Video,
 	Expander,
+	TextTypo,
 } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -25,12 +26,12 @@ export function ZinePage({ url, title, issues }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
 			<Stack gap="l">
-				<Text variant="intro">
+				<TextTypo variant="intro">
 					This is a zine with my photos that I publish to share my work and
 					reflect on my photography, kind of a better Instagram. I’m planning to
 					publish a new issue about once a year, each dedicated to a particular
 					theme.
-				</Text>
+				</TextTypo>
 				{issues.map(({ id, data: issue }) => {
 					return (
 						<Stack key={id} as="article" gap="m">
