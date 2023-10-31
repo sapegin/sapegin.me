@@ -161,8 +161,7 @@ function Photography() {
 				</Grid>
 			</Expander>
 			<Text>
-				See more photos on my{' '}
-				<Link href="https://morning.photos/">photography site</Link>.
+				See <Link href="/photos/">more of my photos</Link>.
 			</Text>
 		</Stack>
 	);

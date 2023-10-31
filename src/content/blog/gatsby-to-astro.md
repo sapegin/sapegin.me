@@ -232,7 +232,7 @@ Both require some learning and getting used to but the object notation now feels
 
 ## Conclusion
 
-I’ll definitely use Astro again, and going to rebuild at least [my photo gallery](https://morning.photos/) and possibly [our recipe site](https://tacohuaco.co/) from Gatsby to Astro.
+I’ll definitely use Astro again, and going to rebuild at least [my photo gallery](/photos/) and possibly [our recipe site](https://tacohuaco.co/) from Gatsby to Astro.
 
 I wish there was a better way to work with styles. Vanilla-extract does the job but the developer experience is far from great. [Let me know](https://mastodon.cloud/@sapegin), if I’m missing anything!
 

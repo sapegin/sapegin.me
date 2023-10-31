@@ -38,7 +38,7 @@ const ITEMS: Item[] = [
 	},
 	{
 		title: 'Photos',
-		href: 'https://morning.photos/',
+		href: '/photos/',
 	},
 ];
 

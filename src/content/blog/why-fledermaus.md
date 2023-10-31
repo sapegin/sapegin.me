@@ -8,7 +8,7 @@ tags:
   - projects
 ---
 
-For many years I was struggling every time I was using a someone else’s engine to build one of my sites. I’ve tried [WordPress](https://wordpress.com/), [Koken](http://koken.me/), [Aegea](http://blogengine.ru/), [Django](https://www.djangoproject.com/), [DocPad](http://docpad.org/) and [Hexo](https://hexo.io/). Now all my personal sites (this blog, [homepage](http://sapegin.me/) and [photo portfolio](http://morning.photos/)) work on my own static site generator — [Fledermaus](https://github.com/sapegin/fledermaus) — and I’ve never been more happy.
+For many years I was struggling every time I was using a someone else’s engine to build one of my sites. I’ve tried [WordPress](https://wordpress.com/), [Koken](http://koken.me/), [Aegea](http://blogengine.ru/), [Django](https://www.djangoproject.com/), [DocPad](http://docpad.org/) and [Hexo](https://hexo.io/). Now all my personal sites (this blog, [homepage](http://sapegin.me/) and [photo portfolio](/photos/)) work on my own static site generator — [Fledermaus](https://github.com/sapegin/fledermaus) — and I’ve never been more happy.
 
 It’s not my first engine:
 
@@ -30,7 +30,7 @@ But in that case the banana is half-eaten.
 
 With the Fledermaus I took a different approach. Actually it’s just a collection of useful functions that you can use to write your own static site generator: loading Markdown source files, documents filtering, grouping and sorting, pagination, internationalization, generating HTML pages and RSS, etc.
 
-You can combine them any way you want, add custom processing at any step, generate pages yourself. For example, in my photo gallery I read EXIF meta data from JPEG files and generate [pages](http://morning.photos/albums/dogs/2013-08-03-3733) and [albums](http://morning.photos/albums/dogs) based on this data.
+You can combine them any way you want, add custom processing at any step, generate pages yourself. For example, in my photo gallery I read EXIF meta data from JPEG files and generate pages (`/albums/dogs/2013-08-03-3733`) and albums (`/albums/dogs`) based on this data.
 
 It’s based on fancy modern things like ES6, JSX, Markdown and Intl.
 
