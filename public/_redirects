@@ -4,3 +4,7 @@ http://blog.sapegin.me/all/* https://sapegin.me/blog/:splat 301!
 https://blog.sapegin.me/all/* https://sapegin.me/blog/:splat 301!
 http://blog.sapegin.me/* https://sapegin.me/:splat 301!
 https://blog.sapegin.me/* https://sapegin.me/:splat 301!
+https://morning.photos/zine https://sapegin.me/photos/zine/ 301!
+https://morning.photos/albums* https://sapegin.me/photos/favorites/ 301!
+https://morning.photos/series* https://sapegin.me/photos/favorites/ 301!
+https://morning.photos/* https://sapegin.me/photos/ 301!
