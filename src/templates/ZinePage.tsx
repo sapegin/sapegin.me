@@ -8,6 +8,8 @@ import {
 	TextContent,
 	BookCover,
 	Subscription,
+	Video,
+	Expander,
 } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -68,15 +70,9 @@ export function ZinePage({ url, title, issues }: Props) {
 									) : (
 										<Text variant="bold">Sold out</Text>
 									)}
-									<iframe
-										width="560"
-										height="315"
-										src={issue.video}
-										title="YouTube video player"
-										frameBorder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowFullScreen
-									></iframe>
+									<Expander>
+										<Video src={issue.video} />
+									</Expander>
 								</Stack>
 								<Box mx={{ mobile: 'auto', tablet: 0 }} order={[-1, null, 0]}>
 									<BookCover

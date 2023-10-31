@@ -54,3 +54,4 @@ export { SquirelsongLogo } from './SquirelsongLogo';
 export { Subscription } from './Subscription';
 export { Text } from './Text';
 export { TextTypo } from './TextTypo';
+export { Video } from './Video';
