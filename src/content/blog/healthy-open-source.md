@@ -120,6 +120,8 @@ contact_links:
 
 In this issue template, `blank_issues_enabled` option does the magic of blocking the new issue page, and `contact_links` option defines the buttons that appear when the user tries to create a new issue. We could put a link to any site here, not just GitHub, for example [Let me Google that for you](https://letmegooglethat.com).
 
+**Sad note:** Unfortunately, [`blank_issues_enabled` options isn’t fully enforced](https://github.com/orgs/community/discussions/4951), and I already got a few issues from folks who think they are better than others...
+
 ![Creating new issue with a template on GitHub](/images/healthy-open-source-new-issue.png)
 
 ### 4. Unsubscribe from all notifications
