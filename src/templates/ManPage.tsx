@@ -97,7 +97,8 @@ export function ManPage({ url }: Props) {
 						</TextTypo>
 						<TextTypo>
 							Probably, I’ll decline a “quick” call right now or a request to
-							join an ongoing meeting. I need time to prepare myself for a call.
+							join an ongoing meeting. I need time to mentally prepare myself
+							for a call.
 						</TextTypo>
 						<TextTypo>
 							I’ll most likely don’t reply to a “hello” or “do you have a
