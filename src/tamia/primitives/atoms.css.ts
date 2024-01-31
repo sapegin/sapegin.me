@@ -65,6 +65,7 @@ export const responsiveProperties = defineProperties({
 		width: ['100%'],
 		minWidth: ['auto'],
 		maxWidth: ['100%'],
+		order: [-1, 0],
 	},
 	shorthands: {
 		gap: ['columnGap', 'rowGap'],

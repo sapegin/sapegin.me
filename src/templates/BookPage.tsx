@@ -79,7 +79,10 @@ export function BookPage({ url, chapters }: Props) {
 								<Text>Or read selected chapters below</Text>
 							</Stack>
 						</Stack>
-						<Box mx={{ mobile: 'auto', tablet: 0 }} order={[-1, null, 0]}>
+						<Box
+							mx={{ mobile: 'auto', tablet: 0 }}
+							order={{ mobile: -1, tablet: 0 }}
+						>
 							<BookCover
 								image="washing-your-code-large"
 								title="Washing your code"

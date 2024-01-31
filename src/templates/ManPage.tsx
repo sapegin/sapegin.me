@@ -1,4 +1,12 @@
-import { Box, Stack, Heading, Link, Image, TextTypo } from '../components';
+import {
+	Box,
+	Stack,
+	Heading,
+	Link,
+	Image,
+	TextTypo,
+	Expander,
+} from '../components';
 import { Page } from './Page';
 
 type Props = {
@@ -54,13 +62,18 @@ export function ManPage({ url }: Props) {
 									<Link href="https://tacohuaco.co/">recipes</Link>
 								</TextTypo>
 							</Stack>
-							<Box mx={{ mobile: 'auto', tablet: 0 }} order={[-1, null, 0]}>
-								<Image
-									src="/images/me-4.jpg"
-									alt="Artem Sapegin on the sea"
-									width={700}
-									height={700}
-								/>
+							<Box
+								mx={{ mobile: 'auto', tablet: 0 }}
+								order={{ mobile: -1, tablet: 0 }}
+							>
+								<Expander>
+									<Image
+										src="/images/me-4.jpg"
+										alt="Artem Sapegin on the sea"
+										width={700}
+										height={700}
+									/>
+								</Expander>
 							</Box>
 						</Stack>
 					</Stack>
@@ -182,12 +195,14 @@ export function ManPage({ url }: Props) {
 					</Stack>
 					<Stack gap="m" as="section">
 						<Heading level={2}>And here’s where I work</Heading>
-						<Image
-							src="/images/offline-home-office.webp"
-							alt="My home office"
-							width={1512}
-							height={1134}
-						/>
+						<Expander>
+							<Image
+								src="/images/offline-home-office.webp"
+								alt="My home office"
+								width={1512}
+								height={1134}
+							/>
+						</Expander>
 					</Stack>
 					<Stack gap="m" as="section">
 						<TextTypo>

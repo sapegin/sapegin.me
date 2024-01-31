@@ -75,7 +75,10 @@ export function ZinePage({ url, title, issues }: Props) {
 										<Video src={issue.video} />
 									</Expander>
 								</Stack>
-								<Box mx={{ mobile: 'auto', tablet: 0 }} order={[-1, null, 0]}>
+								<Box
+									mx={{ mobile: 'auto', tablet: 0 }}
+									order={{ mobile: -1, tablet: 0 }}
+								>
 									<BookCover
 										title={issue.title}
 										image={issue.cover}
