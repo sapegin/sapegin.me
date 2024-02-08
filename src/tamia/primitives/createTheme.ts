@@ -13,8 +13,8 @@ type MapLeafNodes<Obj, LeafType> = {
 	[Prop in keyof Obj]: Obj[Prop] extends Primitive
 		? LeafType
 		: Obj[Prop] extends Record<string | number, any>
-		? MapLeafNodes<Obj[Prop], LeafType>
-		: never;
+			? MapLeafNodes<Obj[Prop], LeafType>
+			: never;
 };
 type NullableTokens = {
 	[key: string]: string | NullableTokens | null;

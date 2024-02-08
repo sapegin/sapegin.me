@@ -16,7 +16,7 @@ const getGitHubLink = (url: string) => {
 		? `https://github.com/sapegin/til/edit/master/${filename.replace(
 				/^\/til\//,
 				''
-		  )}`
+			)}`
 		: `https://github.com/sapegin/sapegin.me/edit/master/src/content/${filename}`;
 };
 

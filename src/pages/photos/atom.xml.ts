@@ -11,7 +11,7 @@ type GlobResult = Record<string, () => Promise<ImageRaw>>;
 
 function globToEntries(items: GlobResult) {
 	return Promise.all(
-		Object.entries(items).map(async ([_fileName, getInfo]) => {
+		Object.entries(items).map(async ([, getInfo]) => {
 			return unwrapImage(await getInfo());
 		})
 	);
@@ -37,8 +37,9 @@ function getPermalink(photo: Image) {
 }
 
 export async function GET() {
-	const photosRaw = await import.meta.glob(
-		'../../../public/images/photos/*.{jpg,webp}'
+	const photosRaw = import.meta.glob<ImageRaw>(
+		'../../../public/images/photos/*.{jpg,webp}',
+		{ eager: false }
 	);
 	const entries = await globToEntries(photosRaw);
 	const orderedEntries = _.orderBy(entries, ['url'], ['desc']);

@@ -1,17 +1,10 @@
 import { visit } from 'unist-util-visit';
-import type { Node } from 'unist';
-import type { Root, Paragraph } from 'mdast';
+import type { Root, Paragraph, Strong } from 'mdast';
 
-interface NodeWithData extends Node {
-	data?: {
-		hProperties?: Record<string, string | string[]>;
-	};
-}
-
-const addClassNameToNode = (node: NodeWithData, cls: string) => {
-	node.data = node.data || {};
-	node.data.hProperties = node.data.hProperties || {};
-	node.data.hProperties.className = node.data.hProperties.className || [];
+const addClassNameToNode = (node: Paragraph | Strong, cls: string) => {
+	node.data = node.data ?? {};
+	node.data.hProperties = node.data.hProperties ?? {};
+	node.data.hProperties.className = node.data.hProperties.className ?? [];
 	if (Array.isArray(node.data.hProperties.className)) {
 		node.data.hProperties.className.push(cls);
 	}

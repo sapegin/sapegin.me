@@ -138,18 +138,16 @@ For example, compare:
 
 ```js
 exports[`<Animal /> should handle some test case`] = `null`;
-exports[
-  `<Animal /> should handle some other test case`
-] = `<strong>dog</strong>`;
+exports[`<Animal /> should handle some other test case`] =
+  `<strong>dog</strong>`;
 ```
 
 To:
 
 ```js
 exports[`<Animal /> should render null`] = `null`;
-exports[
-  `<Animal /> should render an animal name`
-] = `<strong>dog</strong>`;
+exports[`<Animal /> should render an animal name`] =
+  `<strong>dog</strong>`;
 ```
 
 With the latter it’s clear when a snapshot is wrong, like this:

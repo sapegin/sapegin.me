@@ -10,7 +10,7 @@ const hexToRgb = (hex: string): [number, number, number] => {
 
 export const { getStaticPaths, GET } = OGImageRoute({
 	param: 'route',
-	pages: await import.meta.glob('/src/content/**/*.md', { eager: true }),
+	pages: import.meta.glob('/src/content/**/*.md', { eager: true }),
 	getImageOptions: (_path, page) => ({
 		title: page.frontmatter.title,
 		description: `By ${SITE_AUTHOR}`,
