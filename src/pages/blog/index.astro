@@ -16,7 +16,7 @@ const getYears = (postsByYear: Record<string, Post[]>): string[] => {
 	return years;
 };
 
-const entries = await getCollection('blog');
+const entries = await getCollection('blog', ({ data }) => data.draft !== true);
 const posts = _.sortBy(entries.map(blogEntryToPost), (x) => -x.date);
 const postsByYear = groupByYear(posts);
 const years = getYears(postsByYear);

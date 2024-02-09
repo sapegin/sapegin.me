@@ -20,7 +20,7 @@ const post = tilEntryToPost(entry);
 
 const { Content } = await entry.render();
 
-const entries = await getCollection('til');
+const entries = await getCollection('til', ({ data }) => data.draft !== true);
 const posts = entries.map(tilEntryToPost);
 const related = getRelatedPosts(posts, post);
 ---

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import {
+	Text,
 	Stack,
 	Heading,
 	PostContent,
@@ -25,12 +26,18 @@ export function PostPage({
 	source,
 	children,
 	related,
+	draft,
 }: Props) {
 	return (
 		<Page url={url}>
 			<Stack as="main" gap="xl">
 				<Stack gap="l">
 					<Heading level={1}>{title}</Heading>
+					{draft && (
+						<Text variant="bold">
+							This is a draft post, please don’t share it until it’s published.
+						</Text>
+					)}
 					{source && <BookPostHeader />}
 					<PostContent>{children}</PostContent>
 					{source && <BookPostFooter />}

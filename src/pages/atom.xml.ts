@@ -10,8 +10,14 @@ const parser = new MarkdownIt();
 const NUM_POSTS = 20;
 
 export async function GET() {
-	const blogEntries = await getCollection('blog');
-	const tilEntries = await getCollection('til');
+	const blogEntries = await getCollection(
+		'blog',
+		({ data }) => data.draft !== true
+	);
+	const tilEntries = await getCollection(
+		'til',
+		({ data }) => data.draft !== true
+	);
 	const entries = _.sortBy(
 		[...blogEntries, ...tilEntries],
 		(x) => -x.data.date

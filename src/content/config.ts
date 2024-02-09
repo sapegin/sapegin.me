@@ -5,6 +5,7 @@ const baseSchema = z.object({
 	tags: z.array(z.string()),
 	date: z.date(),
 	description: z.string().optional(),
+	draft: z.boolean().optional(),
 });
 
 // Blog posts
