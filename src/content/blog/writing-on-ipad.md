@@ -1,6 +1,6 @@
 ---
 title: 'Typewriter 2.0: search for the perfect writing experience on iPad'
-description: 'I stuggle writing on my desk, so I wanted to find a great mechanical keyboard for iPad that I can take with me to some nice café.'
+description: 'I struggle writing on my desk, so I wanted to find a great mechanical keyboard for iPad that I can take to some nice café with me.'
 date: 2024-02-12
 tags:
   - apps
