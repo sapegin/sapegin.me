@@ -98,7 +98,7 @@ Some things could have been better though:
 
 **Tip:** I always switch Control and Command on my keyboards because I prefer the Windows-like experience of Ctrl+C/Ctrl+V and other shortcuts.
 
-The main difference with Anne Pro 2 is that NuPhy Air60 is a low-profile keyboard, meaning it’s much more compact. It’s still heavier and larger than the Apple Magic Keyboard but I could certainly take it with me when I go to a café to do some writing. I even traveled with it on a plain.
+The main difference with Anne Pro 2 is that NuPhy Air60 is a low-profile keyboard, meaning it’s much more compact. It’s still heavier and larger than the Apple Magic Keyboard but I could certainly take it with me when I go to a café to do some writing. I even traveled with it on a plane.
 
 ![NuPhy Air60](/images/ipad-nuphy-air60-keyboard.jpg)
 
