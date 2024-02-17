@@ -198,10 +198,10 @@ export function ManPage({ url }: Props) {
 						<Heading level={2}>And here’s where I work</Heading>
 						<Expander>
 							<Image
-								src="/images/offline-home-office.webp"
+								src="/images/workspace-2024.webp"
 								alt="My home office"
 								width={1512}
-								height={1134}
+								height={1207}
 							/>
 						</Expander>
 					</Stack>
