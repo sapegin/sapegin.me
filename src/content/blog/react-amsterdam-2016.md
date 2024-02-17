@@ -12,7 +12,7 @@ tags:
 
 [React Amsterdam](https://react.amsterdam/) is the first conference about React in Amsterdam, Netherlands.
 
-![My friends and speakers at React Amsterdam 2016](/images/react-amsterdam-2016.jpg)
+![My friends and speakers at React Amsterdam 2016](/images/react-amsterdam-2016.webp)
 
 The conference day started from a personal transport disaster. My hotel, that was booked by my employer’s travel agency, was in very inconvenient location in 15 minutes by bus from the Schiphol airport. There’s just one bus route that goes from the airport and on weekends it doesn’t work: you have to change to another bus. And my bus didn’t come in the morning so I had to walk two kilometers for another station. Then in the airport I found out that there was no train to the city on this weekend because of some maintenance work and I had to take a temporary bus. So I spent 2,5 hours to get to the conference venue.
 

@@ -100,13 +100,13 @@ Some things could have been better though:
 
 The main difference with Anne Pro 2 is that NuPhy Air60 is a low-profile keyboard, meaning it’s much more compact. It’s still heavier and larger than the Apple Magic Keyboard but I could certainly take it with me when I go to a café to do some writing. I even traveled with it on a plane.
 
-![NuPhy Air60](/images/ipad-nuphy-air60-keyboard.jpg)
+![NuPhy Air60](/images/ipad-nuphy-air60-keyboard.webp)
 
 **Tip:** I also got a [COAST Twilight](https://nuphy.com/collections/keycaps/products/twilight-nsa-dye-sub-pbt-keycaps) keycaps set, and mixed it with the default keycaps to make the keyboard look a bit more interesting.
 
 The leather case, [NuFolio V2](https://nuphy.com/collections/accessories/products/nufolio-v3-for-air60-v2), is also quite nice and gives the keyboard good protection in a bag.
 
-![NuPhy NuFolio V2 leather keyboard case](/images/ipad-nuphy-nufolio-v2-keyboard-case.jpg)
+![NuPhy NuFolio V2 leather keyboard case](/images/ipad-nuphy-nufolio-v2-keyboard-case.webp)
 
 You could also use the case as a stand for an iPad, and that turned out to be not as good as I thought:
 
@@ -135,7 +135,7 @@ I write mostly in Markdown, and I use it for pretty much everything: notes, jour
 
 I’ve been using [iA Writer](https://ia.net/writer) on a Mac and an iPad for many years, and I think it’s the best app for writing Markdown.
 
-![iA Writer](/images/ipad-iawriter.jpg)
+![iA Writer](/images/ipad-iawriter.webp)
 
 However, recently I had to switch to another Apple ID (Apple makes it close to impossible to change the country), and I had to rebuy all the apps I had on my old Apple ID.
 
@@ -143,7 +143,7 @@ Unfortunately, iA Writer prices are totally insane now: about 60 euros for *each
 
 This made me try several _significantly_ cheaper alternatives to iA Writer: [iWriter Pro](https://serpensoft.info), [1Writer](https://1writerapp.com), and [Byword](https://www.bywordapp.com). All have the same issue: Markdown syntax highlighting is too bright for my taste. I can recommend iWriter Pro, though, if you could live with bright colors — it’s a decent app and almost ten times cheaper than iA Writer.
 
-![iA Writer alternatives](/images/ipad-alternative-markdown-editors.jpg)
+![iA Writer alternatives](/images/ipad-alternative-markdown-editors.webp)
 
 I ended up rebuying iA Writer for Mac and iPad. It’s almost perfect for what I want, except for a few minor(ish) things. I love the monochrome Markdown color scheme, and it has the most beautiful fonts. However, I can’t stand its bright teal cursor and selection color, that you can’t change. However, I can live with that, since other options are worse.
 

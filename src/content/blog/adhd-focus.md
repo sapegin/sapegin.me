@@ -31,7 +31,7 @@ My general rule for notifications is: better to have too few than too many. If I
 
 I think multiple-screen setups aren’t worth it: they require too much space on the desk and too much meta work — moving windows between screens and so on. They also tend to have too much information visible at the same time.
 
-![The Matrix, 1999](/images/focus-matrix-monitors.jpg)
+![The Matrix, 1999](/images/focus-matrix-monitors.webp)
 
 *[Screenshot from The Matrix, 1999](https://screenmusings.org/movie/blu-ray/The-Matrix/pages/The-Matrix-090.htm)*
 
@@ -58,7 +58,7 @@ When I’m not wearing headphones, we often listen to sets by [My Analog Journal
 
 I don’t like to see stuff unrelated to what I’m doing, especially things that change often or with animation, like icons in the dock or the menu bar, so I try to hide as many of them as possible.
 
-![Splitting screen into two windows](/images/focus-split-screen.jpg)
+![Splitting screen into two windows](/images/focus-split-screen.webp)
 
 ### Maximize app windows
 
@@ -157,7 +157,7 @@ I mainly use two kinds of lists:
 * **Daily todo cards**, similar to [Analog](https://ugmonk.com/en-de/pages/analog).
 * **Project todos** in Bear or Notion.
 
-![Todo](/images/focus-todo.jpg)
+![Todo](/images/focus-todo.webp)
 
 I’m still figuring out what works best for me, and will probably write another article if I ever find a working solution.
 
@@ -195,7 +195,7 @@ Think of it as a slightly smarter StackOverflow or an assistant who can google s
 
 I’ve created my own color scheme that gives me enough contrast to distinguish different things in the code but not overly bright to make my eyes bleed. I called it [Squirrelsong](https://sapegin.me/squirrelsong/), because why not?
 
-![Squirrelsong Light theme](/images/focus-squirrelsong.png)
+![Squirrelsong Light theme](/images/focus-squirrelsong.webp)
 
 **Tip:** To make the coding experience even better, I use [MonoLisa](https://www.monolisa.dev) font in all my code editors and a terminal.
 

@@ -162,7 +162,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 					</Box>
 					<Box style={{ objectFit: 'cover', overflow: 'hidden' }}>
 						<img
-							src="/images/squirrelsong-jetbrains.png"
+							src="/images/squirrelsong-jetbrains.webp"
 							width={652}
 							height={459}
 							alt="Squirrelsong light theme for JetBrains"
