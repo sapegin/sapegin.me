@@ -198,7 +198,7 @@ export function ManPage({ url }: Props) {
 						<Heading level={2}>And here’s where I work</Heading>
 						<Expander>
 							<Image
-								src="/images/workspace-2024.webp"
+								src="/images/workplace-2024.webp"
 								alt="My home office"
 								width={1512}
 								height={1207}
