@@ -207,4 +207,4 @@ You may be also curious to read [my personal user manual](https://sapegin.me/man
 
 ***
 
-*Thanks to Anna Bulavina, Alexei Crecotun, and Anita Kiss for their suggestions.*
+*Thanks to Anna Bulavina, Alexei Crecotun, Margarita Diaz, and Anita Kiss for their suggestions.*
