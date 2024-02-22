@@ -1,8 +1,7 @@
 ---
-draft: true
 title: 'How I stay (more) focused with ADHD'
 description: 'I could never stay focused on one thing for a long time. These tips help me stay focused and productive.'
-date: 2024-02-17
+date: 2024-02-22
 tags:
   - tools
   - howiwork
