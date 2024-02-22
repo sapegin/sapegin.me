@@ -2,7 +2,7 @@ import { globalStyle } from '@vanilla-extract/css';
 import { mediaQueries } from '../tamia/primitives/theme';
 import { vars } from './theme.css';
 
-globalStyle(`.astro-code, .shiki`, {
+globalStyle(`.astro-code, .shiki, [data-rehype-pretty-code-figure] pre`, {
 	display: 'block',
 	lineHeight: vars.lineHeights.code,
 	fontSize: vars.fontSizes.s,
@@ -22,11 +22,17 @@ globalStyle(`.astro-code, .shiki`, {
 		},
 	},
 });
-globalStyle(`.astro-code code, .shiki code`, {
-	display: 'block',
-	fontSize: 'inherit',
-	fontStyle: 'inherit',
-	color: 'inherit',
+globalStyle(
+	`.astro-code code, .shiki code, [data-rehype-pretty-code-figure] code`,
+	{
+		display: 'block',
+		fontSize: 'inherit',
+		fontStyle: 'inherit',
+		color: 'inherit',
+	}
+);
+globalStyle(`[data-highlighted-line]`, {
+	backgroundColor: '#f5f5f7', // Squirrelsong Light gray0f
 });
 
 // HACK: Override default Astro/Shiki styles

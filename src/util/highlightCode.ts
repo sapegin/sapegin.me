@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import stripJsonComments from 'strip-json-comments';
-import { getHighlighter } from 'shikiji';
+import { getHighlighter } from 'shiki';
 
 const THEMES_DIR = 'squirrelsong-master';
 
