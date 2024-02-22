@@ -33,7 +33,7 @@ I think multiple-screen setups aren’t worth it: they require too much space on
 
 ![The Matrix, 1999](/images/focus-matrix-monitors.webp)
 
-*[Screenshot from The Matrix, 1999](https://screenmusings.org/movie/blu-ray/The-Matrix/pages/The-Matrix-090.htm)*
+_[Screenshot from The Matrix, 1999](https://screenmusings.org/movie/blu-ray/The-Matrix/pages/The-Matrix-090.htm)_
 
 I have used a single 27” screen for the past decade or so, and for me, it’s the perfect size.
 
@@ -41,12 +41,12 @@ I have used a single 27” screen for the past decade or so, and for me, it’s 
 
 I like listening to music while I’m working, and usually I wear headphones. The right kind of music helps me to focus on work, and headphones, especially noise-canceling, reduce distractions and sensory overload from things happening around me.
 
-I like very different styles of music, depending on what I’m doing:
+I like different styles of music, depending on what I’m doing:
 
-* **For programming** — something loud, heavy, and energetic, like melodic death metal or post-metal. Be’Lakor, Katatonia, and Russian Circles are among my favorites.
-* **For writing** — something soft and quiet, like lo-fi. The [Lola app](https://apps.apple.com/us/app/lola-stream-lofi-music/id1596929185) is great to listen to in a café (when it’s too noisy or I disagree with their choice of music), or [Lofi girl’s](https://www.youtube.com/@LofiGirl) playlists.
-* **For reading** — [something very quiet](https://music.apple.com/de/playlist/ambient-night/pl.u-KVXBDYWCLrrEerg?l=en-GB), like ambient.
-* **For cooking** — something in my own language, so I can sing along.
+- **For programming** — something loud, heavy, and energetic, like melodic death metal or post-metal. Be’Lakor, Katatonia, and Russian Circles are among my favorites.
+- **For writing** — something soft and quiet, like lo-fi. The [Lola app](https://apps.apple.com/us/app/lola-stream-lofi-music/id1596929185) is great to listen to in a café (when it’s too noisy or I disagree with their choice of music), or [Lofi girl’s](https://www.youtube.com/@LofiGirl) playlists.
+- **For reading** — [something quiet](https://music.apple.com/de/playlist/ambient-night/pl.u-KVXBDYWCLrrEerg?l=en-GB), like ambient.
+- **For cooking** — something in my own language, so I can sing along.
 
 **Note:** I prefer music without lyrics because they distract me, especially if I understand the language. However, death metal, with its growling, is an exception — the singing is so incomprehensible, that it essentially becomes music.
 
@@ -76,7 +76,7 @@ My code editor setup is very minimalistic. I disable tabs and all toolbars, so t
 
 ### Hide icons on the menu bar
 
-I don’t like when there are too many icons in the menu bar, especially when they are colorful or animated. Thanks to [Bartender](https://www.macbartender.com) I have very few of them visible at all times, but I can still access the rest when I need them.
+I don’t like seeing too many icons in the menu bar, especially colorful or animated. Thanks to [Bartender](https://www.macbartender.com) most of the menu bar icons are hidden in a menu I can open when I need to.
 
 Or, you could set Bartender up to show icons conditionally. For example, show battery indicator only when it’s below a certain level, so when you work in a café, you know when to wrap up your work and go home.
 
@@ -126,11 +126,11 @@ If you’re trying to focus on a task, and suddenly remember that you need to bu
 
 I use several tools to keep notes and tasks:
 
-* [Bear](https://bear.app) for most of my notes and freeform project planning.
-* [Notion](https://www.notion.so/) when I need to share a project with someone (it has poor UX but many great features).
-* Paper todo cards (see “Make a list” section below).
-* [AnyList](https://www.anylist.com) for the shopping list because I can share it with my girlfriend, and even ask Alexa to add things there.
-* Apple Notes occasionally for short-term or throw-away notes.
+- [Bear](https://bear.app) for most of my notes and freeform project planning.
+- [Notion](https://www.notion.so/) when I need to share a project with someone (it has poor UX but many great features).
+- Paper todo cards (see “Make a list” section below).
+- [AnyList](https://www.anylist.com) for the shopping list because I can share it with my girlfriend, and even ask Alexa to add things there.
+- Apple Notes occasionally for short-term or throw-away notes.
 
 ## Auto close distracting apps
 
@@ -140,7 +140,7 @@ When I suddenly fall into a flow state (rarely but happens) I don’t want to be
 
 ## Improve meeting notifications
 
-I was always struggling with meeting notifications. For some reason, all calendar apps show notifications 10 minutes before the meeting, which is way too long. Even in the office, you usually don’t need 10 minutes to walk to a meeting room. At home, it’s even worse: these notifications distract me from what I’m doing but by the time of the meeting I usually completely forget about it.
+I was always struggling with meeting notifications. For some reason, all calendar apps show notifications 10 minutes before the meeting, and it’s way too long for me. Even in the office, one usually don’t need 10 minutes to walk to a meeting room. At home, it’s even worse: these notifications distract me from what I’m doing but by the time I need to join the meeting I usually completely forget about it.
 
 [Dato](https://sindresorhus.com/dato) is a calendar app that gives me quick access to my calendar from the menu bar. My favorite feature is that it shows upcoming calls in the menu bar. And there’s a global shortcut to open this link in your default browser.
 
@@ -154,8 +154,8 @@ Lists also help me to remember all the little things I need to do, instead of tr
 
 I mainly use two kinds of lists:
 
-* **Daily todo cards**, similar to [Analog](https://ugmonk.com/en-de/pages/analog).
-* **Project todos** in Bear or Notion.
+- **Daily todo cards**, similar to [Analog](https://ugmonk.com/en-de/pages/analog).
+- **Project todos** in Bear or Notion.
 
 ![Todo](/images/focus-todo.webp)
 
@@ -163,7 +163,7 @@ I’m still figuring out what works best for me, and will probably write another
 
 ## Work from home
 
-There are so many distractions in a typical office, especially in one with an open plan, where you sit together with dozens of other people in the same room. Someone is constantly talking to someone else. Someone is having a Zoom call next to you. Someone is constantly distracting you with “quick questions” that take at least 20 minutes to answer and 20 more to remember what you were doing before it.
+A typical office is full of distractions, especially one with an open plan, where you sit together with dozens of other people in the same room. Someone is constantly talking to someone else. Someone is having a Zoom call next to you. Someone is constantly distracting you with “quick questions” that take at least 20 minutes to answer and 20 more to remember what you were doing before it.
 
 At home, I have very few distractions, and I can organize my workspace in a way that works for me.
 
@@ -175,17 +175,19 @@ However, I feel more productive when my girlfriend is working next to me. We’r
 
 ## Work with an AI assistant
 
-I often have trouble starting to work on a new task, or sometimes I don’t know how to move forward and start procrastinating.
+I often have trouble starting to work on a new task, or sometimes I don’t know how to move forward and start procrastinating. Or spend way too much time googling a solution to a seemingly simple problem.
 
 Recently I started using [ChatGPT](https://chat.openai.com/) to generate the initial solution or brainstorm ideas. Whether it’s a piece of code or a letter I need to write.
 
-I’ve also tried [GitHub Copilot’s](https://github.com/features/copilot) autocomplete and found it infuriatingly annoying and distracting.
+I also use [GitHub Copilot’s](https://github.com/features/copilot) inline chat, and I like that it’s unobtrusive, and knows enough context, so the queries could be very short.
 
-**Tip:** I’m curious to try a chat coding assistant, like the one in GitHub Copilot or some of the alternatives. I think it may work better for me.
+![GitHub Copilot’s chat](/images/focus-github-copilot-chat.png)
 
-However, you really need to understand what’s going on to detect when the AI is trying to bullshit you and give you the wrong solution. Usually, it could give you a draft you could improve on.
+I’ve also tried Copilot’s autocomplete and found it infuriatingly annoying and distracting.
 
-Think of it as a slightly smarter StackOverflow or an assistant who can google something for you or write some code but doesn’t understand whether it’s a good solution or not, or whether it’ll work at all. It’s also good for throw-away solutions.
+Usually, AI could give you a draft you could improve on, or help with the coding “bureaucracy”, like tricky syntax, generating types, and so on. It’s also good for throw-away solutions, and it’s great for writing official letters. However, you really need to understand what’s going on to detect when the AI is hallucinating and gives you the wrong solution.
+
+Think of it as a slightly smarter Stack Overflow or an assistant who can google something for you or write some code but doesn’t understand whether it’s a good solution or not, or whether it’ll work at all.
 
 ![ChatGPT with some coding question](/images/focus-chatgpt.png)
 
@@ -205,6 +207,6 @@ Minimizing distractions and knowing what to do next helps a lot in staying focus
 
 You may be also curious to read [my personal user manual](https://sapegin.me/man/).
 
-***
+---
 
-*Thanks to Anna Bulavina, Alexei Crecotun, Margarita Diaz, and Anita Kiss for their suggestions.*
+_Thanks to Anna Bulavina, Alexei Crecotun, Margarita Diaz, and Anita Kiss for their suggestions._
