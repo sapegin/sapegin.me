@@ -71,7 +71,7 @@ My typical setup is a code editor on the left half of the screen, and the browse
 
 My code editor setup is very minimalistic. I disable tabs and all toolbars, so they don’t distract me. Sometimes I have the file tree open, and that’s pretty much all I see.
 
-**Tip**: [Hiding tabs in Visual Studio Code](https://sapegin.me/til/tools/hiding-tabs-in-visual-studio-code/) used to be tricky but now there’s an option to do that. WebStorm always had an option to hide tabs.
+**Tip:** [Hiding tabs in Visual Studio Code](https://sapegin.me/til/tools/hiding-tabs-in-visual-studio-code/) used to be tricky but now there’s an option to do that. WebStorm always had an option to hide tabs.
 
 ### Hide icons on the menu bar
 
