@@ -59,13 +59,18 @@ However, one of the things I always liked about Cypress was the ability to inspe
 
 ### Setting up Playwright
 
-First, run the installation wizard:
+First, run the [installation wizard](https://playwright.dev/docs/intro):
 
 ```bash
 npm init playwright@latest
 ```
 
-This will navigate (?) us throught the installation process. We’ll choose whether to use TypeScript or JavaScript, where to put the tests, whether to generate GitHub Actions to run the tests on CI, and whether we want to install the browers.
+This will install all the dependencies, and generate the config files. We’ll need to choose:
+
+* whether to use TypeScript or JavaScript (we’ll use JavaScript in this article);
+* where to put the tests (`tests` folder in the project root);
+* whether to generate GitHub Actions to run the tests on CI (we won’t cover this here);
+* whether we want to install the browsers (it’s a good idea, we’ll need them anyway).
 
 ![Playwright installation wizard](/images/playwright-wizard.webp)
 
@@ -196,7 +201,7 @@ Here, we’re intercepting GET requests to `https://httpbin.org/anything` with a
 
 Now we need to [generate the Service Worker script](https://mswjs.io/docs/integrations/browser):
 
-```
+```bash
 npx msw init ./public --save
 ```
 
