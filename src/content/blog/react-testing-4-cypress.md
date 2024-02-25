@@ -598,7 +598,7 @@ This is still better than increasing the global timeout.
 
 ## Conclusion
 
-Good tests interact with the app similar to how a real user would do that, they don’t test implementation details, and they are resilient to code changes that don’t change the behavior. We’ve learned how to write good end-to-end tests using Cypress and Cypress Testing Library, how to set it app, and how to mock network requests using Mock Service Worker.
+Good tests interact with the app similar to how a real user would do that, they don’t test implementation details, and they are resilient to code changes that don’t change the behavior. We’ve learned how to write good end-to-end tests using Cypress and Cypress Testing Library, how to set it up, and how to mock network requests using Mock Service Worker.
 
 However, Cypress has many more features that we haven’t covered in the article, and that may be useful one day.
 
