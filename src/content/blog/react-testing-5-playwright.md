@@ -36,6 +36,8 @@ We’ll set up and use these tools:
 
 **Playwright** has many benefits over other end-to-end test runners:
 
+- The best experience of writing and debugging tests.
+- Ability to inspect the page at any moment during the test run using the browser developer tools.
 - All commands wait for the DOM to change when necessary, which simplifies testing async behavior.
 - Tests better resemble real user behavior. For example, Playwright checks that a button is visible, isn’t disabled, and isn’t hidden behind another element before clicking it.
 - Supports Chromium, WebKit, Firefox, as well as Google Chrome for Android and Mobile Safari.
@@ -54,8 +56,6 @@ Some of the benefits of Playwright over Cypress:
 * easier setup;
 * multi-tabs support
 * speed.
-
-However, one of the things I always liked about Cypress was the ability to inspect the page at any moment during the test run using the browser developer tools, which isn’t possible with Playwright.
 
 ### Setting up Playwright
 
