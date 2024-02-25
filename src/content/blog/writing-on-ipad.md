@@ -39,10 +39,10 @@ The next keyboard I’ve tried was 40% [YMDK Air40](https://ymdkey.com/products/
 
 However, there are a few issues:
 
-*  Typing is difficult, especially in Russian — too many of the Russian alphabet’s 33 letters are hidden on other layers (the keyboard has three layers), and you constantly need to remember how to access them.
-*  I’m not a fan of a brick ortholinear layout (when rows of letter keys are placed directly under each other, without a half-key shift like on most keyboards).
-*  Not great for travel — it’s small but very heavy (495 g without keycaps) thanks to its aluminum case.
-*  It’s the only non-wireless keyboard I’ve tried for an iPad.
+- Typing is difficult, especially in Russian — too many of the Russian alphabet’s 33 letters are hidden on other layers (the keyboard has three layers), and you constantly need to remember how to access them.
+- I’m not a fan of a brick ortholinear layout (when rows of letter keys are placed directly under each other, without a half-key shift like on most keyboards).
+- Not great for travel — it’s small but very heavy (495 g without keycaps) thanks to its aluminum case.
+- It’s the only non-wireless keyboard I’ve tried for an iPad.
 
 ![Mistel Barocco vs YMDK Air40](/images/ipad-ymdk-air40-keyboard.jpg)
 
@@ -64,9 +64,9 @@ The next keyboard I tried was a 60% [Anne Pro 2](https://getannepro.com/products
 
 There’s a lot to like about this keyboard:
 
-* The layout is very nice, almost no need to relearn anything after a full desktop keyboard since most of the keys are accessible on the main layer and are located at familiar places (almost standard US layout). The only hidden keys are F-keys, Insert/Delete/Home/End/Page up/Page down, and `~` (the only missing Russian letter — `ё`).
-* Magic arrow keys — a group of modifier keys, at the bottom right corner, that work as arrow keys when you quickly tap them instead of holding them.
-* The sound is almost as good as on YMDK Air40 (the aluminum case helps the latter a lot though).
+- The layout is very nice, almost no need to relearn anything after a full desktop keyboard since most of the keys are accessible on the main layer and are located at familiar places (almost standard US layout). The only hidden keys are F-keys, Insert/Delete/Home/End/Page up/Page down, and `~` (the only missing Russian letter — `ё`).
+- Magic arrow keys — a group of modifier keys, at the bottom right corner, that work as arrow keys when you quickly tap them instead of holding them.
+- The sound is almost as good as on YMDK Air40 (the aluminum case helps the latter a lot though).
 
 **Tip:** I also set up the Escape key to be magic: to act as `~` (or `ё`) when tapped quickly, and as Escape when pressed for a longer time, which gives me a complete Russian layout on the base layer with all the letters on their standard places.
 
@@ -74,8 +74,8 @@ There’s a lot to like about this keyboard:
 
 I really like this keyboard except for two things:
 
-* It’s big and heavy (670 g), and not very portable.
-* It’s a bit tall, so when you try to use it on your lap, it’s not very comfortable, and even on a desk it would benefit from a wrist rest.
+- It’s big and heavy (670 g), and not very portable.
+- It’s a bit tall, so when you try to use it on your lap, it’s not very comfortable, and even on a desk it would benefit from a wrist rest.
 
 **Verdict**: Anne Pro 2 is a great keyboard for its price ($80) and an awesome choice for using at home on a desk. I think it’s my favorite keyboard of the four overall, but portability and height are too important for my use cases.
 
@@ -85,16 +85,20 @@ The last keyboard I’ve tried, and so far my favorite, is low-profile [NuPhy Ai
 
 There are a few improvements over the Anne Pro 2:
 
-* The layout is very similar to Anne Pro 2, with the addition of actual arrow keys.
-* It’s very light for a mechanical keyboard, only 455 g.
+- The layout is very similar to Anne Pro 2, with the addition of actual arrow keys.
+- It’s very light for a mechanical keyboard, only 455 g.
 
 Some things could have been better though:
 
-* The right Shift is very narrow, which makes it hard to target when touch typing but you can get used to it eventually.
-* The right Alt and Control are missing.
-* There aren’t many alternative keycaps for it, so personalization options are a bit limited.
-* The sound isn’t as good as on normal-profile keyboards.
-* [Software](https://nuphy.com/pages/nuphy-console) to customize the keyboard is for Windows only (this was fixed in the [Air60 V2](https://nuphy.com/collections/keyboards/products/air60-v2)). It’s also very limited, and I wasn’t able to change the behavior of the Escape key (the same way I did for Anne Pro 2), so I need to press the Fn key every time I need to type `~`, or `ё`, which is quite often.
+- The right Shift is very narrow, which makes it hard to target when touch typing but you can get used to it eventually.
+- The right Alt and Control are missing.
+- There aren’t many alternative keycaps for it, so personalization options are a bit limited.
+- The sound isn’t as good as on normal-profile keyboards.
+- The silicon feet are constantly ungluing, and I had to glue them with super glue after I lost one of them (luckily, it comes with some spares).
+- It forgets the RGB lights settings after about a week, no matter how you set them: on the keyboard itself or using the app.
+- [Software](https://nuphy.com/pages/nuphy-console) to customize the keyboard is for Windows only. It’s also very limited, and I wasn’t able to change the behavior of the Escape key (the same way I did for Anne Pro 2), so I need to press the Fn key every time I need to type `~`, or `ё`, which is quite often.
+
+The newer version, [Air60 V2](https://nuphy.com/collections/keyboards/products/air60-v2), possibly fixes some of the issues.
 
 **Tip:** I always switch Control and Command on my keyboards because I prefer the Windows-like experience of Ctrl+C/Ctrl+V and other shortcuts.
 
@@ -110,9 +114,9 @@ The leather case, [NuFolio V2](https://nuphy.com/collections/accessories/product
 
 You could also use the case as a stand for an iPad, and that turned out to be not as good as I thought:
 
-* The bottom edge of the cover is so sharp, that it gets quite painful after using the keyboard on your lap for some time.
-* The magnets that hold the keyboard in the case aren’t strong enough to keep it from sliding.
-* It makes the screen too close — I like it at 5-10 cm from the keyboard.
+- The bottom edge of the cover is so sharp, that it gets quite painful after using the keyboard on your lap for some time.
+- The magnets that hold the keyboard in the case aren’t strong enough to keep it from sliding.
+- It makes the screen too close — I like it at 5-10 cm from the keyboard.
 
 **Verdict**: NuPhy Air60 is my choice of portable keyboard for an iPad. It’s not as good as Anne Pro 2 but it’s significantly lighter and smaller.
 
@@ -124,8 +128,8 @@ The case I ended up buying, ESR Folio, has a large bottom surface and two screen
 
 I have a couple of issues with this case though:
 
-* The iPad doesn’t stay well in the grooves and sometimes (especially when you type on your laps) slides.
-* When using on the desk, the keyboard needs to be in a very particular position — somewhere on the edge of the bottom surface of the case — otherwise it’s wobbly. Not a big issue for me, this is where I like it anyway.
+- The iPad doesn’t stay well in the grooves and sometimes (especially when you type on your laps) slides.
+- When using on the desk, the keyboard needs to be in a very particular position — somewhere on the edge of the bottom surface of the case — otherwise it’s wobbly. Not a big issue for me, this is where I like it anyway.
 
 However, after two years, it’s falling apart, and looks like [they don’t have this design anymore](https://www.esrgear.de/categories/handyhuellen/ipad-huellen/). Maybe I’ll try something else soon.
 
@@ -139,7 +143,7 @@ I’ve been using [iA Writer](https://ia.net/writer) on a Mac and an iPad for ma
 
 However, recently I had to switch to another Apple ID (Apple makes it close to impossible to change the country), and I had to rebuy all the apps I had on my old Apple ID.
 
-Unfortunately, iA Writer prices are totally insane now: about 60 euros for *each* platform. I never thought *luxury software* would be a thing but here we are. iA Writer is undoubtedly a very polished and high-quality app, though clearly not an essential one.
+Unfortunately, iA Writer prices are totally insane now: about 60 euros for _each_ platform. I never thought _luxury software_ would be a thing but here we are. iA Writer is undoubtedly a very polished and high-quality app, though clearly not an essential one.
 
 This made me try several _significantly_ cheaper alternatives to iA Writer: [iWriter Pro](https://serpensoft.info), [1Writer](https://1writerapp.com), and [Byword](https://www.bywordapp.com). All have the same issue: Markdown syntax highlighting is too bright for my taste. I can recommend iWriter Pro, though, if you could live with bright colors — it’s a decent app and almost ten times cheaper than iA Writer.
 
@@ -149,10 +153,10 @@ I ended up rebuying iA Writer for Mac and iPad. It’s almost perfect for what I
 
 I also use a few other apps for more specialized writing (all support Markdown):
 
-* [Visual Studio Code](https://code.visualstudio.com/) for documentation;
-* [Bear](https://bear.app/) for general notes and personal projects;
-* [Notion](https://www.notion.so/) for shared projects;
-* [Day One](https://dayoneapp.com/) for journaling.
+- [Visual Studio Code](https://code.visualstudio.com/) for documentation;
+- [Bear](https://bear.app/) for general notes and personal projects;
+- [Notion](https://www.notion.so/) for shared projects;
+- [Day One](https://dayoneapp.com/) for journaling.
 
 **Tip:** Check out [my color schemes](https://sapegin.me/squirrelsong/) for Visual Studio Code and Bear if you want to have a monochrome Markdown highlighting similar to iA Writer.
 
@@ -162,9 +166,9 @@ Also, the last three apps work on iPad, Mac, and iPhone, so I can read and edit 
 
 I’m quite happy with my current setup:
 
-* iPad 11” with ESR Folio case;
-* NuPhy Air60 mechanical keyboard with a leather case;
-* iA Writer as a main writing app.
+- iPad 11” with ESR Folio case;
+- NuPhy Air60 mechanical keyboard with a leather case;
+- iA Writer as a main writing app.
 
 The overall weight (almost 1.5 kg) is comparable to a MacBook, but I like the comfort and flexibility of the external mechanical keyboard. I also like the single-taskedness of the iPad, which allows me to better focus on writing.
 
