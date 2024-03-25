@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {
 	Stack,
 	Heading,
@@ -31,6 +32,10 @@ type Props = {
 		dark: Record<string, string>;
 	};
 };
+
+const sortedInstructions = _.sortBy(instructions, ({ app }) =>
+	app.toLowerCase()
+);
 
 function InstallationSteps({
 	id,
@@ -183,7 +188,7 @@ function Installation() {
 				</Heading>
 				<Text>
 					<Group separator=", ">
-						{instructions.map((app) => (
+						{sortedInstructions.map((app) => (
 							<Link key={app.id} href={`#${app.id}`}>
 								{app.app}
 							</Link>
@@ -191,7 +196,7 @@ function Installation() {
 					</Group>
 				</Text>
 			</Stack>
-			{instructions.map((app) => (
+			{sortedInstructions.map((app) => (
 				<InstallationSteps key={app.id} {...app} />
 			))}
 			<Text>
