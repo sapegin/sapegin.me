@@ -108,6 +108,37 @@ export const instructions: Instructions[] = [
 	},
 
 	/**
+	 * CotEditor
+	 */
+	{
+		id: 'coteditor',
+		app: 'CotEditor',
+		light: true,
+		steps: [
+			<Link
+				key={1}
+				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/CotEditor/Squirrelsong%20Light.cottheme"
+			>
+				Download Squirrelsong Light.cottheme
+			</Link>,
+			<>
+				Open <strong>Settings</strong>, then <strong>Appearance</strong>
+			</>,
+			<>
+				Open <strong>Theme</strong> dropdown at the bottom, and choose{' '}
+				<strong>Import...</strong>
+			</>,
+			<>
+				Select <strong>Squirrelsong Light.cottheme</strong>
+			</>,
+			<>
+				Select <strong>Squirrelsong Light</strong> in <strong>Theme</strong>{' '}
+				list
+			</>,
+		],
+	},
+
+	/**
 	 * iTerm2
 	 */
 	{
