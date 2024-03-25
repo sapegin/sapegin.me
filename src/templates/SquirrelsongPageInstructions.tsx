@@ -114,28 +114,21 @@ export const instructions: Instructions[] = [
 		id: 'coteditor',
 		app: 'CotEditor',
 		light: true,
-		steps: [
-			<Link
-				key={1}
-				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/CotEditor/Squirrelsong%20Light.cottheme"
-			>
-				Download Squirrelsong Light.cottheme
-			</Link>,
-			<>
-				Open <strong>Settings</strong>, then <strong>Appearance</strong>
-			</>,
-			<>
-				Open <strong>Theme</strong> dropdown at the bottom, and choose{' '}
-				<strong>Import...</strong>
-			</>,
-			<>
-				Select <strong>Squirrelsong Light.cottheme</strong>
-			</>,
-			<>
-				Select <strong>Squirrelsong Light</strong> in <strong>Theme</strong>{' '}
-				list
-			</>,
-		],
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/CotEditor#readme',
+		urlName: 'GitHub',
+	},
+
+	/**
+	 * Nimble Commander
+	 */
+	{
+		id: 'nimblecommander',
+		app: 'Nimble Commander',
+		light: true,
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/Nimble%20Commander#readme',
+		urlName: 'GitHub',
 	},
 
 	/**
@@ -168,6 +161,18 @@ export const instructions: Instructions[] = [
 				<strong>Color presets</strong> dropdown
 			</>,
 		],
+	},
+
+	/**
+	 * WezTerm
+	 */
+	{
+		id: 'wezterm',
+		app: 'WezTerm',
+		dark: true,
+		urlDark:
+			'https://github.com/sapegin/squirrelsong/tree/master/dark/WezTerm#readme',
+		urlName: 'GitHub',
 	},
 
 	/**
@@ -289,6 +294,18 @@ export const instructions: Instructions[] = [
 			'https://github.com/sapegin/squirrelsong/tree/master/light/PrismJs#readme',
 		urlDark:
 			'https://github.com/sapegin/squirrelsong/tree/master/dark/PrismJs#readme',
+		urlName: 'GitHub',
+	},
+
+	/**
+	 * Midnight Commander
+	 */
+	{
+		id: 'mc',
+		app: 'Midnight Commander',
+		dark: true,
+		urlDark:
+			'https://github.com/sapegin/squirrelsong/tree/master/dark/Midnight%20Commander#readme',
 		urlName: 'GitHub',
 	},
 ];
