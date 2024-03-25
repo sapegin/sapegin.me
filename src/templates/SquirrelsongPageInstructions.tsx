@@ -115,17 +115,18 @@ export const instructions: Instructions[] = [
 		app: 'iTerm2',
 		dark: true,
 		steps: [
-			<>
-				<Link href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/iTerm2/Squirrelsong%20Dark.itermcolors">
-					Download Squirrelsong Dark.itermcolors
-				</Link>
-			</>,
+			<Link
+				key={1}
+				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/iTerm2/Squirrelsong%20Dark.itermcolors"
+			>
+				Download Squirrelsong Dark.itermcolors
+			</Link>,
 			<>
 				Open <strong>Settings</strong>, then <strong>Profiles</strong>, then{' '}
 				<strong>Colors</strong>
 			</>,
 			<>
-				Open <strong>Color presets</strong> dropdown at the bottom, and choose
+				Open <strong>Color presets</strong> dropdown at the bottom, and choose{' '}
 				<strong>Import</strong>
 			</>,
 			<>
@@ -146,18 +147,18 @@ export const instructions: Instructions[] = [
 		app: 'Terminal.app',
 		dark: true,
 		steps: [
-			<>
-				<Link href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/Terminal/Squirrelsong%20Dark.terminal">
-					Download Squirrelsong Dark.terminal
-				</Link>
-			</>,
+			<Link
+				key={1}
+				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/Terminal/Squirrelsong%20Dark.terminal"
+			>
+				Download Squirrelsong Dark.terminal
+			</Link>,
 			<>
 				Open <strong>Settings</strong>, then <strong>Profiles</strong>
 			</>,
 			<>
 				Press the button with three dots at the bottom of the sidebar, and
-				choose
-				<strong>Import</strong>
+				choose <strong>Import</strong>
 			</>,
 			<>
 				Select <strong>Squirrelsong Dark.terminal</strong>
