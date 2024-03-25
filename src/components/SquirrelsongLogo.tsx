@@ -1,8 +1,8 @@
-import { logo } from './SquirelsongLogo.css';
+import { logo } from './SquirrelsongLogo.css';
 
 // TODO: Can we import the colors from the theme or palette file?
 
-export function SquirelsongLogo() {
+export function SquirrelsongLogo() {
 	return (
 		<pre className={logo} aria-hidden="true">
 			<span style={{ color: '#80a4be' }}>/</span>

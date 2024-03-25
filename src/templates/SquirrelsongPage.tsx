@@ -10,7 +10,7 @@ import {
 	Feedback,
 	CodeSpread,
 	CodeSpreadSupreme,
-	SquirelsongLogo,
+	SquirrelsongLogo,
 	About,
 	OrderedListItem,
 	Grid,
@@ -81,7 +81,7 @@ function InstallationSteps({
 function Hero() {
 	return (
 		<Stack gap="m" alignItems="center">
-			<SquirelsongLogo />
+			<SquirrelsongLogo />
 			<Stack gap="s" alignItems="center">
 				<Heading level={1}>Squirrelsong</Heading>
 				<Heading level={3} as="p">
