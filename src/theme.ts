@@ -132,7 +132,6 @@ export const theme = {
 		'--text-max-width': '40rem',
 		'--content-padding-x': 'var(--spacing-m)',
 		'--content-padding-y': '4vh',
-		'--content-max-width': '52rem',
 		'--focus-outline-offset': '2px',
 	},
 
