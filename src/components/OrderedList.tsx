@@ -1,8 +1,7 @@
 import { Stack, type StackProps } from './Stack';
 import { Text, type TextProps } from './Text';
-import type { PropsWithoutRef } from 'react';
 
-export function OrderedList(props: PropsWithoutRef<StackProps<'ol'>>) {
+export function OrderedList(props: StackProps<'ol'>) {
 	return <Stack as="ol" gap="xs" ml="1.2rem" {...props} />;
 }
 

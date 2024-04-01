@@ -5,12 +5,12 @@ import {
 } from '../../styled-system/patterns/stack';
 import { createBox, type BoxProps } from './Box';
 
-export type StackProps<C extends ElementType> = BoxProps<C> & StackProperties;
+export type StackProps<C extends ElementType> = Omit<BoxProps<C>, 'className'> &
+	StackProperties;
 
 export function Stack<C extends ElementType>({
 	direction,
 	...props
 }: StackProps<C>) {
-	const styleProps = stack.raw({ direction });
-	return createBox({ ...styleProps, ...props });
+	return createBox({ ...props, className: stack({ direction }) });
 }

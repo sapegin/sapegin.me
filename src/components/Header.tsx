@@ -9,12 +9,10 @@ export function Header({ url }: Props) {
 	return (
 		<Box as="header">
 			<Box
+				width={{ tablet: LOGO_WIDTH }}
 				mx="auto"
+				mb={{ base: 'm', tablet: '-2.6rem' }}
 				textAlign="center"
-				css={{
-					marginBottom: { base: 'm', tablet: '-2.6rem' },
-					width: { tablet: LOGO_WIDTH },
-				}}
 			>
 				<Logo />
 			</Box>
