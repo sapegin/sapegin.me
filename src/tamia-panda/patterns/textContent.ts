@@ -8,18 +8,16 @@ export const textContent: PatternConfig = {
 		return {
 			...props,
 
-			'--half-block-margin': 'calc(var(--block-margin-bottom, 0) / 2)',
-
 			fontFamily: 'body',
 			fontWeight: 'normal',
 			lineHeight: 'base',
 
 			'& :is(h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, p, pre, table, blockquote, form, iframe, img, hr, address)':
 				{
-					marginBottom: 'var(--block-margin-bottom, 0)',
+					marginBottom: 'blockMarginBottom',
 				},
 			'& :is(h1, h2, h3, h4, h5, h6, p, li, blockquote)': {
-				maxWidth: 'var(--text-max-width, "100%")',
+				maxWidth: 'textMaxWidth',
 			},
 
 			// Links
@@ -33,7 +31,7 @@ export const textContent: PatternConfig = {
 			},
 			'& a:focus-visible': {
 				outline: 'focus',
-				outlineOffset: 'var(--focus-outline-offset, 2)',
+				outlineOffset: 'token(borderWidths.focusOutlineOffset)',
 			},
 
 			// Blockquotes
@@ -42,7 +40,7 @@ export const textContent: PatternConfig = {
 				fontSize: 's',
 			},
 			'& blockquote p': {
-				marginBottom: 'var(--half-block-margin)',
+				marginBottom: 'calc(token(spacing.blockMarginBottom) / 2)',
 			},
 			'& cite': {
 				fontStyle: 'italic',
@@ -57,14 +55,14 @@ export const textContent: PatternConfig = {
 			'& :is(p > img, p > a > img, figure > img, figure > a > img)': {
 				height: 'auto',
 				maxWidth: {
-					base: 'calc(100% + var(--content-padding-x, 0) * 2)',
+					base: 'calc(100% + token(contentPaddingX) * 2)',
 					tablet: '100%',
 				},
 				marginInline: {
-					base: 'calc(var(--content-padding-x, 0) * -1)',
+					base: '-contentPaddingX',
 					tablet: 'auto',
 				},
-				marginBlock: 'calc(var(--block-margin-bottom, 0) * 2)',
+				marginBlock: 'calc(token(spacing.blockMarginBottom) * 2)',
 			},
 
 			// Tables
@@ -80,7 +78,7 @@ export const textContent: PatternConfig = {
 			'& :is(td, th)': {
 				textAlign: 'left',
 				borderBottom: '1px solid token(colors.border)',
-				padding: 'var(--half-block-margin)',
+				padding: 'calc(token(spacing.blockMarginBottom) / 2)',
 			},
 			'& td': {
 				verticalAlign: 'top',
@@ -97,11 +95,12 @@ export const textContent: PatternConfig = {
 
 			// Headings
 			'& :is(h1, h2, h3, h4, h5, h6)': {
-				marginTop: 'var(--heading-margin-top, 0)',
+				marginTop: 'headingMarginTop',
 				fontFamily: 'heading',
 				lineHeight: 'heading',
 				fontWeight: 'heading',
 				letterSpacing: 'heading',
+				textWrap: 'balance',
 			},
 			'& h1': {
 				fontSize: 'xxl',
@@ -137,21 +136,21 @@ export const textContent: PatternConfig = {
 			'& ol': {
 				listStyle: 'decimal',
 				// Hanging markers on big screens
-				paddingLeft: { base: 'var(--list-margin, 0)', tablet: 0 },
-				marginLeft: { tablet: 'calc(var(--list-margin) * -1)' },
+				paddingLeft: { base: 'listMargin', tablet: 0 },
+				marginLeft: { tablet: '-listMargin' },
 			},
 			'& li': {
-				paddingLeft: 'var(--half-block-margin)',
+				paddingLeft: 'calc(token(spacing.blockMarginBottom) / 2)',
 			},
 			'& :is(li > ul,  li > ol)': {
 				marginBottom: 0,
 			},
 			'& :is(ul > ul,  ul > ol)': {
-				marginLeft: 'var(--list-margin, 0)',
+				marginLeft: 'listMargin',
 			},
 			'& ul > li': {
 				position: 'relative',
-				paddingLeft: 'var(--list-margin, 0)',
+				paddingLeft: 'listMargin',
 				marginLeft: 0,
 			},
 			'& ul > li::before': {

@@ -24,7 +24,7 @@ export const link: PatternConfig = {
 			},
 			_focusVisible: {
 				outline: 'focus',
-				outlineOffset: 'var(--focus-outline-offset, 2px)',
+				outlineOffset: 'token(borderWidths.focusOutlineOffset)',
 			},
 		};
 	},

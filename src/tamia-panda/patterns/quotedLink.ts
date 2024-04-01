@@ -20,7 +20,7 @@ export const quotedLink: PatternConfig = {
 			},
 			_focusVisible: {
 				outline: 'focus',
-				outlineOffset: 'var(--focus-outline-offset, 2)',
+				outlineOffset: 'token(borderWidths.focusOutlineOffset)',
 			},
 			'& u': {
 				color: 'primary',

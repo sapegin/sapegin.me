@@ -92,7 +92,6 @@ export const theme = {
 					m: { value: '1rem' },
 					s: { value: '0.9rem' },
 					xs: { value: '0.75rem' },
-					mplus: { value: '1.1rem' }, // TODO: Shall we remove or rename this?
 					ui: { value: '1.5rem' }, // UI font is very small
 				},
 				fontWeights: {
@@ -117,22 +116,20 @@ export const theme = {
 					large: { value: '3px' },
 				},
 			},
+			semanticTokens: {
+				fontSizes: {
+					root: { value: '1.125em' },
+					article: { value: '1.1rem' },
+					ui: { value: '1.5rem' }, // UI font is very small
+				},
+				spacing: {
+					listMargin: { value: '0' },
+				},
+			},
 			recipes: {
 				button: buttonRecipe,
 			},
 		},
-	},
-
-	// TODO: Define default values in Tâmia
-	globalVars: {
-		'--base-font-size': '1.125em',
-		'--block-margin-bottom': 'var(--spacing-m)',
-		'--heading-margin-top': 'var(--spacing-l)',
-		'--list-margin': '0',
-		'--text-max-width': '40rem',
-		'--content-padding-x': 'var(--spacing-m)',
-		'--content-padding-y': '4vh',
-		'--focus-outline-offset': '2px',
 	},
 
 	// Code styles

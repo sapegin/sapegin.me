@@ -8,7 +8,7 @@ type Props = {
 
 export function Page({ children, url }: Props) {
 	return (
-		<Box maxWidth="52rem" mx="auto" px="var(--content-padding-x)" py="m">
+		<Box maxWidth="52rem" mx="auto" px="contentPaddingX" py="m">
 			<Stack gap="xl">
 				<Stack gap="l">
 					<Header url={url} />

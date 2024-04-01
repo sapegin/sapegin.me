@@ -46,7 +46,7 @@ const text = cva({
 			},
 			intro: {
 				fontFamily: 'body',
-				fontSize: 'mplus',
+				fontSize: 'article',
 				fontStyle: 'italic',
 				fontWeight: 'normal',
 				lineHeight: 'base',

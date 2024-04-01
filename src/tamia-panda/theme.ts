@@ -66,4 +66,30 @@ export const theme = {
 			round: { value: '99999em' },
 		},
 	},
+	semanticTokens: {
+		fontSizes: {
+			/** Font size applied to the root HTML element */
+			root: { value: 'm' },
+			/** Font size used for text content (`textContent()` pattern) */
+			article: { value: 'm' },
+		},
+		spacing: {
+			/** Whitespace under block elements (p, h1, h2, table, etc.) */
+			blockMarginBottom: { value: '{spacing.m}' },
+			/** Whitespace above headings (h1, h2, etc.) */
+			headingMarginTop: { value: '{spacing.l}' },
+			/** Horizontal spacing in lists */
+			listMargin: { value: '0' },
+			/** Site content horizontal spacing */
+			contentPaddingX: { value: '{spacing.m}' },
+		},
+		sizes: {
+			/** Maximum width of text elements (p, h1, h2, blockquote, etc.) */
+			textMaxWidth: { value: '45rem' },
+		},
+		borderWidths: {
+			/** Distance from an element to the focus outline */
+			focusOutlineOffset: { value: '2px' },
+		},
+	},
 };

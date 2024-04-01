@@ -7,7 +7,7 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 		<TextContent>
 			<Box
 				css={{
-					fontSize: 'mplus',
+					fontSize: 'article',
 					lineHeight: { base: 'small', tablet: 'base' },
 
 					// HACK: Increase specificity to override post content styles (Astro production

@@ -9,7 +9,7 @@ export const globalCss = defineGlobalStyles({
 	},
 
 	html: {
-		fontSize: 'var(--base-font-size)',
+		fontSize: 'root',
 		fontFamily: 'body',
 		color: 'base',
 		backgroundColor: 'bg',
@@ -43,7 +43,6 @@ export const globalCss = defineGlobalStyles({
 	// Better looking headings
 	'h1, h2, h3, h4, h5, h6': {
 		textRendering: 'optimizeLegibility',
-		textWrap: 'balance',
 	},
 
 	// Remove the weird gap below images

@@ -8,7 +8,7 @@ export const expander: PatternConfig = {
 	transform(props) {
 		return {
 			marginInline: {
-				base: 'calc(var(--content-padding-x, 0) * -1)',
+				base: '-contentPaddingX',
 				tablet: 0,
 			},
 			...props,
