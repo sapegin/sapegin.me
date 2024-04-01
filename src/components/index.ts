@@ -27,8 +27,6 @@ export { IconCoffee } from './IconCoffee';
 export { Image } from './Image';
 export { InlineList, InlineListItem } from './InlineList';
 export { InlineSeparator } from './InlineSeparator';
-export { Input } from './Input';
-export { InputGroup } from './InputGroup';
 export { Link } from './Link';
 export { LinkWithIcon } from './LinkWithIcon';
 export { Logo } from './Logo';
