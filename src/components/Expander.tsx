@@ -1,5 +1,5 @@
-import { Box, type BoxProps } from './Box';
 import type { PropsWithoutRef } from 'react';
+import { Box, type BoxProps } from './Box';
 
 /**
  * Expands content horizontally to remove the paddings so it is rendered
@@ -10,7 +10,7 @@ export function Expander(props: PropsWithoutRef<BoxProps<'div'>>) {
 		<Box
 			css={{
 				marginInline: {
-					base: 'calc(var(page-content-padding-x, 0) * -1)',
+					base: 'calc(var(--content-padding-x, 0) * -1)',
 					tablet: 0,
 				},
 			}}
