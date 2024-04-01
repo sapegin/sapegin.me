@@ -9,16 +9,16 @@ type Props = {
 };
 
 export function CodeSpread({ codes, name }: Props) {
-	const ligthCode = codes.light[name];
+	const lightCode = codes.light[name];
 	const darkCode = codes.dark[name];
 
-	if (ligthCode === undefined || darkCode === undefined) {
+	if (lightCode === undefined || darkCode === undefined) {
 		return <p>Code sample not found for “{name}”</p>;
 	}
 
 	return (
 		<Grid auto="wide" rowGap="m" columnGap="l">
-			<Code code={ligthCode} />
+			<Code code={lightCode} />
 			<Code code={darkCode} />
 		</Grid>
 	);
