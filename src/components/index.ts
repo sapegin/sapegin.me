@@ -9,7 +9,6 @@ export { Button } from './Button';
 export { Code } from './Code';
 export { CodeSpread } from './CodeSpread';
 export { CodeSpreadSupreme } from './CodeSpreadSupreme';
-export { Container } from './Container';
 export { EventList } from './EventList';
 export { EventName } from './EventName';
 export { Expander } from './Expander';
