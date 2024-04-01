@@ -1,18 +1,18 @@
 import type { ReactNode } from 'react';
 import {
-	Text,
-	Stack,
+	BookPostFooter,
+	BookPostHeader,
 	Heading,
+	MurderOfCrows,
 	PostContent,
 	PostMeta,
-	Subscription,
 	RelatedPosts,
-	MurderOfCrows,
-	BookPostHeader,
-	BookPostFooter,
+	Stack,
+	Subscription,
+	Text,
 } from '../components';
-import { Page } from './Page';
 import type { Post } from '../types/Post';
+import { Page } from './Page';
 
 type Props = Post & {
 	children?: ReactNode;
@@ -32,7 +32,9 @@ export function PostPage({
 		<Page url={url}>
 			<Stack as="main" gap="xl">
 				<Stack gap="l">
-					<Heading level={1}>{title}</Heading>
+					<Heading level={1} maxWidth="textMaxWidth">
+						{title}
+					</Heading>
 					{draft && (
 						<Text variant="bold">
 							This is a draft post, please don’t share it until it’s published.
