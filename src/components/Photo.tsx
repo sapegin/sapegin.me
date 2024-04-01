@@ -1,10 +1,9 @@
-import type { PropsWithoutRef } from 'react';
 import { Box, type BoxProps } from './Box';
 
 /**
  * Responsive photo with max height.
  */
-export function Photo(props: PropsWithoutRef<BoxProps<'img'>>) {
+export function Photo(props: Omit<BoxProps<'img'>, 'as' | 'css' | 'loading'>) {
 	return (
 		<Box
 			as="img"
@@ -13,12 +12,12 @@ export function Photo(props: PropsWithoutRef<BoxProps<'img'>>) {
 				width: 'auto',
 				height: 'auto',
 				maxWidth: {
-					base: `min(100%, 100vw)`,
-					tablet: `min(100%, calc(100vw - token(space.m)))`,
+					base: '100%',
+					tablet: 'min(100%, calc(100vw - token(spacing.m)))',
 				},
 				maxHeight: {
-					base: `min(900px, 100vh)`,
-					tablet: `min(900px, calc(100vh - token(space.m)))`,
+					base: 'min(900px, 100vh)',
+					tablet: 'min(900px, calc(100vh - token(spacing.m)))',
 				},
 			}}
 			{...props}
