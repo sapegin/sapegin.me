@@ -1,21 +1,14 @@
-import { createElement, type ElementType } from 'react';
-// @ts-expect-error: Doesn't come with types
-import { splitProps } from '../../styled-system/helpers';
-import { styled, type HTMLStyledProps } from '../../styled-system/jsx';
+import { type ElementType } from 'react';
 import { visuallyHidden } from '../../styled-system/patterns/visually-hidden';
-import type { AsProp } from './Box';
+import { createBox, type BoxProps } from './Box';
 
-export type VisuallyHiddenProps<C extends ElementType> = HTMLStyledProps<C> &
-	AsProp<C>;
+export type VisuallyHiddenProps<C extends ElementType> = Omit<
+	BoxProps<C>,
+	'className'
+>;
 
-export function VisuallyHidden<C extends ElementType>({
-	as,
-	...props
-}: VisuallyHiddenProps<C>) {
-	const [patternProps, restProps] = splitProps(props, []);
-
-	const styleProps = visuallyHidden.raw(patternProps);
-	const mergedProps = { ...styleProps, ...restProps };
-
-	return createElement(styled(as ?? 'div'), mergedProps);
+export function VisuallyHidden<C extends ElementType>(
+	props: VisuallyHiddenProps<C>
+) {
+	return createBox({ ...props, className: visuallyHidden() });
 }

@@ -1,18 +1,12 @@
-import { createElement } from 'react';
-import { splitProps } from '../../styled-system/helpers.mjs';
-import { styled, type HTMLStyledProps } from '../../styled-system/jsx';
-import { getLinkStyle } from '../../styled-system/patterns/link.mjs';
+import type { ElementType } from 'react';
+import { link } from '../../styled-system/patterns/link';
+import { createBox, type BoxProps } from './Box';
 
-export type LinkProps = HTMLStyledProps<'a'>;
+export type LinkProps<C extends ElementType> = Omit<BoxProps<C>, 'className'>;
 
 /**
  * Text link.
  */
-export function Link(props: LinkProps) {
-	const [patternProps, restProps] = splitProps(props, []);
-
-	const styleProps = getLinkStyle(patternProps);
-	const mergedProps = { ...styleProps, ...restProps };
-
-	return createElement(styled.a, mergedProps);
+export function Link<C extends ElementType>(props: LinkProps<C>) {
+	return createBox({ ...props, className: link() }, 'a');
 }
