@@ -10,6 +10,8 @@ export type QuotedLinkProps<C extends ElementType> = Omit<
 /**
  * “Quoted” link component, a link where only content inside the `<u>` tag is underlined. Useful for links in quotes or links with images.
  */
-export function QuotedLink<C extends ElementType>(props: QuotedLinkProps<C>) {
+export function QuotedLink<C extends ElementType = 'a'>(
+	props: QuotedLinkProps<C>
+) {
 	return createBox({ ...props, className: quotedLink() }, 'a');
 }

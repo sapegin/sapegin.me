@@ -7,6 +7,6 @@ export type LinkProps<C extends ElementType> = Omit<BoxProps<C>, 'className'>;
 /**
  * Text link.
  */
-export function Link<C extends ElementType>(props: LinkProps<C>) {
+export function Link<C extends ElementType = 'a'>(props: LinkProps<C>) {
 	return createBox({ ...props, className: link() }, 'a');
 }
