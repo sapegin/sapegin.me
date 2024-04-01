@@ -9,7 +9,7 @@ export type ButtonProps<C extends ElementType> = Omit<
 > &
 	RecipeVariantProps<typeof button>;
 
-export function Button<C extends ElementType>({
+export function Button<C extends ElementType = 'button'>({
 	variant = 'medium',
 	...props
 }: ButtonProps<C>) {
