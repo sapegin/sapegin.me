@@ -7,7 +7,7 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 		<TextContent>
 			<Box
 				css={{
-					fontSize: { base: 'm', tablet: 'mplus' },
+					fontSize: 'mplus',
 					lineHeight: { base: 'small', tablet: 'base' },
 
 					// HACK: Increase specificity to override post content styles (Astro production
@@ -44,7 +44,7 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 					'& .tip': {
 						marginBlock: 'l',
 						fontSize: 's',
-						fontFamily: 'base',
+						fontFamily: 'body',
 						fontStyle: 'italic',
 					},
 					'& .tip:first-child': {
