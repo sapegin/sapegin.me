@@ -9,13 +9,19 @@ import { tilEntryToPost } from '../util/tilEntryToPost';
 
 const NUM_RECENT_POSTS = 5;
 
-const blogEntries = await getCollection('blog', ({ data }) => data.draft !== true);
+const blogEntries = await getCollection(
+	'blog',
+	({ data }) => data.draft !== true
+);
 const blogPosts = _.sortBy(
 	blogEntries.map(blogEntryToPost),
 	(x) => -x.date
 ).slice(0, NUM_RECENT_POSTS);
 
-const tilEntries = await getCollection('til', ({ data }) => data.draft !== true);
+const tilEntries = await getCollection(
+	'til',
+	({ data }) => data.draft !== true
+);
 const tilPosts = _.sortBy(tilEntries.map(tilEntryToPost), (x) => -x.date).slice(
 	0,
 	NUM_RECENT_POSTS

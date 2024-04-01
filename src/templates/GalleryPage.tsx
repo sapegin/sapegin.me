@@ -1,7 +1,7 @@
-import { Stack, Photo, Flex, FullWidth } from '../components';
-import { PageWithTitle } from './PageWithTitle';
+import { Flex, FullWidth, Photo, Stack } from '../components';
 import { type Image } from '../types/Image';
 import { getPhotoId } from '../util/getPhotoId';
+import { PageWithTitle } from './PageWithTitle';
 
 type Props = {
 	url: string;
@@ -13,7 +13,7 @@ export function GalleryPage({ url, title, photos }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
 			<FullWidth>
-				<Stack gap={{ mobile: 'xl', desktop: 'xxl' }}>
+				<Stack gap={{ base: 'xl', desktop: 'xxl' }}>
 					{photos.map((pair) =>
 						pair.length === 1 ? (
 							<Flex
@@ -31,8 +31,8 @@ export function GalleryPage({ url, title, photos }: Props) {
 						) : (
 							<Stack
 								key={pair[0].url}
-								direction={{ mobile: 'column', tablet: 'row' }}
-								gap={{ mobile: 'xl', tablet: 'm' }}
+								direction={{ base: 'column', tablet: 'row' }}
+								gap={{ base: 'xl', tablet: 'm' }}
 								justifyContent="center"
 							>
 								{pair.map((photo) => (

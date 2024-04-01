@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Box, Stack, Heading, Text, TextTypo } from '../components';
+import { Box, Heading, Image, Stack, Text, TextTypo } from '../components';
 
 type Props = {
 	children: ReactNode;
@@ -7,14 +7,14 @@ type Props = {
 
 export function About({ children }: Props) {
 	return (
-		<Stack direction={{ mobile: 'column', tablet: 'row' }} gap="l">
-			<Box mx={{ mobile: 'auto', tablet: 0 }}>
-				<img
+		<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
+			<Box mx={{ base: 'auto', tablet: 0 }} flexShrink={0}>
+				<Image
 					src="/images/artem-sapegin.webp"
 					alt="Artem Sapegin"
-					width="200"
-					height="200"
-					style={{ borderRadius: '50%' }}
+					width={200}
+					height={200}
+					borderRadius="round"
 				/>
 			</Box>
 			<Stack gap="l">

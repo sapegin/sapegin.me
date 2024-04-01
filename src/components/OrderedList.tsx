@@ -1,10 +1,9 @@
-import type { BoxProps } from '../tamia/components/Box';
-import { Stack } from '../tamia/components/Stack';
+import { Stack, type StackProps } from './Stack';
 import { Text, type TextProps } from './Text';
-import { list } from './OrderedList.css';
+import type { PropsWithoutRef } from 'react';
 
-export function OrderedList(props: BoxProps<'ol'>) {
-	return <Stack as="ol" gap="xs" className={list} {...props} />;
+export function OrderedList(props: PropsWithoutRef<StackProps<'ol'>>) {
+	return <Stack as="ol" gap="xs" ml="1.2rem" {...props} />;
 }
 
 export function OrderedListItem(props: TextProps<'li'>) {

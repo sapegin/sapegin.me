@@ -1,16 +1,41 @@
-import { Link } from '.';
-import { span } from './Logo.css';
+import { Box, Link } from '.';
 
 export const LOGO_WIDTH = '400px';
+
+const Span = ({ children }: { children: React.ReactNode }) => (
+	<Box
+		as="span"
+		css={{
+			display: 'inline-block',
+			paddingInline: 's',
+			paddingTop: 'xxs',
+			fontFamily: 'ui',
+			fontSize: 'ui',
+			color: 'bg',
+			backgroundColor: 'base',
+			letterSpacing: '0.05ex',
+			fontWeight: 300,
+			lineHeight: 0.8,
+			textTransform: 'uppercase',
+			textDecoration: 'none',
+			// TODO: Try group
+			'a:hover &': {
+				backgroundColor: 'accent',
+			},
+		}}
+	>
+		{children}
+	</Box>
+);
 
 export function Logo() {
 	return (
 		<Link href="/" display="inline-flex" flexDirection="column">
 			<span>
-				<span className={span}>Artem</span>
+				<Span>Artem</Span>
 			</span>
 			<span>
-				<span className={span}>Sapegin</span>
+				<Span>Sapegin</Span>
 			</span>
 		</Link>
 	);

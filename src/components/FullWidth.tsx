@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { container, inner } from './FullWidth.css';
+import { Box } from '.';
 
 type Props = {
 	children: ReactNode;
@@ -10,8 +10,10 @@ type Props = {
  */
 export function FullWidth({ children }: Props) {
 	return (
-		<div className={container}>
-			<div className={inner}>{children}</div>
-		</div>
+		<Box width="100vw" marginLeft="calc(50% - 50vw)">
+			<Box maxWidth={1200} marginInline="auto">
+				{children}
+			</Box>
+		</Box>
 	);
 }

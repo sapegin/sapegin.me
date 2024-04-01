@@ -1,29 +1,29 @@
 import _ from 'lodash';
+import Group from 'react-group';
 import {
-	Stack,
-	Heading,
-	Text,
-	Link,
-	OrderedList,
+	About,
 	Badge,
-	VisuallyHidden,
+	Box,
 	Button,
-	Feedback,
 	CodeSpread,
 	CodeSpreadSupreme,
-	SquirrelsongLogo,
-	About,
-	OrderedListItem,
+	Feedback,
 	Grid,
-	Box,
+	Heading,
+	Link,
+	OrderedList,
+	OrderedListItem,
+	SquirrelsongLogo,
+	Stack,
+	Text,
 	TextTypo,
+	VisuallyHidden,
 } from '../components';
 import { Page } from './Page';
 import {
 	instructions,
 	type Instructions,
 } from './SquirrelsongPageInstructions';
-import Group from 'react-group';
 
 type Props = {
 	url: string;
@@ -157,7 +157,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 					without oversaturated bright colors to keep you focused on your code.
 				</TextTypo>
 				<Grid auto="wide" gap="m">
-					<Box style={{ objectFit: 'cover', overflow: 'hidden' }}>
+					<Box objectFit="cover" overflow="hidden">
 						<img
 							src="/images/squirrelsong-vscode.png"
 							width={652}
@@ -165,7 +165,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 							alt="Squirrelsong light theme for Visual Studio Code"
 						/>
 					</Box>
-					<Box style={{ objectFit: 'cover', overflow: 'hidden' }}>
+					<Box objectFit="cover" overflow="hidden">
 						<img
 							src="/images/squirrelsong-jetbrains.webp"
 							width={652}

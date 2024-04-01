@@ -3,7 +3,7 @@ type Props = {
 };
 
 export function Code({ code }: Props) {
-	// TODO: Make arria-hidden optional if this component
+	// TODO: Make aria-hidden optional if this component
 	// is ever used not as an illustration
 	return <div dangerouslySetInnerHTML={{ __html: code }} aria-hidden="true" />;
 }

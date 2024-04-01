@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkTips from './src/util/remark/remarkTips';
 import remarkImages from './src/util/remark/remarkImages';
@@ -17,9 +16,6 @@ const prettyCodeOptions = {
 export default defineConfig({
 	site: SITE_URL,
 	integrations: [react(), sitemap()],
-	vite: {
-		plugins: [vanillaExtractPlugin()],
-	},
 	markdown: {
 		extendDefaultPlugins: true,
 		syntaxHighlight: false,

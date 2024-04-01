@@ -1,5 +1,5 @@
-import { vars } from '../styles/theme.css';
-import { Icon as IconBase } from '../tamia';
+import { Box } from './Box';
+import { IconBase } from './IconBase';
 
 type IconInfo = {
 	path?: string;
@@ -21,8 +21,9 @@ const ICONS: Record<string, IconInfo> = {
 	mastodon: {
 		path: 'M14.004 2V1H5.983v1H3.955v1.032h-.944v.994h-.996V6H1v6.958h1.034v2.08H3V16h1v1.04h1V18h1v1.072h6V18h2v-2h-2v1.04H7.957V16H7v-2h.957v1h6.047v-1H16v-.968h.973V12H18v-2h1V6h-1V4.026h-1.027v-.994h-1.018V2h-1.951ZM8.996 4H5.985v.999h-.969V12h2.027V7.013h2.035v3.01h1.965v-3.01h2.035V12H15V4.999h-.996V4H10.98v.999H8.996V4Z',
 		children: (
-			<path
-				fill={vars.colors.bg}
+			<Box
+				as="path"
+				fill="bg"
 				d="M14 5V4h-3v1H9V4H6v1H5v7h2V7.029h2V10h2V7.028v.001h2V12h2V5h-1Z"
 			/>
 		),
@@ -30,8 +31,9 @@ const ICONS: Record<string, IconInfo> = {
 	github: {
 		path: 'M11.959 2.014V1H8v1.014H6.001v1.01h-.989v.996H4.05v.995H3.014v1.007h-1v2.027H1v5h1.014v1.924h1v1.058H4.05v1.027H5v.883h1.038V19h7.99v-1.059H15v-.883h1.025v-1.027h.984v-1.058h.978v-1.924H19v-5h-1.013V6.022h-.978V5.015h-.984V4.02h-1.038v-.996h-.966v-1.01h-2.062Z',
 		children: (
-			<path
-				fill={vars.colors.bg}
+			<Box
+				as="path"
+				fill="bg"
 				d="M11.043 14.009h3v-1.017h.929v-1.007h1.041V9.004h-1.041V8h-.929v-.982h1V5.034H13v1h-1v.977h-.957v-.977H9v.977h-.957v-.977h-1v-1H5v1.984h1V8H5v1.004h-.99v2.981H5v1.007h1v1.017h3v1h-.99v1.012H6.02v-1.012h-1v-1H4.01v2.024h1v1h3V19H12v-3.991h-.957v-1Z"
 			/>
 		),
@@ -40,8 +42,9 @@ const ICONS: Record<string, IconInfo> = {
 		path: 'M18.022 2.043V1H2.025v1.043H1V18.01h1.025V19h15.997v-.99H19V2.043h-.978Z',
 		children: (
 			<>
-				<path
-					fill={vars.colors.bg}
+				<Box
+					as="path"
+					fill="bg"
 					d="M9 7.008H7.988v6H9v1h2.956v-2H10v-1h1.956v-2H10v-1h1.956v-2H9v1Zm-2.968 0v-1h-4v8h4v-1H7v-6h-.968ZM12.988 10h1v3H15v.998h.988V13H17v-2.992h1v-4h-2.012V10H15V6h-2.012v4Zm-8-1.992h-.984v4h.984v-4ZM24 5.343h-2.012v2.656H24V5.343Z"
 				/>
 				<rect fill="currentColor" x="4" y="8" width="1" height="4" />

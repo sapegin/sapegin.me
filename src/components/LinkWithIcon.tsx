@@ -1,5 +1,6 @@
-import { Stack, QuotedLink, Icon } from '.';
-import type { IconName } from './Icon';
+import { Icon, type IconName } from './Icon';
+import { QuotedLink } from './QuotedLink';
+import { Stack } from './Stack';
 
 type Props = React.ComponentProps<typeof QuotedLink> & {
 	icon: IconName;

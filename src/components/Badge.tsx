@@ -1,23 +1,31 @@
-import type { ReactNode } from 'react';
-import { Box } from '.';
-import clsx from 'clsx';
-import { badge, inverted } from './Badge.css';
+import { cva, type RecipeVariantProps } from '../../styled-system/css';
+import { Box, type BoxProps } from './Box';
 
-type Props = {
-	variant?: 'default' | 'inverted';
-	children: ReactNode;
-};
+const badge = cva({
+	base: {
+		display: 'inline-block',
+		px: 'xs',
+		py: 'xxs',
+		border: 'thin',
+		borderRadius: 'large',
+		fontSize: 'xs',
+	},
+	variants: {
+		variant: {
+			default: {
+				color: 'accent',
+			},
+			inverted: {
+				color: 'bg',
+				background: 'accent',
+			},
+		},
+	},
+});
 
-export function Badge({ variant = 'default', children }: Props) {
-	return (
-		<Box
-			as="span"
-			display="inline-block"
-			px="xs"
-			py="xxs"
-			className={clsx(badge, variant === 'inverted' && inverted)}
-		>
-			{children}
-		</Box>
-	);
+type BadgeProps = Omit<BoxProps<'span'>, 'as' | 'className'> &
+	RecipeVariantProps<typeof badge>;
+
+export function Badge({ variant = 'default', ...props }: BadgeProps) {
+	return <Box as="span" className={badge({ variant })} {...props} />;
 }

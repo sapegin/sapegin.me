@@ -1,7 +1,7 @@
 import { OGImageRoute } from 'astro-og-canvas';
 import hexRgb from 'hex-rgb';
-import { theme } from '../../styles/theme.css';
 import { SITE_AUTHOR } from '../../constants';
+import { colors, lineHeights } from '../../theme';
 
 const hexToRgb = (hex: string): [number, number, number] => {
 	const { red, green, blue } = hexRgb(hex);
@@ -14,24 +14,24 @@ export const { getStaticPaths, GET } = OGImageRoute({
 	getImageOptions: (_path, page) => ({
 		title: page.frontmatter.title,
 		description: `By ${SITE_AUTHOR}`,
-		bgGradient: [hexToRgb(theme.colors.bg), hexToRgb(theme.colors.bg)],
+		bgGradient: [hexToRgb(colors.bg), hexToRgb(colors.bg)],
 		padding: 48,
 		border: {
-			color: hexToRgb(theme.colors.hover),
+			color: hexToRgb(colors.accent),
 			width: 24,
 			side: 'block-start',
 		},
 		font: {
 			title: {
-				color: hexToRgb(theme.colors.base),
+				color: hexToRgb(colors.base),
 				size: 80,
-				lineHeight: Number(theme.lineHeights.heading),
+				lineHeight: Number(lineHeights.heading),
 				families: ['Roboto Mono', 'sans-serif'],
 			},
 			description: {
-				color: hexToRgb(theme.colors.base),
+				color: hexToRgb(colors.base),
 				size: 40,
-				lineHeight: Number(theme.lineHeights.base),
+				lineHeight: Number(lineHeights.base),
 				families: ['Roboto Mono', 'sans-serif'],
 			},
 		},

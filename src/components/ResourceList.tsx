@@ -1,5 +1,5 @@
-import { Stack, Grid, Text, Link } from '.';
 import type { Resource } from '../types/Resource';
+import { Stack, Grid, Text, Link } from '.';
 
 type Props = {
 	items: Resource[];

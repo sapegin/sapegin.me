@@ -1,11 +1,11 @@
 import {
 	Box,
-	Stack,
-	Heading,
-	Link,
-	Image,
-	TextTypo,
 	Expander,
+	Heading,
+	Image,
+	Link,
+	Stack,
+	TextTypo,
 } from '../components';
 import { Page } from './Page';
 
@@ -25,7 +25,7 @@ export function ManPage({ url }: Props) {
 					</TextTypo>
 					<Stack gap="m" as="section">
 						<Heading level={2}>Overview</Heading>
-						<Stack direction={{ mobile: 'column', tablet: 'row' }} gap="l">
+						<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
 							<Stack gap="s" as="ul">
 								<TextTypo as="li">
 									<span aria-hidden="true">🦉</span> Morning owl (wake up early
@@ -63,8 +63,8 @@ export function ManPage({ url }: Props) {
 								</TextTypo>
 							</Stack>
 							<Box
-								mx={{ mobile: 'auto', tablet: 0 }}
-								order={{ mobile: -1, tablet: 0 }}
+								mx={{ base: 'auto', tablet: 0 }}
+								order={{ base: -1, tablet: 0 }}
 							>
 								<Expander>
 									<Image

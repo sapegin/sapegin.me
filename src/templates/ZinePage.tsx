@@ -1,16 +1,16 @@
 import type { CollectionEntry } from 'astro:content';
 import {
-	Box,
-	Stack,
-	Text,
-	Button,
-	Heading,
-	TextContent,
 	BookCover,
-	Subscription,
-	Video,
+	Box,
+	Button,
 	Expander,
+	Heading,
+	Stack,
+	Subscription,
+	Text,
+	TextContent,
 	TextTypo,
+	Video,
 } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -38,7 +38,7 @@ export function ZinePage({ url, title, issues }: Props) {
 							<Heading as="h2" level={2}>
 								{issue.title}
 							</Heading>
-							<Stack direction={{ mobile: 'column', tablet: 'row' }} gap="l">
+							<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
 								<Stack gap="m">
 									<TextContent>
 										<Text
@@ -76,8 +76,8 @@ export function ZinePage({ url, title, issues }: Props) {
 									</Expander>
 								</Stack>
 								<Box
-									mx={{ mobile: 'auto', tablet: 0 }}
-									order={{ mobile: -1, tablet: 0 }}
+									mx={{ base: 'auto', tablet: 0 }}
+									order={{ base: -1, tablet: 0 }}
 								>
 									<BookCover
 										title={issue.title}

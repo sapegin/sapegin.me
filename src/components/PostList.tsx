@@ -1,4 +1,9 @@
-import { Stack, Text, Link, FormattedDate, InlineSeparator, Box } from '.';
+import { Stack } from './Stack';
+import { Text } from './Text';
+import { Link } from './Link';
+import { FormattedDate } from './FormattedDate';
+import { InlineSeparator } from './InlineSeparator';
+import { Box } from './Box';
 import type { Resource } from '../types/Resource';
 
 type Props = {
@@ -18,7 +23,7 @@ export function PostList({
 				<Text key={post.url ?? post.title} as="li">
 					<Stack
 						as="span"
-						direction={{ mobile: 'column', tablet: 'row' }}
+						direction={{ base: 'column', tablet: 'row' }}
 						columnGap="s"
 						alignItems={{ tablet: 'center' }}
 						flexWrap="wrap"
@@ -29,7 +34,7 @@ export function PostList({
 						)}
 						{showDates && post.date && (
 							<>
-								<Box as="span" display={{ mobile: 'none', tablet: 'flex' }}>
+								<Box as="span" display={{ base: 'none', tablet: 'flex' }}>
 									<InlineSeparator />
 								</Box>
 								<Text

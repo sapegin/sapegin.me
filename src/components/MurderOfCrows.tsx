@@ -1,6 +1,5 @@
-import { vars } from '../styles/theme.css';
-import { Icon as IconBase } from '../tamia';
-import { container } from './MurderOfCrows.css';
+import { IconBase } from './IconBase';
+import { Box } from './Box';
 
 const SIZE = 34;
 
@@ -14,16 +13,30 @@ export function IconCrow() {
 			width={SIZE}
 			height={SIZE}
 		>
-			<path d="M14 32h-2v1.958h2V32Zm-6 0H6v1.958h2V32Zm8-32h-6v2H8v2H6v2H2v2H0v2h6v2H4v10h2v2h2v8h2v-4h4v4h2v-4h8v2h2v2h8v-2h-2v-2h-2v-6h-2v-4h-2v-2h-2v-2h-2v-2h-2V6h-2V2h-2V0Z" />
-			<path fill={vars.colors.hover} d="M10 5h2v2.027h-2z" />
+			<Box
+				as="path"
+				d="M14 32h-2v1.958h2V32Zm-6 0H6v1.958h2V32Zm8-32h-6v2H8v2H6v2H2v2H0v2h6v2H4v10h2v2h2v8h2v-4h4v4h2v-4h8v2h2v2h8v-2h-2v-2h-2v-6h-2v-4h-2v-2h-2v-2h-2v-2h-2V6h-2V2h-2V0Z"
+			/>
+			<Box as="path" fill="accent" d="M10 5h2v2.027h-2z" />
 		</IconBase>
 	);
 }
 
 export function MurderOfCrows() {
 	return (
-		<div role="separator" className={container}>
+		<Box
+			role="separator"
+			css={{
+				width: '50%',
+				marginInline: 'auto',
+				paddingRight: '1.5rem',
+				textAlign: 'right',
+				borderBottomStyle: 'solid',
+				borderBottomWidth: 1,
+				borderBottomColor: 'light',
+			}}
+		>
 			<IconCrow />
-		</div>
+		</Box>
 	);
 }

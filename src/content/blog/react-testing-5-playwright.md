@@ -20,7 +20,7 @@ Playwright is a framework-agnostic end-to-end testing (also known as E2E, or int
 - [Modern React testing, part 1: best practices](/blog/react-testing-1-best-practices/)
 - [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
 - [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
-- [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)**
+- [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)\*\*
 - **Modern React testing, part 5: Playwright (_this post_)**
 
 Check out [the GitHub repository](https://github.com/sapegin/playwright-article-2024) with all the examples.
@@ -52,10 +52,10 @@ Playwright is very similar to the combination of [Cypress, Cypress Testing Libra
 
 Some of the benefits of Playwright over Cypress:
 
-* better API;
-* easier setup;
-* multi-tabs support
-* speed.
+- better API;
+- easier setup;
+- multi-tabs support
+- speed.
 
 ### Setting up Playwright
 
@@ -67,10 +67,10 @@ npm init playwright@latest
 
 This will install all the dependencies, and generate the config files. We’ll need to choose:
 
-* whether to use TypeScript or JavaScript (we’ll use JavaScript in this article);
-* where to put the tests (`tests` folder in the project root);
-* whether to generate GitHub Actions to run the tests on CI (we won’t cover this here);
-* whether we want to install the browsers (it’s a good idea, we’ll need them anyway).
+- whether to use TypeScript or JavaScript (we’ll use JavaScript in this article);
+- where to put the tests (`tests` folder in the project root);
+- whether to generate GitHub Actions to run the tests on CI (we won’t cover this here);
+- whether we want to install the browsers (it’s a good idea, we’ll need them anyway).
 
 ![Playwright installation wizard](/images/playwright-wizard.webp)
 
@@ -128,31 +128,31 @@ module.exports = defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'http://localhost:3000',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on-first-retry'
   },
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'] }
     },
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { ...devices['Desktop Firefox'] }
     },
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+      use: { ...devices['Desktop Safari'] }
+    }
   ],
   /* Run your local dev server before starting the tests */
   webServer: {
     command: 'npm run start',
     url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-  },
+    reuseExistingServer: !process.env.CI
+  }
 });
 ```
 
@@ -188,10 +188,10 @@ export const handlers = [
     // Return OK status with a JSON object
     return HttpResponse.json({
       args: {
-        ingredients: ['bacon', 'tomato', 'mozzarella', 'pineapples'],
-      },
+        ingredients: ['bacon', 'tomato', 'mozzarella', 'pineapples']
+      }
     });
-  }),
+  })
 ];
 ```
 
@@ -366,7 +366,9 @@ test('navigates to another page', async ({ page }) => {
   await page.getByRole('link', { name: 'remotepizza' }).click();
 
   // We are on the pizza page
-  await expect(page.getByRole('heading', { name: 'pizza' })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'pizza' })
+  ).toBeVisible();
 });
 ```
 
@@ -383,7 +385,9 @@ For example, we have a [registration form](https://github.com/sapegin/playwright
 ```js
 const { test, expect } = require('@playwright/test');
 
-test('should show success page after submission', async ({ page }) => {
+test('should show success page after submission', async ({
+  page
+}) => {
   await page.goto('/signup');
 
   // Filling the form
@@ -397,7 +401,9 @@ test('should show success page after submission', async ({ page }) => {
   await page.getByRole('button', { name: 'sign in' }).click();
 
   // We are on the success page
-  await expect(page.getByText('thank you for signing up')).toBeVisible();
+  await expect(
+    page.getByText('thank you for signing up')
+  ).toBeVisible();
 });
 ```
 
@@ -425,14 +431,14 @@ For example, we have a passport number section in our [registration form](https:
 To access a particular field, we can select a `fieldset` by its `legend` text, and then select an input by its label inside the `fieldset`.
 
 ```js
-  const passportIssueDateGroup = page.getByRole('group', {
-    name: 'passport issue date',
-  });
-  await passportIssueDateGroup.getByLabel('day').fill('12');
-  await passportIssueDateGroup
-    .getByLabel('month')
-    .selectOption({ label: 'May' });
-  await passportIssueDateGroup.getByLabel('year').fill('2004');
+const passportIssueDateGroup = page.getByRole('group', {
+  name: 'passport issue date'
+});
+await passportIssueDateGroup.getByLabel('day').fill('12');
+await passportIssueDateGroup
+  .getByLabel('month')
+  .selectOption({ label: 'May' });
+await passportIssueDateGroup.getByLabel('year').fill('2004');
 ```
 
 We call [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locator with `group` — ARIA role of `fieldset` — and its `legend` text. Then we chain [getByLabel()](https://playwright.dev/docs/locators#locate-by-label) locator to query form fields by their labels.
@@ -447,9 +453,9 @@ There are several ways to test links that open in a new tab:
 In the first method, we query the link by its ARIA role and text, and verify that the URL in its `href` attribute is correct:
 
 ```js
-  await expect(
-    page.getByRole('link', { name: 'terms and conditions' })
-  ).toHaveAttribute('href', /\/toc/);
+await expect(
+  page.getByRole('link', { name: 'terms and conditions' })
+).toHaveAttribute('href', /\/toc/);
 ```
 
 The main drawback of this method is that we’re not testing that the link is actually clickable. It might be hidden, or might have a click handler that prevents the default browser behavior.
@@ -457,9 +463,11 @@ The main drawback of this method is that we’re not testing that the link is ac
 In the second method, we query the link by its ARIA role and text again, click it, get the handle of the new page, and use it instead of the current one:
 
 ```js
-  const pagePromise = context.waitForEvent('page');
-  await page.getByRole('link', { name: 'terms and conditions' }).click();
-  const newPage = await pagePromise;
+const pagePromise = context.waitForEvent('page');
+await page
+  .getByRole('link', { name: 'terms and conditions' })
+  .click();
+const newPage = await pagePromise;
 await expect(newPage.getByText("i'm baby")).toBeVisible();
 ```
 
@@ -495,7 +503,9 @@ test('load ingredients asynchronously', async ({ page }) => {
   }
 
   // The button is not clickable anymore
-  await expect(page.getByRole('button', { name: 'cook' })).toBeDisabled();
+  await expect(
+    page.getByRole('button', { name: 'cook' })
+  ).toBeDisabled();
 });
 ```
 
@@ -541,7 +551,11 @@ The markup could look [like so](https://github.com/sapegin/playwright-article-20
 
 ```html
 <button type="button">Delete profile</button>
-<div role="dialog" aria-label="Delete profile modal" aria-modal="true">
+<div
+  role="dialog"
+  aria-label="Delete profile modal"
+  aria-modal="true"
+>
   <h1>Delete profile</h1>
   <button type="button">Delete profile</button>
   <button type="button">Cancel</button>
@@ -553,13 +567,13 @@ The first “delete profile” isn’t a problem becase when we click it, it’s
 First option would be to assign a test ID to this button, and sometimes it’s the only way. Usually, though, we can do better. We can nest locators, so we could target the container (the modal dialog) first, and then the button we need inside the container:
 
 ```js
-  await page
-    // Locate the dialog by its aria-label
-    .getByRole('dialog', { name: 'delete profile modal' })
-    // Locate the button by its label inside the dialog
-    .getByRole('button', { name: 'delete profile' })
-    // Click the button
-    .click();
+await page
+  // Locate the dialog by its aria-label
+  .getByRole('dialog', { name: 'delete profile modal' })
+  // Locate the button by its label inside the dialog
+  .getByRole('button', { name: 'delete profile' })
+  // Click the button
+  .click();
 ```
 
 It’s slighly more complex when the container doesn't have any semantic way to target it, like a `section` with a heading (`h1`, `h2`, an so on) inside. In this case we can target all sections on a page, and then [filter](https://playwright.dev/docs/locators#filtering-locators) then to find the one we’re looking for.
@@ -570,8 +584,13 @@ Imagine markup like so:
 <section>
   <h2>Our newsletter</h2>
   <form>
-  <input type="email" name="email" arial-label="Email" placeholder="Email" />
-  <button type="submit">Subscribe</button>
+    <input
+      type="email"
+      name="email"
+      arial-label="Email"
+      placeholder="Email"
+    />
+    <button type="submit">Subscribe</button>
   </form>
 </section>
 ```
@@ -579,16 +598,16 @@ Imagine markup like so:
 We can click the “Subscribe” button inside the “Our newsletter” section in a test like so:
 
 ```js
-  await page
-    // Locate all sections on a page
-    .getByRole('section')
-    .filter({
-      // Filter only ones that contain "Our newsletter" heading
-      has: page.getByRole('heading', { name: 'our newsletter' }),
-    })
-    // Locate the button inside the section
-    .getByRole('button', { name: 'subscribe' })
-    .click();
+await page
+  // Locate all sections on a page
+  .getByRole('section')
+  .filter({
+    // Filter only ones that contain "Our newsletter" heading
+    has: page.getByRole('heading', { name: 'our newsletter' })
+  })
+  // Locate the button inside the section
+  .getByRole('button', { name: 'subscribe' })
+  .click();
 ```
 
 Coming back to our profile deletion modal, we can test it [like so](https://github.com/sapegin/playwright-article-2024/blob/master/tests/profile.spec.js):
@@ -596,7 +615,9 @@ Coming back to our profile deletion modal, we can test it [like so](https://gith
 ```jsx
 const { test, expect } = require('@playwright/test');
 
-test('should show success message after profile deletion', async ({ page }) => {
+test('should show success message after profile deletion', async ({
+  page
+}) => {
   await page.goto('/profile');
 
   // Attempting to delete profile

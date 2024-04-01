@@ -1,16 +1,22 @@
-import { iframe } from './Video.css';
+import type { PropsWithoutRef } from 'react';
+import { Box, type BoxProps } from './Box';
 
 /**
  * Responsive photo with max height.
  */
-export function Video(props: JSX.IntrinsicElements['iframe']) {
+export function Video(props: PropsWithoutRef<BoxProps<'iframe'>>) {
 	return (
-		<iframe
+		<Box
+			as="iframe"
 			{...props}
-			className={iframe}
 			title="YouTube video player"
 			allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowFullScreen
-		></iframe>
+			css={{
+				aspectRatio: '16 / 9',
+				width: '100%',
+				border: 0,
+			}}
+		/>
 	);
 }

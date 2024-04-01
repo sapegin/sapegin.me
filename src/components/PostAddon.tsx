@@ -1,11 +1,24 @@
 import type { ReactNode } from 'react';
 import { Box } from '.';
-import { addon } from './PostAddon.css';
 
 type Props = {
 	children: ReactNode;
 };
 
 export function PostAddon({ children }: Props) {
-	return <Box className={addon}>{children}</Box>;
+	return (
+		<Box
+			mx="-m"
+			px="m"
+			py="l"
+			css={{
+				borderColor: 'hover',
+				borderStyle: `solid`,
+				borderWidth: `2px 0`,
+				background: 'linear-gradient(0deg, #57729030 0%, #c45a8d30 100%)',
+			}}
+		>
+			{children}
+		</Box>
+	);
 }

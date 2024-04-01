@@ -1,16 +1,16 @@
 import {
-	Box,
-	Stack,
-	Heading,
-	Text,
-	Link,
-	VisuallyHidden,
-	Button,
-	PostList,
-	BookCover,
-	Feedback,
 	About,
+	BookCover,
+	Box,
+	Button,
+	Feedback,
+	Heading,
+	Link,
+	PostList,
+	Stack,
+	Text,
 	TextTypo,
+	VisuallyHidden,
 } from '../components';
 import type { Resource } from '../types/Resource';
 import { Page } from './Page';
@@ -31,7 +31,7 @@ export function BookPage({ url, chapters }: Props) {
 							A book on clean code for frontend developers
 						</Heading>
 					</Stack>
-					<Stack direction={{ mobile: 'column', tablet: 'row' }} gap="l">
+					<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
 						<Stack gap="l">
 							<VisuallyHidden as="h2">About the book</VisuallyHidden>
 							<Stack gap="m">
@@ -64,15 +64,9 @@ export function BookPage({ url, chapters }: Props) {
 										href="http://leanpub.com/washingcode/c/blog-reader"
 									>
 										Preorder now!{' '}
-										<Text
-											as="span"
-											px="s"
-											verticalAlign="middle"
-											fontSize="s"
-											color="inherit"
-										>
+										<Box as="span" px="s" verticalAlign="middle" fontSize="s">
 											■
-										</Text>{' '}
+										</Box>{' '}
 										<del>$20</del> $12
 									</Button>
 								</Box>
@@ -80,8 +74,9 @@ export function BookPage({ url, chapters }: Props) {
 							</Stack>
 						</Stack>
 						<Box
-							mx={{ mobile: 'auto', tablet: 0 }}
-							order={{ mobile: -1, tablet: 0 }}
+							mx={{ base: 'auto', tablet: 0 }}
+							order={{ base: -1, tablet: 0 }}
+							flexShrink={0}
 						>
 							<BookCover
 								image="washing-your-code-large"

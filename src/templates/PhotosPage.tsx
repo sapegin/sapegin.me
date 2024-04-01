@@ -1,14 +1,14 @@
 import {
 	Box,
-	Stack,
+	Expander,
 	Grid,
 	Heading,
-	Text,
-	Link,
 	Image,
-	Expander,
-	TextTypo,
+	Link,
+	Stack,
 	Subscription,
+	Text,
+	TextTypo,
 } from '../components';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -57,7 +57,7 @@ function Gallery() {
 						width={600}
 						height={750}
 					/>
-					<Box display={{ mobile: 'none', tablet: 'block' }}>
+					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
 							src="/images/photos-3.jpg"
 							alt="Foggy Berliner Dom, Germany"

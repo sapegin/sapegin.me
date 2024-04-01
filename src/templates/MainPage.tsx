@@ -1,21 +1,21 @@
 import {
+	BookLink,
 	Box,
-	Stack,
+	Expander,
 	Grid,
 	Heading,
-	Text,
+	Hola,
+	Image,
 	Link,
 	LinkWithIcon,
-	Image,
 	PostList,
-	BookLink,
 	ResourceList,
-	Hola,
-	Expander,
+	Stack,
+	Text,
 } from '../components';
-import { Page } from './Page';
-import type { Resource } from '../types/Resource';
 import type { Post } from '../types/Post';
+import type { Resource } from '../types/Resource';
+import { Page } from './Page';
 
 type Props = {
 	url: string;
@@ -144,7 +144,7 @@ function Photography() {
 						width={600}
 						height={750}
 					/>
-					<Box display={{ mobile: 'none', tablet: 'block' }}>
+					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
 							src="/images/photos-3.jpg"
 							alt="Foggy Berliner Dom, Germany"
@@ -174,7 +174,7 @@ function Coffee() {
 			<Heading level={2}>I drink lots of coffee</Heading>
 			<Expander>
 				<Grid gap="m" auto="narrow">
-					<Box display={{ mobile: 'none', tablet: 'block' }}>
+					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
 							src="/images/coffee-1.jpg"
 							alt="Coffee"
@@ -219,7 +219,7 @@ function Cooking() {
 							height={450}
 						/>
 					</Link>
-					<Box display={{ mobile: 'none', tablet: 'block' }}>
+					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Link href="https://tacohuaco.co/recipes/svekolnik/">
 							<Image
 								src="/images/food-2.jpg"
@@ -260,7 +260,7 @@ function Me() {
 						width={700}
 						height={700}
 					/>
-					<Box display={{ mobile: 'none', tablet: 'block' }}>
+					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
 							src="/images/me-2.jpg"
 							alt="Artem Sapegin is drinking coffee"
@@ -310,10 +310,8 @@ function BestViewed() {
 				alt="Netscape Navigator"
 				title="Netscape Navigator"
 				mx="auto"
-				props={{
-					width: 60,
-					height: 60,
-				}}
+				width={60}
+				height={60}
 			/>
 		</Stack>
 	);
@@ -329,22 +327,20 @@ export function MainPage({
 }: Props) {
 	return (
 		<Page url={url}>
-			<Stack as="main" gap="l">
-				<Intro />
-				<Writing
-					books={books}
-					writing={writing}
-					blogPosts={blogPosts}
-					tilPosts={tilPosts}
-				/>
-				<Projects projects={projects} />
-				<Photography />
-				<Cooking />
-				<Leather />
-				<Coffee />
-				<Me />
-				<BestViewed />
-			</Stack>
+			<Intro />
+			<Writing
+				books={books}
+				writing={writing}
+				blogPosts={blogPosts}
+				tilPosts={tilPosts}
+			/>
+			<Projects projects={projects} />
+			<Photography />
+			<Cooking />
+			<Leather />
+			<Coffee />
+			<Me />
+			<BestViewed />
 		</Page>
 	);
 }

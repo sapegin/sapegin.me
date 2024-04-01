@@ -1,0 +1,31 @@
+@layer reset, base, tokens, recipes, utilities;
+
+@font-face {
+	font-family: 'Mondwest-Regular';
+	src: url('/fonts/Mondwest-Regular.woff2') format('woff2');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'NeueBit';
+	src: url('/fonts/NeueBit-Bold.woff2') format('woff2');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'MonoLisa';
+	src: url('/fonts/MonoLisa-Regular.woff2') format('woff2');
+	font-display: fallback;
+}
+@font-face {
+	font-family: 'MonoLisa';
+	src: url('/fonts/MonoLisa-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-display: fallback;
+}
+@font-face {
+	font-family: 'MonoLisa';
+	src: url('/fonts/MonoLisa-RegularItalic.woff2') format('woff2');
+	font-style: italic;
+	font-display: fallback;
+}

@@ -1,7 +1,8 @@
 import { Fragment } from 'react';
-import clsx from 'clsx';
-import { Box, Grid, Text, Link } from '.';
-import { menu, link, active, HALF } from './Menu.css';
+import { Box, Grid, Link, Text } from '.';
+
+// Half of total menu items
+export const HALF = 3;
 
 type Props = {
 	current: string;
@@ -55,9 +56,14 @@ export function Menu({ current }: Props) {
 		<Grid
 			as="ul"
 			columnGap="m"
-			rowGap={{ mobile: 0, tablet: 'm' }}
+			rowGap={{ tablet: 'm' }}
 			justifyItems="center"
-			className={menu}
+			css={{
+				gridTemplateColumns: {
+					base: `repeat(${HALF}, 1fr)`,
+					tablet: `repeat(${HALF}, min-content) auto repeat(${HALF}, min-content)`,
+				},
+			}}
 		>
 			{ITEMS.map(({ title, href, alt }, index) => (
 				<Fragment key={href}>
@@ -65,13 +71,22 @@ export function Menu({ current }: Props) {
 						<Box
 							as="li"
 							aria-hidden="true"
-							display={{ mobile: 'none', tablet: 'block' }}
+							display={{ base: 'none', tablet: 'block' }}
 						/>
 					)}
 					<Text as="li" variant="menu">
 						<Link
 							href={href}
-							className={clsx(link, isCurrent(href, current) && active)}
+							css={{
+								textShadow: isCurrent(href, current)
+									? `2px 2px color-mix(in hsl, token(colors.primary), transparent 60%)`
+									: undefined,
+								// HACK: Increase specificity to override Link styles (Astro production
+								// build imports CSS in a different order)
+								'&&': {
+									textDecoration: 'none',
+								},
+							}}
 							title={alt}
 							aria-label={alt}
 						>

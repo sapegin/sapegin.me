@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
-import { Stack, Heading, IconCoffee } from '.';
-import { name, icon } from './Hola.css';
+import { Box } from './Box';
+import { Stack } from './Stack';
+import { Heading } from './Heading';
+import { IconCoffee } from './IconCoffee';
 
 type Props = {
 	children: ReactNode;
@@ -16,10 +18,19 @@ export function Hola({ children }: Props) {
 				gap="s"
 				alignItems="baseline"
 			>
-				<span className={name}>{children}</span>
-				<span>
-					<IconCoffee className={icon} />
-				</span>
+				<Box
+					css={{
+						fontSize: 'clamp(2.6rem, 7vw, 4rem)',
+						background: `linear-gradient(token(colors.accent), token(colors.primary))`,
+						backgroundClip: 'text',
+						WebkitTextFillColor: 'transparent',
+					}}
+				>
+					{children}
+				</Box>
+				<Box>
+					<IconCoffee mt={-6} />
+				</Box>
 			</Stack>
 		</Heading>
 	);

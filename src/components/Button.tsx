@@ -1,19 +1,23 @@
-import type { ElementType } from 'react';
-import clsx from 'clsx';
-import { Box, type BoxProps } from '../tamia/components/Box';
-import { button, type ButtonVariants } from './Button.css';
+import { type ElementType } from 'react';
+import { type RecipeVariantProps } from '../../styled-system/css';
+import { button } from '../../styled-system/recipes';
+import { createBox, type BoxProps } from './Box';
 
-export function Button<C extends ElementType = 'button'>({
-	as,
+export type ButtonProps<C extends ElementType> = Omit<
+	BoxProps<C>,
+	'className'
+> &
+	RecipeVariantProps<typeof button>;
+
+export function Button<C extends ElementType>({
 	variant = 'medium',
-	className,
 	...props
-}: BoxProps<C> & ButtonVariants) {
-	return (
-		<Box
-			{...(props as BoxProps<C>)}
-			as={as ?? 'button'}
-			className={clsx(className, button({ variant }))}
-		/>
+}: ButtonProps<C>) {
+	return createBox(
+		{
+			...props,
+			className: button({ variant }),
+		},
+		'button'
 	);
 }
