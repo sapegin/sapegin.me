@@ -76,10 +76,6 @@ export const theme = {
 					border: { value: colors.border },
 					primary: { value: colors.primary },
 					accent: { value: colors.accent },
-					/** @deprecated */
-					hover: { value: colors.accent },
-					/** @deprecated */
-					focus: { value: colors.accent },
 				},
 				fonts: {
 					body: { value: "'Helvetica Neue', Arial, sans-serif" },

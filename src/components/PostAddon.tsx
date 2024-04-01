@@ -12,7 +12,7 @@ export function PostAddon({ children }: Props) {
 			px="m"
 			py="l"
 			css={{
-				borderColor: 'hover',
+				borderColor: 'accent',
 				borderStyle: `solid`,
 				borderWidth: `2px 0`,
 				background: 'linear-gradient(0deg, #57729030 0%, #c45a8d30 100%)',
