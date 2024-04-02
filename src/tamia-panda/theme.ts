@@ -79,7 +79,7 @@ export const theme = {
 			/** Whitespace above headings (h1, h2, etc.) */
 			headingMarginTop: { value: '{spacing.l}' },
 			/** Horizontal spacing in lists */
-			listMargin: { value: '0' },
+			listMargin: { value: '1.3em' },
 			/** Site content horizontal spacing */
 			contentPaddingX: { value: '{spacing.m}' },
 		},
