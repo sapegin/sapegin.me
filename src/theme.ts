@@ -16,6 +16,7 @@ export const lineHeights = {
 	code: '1.3',
 };
 
+// TODO: Extract
 // HACK: Looks like borderImageSource doesn't work in Panda's cva()
 const buttonRecipe = defineRecipe({
 	className: 'button',
@@ -132,6 +133,7 @@ export const theme = {
 		},
 	},
 
+	// TODO: Extract
 	// Code styles
 	globalCss: {
 		'.astro-code, .shiki, [data-rehype-pretty-code-figure] pre': {

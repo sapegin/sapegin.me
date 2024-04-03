@@ -1,5 +1,5 @@
 import { defineConfig } from '@pandacss/dev';
-import tamia from './src/tamia-panda';
+import tamia from 'tamia';
 import { theme } from './src/theme';
 
 export default defineConfig({
