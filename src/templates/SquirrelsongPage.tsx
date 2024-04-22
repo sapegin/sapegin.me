@@ -107,11 +107,11 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 			<Stack gap="s">
 				<Heading level={3}>Low contrast with great readability</Heading>
 				<TextTypo>
-					Most themes, especially dark ones, have very high-contrast which makes
-					them tiring for the eyes. Squirrelsong themes are low-contrast but
-					still provide enough color and style variety to distinguish various
-					elements of the code and avoid long chains of code printed in the same
-					style.
+					Most themes have very high contrast and use bright colors which makes
+					them tiring for the eyes, especially for highly sensitive people.
+					Squirrelsong themes are low-contrast but still provide enough color
+					and style variety to distinguish various elements of the code and
+					avoid long chains of code printed in the same style.
 				</TextTypo>
 				<CodeSpread codes={codes} name="intro" />
 			</Stack>
@@ -154,7 +154,8 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				<Heading level={3}>Non-distracting UI</Heading>
 				<TextTypo>
 					Custom UI for Visual Studio Code, JetBrains IDEs, and other apps
-					without oversaturated bright colors to keep you focused on your code.
+					without oversaturated bright colors to keep you focused on your code
+					instead of being distracted and overwhelmed.
 				</TextTypo>
 				<Grid auto="wide" gap="m">
 					<Box objectFit="cover" overflow="hidden">
