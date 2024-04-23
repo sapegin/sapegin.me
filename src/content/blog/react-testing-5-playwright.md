@@ -1,7 +1,7 @@
 ---
 draft: true
 title: 'Modern React testing, part 5: Playwright'
-description: 'You’ll learn how to test React apps end-to-end with Playwright, how to mock network requests with Mock Service Worker, and how to apply testing best practices to write integration tests.'
+description: 'We’ll learn how to test React apps end-to-end with Playwright, how to mock network requests with Mock Service Worker, and how to apply testing best practices to write integration tests.'
 date: 2024-02-19
 tags:
   - tools
@@ -13,17 +13,17 @@ tags:
   - msw
 ---
 
-Playwright is a framework-agnostic end-to-end testing (also known as E2E, or integration testing) tool for web apps. Playwright has the best test writing experience and makes writing good, resilient to changes, tests straightforward.
+Playwright is a framework-agnostic end-to-end testing (also known as E2E, or integration testing) tool for web apps. Playwright has great developer experience and makes writing good, resilient to changes, tests straightforward.
 
 **This is the fifth article in the series**, where we learn how to test React apps end-to-end using Playwright, and how to mock network requests using Mock Service Worker.
 
 - [Modern React testing, part 1: best practices](/blog/react-testing-1-best-practices/)
 - [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
 - [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
-- [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)\*\*
+- [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)
 - **Modern React testing, part 5: Playwright (_this post_)**
 
-Check out [the GitHub repository](https://github.com/sapegin/playwright-article-2024) with all the examples.
+_Check out [the GitHub repository](https://github.com/sapegin/playwright-article-2024) with all the examples._
 
 ## Getting started with Playwright
 
@@ -39,22 +39,22 @@ We’ll set up and use these tools:
 - The best experience of writing and debugging tests.
 - Ability to inspect the page at any moment during the test run using the browser developer tools.
 - All commands wait for the DOM to change when necessary, which simplifies testing async behavior.
-- Tests better resemble real user behavior. For example, Playwright checks that a button is visible, isn’t disabled, and isn’t hidden behind another element before clicking it.
+- Tests better resemble real user behavior. For example, Playwright checks that a button is present in the DOM, isn’t disabled, and isn’t hidden behind another element or offscreen before clicking it.
 - Supports Chromium, WebKit, Firefox, as well as Google Chrome for Android and Mobile Safari.
 - Convenient semantic queries, like finding elements by their label text or ARIA role, similar to [React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/).
 - It’s very fast.
 
-Semantic queries help us write [good tests](/blog/react-testing-1-best-practices/) and make writing bad tests difficult. It allows us to interact with the app similar to how a real user would do that: for example, find form elements and buttons by their labels. It helps us to avoid testing implementation details, making our tests resilient to code changes that don’t change the behavior.
+Semantic queries help us write [good tests](/blog/react-testing-1-best-practices/) and make writing bad tests difficult. It allows us to interact with the app in a way that is similar to how a real user would do that: for example, find form elements and buttons by their labels. It helps us to avoid testing implementation details, making our tests resilient to code changes that don’t change the behavior.
 
 ### Why not Cypress
 
-Playwright is very similar to the combination of [Cypress, Cypress Testing Library, and start-server-and-test](/blog/react-testing-4-cypress/), which have been my choice for end-to-end testing for many years, but gives you all the necessary tools in a single package. Also, the API feels more cochesive and intentional. There wasn’t a lot of new things to learn.
+Playwright is very similar to the combination of [Cypress, Cypress Testing Library, and start-server-and-test](/blog/react-testing-4-cypress/), which have been my choice for end-to-end testing for many years, but gives us all the necessary tools in a single package. Also, the API feels more cohesive and intentional. There wasn’t a lot of new things to learn.
 
 Some of the benefits of Playwright over Cypress:
 
 - better API;
 - easier setup;
-- multi-tabs support
+- multi-tabs support;
 - speed.
 
 ### Setting up Playwright
@@ -74,7 +74,7 @@ This will install all the dependencies, and generate the config files. We’ll n
 
 ![Playwright installation wizard](/images/playwright-wizard.webp)
 
-Then add a few scripts to our [package.json](https://github.com/sapegin/playwright-article-2024/blob/master/package.json) file:
+Then add two scripts to our [package.json](https://github.com/sapegin/playwright-article-2024/blob/master/package.json) file:
 
 ```json {7-8}
 {
@@ -97,14 +97,14 @@ Then add a few scripts to our [package.json](https://github.com/sapegin/playwrig
 }
 ```
 
-Playwright, unlike React Testing Library or Enzyme, tests a real app in a real browser, so we need to run our development server before running Playwright. We can run both commands manually in separate terminal windows — good enough for local development — or we can set up Playwright to run it for us (see below), so have a single command that we can also use on continuous integration (CI).
+Playwright, unlike React Testing Library or Enzyme, tests a real app in a real browser, so we need to run our development server before running Playwright. We can run both commands manually in separate terminal windows — good enough for local development — or we can set up Playwright to run it for us (see below), and have a single command that we can also use on continuous integration (CI) server.
 
-As a development server, we can use an actual development server of our app, like Create React App in this case, or another tool like [React Styleguidist](https://react-styleguidist.js.org/) or [Storybook](https://storybook.js.org/), to test isolated components.
+As a development server, we can use an actual development server of our app, like Create React App (that we use for the examples) or Vite, or another tool like [React Styleguidist](https://react-styleguidist.js.org/) or [Storybook](https://storybook.js.org/), to test isolated components.
 
-We’ve added two scripts to run Create React App development server and Playwright together:
+We’ve added two scripts to run the development server and Playwright together:
 
-- `npm run test:e2e` to run dev server and Playwright ready for local development;
-- `npm run test:e2e:ci` to run dev server and all Playwright tests in headless mode, ideal for CI.
+- `npm run test:e2e` to run development server and Playwright ready for local development;
+- `npm run test:e2e:ci` to run development server and all Playwright tests in headless mode, ideal for CI.
 
 Then, edit the Playwright config file, [playwright.config.js](https://github.com/sapegin/playwright-article-2024/blob/master/playwright.config.js) in the project root folder:
 
@@ -113,24 +113,25 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  /* Run tests in files in parallel */
+  // Run tests in files in parallel
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  // Fail the build on CI if you accidentally left test.only
+  // in the source code
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
+  // Retry on CI only
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
+  // Opt out of parallel tests on CI
   workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  // Reporter to use
   reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  // Shared settings for all the projects below
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
+    // Base URL to use in actions like `await page.goto('/')`
     baseURL: 'http://localhost:3000',
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    // Collect trace when retrying the failed test
     trace: 'on-first-retry'
   },
-  /* Configure projects for major browsers */
+  // Configure projects for major browsers
   projects: [
     {
       name: 'chromium',
@@ -147,7 +148,7 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Safari'] }
     }
   ],
-  /* Run your local dev server before starting the tests */
+  // Run your local dev server before starting the tests
   webServer: {
     command: 'npm run start',
     url: 'http://localhost:3000',
@@ -159,16 +160,18 @@ module.exports = defineConfig({
 The options we’ve changed are:
 
 - `use.baseURL` is the URL of our development server to avoid writing it in every test;
-- `webServer` block describes how to run development server, we also want to reuse already running server unless we’re in the CI environment.
+- `webServer` block describes how to run development server; we also want to reuse already running server unless we’re in the CI environment.
+
+**Tip:** Read more about all [Playwright config options in the docs](https://playwright.dev/docs/test-configuration).
 
 ### Setting up Mock Service Worker
 
 We’re going to use [Mock Service Worker](https://mswjs.io/) (MSW) for mocking network requests in our integration tests, and in the app during development.
 
-- It uses Service Workers, so it intercepts all network requests, no matter how there are made.
+- It uses Service Workers, so it intercepts all network requests, no matter how there were made.
 - A single place to define mocks for the project, with the ability to [override responses](https://mswjs.io/docs/api/setup-server/use) for particular tests.
 - An ability to reuse mocks in integration tests and during development.
-- Requests are still visible in the browser developer tools.
+- Requests are still visible in the network panel of the browser developer tools.
 - Supports REST API and GraphQL.
 
 First, install MSW from npm:
@@ -195,9 +198,9 @@ export const handlers = [
 ];
 ```
 
-**Note:** To mock GraphQL requests instead of REST, we could use the [graphql](https://mswjs.io/docs/network-behavior/graphql) namespace.
+**Note:** To mock GraphQL requests instead of REST, use the [graphql](https://mswjs.io/docs/network-behavior/graphql) namespace.
 
-Here, we’re intercepting GET requests to `https://httpbin.org/anything` with any parameters and returning a JSON object with OK status.
+Here, we’re intercepting GET requests to `https://httpbin.org/anything` with any parameters and returning a JSON object with OK (200) status.
 
 Now we need to [generate the Service Worker script](https://mswjs.io/docs/integrations/browser):
 
@@ -205,21 +208,21 @@ Now we need to [generate the Service Worker script](https://mswjs.io/docs/integr
 npx msw init ./public --save
 ```
 
-The `--save` flag will save the package to `package.json` so we could update the script later by running `msw init`.
+The `--save` flag will save the public directory path to `package.json` so we can update the worker script later by running just `msw init`.
 
 **Note:** The public directory [may be different](https://mswjs.io/docs/integrations/browser#where-is-my-public-directory) for projects not using Create React App.
 
-Create another JavaScript module that will register our Service Worker with our mocks, [src/mocks/browser.js](https://github.com/sapegin/playwright-article-2024/blob/master/src/mocks/browser.js):
+Then, create another JavaScript module that will register our Service Worker with our mocks, [src/mocks/browser.js](https://github.com/sapegin/playwright-article-2024/blob/master/src/mocks/browser.js):
 
 ```js
 import { setupWorker } from 'msw/browser';
 import { http, HttpResponse } from 'msw';
 import { handlers } from './handlers';
 
-// This configures a Service Worker with the given request handlers
+// Configure a Service Worker with the given request handlers
 export const worker = setupWorker(...handlers);
 
-// Expose method globally to make them available in integration tests
+// Expose methods globally to make them available in integration tests
 window.msw = { worker, http, HttpResponse };
 ```
 
@@ -241,18 +244,11 @@ async function enableMocking() {
 
 And update the way we render the React app to await the Promise returned by `enableMocking()` function before rendering anything:
 
-```js {1}#added {4}added
+```js {1, 4}
 enableMocking().then(() => {
   const root = createRoot(document.getElementById('root'));
   root.render(<App />);
 });
-```
-
-```diff
-+ enableMocking().then(() => {
-+  const root = createRoot(document.getElementById('root'));
--  root.render(<App />);
-- });
 ```
 
 Now, every time we run our app in the development mode or on CI, network requests will be mocked, without any changes to the application code or tests, except these few lines of code in the root module.
@@ -276,11 +272,11 @@ Here, we’re visiting the homepage of our app running in the development server
 
 ### Running tests
 
-Start Playwright in the UI mode by runnig `npm run test:e2e`. From here run a single test or all tests. You could press an eye icon next to a single test or a group to automatically rerun them on every change in the code of the test.
+Start Playwright in the UI mode by running `npm run test:e2e`. From here run a single test or all tests. We can press an eye icon next to a single test or a group to automatically rerun them on every change in the code of the test.
 
 ![Running a test in Playwright](/images/playwright-test.webp)
 
-When I write tests, I usually _watch_ a single test (meaning Playwrite reruns it for me on every change), otherwise it’s too slow and too hard to see what’s wrong if there are any issues.
+When I write tests, I usually _watch_ a single test (meaning Playwright reruns it for me on every change), otherwise it’s too slow and too hard to see what’s wrong if there are any issues.
 
 Run `npm run test:e2e:ci` to run all tests in the headless mode, meaning we won’t see the browser window:
 
@@ -644,11 +640,11 @@ Playwright docs have a thorough [debugging guide](https://playwright.dev/docs/ru
 
 However, it’s usually enough to check the locator or inspect the DOM for a particular step of the test after running the tests. Click any operation in the log first, and then:
 
-To debug a locator the DOM, click the [Pick locator](https://playwright.dev/docs/test-ui-mode#pick-locator) button, and hover over an element you want to target. You can use the _Locator_ tab below to edit it and see if it still matches the element you need.
+To debug a locator the DOM, click the [Pick locator](https://playwright.dev/docs/test-ui-mode#pick-locator) button, and hover over an element we want to target. We can use the _Locator_ tab below to edit it and see if it still matches the element we need.
 
 ![Using browser developer tools in Playwright](/images/playwright-debug-locator.webp)
 
-To inspect the DOM, click the [Open snapshot in a new tab](https://playwright.dev/docs/test-ui-mode#pop-out-and-inspect-the-dom) button, and use the browser developer tools the way you’d normally do.
+To inspect the DOM, click the [Open snapshot in a new tab](https://playwright.dev/docs/test-ui-mode#pop-out-and-inspect-the-dom) button, and use the browser developer tools the way we’d normally do.
 
 ![Using browser developer tools in Playwright](/images/playwright-inspect.png)
 
