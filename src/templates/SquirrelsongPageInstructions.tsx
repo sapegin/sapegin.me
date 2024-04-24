@@ -308,4 +308,16 @@ export const instructions: Instructions[] = [
 			'https://github.com/sapegin/squirrelsong/tree/master/dark/Midnight%20Commander#readme',
 		urlName: 'GitHub',
 	},
+
+	/**
+	 * Marta File Manager
+	 */
+	{
+		id: 'marta',
+		app: 'Marta File Manager',
+		light: true,
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/Marta#readme',
+		urlName: 'GitHub',
+	},
 ];
