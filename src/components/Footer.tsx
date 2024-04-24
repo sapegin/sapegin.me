@@ -1,4 +1,4 @@
-import { Text, Link } from '.';
+timport { Text, Link } from '.';
 import romanize from 'romanize';
 
 export function Footer() {
@@ -11,7 +11,7 @@ export function Footer() {
 			</Text>
 			<Text variant="small">
 				Powered by <Link href="https://astro.build/">Astro</Link> and{' '}
-				<Link href="https://tamiadev.github.io/tamia/">Tâmia</Link>, hosted on{' '}
+				<Link href="https://github.com/sapegin/tamia">Tâmia</Link>, hosted on{' '}
 				<Link href="https://www.netlify.com/">Netlify</Link>.{' '}
 				<Link href="https://github.com/sapegin/sapegin.me">Source code</Link>.{' '}
 				RSS: <Link href="/atom.xml">blog</Link>,{' '}
