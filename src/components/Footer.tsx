@@ -1,4 +1,4 @@
-timport { Text, Link } from '.';
+import { Text, Link } from '.';
 import romanize from 'romanize';
 
 export function Footer() {
