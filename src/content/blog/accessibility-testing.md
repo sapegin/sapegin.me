@@ -179,7 +179,7 @@ A few more things that are worth testing:
 
 **Tip:** Use CSS [`any-hover`](https://www.w3.org/TR/mediaqueries-4/#any-input) interaction media feature query to test hover support on the device - though beware of making [incorrect assumptions](https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/).
 
-**Tip:** We could you Cypress and cypress-axe [to test the accessibility of our site or app in the dark mode](https://www.cypress.io/blog/2019/12/13/test-your-web-app-in-dark-mode/).
+**Tip:** We could use Cypress and cypress-axe [to test the accessibility of our site or app in the dark mode](https://www.cypress.io/blog/2019/12/13/test-your-web-app-in-dark-mode/).
 
 ## Resources
 
