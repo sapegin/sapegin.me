@@ -320,4 +320,16 @@ export const instructions: Instructions[] = [
 			'https://github.com/sapegin/squirrelsong/tree/master/light/Marta#readme',
 		urlName: 'GitHub',
 	},
+
+	/**
+	 * Warp
+	 */
+	{
+		id: 'warp',
+		app: 'Warp',
+		dark: true,
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/dark/Warp#readme',
+		urlName: 'GitHub',
+	},
 ];
