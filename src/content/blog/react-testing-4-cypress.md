@@ -21,6 +21,7 @@ Cypress is a framework-agnostic end-to-end testing (also known as E2E, or integr
 - [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
 - [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
 - **Modern React testing, part 4: Cypress and Cypress Testing Library (_this post_)**
+- [Modern React testing, part 5: Playwright](/blog/react-testing-5-playwright/)
 
 Check out [the GitHub repository](https://github.com/sapegin/cypress-article-2020) with all the examples.
 

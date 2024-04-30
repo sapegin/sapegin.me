@@ -24,6 +24,7 @@ React Testing Library is a library to test React components, that makes applying
 - [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
 - **Modern React testing, part 3: Jest and React Testing Library (_this post_)**
 - [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)
+- [Modern React testing, part 5: Playwright](/blog/react-testing-5-playwright/)
 
 **Examples:** Check out [the GitHub repository](https://github.com/sapegin/rtl-article-2019) with all the examples.
 

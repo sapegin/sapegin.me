@@ -17,6 +17,7 @@ Enzyme is probably the most popular tool to test React components. And though it
 - **Modern React testing, part 2: Jest and Enzyme (_this post_)**
 - [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
 - [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)
+- [Modern React testing, part 5: Playwright](/blog/react-testing-5-playwright/)
 
 ## Getting started with Jest and Enzyme
 

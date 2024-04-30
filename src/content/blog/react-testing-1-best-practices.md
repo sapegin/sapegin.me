@@ -19,6 +19,7 @@ I wrote [a similar article](/blog/react-jest/) three years ago, and now I look a
 - [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
 - [Modern React testing, part 3: Jest and React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/)
 - [Modern React testing, part 4: Cypress and Cypress Testing Library](/blog/react-testing-4-cypress/)
+- [Modern React testing, part 5: Playwright](/blog/react-testing-5-playwright/)
 
 ## Why automate testing
 
