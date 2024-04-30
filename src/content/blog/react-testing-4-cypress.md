@@ -462,7 +462,7 @@ it('load ingredients asynchronously', () => {
 });
 ```
 
-Cypress will wait until the data is fetched and rendered on the screen, and thanks to network calls mockings it won't be long.
+Cypress will wait until the data is fetched and rendered on the screen, and thanks to network calls mocking it won't be long.
 
 For not so happy path tests, we may need to override global mocks inside a particular test. For example, we could test what happens when our API returns an error:
 
