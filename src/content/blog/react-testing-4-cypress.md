@@ -251,7 +251,7 @@ Let’s compare different methods of querying DOM elements:
 | `[alt="Chuck Norris"]`, `[role="banner"]` | Often | Good: still not visible to users, but already part of the app UI |
 | `[children="Cook pizza!"]` | Always | Best: visible to the user part of the app UI |
 
-To summarise:
+To summarize:
 
 - Text content may change and we’ll need to update our tests. This may not be a problem if our translation library only render string IDs in tests, or if we want our test to work with the actual text users see in the app.
 - Test IDs clutter the markup with props we only need in tests. Test IDs are also something that users of our app don’t see: if we remove a label from a button, a test with test ID will still pass.

@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Modern React testing, part 5: Playwright'
 description: 'We’ll learn how to test React apps end-to-end with Playwright, how to mock network requests with Mock Service Worker, and how to apply testing best practices to write integration tests.'
 date: 2024-02-19
@@ -13,9 +12,9 @@ tags:
   - msw
 ---
 
-Playwright is a framework-agnostic end-to-end testing (also known as E2E, or integration testing) tool for web apps. Playwright has great developer experience and makes writing good, resilient to changes, tests straightforward.
+Playwright is a framework-agnostic end-to-end testing (also known as E2E, or integration testing) tool for web apps. Playwright has great developer experience and makes writing good and resilient to changes tests straightforward.
 
-**This is the fifth article in the series**, where we learn how to test React apps end-to-end using Playwright, and how to mock network requests using Mock Service Worker.
+**This is the fifth article in the series**, where we learn how to test React apps end-to-end using Playwright and how to mock network requests using Mock Service Worker.
 
 - [Modern React testing, part 1: best practices](/blog/react-testing-1-best-practices/)
 - [Modern React testing, part 2: Jest and Enzyme](/blog/react-testing-2-jest-and-enzyme/)
@@ -36,15 +35,15 @@ We’ll set up and use these tools:
 
 **Playwright** has many benefits over other end-to-end test runners:
 
-- The best experience of writing and debugging tests.
-- Ability to inspect the page at any moment during the test run using the browser developer tools.
+- The best experience writing and debugging tests.
+- An ability to inspect the page at any moment during the test run using the browser developer tools.
 - All commands wait for the DOM to change when necessary, which simplifies testing async behavior.
 - Tests better resemble real user behavior. For example, Playwright checks that a button is present in the DOM, isn’t disabled, and isn’t hidden behind another element or offscreen before clicking it.
 - Supports Chromium, WebKit, Firefox, as well as Google Chrome for Android and Mobile Safari.
 - Convenient semantic queries, like finding elements by their label text or ARIA role, similar to [React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/).
 - It’s very fast.
 
-Semantic queries help us write [good tests](/blog/react-testing-1-best-practices/) and make writing bad tests difficult. It allows us to interact with the app in a way that is similar to how a real user would do that: for example, find form elements and buttons by their labels. It helps us to avoid testing implementation details, making our tests resilient to code changes that don’t change the behavior.
+Semantic queries help us write [good tests](/blog/react-testing-1-best-practices/) and make writing bad tests difficult. It allows us to interact with the app in a way that is similar to how a real user would do that: for example, find form elements and buttons by their labels. It helps us avoid testing implementation details, making our tests resilient to code changes that don’t change the behavior.
 
 ### Why not Cypress
 
@@ -65,12 +64,12 @@ First, run the [installation wizard](https://playwright.dev/docs/intro):
 npm init playwright@latest
 ```
 
-This will install all the dependencies, and generate the config files. We’ll need to choose:
+This will install all the dependencies and generate the config files. We’ll need to choose:
 
 - whether to use TypeScript or JavaScript (we’ll use JavaScript in this article);
 - where to put the tests (`tests` folder in the project root);
 - whether to generate GitHub Actions to run the tests on CI (we won’t cover this here);
-- whether we want to install the browsers (it’s a good idea, we’ll need them anyway).
+- whether we want to install the browsers (it’s a good idea; we’ll need them anyway).
 
 ![Playwright installation wizard](/images/playwright-wizard.webp)
 
@@ -97,16 +96,16 @@ Then add two scripts to our [package.json](https://github.com/sapegin/playwright
 }
 ```
 
-Playwright, unlike React Testing Library or Enzyme, tests a real app in a real browser, so we need to run our development server before running Playwright. We can run both commands manually in separate terminal windows — good enough for local development — or we can set up Playwright to run it for us (see below), and have a single command that we can also use on continuous integration (CI) server.
+Playwright, unlike React Testing Library or Enzyme, tests a real app in a real browser, so we need to run our development server before running Playwright. We can run both commands manually in separate terminal windows — good enough for local development — or we can set up Playwright to run them for us (see below) and have a single command that we can also use on a continuous integration (CI) server.
 
 As a development server, we can use an actual development server of our app, like Create React App (that we use for the examples) or Vite, or another tool like [React Styleguidist](https://react-styleguidist.js.org/) or [Storybook](https://storybook.js.org/), to test isolated components.
 
 We’ve added two scripts to run the development server and Playwright together:
 
-- `npm run test:e2e` to run development server and Playwright ready for local development;
-- `npm run test:e2e:ci` to run development server and all Playwright tests in headless mode, ideal for CI.
+- `npm run test:e2e` to run a development server and Playwright ready for local development;
+- `npm run test:e2e:ci` to run a development server and all Playwright tests in headless mode, ideal for CI.
 
-Then, edit the Playwright config file, [playwright.config.js](https://github.com/sapegin/playwright-article-2024/blob/master/playwright.config.js) in the project root folder:
+Then, edit the Playwright config file, [playwright.config.js](https://github.com/sapegin/playwright-article-2024/blob/master/playwright.config.js), in the project root folder:
 
 ```js
 const { defineConfig, devices } = require('@playwright/test');
@@ -160,15 +159,15 @@ module.exports = defineConfig({
 The options we’ve changed are:
 
 - `use.baseURL` is the URL of our development server to avoid writing it in every test;
-- `webServer` block describes how to run development server; we also want to reuse already running server unless we’re in the CI environment.
+- `webServer` block describes how to a run development server; we also want to reuse an already-running server unless we’re in the CI environment.
 
 **Tip:** Read more about all [Playwright config options in the docs](https://playwright.dev/docs/test-configuration).
 
 ### Setting up Mock Service Worker
 
-We’re going to use [Mock Service Worker](https://mswjs.io/) (MSW) for mocking network requests in our integration tests, and in the app during development.
+We’re going to use [Mock Service Worker](https://mswjs.io/) (MSW) for mocking network requests in our integration tests and in the app during development.
 
-- It uses Service Workers, so it intercepts all network requests, no matter how there were made.
+- It uses Service Workers, so it intercepts all network requests, no matter how they are made.
 - A single place to define mocks for the project, with the ability to [override responses](https://mswjs.io/docs/api/setup-server/use) for particular tests.
 - An ability to reuse mocks in integration tests and during development.
 - Requests are still visible in the network panel of the browser developer tools.
@@ -200,7 +199,7 @@ export const handlers = [
 
 **Note:** To mock GraphQL requests instead of REST, use the [graphql](https://mswjs.io/docs/network-behavior/graphql) namespace.
 
-Here, we’re intercepting GET requests to `https://httpbin.org/anything` with any parameters and returning a JSON object with OK (200) status.
+Here, we’re intercepting GET requests to `https://httpbin.org/anything` with any parameters and returning a JSON object with an OK (200) status.
 
 Now we need to [generate the Service Worker script](https://mswjs.io/docs/integrations/browser):
 
@@ -251,7 +250,7 @@ enableMocking().then(() => {
 });
 ```
 
-Now, every time we run our app in the development mode or on CI, network requests will be mocked, without any changes to the application code or tests, except these few lines of code in the root module.
+Now, every time we run our app in the development mode or on CI, network requests will be mocked without any changes to the application code or tests, except these few lines of code in the root module.
 
 ### Creating our first test
 
@@ -268,11 +267,11 @@ test('hello world', async ({ page }) => {
 });
 ```
 
-Here, we’re visiting the homepage of our app running in the development server, then validating that the text “welcome back” is present on the page using Playwright’s [getByText()](https://playwright.dev/docs/locators#locate-by-text) locator, and [toBeVisible()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-visible) assertion.
+Here, we’re visiting the homepage of our app running on the development server, then validating that the text “welcome back” is present on the page using Playwright’s [getByText()](https://playwright.dev/docs/locators#locate-by-text) locator, and [toBeVisible()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-visible) assertion.
 
 ### Running tests
 
-Start Playwright in the UI mode by running `npm run test:e2e`. From here run a single test or all tests. We can press an eye icon next to a single test or a group to automatically rerun them on every change in the code of the test.
+Start Playwright in the UI mode by running `npm run test:e2e`. From here, either run a single test or all tests. We can press an eye icon next to a single test or a group to automatically rerun them on every change in the code of the test.
 
 ![Running a test in Playwright](/images/playwright-test.webp)
 
@@ -293,14 +292,16 @@ Let’s compare different methods of querying DOM elements:
 | `button` | Never | Worst: too generic |
 | `.btn.btn-large` | Never | Bad: coupled to styles |
 | `#main` | Never | Bad: avoid IDs in general |
-| `[data-testid="cookButton"]` | Sometimes | Okay: not visible to the user, but not an implementation detail, use when better options aren’t available |
+| `[data-testid="cookButton"]` | Sometimes | Okay: not visible to the user, but not an implementation detail; use when better options aren’t available |
 | `[alt="Chuck Norris"]`, `[role="banner"]` | Often | Good: still not visible to users, but already part of the app UI |
 | `[children="Cook pizza!"]` | Always | Best: visible to the user part of the app UI |
 
-To summarise:
+To summarize:
 
-- Text content may change and we’ll need to update our tests. This may not be a problem if our translation library only render string IDs in tests, or if we want our test to work with the actual text users see in the app.
-- Test IDs clutter the markup with props we only need in tests. Test IDs are also something that users of our app don’t see: if we remove a label from a button, a test with test ID will still pass.
+- Prefer to query elements by their visible (for example, button label) or accessible name (for example, image alt).
+- Use test IDs as the last resort. They clutter the markup with props we only need in tests. Test IDs are also something that users of our app don’t see: if we remove a label from a button, a test with test ID will still pass.
+
+**Note:** I often hear this complaint about using labels to query elements: they break when the app copy is updated. I consider this a feature: I’ve seen more than once that a button label change on one screen broke some other screen where this change was undesired.
 
 Playwright has methods for all good queries, which are called [locators](https://playwright.dev/docs/locators):
 
@@ -318,7 +319,7 @@ Let’s see how to use locators. To select this button in a test:
 <button data-testid="cookButton">Cook pizza!</button>
 ```
 
-We can either query it by the test ID:
+We can either query it by its test ID:
 
 ```jsx
 page.getByTestId('cookButton');
@@ -330,9 +331,9 @@ Or query it by its text content:
 page.getByText('cook pizza');
 ```
 
-**Note:** text locators are partial and case-insensitive by default which makes them more resilient to small tweaks and changes in the content. For an exact match, use the `exact` opiton: `page.getByText('Cook pizza!', {exact: true});`.
+**Note:** Text locators are partial and case-insensitive by default, which makes them more resilient to small tweaks and changes in the content. For an exact match, use the `exact` option: `page.getByText('Cook pizza!', {exact: true})`.
 
-Or, the best method, query it by its ARIA role and label:
+Or, the best method is to query it by its ARIA role and label:
 
 ```jsx
 page.getByRole('button', { name: 'cook pizza' });
@@ -340,17 +341,17 @@ page.getByRole('button', { name: 'cook pizza' });
 
 Benefits of the last method are:
 
-- doesn’t clutter the markup with test IDs, that aren’t perceived by users;
+- doesn’t clutter the markup with test IDs that aren’t perceived by users;
 - doesn’t give false positives when the same text is used in non-interactive content;
-- makes sure that the button is an actual `button` element or at least have the `button` ARIA role.
+- makes sure that the button is an actual `button` element or at least has the `button` ARIA role.
 
-Check the Testing Library docs for more details on [best practices](https://playwright.dev/docs/best-practices), and [inherent roles of HTML elements](https://github.com/A11yance/aria-query#elements-to-roles).
+Check the Playwright docs for more details on [best practices](https://playwright.dev/docs/best-practices), and [inherent roles of HTML elements](https://github.com/A11yance/aria-query#elements-to-roles).
 
 ## Testing React apps end-to-end
 
 ### Testing basic user interaction
 
-A typical integration test looks like this: visit the page, interact with it, check the changes on the page after the interaction. [For example](https://github.com/sapegin/playwright-article-2024/blob/master/tests/hello.spec.js):
+A typical integration test looks like this: visit the page, interact with it, and check the changes on the page after the interaction. [For example](https://github.com/sapegin/playwright-article-2024/blob/master/tests/hello.spec.js):
 
 ```js
 const { test, expect } = require('@playwright/test');
@@ -368,15 +369,15 @@ test('navigates to another page', async ({ page }) => {
 });
 ```
 
-Here we’re finding a link by its ARIA role and text using the Playwright’s [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locator, and clicking it using the [click()](https://playwright.dev/docs/input#mouse-click) method. Then we’re verifying that we’re on the correct page by checking its heading, first by finding it the same way we found the link before, and testing with the [toBeVisible()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-visible) assertion.
+Here, we’re finding a link by its ARIA role (`link`) and text using the Playwright’s [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locator, and clicking it using the [click()](https://playwright.dev/docs/input#mouse-click) method. Then we’re verifying that we’re on the correct page by checking its heading, first by finding it the same way we found the link before, and testing the heading with the [toBeVisible()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-visible) assertion.
 
-With Playwright we generally don’t have to care if the actions are synchronous or asynchronous: each command will [wait for some time](https://playwright.dev/docs/actionability) for the queried element to appear on the page. Though, we should use `await` manually for most operations. This avoids flakiness and complexity of asynchronous testing, and keeps the code straightforward.
+With Playwright, we generally don’t have to care if the actions are synchronous or asynchronous: each command will [wait for some time](https://playwright.dev/docs/actionability) for the queried element to appear on the page. Though we should explicitly `await` most operations. This avoids the flakiness and complexity of asynchronous testing and keeps the code straightforward.
 
 ### Testing forms
 
-Playwright’s locators allow us to access any form element by its visible or accessible label.
+Playwright’s locators allow us to access any form element by its visible (for example, `<label>` element) or accessible (for example, `aria-label` attribute) label.
 
-For example, we have a [registration form](https://github.com/sapegin/playwright-article-2024/blob/master/src/components/SignUpForm.js) with text inputs, selects, checkboxes and radio buttons. We can test it [like this](https://github.com/sapegin/playwright-article-2024/blob/master/tests/signUp.spec.js):
+For example, we have a [registration form](https://github.com/sapegin/playwright-article-2024/blob/master/src/components/SignUpForm.js) with a bunch of text inputs, select boxes, checkboxes, and radio buttons. This is how we can [test it](https://github.com/sapegin/playwright-article-2024/blob/master/tests/signUp.spec.js):
 
 ```js
 const { test, expect } = require('@playwright/test');
@@ -403,13 +404,13 @@ test('should show success page after submission', async ({
 });
 ```
 
-Here we’re using [getByLabel()](https://playwright.dev/docs/locators#locate-by-label) and [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locators to find elements by their label text or ARIA role. Then we’re using the [fill()](https://playwright.dev/docs/api/class-locator#locator-fill), [selectOption()](https://playwright.dev/docs/api/class-locator#locator-select-option), and [check()](https://playwright.dev/docs/api/class-locator#locator-check) methods to fill the form, and the [click()](https://playwright.dev/docs/api/class-locator#locator-click) method to submit it by clicking the submit button.
+Here we’re using [getByLabel()](https://playwright.dev/docs/locators#locate-by-label) and [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locators to find elements by their label texts or ARIA roles. Then we use the [fill()](https://playwright.dev/docs/api/class-locator#locator-fill), [selectOption()](https://playwright.dev/docs/api/class-locator#locator-select-option), and [check()](https://playwright.dev/docs/api/class-locator#locator-check) methods to fill the form, and the [click()](https://playwright.dev/docs/api/class-locator#locator-click) method to submit it by clicking the submit button.
 
 ### Testing complex forms
 
 In the previous example, we used the [getByLabel()](https://playwright.dev/docs/locators#locate-by-label) locator to find form elements, which works when all form elements have unique labels, but this isn’t always the case.
 
-For example, we have a passport number section in our [registration form](https://github.com/sapegin/playwright-article-2024/blob/master/src/components/SignUpForm.js) where multiple inputs have the same label — like “year” of the issue date and “year” of the expiration date. The markup of each field group looks like so:
+For example, we have a passport number section in our [registration form](https://github.com/sapegin/playwright-article-2024/blob/master/src/components/SignUpForm.js) where multiple inputs have the same label, like “year” of the issue date and “year” of the expiration date. The markup of each field group looks like so:
 
 ```html
 <fieldset>
@@ -424,7 +425,7 @@ For example, we have a passport number section in our [registration form](https:
 </fieldset>
 ```
 
-To access a particular field, we can select a `fieldset` by its `legend` text, and then select an input by its label inside the `fieldset`.
+To access a particular field, we can select a `fieldset` by its `legend` text first, and then select an input by its label inside the `fieldset`.
 
 ```js
 const passportIssueDateGroup = page.getByRole('group', {
@@ -437,14 +438,14 @@ await passportIssueDateGroup
 await passportIssueDateGroup.getByLabel('year').fill('2004');
 ```
 
-We call [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locator with `group` — ARIA role of `fieldset` — and its `legend` text. Then we chain [getByLabel()](https://playwright.dev/docs/locators#locate-by-label) locator to query form fields by their labels.
+We call [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locator with the ARIA role of `fieldset` (`group`) and the text of its`legend`. Then we chain the [getByLabel()](https://playwright.dev/docs/locators#locate-by-label) locator to query form fields by their labels.
 
 ### Testing links
 
 There are several ways to test links that open in a new tab:
 
-- check the link’s `href` without clicking it;
-- get the handle of the new page and use it instead of the current one (`page`).
+- check the link’s `href` attribute without clicking it;
+- click the link, and then get the handle of the new page and use it instead of the current one (`page`).
 
 In the first method, we query the link by its ARIA role and text, and verify that the URL in its `href` attribute is correct:
 
@@ -454,9 +455,9 @@ await expect(
 ).toHaveAttribute('href', /\/toc/);
 ```
 
-The main drawback of this method is that we’re not testing that the link is actually clickable. It might be hidden, or might have a click handler that prevents the default browser behavior.
+The main drawback of this method is that we’re not testing whether the link is actually clickable. It might be hidden, or it might have a click handler that prevents the default browser behavior.
 
-In the second method, we query the link by its ARIA role and text again, click it, get the handle of the new page, and use it instead of the current one:
+In the second method, we query the link by its ARIA role and text again, click it, get the handle of the new page, and use the new page handle instead of the current one:
 
 ```js
 const pagePromise = context.waitForEvent('page');
@@ -467,9 +468,9 @@ const newPage = await pagePromise;
 await expect(newPage.getByText("i'm baby")).toBeVisible();
 ```
 
-Now we could check that we’re on the correct page by finding some text unique to this page.
+Now, we could verify that we’re on the correct page by finding some text unique to this page.
 
-I recommend this method because it better resembles the actual user behavior.
+I recommend the second method because it better resembles the actual user behavior.
 
 There are [other solutions](https://stackoverflow.com/questions/71843918/open-a-blank-link-and-continue-the-test-with-playwright), but I don’t think they are any better than these two.
 
@@ -505,9 +506,9 @@ test('load ingredients asynchronously', async ({ page }) => {
 });
 ```
 
-Playwright will wait until the data is fetched and rendered on the screen, and thanks to network calls mockings it won’t be long.
+Playwright will wait until the data is fetched and rendered on the screen, and thanks to network calls mocking it won’t be long.
 
-For not so happy path tests, we may need to override global mocks inside a particular test. For example, we could test what happens when our API returns an error:
+For not-so-happy-path tests, we may need to override global mocks inside a particular test. For example, we could test what happens when our API returns an error:
 
 ```js
 test('shows an error message', async ({ page }) => {
@@ -537,11 +538,11 @@ test('shows an error message', async ({ page }) => {
 });
 ```
 
-Here, we’re using the MSW’s [use()](https://mswjs.io/docs/api/setup-worker/use/) method to override the default mock response for our endpoint during a single test. Also note that we’re using [once](https://mswjs.io/docs/api/http/#once) option of the `http.get()` method, otherwise the override will be added permanently and may interfere with other tests.
+Here, we’re using the MSW’s [use()](https://mswjs.io/docs/api/setup-worker/use/) method to override the default mock response for our endpoint during a single test. Also note that we’re using the [once](https://mswjs.io/docs/api/http/#once) option of the `http.get()` method; otherwise the override will be added permanently and may interfere with other tests.
 
 ### Testing complex pages
 
-We should avoid test IDs wherever possible, and use more semantic queries instead. However, sometimes we need to be more precise. For example, we have a “delete profile” button on our user profile page that shows a confirmation modal with “delete profile” and “cancel” buttons inside. We need to know which of the two delete buttons we’re pressing in our tests.
+We should avoid test IDs wherever possible and use more semantic queries instead. However, sometimes we need to be more precise. For example, we have a “delete profile” button on our user profile page that shows a confirmation modal with “delete profile” and “cancel” buttons inside. We need to know which of the two delete buttons we’re pressing in our tests.
 
 The markup could look [like so](https://github.com/sapegin/playwright-article-2024/blob/master/src/components/Profile.js):
 
@@ -558,9 +559,11 @@ The markup could look [like so](https://github.com/sapegin/playwright-article-20
 </div>
 ```
 
-The first “delete profile” isn’t a problem becase when we click it, it’s the only one present on the page. However, when the modal is open, we have two buttons with the same label. So, how do we click the one inside the modal dialog?
+The first “delete profile” isn’t a problem because when we click it, it’s the only one present on the page. However, when the modal is open, we have two buttons with the same label.
 
-First option would be to assign a test ID to this button, and sometimes it’s the only way. Usually, though, we can do better. We can nest locators, so we could target the container (the modal dialog) first, and then the button we need inside the container:
+So, how do we click the one inside the modal dialog?
+
+The first option would be to assign a test ID to this button, and sometimes that’s the only way. Usually, though, we can do better. We can nest locators, so we could target the container (the modal dialog) first, and then the button we need inside the container:
 
 ```js
 await page
@@ -572,7 +575,7 @@ await page
   .click();
 ```
 
-It’s slighly more complex when the container doesn't have any semantic way to target it, like a `section` with a heading (`h1`, `h2`, an so on) inside. In this case we can target all sections on a page, and then [filter](https://playwright.dev/docs/locators#filtering-locators) then to find the one we’re looking for.
+It’s slightly more complex when the container doesn't have any semantic way to target it, like a `section` with a heading (`h1`, `h2`, and so on) inside. In this case, we can target all sections on a page and then [filter](https://playwright.dev/docs/locators#filtering-locators) them to find the one we’re looking for.
 
 Imagine markup like so:
 
@@ -632,19 +635,21 @@ test('should show success message after profile deletion', async ({
 });
 ```
 
-Here, we’re using [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locator, as in previous examples, to find all elements we need.
+Here, we’re using the [getByRole()](https://playwright.dev/docs/locators#locate-by-role) locator, as in previous examples, to find all elements we need.
 
 ## Debugging
 
 Playwright docs have a thorough [debugging guide](https://playwright.dev/docs/running-tests).
 
-However, it’s usually enough to check the locator or inspect the DOM for a particular step of the test after running the tests. Click any operation in the log first, and then:
+However, it’s usually enough to check the locator or inspect the DOM for a particular step of the test after running the tests.
 
-To debug a locator the DOM, click the [Pick locator](https://playwright.dev/docs/test-ui-mode#pick-locator) button, and hover over an element we want to target. We can use the _Locator_ tab below to edit it and see if it still matches the element we need.
+Click any operation in the log first, and then do one of the following:
+
+**To debug a locator the DOM**, click the [Pick locator](https://playwright.dev/docs/test-ui-mode#pick-locator) button, and hover over an element we want to target. We can use the _Locator_ tab below to edit it and see if it still matches the element we need.
 
 ![Using browser developer tools in Playwright](/images/playwright-debug-locator.webp)
 
-To inspect the DOM, click the [Open snapshot in a new tab](https://playwright.dev/docs/test-ui-mode#pop-out-and-inspect-the-dom) button, and use the browser developer tools the way we’d normally do.
+**To inspect the DOM**, click the [Open snapshot in a new tab](https://playwright.dev/docs/test-ui-mode#pop-out-and-inspect-the-dom) button and use the browser developer tools the way we’d normally do.
 
 ![Using browser developer tools in Playwright](/images/playwright-inspect.png)
 
@@ -658,6 +663,8 @@ test.only('hello world', async ({ page }) => {
 
 ## Conclusion
 
-Good tests interact with the app similar to how a real user would do that, they don’t test implementation details, and they are resilient to code changes that don’t change the behavior. We’ve learned how to write good end-to-end tests using Playwright, how to set it up, and how to mock network requests using Mock Service Worker.
+Good tests interact with the app similar to how a real user would do that; they don’t test implementation details, and they are resilient to code changes that don’t change the behavior.
 
-However, Playwright has many more features that we haven’t covered in the article, and that may be useful one day.
+We’ve learned how to write good end-to-end tests using Playwright, how to set it up, and how to mock network requests using Mock Service Worker.
+
+However, Playwright has many more features that we haven’t covered in the article that may be useful one day.
