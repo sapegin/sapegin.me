@@ -12,7 +12,7 @@ export function Image(
 	return createBox(
 		{
 			...props,
-			className: css(props.css, {
+			className: css({
 				maxWidth: '100%',
 				height: 'auto',
 			}),
