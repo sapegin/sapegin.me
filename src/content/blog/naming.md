@@ -310,7 +310,7 @@ expect(breakpoints).toEqual(['480px', '768px', '1024px'])
 
 Here, it’s clear what `x` is in each example, and a longer name would bloat the code without making it more readable, likely less. We already have the full name in the parent function: we’re mapping over the `TRANSITION` object keys, and parsing each key; or we’re mapping over a list of breakpoints, and converting them to strings. It also helps that here we only have a single variable, so any short name will be read as “whatever we’re mapping over”.
 
-I usually use `x` in such cases. I think it’s more or less clear that it’s a placeholder and not an acronym of a particular word.
+I usually use `x` in such cases. I think it’s clear enough that it’s a placeholder and not an acronym of a particular word.
 
 Some developers prefer `_`, and it’s a good choice for any programming language that’s not JavaScript, where `_` is often used for [Lodash](https://lodash.com/) utility library.
 
@@ -404,7 +404,10 @@ _.get('/about', (req, res) => {
 module.exports = _;
 ```
 
-<!-- // TODO: Can we test this? -->
+<!--
+expect(module.exports).toHaveProperty('use')
+expect(module.exports).toHaveProperty('get')
+-->
 
 I cannot imagine the logic behind this convention, and I’m sure it’s going to be confusing for many developers working with the code. It’ll be much worse when the code grows to do something useful.
 
@@ -433,9 +436,12 @@ router.get('/about', (req, res) => {
 module.exports = router;
 ```
 
-<!-- // TODO: Can we test this? -->
+<!--
+expect(module.exports).toHaveProperty('use')
+expect(module.exports).toHaveProperty('get')
+-->
 
-Now I don’t have trouble understanding what’s going on here. (Using `req` for request and `res` for response is an Express convention: huge adoption makes it a good idea to keep using it.)
+Now, I don’t have trouble understanding what’s going on here. (Using `req` for request and `res` for response is an Express convention: huge adoption makes it a good idea to keep using it.)
 
 So, `x`, `a`, and `b` are pretty much all single-character variable names I ever use.
 
@@ -907,7 +913,7 @@ expect(currencyReducer(undefined, { type: UPDATE_RESULTS, res: { data: { query: 
 expect(currencyReducer(undefined, { type: UPDATE_RESULTS, res: { data: { query: { userInfo: { userCurrency: 'eur' } }, currencies: {} } } }).toJS()).toEqual({iso: 'eur', name: '', symbol: ''})
 -->
 
-Now it’s clearer what shape of data we’re building here, and even Immutable.js isn’t so intimidating. I kept the `data` name though because that’s how it’s coming from the backend, and it’s commonly used as a sort of root object for whatever the backend API is returning. As long as we don’t leak it to the app code, and only use it during the initial processing of the raw backend data, it’s okay.
+Now it’s clearer what shape of data we’re building here, and even Immutable.js isn’t so intimidating. I kept the `data` name though because that’s how it’s coming from the backend, and it’s commonly used as a root object for whatever the backend API is returning. As long as we don’t leak it to the app code, and only use it during the initial processing of the raw backend data, it’s okay.
 
 Such names are also okay for generic utility functions, like array filtering or sorting:
 
@@ -937,9 +943,16 @@ For the first two cases, try to find something that differentiates the objects, 
 Consider this example:
 
 <!--
-const test = () => {}, login = () => {}, request = () => {}
+const StatusCode = {SuccessCreated: 201}
+const test = (comment, fn) => fn(), login = () => {}
+const request = () => ({get: () => ({set: () => ({set: () => ({headers: {}, status: 200, body: {data: {}}})})}), post: () => ({send: () => ({set: () => ({headers: {}, status: 200, body: {data: {}}, set: () => ({headers: {}, status: 200, body: { data:{}}})})})})})
+const users = [], app = () => {}, usersEndpoint = 'http://localhost', loginEndpoint = 'http://localhost'
 const collections = { users: { insertMany: () => {} } }
-const expect = () => ({ toBe: () => {}, toHaveProperty: () => {}, toEqual: () => {} })
+function expect() { return { toBe: () => {}, toHaveProperty: () => {}, toEqual: () => {} } }
+expect.stringContaining = () => {}
+expect.stringMatching = () => {}
+expect.objectContaining = () => {}
+expect.arrayContaining = () => {}
 -->
 
 ```js
@@ -996,14 +1009,18 @@ test('creates new user', async () => {
 });
 ```
 
-<!-- // TODO: Can we test this? -->
+<!-- // This would be difficult to test so we only run the text function to make sure there are no syntax errors -->
 
 Here, we’re sending a sequence of network requests to test a REST API. However, the names `response`, `response2`, and `response3` make the code a bit hard to understand, especially when we use the data returned by one request to create the next one. We could make the names more precise:
 
 <!--
-const test = () => {}, login = () => {}, request = () => {}
-const collections = { users: { insertMany: () => {} } }
-const expect = () => ({ toBe: () => {}, toHaveProperty: () => {}, toEqual: () => {} })
+let test = () => {}, login = () => {}
+let collections = { users: { insertMany: () => {} } }
+const request = () => ({get: () => ({set: () => ({set: () => ({headers: {}, status: 200, body: {data: {}}})})}), post: () => ({send: () => ({set: () => ({headers: {}, status: 200, body: {data: {}}, set: () => ({headers: {}, status: 200, body: { data:{}}})})})})})
+function expect() { return { toBe: () => {}, toHaveProperty: () => {}, toEqual: () => {} } }
+expect.stringContaining = () => {}
+expect.stringMatching = () => {}
+expect.objectContaining = () => {}
 -->
 
 ```js
@@ -1060,7 +1077,7 @@ test('creates new user', async () => {
 });
 ```
 
-<!-- // TODO: Can we test this? -->
+<!-- // This would be difficult to test so we only run the text function to make sure there are no syntax errors -->
 
 Now it’s clear which request data we’re accessing at any time.
 
@@ -1153,6 +1170,18 @@ const hiddenInput = (name, value) => {
   input.value = value;
   return input;
 };
+let document = {
+  createElement() {
+    return {
+      appendChild() {},
+      submit() {}
+    }
+  },
+  body: {
+    appendChild() {},
+    removeChild() {}
+  }
+};
 -->
 
 ```ts
@@ -1198,6 +1227,18 @@ const hiddenInput = (name, value) => {
   input.name = name;
   input.value = value;
   return input;
+};
+let document = {
+  createElement() {
+    return {
+      appendChild() {},
+      submit() {}
+    }
+  },
+  body: {
+    appendChild() {},
+    removeChild() {}
+  }
 };
 -->
 
@@ -1496,7 +1537,7 @@ const {container: c2} = RTL.render(<UserProfile user={{type: 'croc', name: 'Gena
 expect(c2.textContent).toEqual('Name: GenaAge: 37')
 -->
 
-The name still makes sense, when something like `isCroc` would have to be changed.
+The name still makes sense, when something like `isCroc` would require a change.
 
 Unfortunately, I don’t have a good solution for clashing React components and TypeScript types. This usually happens when we create a component to render an object or a certain type:
 
@@ -1552,7 +1593,8 @@ Start thinking about:
 
 - Replacing negative booleans with positive.
 - Reducing the scope or the lifespan of variables.
-- Choosing more or less specific names based on their scope or lifespan size.
+- Choosing more specific names for symbols with larger scope or longer lifespan.
+- Choosing shorter names for symbols with small scope and short lifespan.
 - Using destructuring to think less about inventing new names.
 - Choosing domain-specific names for local variables instead of more literal names.
 

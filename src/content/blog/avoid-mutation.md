@@ -643,12 +643,12 @@ Here we’re making a shallow copy of the `counts` array using the spread synta
 Another option is to wrap a mutating API into a new API that doesn’t mutate original values:
 
 ```js
-function sort(array) {
+function safeSort(array) {
   return [...counts].sort();
 }
 
 const counts = [6, 3, 2];
-const puppies = sort(counts).map(n => `${n} puppies`);
+const puppies = safeSort(counts).map(n => `${n} puppies`);
 ```
 
 <!-- expect(puppies).toEqual(['2 puppies', '3 puppies', '6 puppies']) -->
@@ -662,6 +662,18 @@ const puppies = _.sortBy(counts).map(n => `${n} puppies`);
 
 <!-- expect(puppies).toEqual(['2 puppies', '3 puppies', '6 puppies']) -->
 
+Another popular method is using the `slice()` method to create a copy of an array:
+
+```js
+const counts = [6, 3, 2];
+const sortedCounts = counts.slice().sort();
+const puppies = sortedCounts.map(n => `${n} puppies`);
+```
+
+<!-- expect(puppies).toEqual(['2 puppies', '3 puppies', '6 puppies']) -->
+
+I’d advice against it: spreading is slightly more readable, though both methods require some explanation the first time one sees them.
+
 ## Updating objects
 
 Modern JavaScript makes it easier to do immutable data updates thanks to [the spread syntax](http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Before the spread syntax, we had to write something like:
@@ -674,7 +686,7 @@ const next = Object.assign({}, prev, { pizza: 42 });
 
 <!-- expect(next).toEqual({coffee: 1, pizza: 42}) -->
 
-Note the empty object as the first parameter: it was necessary; otherwise, `Object.assign` would mutate the initial object: it considers the first parameter as a target. It mutates the first parameter and also returns it — this is a very unfortunate API.
+Note the empty object as the first parameter: it was necessary; otherwise, the `Object.assign()` method would mutate the initial object: it considers the first parameter as a target. It mutates the first parameter and also returns it — this is a very unfortunate API.
 
 Now we can write:
 
@@ -685,9 +697,9 @@ const next = { ...prev, pizza: 42 };
 
 <!-- expect(next).toEqual({coffee: 1, pizza: 42}) -->
 
-This does the same thing but is less verbose, and no need to remember `Object.assign` quirks.
+This does the same thing but is less verbose, and no need to remember `Object.assign()`’s quirks.
 
-And before the [Object.assign](http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) in ECMAScript 2015, we didn’t even try to avoid mutations: it was too painful.
+And before the [Object.assign()](http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) method in ECMAScript 2015, we didn’t even try to avoid mutations: it was too painful.
 
 Redux has a great [page on immutable update patterns](https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns): it describes patterns for updating arrays and objects without mutations, and it’s useful even if we don’t use Redux.
 
@@ -730,18 +742,18 @@ expect(next).toEqual({breakfast: 'none', lunch: {drinks: ['coffee']}})
 
 Here we’re keeping only the first level of properties of the initial object: `lunch` and `drinks` will have only the new properties.
 
-Also, spread and `Object.assign` only do shallow cloning: only the first level properties are copies, but all nested properties are references to the original object, meaning mutation of a nested property mutates the original object.
+Also, spread and `Object.assign()` only do shallow cloning: only the first level properties are copies, but all nested properties are references to the original object, meaning mutation of a nested property mutates the original object.
 
 Keeping our objects as shallow as possible might be a good idea if we update them often.
 
-While we’re waiting for JavaScipt [to get native immutability](https://github.com/tc39/proposal-record-tuple), there are two non-exclusive ways we can make our lives easier today:
+While we’re waiting for JavaScript [to get native immutability](https://github.com/tc39/proposal-record-tuple), there are two non-exclusive ways we can make our lives easier today:
 
 - prevent mutations;
 - simplify object updates.
 
 **Preventing mutations** is good because it’s so easy to miss them during code reviews, and then spend many hours debugging weird issues.
 
-One way to prevent mutations is to use a linter. ESLint has several plugins that try to do just that, and we’ll discuss them in the Tooling chapter.
+One way to prevent mutations is to use a linter. ESLint has several plugins that try to do just that, and we’ll discuss them in the Lint your code chapter.
 
 [eslint-plugin-better-mutation](https://github.com/sloops77/eslint-plugin-better-mutation) disallows any mutations, except for local variables in functions. This is a great idea because it prevents bugs caused by the mutation of shared objects but allows us to use mutations locally. Unfortunately, it breaks even in simple cases, such as a mutation occurring inside `.forEach()`.
 
@@ -826,7 +838,32 @@ And Immer will freeze the resulting object in development.
 
 In rare cases, imperative code with mutations isn’t so bad, and rewriting it in a declarative way without mutations doesn’t make it better.
 
-Consider this example:
+Consider this example where we conditionally create an array:
+
+<!-- let drinksAlcohol = true -->
+
+```js
+const drinks = ['coffee', 'tea', ...(drinksAlcohol ? ['vodka'] : [])];
+```
+
+<!-- expect(drinks).toEqual(['coffee', 'tea', 'vodka']) -->
+
+And here is the same example with mutation:
+
+<!-- let drinksAlcohol = true -->
+
+```js
+const drinks = ['coffee', 'tea'];
+if (drinksAlcohol) {
+  drinks.push('vodka');
+}
+```
+
+<!-- expect(drinks).toEqual(['coffee', 'tea', 'vodka']) -->
+
+I’m hesitant to say which one is more more readable.
+
+Here’s a more complex example:
 
 <!-- const addDays = x => x + 1 -->
 

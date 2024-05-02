@@ -72,13 +72,16 @@
     "title": "Code is evil"
   },
   {
-    "title": "Tooling"
+    "title": "Lint your code"
   },
   {
-    "title": "Linters"
+    "title": "Autoformat your code"
   },
   {
-    "title": "Other tools"
+    "title": "Typecheck your code"
+  },
+  {
+    "title": "Learn your code editor"
   },
   {
     "title": "Resources"

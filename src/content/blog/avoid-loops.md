@@ -132,7 +132,7 @@ const kebabNames = names.map(name => _.kebabCase(name));
 
 <!-- expect(kebabNames).toEqual(['bilbo-baggins', 'gandalf', 'gollum']) -->
 
-This version is much easier to read because we know that the `map()` method transforms an array by keeping the same number of items. And, unlike `forEach()`, it doesn’t require a custom implementation or mutating an output array. In addition, the callback function is now pure: it merely transforms input parameters to the output value without any side effects.
+This version is much easier to read because we know that the `map()` method transforms an array by keeping the same number of items. And, unlike `forEach()`, it doesn’t require a custom implementation or mutating an output array. Also, the callback function is now pure: it merely transforms input parameters to the output value without any side effects.
 
 We run into similar problems when we abuse array method semantics:
 
@@ -182,7 +182,7 @@ Side effects make code harder to understand because we can no longer treat a fun
 
 All array methods mentioned in the previous section, except `forEach()`, imply that they don’t have side effects and that only the return value is used. Introducing any side effects into these methods would make code easy to misread since readers won’t be expecting side effects.
 
-`forEach()` doesn’t return any value, and that’s the right choice for handling side effects when we really need them:
+The `forEach()` method doesn’t return any value, and that’s the right choice for handling side effects when we really need them:
 
 <!--
 const console = { error: jest.fn() }
