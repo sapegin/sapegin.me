@@ -1,7 +1,7 @@
 ---
 title: 'Modern React testing, part 5: Playwright'
 description: 'We’ll learn how to test React apps end-to-end with Playwright, how to mock network requests with Mock Service Worker, and how to apply testing best practices to write integration tests.'
-date: 2024-02-19
+date: 2024-05-01
 tags:
   - tools
   - react
