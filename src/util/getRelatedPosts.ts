@@ -14,6 +14,6 @@ export function getRelatedPosts(posts: Post[], { url, tags }: Post): Post[] {
 			};
 		})
 		.filter((post) => post.weight > 0);
-	const sorted = _.sortBy(weighted, 'weight').reverse();
+	const sorted = _.orderBy(weighted, 'weight', 'desc');
 	return sorted.slice(0, MAX_RELATED);
 }
