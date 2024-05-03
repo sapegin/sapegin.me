@@ -88,12 +88,11 @@ export const theme = {
 					base: { value: '1rem' },
 					xxxl: { value: '3.2rem' },
 					xxl: { value: '2.4rem' },
-					xl: { value: '1.9rem' },
-					l: { value: '1.4rem' },
+					xl: { value: '2rem' },
+					l: { value: '1.7rem' },
 					m: { value: '1rem' },
 					s: { value: '0.9rem' },
 					xs: { value: '0.75rem' },
-					ui: { value: '1.5rem' }, // UI font is very small
 				},
 				fontWeights: {
 					normal: { value: '300' },
@@ -120,7 +119,7 @@ export const theme = {
 			semanticTokens: {
 				fontSizes: {
 					root: { value: '1.125em' },
-					article: { value: '1.1rem' },
+					article: { value: '1.2rem' },
 					ui: { value: '1.5rem' }, // UI font is very small
 				},
 				spacing: {

@@ -7,7 +7,14 @@ type Props = {
 
 export function Header({ url }: Props) {
 	return (
-		<Box as="header">
+		<Box
+			as="header"
+			css={{
+				// @ts-expect-error: no types for Firefox property but it works
+				MozOsxFontSmoothing: 'grayscale',
+				WebkitFontSmoothing: 'antialiased',
+			}}
+		>
 			<Box
 				width={{ tablet: LOGO_WIDTH }}
 				mx="auto"
