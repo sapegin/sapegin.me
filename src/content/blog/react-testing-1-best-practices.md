@@ -1,6 +1,6 @@
 ---
 title: 'Modern React testing, part 1: best practices'
-description: 'You’ll learn why to write automated tests, what tests to write and how to write them. What are the best practices of modern frontend and React testing.'
+description: 'Learn why you should write automated tests, what tests to write, and how to write them. What are the best practices of modern frontend and React testing.'
 date: 2019-08-05
 tags:
   - tools

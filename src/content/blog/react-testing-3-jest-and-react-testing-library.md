@@ -1,6 +1,6 @@
 ---
 title: 'Modern React testing, part 3: Jest and React Testing Library'
-description: 'Learn how to test React components with Jest and React Testing Library, and how to apply testing best practices.'
+description: 'Learn how to test React components with Jest and React Testing Library and how to apply the best modern frontend testing practices.'
 date: 2019-08-19
 tags:
   - tools

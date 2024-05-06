@@ -1,6 +1,6 @@
 ---
 title: 'Modern React testing, part 2: Jest and Enzyme'
-description: 'You’ll learn how to test React components with Jest and Enzyme and how to apply the best practices we’ve learned in the first article.'
+description: 'Learn how to test React components with Jest and Enzyme and how to apply the best modern frontend testing practices.'
 date: 2019-08-12
 tags:
   - tools
