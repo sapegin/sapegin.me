@@ -514,7 +514,7 @@ For not-so-happy-path tests, we may need to override global mocks inside a parti
 test('shows an error message', async ({ page }) => {
   await page.goto('/remote-pizza');
 
-  page.evaluate(() => {
+  await page.evaluate(() => {
     // Reference global instances set in src/browser.js
     const { worker, http, HttpResponse } = window.msw;
     worker.use(
