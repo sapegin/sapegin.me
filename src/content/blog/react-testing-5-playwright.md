@@ -214,15 +214,15 @@ The `--save` flag will save the public directory path to `package.json` so we ca
 Then, create another JavaScript module that will register our Service Worker with our mocks, [src/mocks/browser.js](https://github.com/sapegin/playwright-article-2024/blob/master/src/mocks/browser.js):
 
 ```js
+import * as msw from 'msw';
 import { setupWorker } from 'msw/browser';
-import { http, HttpResponse } from 'msw';
 import { handlers } from './handlers';
 
 // Configure a Service Worker with the given request handlers
 export const worker = setupWorker(...handlers);
 
 // Expose methods globally to make them available in integration tests
-window.msw = { worker, http, HttpResponse };
+window.msw = { worker, ...msw };
 ```
 
 And the last step is to start the worker function when we run our app in development mode. Add these lines to our app root module ([src/index.js](https://github.com/sapegin/playwright-article-2024/blob/master/src/index.js) for Create React App):
