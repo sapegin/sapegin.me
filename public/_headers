@@ -3,7 +3,7 @@
   cache-control: public
   cache-control: max-age=365000000
   cache-control: immutable
-# Cache images for a week
+# Cache images for 90 days
 /images/*
   cache-control: public
-  cache-control: max-age=604800
+  cache-control: max-age=7776000
