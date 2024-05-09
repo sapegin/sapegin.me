@@ -128,31 +128,31 @@ module.exports = defineConfig({
     // Base URL to use in actions like `await page.goto('/')`
     baseURL: 'http://localhost:3000',
     // Collect trace when retrying the failed test
-    trace: 'on-first-retry',
+    trace: 'on-first-retry'
   },
   // Configure projects for major browsers
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'] }
     },
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { ...devices['Desktop Firefox'] }
     },
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+      use: { ...devices['Desktop Safari'] }
+    }
   ],
   // Run your local dev server before starting the tests
   webServer: {
     command: 'npm run start',
     url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-  },
+    reuseExistingServer: !process.env.CI
+  }
 });
 ```
 
@@ -190,10 +190,10 @@ export const handlers = [
     // Return OK status with a JSON object
     return HttpResponse.json({
       args: {
-        ingredients: ['bacon', 'tomato', 'mozzarella', 'pineapples'],
-      },
+        ingredients: ['bacon', 'tomato', 'mozzarella', 'pineapples']
+      }
     });
-  }),
+  })
 ];
 ```
 
@@ -364,7 +364,7 @@ test('navigates to another page', async ({ page }) => {
 
   // We are on the pizza page
   await expect(
-    page.getByRole('heading', { name: 'pizza' }),
+    page.getByRole('heading', { name: 'pizza' })
   ).toBeVisible();
 });
 ```
@@ -383,7 +383,7 @@ For example, we have a [registration form](https://github.com/sapegin/playwright
 const { test, expect } = require('@playwright/test');
 
 test('should show success page after submission', async ({
-  page,
+  page
 }) => {
   await page.goto('/signup');
 
@@ -399,7 +399,7 @@ test('should show success page after submission', async ({
 
   // We are on the success page
   await expect(
-    page.getByText('thank you for signing up'),
+    page.getByText('thank you for signing up')
   ).toBeVisible();
 });
 ```
@@ -429,7 +429,7 @@ To access a particular field, we can select a `fieldset` by its `legend` text fi
 
 ```js
 const passportIssueDateGroup = page.getByRole('group', {
-  name: 'passport issue date',
+  name: 'passport issue date'
 });
 await passportIssueDateGroup.getByLabel('day').fill('12');
 await passportIssueDateGroup
@@ -451,7 +451,7 @@ In the first method, we query the link by its ARIA role and text, and verify tha
 
 ```js
 await expect(
-  page.getByRole('link', { name: 'terms and conditions' }),
+  page.getByRole('link', { name: 'terms and conditions' })
 ).toHaveAttribute('href', /\/toc/);
 ```
 
@@ -501,7 +501,7 @@ test('load ingredients asynchronously', async ({ page }) => {
 
   // The button is not clickable anymore
   await expect(
-    page.getByRole('button', { name: 'cook' }),
+    page.getByRole('button', { name: 'cook' })
   ).toBeDisabled();
 });
 ```
@@ -521,8 +521,8 @@ test('shows an error message', async ({ page }) => {
       http.get(
         'https://httpbin.org/anything',
         () => HttpResponse.json(null, { status: 500 }),
-        { once: true },
-      ),
+        { once: true }
+      )
     );
   });
 
@@ -602,7 +602,7 @@ await page
   .getByRole('section')
   .filter({
     // Filter only ones that contain "Our newsletter" heading
-    has: page.getByRole('heading', { name: 'our newsletter' }),
+    has: page.getByRole('heading', { name: 'our newsletter' })
   })
   // Locate the button inside the section
   .getByRole('button', { name: 'subscribe' })
@@ -615,7 +615,7 @@ Coming back to our profile deletion modal, we can test it [like so](https://gith
 const { test, expect } = require('@playwright/test');
 
 test('should show success message after profile deletion', async ({
-  page,
+  page
 }) => {
   await page.goto('/profile');
 
@@ -630,7 +630,7 @@ test('should show success message after profile deletion', async ({
 
   // We are on the success page
   await expect(
-    page.getByRole('heading', { name: 'your profile was deleted' }),
+    page.getByRole('heading', { name: 'your profile was deleted' })
   ).toBeVisible();
 });
 ```
