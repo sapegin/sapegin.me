@@ -43,7 +43,7 @@ function Gallery() {
 			<Heading level={2}>My photography portfolio</Heading>
 			<Expander>
 				<Image
-					src="/images/photos-1.jpg"
+					src="/images/photos-1.avif"
 					alt="Saxon Switzerland forest, Germany"
 					width={900}
 					height={505}
@@ -52,21 +52,21 @@ function Gallery() {
 			<Expander>
 				<Grid gap="m" auto="narrow">
 					<Image
-						src="/images/photos-2.jpg"
+						src="/images/photos-2.avif"
 						alt="Dawn in Berlin, Germany"
 						width={600}
 						height={750}
 					/>
 					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
-							src="/images/photos-3.jpg"
+							src="/images/photos-3.avif"
 							alt="Foggy Berliner Dom, Germany"
 							width={600}
 							height={750}
 						/>
 					</Box>
 					<Image
-						src="/images/photos-4.jpg"
+						src="/images/photos-4.avif"
 						alt="Sunrise in Rome, Italy"
 						width={600}
 						height={750}
@@ -86,7 +86,7 @@ function Zine() {
 			<Heading level={2}>From dawn till coffee zine</Heading>
 			<Expander>
 				<Image
-					src="/images/zine.jpg"
+					src="/images/zine.avif"
 					alt="From dawn till coffee photography zine"
 					width={1512}
 					height={1134}

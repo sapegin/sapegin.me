@@ -44,7 +44,7 @@ export function BookCover({ title, image, width = 150, height = 194 }: Props) {
 			}}
 		>
 			<Image
-				src={`/images/covers/${image}.jpg`}
+				src={`/images/covers/${image}.avif`}
 				width={width}
 				height={height}
 				alt={`${title} book cover`}

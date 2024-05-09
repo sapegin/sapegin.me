@@ -213,28 +213,28 @@ function Cooking() {
 				<Grid gap="m" auto="narrow">
 					<Link href="https://tacohuaco.co/recipes/tres-leches-cake/">
 						<Image
-							src="/images/food-1.jpg"
+							src="/images/food-1.avif"
 							alt="Tres leches cake"
-							width={600}
-							height={450}
+							width={375}
+							height={281}
 						/>
 					</Link>
 					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Link href="https://tacohuaco.co/recipes/svekolnik/">
 							<Image
-								src="/images/food-2.jpg"
+								src="/images/food-2.avif"
 								alt="Svekolnik (cold borscht)"
-								width={600}
-								height={450}
+								width={375}
+								height={281}
 							/>
 						</Link>
 					</Box>
 					<Link href="https://tacohuaco.co/recipes/cottage-cheesecake/">
 						<Image
-							src="/images/food-3.jpg"
+							src="/images/food-3.avif"
 							alt="Cottage cheesecake"
-							width={600}
-							height={450}
+							width={375}
+							height={281}
 						/>
 					</Link>
 				</Grid>
@@ -269,7 +269,7 @@ function Me() {
 						/>
 					</Box>
 					<Image
-						src="/images/me-3.jpg"
+						src="/images/me-3.avif"
 						alt="Artem Sapegin is making a photo"
 						width={700}
 						height={700}
