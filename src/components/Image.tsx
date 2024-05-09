@@ -1,4 +1,4 @@
-import type { ImgHTMLAttributes } from 'react';
+import { type ImgHTMLAttributes } from 'react';
 import { css } from '../../styled-system/css';
 import { createBox, type BoxProps } from './Box';
 
@@ -12,6 +12,7 @@ export function Image(
 	return createBox(
 		{
 			...props,
+			loading: 'lazy',
 			className: css({
 				maxWidth: '100%',
 				height: 'auto',

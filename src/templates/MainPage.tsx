@@ -312,6 +312,7 @@ function BestViewed() {
 				mx="auto"
 				width={60}
 				height={60}
+				loading="lazy"
 			/>
 		</Stack>
 	);
