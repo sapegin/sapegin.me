@@ -5,6 +5,5 @@
     "strictNullChecks": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["src/"],
-  "exclude": ["src/counter/count.js"]
+  "include": ["src/"]
 }
