@@ -4,7 +4,7 @@ import { createBox, type BoxProps } from './Box';
 
 const text = cva({
 	base: {
-		color: 'base',
+		color: 'text',
 	},
 	variants: {
 		variant: {

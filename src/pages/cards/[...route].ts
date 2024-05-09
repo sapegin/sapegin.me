@@ -14,7 +14,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
 	getImageOptions: (_path, page) => ({
 		title: page.frontmatter.title,
 		description: `By ${SITE_AUTHOR}`,
-		bgGradient: [hexToRgb(colors.bg), hexToRgb(colors.bg)],
+		bgGradient: [hexToRgb(colors.background), hexToRgb(colors.background)],
 		padding: 48,
 		border: {
 			color: hexToRgb(colors.accent),
@@ -23,13 +23,13 @@ export const { getStaticPaths, GET } = OGImageRoute({
 		},
 		font: {
 			title: {
-				color: hexToRgb(colors.base),
+				color: hexToRgb(colors.text),
 				size: 80,
 				lineHeight: Number(lineHeights.heading),
 				families: ['Roboto Mono', 'sans-serif'],
 			},
 			description: {
-				color: hexToRgb(colors.base),
+				color: hexToRgb(colors.text),
 				size: 40,
 				lineHeight: Number(lineHeights.base),
 				families: ['Roboto Mono', 'sans-serif'],

@@ -34,7 +34,7 @@
         "source.diff"
       ],
       "settings": {
-        "foreground": "#6c7693"
+        "foreground": "var(--colors-code-gray)"
       }
     },
     {
@@ -46,7 +46,7 @@
         "support.type"
       ],
       "settings": {
-        "foreground": "#00805e"
+        "foreground": "var(--colors-code-green)"
       }
     },
     {
@@ -62,7 +62,7 @@
         "meta.object-literal.key.tsx"
       ],
       "settings": {
-        "foreground": "#ad5528"
+        "foreground": "var(--colors-code-orange)"
       }
     },
     {
@@ -86,7 +86,7 @@
         "support.variable.property.js"
       ],
       "settings": {
-        "foreground": "#0f73a7"
+        "foreground": "var(--colors-code-blue)"
       }
     },
     {
@@ -97,7 +97,7 @@
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "#7859a6"
+        "foreground": "var(--colors-code-purple)"
       }
     },
     {
@@ -113,13 +113,13 @@
         "source.shell"
       ],
       "settings": {
-        "foreground": "#565a67"
+        "foreground": "var(--colors-code-black)"
       }
     },
     {
       "scope": ["invalid.illegal", "token.error-token", "markup.deleted.diff"],
       "settings": {
-        "foreground": "#b71818"
+        "foreground": "var(--colors-code-red)"
       }
     },
     {

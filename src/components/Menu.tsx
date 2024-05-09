@@ -79,7 +79,7 @@ export function Menu({ current }: Props) {
 							href={href}
 							css={{
 								textShadow: isCurrent(href, current)
-									? `2px 2px color-mix(in hsl, token(colors.primary), transparent 60%)`
+									? `2px 2px color-mix(in hsl, token(colors.primary), transparent 70%)`
 									: undefined,
 								// HACK: Increase specificity to override Link styles (Astro production
 								// build imports CSS in a different order)

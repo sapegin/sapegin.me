@@ -4,7 +4,7 @@ import { createBox, type BoxProps } from './Box';
 
 const heading = cva({
 	base: {
-		color: 'base',
+		color: 'text',
 		fontFamily: 'heading',
 		fontWeight: 'heading',
 		lineHeight: 'heading',

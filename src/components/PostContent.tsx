@@ -25,7 +25,7 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 						left: '.1em',
 						width: '.3em',
 						height: '.3em',
-						backgroundColor: 'base',
+						backgroundColor: 'text',
 					},
 
 					'&& hr': {

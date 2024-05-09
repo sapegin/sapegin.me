@@ -1,14 +1,39 @@
-import { defineRecipe, type Config } from '@pandacss/dev';
-import { getPixelBorder } from './util/getPixelBorder';
+import { type Config } from '@pandacss/dev';
 
 export const colors = {
-	bg: '#fff',
-	base: '#3a3d40',
+	background: '#fff',
+	text: '#3a3d40',
 	light: '#94949e',
 	border: '#3a3d40',
 	primary: '#577290',
 	accent: '#c45a8d',
+	selection: '#faebaf',
+	codeBlack: '#565a67',
+	codeGray: '#6c7693',
+	codeGreen: '#00805e',
+	codeOrange: '#ad5528',
+	codeBlue: '#0f73a7',
+	codePurple: '#7859a6',
+	codeRed: '#b71818',
 };
+
+const colorsDark = {
+	background: '#2e3033',
+	text: '#e3e6e8',
+	light: '#94949e',
+	border: '#dbe2e9',
+	primary: '#89abd2',
+	accent: '#db76a7',
+	selection: '#61656b',
+	codeBlack: '#9397a5',
+	codeGray: '#a7adbe',
+	codeGreen: '#09b987',
+	codeOrange: '#dbaf57',
+	codeBlue: '#46a7ec',
+	codePurple: '#ac92d3',
+	codeRed: '#f96c78',
+};
+
 export const lineHeights = {
 	base: '1.5',
 	small: '1.4',
@@ -16,68 +41,24 @@ export const lineHeights = {
 	code: '1.3',
 };
 
-// TODO: Extract
-// HACK: Looks like borderImageSource doesn't work in Panda's cva()
-const buttonRecipe = defineRecipe({
-	className: 'button',
-	base: {
-		display: 'inline-block',
-		px: { base: 'm', tablet: 'l' },
-		fontFamily: 'ui',
-		borderColor: 'base',
-		backgroundColor: 'bg',
-		color: { base: 'base', _hover: 'accent', _focus: 'accent' },
-		borderStyle: 'solid',
-		borderWidth: 4,
-		borderImageSlice: 4,
-		borderImageWidth: 1,
-		borderImageOutset: 0,
-		borderImageSource: getPixelBorder(colors.base),
-		lineHeight: '1rem',
-		textDecoration: 'none',
-		userSelect: 'none',
-		outline: 0,
-		_hover: {
-			cursor: 'pointer',
-			borderImageSource: getPixelBorder(colors.accent),
-		},
-		_active: {
-			transform: 'translateY(1px)',
-		},
-		_focus: {
-			borderImageSource: getPixelBorder(colors.accent),
-		},
-		'&::-moz-focus-inner': {
-			border: 0,
-		},
-	},
-	variants: {
-		variant: {
-			medium: {
-				height: '2.2rem',
-				py: 's',
-				fontSize: 'ui',
-			},
-			large: {
-				py: 'm',
-				fontSize: 'xl',
-			},
-		},
-	},
-});
+function createPalette(
+	light: Record<string, string>,
+	dark: Record<string, string>
+) {
+	const palette: Record<string, { value: { base: string; _osDark: string } }> =
+		{};
+	for (const name in light) {
+		palette[name] = {
+			value: { base: light[name], _osDark: dark[name] },
+		};
+	}
+	return palette;
+}
 
 export const theme = {
 	theme: {
 		extend: {
 			tokens: {
-				colors: {
-					bg: { value: colors.bg },
-					base: { value: colors.base },
-					light: { value: colors.light },
-					border: { value: colors.border },
-					primary: { value: colors.primary },
-					accent: { value: colors.accent },
-				},
 				fonts: {
 					body: { value: "'Helvetica Neue', Arial, sans-serif" },
 					heading: { value: "'Mondwest-Regular', sans-serif" },
@@ -117,6 +98,7 @@ export const theme = {
 				},
 			},
 			semanticTokens: {
+				colors: createPalette(colors, colorsDark),
 				fontSizes: {
 					root: { value: '1.125em' },
 					article: { value: '1.2rem' },
@@ -126,16 +108,13 @@ export const theme = {
 					listMargin: { value: '0' },
 				},
 			},
-			recipes: {
-				button: buttonRecipe,
-			},
 		},
 	},
 
 	// TODO: Extract
 	// Code styles
 	globalCss: {
-		'.astro-code, .shiki, [data-rehype-pretty-code-figure] pre': {
+		pre: {
 			display: 'block',
 			lineHeight: 'code',
 			fontSize: 's',
@@ -150,15 +129,14 @@ export const theme = {
 			padding: { base: 'm', tablet: 's' },
 			borderRadius: { tablet: 'default' },
 		},
-
-		'.astro-code code, .shiki code, [data-rehype-pretty-code-figure] code': {
+		'pre code': {
 			display: 'block',
 			fontSize: 'inherit',
 			fontStyle: 'inherit',
 			color: 'inherit',
 		},
 		'[data-highlighted-line]': {
-			backgroundColor: '#f5f5f7', // Squirrelsong Light gray0f
+			backgroundColor: { base: '#f5f5f7', _osDark: '#3a3d40' },
 		},
 
 		// HACK: Override default Astro/Shiki styles

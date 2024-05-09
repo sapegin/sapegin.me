@@ -23,7 +23,7 @@ const ICONS: Record<string, IconInfo> = {
 		children: (
 			<Box
 				as="path"
-				fill="bg"
+				fill="background"
 				d="M14 5V4h-3v1H9V4H6v1H5v7h2V7.029h2V10h2V7.028v.001h2V12h2V5h-1Z"
 			/>
 		),
@@ -33,7 +33,7 @@ const ICONS: Record<string, IconInfo> = {
 		children: (
 			<Box
 				as="path"
-				fill="bg"
+				fill="background"
 				d="M11.043 14.009h3v-1.017h.929v-1.007h1.041V9.004h-1.041V8h-.929v-.982h1V5.034H13v1h-1v.977h-.957v-.977H9v.977h-.957v-.977h-1v-1H5v1.984h1V8H5v1.004h-.99v2.981H5v1.007h1v1.017h3v1h-.99v1.012H6.02v-1.012h-1v-1H4.01v2.024h1v1h3V19H12v-3.991h-.957v-1Z"
 			/>
 		),
@@ -44,7 +44,7 @@ const ICONS: Record<string, IconInfo> = {
 			<>
 				<Box
 					as="path"
-					fill="bg"
+					fill="background"
 					d="M9 7.008H7.988v6H9v1h2.956v-2H10v-1h1.956v-2H10v-1h1.956v-2H9v1Zm-2.968 0v-1h-4v8h4v-1H7v-6h-.968ZM12.988 10h1v3H15v.998h.988V13H17v-2.992h1v-4h-2.012V10H15V6h-2.012v4Zm-8-1.992h-.984v4h.984v-4ZM24 5.343h-2.012v2.656H24V5.343Z"
 				/>
 				<rect fill="currentColor" x="4" y="8" width="1" height="4" />

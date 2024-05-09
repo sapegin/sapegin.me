@@ -5,8 +5,9 @@ const badge = cva({
 	base: {
 		display: 'inline-block',
 		px: 'xs',
-		py: 'xxs',
+		py: 'xxxs',
 		border: 'thin',
+		borderColor: 'accent',
 		borderRadius: 'large',
 		fontSize: 'xs',
 	},
@@ -16,7 +17,7 @@ const badge = cva({
 				color: 'accent',
 			},
 			inverted: {
-				color: 'bg',
+				color: 'background',
 				background: 'accent',
 			},
 		},
