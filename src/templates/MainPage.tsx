@@ -142,21 +142,21 @@ function Photography() {
 						src="/images/photos-2.jpg"
 						alt="Dawn in Berlin, Germany"
 						width={600}
-						height={750}
+						height={840}
 					/>
 					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
 							src="/images/photos-3.jpg"
 							alt="Foggy Berliner Dom, Germany"
 							width={600}
-							height={750}
+							height={840}
 						/>
 					</Box>
 					<Image
 						src="/images/photos-4.jpg"
 						alt="Sunrise in Rome, Italy"
 						width={600}
-						height={750}
+						height={840}
 					/>
 				</Grid>
 			</Expander>
