@@ -19,6 +19,12 @@ export default defineConfig({
 	// Don't include CSS reset
 	preflight: false,
 
+	// Use Lightning CSS instead of PostCSS
+	lightningcss: true,
+
+	// Minify production CSS
+	minify: true,
+
 	// Where to look for CSS declarations
 	include: ['./src/**/*.{js,jsx,ts,tsx,astro}'],
 
