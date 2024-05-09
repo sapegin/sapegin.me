@@ -215,8 +215,8 @@ function Cooking() {
 						<Image
 							src="/images/food-1.avif"
 							alt="Tres leches cake"
-							width={375}
-							height={281}
+							width={750}
+							height={563}
 						/>
 					</Link>
 					<Box display={{ base: 'none', tablet: 'block' }}>
@@ -224,8 +224,8 @@ function Cooking() {
 							<Image
 								src="/images/food-2.avif"
 								alt="Svekolnik (cold borscht)"
-								width={375}
-								height={281}
+								width={750}
+								height={563}
 							/>
 						</Link>
 					</Box>
@@ -233,8 +233,8 @@ function Cooking() {
 						<Image
 							src="/images/food-3.avif"
 							alt="Cottage cheesecake"
-							width={375}
-							height={281}
+							width={750}
+							height={563}
 						/>
 					</Link>
 				</Grid>
