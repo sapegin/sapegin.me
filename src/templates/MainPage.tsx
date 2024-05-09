@@ -130,7 +130,7 @@ function Photography() {
 			<Heading level={2}>I make photos of trees, buildings, and things</Heading>
 			<Expander>
 				<Image
-					src="/images/photos-1.jpg"
+					src="/images/photos-1.avif"
 					alt="Saxon Switzerland forest, Germany"
 					width={900}
 					height={505}
@@ -139,21 +139,21 @@ function Photography() {
 			<Expander>
 				<Grid gap="m" auto="narrow">
 					<Image
-						src="/images/photos-2.jpg"
+						src="/images/photos-2.avif"
 						alt="Dawn in Berlin, Germany"
 						width={600}
 						height={840}
 					/>
 					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
-							src="/images/photos-3.jpg"
+							src="/images/photos-3.avif"
 							alt="Foggy Berliner Dom, Germany"
 							width={600}
 							height={840}
 						/>
 					</Box>
 					<Image
-						src="/images/photos-4.jpg"
+						src="/images/photos-4.avif"
 						alt="Sunrise in Rome, Italy"
 						width={600}
 						height={840}
@@ -176,20 +176,20 @@ function Coffee() {
 				<Grid gap="m" auto="narrow">
 					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
-							src="/images/coffee-1.jpg"
+							src="/images/coffee-1.avif"
 							alt="Coffee"
 							width={600}
 							height={750}
 						/>
 					</Box>
 					<Image
-						src="/images/coffee-2.jpg"
+						src="/images/coffee-2.avif"
 						alt="Coffee"
 						width={600}
 						height={750}
 					/>
 					<Image
-						src="/images/coffee-3.jpg"
+						src="/images/coffee-3.avif"
 						alt="Coffee"
 						width={600}
 						height={750}
@@ -197,7 +197,7 @@ function Coffee() {
 				</Grid>
 			</Expander>
 			<Text>
-				No milk, no sugar, preferrably filter.{' '}
+				No milk, no sugar, preferably filter.{' '}
 				<del>Dark and bitter, like life.</del> Check out my pour over{' '}
 				<Link href="https://coffee.morning.photos/">coffee timer</Link>.
 			</Text>
@@ -255,14 +255,14 @@ function Me() {
 			<Expander>
 				<Grid gap="m" auto="narrow">
 					<Image
-						src="/images/me-1.jpg"
+						src="/images/me-1.avif"
 						alt="Artem Sapegin is making a photo"
 						width={700}
 						height={700}
 					/>
 					<Box display={{ base: 'none', tablet: 'block' }}>
 						<Image
-							src="/images/me-2.jpg"
+							src="/images/me-2.avif"
 							alt="Artem Sapegin is drinking coffee"
 							width={700}
 							height={700}
@@ -286,7 +286,7 @@ function Leather() {
 			<Heading level={2}>I make things from leather</Heading>
 			<Expander>
 				<Image
-					src="/images/leathercraft.jpg"
+					src="/images/leathercraft.avif"
 					alt="Leather goods I have made"
 					width={1512}
 					height={1008}
