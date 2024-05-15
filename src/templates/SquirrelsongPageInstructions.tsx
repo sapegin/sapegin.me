@@ -237,6 +237,17 @@ export const instructions: Instructions[] = [
 	},
 
 	/**
+	 * Vivaldi
+	 */
+	{
+		id: 'vivaldi',
+		app: 'Vivaldi',
+		light: true,
+		urlLight: 'https://themes.vivaldi.net/themes/zrnvL6V67L4',
+		urlName: 'Vivaldi Themes',
+	},
+
+	/**
 	 * Alfred
 	 */
 	{
@@ -254,8 +265,11 @@ export const instructions: Instructions[] = [
 		id: 'slack',
 		app: 'Slack',
 		light: true,
+		dark: true,
 		urlLight:
 			'https://github.com/sapegin/squirrelsong/tree/master/light/Slack#readme',
+		urlDark:
+			'https://github.com/sapegin/squirrelsong/tree/master/dark/Slack#readme',
 		urlName: 'GitHub',
 	},
 
