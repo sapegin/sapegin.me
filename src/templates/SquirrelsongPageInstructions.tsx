@@ -254,7 +254,7 @@ export const instructions: Instructions[] = [
 		id: 'alfred',
 		app: 'Alfred',
 		light: true,
-		urlLight: 'https://www.alfredapp.com/extras/theme/ayOamLY0jj/',
+		urlLight: 'https://www.alfredapp.com/extras/theme/5IzAzy3Fuj/',
 		urlName: 'Alfredapp.com',
 	},
 
