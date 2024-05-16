@@ -15,6 +15,9 @@ export const colors = {
 	codeBlue: '#0f73a7',
 	codePurple: '#7859a6',
 	codeRed: '#b71818',
+	coffeeText: '#754c06',
+	coffeeBackground: '#fbc024',
+	coffeeHover: '#3a3d40',
 };
 
 const colorsDark = {
@@ -32,6 +35,9 @@ const colorsDark = {
 	codeBlue: '#46a7ec',
 	codePurple: '#ac92d3',
 	codeRed: '#f96c78',
+	coffeeText: '#754c06',
+	coffeeBackground: '#fbc024',
+	coffeeHover: '#2e3033',
 };
 
 export const lineHeights = {

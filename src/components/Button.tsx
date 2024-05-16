@@ -10,7 +10,6 @@ const button = cva({
 		pt: { base: 'm', tablet: 'calc(token(spacing.m) + token(spacing.xs))' },
 		pb: { base: 'm', tablet: 'm' },
 		fontFamily: 'ui',
-		backgroundColor: 'background',
 		color: 'text',
 		borderStyle: 'solid',
 		borderWidth: 2,
@@ -36,13 +35,24 @@ const button = cva({
 	variants: {
 		variant: {
 			medium: {
+				backgroundColor: 'background',
 				height: '2.2rem',
 				py: 's',
 				fontSize: 'ui',
 			},
 			large: {
+				backgroundColor: 'background',
 				py: 'm',
 				fontSize: 'xl',
+			},
+			coffee: {
+				background: 'coffeeBackground',
+				color: 'coffeeText',
+				py: 'm',
+				fontSize: 'xl',
+				_hover: {
+					color: 'coffeeHover',
+				},
 			},
 		},
 	},

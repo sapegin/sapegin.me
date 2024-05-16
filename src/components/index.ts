@@ -6,6 +6,7 @@ export { BookPostFooter } from './BookPostFooter';
 export { BookPostHeader } from './BookPostHeader';
 export { Box } from './Box';
 export { Button } from './Button';
+export { BuyMeCoffee } from './BuyMeCoffee';
 export { Code } from './Code';
 export { CodeSpread } from './CodeSpread';
 export { CodeSpreadSupreme } from './CodeSpreadSupreme';

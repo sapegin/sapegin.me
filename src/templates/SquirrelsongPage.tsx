@@ -5,6 +5,7 @@ import {
 	Badge,
 	Box,
 	Button,
+	BuyMeCoffee,
 	CodeSpread,
 	CodeSpreadSupreme,
 	Feedback,
@@ -285,7 +286,6 @@ export function SquirrelsongPage({ url, codes }: Props) {
 					</Text>
 					<Features codes={codes} />
 					<Installation />
-					<MurderOfCrows />
 					<About>
 						I created the first version of this theme in 2016, and since then
 						use it every day at work and for personal projects. Seven years
@@ -295,6 +295,11 @@ export function SquirrelsongPage({ url, codes }: Props) {
 						<Heading level={2}>Have a question?</Heading>
 						<Feedback github="squirrelsong" />
 					</Stack>
+					<Stack gap="m">
+						<Heading level={2}>Like the theme?</Heading>
+						<BuyMeCoffee />
+					</Stack>
+					<MurderOfCrows />
 					<Text variant="small">
 						The font used in all examples and logo is{' '}
 						<Link href="https://www.monolisa.dev/">MonoLisa</Link>. The icons on
