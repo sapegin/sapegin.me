@@ -6,6 +6,7 @@ import {
 	Feedback,
 	Heading,
 	Link,
+	MurderOfCrows,
 	PostList,
 	Stack,
 	Text,
@@ -99,6 +100,7 @@ export function BookPage({ url, chapters }: Props) {
 						<Heading level={2}>Have a question?</Heading>
 						<Feedback github="washingcode-book" />
 					</Stack>
+					<MurderOfCrows />
 				</Stack>
 			</main>
 		</Page>
