@@ -10,6 +10,8 @@ import { SITE_URL } from './src/constants';
 
 const prettyCodeOptions = {
 	theme,
+	// Removes `style` attribute from <pre>
+	keepBackground: false,
 };
 
 // https://astro.build/config
