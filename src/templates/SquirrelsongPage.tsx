@@ -11,6 +11,7 @@ import {
 	Grid,
 	Heading,
 	Link,
+	MurderOfCrows,
 	OrderedList,
 	OrderedListItem,
 	SquirrelsongLogo,
@@ -108,14 +109,58 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				<Heading level={3}>Low contrast with great readability</Heading>
 				<Stack gap="m">
 					<TextTypo>
-						Most themes have very high contrast and bright colors which makes
-						them tiring for the eyes, especially for highly sensitive people.
-						Squirrelsong themes are low-contrast and use soft colors, but still
-						provide enough color and style variety to distinguish various
-						elements of the code and avoid long chains of code printed in the
-						same style.
+						Most themes have very high contrast and bright colors, which makes
+						them tiring for the eyes. Squirrelsong themes are low-contrast and
+						use soft colors, but still provide enough color and style variety to
+						distinguish various elements of the code and avoid long chains of
+						code printed in the same style.
 					</TextTypo>
 					<CodeSpread codes={codes} name="intro" />
+				</Stack>
+			</Stack>
+			<Stack gap="s">
+				<Heading level={3}>Neurodiverse-friendly</Heading>
+				<Stack gap="m">
+					<TextTypo>
+						Soft colors and low contrast are beneficial for neurodiverse people,
+						such as those with ADHD, autism, or high sensitivity (HSP). Such
+						colors help reduce sensory overload and create a calming
+						environment; they reduce distractions and visual clutter, so it’s
+						easier to stay focused on your code instead of being distracted and
+						overwhelmed by bright colors.
+					</TextTypo>
+					<Grid auto="wide" gap="m">
+						<Stack gap="s">
+							<Box as="figure" objectFit="cover" overflow="hidden">
+								<Box
+									as="img"
+									src="/images/squirrelsong/squirrelsong-vscode.avif"
+									htmlWidth={593}
+									htmlHeight={459}
+									alt="Squirrelsong light theme for Visual Studio Code"
+									css={{ borderTopLeftRadius: 10 }}
+								/>
+							</Box>
+							<Text as="figcaption" variant="small">
+								Squirrelsong Light theme
+							</Text>
+						</Stack>
+						<Stack gap="s">
+							<Box as="figure" objectFit="cover" overflow="hidden">
+								<Box
+									as="img"
+									src="/images/squirrelsong/squirrelsong-vscode-default.avif"
+									htmlWidth={593}
+									htmlHeight={459}
+									alt="Default light theme for Visual Studio Code"
+									css={{ borderTopLeftRadius: 10 }}
+								/>
+							</Box>
+							<Text as="figcaption" variant="small">
+								Default Visual Studio Code theme
+							</Text>
+						</Stack>
+					</Grid>
 				</Stack>
 			</Stack>
 			<Stack gap="s">
@@ -124,8 +169,8 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 					<TextTypo>
 						Carefully crafted syntax highlighting for JavaScript, TypeScript,
 						HTML, CSS, Sass, styled-components, Markdown, JSON, XML, React, and
-						Astro. Also, works well with PHP, Python, Ruby, Rust, Java, Swift,
-						etc.
+						Astro. Also, it works well with PHP, Python, Ruby, Rust, Java,
+						Swift, etc.
 					</TextTypo>
 					<CodeSpreadSupreme codes={codes} names={['html', 'css', 'json']} />
 				</Stack>
@@ -160,31 +205,43 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				</Stack>
 			</Stack>
 			<Stack gap="s">
-				<Heading level={3}>Non-distracting UI</Heading>
+				<Heading level={3}>UI themes for 13 apps and growing</Heading>
 				<Stack gap="m">
 					<TextTypo>
-						Custom UI for Visual Studio Code, and other apps without
-						oversaturated bright colors to keep you focused on your code instead
-						of being distracted and overwhelmed. Compare it to the default
-						Visual Studio Code theme.
+						From your favorite code editor and terminal to Slack and Google
+						Chrome. No trendy bright colors, no distractions.
 					</TextTypo>
 					<Grid auto="wide" gap="m">
-						<Box objectFit="cover" overflow="hidden">
-							<img
-								src="/images/squirrelsong/squirrelsong-vscode.avif"
-								width={593}
-								height={459}
-								alt="Squirrelsong light theme for Visual Studio Code"
-							/>
-						</Box>
-						<Box objectFit="cover" overflow="hidden">
-							<img
-								src="/images/squirrelsong/squirrelsong-vscode-default.avif"
-								width={593}
-								height={459}
-								alt="Default light theme for Visual Studio Code"
-							/>
-						</Box>
+						<Stack as="figure" gap="s">
+							<Box objectFit="cover" overflow="hidden">
+								<Box
+									as="img"
+									src="/images/squirrelsong/squirrelsong-chrome.avif"
+									htmlWidth={699}
+									htmlHeight={446}
+									alt="Squirrelsong light theme for for Chrome"
+									css={{ borderTopLeftRadius: 12, borderBottomLeftRadius: 12 }}
+								/>
+							</Box>
+							<Text as="figcaption" variant="small">
+								Squirrelsong Light for Chrome
+							</Text>
+						</Stack>
+						<Stack as="figure" gap="s">
+							<Box objectFit="cover" overflow="hidden">
+								<Box
+									as="img"
+									src="/images/squirrelsong/squirrelsong-alfred.avif"
+									htmlWidth={559}
+									htmlHeight={446}
+									alt="Squirrelsong Light for Alfred"
+									css={{ borderTopLeftRadius: 6 }}
+								/>
+							</Box>
+							<Text as="figcaption" variant="small">
+								Squirrelsong Light for Alfred
+							</Text>
+						</Stack>
 					</Grid>
 				</Stack>
 			</Stack>
@@ -212,13 +269,6 @@ function Installation() {
 			{sortedInstructions.map((app) => (
 				<InstallationSteps key={app.id} {...app} />
 			))}
-			<Text>
-				If something is missing or broken, feel free to{' '}
-				<Link href="https://github.com/sapegin/squirrelsong">
-					send me a pull request on GitHub
-				</Link>
-				.
-			</Text>
 		</Stack>
 	);
 }
@@ -231,12 +281,11 @@ export function SquirrelsongPage({ url, codes }: Props) {
 					<Hero />
 					<Text variant="intro">
 						A low-contrast, non-distracting, and neurodiverse-friendly theme
-						that is comfortable for all-day coding without sensory
-						overstimulation. It’s perfect for developers with ADHD, autism, or
-						highly sensitive people (HSP).
+						that is comfortable for all-day coding without sensory overload.
 					</Text>
 					<Features codes={codes} />
 					<Installation />
+					<MurderOfCrows />
 					<About>
 						I created the first version of this theme in 2016, and since then
 						use it every day at work and for personal projects. Seven years
@@ -251,7 +300,12 @@ export function SquirrelsongPage({ url, codes }: Props) {
 						<Link href="https://www.monolisa.dev/">MonoLisa</Link>. The icons on
 						the Visual Studio Code screenshots are from the{' '}
 						<Link href="https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons">
-							Catppuccin Icons
+							Catppuccin&nbsp;Icons
+						</Link>{' '}
+						extension. The gradient new tab page in the Chrome screenshot is
+						from the{' '}
+						<Link href="https://chromewebstore.google.com/detail/blank-sky-new-tab-page/bafoejhfmmcjdjlkihjbgcmifcinomaj">
+							Blank&nbsp;Sky
 						</Link>{' '}
 						extension.
 					</Text>
