@@ -26,7 +26,7 @@ export default function remarkImages() {
 			const img = `
 <figure>
   <img src="${node.url}" alt="${node.alt}" width="${width}" height="${height}" loading="lazy" />
-  ${node.title && `<figcaption>${node.title}</figcaption>`}
+  ${node.title ? `<figcaption>${node.title}</figcaption>` : ''}
 </figure>
 `;
 
