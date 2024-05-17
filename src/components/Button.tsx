@@ -17,6 +17,9 @@ const button = cva({
 		textDecoration: 'none',
 		userSelect: 'none',
 		outline: 0,
+		transitionDuration: 'hover',
+		transitionTimingFunction: 'hover',
+		transitionProperty: 'all',
 		_hover: {
 			cursor: 'pointer',
 			color: 'accent',

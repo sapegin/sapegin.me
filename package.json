@@ -74,7 +74,7 @@
     "lint-staged": "^14.0.1",
     "prettier": "3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "tamia": "^7.1.4",
+    "tamia": "^7.1.5",
     "tsx": "^4.8.2"
   },
   "lint-staged": {

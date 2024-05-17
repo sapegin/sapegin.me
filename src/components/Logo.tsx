@@ -18,6 +18,9 @@ const Span = ({ children }: { children: React.ReactNode }) => (
 			lineHeight: 0.8,
 			textTransform: 'uppercase',
 			textDecoration: 'none',
+			transitionDuration: 'hover',
+			transitionTimingFunction: 'hover',
+			transitionProperty: 'all',
 			// TODO: Try group
 			'a:hover &': {
 				backgroundColor: 'accent',
