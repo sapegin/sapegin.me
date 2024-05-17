@@ -124,11 +124,11 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				<Stack gap="m">
 					<TextTypo>
 						Soft colors and low contrast are beneficial for neurodiverse people,
-						such as those with ADHD, autism, or high sensitivity (HSP). Such
-						colors help reduce sensory overload and create a calming
-						environment; they reduce distractions and visual clutter, so it’s
-						easier to stay focused on your code instead of being distracted and
-						overwhelmed by bright colors.
+						such as those with attention-deficit/hyperactivity disorder (ADHD),
+						autism, or high sensitivity (HSP). Such colors help reduce sensory
+						overload and create a calming environment; they reduce distractions
+						and visual clutter, so it’s easier to stay focused on your code
+						instead of being distracted and overwhelmed by bright colors.
 					</TextTypo>
 					<Grid auto="wide" gap="m">
 						<Stack gap="s">
@@ -139,6 +139,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 									htmlWidth={593}
 									htmlHeight={459}
 									alt="Squirrelsong light theme for Visual Studio Code"
+									loading="lazy"
 									css={{ borderTopLeftRadius: 10 }}
 								/>
 							</Box>
@@ -154,6 +155,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 									htmlWidth={593}
 									htmlHeight={459}
 									alt="Default light theme for Visual Studio Code"
+									loading="lazy"
 									css={{ borderTopLeftRadius: 10 }}
 								/>
 							</Box>
@@ -221,6 +223,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 									htmlWidth={699}
 									htmlHeight={446}
 									alt="Squirrelsong light theme for for Chrome"
+									loading="lazy"
 									css={{ borderTopLeftRadius: 12, borderBottomLeftRadius: 12 }}
 								/>
 							</Box>
@@ -236,6 +239,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 									htmlWidth={559}
 									htmlHeight={446}
 									alt="Squirrelsong Light for Alfred"
+									loading="lazy"
 									css={{ borderTopLeftRadius: 6 }}
 								/>
 							</Box>
