@@ -28,6 +28,7 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 						backgroundColor: 'text',
 					},
 
+					// Horizontal lines
 					'&& hr': {
 						height: 'auto',
 						textAlign: 'center',
@@ -41,6 +42,14 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 						letterSpacing: '0.7em',
 					},
 
+					// Image captions
+					'& figcaption': {
+						mt: 'calc(token(spacing.l) * -1 + token(spacing.s))',
+						fontSize: 'm',
+						fontStyle: 'italic',
+					},
+
+					// Tips
 					'& .tip': {
 						position: 'relative',
 						marginBlock: 'l',
