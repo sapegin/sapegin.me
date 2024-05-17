@@ -96,11 +96,13 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 						willChange: 'opacity',
 					},
 					'& .heading:hover .heading__anchor': {
-						opacity: 1,
-						transitionDelay: '0.1s',
-						transitionDuration: 'fade',
-						transitionTimingFunction: 'fade',
-						transitionProperty: 'opacity',
+						pointerFine: {
+							opacity: 1,
+							transitionDelay: '0.1s',
+							transitionDuration: 'fade',
+							transitionTimingFunction: 'fade',
+							transitionProperty: 'opacity',
+						},
 					},
 				}}
 				{...props}
