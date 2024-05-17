@@ -73,11 +73,34 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 					'& .tip + .tip': {
 						marginTop: 'm',
 					},
-
 					'& .tip__title': {
 						display: 'block',
 						marginBottom: 'xxs',
 						fontStyle: 'normal',
+					},
+
+					'& .heading': {
+						position: 'relative',
+					},
+					'& .heading__anchor': {
+						opacity: 0,
+						position: 'absolute',
+						right: '100%',
+						// Add padding to increase clickable area
+						marginTop: '-xs',
+						padding: 'xs',
+						textDecoration: 'none',
+						transitionDelay: '1s',
+						transitionDuration: 'fadeout',
+						transitionTimingFunction: 'fadeout',
+						willChange: 'opacity',
+					},
+					'& .heading:hover .heading__anchor': {
+						opacity: 1,
+						transitionDelay: '0.1s',
+						transitionDuration: 'fade',
+						transitionTimingFunction: 'fade',
+						transitionProperty: 'opacity',
 					},
 				}}
 				{...props}

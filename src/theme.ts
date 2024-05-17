@@ -102,6 +102,16 @@ export const theme = {
 					default: { value: '2px' },
 					large: { value: '3px' },
 				},
+				easings: {
+					fade: { value: 'ease-out' },
+					fadeout: { value: 'ease-out' },
+					hover: { value: 'ease-in' },
+				},
+				durations: {
+					fade: { value: '0.15s' },
+					fadeout: { value: '1s' },
+					hover: { value: '0.1s' },
+				},
 			},
 			semanticTokens: {
 				colors: createPalette(colors, colorsDark),
