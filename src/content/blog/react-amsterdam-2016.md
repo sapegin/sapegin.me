@@ -65,7 +65,7 @@ A talk about [JSS](https://github.com/cssinjs/jss) and problems of CSS by the JS
 
 - React for components, CSS for documents.
 - Problems with CSS: global namespace, dependencies, dead code elimination, minification, sharing constants, non-deterministic resolution, isolation.
-- Inline styles solves most of this problems by they don’t support @media, @keyframes, etc. and they are slow.
+- Inline styles solves most of this problems by they don’t support `@media`, `@keyframes`, and so on and they are slow.
 - JSS generates real CSS.
 - JSS itself doesn’t depend on React.
 - Don’t be religious. Keep an open mind. Use tools that solve your problems!

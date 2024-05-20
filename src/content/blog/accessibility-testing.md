@@ -183,6 +183,8 @@ A few more things that are worth testing:
 
 ## Resources
 
+<!-- textlint-disable -->
+
 - [Accessible to all](https://web.dev/accessible/)
 - [Color contrast guide](https://usecontrast.com/guide)
 - [Accessibility for teams](https://accessibility-for-teams.com/)
@@ -197,6 +199,7 @@ A few more things that are worth testing:
 - [16 things to improve your website accessibility (checklist)](https://websitesetup.org/web-accessibility-checklist/) by Bruce Lawson
 - [The business case for digital accessibility](https://www.w3.org/WAI/business-case/)
 - [Getting Started with VoiceOver & Accessibility](https://bocoup.com/blog/getting-started-with-voiceover-accessibility) by Sue Lockwood
+<!-- textlint-enable -->
 
 ## Conclusion
 

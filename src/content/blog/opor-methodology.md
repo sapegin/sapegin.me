@@ -49,7 +49,7 @@ Allowed for:
 
 Kind of OOCSS. It’s a normal block but intended to extend another (primary) block, to add some look or behavior.
 
-<!-- prettier-ignore ->>
+<!-- prettier-ignore -->
 ```css
 .scrollable
 a.fake
@@ -59,7 +59,7 @@ a.fake
 
 It’s like modifier but you can use it with any block or element. Very useful in JavaScript.
 
-<!-- prettier-ignore ->>
+<!-- prettier-ignore -->
 ```css
 .is-expanded
 .is-visible
@@ -70,7 +70,7 @@ It’s like modifier but you can use it with any block or element. Very useful i
 
 You shouldn’t use CSS classes used to style content to select elements in JavaScript. (Except states.)
 
-<!-- prettier-ignore ->>
+<!-- prettier-ignore -->
 ```css
 .js-files
 .js-select

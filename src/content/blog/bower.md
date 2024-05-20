@@ -113,13 +113,13 @@ There are two approaches for deploying a project:
 1. Only the manifest file is added to the repository and all packages are installed during deployment. This way there is nothing unnecessary in the repository, but if GitHub crashes during deployment or another server from which packages are installed crashes, there will be problems.
 2. The `bower_components` folder as well as `bower.json` are added to the repository. This way deployment doesn’t depend on external servers, but the repository blows up with hundreds (if not thousands) of extra files.
 
-### Semantic versions (semver)
+### Semantic versions (SemVer)
 
-[Semver](http://semver.org/) is, first-of-all, an approach to versioning libraries: a format for version numbers MAJOR.MINOR.PATCH and rules, which have to be followed when incrementing each number.
+[SemVer](http://semver.org/) is, first-of-all, an approach to versioning libraries: a format for version numbers MAJOR.MINOR.PATCH and rules, which have to be followed when incrementing each number.
 
 Secondly, it’s a method of describing necessary dependencies, which is used by Bower and npm.
 
-While installing with the `--save` flag, package version are added to `bower.json` like `~1.0.1`. The tilde at the beginning means that during installation version 1.0.1 will be chosen, or a version with a larger last number (PATCH) if it’s available. This way the installed version will have the latest bug fixes, but will be fully compatible with the one specified in the manifest file.
+While installing with the `--save` flag, package version are added to `bower.json` like `~1.0.1`. The tilde at the beginning means that during installation version 1.0.1 will be chosen, or a version with a larger last number (PATCH) if it’s available. This way the installed version will have the latest bugfixes, but will be fully compatible with the one specified in the manifest file.
 
 ## Updating dependencies
 

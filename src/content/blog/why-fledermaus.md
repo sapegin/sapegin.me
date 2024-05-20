@@ -28,9 +28,9 @@ It’s like in Joe Armstrong’s [famous saying](https://www.johndcook.com/blog/
 
 But in that case the banana is half-eaten.
 
-With the Fledermaus I took a different approach. Actually it’s just a collection of useful functions that you can use to write your own static site generator: loading Markdown source files, documents filtering, grouping and sorting, pagination, internationalization, generating HTML pages and RSS, etc.
+With the Fledermaus I took a different approach. Actually it’s just a collection of useful functions that you can use to write your own static site generator: loading Markdown source files, documents filtering, grouping and sorting, pagination, internationalization, generating HTML pages and RSS, and so on
 
-You can combine them any way you want, add custom processing at any step, generate pages yourself. For example, in my photo gallery I read EXIF meta data from JPEG files and generate pages (`/albums/dogs/2013-08-03-3733`) and albums (`/albums/dogs`) based on this data.
+You can combine them any way you want, add custom processing at any step, generate pages yourself. For example, in my photo gallery I read EXIF metadata from JPEG files and generate pages (`/albums/dogs/2013-08-03-3733`) and albums (`/albums/dogs`) based on this data.
 
 It’s based on fancy modern things like ES6, JSX, Markdown and Intl.
 

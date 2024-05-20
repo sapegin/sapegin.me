@@ -102,14 +102,14 @@ Jest stores snapshots besides your tests in files like `__snapshots__/Label.spec
 - Helpful fail messages.
 - Simple configuration.
 - Mocks and spies.
-- Coverage report with a single command line switch.
+- Coverage report with a single command-line switch.
 - Active development.
 - Impossible to write silently wrong asserts like `expect(foo).to.be.a.function` instead of `expect(foo).to.be.a('function')` in Chai because it’s the only natural thing to write after (correct) `expect(foo).to.be.true`.
 
 ## Why Enzyme
 
 - Convenient utilities to work with shallow rendering, static rendered markup or DOM rendering.
-- jQuery-like API to find elements, read props, etc.
+- jQuery-like API to find elements, read props, and so on
 
 ## Setting up
 

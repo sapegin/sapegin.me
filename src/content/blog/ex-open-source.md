@@ -22,7 +22,7 @@ I liked many things about open source, and it was a bit sad to loose them. Lucki
 
 Here’s what I like about it:
 
-- **Design.** I always loved to design things, whether it’s a website design, app user interface, or software architecture. Leather has it all: designing a product to solve a set of problems with a bunch of constraints is a lot of fun for me. Sketching, making templates on a computer — either based on a product I’ve seen somewhere else, or completely from scratch.
+- **Design.** I always loved to design things, whether it’s a site design, app user interface, or software architecture. Leather has it all: designing a product to solve a set of problems with a bunch of constraints is a lot of fun for me. Sketching, making templates on a computer — either based on a product I’ve seen somewhere else, or completely from scratch.
 - **Iterations.** Improving design over time: starting from paper prototypes and then using an actual thing in leather for some time to see how it performs and thinking how to solve uncovered issues (bugs).
 - **Making something that people will use and love.** Leathercraft is all about making useful products either for yourself, for your family, or friends. Things that [people will use every day](https://klatzleathergoods.etsy.com/): wallets, keyholders, bags, camera straps, and so on.
 

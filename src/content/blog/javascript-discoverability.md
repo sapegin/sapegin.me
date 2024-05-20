@@ -23,9 +23,9 @@ But as user of these small libraries I always struggle with finding the right pa
 
 Juho Vepsäläinen has [a list of npm search tools](http://www.nixtu.info/2016/02/discovery-and-quality-services-for-npm.html) but they don’t solve the problem.
 
-This is still an unsolved question for me and I hope we’ll see more sophisticated search tools that will consider many parameters to rank search results: npm installs in the last month, GitHub stars, latest release date, opened issues, test coverage, etc.
+This is still an unsolved question for me and I hope we’ll see more sophisticated search tools that will consider many parameters to rank search results: npm installs in the last month, GitHub stars, latest release date, opened issues, test coverage, and so on
 
-[JS.coach](https://js.coach/) is very close to that but they only have modules for React, webpack, Babel, etc.
+[JS.coach](https://js.coach/) is very close to that but they only have modules for React, webpack, Babel, and so on
 
 And I believe it will decrease the number of almost identical libraries because authors will be able to easily find what’s already available.
 

@@ -10,6 +10,8 @@ I like mail lists. Someone is working hard so you have to choose one or two best
 
 I read these mail lists:
 
+<!-- textlint-disable -->
+
 - [CSS Weekly](http://css-weekly.com/)
 - [Front End Newsletter](http://frontendnewsletter.com/)
 - [Fullstack React](http://newsletter.fullstackreact.com/)
@@ -21,6 +23,8 @@ I read these mail lists:
 - [Smashing Email Newsletter](https://www.smashingmagazine.com/the-smashing-newsletter/)
 - [Web Design Weekly](https://web-design-weekly.com/)
 - [Web Tools Weekly](http://webtoolsweekly.com/)
+
+<!-- textlint-enable -->
 
 But there are more that could interest you:
 

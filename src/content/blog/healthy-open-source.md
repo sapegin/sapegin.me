@@ -69,7 +69,7 @@ I adopted an open source development model, including things like hosting code o
 
 The code is provided for free according to the MIT license (see the License.md file in the root of the repository), but the social interactions between project users and maintainer(s) are restricted.
 
-I don’t look at the issues and discussion, however, you’re free to use them to talk to other users, share workarounds for bugs, etc.
+I don’t look at the issues and discussion, however, you’re free to use them to talk to other users, share workarounds for bugs, and so on
 
 I appreciate pull requests with bugfixes and documentation improvements, if they are concise and well structured. I may look at them and merge them one day, but no promise.
 

@@ -153,7 +153,7 @@ exports[`test should render a label 1`] = `
 
 Every time you, or someone in your team, change your markup Jest will show a diff and ask to update a snapshot if the change was intended.
 
-You can use snapshots to store any values: React tree, strings, numbers, object, etc.
+You can use snapshots to store any values: React tree, strings, numbers, object, and so on
 
 Snapshot testing sounds like a good idea, but has [several problems](/blog/snapshot-tests/):
 

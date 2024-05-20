@@ -70,7 +70,7 @@ tags:
 
 You can read about most of these things in Helen’s article [What is Beautiful Web Typography](http://helenvholmes.com/writing/type-is-your-right).
 
-- Use OpenType features in CSS: kerning, ligatures, etc.
+- Use OpenType features in CSS: kerning, ligatures, and so on
 - Use [OpenType Sandbox](http://clagnut.com/sandbox/css3/) to check what features are available in a font.
 - Custom fonts have performance issues that could be fixed.
 - Prevent the FOIT (flash of invisible text).
@@ -81,7 +81,7 @@ You can read about most of these things in Helen’s article [What is Beautiful 
 
 **Things you can do in ES6 that can’t be done in ES5** by [Dan Shappir](https://twitter.com/@danshappir) from Wix.com. [Slides](https://docs.google.com/presentation/d/1rBV0tPiJVqvRsnxscNk_axf-I7IS2pyiR82M6Xp5mDw/edit). [Video](https://www.youtube.com/watch?v=GbVAMgU3Jj0).
 
-- ES6 is mostly syntactic sugar: arrow functions, destructuring, default function parameters, template strings, classes, etc.
+- ES6 is mostly syntactic sugar: arrow functions, destructuring, default function parameters, template strings, classes, and so on
 - It’s good: you want the syntax to be friendly.
 - What ES6 can do is what Babel can do.
 - Map can be emulated in ES5 but much slower.
@@ -149,7 +149,7 @@ You can read about most of these things in Helen’s article [What is Beautiful 
 - Little pieces: initial letter, viewport units, object fit, clip path, CSS shapes.
 - Use CSS Feature Queries to check browser support.
 - Big pieces: Flexbox, CSS Grid Layout, Alignment.
-- CSS Grid is a framework built in a browser.
+- CSS Grid is a framework built-in a browser.
 - Learn Flexbox by playing a game: [Flexbox Defense](http://www.flexboxdefense.com/), [Flexbox Froggy](http://flexboxfroggy.com/).
 - Tools: [Firefox Nightly](https://nightly.mozilla.org/), where Grid just works, [CSS Grid Inspector](https://addons.mozilla.org/en-US/firefox/addon/css-grid-inspector/) for Firefox, [CSS Shapes Editor](http://razvancaliman.com/writing/css-shapes-editor-chrome/) for Chrome.
 - Don’t work — don’t use is a bad approach.
@@ -163,7 +163,7 @@ You can read about most of these things in Helen’s article [What is Beautiful 
 - Specs are changing to match reality: existing implementations in browsers.
 - Once we add this garbage pile of hacks, the web is actually usable.
 - Read standards.
-- Test in pre-release versions of browsers: [Firefox](https://www.mozilla.org/en-US/firefox/developer/), [Edge](https://insider.windows.com/), [Safari](https://developer.apple.com/safari/technology-preview/), [Chrome](https://www.google.com/chrome/browser/canary.html), [Opera](http://www.opera.com/computer/beta).
+- Test in prerelease versions of browsers: [Firefox](https://www.mozilla.org/en-US/firefox/developer/), [Edge](https://insider.windows.com/), [Safari](https://developer.apple.com/safari/technology-preview/), [Chrome](https://www.google.com/chrome/browser/canary.html), [Opera](http://www.opera.com/computer/beta).
 - Report bugs to browsers: [Firefox](https://bugzilla.mozilla.org/), [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/), [Safari](https://bugs.webkit.org/), [Chrome](https://bugs.chromium.org/p/chromium/issues/list), [Opera](https://bugs.opera.com/wizard/desktop) or [webcompat.com](https://webcompat.com/).
 
 **I’m offline, cool! What now?** by [Ola Gasidlo](https://twitter.com/@misprintedtype) from Styla. [Slides](http://www.slideshare.net/DanielleAVincent/ola-gasidlo-cool-what-now-im-offline). [Video](https://www.youtube.com/watch?v=ksIEPbdpuYQ).
@@ -227,7 +227,7 @@ Based on [Jan’s article](http://writing.jan.io/2015/11/20/sustainable-open-sou
 - Mobile apps are finally dying: learn how to build progressive web apps.
 - Learn CSS Grid today: you’ll need it tomorrow.
 - Learn how your framework works: you might not need it.
-- Vendor prefixes → pre-release browser channels to test new features.
+- Vendor prefixes → prerelease browser channels to test new features.
 - People finally understood that we’re here not to write code but to help our users.
 - New words: Downasaur (dinosaur in Chrome when you’re offline), [Lie-Fi](http://www.urbandictionary.com/define.php?term=lie-fi&defid=8688575).
 

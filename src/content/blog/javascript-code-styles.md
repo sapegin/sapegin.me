@@ -40,7 +40,7 @@ npm results:
 Survey results:
 
 - Results are almost the opposite.
-- [AirBnb](https://github.com/airbnb/javascript) is the most popular preset.
+- [Airbnb](https://github.com/airbnb/javascript) is the most popular preset.
 - [Standard](https://standardjs.com/) is popular too (looks like all developers who don’t use semicolons use Standard).
 - Which makes some developers quite angry: “Definitely not that ‘standard’ BS”.
 
@@ -68,7 +68,7 @@ The results show less diversity in code style of popular open source projects: m
 
 It could also be because many popular open source projects are old but in the survey people described what they used on their latest project.
 
-So if you’re starting a new JavaScript project [AirBnb preset](https://github.com/airbnb/javascript) (2 spaces, semicolons, etc.) will be a good choice: your code style will be familiar for many developers.
+So if you’re starting a new JavaScript project [Airbnb preset](https://github.com/airbnb/javascript) (2 spaces, semicolons, etc.) will be a good choice: your code style will be familiar for many developers.
 
 **Note:** Two projects of 100 are written in CoffeeScript. CoffeeScript itself is one of them. They and one with only native code were excluded from the results.
 

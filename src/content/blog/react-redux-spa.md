@@ -77,7 +77,7 @@ CSS modules are like [BEM](http://getbem.com/) but they provide real class names
 - [CSS Modules: welcome to the future](https://glenmaddern.com/articles/css-modules) by Glen Maddern.
 - <span aria-label="Video" title="Video">📺</span> [Interoperable CSS](https://youtu.be/aIyhhHTmsXE) by Glen Maddern, CSSconf EU 2015.
 
-_Consider using CSS in JS library, like [JSS](http://cssinjs.org/) or [Styled Components](https://www.styled-components.com/)._
+_Consider using CSS in JS library, like [JSS](http://cssinjs.org/) or [styled-components](https://www.styled-components.com/)._
 
 ## Webpack
 

@@ -19,7 +19,7 @@ Using CSS Modules with TypeScript is not as obvious as with JavaScript. The reas
 import s from './Button.css';
 ```
 
-You’ll get an error: “Cannot find module './Button.css'”. There are several ways to fix that.
+You’ll get an error: `Cannot find module './Button.css'`. There are several ways to fix that.
 
 ## The easy way
 
@@ -51,7 +51,7 @@ export const foo: string;
 export const barBaz: string;
 ```
 
-[typings-for-css-modules-loader](https://github.com/Jimdo/typings-for-css-modules-loader) is a drop-in replacement for css-loader that generates typings for CSS on the fly. Let’s install it:
+[typings-for-css-modules-loader](https://github.com/Jimdo/typings-for-css-modules-loader) is a drop-in replacement for `css-loader` that generates typings for CSS on the fly. Let’s install it:
 
 ```bash
 npm install --save-dev typings-for-css-modules-loader

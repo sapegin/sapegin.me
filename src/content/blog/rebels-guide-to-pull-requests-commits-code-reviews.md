@@ -68,7 +68,7 @@ It’s easier and safer to treat pull requests as atomic changes, meaning we mer
 
 Rebasing a feature branch with the recent changes in the main branch is such a big pain — and only because some folks don’t want to see merge commits in a pull request! It also requires force pushing the branch — another source of issues or even lost work, when several people are working on the same feature, which is common when one developer helps another with their task.
 
-Merging the main branch into a feature branch is significantly faster, easier, and less error-prone. Squashing commits while merging a pull request keeps the project history clean, so we'll only see these merge commints on the pull request page.
+Merging the main branch into a feature branch is significantly faster, easier, and less error-prone. Squashing commits while merging a pull request keeps the project history clean, so we’ll only see these merge commits on the pull request page.
 
 ![Squash and merge pull request on GitHub](/images/atomic-pull-requests.png)
 

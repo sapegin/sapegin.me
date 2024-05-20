@@ -1,0 +1,19 @@
+{
+	"rules": {
+		"terminology": true,
+		"apostrophe": true,
+		"diacritics": true,
+		"common-misspellings": true,
+		"stop-words": {
+			"severity": "warning",
+			"exclude": [
+				"divide and conquer",
+				"we all know that",
+				"never say never"
+			]
+		}
+	},
+	"filters": {
+		"comments": true
+	}
+}

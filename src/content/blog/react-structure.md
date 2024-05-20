@@ -14,12 +14,12 @@ There’s no idiomatic way to structure Redux applications yet. And I believe th
 
 There are two approaches for grouping files:
 
-- By type: one folder for components, one for reducers, one for actions, etc.
+- By type: one folder for components, one for reducers, one for actions, and so on
 - By feature: all files related to one feature are inside the same folder.
 
 I started from grouping by type. It works for a small application but to add a new feature you have to create: `reducers/myfeature.js`, `selectors/myfeature.js`, `components/MyFeature.js` and a few more. It’s annoying and difficult to explain to new team members.
 
-Now I group files by view or page: `dashboard`, `users`, etc.
+Now I group files by view or page: `dashboard`, `users`, and so on
 
 Here are main folders I have in my application:
 
@@ -72,7 +72,7 @@ feature-one/
     Component1.spec.js
 ```
 
-File names are still contain component class names so you can open them using a fuzzy search in your editor. I also have an extra entry file in every component folder, `index.js`:
+Filenames are still contain component class names so you can open them using a fuzzy search in your editor. I also have an extra entry file in every component folder, `index.js`:
 
 ```javascript
 export { default } from './Component1';

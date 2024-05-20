@@ -31,7 +31,7 @@ If you want more pull request to your open source projects, you can try to add a
 
 Great course for beginners but I’ve learned something from it myself. Watch before you make your first 10 open source projects.
 
-One thing I don’t like about this course: Kent suggests [semantic-release](https://github.com/semantic-release/semantic-release) to automate releases. I wouldn’t recommend it because it makes project maintainer life harder: it doesn’t allow you to group breaking changes and write [human readable change logs](http://keepachangelog.com/). And I think it’s too opinionated for such course.
+One thing I don’t like about this course: Kent suggests [semantic-release](https://github.com/semantic-release/semantic-release) to automate releases. I wouldn’t recommend it because it makes project maintainer life harder: it doesn’t allow you to group breaking changes and write [human readable changelogs](http://keepachangelog.com/). And I think it’s too opinionated for such course.
 
 ## [Learn how to use Immutable.js](https://egghead.io/courses/learn-how-to-use-immutable-js) by J.S. Leonard
 
@@ -63,7 +63,7 @@ Looks like the example project is not very good to learn reactive programming. T
 
 ## [Step-by-Step async JavaScript with RxJS](https://egghead.io/courses/step-by-step-async-javascript-with-rxjs) by John Lindquist
 
-This course is much better than the previous one. But it’s still not very useful if you want to understand _when_ to use reactive programming in real projects. Watch if you want to see how reactive programming with RxJS looks like.
+This course is much better than the previous one. But it’s still not very useful to understand _when_ to use reactive programming in real projects. Watch to see how reactive programming with RxJS looks like.
 
 ## [React Native fundamentals](https://egghead.io/courses/react-native-fundamentals) by Tyler McGinnis
 

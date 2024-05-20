@@ -197,7 +197,7 @@ export const handlers = [
 ];
 ```
 
-**Note:** To mock GraphQL requests instead of REST, use the [graphql](https://mswjs.io/docs/network-behavior/graphql) namespace.
+**Note:** To mock GraphQL requests instead of REST, use the [GraphQL](https://mswjs.io/docs/network-behavior/graphql) namespace.
 
 Here, we’re intercepting GET requests to `https://httpbin.org/anything` with any parameters and returning a JSON object with an OK (200) status.
 

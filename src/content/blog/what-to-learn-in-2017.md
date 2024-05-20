@@ -54,7 +54,7 @@ As frontend developers we’re closer to users than anybody else in the team, ma
 
 Some of us come to programming because we prefer to interact with computers more than with humans — unfortunately that’s not how it works.
 
-We rarely work in isolation: we have to talk to other developers, designers, managers and sometimes even users. That’s hard but it’s very important if you want to really understand what you’re doing and why, because that’s where the value in what we do lies.
+We rarely work in isolation: we have to talk to other developers, designers, managers and sometimes even users. That’s hard but it’s very important to really understand what you’re doing and why, because that’s where the value in what we do lies.
 
 - [Soft Skills: The software developer’s life manual](https://www.amazon.com/Soft-Skills-software-developers-manual/dp/1617292397/?tag=artesapesphot-20) by John Sonmez.
 - [The Clean Coder: A Code of Conduct for Professional Programmers](https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073/?tag=artesapesphot-20) by Robert C. Martin.
@@ -62,7 +62,7 @@ We rarely work in isolation: we have to talk to other developers, designers, man
 
 ## Learn how to write for humans
 
-A big portion of communication with our colleagues and other people are textual: task descriptions and comments, code comments, Git commits, chat messages, emails, tweets, blog posts, etc.
+A big portion of communication with our colleagues and other people are textual: task descriptions and comments, code comments, Git commits, chat messages, emails, tweets, blog posts, and so on
 
 Imagine how much time people spend reading and understanding all that. If you can reduce this time by writing more clearly and concisely, the world will be a better place to work.
 
@@ -86,7 +86,7 @@ What would you recommend? What are you going to learn in 2017?
 
 ---
 
-<small>Some of the links above are affiliate, so if you buy something using one of these links, I’ll receive a small comission.</small>
+<small>Some of the links above are affiliate, so if you buy something using one of these links, I’ll receive a small commission.</small>
 
 ---
 

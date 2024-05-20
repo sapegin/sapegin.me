@@ -42,7 +42,7 @@ This allows you to create smart _tasks_, so the result depends on your project n
 
 ## Available tasks
 
-Mrm has [many tasks](https://github.com/sapegin/mrm-tasks/tree/master/packages/mrm-preset-default) out of the box: CodeCov, EditorConfig, ESLint, .gitignore, Jest, lint-staged, Prettier, semantic-release, React Styleguidist, stylelint, Travis CI, TypeScript, package.json, contributing guidelines, license and readme file. You can create your own task or combine multiple tasks using aliases.
+Mrm has [many tasks](https://github.com/sapegin/mrm-tasks/tree/master/packages/mrm-preset-default) out of the box: Codecov, EditorConfig, ESLint, .gitignore, Jest, lint-staged, Prettier, semantic-release, React Styleguidist, stylelint, Travis CI, TypeScript, package.json, contributing guidelines, license and readme file. You can create your own task or combine multiple tasks using aliases.
 
 For example, the [Jest task](https://github.com/sapegin/mrm-tasks/tree/master/packages/mrm-task-jest):
 
@@ -98,7 +98,7 @@ See more usage examples and options [in the docs](https://github.com/sapegin/mrm
 
 ## Creating your own tasks
 
-The real power of Mrm is in custom tasks and [mrm-core library](https://github.com/sapegin/mrm-core) that gives you tools to work with config files, dependencies, file operations, etc.
+The real power of Mrm is in custom tasks and [mrm-core library](https://github.com/sapegin/mrm-core) that gives you tools to work with config files, dependencies, file operations, and so on
 
 The simplest task could look like this:
 

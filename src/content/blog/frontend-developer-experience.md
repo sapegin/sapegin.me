@@ -35,7 +35,7 @@ Bad: [Immutable.js](https://facebook.github.io/immutable-js/docs/), [Webpack](ht
 
 Good: [Rackt](https://github.com/rackt) projects like [React Router](https://github.com/ReactTraining/react-router/releases/tag/v1.0.0) or [Redux](https://github.com/reactjs/redux/releases/tag/v2.0.0). Detailed descriptions of breaking changes and upgrade instructions.
 
-Bad: [almost](https://github.com/sindresorhus/gulp-imagemin) [any](https://github.com/floatdrop/gulp-plumber) [Gulp](https://github.com/contra/gulp-concat) [plugin](https://github.com/robrich/gulp-if). No change logs at all.
+Bad: [almost](https://github.com/sindresorhus/gulp-imagemin) [any](https://github.com/floatdrop/gulp-plumber) [Gulp](https://github.com/contra/gulp-concat) [plugin](https://github.com/robrich/gulp-if). No changelogs at all.
 
 ### Improve error handling
 
@@ -43,6 +43,6 @@ Good: React. Lots of checks and meaningful warnings in the development mode. Elm
 
 Bad: almost everything else.
 
-### Follow semver
+### Follow SemVer
 
 Use [semantic versioning](http://semver.org/) to notify users about breaking changes. They shouldn’t be afraid that updating to a new patch or minor version breaks their code.

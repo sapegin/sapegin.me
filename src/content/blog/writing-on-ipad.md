@@ -158,7 +158,7 @@ I also use a few other apps for more specialized writing (all support Markdown):
 - [Notion](https://www.notion.so/) for shared projects;
 - [Day One](https://dayoneapp.com/) for journaling.
 
-**Tip:** Check out [my color schemes](https://sapegin.me/squirrelsong/) for Visual Studio Code and Bear if you want to have a monochrome Markdown highlighting similar to iA Writer.
+**Tip:** Check out [my color schemes](https://sapegin.me/squirrelsong/) for Visual Studio Code and Bear to have a monochrome Markdown highlighting similar to iA Writer.
 
 Also, the last three apps work on iPad, Mac, and iPhone, so I can read and edit my documents on various devices.
 

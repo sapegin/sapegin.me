@@ -88,13 +88,13 @@ Another thing that nobody else does except me — I always put two spaces before
 const volume = 200;  // ml
 ```
 
-I thought it improves readability but actually it just makes code base inconsistent because other developers always put one space.
+I thought it improves readability but actually it just makes codebase inconsistent because other developers always put one space.
 
 ## What JavaScript developers do
 
 Unfortunately JavaScript has no official code style but there are a few [popular code styles](/blog/javascript-code-styles), like Airbnb or Standard, that you could use to make you code look familiar to other developers.
 
-You could use ESLint to enforce code style and even autoformat code in some cases. But it won’t make your code base 100% consistent. For example ESLint with Airbnb config would normalize only my first example and allow inconsistency in the other two.
+You could use ESLint to enforce code style and even autoformat code in some cases. But it won’t make your codebase 100% consistent. For example ESLint with Airbnb config would normalize only my first example and allow inconsistency in the other two.
 
 ## What JavaScript developers should do
 
