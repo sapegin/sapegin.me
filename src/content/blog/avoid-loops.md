@@ -2,19 +2,23 @@
 title: 'Washing your code: avoid loops'
 description: Traditional loops, like for or while, are too low-level for common tasks. Array methods like .map() or .find() are more readable and have clear semantics.
 date: 2019-05-07
-source: washing-code/Avoid_loops
+source: washing-code/020_Avoid_loops
 tags:
   - javascript
   - washingcode
 ---
 
+<!-- description: Working with iterations and why traditional for loops may not be the best way of doing that -->
+
+<!-- cspell:ignore lenght -->
+
 Traditional loops, like `for` or `while`, are too low-level for common tasks. They are verbose and prone to [off-by-one errors](https://en.wikipedia.org/wiki/Off-by-one_error). We have to manage the index variable ourselves, and I always make typos with `lenght`. They don’t have any particular semantic value beyond telling us that some operation is probably repeated.
 
 ## Replacing loops with array methods
 
-Modern languages have better ways to express iterative operations, and [JavaScript has many useful methods](http://exploringjs.com/impatient-js/ch_arrays.html#methods-iteration-and-transformation-.find-.map-.filter-etc) to transform and iterate over arrays, like `map()` or `find()`.
+Modern languages have better ways to express iterative operations, and [JavaScript has many useful methods](https://exploringjs.com/impatient-js/ch_arrays.html#methods-iteration-and-transformation-.find-.map-.filter-etc.) to transform and iterate over arrays, like `map()` or `find()`.
 
-For example, let’s convert an array of strings to `kebab-case` with a `for` loop:
+For example, let’s convert an array of strings to kebab-case with a `for` loop:
 
 ```js
 const names = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
@@ -25,6 +29,8 @@ for (let i = 0; i < names.length; i++) {
 ```
 
 <!-- expect(kebabNames).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
+
+**Info:** _Kebab case_ is one of popular naming convention, where lowercase words are separated by a dash: `chuck-norris`. It’s called like this because it looks a bit like several kebabs on a skewer. Other conventions are: _camelCase_, _PascalCase_, _snake_case_, and _SCREAMING_SNAKE_CASE_. I spell each name in the book in its own convention so it’s easier to remember which one is which.
 
 And with the `map()` method instead of a `for` loop:
 
@@ -94,7 +100,7 @@ const foundName = names.find(name => name.startsWith('B'));
 
 <!-- expect(foundName).toEqual('Bilbo Baggins') -->
 
-In both cases, I much prefer array methods when compared to `for` loops. They are shorter, and we’re not bloating the code with iteration mechanics.
+In both examples, I much prefer array methods when compared to `for` loops. They are shorter, and we’re not bloating the code with iteration mechanics.
 
 ## Implied semantics of array methods
 
@@ -108,6 +114,8 @@ Array methods aren’t just shorter and more readable; each method has its own c
 Traditional loops don’t help with understanding what the code is doing until we read the whole thing.
 
 We’re separating the “what” (our data) from the “how” (how to loop over it). More than that, with array methods we only need to worry about our data, which we’re passing in as a callback function.
+
+**Info:** We talk about separation of “what” and “how” in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
 
 When all simple cases are covered by array methods, every time we see a traditional loop, we know that something unusual is going on. And that’s good: fewer chances we’ll miss a bug during code review.
 
@@ -176,6 +184,37 @@ const isExpectedType =
 
 Both refactored versions make the intention of the code clearer and leave fewer doubts that the code is correct. We can probably make the `isExpectedType` variable name more explicit, especially in the second refactoring.
 
+## Chaining multiple operations
+
+I’ve seen developers trying to squeeze everything into a single `reduce()` method to avoid extra iterations. Consider this example:
+
+<!-- let cart = [{price: 25, quantity: 2}, {price: 11, quantity: 5}] -->
+
+```js
+const totalPrice = cart.reduce(
+  (acc, item) => acc + item.price * item.quantity,
+  0
+);
+```
+
+<!-- expect(totalPrice).toBe(105) -->
+
+Here, we’re calculating a total price of all items in a shopping cart. This code is okay, but I’d split it into two steps: calculating a sum for the desired quantity of each item, and then calculating a sum of all items:
+
+<!-- let cart = [{price: 25, quantity: 2}, {price: 11, quantity: 5}] -->
+
+```js
+const totalPrice = cart
+  .map(item => item.price * item.quantity)
+  .reduce((acc, val) => acc + val);
+```
+
+Now the purpose of each step is more clear. Using the `reduce()` to calculate a sum of all array items is one of the most typical use cases for this method, and this pattern is easier to recognize here than in the original code.
+
+<!-- expect(totalPrice).toBe(105) -->
+
+**Tip:** I often see something that I call _the reduce rabbit hole_ during interviews and code reviews: a developer starts writing code with the `reduce()` method, and then keeps digging their own complexity pit by adding more and more thing to it, instead of stopping and rewriting the `reduce()` to something simpler. TkDodo has [a great article](https://tkdodo.eu/blog/why-i-dont-like-reduce) on pitfalls of `reduce()`.
+
 ## Dealing with side effects
 
 Side effects make code harder to understand because we can no longer treat a function as a black box: a function with side effects doesn’t just transform input to output but can affect the environment in unpredictable ways. Functions with side effects are also hard to test because we’ll need to recreate the environment before each test is run and verify it after.
@@ -185,7 +224,7 @@ All array methods mentioned in the previous section, except `forEach()`, imply t
 The `forEach()` method doesn’t return any value, and that’s the right choice for handling side effects when we really need them:
 
 <!--
-const console = { error: jest.fn() }
+const console = { error: vi.fn() }
 const errors = ['dope', 'nope']
 -->
 
@@ -199,7 +238,7 @@ errors.forEach(error => {
 expect(console.error.mock.calls).toEqual([['dope'], ['nope']])
 -->
 
-A `for of` loop is even better:
+A `for of` loop would be even better:
 
 - it doesn’t have any of the problems of regular `for` loops, mentioned at the beginning of this chapter;
 - we can avoid reassignments and mutations since we don’t have a return value;
@@ -208,7 +247,7 @@ A `for of` loop is even better:
 Let’s rewrite our example using a `for of` loop:
 
 <!--
-const console = { error: jest.fn() }
+const console = { error: vi.fn() }
 const errors = ['dope', 'nope']
 -->
 
@@ -221,6 +260,134 @@ for (const error of errors) {
 <!--
 expect(console.error.mock.calls).toEqual([['dope'], ['nope']])
 -->
+
+## Iterating over objects
+
+There are [many ways to iterate over object keys or values](https://stackoverflow.com/a/5737136/1973105) in JavaScript. I equally dislike them all, so it’s hard to choose the best one. Unfortunately, there’s no `map()` for objects, though Lodash does have three methods for object iteration, so it’s a good option if we’re already using Lodash in our project.
+
+```js
+const allNames = {
+  hobbits: ['Bilbo', 'Frodo'],
+  dwarfs: ['Fili', 'Kili']
+};
+const kebabNames = _.mapValues(allNames, names =>
+  names.map(name => _.kebabCase(name))
+);
+```
+
+<!--
+expect(kebabNames).toEqual({
+  hobbits: ['bilbo', 'frodo'],
+  dwarfs: ['fili', 'kili']
+})
+-->
+
+If we don’t need the result as an object, like in the example above, `Object.keys()`, `Object.values()` and `Object.entries()` are also good:
+
+<!-- const console = { log: vi.fn() } -->
+
+```js
+const allNames = {
+  hobbits: ['Bilbo', 'Frodo'],
+  dwarfs: ['Fili', 'Kili']
+};
+Object.keys(allNames).forEach(race =>
+  console.log(race, '->', allNames[race])
+);
+```
+
+<!--
+expect(console.log.mock.calls).toEqual([['hobbits', '->', ['Bilbo', 'Frodo']], ['dwarfs', '->', ['Fili', 'Kili']]])
+-->
+
+Or:
+
+<!-- const console = { log: vi.fn() } -->
+
+```js
+const allNames = {
+  hobbits: ['Bilbo', 'Frodo'],
+  dwarfs: ['Fili', 'Kili']
+};
+Object.entries(allNames).forEach(([race, value]) =>
+  console.log(race, '->', value)
+);
+```
+
+<!--
+expect(console.log.mock.calls).toEqual([['hobbits', '->', ['Bilbo', 'Frodo']], ['dwarfs', '->', ['Fili', 'Kili']]])
+-->
+
+I don’t have a strong preference between them. `Object.entries()` has more verbose syntax, but if we use the value (`names` in the example above) more than once, the code would be cleaner than `Object.keys()`, where we’d have to write `allNames[race]` every time or cache this value into a variable at the beginning of the callback function.
+
+If I stopped here, I’d be lying. Most of the articles about iteration over objects have examples with `console.log()`, but in reality, we’d often want to convert an object to another data structure, like in the example with `_.mapValues()` above. And that’s where things start getting uglier.
+
+Let’s rewrite our example using `reduce()`:
+
+```js
+const allNames = {
+  hobbits: ['Bilbo', 'Frodo'],
+  dwarfs: ['Fili', 'Kili']
+};
+const kebabNames = Object.entries(allNames).reduce(
+  (newNames, [race, names]) => {
+    newNames[race] = names.map(name => _.kebabCase(name));
+    return newNames;
+  },
+  {}
+);
+```
+
+<!--
+expect(kebabNames).toEqual({
+  hobbits: ['bilbo', 'frodo'],
+  dwarfs: ['fili', 'kili']
+})
+-->
+
+With `.forEach()`:
+
+```js
+const allNames = {
+  hobbits: ['Bilbo', 'Frodo'],
+  dwarfs: ['Fili', 'Kili']
+};
+const kebabNames = {};
+Object.entries(allNames).forEach(([race, names]) => {
+  kebabNames[race] = names.map(name => name.toLowerCase());
+});
+```
+
+<!--
+expect(kebabNames).toEqual({
+  hobbits: ['bilbo', 'frodo'],
+  dwarfs: ['fili', 'kili']
+})
+-->
+
+And with a loop:
+
+```js
+const allNames = {
+  hobbits: ['Bilbo', 'Frodo'],
+  dwarfs: ['Fili', 'Kili']
+};
+const kebabNames = {};
+for (let [race, names] of Object.entries(allNames)) {
+  kebabNames[race] = names.map(name => name.toLowerCase());
+}
+```
+
+<!--
+expect(kebabNames).toEqual({
+  hobbits: ['bilbo', 'frodo'],
+  dwarfs: ['fili', 'kili']
+})
+-->
+
+And again `.reduce()` is the least readable option.
+
+In later chapters, I’ll urge you to avoid not only loops but also reassigning variables and mutation. Like loops, they _often_ lead to poor code readability, but _sometimes_ they are the best choice.
 
 ## Sometimes loops aren’t so bad
 
@@ -350,134 +517,6 @@ const tableData =
 <!-- expect(tableData).toEqual([{ errorLevel: 2, errorMessage: 'nope', usedIn: 'Pizza' }]) -->
 
 If I was to review such code, I would be happy to pass both versions but would prefer the original with double `for` loops. _(Though `tableData` is a really bad variable name.)_
-
-## Iterating over objects
-
-There are [many ways to iterate over objects](https://stackoverflow.com/a/5737136/1973105) in JavaScript. I equally dislike them all, so it’s hard to choose the best one. Unfortunately, there’s no `map()` for objects, though Lodash does have three methods for object iteration, so it’s a good option if we’re already using Lodash in our project.
-
-```js
-const allNames = {
-  hobbits: ['Bilbo', 'Frodo'],
-  dwarfs: ['Fili', 'Kili']
-};
-const kebabNames = _.mapValues(allNames, names =>
-  names.map(name => _.kebabCase(name))
-);
-```
-
-<!--
-expect(kebabNames).toEqual({
-  hobbits: ['bilbo', 'frodo'],
-  dwarfs: ['fili', 'kili']
-})
--->
-
-If we don’t need the result as an object, like in the example above, `Object.keys()`, `Object.values()` and `Object.entries()` are also good:
-
-<!-- const console = { log: jest.fn() } -->
-
-```js
-const allNames = {
-  hobbits: ['Bilbo', 'Frodo'],
-  dwarfs: ['Fili', 'Kili']
-};
-Object.keys(allNames).forEach(race =>
-  console.log(race, '->', allNames[race])
-);
-```
-
-<!--
-expect(console.log.mock.calls).toEqual([['hobbits', '->', ['Bilbo', 'Frodo']], ['dwarfs', '->', ['Fili', 'Kili']]])
--->
-
-Or:
-
-<!-- const console = { log: jest.fn() } -->
-
-```js
-const allNames = {
-  hobbits: ['Bilbo', 'Frodo'],
-  dwarfs: ['Fili', 'Kili']
-};
-Object.entries(allNames).forEach(([race, value]) =>
-  console.log(race, '->', value)
-);
-```
-
-<!--
-expect(console.log.mock.calls).toEqual([['hobbits', '->', ['Bilbo', 'Frodo']], ['dwarfs', '->', ['Fili', 'Kili']]])
--->
-
-I don’t have a strong preference between them. `Object.entries()` has more verbose syntax, but if we use the value (`names` in the example above) more than once, the code would be cleaner than `Object.keys()`, where we’d have to write `allNames[race]` every time or cache this value into a variable at the beginning of the callback function.
-
-If I stopped here, I’d be lying. Most of the articles about iteration over objects have examples with `console.log()`, but in reality, we’d often want to convert an object to another data structure, like in the example with `_.mapValues()` above. And that’s where things start getting uglier.
-
-Let’s rewrite our example using `reduce()`:
-
-```js
-const allNames = {
-  hobbits: ['Bilbo', 'Frodo'],
-  dwarfs: ['Fili', 'Kili']
-};
-const kebabNames = Object.entries(allNames).reduce(
-  (newNames, [race, names]) => {
-    newNames[race] = names.map(name => _.kebabCase(name));
-    return newNames;
-  },
-  {}
-);
-```
-
-<!--
-expect(kebabNames).toEqual({
-  hobbits: ['bilbo', 'frodo'],
-  dwarfs: ['fili', 'kili']
-})
--->
-
-With `.forEach()`:
-
-```js
-const allNames = {
-  hobbits: ['Bilbo', 'Frodo'],
-  dwarfs: ['Fili', 'Kili']
-};
-const kebabNames = {};
-Object.entries(allNames).forEach(([race, names]) => {
-  kebabNames[race] = names.map(name => name.toLowerCase());
-});
-```
-
-<!--
-expect(kebabNames).toEqual({
-  hobbits: ['bilbo', 'frodo'],
-  dwarfs: ['fili', 'kili']
-})
--->
-
-And with a loop:
-
-```js
-const allNames = {
-  hobbits: ['Bilbo', 'Frodo'],
-  dwarfs: ['Fili', 'Kili']
-};
-const kebabNames = {};
-for (let [race, names] of Object.entries(allNames)) {
-  kebabNames[race] = names.map(name => name.toLowerCase());
-}
-```
-
-<!--
-expect(kebabNames).toEqual({
-  hobbits: ['bilbo', 'frodo'],
-  dwarfs: ['fili', 'kili']
-})
--->
-
-And again `.reduce()` is the least readable option.
-
-In later chapters, I’ll urge you to avoid not only loops but also reassigning variables and mutation. Like loops, they _often_ lead to poor code readability, but _sometimes_ they are the best choice.
 
 ## But aren’t array methods slow?
 

@@ -29,6 +29,13 @@ const text = cva({
 				lineHeight: 'base',
 				letterSpacing: 'base',
 			},
+			semilarge: {
+				fontFamily: 'body',
+				fontSize: 'article',
+				fontWeight: 'normal',
+				lineHeight: 'base',
+				letterSpacing: 'base',
+			},
 			large: {
 				fontFamily: 'body',
 				fontSize: 'l',

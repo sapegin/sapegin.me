@@ -4,22 +4,69 @@ import {
 	Box,
 	Button,
 	Feedback,
+	Grid,
 	Heading,
 	Link,
 	MurderOfCrows,
-	PostList,
 	Stack,
 	Text,
 	TextTypo,
 	VisuallyHidden,
 } from '../components';
-import type { Resource } from '../types/Resource';
+import type { Chapter } from '../types/Chapter';
 import { Page } from './Page';
 
 type Props = {
 	url: string;
-	chapters: Resource[];
+	chapters: Chapter[];
 };
+
+function ChapterList({ chapters }: { chapters: Chapter[] }) {
+	return (
+		<Grid
+			as="ul"
+			gap="m"
+			gridTemplateColumns={{
+				base: '1fr',
+				tablet: '1fr 1fr',
+			}}
+		>
+			{chapters.map((chapter) => (
+				<Stack
+					as="li"
+					key={chapter.url ?? chapter.title}
+					gap="xs"
+					gridColumn={chapter.title === 'Other techniques' && '1/3'}
+				>
+					<Text variant="semilarge">
+						{chapter.url ? (
+							<Link href={chapter.url}>{chapter.title}</Link>
+						) : (
+							chapter.title
+						)}
+					</Text>
+					{chapter.sections.length > 0 ? (
+						<Grid
+							gap="s"
+							gridTemplateColumns={{
+								base: '1fr',
+								tablet: '1fr 1fr',
+							}}
+						>
+							{chapter.sections.map((section) => (
+								<Text key={section} variant="small">
+									{section}
+								</Text>
+							))}
+						</Grid>
+					) : (
+						<Text variant="small">{chapter.description}</Text>
+					)}
+				</Stack>
+			))}
+		</Grid>
+	);
+}
 
 export function BookPage({ url, chapters }: Props) {
 	return (
@@ -89,7 +136,7 @@ export function BookPage({ url, chapters }: Props) {
 					</Stack>
 					<Stack gap="m">
 						<Heading level={2}>Table of contents</Heading>
-						<PostList posts={chapters} />
+						<ChapterList chapters={chapters} />
 					</Stack>
 					<About>
 						I’ve been <Link href="/blog/">blogging</Link> about frontend

@@ -2,11 +2,13 @@
 title: 'Washing your code: avoid mutation'
 description: Mutations happen when we change a JavaScript object or array without creating a new variable or reassigning an existing one. Mutations make code harder to understand and can lead to hard-to-find bugs.
 date: 2020-03-19
-source: washing-code/Avoid_mutation
+source: washing-code/050_Avoid_mutation
 tags:
   - javascript
   - washingcode
 ---
+
+<!-- description: Why mutation is hindering code readability and what can we do about it -->
 
 Mutations happen when we change a JavaScript object or array without creating a new variable or reassigning an existing one:
 
@@ -24,7 +26,7 @@ Here we’re _mutating_ the original `puppy` object by changing its `age` proper
 
 Mutations are often problematic. Consider this function:
 
-<!-- const console = { log: jest.fn() } -->
+<!-- const console = { log: vi.fn() } -->
 
 ```js
 function printSortedArray(array) {
@@ -42,16 +44,18 @@ expect(console.log.mock.calls).toEqual([[1], [2], [3]])
 
 The problem here is that the `sort()` array method mutates the array we’re passing into our function, likely not what we’d expect when calling a function named `printSortedArray()`.
 
-Some of the problems with mutation:
+Some of the problems with mutations:
 
-- Mutation may lead to unexpected and hard-to-debug issues, where data becomes incorrect somewhere, and we have no idea where it happens.
-- Mutation makes code harder to understand: at any time, an array or object may have a different value, so we need to be very careful when reading the code.
+- Mutations may lead to unexpected and hard-to-debug issues, where data becomes incorrect somewhere, and we have no idea where it happens.
+- Mutations make code harder to understand: at any time, an array or object may have a different value, so we need to be very careful when reading the code.
 - Mutation of function parameters makes the behavior of a function surprising.
-- Mutation is often unexpected. It’s too easy to forget which methods mutate the original data, and which don’t. Both could return the same value, and there’s no naming convention of any kind to differentiate them, at least in JavaScript.
+- Mutations are often unexpected. It’s too easy to forget which methods mutate the original data, and which don’t. Both could return the same value, and there’s no naming convention of any kind to differentiate them, at least in JavaScript.
 
 _Immutability_ or _immutable data structures_, meaning that to change a value we have to create a new array or object, would solve this problem. Unfortunately, JavaScript doesn’t support immutability natively, and all solutions are more crutches than actual solutions. But even just _avoiding_ mutations in our code makes it easier to understand.
 
-Also, don’t forget that `const` in JavaScript only prevents reassignments — not mutations. We’ve discussed reassignments in the previous chapter, [Avoid reassigning variables](/blog/avoid-reassigning-variables/).
+Also, don’t forget that `const` in JavaScript only prevents reassignments — not mutations.
+
+**Info:** We talk about reassignments in the previous chapter, [Avoid reassigning variables](no-reassigning).
 
 ## Avoid mutating operations
 
@@ -148,7 +152,9 @@ Now it’s easier to understand what the code does, and the possible shapes of t
 
 ## Beware of the mutating array methods
 
-Not all methods in JavaScript return a new array or object. [Some methods mutate](https://doesitmutate.xyz/) the original value in place. For example, `push()` is one of the most commonly used.
+Not all methods in JavaScript return a new array or object. Some methods mutate the original value in place. For example, the `push()` method is one of the most commonly used.
+
+**Info:** Use [Does it mutate](https://doesitmutate.xyz/) to quickly check whether an array method mutating or not.
 
 Replacing imperative code, full of loops and conditions, with declarative code is one of my favorite refactorings. And one of the most common suggestions I give in code reviews.
 
@@ -317,7 +323,7 @@ expect(defaults).toEqual({foo: 1, bar: 2})
 expect(prompts).toEqual([{name: 'foo', initial: 1, message: 'Foo'}, {name: 'bar', initial: 2}])
 -->
 
-Other [mutating array methods](https://doesitmutate.xyz/) to watch out for are:
+Other mutating array methods to watch out for are:
 
 - [copyWithin()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)
 - [fill()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
@@ -329,7 +335,7 @@ Other [mutating array methods](https://doesitmutate.xyz/) to watch out for are:
 - [splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 - [unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
-**Note:** Thanks to the [Change Array by copy](https://github.com/tc39/proposal-change-array-by-copy) proposal, JavaScript will have immutable alternatives to several of the mentioned above methods: `toReversed()`, `toSorted()`, `toSpliced()`, and `with()`. The proposal will be included in ECMAScript 2023.
+**Info:** Thanks to the [Change Array by copy](https://github.com/tc39/proposal-change-array-by-copy) proposal, JavaScript will have immutable alternatives to several of the mentioned above methods: `toReversed()`, `toSorted()`, `toSpliced()`, and `with()`. The proposal will be included in ECMAScript 2023.
 
 ## Avoid mutation of function parameters
 
@@ -701,7 +707,7 @@ This does the same thing but is less verbose, and no need to remember `Object.as
 
 And before the [Object.assign()](http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) method in ECMAScript 2015, we didn’t even try to avoid mutations: it was too painful.
 
-Redux has a great [page on immutable update patterns](https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns): it describes patterns for updating arrays and objects without mutations, and it’s useful even if we don’t use Redux.
+**Info:** Redux has a great [page on immutable update patterns](https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns): it describes patterns for updating arrays and objects without mutations, and it’s useful even if we don’t use Redux.
 
 And still, spread syntax quickly gets incredibly verbose:
 
@@ -753,9 +759,11 @@ While we’re waiting for JavaScript [to get native immutability](https://github
 
 **Preventing mutations** is good because it’s so easy to miss them during code reviews, and then spend many hours debugging weird issues.
 
-One way to prevent mutations is to use a linter. ESLint has several plugins that try to do just that, and we’ll discuss them in the Lint your code chapter.
+One way to prevent mutations is to use a linter, and ESLint has several plugins that try to do just that.
 
-[eslint-plugin-better-mutation](https://github.com/sloops77/eslint-plugin-better-mutation) disallows any mutations, except for local variables in functions. This is a great idea because it prevents bugs caused by the mutation of shared objects but allows us to use mutations locally. Unfortunately, it breaks even in simple cases, such as a mutation occurring inside `.forEach()`.
+**Info:** We talk about linting in the Lint your code chapter.
+
+The [eslint-plugin-better-mutation](https://github.com/sloops77/eslint-plugin-better-mutation) plugin disallows any mutations, except for local variables in functions. This is a great idea because it prevents bugs caused by the mutation of shared objects but allows us to use mutations locally. Unfortunately, it breaks even in simple cases, such as a mutation occurring inside `.forEach()`.
 
 Another way to prevent mutations is to mark all objects and arrays as read-only in TypeScript or Flow.
 
@@ -794,13 +802,13 @@ expect(result).toEqual([1, 2, 3])
 
 Note that both `readonly` modifier and `Readonly` utility type are shallow, so we need to add them to all nested objects too.
 
-[eslint-plugin-functional](https://github.com/jonaskello/eslint-plugin-functional) has the rule to require read-only types everywhere, which may be more convenient than remembering to do that ourselves. Unfortunately, it only supports `readonly` modifier but not `Readonly` utility type.
+The [eslint-plugin-functional](https://github.com/jonaskello/eslint-plugin-functional) plugin has the rule to require read-only types everywhere, which may be more convenient than remembering to do that ourselves. Unfortunately, it only supports `readonly` modifier but not `Readonly` utility type.
 
 I think it’s a good idea, because there’s no runtime cost, though it makes type definitions more verbose.
 
 I’d prefer [an option in TypeScript](https://github.com/microsoft/TypeScript/issues/32758) to make all types read-only by default with a way to opt out.
 
-Similar to making objects read-only on the type level, we can make them read-only at runtime with `Object.freeze`. `Object.freeze` is also shallow, so we’d have to use a library like [deep-freeze](https://github.com/substack/deep-freeze) to ensure that nested objects are also frozen, and we might want to have freezing only in development since it can otherwise slow our app down.
+Similar to making objects read-only on the type level, we can make them read-only at runtime with `Object.freeze`. `Object.freeze` is also shallow, so we’d have to [deep freezing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) to ensure that nested objects are also frozen, and we might want to have freezing only in development since it can otherwise slow our app down.
 
 I don’t think freezing is worth it on its own unless it is part of another library.
 
@@ -861,7 +869,79 @@ if (drinksAlcohol) {
 
 <!-- expect(drinks).toEqual(['coffee', 'tea', 'vodka']) -->
 
-I’m hesitant to say which one is more more readable.
+I’m hesitant to say which one is more readable.
+
+Let’s look at another example:
+
+<!-- let friendNames = ['Kili', 'Bilbo', 'Frodo', 'Kili'] -->
+
+```js
+const counts = {};
+friendNames.forEach(x => {
+  if (counts[x]) {
+    counts[x]++;
+  } else {
+    counts[x] = 1;
+  }
+});
+```
+
+<!-- expect(counts).toEqual({Kili: 2, Bilbo: 1, Frodo: 1}) -->
+
+We have a list of friend names, and we’re calculating how many friends we have with the same name. We can try to avoid mutation with the `reduce()` method:
+
+<!-- let friendNames = ['Kili', 'Bilbo', 'Frodo', 'Kili'] -->
+
+```js
+const counts = friendNames.reduce((counts, x) => {
+  if (counts[x]) {
+    counts[x]++;
+  } else {
+    counts[x] = 1;
+  }
+  return counts;
+}, {});
+```
+
+<!-- expect(counts).toEqual({Kili: 2, Bilbo: 1, Frodo: 1}) -->
+
+What I don’t like about the `reduce()` is that return part. Unless the body of reduce is a single line, and we can use implicit return, the code looks too complex in comparison to the `forEach()`. The difference is even more noticeable if we compare it to a for loop:
+
+<!-- let friendNames = ['Kili', 'Bilbo', 'Frodo', 'Kili'] -->
+
+```js
+const counts = {};
+for (const name of friendNames) {
+  if (counts[name]) {
+    counts[name]++;
+  } else {
+    counts[name] = 1;
+  }
+}
+```
+
+<!-- expect(counts).toEqual({Kili: 2, Bilbo: 1, Frodo: 1}) -->
+
+This is my favorite option so far.
+
+However, I usually write such counters slightly differently:
+
+<!-- let friendNames = ['Kili', 'Bilbo', 'Frodo', 'Kili'] -->
+
+```js
+const counts = {};
+for (const name of friendNames) {
+  if (name in counts === false) {
+    counts[name] = 0;
+  }
+
+  counts[name]++;
+}
+```
+
+<!-- expect(counts).toEqual({Kili: 2, Bilbo: 1, Frodo: 1}) -->
+
+I like it more because we’ve separated the initialization code and the actual counter, so we can change them independently. It also works well when either the initialization or the update code is more complex.
 
 Here’s a more complex example:
 

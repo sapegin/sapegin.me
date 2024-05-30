@@ -1,92 +1,82 @@
 [
   {
-    "title": "Preface"
-  },
-  {
-    "title": "Acknowledgments"
-  },
-  {
+    "url": "/blog/avoid-loops/",
     "title": "Avoid loops",
-    "url": "/blog/avoid-loops/"
+    "description": "Working with iterations and why traditional for loops may not be the best way of doing that",
+    "sections": []
   },
   {
+    "url": "/blog/avoid-conditions/",
     "title": "Avoid conditions",
-    "url": "/blog/avoid-conditions/"
+    "description": "Writing good conditions and simplifying the code by avoiding them",
+    "sections": []
   },
   {
+    "url": "/blog/avoid-reassigning-variables/",
     "title": "Avoid reassigning variables",
-    "url": "/blog/avoid-reassigning-variables/"
+    "description": "Improving code readability by making it easier to understand what variables are doing and how they are used in the code",
+    "sections": []
   },
   {
+    "url": "/blog/avoid-mutation/",
     "title": "Avoid mutation",
-    "url": "/blog/avoid-mutation/"
+    "description": "Why mutation is hindering code readability and what can we do about it",
+    "sections": []
   },
   {
+    "url": "/blog/avoid-comments/",
     "title": "Avoid comments",
-    "url": "/blog/avoid-comments/"
+    "description": "Writing useful comments, when to write them and when not",
+    "sections": []
   },
   {
+    "url": "/blog/naming/",
     "title": "Naming is hard",
-    "url": "/blog/naming/"
+    "description": "How clear names make it easier to understand the code, and how to improve naming in our apps",
+    "sections": []
   },
   {
-    "title": "Code style"
+    "title": "Divide and conquer, or merge and relax",
+    "description": "Splitting code into functions and modules, when is the right time to introduce an abstraction, and when it’s better to wait",
+    "sections": []
   },
   {
-    "title": "Constants"
+    "title": "Don’t make me think",
+    "description": "All the different ways programmers like to write clever code, and why we should avoid it as much as possible",
+    "sections": []
   },
   {
-    "title": "Separate “what” and “how”"
+    "title": "Code style",
+    "description": "Which code styles are actually improving readability and which are just opinions that don’t matter much",
+    "sections": []
   },
   {
-    "title": "Don’t be clever"
+    "title": "Lint your code",
+    "description": "How linters can help us maintain consistent and modern codebase, and promote some of the techniques discussed in the previous chapters",
+    "sections": []
   },
   {
-    "title": "Divide and conquer, or merge and relax"
+    "title": "Autoformat your code",
+    "description": "How tools can make our lives much easier by formatting code for us",
+    "sections": []
   },
   {
-    "title": "Don’t make me think"
+    "title": "Learn your code editor",
+    "description": "Different techniques for editing code and customizing our environment to make our work more efficient and less tiring",
+    "sections": []
   },
   {
-    "title": "Make impossible states impossible"
-  },
-  {
-    "title": "Don’t try to predict the future"
-  },
-  {
-    "title": "Become a code scout"
-  },
-  {
-    "title": "Make the code greppable"
-  },
-  {
-    "title": "Cargo cult programming"
-  },
-  {
-    "title": "Not invented here syndrome"
-  },
-  {
-    "title": "Refactoring is inevitable"
-  },
-  {
-    "title": "Code is evil"
-  },
-  {
-    "title": "Lint your code"
-  },
-  {
-    "title": "Autoformat your code"
-  },
-  {
-    "title": "Typecheck your code"
-  },
-  {
-    "title": "Learn your code editor"
-  },
-  {
-    "title": "Resources"
-  },
-  {
-    "title": "Conclusion"
+    "title": "Other techniques",
+    "description": "Everything else that didn’t fit into other chapters",
+    "sections": [
+      "Make impossible states impossible",
+      "Don’t try to predict the future",
+      "Become a code scout",
+      "Make the code greppable",
+      "Avoid not invented here syndrome",
+      "Avoid cargo cult programming",
+      "Debug code with emojis",
+      "Go for a walk or talk to a rubber duck"
+    ]
   }
 ]

@@ -2,12 +2,16 @@
 title: 'Washing your code: naming is hard'
 description: We all know that naming is one of the hardest problems in programming. Let’s look at many naming antipatterns, and how to fix them.
 date: 2023-06-22
-source: washing-code/Naming_is_hard
+source: washing-code/070_Naming_is_hard
 tags:
   - javascript
   - washingcode
   - clean code
 ---
+
+<!-- description: How clear names make it easier to understand the code, and how to improve naming in our apps -->
+
+<!-- cspell:ignore arru, typoses, deprature -->
 
 We all know that naming is one of the hardest problems in programming, and probably most of us have written code like this when we just started programming:
 
@@ -283,7 +287,9 @@ expect(store['#book_download']['hidden-node']).toBe(false)
 expect(store['#book_retry']['disabled']).toBe(true)
 -->
 
-Now it’s much easier to read. (And we’ll talk about names like `data` later.)
+Now it’s much easier to read.
+
+**Info:** We talk about names like `data` later in this chapter.
 
 ## The larger the scope, the longer the name
 
@@ -520,7 +526,7 @@ keys.forEach(key => {
 
 <!-- expect(calls).toBe(2) -->
 
-(See [Avoid loops](/blog/avoid-loops/) chapter for more examples.)
+**Info:** See the [Avoid loops](/blog/avoid-loops/) chapter for more examples.
 
 ## The shorter the scope the better
 
@@ -531,7 +537,9 @@ The extreme cases would be:
 - One-liner functions, where the scope of a variable is a single line: easy to follow (example: `[8, 16].map(x => x + 'px')`).
 - Global variables: a variable can be used or modified anywhere in the project, and there’s no way to know which value it holds at any given moment, which often leads to bugs. That’s why many developers are [advocating against global variables](https://wiki.c2.com/?GlobalVariablesAreBad) for decades.
 
-Usually, the shorter the scope, the better. However, religious scope shortening has the same issues as splitting code into many teeny-tiny functions (see Divide and conquer, or merge and relax chapter): it’s easy to overdo it and make the code less readable, not more.
+Usually, the shorter the scope, the better. However, religious scope shortening has the same issues as splitting code into many teeny-tiny functions: it’s easy to overdo it and make the code less readable, not more.
+
+**Info:** We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
 
 I found that reducing the lifespan of a variable works as well, and doesn’t produce lots of tiny functions. The idea here is to reduce the number of lines between the variable declaration and the line where it’s accessed for the last time. The scope might be a whole 200-line function but if the lifespan of a particular variable is three lines, then we only need to look at these three lines to understand how this variable is used.
 
@@ -555,7 +563,7 @@ function getRelatedPosts(
     })
     .filter(post => post.weight > 0);
 
-  const sorted = sortBy(weighted, 'weight').reverse();
+  const sorted = _.sortBy(weighted, 'weight').reverse();
   return sorted.slice(0, MAX_RELATED);
 }
 ```
@@ -567,7 +575,294 @@ expect(getRelatedPosts(posts, {slug: 'c', tags: ['sleeping', 'tacos'], timestamp
 
 Here, the lifespan of the `sorted` variable is only two lines. This kind of sequential processing is a common use case for the technique.
 
-(See a larger example in the “Avoid Pascal style variables” section in the [Avoid reassigning variables](/blog/avoid-reassigning-variables/) chapter.)
+**Info:** See a larger example in the [Avoid Pascal style variables](/blog/avoid-reassigning-variables/#avoid-pascal-style-variables) section in the _Avoid reassigning variables_ chapter.
+
+## Making magic numbers less magic
+
+By introducing a constant instead of a magic number we give it a meaningful name. Consider this example:
+
+```js
+const getHoursSinceLastChange = timestamp =>
+  Math.round(timestamp / 3600);
+```
+
+<!-- expect(getHoursSinceLastChange(36000)).toBe(10) -->
+
+A seasoned developer would likely guess that 3600 is the number of seconds in an hour, but the actual number is less important than what this code does, and we can make it clear by moving the magic number to a constant:
+
+```js
+const SECONDS_IN_AN_HOUR = 3600;
+const getHoursSinceLastChange = timestamp =>
+  Math.round(timestamp / SECONDS_IN_AN_HOUR);
+```
+
+<!-- expect(getHoursSinceLastChange(36000)).toBe(10) -->
+
+I like to include a unit in a name if it’s not obvious otherwise:
+
+```js
+const FADE_TIMEOUT_MS = 2000;
+```
+
+Another perfect example where constants make code more readable is days of week:
+
+<!--
+const Calendar = props => <div>{props.disabledDaysOfWeek.join(':')}</div>;
+const Test = () => (
+-->
+
+```jsx
+<Calendar disabledDaysOfWeek={[1, 6]} />
+```
+
+<!--
+)
+const {container: c1} = RTL.render(<Test />);
+expect(c1.textContent).toEqual('1:6')
+-->
+
+Is 6 a Saturday, Sunday or Monday? Are we counting from 0 or 1? Does week start on a Monday or Sunday?
+
+Defining constants for these values makes it clear:
+
+```js
+const WEEKDAY_MONDAY = 1;
+const WEEKDAY_SATURDAY = 6;
+```
+
+<!-- -->
+
+<!--
+const WEEKDAY_MONDAY = 1;
+const WEEKDAY_SATURDAY = 6;
+const Calendar = props => <div>{props.disabledDaysOfWeek.join(':')}</div>;
+const Test = () => (
+-->
+
+```jsx
+<Calendar disabledDaysOfWeek={[WEEKDAY_MONDAY, WEEKDAY_SATURDAY]} />
+```
+
+<!--
+)
+const {container: c1} = RTL.render(<Test />);
+expect(c1.textContent).toEqual('1:6')
+-->
+
+However, having a clear name is sometimes not enough:
+
+<!-- const date = '2023-03-22T08:20:00+01:00' -->
+
+```js
+const CHARACTERS_IN_ISO_DATE = 10;
+const dateWithoutTime = date.slice(0, CHARACTERS_IN_ISO_DATE);
+```
+
+<!-- expect(dateWithoutTime).toBe('2023-03-22') -->
+
+Here, we remove the time portion of a string containing date and time in ISO format (for example, `2023-03-22T08:20:00+01:00`) by keeping only the first 10 characters – the length of the date part. The name is quite clear but the code is still a bit confusing and brittle. We can do better:
+
+<!-- const date = '2023-03-22T08:20:00+01:00' -->
+
+```js
+const DATE_FORMAT_ISO = 'YYYY-MM-DD';
+const dateWithoutTime = date.slice(0, DATE_FORMAT_ISO.length);
+```
+
+<!-- expect(dateWithoutTime).toBe('2023-03-22') -->
+
+Now, it’s easier to visualize what the code is doing, and we don’t need to count characters manually to be sure that The Very Magic number 10 is correct.
+
+Code reuse is another good reason to introduce constants. However, we need to wait for the moment when the code is actually reused.
+
+## Not all numbers are magic
+
+Sometimes people replace absolutely all literal values with constants, ideally stored in a separate module:
+
+```js
+const ID_COLUMN_WIDTH = 40;
+const TITLE_COLUMN_WIDTH = 120;
+const TYPE_COLUMN_WIDTH = 60;
+const DATE_ADDED_COLUMN_WIDTH = 50;
+const CITY_COLUMN_WIDTH = 80;
+const COUNTRY_COLUMN_WIDTH = 90;
+const USER_COLUMN_WIDTH = 70;
+const STATUS_COLUMN_WIDTH = 50;
+const columns = [
+  {
+    header: 'ID',
+    accessor: 'id',
+    width: ID_COLUMN_WIDTH
+  }
+  // …
+];
+```
+
+<!-- expect(columns[0].width).toBe(40) -->
+
+But not every value is magic, some values are just values. Here it’s clear that the value is the width of the ID column, and a constant doesn’t add any information that’s not in the code already, but makes the code harder to read: we need to go to the constant definition to see the actual value.
+
+Often, code reads perfectly even without constants:
+
+<!--
+const Modal = (props) => <div>{props.title}:{props.minWidth}</div>;
+const Test = () => (
+-->
+
+```jsx
+<Modal title="Out of cheese error" minWidth="50vw" />
+```
+
+<!--
+)
+const {container: c1} = RTL.render(<Test />);
+expect(c1.textContent).toEqual('Out of cheese error:50vw')
+-->
+
+Here it’s clear that the minimum width of a modal is 50vw. Adding a constant won’t make this code any clearer:
+
+```js
+const MODAL_MIN_WIDTH = '50vw';
+```
+
+<!-- -->
+
+<!--
+const MODAL_MIN_WIDTH = '50vw';
+const Modal = (props) => <div>{props.title}:{props.minWidth}</div>;
+const Test = () => (
+-->
+
+```jsx
+<Modal title="Out of cheese error" minWidth={MODAL_MIN_WIDTH} />
+```
+
+<!--
+)
+const {container: c1} = RTL.render(<Test />);
+expect(c1.textContent).toEqual('Out of cheese error:50vw')
+-->
+
+I’d avoid such constants unless the values are reused.
+
+Sometimes, such constants are even misleading:
+
+```js
+const ID_COLUMN_WIDTH = 40;
+const columns = [
+  {
+    header: 'ID',
+    accessor: 'id',
+    minWidth: ID_COLUMN_WIDTH
+  }
+];
+```
+
+<!-- expect(columns[0].minWidth).toBe(40) -->
+
+Here, the name is not precise: instead of minimum width it only has width.
+
+Often, _zeroes_ and _ones_ aren’t magic, and code is easier to understand when we use `0` and `1` directly instead of constants with inevitably awkward names:
+
+<!--
+const addDays = (x, y) => x + y * 10
+const addSeconds = (x, y) => x + y
+const startOfDay = x => x - 0.1
+-->
+
+```js
+const DAYS_TO_ADD_IN_TO_FIELD = 1;
+const SECONDS_TO_REMOVE_IN_TO_FIELD = -1;
+const getEndOfDayFromDate = date => {
+  const nextDay = addDays(startOfDay(date), DAYS_TO_ADD_IN_TO_FIELD);
+  return addSeconds(nextDay, SECONDS_TO_REMOVE_IN_TO_FIELD);
+};
+```
+
+<!-- expect(getEndOfDayFromDate(10)).toBe(18.9) -->
+
+This function returns the last second of a day. And here 1 and -1 really mean “next” and “previous”. They are also an essential part of an algorithm, not configuration. It doesn’t make sense to change 1 to 2, because it will break the function. Constants make the code longer and don’t help with understanding it. Let’s remove them:
+
+<!--
+const addDays = (x, y) => x + y * 10
+const addSeconds = (x, y) => x + y
+const startOfDay = x => x - 0.1
+-->
+
+```js
+const getEndOfDayFromDate = date => {
+  const nextDay = addDays(startOfDay(date), 1);
+  return addSeconds(nextDay, -1);
+};
+```
+
+<!-- expect(getEndOfDayFromDate(10)).toBe(18.9) -->
+
+Now, the code is short and clear, with enough information to understand it.
+
+## Group related constants
+
+We often use constants for ranges of values:
+
+```js
+const SMALL = 'small';
+const MEDIUM = 'medium';
+```
+
+These constants are related – they define different values of the same scale, size of something, and likely could be used interchangeably. However, it’s not clear from the names that they are related. We could add a suffix:
+
+```js
+const SMALL_SIZE = 'small';
+const MEDIUM_SIZE = 'medium';
+```
+
+Now, it’s clear that these values are related, thanks to the `_SIZE` suffix. But we can do better:
+
+```js
+const SIZE_SMALL = 'small';
+const SIZE_MEDIUM = 'medium';
+```
+
+Here, the common part of the names, the `SIZE_` prefix, is aligned. I call this _parallel coding_.
+
+**Info:** We talk more about parallel coding in the Don’t make me think chapter.
+
+Another option is to use an object:
+
+```js
+const SIZE = {
+  SMALL: 'small',
+  MEDIUM: 'medium'
+};
+```
+
+It has some additional benefits over separate constants:
+
+- We only need to import it once (`import { SIZE } from '...'` vs `import { SIZE_SMALL, SIZE_MEDIUM } from '...'`).
+- Better autocomplete after typing `SIZE.`
+
+And yet another option is to use a TypeScript enum:
+
+```ts
+enum Size {
+  Small = 'small',
+  Medium = 'medium'
+}
+```
+
+**Tip:** Usually, enum names are singular nouns in PascalCase, like `Month`, `Color`, `OrderStatus`, or `ProductType`.
+
+Which is essentially the same as an object but we can also use it as a type:
+
+```ts
+interface ButtonProps {
+  size: Size;
+}
+```
+
+The latter would be my choice for TypeScript.
+
+
 
 ## Abbreviations and acronyms
 
@@ -706,7 +1001,7 @@ interface Coordinates {
 
 I would generally avoid repeating information in the name that’s already accessible in its type, class name, or namespace.
 
-(We talk a bit more about conventions in the Code style chapter.)
+**Info:** We talk more about conventions in the Code style chapter.
 
 ## Dealing with updates
 
@@ -723,7 +1018,7 @@ setCount(prevCount => prevCount + 1);
 
 <!-- expect(count).toBe(1) -->
 
-Here, we have a simple counter function that returns the next counter value. The `prev` prefix makes it clear that this value is out of date.
+Here, we have a basic counter function that returns the next counter value. The `prev` prefix makes it clear that this value is out of date.
 
 Similarly, when the value is not yet applied and the function either lets us modify it or prevent the update:
 
@@ -760,7 +1055,7 @@ Both of these conventions are widely used by React developers.
 
 ## Beware of incorrect names
 
-_Incorrect_ names are worse than magic numbers (read about them in the Constants chapter). With magic numbers, we can make a correct guess but with incorrect names, we have no chance to understand the code.
+_Incorrect_ names are worse than magic numbers. With magic numbers, we can make a correct guess but with incorrect names, we have no chance to understand the code.
 
 Consider this example:
 
@@ -856,13 +1151,16 @@ const currencyReducer = (state = new Currency(), action) => {
         return state;
       }
 
-      const iso = get(action, 'res.data.query.userInfo.userCurrency');
-      const obj = get(action, `res.data.currencies[${iso}]`);
+      const iso = _.get(
+        action,
+        'res.data.query.userInfo.userCurrency'
+      );
+      const obj = _.get(action, `res.data.currencies[${iso}]`);
 
       return state
         .set('iso', iso)
-        .set('name', get(obj, 'name'))
-        .set('symbol', get(obj, 'symbol'));
+        .set('name', _.get(obj, 'name'))
+        .set('symbol', _.get(obj, 'symbol'));
     default:
       return state;
   }
@@ -1091,9 +1389,11 @@ It’s a good idea to use well-known and widely adopted terms for programming an
 
 ## Use a single term for each concept
 
-Using different words for the same concept is confusing: a person reading the code may think since the words are different then these things aren’t the same and will try to understand the difference between the two. It will also make the code less _greppable_ (meaning it would be harder to find all usages of the same thing, see Make the code greppable chapter for more).
+Using different words for the same concept is confusing: a person reading the code may think since the words are different then these things aren’t the same and will try to understand the difference between the two. It will also make the code less _greppable_, meaning it would be harder to find all usages of the same thing
 
-**Idea:** Having a project dictionary, or even a linter, might be a good idea to avoid using different words for the same things. I use a similar approach for writing this book: I use [Textlint terminology plugin](https://github.com/sapegin/textlint-rule-terminology) to make sure I use the terms consistently and spell them correctly.
+**Info:** We talk more about greppability in the Make the code greppable section of the _Other techniques_ chapter.
+
+**Tip:** Having a project dictionary, or even a linter, might be a good idea to avoid using different words for the same things. I use a similar approach for writing this book: I use [Textlint terminology plugin](https://github.com/sapegin/textlint-rule-terminology) to make sure I use the terms consistently and spell them correctly in my writing.
 
 ## Use common opposite pairs
 
@@ -1123,15 +1423,9 @@ Some of these common pairs are:
 
 ## Check the spelling of your names
 
-Typos in names and comments are very common. They don’t cause bugs _most of the time_ but could still reduce readability a bit, and code with many typoses look sloppy.
+Typos in names and comments are very common. They don’t cause bugs _most of the time_ but could still reduce readability a bit, and code with many typoses look sloppy. So having a spell checker in the code editor is a good idea.
 
-Recently, I found this name in our codebase: `depratureDateTime`, and I immediately noticed it because I have a spellchecker enabled in my WebStorm editor:
-
-![Spellchecker in WebStorm](/images/spellchecker.png)
-
-Spellchecker helps me immensely, as I’m not a native English speaker. It also helps to make the code more greppable: when we search for a certain term, we likely won’t find misspelled occurrences of it.
-
-
+**Info:** We talk more about spell checking in the Spell checking section of the _Learn your code editor_ chapter.
 
 ## Use destructuring
 
@@ -1163,6 +1457,7 @@ Now we could access `minutes` and `seconds` directly.
 Functions with optional parameters grouped in an object are another common example:
 
 <!--
+let document = window.document;
 const hiddenInput = (name, value) => {
   const input = document.createElement('input');
   input.type = 'hidden';
@@ -1170,21 +1465,9 @@ const hiddenInput = (name, value) => {
   input.value = value;
   return input;
 };
-let document = {
-  createElement() {
-    return {
-      appendChild() {},
-      submit() {}
-    }
-  },
-  body: {
-    appendChild() {},
-    removeChild() {}
-  }
-};
 -->
 
-```ts
+```tsx
 function submitFormData(
   action: string,
   options: {
@@ -1221,24 +1504,13 @@ expect(submitFormData('/foo', { method: 'post', target: '_top' }))
 Here, `options` object is never used as a whole (for example, to pass it to another function), only to access separate properties in it. We could use destructuring to simplify the code:
 
 <!--
+let document = window.document;
 const hiddenInput = (name, value) => {
   const input = document.createElement('input');
   input.type = 'hidden';
   input.name = name;
   input.value = value;
   return input;
-};
-let document = {
-  createElement() {
-    return {
-      appendChild() {},
-      submit() {}
-    }
-  },
-  body: {
-    appendChild() {},
-    removeChild() {}
-  }
 };
 -->
 
@@ -1366,7 +1638,7 @@ class X {
   props = {x: 42, y: 24};
 -->
 
-```js
+```jsx
 render() {
   let p = this.props;
   return <BaseComponent {...p} />;
@@ -1388,7 +1660,7 @@ class X {
   props = {x: 42, y: 24};
 -->
 
-```js
+```jsx
 render() {
   return <BaseComponent {...this.props} />;
 }
@@ -1401,7 +1673,7 @@ const {container: c1} = RTL.render(instance.render());
 expect(c1.textContent).toEqual('42')
 -->
 
-Destructuring could be another solution here, see the Use destructuring section above.
+Destructuring could be another solution here — we’ve covered it already.
 
 Sometimes, intermediate variables can serve as comments, explaining the data they hold, that otherwise might not be clear:
 
@@ -1458,18 +1730,23 @@ const crocodiles = getCrocodiles({ color: 'darkolivegreen' });
 
 Here, it’s clear which one is the function, and which one is the array with the returned from the function value. Now consider this:
 
-<!-- test-skip -->
+<!--
+let crocodiles = [{type: 'raccoon'}]
+let isCrocodile = x => x.type === 'croc'
+-->
 
 ```js
-const isCrocodile = isCrocodile(crocodiles[0]);
+const _o_0_ = isCrocodile(crocodiles[0]);
 ```
+
+<!-- expect(_o_0_).toBe(false) -->
 
 Here, our naming choices are limited:
 
 - `isCrocodile` is a natural choice but clashes with the function name;
 - `crocodile` would mean that this variable holds one item of the `crocodiles` array.
 
-So, what can we do about it? A few things:
+So, what can we do about it? Not a lot:
 
 - choose a domain-specific name (example: `shouldShowGreeting`);
 - inline the function call, and avoid a local variable at all;
@@ -1595,6 +1872,8 @@ Start thinking about:
 - Reducing the scope or the lifespan of variables.
 - Choosing more specific names for symbols with larger scope or longer lifespan.
 - Choosing shorter names for symbols with small scope and short lifespan.
+- Replacing magic numbers with meaningfully-named constants.
+- Merging several constants representing a range or a scale into an object or enum.
 - Using destructuring to think less about inventing new names.
 - Choosing domain-specific names for local variables instead of more literal names.
 

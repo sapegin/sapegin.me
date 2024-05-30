@@ -2,11 +2,13 @@
 title: 'Washing your code: avoid conditions'
 description: Conditions make code harder to read and test. They add nesting and make lines of code longer. Each condition increases the minimum number of test cases you need to write.
 date: 2019-06-26
-source: washing-code/Avoid_conditions
+source: washing-code/030_Avoid_conditions
 tags:
   - javascript
   - washingcode
 ---
+
+<!-- description: Writing good conditions and simplifying the code by avoiding them -->
 
 Conditions make code harder to read and test. They add nesting and make lines of code longer, so we have to split them into several lines. Each condition increases the minimum number of test cases we need to write for a certain module or function.
 
@@ -326,7 +328,7 @@ Here we’re wrapping a single item in an array, so we can use the same code to 
 
 ## Deduplicating an algorithm
 
-Examples in the previous section are introducing an important technique: algorithm deduplication. Instead of having several branches of the main logic depending on the nature of the input, we have just one. But we’re normalizing the input before running the algorithm. This technique can be used in other places.
+Examples in the previous section are introducing an important technique: _algorithm deduplication_. Instead of having several branches of the main logic depending on the nature of the input, we have just one. But we’re normalizing the input before running the algorithm. This technique can be used in other places.
 
 Imagine an article vote counter, similar to Medium, where we can vote multiple times:
 
@@ -357,7 +359,6 @@ articles.upvote('/cats-better-than-dogs');
 articles.upvote('/dogs-better-than-cats', 5);
 articles.downvote('/cats-better-than-dogs');
 articles.get('/dogs-better-than-cats');
-// => 5
 ```
 
 <!--
@@ -425,7 +426,7 @@ Now we don’t have any logic duplication. We’re normalizing the data structur
 
 I often see a similar issue when someone calls a function with different parameters:
 
-<!-- const log = jest.fn(), errorMessage = 'nope', LOG_LEVEL = {ERROR: 'error'}, DEFAULT_ERROR_MESSAGE = 'nooooope'  -->
+<!-- const log = vi.fn(), errorMessage = 'nope', LOG_LEVEL = {ERROR: 'error'}, DEFAULT_ERROR_MESSAGE = 'nooooope'  -->
 
 ```js
 if (errorMessage) {
@@ -439,7 +440,7 @@ if (errorMessage) {
 
 Let’s move a condition inside the function call:
 
-<!-- const log = jest.fn(), errorMessage = 'nope', LOG_LEVEL = {ERROR: 'error'}, DEFAULT_ERROR_MESSAGE = 'nooooope'  -->
+<!-- const log = vi.fn(), errorMessage = 'nope', LOG_LEVEL = {ERROR: 'error'}, DEFAULT_ERROR_MESSAGE = 'nooooope'  -->
 
 ```js
 log(LOG_LEVEL.ERROR, errorMessage || DEFAULT_ERROR_MESSAGE);
@@ -472,7 +473,7 @@ function getRandomJoke(onDone, onError) {
 ```
 
 <!--
-const onDone = jest.fn(), onError = jest.fn()
+const onDone = vi.fn(), onError = vi.fn()
 getRandomJoke(onDone, onError)
 expect(onDone).toBeCalledWith('pizza')
 expect(onError).toBeCalledWith('nope')
@@ -500,7 +501,7 @@ function getRandomJoke(onDone, onError) {
 ```
 
 <!--
-const onDone = jest.fn(), onError = jest.fn()
+const onDone = vi.fn(), onError = vi.fn()
 getRandomJoke(onDone, onError)
 expect(onDone).toBeCalledWith('pizza')
 expect(onError).toBeCalledWith('nope')
@@ -530,7 +531,7 @@ function getRandomJoke(onDone, onError = () => {}) {
 ```
 
 <!--
-const onDone = jest.fn(), onError = jest.fn()
+const onDone = vi.fn(), onError = vi.fn()
 getRandomJoke(onDone, onError)
 expect(onDone).toBeCalledWith('pizza')
 expect(onError).toBeCalledWith('nope')
@@ -541,7 +542,7 @@ Now we could call the `onError` function whenever we need, and it won’t fail. 
 
 ## Early return
 
-Applying _guard clauses_, or _early returns_, is a great way to avoid nested conditions. A series of nested conditions, also known as the [arrow antipattern](http://wiki.c2.com/?ArrowAntiPattern) or _dangerously deep nesting_, is often used for error handling:
+Applying _guard clauses_, or _early returns_, is a great way to avoid nested conditions. A series of nested conditions is often used for error handling:
 
 <!-- const getOrderIds = () => ([]), sendOrderStatus = () => {} -->
 
@@ -573,6 +574,8 @@ function postOrderStatus(orderId) {
 <!-- expect(() => postOrderStatus(0)).not.toThrowError() -->
 
 There are 120 lines between the first condition and its `else` block. And the main return value is somewhere inside three levels of conditions.
+
+**Info:** Deeply nested conditions are also known as the [arrow antipattern](http://wiki.c2.com/?ArrowAntiPattern) or _dangerously deep nesting_.
 
 Let’s untangle this spaghetti monster:
 
@@ -607,11 +610,15 @@ This function is still long but it’s much easier to follow because of a more s
 
 Now we have at most one level of nesting inside the function and the main return value is at the very end without nesting. We’ve added two guard clauses to exit the function early when there’s no data to process.
 
+**Info:** One of the [Zen of Python’s](https://peps.python.org/pep-0020/) principles is _flat is better than nested_, which is exactly what we did with this refactoring.
+
 I’m not so sure what the code inside the second condition does, but it looks like it’s wrapping a single item in an array as we did in the previous section.
 
-_And no, I have no idea what `tmpBottle` means, nor why it was needed._
+_And no, I have no idea what `tmpBottle` means, or why it was needed._
 
-The next step here could be improving the `getOrderIds()` function’s API. It can return three different things: `undefined`, a single item, or an array. We have to deal with each separately, so we have two conditions at the very beginning of the function, and we’re reassigning the `idsArrayObj` variable (see [Avoid reassigning variables](/blog/avoid-reassigning-variables/) below).
+The next step here could be improving the `getOrderIds()` function’s API. It can return three different things: `undefined`, a single item, or an array. We have to deal with each separately, so we have two conditions at the very beginning of the function, and we’re reassigning the `idsArrayObj` variable.
+
+**Info:** We talk about reassignments in the next chapter, [Avoid reassigning variables](no-reassigning).
 
 By making the `getOrderIds()` function always return an array, and making sure that the code inside `// 70 lines of code` works with an empty array, we could remove both conditions:
 
@@ -637,13 +644,127 @@ function postOrderStatus(orderId) {
 
 Now that’s a big improvement over the initial version. I’ve also renamed the `idsArrayObj` variable, because “array object” doesn’t make any sense to me.
 
-The next step would be out of the scope of this chapter: the code inside `// 70 lines of code` mutates the `fullRecordsArray`, see the [Avoid mutation](/blog/avoid-mutation/) chapter below to learn why mutations aren’t good and how to avoid them.
+The next step would be out of the scope of this chapter: the code inside the `// 70 lines of code` mutates the `fullRecordsArray`. I usually try to avoid mutation, especially for variables with such a long lifespan.
+
+**Info:** We talk about mutations in the [Avoid mutation](/blog/avoid-mutation/) chapter.
+
+Here’s another example:
+
+<!--
+let Inner = ({data}) => <p>{data.join('|')}</p>
+let ErrorMessage = () => <p>Error</p>
+let EmptyMessage = () => <p>No data</p>
+let LoadingSpinner = () => <p>Loading…</p>
+-->
+
+```jsx
+function Container({
+  component: Component,
+  isError,
+  isLoading,
+  data
+}) {
+  return isError ? (
+    <ErrorMessage />
+  ) : isLoading ? (
+    <LoadingSpinner />
+  ) : data.length > 0 ? (
+    <Component data={data} />
+  ) : (
+    <EmptyMessage />
+  );
+}
+```
+
+<!--
+const {container: c1} = RTL.render(<Container component={Inner} isError={true} />);
+expect(c1.textContent).toEqual('Error')
+const {container: c2} = RTL.render(<Container component={Inner} isLoading={true} />);
+expect(c2.textContent).toEqual('Loading…')
+const {container: c3} = RTL.render(<Container component={Inner} data={[]} />);
+expect(c3.textContent).toEqual('No data')
+const {container: c4} = RTL.render(<Container component={Inner} data={[2, 4]} />);
+expect(c4.textContent).toEqual('2|4')
+-->
+
+I have trouble reading nested ternaries in general, and prefer not to nest them. Here’s an extreme example of nesting: the good path code, rendering the `Component` is quite hidden. It’s and a perfect use case for guard clauses.
+
+Let’s refactor it:
+
+<!--
+let Inner = ({data}) => <p>{data.join('|')}</p>
+let ErrorMessage = () => <p>Error</p>
+let EmptyMessage = () => <p>No data</p>
+let LoadingSpinner = () => <p>Loading…</p>
+-->
+
+```jsx
+function Container({
+  component: Component,
+  isError,
+  isLoading,
+  data
+}) {
+  if (isError) {
+    return <ErrorMessage />;
+  }
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  if (data.length === 0) {
+    return <EmptyMessage />;
+  }
+
+  return <Component data={data} />;
+}
+```
+
+<!--
+const {container: c1} = RTL.render(<Container component={Inner} isError={true} />);
+expect(c1.textContent).toEqual('Error')
+const {container: c2} = RTL.render(<Container component={Inner} isLoading={true} />);
+expect(c2.textContent).toEqual('Loading…')
+const {container: c3} = RTL.render(<Container component={Inner} data={[]} />);
+expect(c3.textContent).toEqual('No data')
+const {container: c4} = RTL.render(<Container component={Inner} data={[2, 4]} />);
+expect(c4.textContent).toEqual('2|4')
+-->
+
+Here, the default, happy path isn’t intertwined with the exception cases. The default case is at the very bottom of the component, and all exception cases are in front, as guard clauses.
+
+**Tip:** We discuss a better way of managing loading and error states in the Make impossible states impossible section.
 
 ## Repeated conditions
 
-Repeated conditions can make code barely readable. Let’s have a look at this function that returns special offers for a product in our pet shops. We have two brands, Horns & Hooves and Paws & Tails, and they have unique special offers. For historical reasons, we store them in the cache differently:
+One way to simplify conditions is to replace multiple conditions for the same variable with an array. Consider this example:
 
-<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: jest.fn(), get: jest.fn() }  -->
+```js
+const isSmall = size => size == '1' || size == '2' || size == '3';
+```
+
+<!--
+expect(isSmall('2')).toBe(true)
+expect(isSmall('5')).toBe(false)
+-->
+
+Here, we have three conditions that compare the `size` variable to three different values, and this makes the values we compare it to far apart. We could use an array instead:
+
+```js
+const isSmall = size => ['1', '2', '3'].includes(size);
+```
+
+<!--
+expect(isSmall('2')).toBe(true)
+expect(isSmall('5')).toBe(false)
+-->
+
+Now, all the value are grouped together which makes it more readable and maintainable — now it’s easy to add and remove items.
+
+Repeated conditions can make code barely readable. Let’s have a look at this function that returns special offers for a product in our pet shop. We have two brands, Horns & Hooves and Paws & Tails, and they have unique special offers. For historical reasons, we store them in the cache differently:
+
+<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: vi.fn(), get: vi.fn() }  -->
 
 ```js
 function getSpecialOffersArray(sku, isHornsAndHooves) {
@@ -676,7 +797,7 @@ The `isHornsAndHooves` condition is repeated three times. Two of them create th
 
 Let’s try to make it simpler:
 
-<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: jest.fn(), get: jest.fn() }  -->
+<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: vi.fn(), get: vi.fn() }  -->
 
 ```js
 function getSpecialOffersArray(sku, isHornsAndHooves) {
@@ -706,7 +827,7 @@ expect(getSpecialOffersArray('tacos', true)).toEqual(['horns'])
 
 This is already more readable and it could be a good idea to stop here. But if I had some time I’d go further and extract cache management. Not because this function is too long or that it’s potentially reusable, but because cache management distracts me from the main purpose of the function and it’s too low level.
 
-<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: jest.fn(), get: jest.fn() }  -->
+<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: vi.fn(), get: vi.fn() }  -->
 
 ```js
 const getSessionKey = (key, isHornsAndHooves, sku) =>
@@ -745,7 +866,7 @@ expect(getSpecialOffersArray('tacos', true)).toEqual(['horns'])
 
 It may not look much better but I think it’s a bit easier to understand what’s happening in the main function. What annoys me here is `isHornsAndHooves`. I’d rather pass a brand name and keep all brand-specific information in tables:
 
-<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: jest.fn(), get: jest.fn() }  -->
+<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: vi.fn(), get: vi.fn() }  -->
 
 ```js
 const BRANDS = {
@@ -794,7 +915,7 @@ expect(getSpecialOffersArray('tacos', BRANDS.HORNS_AND_HOOVES)).toEqual(['horns'
 
 Now it’s clear that the only piece of business logic here is `getSpecialOffersForBrand`, and the rest is caching. If we’re using this pattern more than once I’d extract it into its own module, similar to the [memoize function](https://lodash.com/docs#memoize) from Lodash:
 
-<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: jest.fn(), get: jest.fn() }  -->
+<!-- const SPECIAL_OFFERS_CACHE_KEY = 'offers', getHornsAndHoovesSpecialOffers = () => ['horns'], getPawsAndTailsSpecialOffers = () => ['paws'], Session = { set: vi.fn(), get: vi.fn() }  -->
 
 ```js
 const BRANDS = {
@@ -846,13 +967,15 @@ expect(getSpecialOffersArray('tacos', BRANDS.HORNS_AND_HOOVES)).toEqual(['horns'
 
 We were able to separate all low-level code and hide it in another module.
 
-It may seem like I prefer small functions or even very small functions, but that’s not the case. The main reason to extract code into separate functions here is a violation of the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle). The original function had too many responsibilities: getting special offers, generating cache keys, reading data from the cache, and storing data in the cache. Each with two branches for our two brands.
+It may seem like I prefer small functions or even very small functions, but that’s not the case. The main reason to extract code into separate functions here is a violation of the _single responsibility principle_. The original function had too many responsibilities: getting special offers, generating cache keys, reading data from the cache, and storing data in the cache. Each with two branches for our two brands.
+
+**Info:** The single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) states that any module, class, or method should have only one reason to change, or in other words we should keep code that changes for the same reason. We talk more about this topic in the [Divide and conquer, or merge and relax chapter.
 
 ## Tables or maps
 
 One of my favorite techniques for improving _(read: avoiding)_ conditions is replacing them with tables or maps. With JavaScript, we can create a table or a map using a plain object.
 
-We’ve just done this as a part of our "special offers" refactoring example above. Let’s have a look at a simpler example now. This example may be a bit extreme, but I actually wrote this code 19 years ago:
+We’ve just done this as a part of our “special offers” refactoring example above. Let’s have a look at a simpler example now. This example may be a bit extreme, but I actually wrote this code 19 years ago:
 
 <!-- let month = 'may' -->
 
@@ -1097,11 +1220,11 @@ But if we look closer, there are just three unique validations:
 First, let’s extract all validations into their own functions so we can reuse them later:
 
 ```js
-const hasStringValue = value => value && value.trim() !== '';
+const hasStringValue = value => value?.trim() !== '';
 const hasLengthLessThanOrEqual = max => value =>
-  !hasStringValue(value) || (value && value.length <= max);
+  hasStringValue(value) === false || value.length <= max;
 const hasNoSpaces = value =>
-  !hasStringValue(value) || (value && !value.includes(' '));
+  hasStringValue(value) === false || value?.includes(' ') === false;
 ```
 
 <!--
@@ -1120,15 +1243,15 @@ Note that `hasLengthLessThanOrEqual` and `hasNoSpaces` only check the conditio
 
 Now we can define our validations table. There are two ways of doing this:
 
-- using an object where keys represent form fields
-- using an array
+- using an object where keys represent form fields;
+- using an array.
 
 We’re going to use the second option because we want to have several validations with different error messages for some fields, for example, a field can be required _and_ have a maximum length:
 
 <!--
-const hasStringValue = value => value && value.trim() !== ''
+const hasStringValue = value => value?.trim() !== ''
 const hasLengthLessThanOrEqual = max => value =>
-  !hasStringValue(value) || (value && value.length <= max)
+  !hasStringValue(value) || (value?.length <= max)
 -->
 
 ```js
@@ -1146,6 +1269,13 @@ const validations = [
   // All other fields
 ];
 ```
+
+<!--
+expect(validations[0].validation('tacocat')).toBe(true)
+expect(validations[0].validation('')).toBe(false)
+expect(validations[1].validation('tacocat')).toBe(true)
+expect(validations[1].validation('x'.repeat(81))).toBe(false)
+-->
 
 Now we need to iterate over this array and run validations for all fields:
 
@@ -1182,9 +1312,11 @@ expect(validate({name: 'Chuck Norris'}, validations)).toEqual({})
 
 One more time we’ve separated the “what” from the “how”: we have a readable and maintainable list of validations (“what”), a collection of reusable validation functions, and a `validate` function to validate form values (“how”) that also can be reused.
 
-_Tip: Using a third-party library, like [Zod](https://zod.dev/), [Yup](https://github.com/jquense/yup), or [Joi](https://github.com/hapijs/joi) will make code even shorter and save us from needing to write validation functions ourselves._
+**Info:** We talk about separation of “what” and “how” in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
 
-You may feel that I have too many similar examples in this book, and you’re right. But I think such code is so common, and the readability and maintainability benefits of replacing conditions with tables are so huge, so it’s worth repeating. So here is one more example (the last one, I promise!):
+**Tip:** Using a third-party library, like [Zod](https://zod.dev/), [Yup](https://github.com/jquense/yup), or [Joi](https://github.com/hapijs/joi) will make code even shorter and save us from needing to write validation functions ourselves.
+
+You may feel that I have too many similar examples in this book, and you’re right. But I think such code is so common, and the readability and maintainability benefits of replacing conditions with tables are so huge that it’s worth repeating. So here is one more example (the last one, I promise!):
 
 <!-- const DATE_FORMAT_ISO = 'iso', DATE_FORMAT_DE = 'de', DATE_FORMAT_UK = 'uk', DATE_FORMAT_US = 'us' -->
 
@@ -1241,6 +1373,84 @@ expect(getDateFormat()).toBe('M/D')
 -->
 
 The improved version isn’t much shorter, but now it’s easy to see all date formats. We’ve extracted the data to a short and readable object and separated it from the code that accesses the right piece of this data.
+
+Here’s one more example:
+
+```js
+function getDiscountAmount(discountOptions) {
+  if (
+    discountOptions?.userDiscount?.discountAmount?.displayCurrency
+  ) {
+    if (
+      discountOptions?.promoDiscount?.discountAmount?.displayCurrency
+    ) {
+      if (
+        discountOptions.userDiscount.discountAmount.displayCurrency
+          .valueInCents >
+        discountOptions?.promoDiscount?.discountAmount
+          ?.displayCurrency.valueInCents
+      ) {
+        return discountOptions?.userDiscount?.discountAmount
+          ?.displayCurrency;
+      } else {
+        return discountOptions?.promoDiscount?.discountAmount
+          ?.displayCurrency;
+      }
+    } else {
+      return discountOptions?.userDiscount?.discountAmount
+        ?.displayCurrency;
+    }
+  } else if (
+    discountOptions?.promoDiscount?.discountAmount?.displayCurrency
+  ) {
+    return discountOptions?.promoDiscount?.discountAmount
+      ?.displayCurrency;
+  }
+
+  return { currency: 'EUR', valueInCents: 0 };
+}
+```
+
+<!--
+let v0 = { currency: 'EUR', valueInCents: 0};
+let v25 = { currency: 'EUR', valueInCents: 25};
+let v10 = { currency: 'EUR', valueInCents: 10};
+expect(getDiscountAmount({userDiscount: {discountAmount: {displayCurrency: v25}}})).toEqual(v25)
+expect(getDiscountAmount({promoDiscount: {discountAmount: {displayCurrency: v25}}})).toEqual(v25)
+expect(getDiscountAmount({promoDiscount: {discountAmount: {displayCurrency: v10}}, userDiscount: {discountAmount: {displayCurrency: v25}}})).toEqual(v25)
+expect(getDiscountAmount({promoDiscount: {discountAmount: {displayCurrency: v25}}, userDiscount: {discountAmount: {displayCurrency: v10}}})).toEqual(v25)
+expect(getDiscountAmount({})).toEqual(v0)
+-->
+
+Here, we calculate a discount — maximum of either user’s personal discount or current site-wide promotion. If the user has no discount and there’s no promotion now, the discount is 0.
+
+My brain is refusing to even try to understand what’s going on here. Let’s try to simplify it a bit:
+
+```js
+function getDiscountAmount(discountOptions) {
+  const amounts = [
+    discountOptions?.userDiscount?.discountAmount?.displayCurrency,
+    discountOptions?.promoDiscount?.discountAmount?.displayCurrency
+  ];
+  const maxAmount = _.maxBy(amounts, amount => amount?.valueInCents);
+  return maxAmount ?? { currency: 'EUR', valueInCents: 0 };
+}
+```
+
+<!--
+let v0 = { currency: 'EUR', valueInCents: 0};
+let v25 = { currency: 'EUR', valueInCents: 25};
+let v10 = { currency: 'EUR', valueInCents: 10};
+expect(getDiscountAmount({userDiscount: {discountAmount: {displayCurrency: v25}}})).toEqual(v25)
+expect(getDiscountAmount({promoDiscount: {discountAmount: {displayCurrency: v25}}})).toEqual(v25)
+expect(getDiscountAmount({promoDiscount: {discountAmount: {displayCurrency: v10}}, userDiscount: {discountAmount: {displayCurrency: v25}}})).toEqual(v25)
+expect(getDiscountAmount({promoDiscount: {discountAmount: {displayCurrency: v25}}, userDiscount: {discountAmount: {displayCurrency: v10}}})).toEqual(v25)
+expect(getDiscountAmount({})).toEqual(v0)
+-->
+
+Here, we create an array with all possible discounts, then we use Lodash’s [maxBy()](https://lodash.com/docs#maxBy) method to find the maximum value, and we use nullish coalescing operator to either return the maximum or 0.
+
+Now it’s clear that we want to find the maximum of two types of discounts, otherwise return 0.
 
 ## Formulas
 
@@ -1445,7 +1655,7 @@ expect(c4.textContent).toEqual('Error loading products')
 
 I think it’s much easier to follow now: all special cases are at the top of the function, and the happy path is at the end.
 
-_We’ll come back to this example later in the Make impossible states impossible chapter._
+**Info:** We’ll come back to this example later in the Make impossible states impossible section of the _Other techniques_ chapter.
 
 ---
 

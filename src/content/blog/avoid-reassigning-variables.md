@@ -2,17 +2,21 @@
 title: 'Washing your code: avoid reassigning variables'
 description: Reassigning variables is like changing the past. You can never be sure what’s the current value of a variable and it forces you to read lots of code to understand how things work.
 date: 2019-12-18
-source: washing-code/Avoid_reassigning_variables
+source: washing-code/040_Avoid_reassigning_variables
 tags:
   - javascript
   - washingcode
 ---
+
+<!-- description: Improving code readability by making it easier to understand what variables are doing and how they are used in the code -->
 
 Reassigning variables is like changing the past. When we see:
 
 ```js
 let pizza = { toppings: ['salami', 'jalapeños'] };
 ```
+
+<!-- expect(pizza.toppings).toHaveLength(2) -->
 
 We can’t be sure that our pizza will always have salami and jalapeños on it, because:
 
@@ -43,6 +47,8 @@ Here the `category` variable is used to store a category ID, a list of products
 
 Also, a new value is reassigned to a function parameter, known as _function parameter shadowing_. I think it’s no different from regular reassignment, so I’ll treat it the same way.
 
+**Info:** [Variable shadowing](https://en.wikipedia.org/wiki/Variable_shadowing) happens when we define a variable with the same name that already exists in an outer scope. For example, we define a `text` variable inside a function but there’s already a module-level `text` variable. Shadowing makes it hard to know which variable we’re looking at any moment.
+
 This case is the easiest to fix: we need to use separate variables for each value:
 
 <!-- const loadCategory = (id) => [{name: `${id}1`, onSale: false}, {name: `${id}2`, onSale: true}] -->
@@ -57,6 +63,8 @@ function getProductsOnSale(categoryId) {
 <!-- expect(getProductsOnSale('pizzas')).toEqual([{name: 'pizzas2', onSale: true}]) -->
 
 By doing this we’re making the lifespan of each variable shorter and choosing clearer names, so the code is easier to understand and we’ll need to read less code to find out the current (and now the only) value of each variable.
+
+**Info:** _Variable lifespan_ is the number of lines of code between the variable declaration and the last line where this variable is accessed. The longer the lifespan, the harder it is to follow a variable and know which value it has at any moment.
 
 ## Incremental computations
 
@@ -96,12 +104,14 @@ expect(validateVideo({videoFiles: [], title: 'Cat on Roomba', id: 'X-13'})).toBe
 
 I’ve shortened the comments a bit, the original code had lines longer than 200 characters. If we have a very big screen, it looks like a pretty table, otherwise like an unreadable mess. Any autoformatting tool, like Prettier, will make an unreadable mess out of it too, so we shouldn’t rely on manual code formatting. It’s also really hard to maintain: if any “column” becomes longer than all existing “columns” after our changes, we have to adjust whitespace for all other “columns”.
 
+**Info:** We talk about code formatting and Prettier in the Autoformat your code chapter.
+
 Anyway, this code appends an error message to the `errors` string variable for every failed validation. But now it’s hard to see because the message formatting code is mangled with the validation code. This makes it hard to read and modify. To add another validation, we have to understand and copy the formatting code. Or to print errors as an HTML list, we have to change each line of this function.
 
 Let’s separate validation and formatting:
 
 <!--
-const console = { log: jest.fn() }
+const console = { log: vi.fn() }
 const ERROR_MESSAGES = {
   InconsistentWidthHeight: 'Inconsistent width and height',
   InvalidVideoFiles: 'Invalid video files',
@@ -172,7 +182,7 @@ Also now we can swap the formatting function and render errors as an HTML list, 
 
 ```jsx
 function VideoUploader() {
-  const [video, setVideo] = React.useState();
+  const [video, setVideo] = useState();
   const errors = validateVideo(video);
   return (
     <>
@@ -291,6 +301,8 @@ const queryValues = {
 
 Now, the query object always has the same shape, but some properties can be `undefined`. The code feels more declarative and it’s easier to understand what it’s doing – building an object – and see the final shape of this object.
 
+
+
 ## Avoid Pascal style variables
 
 Some people like to define all variables at the beginning of a function. I call this _Pascal style_, because in Pascal we have to declare all variables at the beginning of a program or a function:
@@ -313,7 +325,7 @@ end;
 Some people use this style in languages where they don’t have to do it:
 
 <!--
-const submitOrder = jest.fn()
+const submitOrder = vi.fn()
 const DELIVERY_METHODS = {PIGEON: 'PIGEON', TRAIN_CONDUCTOR: 'TRAIN_CONDUCTOR'}
 const deliveryMethod = DELIVERY_METHODS.PIGEON, products = [], address = '', firstName = '', lastName = ''
 -->
@@ -360,7 +372,7 @@ Long variable lifespan makes us scroll a lot to understand the current value of 
 We can make code more readable by moving variable declarations as close to their usage as possible and by avoiding reassignments:
 
 <!--
-const submitOrder = jest.fn()
+const submitOrder = vi.fn()
 const DELIVERY_METHODS = {PIGEON: 'PIGEON', TRAIN_CONDUCTOR: 'TRAIN_CONDUCTOR'}
 const deliveryMethod = DELIVERY_METHODS.PIGEON, products = [], address = '', firstName = '', lastName = ''
 -->
@@ -391,7 +403,7 @@ submitOrder({
 
 We’ve shortened `isFreeDelivery` variable lifespan from 100 lines to just 10. Now it’s also clear that its value is the one we assign at the first line.
 
-Don’t mix it with `PascalCase` though, this naming convention is still in use.
+Don’t mix it with PascalCase though, this naming convention is still in use.
 
 ## Avoid temporary variables for function return values
 
@@ -537,13 +549,15 @@ Reassignments aren’t pure evil and exterminating them all won’t make our cod
 
 In all examples above I’m replacing `let` with `const` in variable declarations. This immediately tells the reader that the variable won’t be reassigned. And we can be sure, it won’t: the compiler will yell at us if we try. Every time we see `let` in the code, we know that this code is likely more complex and needs more brain power to understand.
 
-Another useful convention is using `UPPER_CASE` names for constants. This tells the reader that this is more of a configuration value, than a result of some computation. The lifespan of such constants is usually large: often the whole module or even the whole codebase, so when we read the code we usually don’t see the constant definition, but we still can be sure that the value never changes. And using such a constant in a function doesn’t make the function not pure.
+Another useful convention is using SCREAMING_SNAKE_CASE names for constants. This tells the reader that this is more of a configuration value, than a result of some computation. The lifespan of such constants is usually large: often the whole module or even the whole codebase, so when we read the code we usually don’t see the constant definition, but we still can be sure that the value never changes. And using such a constant in a function doesn’t make the function not pure.
 
 There’s an important difference between a variable defined with the `const` keyword and a true constant in JavaScript. The first only tells the compiler and the reader that the variable won’t be _reassigned_. The second describes the nature of the value as something global and static that never changes at runtime.
 
 Both conventions reduce the cognitive load a little bit and make the code easier to understand.
 
-Unfortunately, JavaScript has no true constants, and _mutation_ is still possible even when we define a variable with the `const` keyword. We’ll talk about mutations in [the next chapter](/blog/avoid-mutation/).
+Unfortunately, JavaScript has no true constants, and _mutation_ is still possible even when we define a variable with the `const` keyword.
+
+**Info:** We talk about mutations in [the next chapter](/blog/avoid-mutation/).
 
 ---
 
