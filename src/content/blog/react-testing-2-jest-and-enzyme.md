@@ -357,7 +357,7 @@ test('submits username and password', () => {
 
 Here we’re using `jest.fn()` to define a spy for `onSubmit` prop of our `Login` component, then we’re filling the form using a technique, described in the previous section, then we’re calling the `onSubmit` prop on a `<form>` element and check that the `onSubmit` function was called only once and it has received login and password.
 
-Firing a form submit handler directly is not ideal, because it may lead to false positives in our test, but that’s the only way we can submit a form with Enzyme. For example, we can’t test that a submit button actually submits the form. Some people think such tests are testing the browser, not our code, and should be avoided. But they are not: there are many ways you can mess up a submit button, like placing it outside of the form or with `type="button"`.
+Firing a form submit handler directly is not ideal, because it may lead to false positives in our test, but that’s the only way we can submit a form with Enzyme. For example, we can’t test that a submit button actually submits the form. Some people think such tests are testing the browser, not our code, and should be avoided. But they are not: there are many ways you can mess up a submit button, like placing it outside the form or with `type="button"`.
 
 ### Async tests
 

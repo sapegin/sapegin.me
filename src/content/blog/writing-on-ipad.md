@@ -25,7 +25,7 @@ The first keyboard I tried with an iPad was the [Apple Magic Keyboard](https://w
 
 ![Apple Magic Keyboard on iPad](/images/ipad-apple-magic-keyboard.jpg)
 
-Moreover, since I started using a mechanical keyboard on my desk, I wanted a similar experience on iPad too.
+In addition, since I started using a mechanical keyboard on my desk, I wanted a similar experience on iPad too.
 
 The overall experience of working on an iPad with a hardware keyboard is nice though. Many shortcuts work the same way as on the desktop (like Cmd+Tab to switch between apps, Caps lock to switch input language, and so on).
 

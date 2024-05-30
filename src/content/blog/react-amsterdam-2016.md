@@ -139,7 +139,7 @@ Two lightning talks.
 
 A good introduction to testing in React.
 
-- Most of your logic should exist outside of your components.
+- Most of your logic should exist outside your components.
 - Plain old JavaScript functions are easy to test.
 - Never reach into a component to get or set state.
 - Use [Enzyme](https://github.com/airbnb/enzyme) instead of React TestUtils.

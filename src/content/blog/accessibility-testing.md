@@ -110,9 +110,11 @@ For all other cases, use [Contrast app](https://usecontrast.com/), and pick any 
 
 ## Spectrum Chrome extension
 
-[Spectrum browser extension](https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb/related) allows us to check how folks with different types of color vision deficiency (color blindness) see our site or app, and make sure there’s enough contrast between different elements.
+Spectrum browser extension allows us to check how folks with different types of color blindness see our site or app, and make sure there’s enough contrast between different elements.
 
 ![Simulating tritanopia with Spectrum Chrome extension](/images/accessibility-spectrum.webp)
+
+**Update May 2024:** Looks like Spectrum extension is no longer available. [Colorblindly](https://chromewebstore.google.com/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg) seems to be a good replacement.
 
 **Bonus:** Chrome DevTools can emulate some of these vision deficiencies. Press Escape, enable the Rendering tab from the three-dot menu button and scroll to the Emulate vision deficiencies section.
 

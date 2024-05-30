@@ -57,7 +57,7 @@ _So maybe frontend needs a different approach to testing?_
 
 ![End-to-end < Integration > Unit < Static](/images/testing-trophy.svg)
 
-It says that integration tests give you the biggest return on investment, so you should write more integration tests than any other kinds of tests.
+It says that we should spend more time writing integration tests than any other kind of tests.
 
 _End-to-end tests_ in the trophy mostly correspond to UI tests in the pyramid. _Integration tests_ verify big features or even whole pages but without any backend, a real database or a real browser. For example, render a login page, type a username and a password, click the “Log in” button and verify that the correct network request was sent, but without actually making any network requests — we’ll learn how to do it later.
 

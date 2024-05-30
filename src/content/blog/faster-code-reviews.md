@@ -21,7 +21,7 @@ If you’re new to a team, tech stack or an area of the codebase, [pairing with 
 
 Split big tasks into several diffs. Just reading 1000 lines of code will take a reviewer more than an hour and a cup of coffee. And each iteration will require another hour. It’s hard to say when a diff becomes too big, but the general rule of thumb is: the less experience you have, the smaller your diffs should be.
 
-By splitting a big task into smaller ones, you’ll get feedback faster, before you’ve spent too much time on a less than ideal implementation. Even better if you discuss, how you’re going to implement a complex feature, with a more experienced developer before you start working on it.
+By splitting a big task into smaller ones, you’ll get feedback faster, before you’ve spent too much time on a less than ideal implementation. Even better if you discuss, how you’re want to implement a complex feature, with a more experienced developer before you start working on it.
 
 ## Make sure your code is ready
 

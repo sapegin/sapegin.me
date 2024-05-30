@@ -8,7 +8,7 @@ tags:
   - redux
 ---
 
-There’s no idiomatic way to structure Redux applications yet. And I believe there’s no The Only True Project Structure but I’ll describe what works for me.
+There’s no idiomatic way to structure Redux applications yet, and there’s no _The Only True Project Structure_, but I’ll describe what works for me.
 
 ## General structure
 
@@ -28,8 +28,6 @@ Here are main folders I have in my application:
 - `models`: Immutable.js records.
 - `util`: any shared non-React JavaScript code.
 - `features`.
-
-<!--more-->
 
 Feature folders look like this:
 

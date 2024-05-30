@@ -100,7 +100,7 @@ I think it’s good to have different hobbies. If [you don’t feel like doing o
 
 ## Social networks
 
-I was always disappointed in social networks. During the past 20 years, I’ve tried probably all the popular ones but only two were more or less successful for me: LiveJournal, which barely exists now, and [Twitter](https://twitter.com/iamsapegin) which may die the moment they kill third-party clients completely (the web UI is already unusable).
+I was always disappointed in social networks. During the past 20 years, I’ve tried probably all the popular ones but only two were moderately successful for me: LiveJournal, which barely exists now, and [Twitter](https://twitter.com/iamsapegin) which may die the moment they kill third-party clients completely (the web UI is already unusable).
 
 However, I kept trying until I read Cal Newport’s book [Digital minimalism](https://www.calnewport.com/books/digital-minimalism/). This book made me rethink what I was doing, I stopped using Facebook and reduced my feeds on other social networks.
 

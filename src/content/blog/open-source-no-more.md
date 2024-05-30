@@ -24,7 +24,7 @@ In this article I want to talk more about the reasons that led me to maintainer 
 
 ## Entitlement and toxicity of users
 
-Somehow [people expect you to solve their issues](https://mikemcquaid.com/entitlement-in-open-source/) or implement features they need. They’ll complain that the bug you introduced in the last version broke their build, or that they need this obscure feature for their current project at work, and that if you don’t add it quickly, their boss will go berserk because the deadline is already on the nose.
+Somehow [people expect you to solve their issues](https://mikemcquaid.com/entitlement-in-open-source/) or implement features they need. They’ll complain that the bug you introduced in the last version broke their build, or that they need this obscure feature for their current project at work, and that if you don’t add it quickly, their boss will go berserk because the deadline is almost there.
 
 Folks seem to miss that you’re working on these projects in your free time, after a long day at your full-time job, and without any compensation. They demand that you work on whatever is, in their opinion, broken or missing, and then they get angry when you’re not doing it or not doing it fast enough.
 
@@ -42,7 +42,7 @@ The overall code quality of pull request to open source projects is usually very
 
 It often takes several months to merge a single pull request, many get abandoned, or their authors get frustrated and angry. Often someone submits a pull request, and never comes back to it again, so you waste time and energy reviewing their code for nothing (I call such pull requests _hit and run pull requests_).
 
-People often submit features _they_ want but it doesn’t always match the project’s vision or is outside of its intended scope. They also believe that accepting their work is free for you, not thinking that you first need to review the pull request (likely multiple times), and then maintain the feature once it’s merged (likely forever).
+People often submit features _they_ want but it doesn’t always match the project’s vision or is outside its intended scope. They also believe that accepting their work is free for you, not thinking that you first need to review the pull request (likely multiple times), and then maintain the feature once it’s merged (likely forever).
 
 And the darkest time for an open source maintainer is October, when during the Hacktoberfest people around the world [spam maintainers with total nonsense](https://blog.domenic.me/hacktoberfest/) just to get a free t-shirt.
 

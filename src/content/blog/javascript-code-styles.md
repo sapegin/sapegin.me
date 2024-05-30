@@ -62,7 +62,7 @@ Survey results:
 
 ## Conclusion
 
-I was expecting to see numbers closer to 50% for the first two questions. But I was surprised by actual popularity of spaces for indentation in JavaScript: tabs are almost non-existent. Same for semicolons: not as many people aren’t using them as you can imagine reading Twitter.
+I was expecting to see numbers closer to 50% for the first two questions. But I was surprised by actual popularity of spaces for indentation in JavaScript: tabs are almost non-existent. Same for semicolons: most people use them, but the ones who don’t are very loud on Twitter.
 
 The results show less diversity in code style of popular open source projects: more than half use 2 spaces with semicolons. Many still don’t use any tooling to validate code style.
 

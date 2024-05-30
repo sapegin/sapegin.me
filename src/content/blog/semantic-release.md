@@ -10,7 +10,7 @@ tags:
 
 Making new releases is one of the most boring and tedious tasks in open source.
 
-There are many tools that try to automate publishing and one of the most interesting is [semantic-release](https://github.com/semantic-release/semantic-release). I was avoiding it for a long time because it makes publishing fully automated with changelogs generated from commit messages, and I believe that [changelogs must be written by humans](/blog/changelog).
+There are many tools that try to automate publishing and one of the most interesting is [semantic-release](https://github.com/semantic-release/semantic-release). I was avoiding it for a long time because it makes publishing fully automated with changelogs generated from commit messages, and that I thought that [changelogs must be written by humans](/blog/changelog).
 
 But actually it’s very flexible and I was able to customize it to do exactly what I want:
 

@@ -16,7 +16,7 @@ One of the selling points of React Native is code sharing between web, iOS, and 
 
 The main obstacles to writing cross-platform components with React Native are:
 
-- **Different elements for the web and native**: on web we use `p` and `div`, whereas on native we should use `Text` and `View` from `react-native` package. React Native is also picky about rendering text: we should always wrap it in the `Text` component, and it should be a direct parent.
+- **Different elements for the web and native**: on web we use `p` and `div`, but on native we should use `Text` and `View` from `react-native` package. React Native is also picky about rendering text: we should always wrap it in the `Text` component, and it should be a direct parent.
 - **Unforgiving styling**: there’s a custom way of doing [styles on React Native](https://reactnative.dev/docs/style) which looks like CSS but doesn’t behave like CSS. In CSS, if a browser doesn’t understand a certain property, it would ignore it, but React Native will throw an exception, and it supports a very limited number of CSS properties.
 
 [Styled-components](https://styled-components.com/docs/basics#react-native) solve some of the problems on the low level: primarily, it allows us to use the same syntax to write styles for web and native. However, it doesn’t solve the problem of breaking on unsupported properties.

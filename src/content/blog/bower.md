@@ -12,17 +12,17 @@ _This article was first published in the [May 2014 issue](https://xakep.ru/issue
 
 Package managers simplify installing and updating project dependencies, which are libraries that it uses: jQuery, Fotorama, everything that is used on your site and isn’t written by you.
 
-Browsing all the library sites, downloading and unpacking the archives, copying files into the projects—all of this is replaced with a few commands in the terminal.
+Browsing all the library sites, downloading and unpacking the archives, copying files into the projects — all that is replaced with a few commands in the terminal.
 
 Many programming languages have standard package managers, which developers use to install all libraries: gem for Ruby, pip for Python and others. For server-side JavaScript there is npm (reasons why it’s not suitable for client-side are below), but client-side JavaScript until recently didn’t have anything. There were many different package managers (Jam, Component, Volo, Ender), but the majority of them never became popular, and there is little sense in package managers that can’t install the right packages.
 
-Bower is not the standard package manager for client-side JavaScript, but the most popular one: currently there are more than sixteen thousand packages.
+Bower is not the standard package manager for client-side JavaScript, but the most popular one: now there are more than sixteen thousand packages.
 
-Bower doesn’t prescribe to the user its own build tool, or to the developer a method of including libraries (AMD, CommonJS, etc.) All Bower does is install the right versions of the packages that the project needs and their dependencies. In other words: it downloads source files for the right libraries and everything they need into a special folder. Everything else is up to the developer.
+Bower doesn’t impose on the user its own build tool, or on the developer a method of including libraries (AMD, CommonJS, etc.) All Bower does is install the right versions of the packages that the project needs and their dependencies. In other words: it downloads source files for the right libraries and everything they need into a special folder. Everything else is up to the developer.
 
 ## Why not npm
 
-The main difference between npm and Bower is the approach for installing package dependencies. npm installs dependencies for each package separately, and as a result makes a big package dependency tree (`node_modules/grunt/node_modules/glob/node_modules/...`), where there could be several version of the same package. For client-side JavaScript this is unacceptable: you can’t add two different version for jQuery or any other library to a page. With Bower each package is installed once (jQuery will always be in the `bower_components/jquery` folder, regardless of how many packages depend on it) and in the case of a dependency conflict, Bower simply won’t install the package incompatible with one that’s already installed.
+The main difference between npm and Bower is the approach for installing package dependencies. npm installs dependencies for each package separately, and as a result makes a big package dependency tree (`node_modules/grunt/node_modules/glob/node_modules/...`), where there could be several version of the same package. For client-side JavaScript this is unacceptable: you can’t add two different version for jQuery or any other library to a page. With Bower each package is installed once (jQuery will always be in the `bower_components/jquery` folder, regardless of how many packages depend on it) and if there’s a dependency conflict, Bower won’t install the package incompatible with one that’s already installed.
 
 ## Installing Bower
 
@@ -52,7 +52,11 @@ bower init
 
 Bower will ask many questions, but until we want to register our package, answers to most of them don’t matter, you can press Enter.
 
+<!-- textlint-disable -->
+
 The question “Set currently installed components as dependencies?” should be answered with “yes”—all previously installed components (in our case it’s jQuery) will be automatically placed in the created JSON file. The question “Would you like to mark this package as private which prevents it from being accidentally published to the registry?” should also be answered “yes”—this will prevent accidental publication of the package into the Bower registry.
+
+<!-- textlint-enable -->
 
 Let’s install a few more packages:
 
@@ -60,7 +64,7 @@ Let’s install a few more packages:
 bower install --save social-likes jquery-icheck fotorama
 ```
 
-And take a look at what we got:
+And this is what we got:
 
 ```bash
 bower list
@@ -115,7 +119,7 @@ There are two approaches for deploying a project:
 
 ### Semantic versions (SemVer)
 
-[SemVer](http://semver.org/) is, first-of-all, an approach to versioning libraries: a format for version numbers MAJOR.MINOR.PATCH and rules, which have to be followed when incrementing each number.
+[SemVer](http://semver.org/) is, first-of-all, an approach to versioning libraries: a format for version numbers MAJOR.MINOR.PATCH and rules describing when to increment each number.
 
 Secondly, it’s a method of describing necessary dependencies, which is used by Bower and npm.
 
@@ -123,9 +127,9 @@ While installing with the `--save` flag, package version are added to `bower.jso
 
 ## Updating dependencies
 
-Bower has a `bower update` command, but it updates packages with respect to the demands of the manifest file. For example, if it lists jQuery ~2.0.0 Bower can update jQuery to version 2.0.9, but 2.1.0 won’t be installed because it doesn’t satisfy the ~2.0.0 formula.
+Bower has a `bower update` command, but it updates packages based on the version ranges in the manifest file. For example, if it lists jQuery ~2.0.0 Bower can update jQuery to version 2.0.9, but 2.1.0 won’t be installed because it doesn’t satisfy the ~2.0.0 formula.
 
-To update packages (and `bower.json`) to the truly latest version you can use the [bower-update](https://github.com/sapegin/bower-update) utility. Installation:
+To update packages (and `bower.json`) to the latest published version, use the [bower-update](https://github.com/sapegin/bower-update) tool. Installation:
 
 ```bash
 npm install -g bower-update
@@ -175,7 +179,7 @@ concat: {
 }
 ```
 
-This method has many downsides: you have to watch the files for each package, make sure that the files are assembled in the right order (for example, jQuery has to be higher than scripts depending on it). The [grunt-bower-concat](https://github.com/sapegin/grunt-bower-concat) plugin can do this for you: it automatically concatenates all installed dependencies in the right order into a single file:
+This method has many downsides: you have to watch the files for each package, make sure that the files are assembled in the right order (for example, jQuery should be higher than scripts depending on it). The [grunt-bower-concat](https://github.com/sapegin/grunt-bower-concat) plugin can do this for you: it automatically concatenates all installed dependencies in the right order into a single file:
 
 ```javascript
 bower_concat: {
@@ -200,7 +204,7 @@ concat: {
 
 ## Registering your packages
 
-To make your library available to be installed with Bower it has to be registered. To do this:
+To make your library available to be installed with Bower you need to register it. To do this:
 
 - at the root of a project there should be a `bower.json` manifest file.
 - the project should be a git repository (for example on GitHub)
@@ -256,7 +260,7 @@ bower init
 And, although it’s mandatory to fill in the `name` field, other fields are also very useful:
 
 - `description` and `keywords` will help users find your library through the package search interface.
-- `main` determines the main file of the package. Thie field can be used by automatic build tools like `grunt-bower-concat`.
+- `main` determines the main file of the package. This field can be used by automatic build tools like `grunt-bower-concat`.
 - `license`—always specify a license: it tells a potential user of your package whether they can use it in their project. For example, the `GPL` license required that every project using it is also released with the same license, which isn’t always possible.
 - `ignore`—by default Bower will download the whole repository, which, firstly, will increase installation time, and, secondly, will add unnecessary files to the project. It’s best to exclude everything except the files required for the package to work (main JS file, CSS, etc.), license and README.
 - `dependencies`—all packages on which your package depends.

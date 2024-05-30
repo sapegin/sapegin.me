@@ -8,7 +8,7 @@ tags:
   - writing
 ---
 
-With our fast-paced ecosystem we tend to spend our time trying the latest inventions and arguing about them on the internet. I’m not saying we shouldn’t do that, but probably we should slow down a bit and take a look at things that don’t change much: they could greatly improve quality and value of our work, and understanding of those new tools.
+With our fast-paced ecosystem we tend to spend our time trying the latest inventions and arguing about them on the internet. I’m not saying we shouldn’t do that, but probably we should slow down a bit and look at things that don’t change much: they could greatly improve quality and value of our work, and understanding of those new tools.
 
 This post is a mix of my experience and my wishes for the New Year. I want to hear your suggestions as much as I want to share mine.
 

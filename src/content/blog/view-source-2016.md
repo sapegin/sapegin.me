@@ -24,7 +24,7 @@ tags:
 **Design for non-designers** by [Tracy Osborn](https://twitter.com/@limedaring). [Slides](https://speakerdeck.com/limedaring/design-for-non-designers-pygotham). [Video](https://www.youtube.com/watch?v=lsPrhA_m6ss).
 
 - Developers can’t escape at least some designing: site for open source project or just a home page.
-- Fastest way for better looking designs: cut down on clutter.
+- Fastest way for better looking designs: reduce clutter.
 - Reduce number of fonts and colors, line things up.
 - Whitespace is the ultimate clutter reducer.
 - Make it easy to find and use the most important action.
@@ -170,7 +170,7 @@ You can read about most of these things in Helen’s article [What is Beautiful 
 
 - Network is progressive enhancement.
 - SVG over IMG, base64 over IMG (but base64 is expensive and heavy).
-- Save data locally and frequently, use partial updates.
+- Save data locally and often, use partial updates.
 - Define flexible data schema: prevent merge conflicts.
 - Security: use CORS, encrypt local data, use [JSON Web Tokens](https://jwt.io/).
 - Rethink how to use technology, by thinking about the issue. Not about the tools.

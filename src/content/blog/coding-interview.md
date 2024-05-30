@@ -83,4 +83,4 @@ But, please, don’t use all that new trickery you’ve learned in real code. We
 
 ## Attend an interview
 
-I believe that attending interview is useful even if you don’t plan to change jobs. It allows you to look at your experience from another perspective, find out your weak spots, and understand what to improve to become a better developer.
+Attending interviews is useful even if you don’t plan to change jobs. It allows you to look at your experience from another perspective, find out your weak spots, and understand what to improve to become a better developer.

@@ -38,7 +38,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 
 [Slides](https://lmatteis.github.io/finland-talk/assets/player/KeynoteDHTMLPlayer.html), [video](https://www.youtube.com/watch?v=cXuvCMG21Ss).
 
-- “Programming language are practically irrelevant in making products.”
+- Programming languages are irrelevant in making products.
 - Code maintenance is the root of the problem.
 - Make changes without having to read and maintain the code.
 - Newly added code can change how old code is executed.
