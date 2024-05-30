@@ -862,8 +862,6 @@ interface ButtonProps {
 
 The latter would be my choice for TypeScript.
 
-
-
 ## Abbreviations and acronyms
 
 The road to hell is paved with abbreviations. What do you think are OTC, RN, PSP, SDL? I also don’t know, and these are just from one project. That’s why I try to avoid abbreviations almost everywhere, not just in code.

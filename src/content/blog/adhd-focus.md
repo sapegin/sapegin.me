@@ -30,7 +30,7 @@ My general rule for notifications is: better to have too few than too many. If I
 
 I think multiple-screen setups aren’t worth it: they require too much space on the desk and too much meta work — moving windows between screens and so on. They also tend to have too much information visible at the same time.
 
-![The Matrix, 1999](/images/focus-matrix-monitors.webp "Screenshot from The Matrix, 1999")
+![The Matrix, 1999](/images/focus-matrix-monitors.webp 'Screenshot from The Matrix, 1999')
 
 I have used a single 27” screen for the past decade or so, and for me, it’s the perfect size.
 

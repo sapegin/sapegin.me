@@ -61,7 +61,8 @@ const getUrl = (file: string) => `/blog/${getSlug(file)}/`;
 
 const getMainId = (contents: string) => contents.match(/\{#(.*)\}/m)?.[1] ?? '';
 
-const stripIds = (contents: string) => contents.replace(/^\{#.*\}$/gm, '');
+const stripIds = (contents: string) =>
+	contents.replace(/\n?\{#[^\n]+\}\n$/gm, '');
 
 const stripTitle = (contents: string) => contents.replace(/^#+ .*$/m, '');
 

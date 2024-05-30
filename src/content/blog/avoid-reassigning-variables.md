@@ -301,8 +301,6 @@ const queryValues = {
 
 Now, the query object always has the same shape, but some properties can be `undefined`. The code feels more declarative and it’s easier to understand what it’s doing – building an object – and see the final shape of this object.
 
-
-
 ## Avoid Pascal style variables
 
 Some people like to define all variables at the beginning of a function. I call this _Pascal style_, because in Pascal we have to declare all variables at the beginning of a program or a function:
