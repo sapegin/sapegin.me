@@ -342,8 +342,22 @@ export const instructions: Instructions[] = [
 		id: 'warp',
 		app: 'Warp',
 		dark: true,
-		urlLight:
+		urlDark:
 			'https://github.com/sapegin/squirrelsong/tree/master/dark/Warp#readme',
+		urlName: 'GitHub',
+	},
+
+	/**
+	 * Vim
+	 */
+	{
+		id: 'vim',
+		app: 'Vim',
+		light: true,
+		comment:
+			'Also works for Neovim.',
+		urlLight:
+			'https://github.com/sapegin/squirrelsong/tree/master/light/Vim#readme',
 		urlName: 'GitHub',
 	},
 ];
