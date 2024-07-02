@@ -82,7 +82,7 @@ export const theme = {
 					xs: { value: '0.75rem' },
 				},
 				fontWeights: {
-					normal: { value: '300' },
+					normal: { value: '400' },
 					heading: { value: '300' },
 					bold: { value: '800' },
 				},
