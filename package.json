@@ -58,7 +58,7 @@
     "richtypo-rules-en": "^5.1.3",
     "romanize": "^1.1.1",
     "sanitize-html": "^2.13.0",
-    "shiki": "^1.4.0",
+    "shiki": "^1.10.0",
     "strip-json-comments": "^5.0.1",
     "tamia": "^7.1.5",
     "unist-util-visit": "^5.0.0"

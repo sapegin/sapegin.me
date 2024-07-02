@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getHighlighter } from 'shiki';
+import { createHighlighter } from 'shiki';
 import stripJsonComments from 'strip-json-comments';
 
 const THEMES_DIR = 'squirrelsong-master';
@@ -40,7 +40,7 @@ export type CodeLang =
 	| 'python';
 export type CodeTheme = 'light' | 'dark';
 
-const highlighter = await getHighlighter({
+const highlighter = await createHighlighter({
 	themes: [lightTheme, darkTheme],
 	langs: ['tsx', 'markdown', 'css', 'html', 'json', 'php', 'python'],
 });
