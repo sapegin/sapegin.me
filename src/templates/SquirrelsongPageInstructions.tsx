@@ -354,8 +354,7 @@ export const instructions: Instructions[] = [
 		id: 'vim',
 		app: 'Vim',
 		light: true,
-		comment:
-			'Also works for Neovim.',
+		comment: 'Also works for Neovim.',
 		urlLight:
 			'https://github.com/sapegin/squirrelsong/tree/master/light/Vim#readme',
 		urlName: 'GitHub',
