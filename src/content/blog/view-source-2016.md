@@ -79,13 +79,9 @@ You can read about most of these things in Helen’s article [What is Beautiful 
 - Load regular, italic and bold separately.
 - Tools: [fontfaceonload](https://github.com/zachleat/fontfaceonload), [utility-opentype](https://github.com/kennethormandy/utility-opentype), [Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css).
 
-<!-- textlint-disable terminology -->
+**Things you can do in <!-- textlint-disable -->ES6<!-- textlint-enable --> that can’t be done in ES5** by [Dan Shappir](https://twitter.com/@danshappir) from Wix.com. [Slides](https://docs.google.com/presentation/d/1rBV0tPiJVqvRsnxscNk_axf-I7IS2pyiR82M6Xp5mDw/edit). [Video](https://www.youtube.com/watch?v=GbVAMgU3Jj0).
 
-**Things you can do in ES6 that can’t be done in ES5** by [Dan Shappir](https://twitter.com/@danshappir) from Wix.com. [Slides](https://docs.google.com/presentation/d/1rBV0tPiJVqvRsnxscNk_axf-I7IS2pyiR82M6Xp5mDw/edit). [Video](https://www.youtube.com/watch?v=GbVAMgU3Jj0).
-
-<!-- textlint-enable -->
-
-- ES6 (ECMAScript 2015) is mostly syntactic sugar: arrow functions, destructuring, default function parameters, template strings, classes, and so on
+- <!-- textlint-disable -->ES6<!-- textlint-enable --> (ECMAScript 2015) is mostly syntactic sugar: arrow functions, destructuring, default function parameters, template strings, classes, and so on
 - It’s good: you want the syntax to be friendly.
 - What ECMAScript 2015 can do is what Babel can do.
 - Map can be emulated in ES5 but much slower.

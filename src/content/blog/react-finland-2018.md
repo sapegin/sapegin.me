@@ -168,6 +168,7 @@ Eemeli has created a [new YAML library](https://github.com/eemeli/yaml) that sup
 Check out [Ken’s slides](https://reactfinland.surge.sh/#/10), they are awesome.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How <a href="https://twitter.com/hashtag/React?src=hash&amp;ref_src=twsrc%5Etfw">#React</a> changed everything (for better) talk by <a href="https://twitter.com/ken_wheeler?ref_src=twsrc%5Etfw">@ken_wheeler</a> at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a> started the 2nd day. Nice reality check to history of web tech and why React is great. Also shortly what comes next. But remember &quot;Web is not suited for application development&quot;. <a href="https://t.co/7o0MfXOVp8">pic.twitter.com/7o0MfXOVp8</a></p>&mdash; Marko Wallin (@walokra) <a href="https://twitter.com/walokra/status/989398496561201153?ref_src=twsrc%5Etfw">April 26, 2018</a></blockquote>
+
 <!-- textlint-disable -->
 
 ### <span aria-label="Lightning talk" title="Lightning talk">⚡️</span> Static Websites The Final Frontier by [Juho Vepsäläinen](https://twitter.com/bebraw)

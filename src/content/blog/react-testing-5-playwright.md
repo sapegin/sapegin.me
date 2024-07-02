@@ -12,11 +12,7 @@ tags:
   - msw
 ---
 
-<!-- textlint-disable terminology -->
-
-Playwright is a framework-agnostic end-to-end testing (also known as E2E, or integration testing) tool for web apps. Playwright has great developer experience and makes writing good and resilient to changes tests straightforward.
-
-<!-- textlint-enable -->
+Playwright is a framework-agnostic end-to-end testing (also known as <!-- textlint-disable -->E2E<!-- textlint-enable -->, or integration testing) tool for web apps. Playwright has great developer experience and makes writing good and resilient to changes tests straightforward.
 
 **This is the fifth article in the series**, where we learn how to test React apps end-to-end using Playwright and how to mock network requests using Mock Service Worker.
 

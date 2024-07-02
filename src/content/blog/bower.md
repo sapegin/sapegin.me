@@ -52,11 +52,7 @@ bower init
 
 Bower will ask many questions, but until we want to register our package, answers to most of them don’t matter, you can press Enter.
 
-<!-- textlint-disable -->
-
-The question “Set currently installed components as dependencies?” should be answered with “yes”—all previously installed components (in our case it’s jQuery) will be automatically placed in the created JSON file. The question “Would you like to mark this package as private which prevents it from being accidentally published to the registry?” should also be answered “yes”—this will prevent accidental publication of the package into the Bower registry.
-
-<!-- textlint-enable -->
+The question <!-- textlint-disable -->“Set currently installed components as dependencies?”<!-- textlint-enable --> should be answered with “yes” — all previously installed components (in our case it’s jQuery) will be automatically placed in the created JSON file. The question “Would you like to mark this package as private which prevents it from being accidentally published to the registry?” should also be answered “yes” — this will prevent accidental publication of the package into the Bower registry.
 
 Let’s install a few more packages:
 
