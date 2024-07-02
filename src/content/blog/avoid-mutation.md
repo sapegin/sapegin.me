@@ -527,7 +527,7 @@ expect(getMessageProps(1, 5, 0, 2, 0)).toEqual([
 ])
 -->
 
-I’m not a huge fan of `.reduce()` because it often makes code harder to read and the intent less clear. With `.map()` / `.filter()` chaining, it’s clear that we’re first converting an array to another array with the same number of items, and then removing array items we don’t need. With `.reduce()` it’s less obvious.
+I’m not a huge fan of `.reduce()` because it often makes code harder to read and the intent less clear. With `.map()` / `.filter()` chaining, it’s clear that we’re first converting an array to another array with the same number of items, and then removing array elements we don’t need. With `.reduce()` it’s less obvious.
 
 So I’d stop two steps ago with this refactoring.
 

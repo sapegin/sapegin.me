@@ -26,7 +26,7 @@ I think Twitter is the best social network for a developer. I always find awesom
 - [Christoph Pojer](https://twitter.com/cpojer) — works at Facebook on [Jest](https://facebook.github.io/jest/) and [Yarn](https://yarnpkg.com/).
 - [Andrey Popp](https://twitter.com/andreypopp) — [react-textarea-autosize](https://github.com/andreypopp/react-textarea-autosize) author.
 - [Ekaterina Prigara](https://twitter.com/katyaprigara) — product marketing manager at JetBrains, works with WebStorm.
-- [Axel Rauschmayer](https://twitter.com/rauschma) — [author](http://exploringjs.com/) of “Speaking JavaScript” and “Exploring ES6”.
+- [Axel Rauschmayer](https://twitter.com/rauschma) — [author](http://exploringjs.com/) of “Speaking JavaScript” and “Exploring JavaScript”.
 - [Andrey Sitnik](https://twitter.com/andreysitnik) — creator of [PostCSS](https://twitter.com/PostCSS) and [Autoprefixer](https://twitter.com/Autoprefixer).
 - [Oleg Slobodskoi](https://twitter.com/oleg008) — creator of [JSS](https://github.com/cssinjs/jss).
 - [Sindre Sorhus](https://twitter.com/sindresorhus) — creator of [AVA](https://github.com/avajs/ava), [Yeoman](http://yeoman.io/) and almost any other open source library.

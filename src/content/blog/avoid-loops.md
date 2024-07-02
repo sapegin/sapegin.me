@@ -171,7 +171,7 @@ const isExpectedType = products.some(
 
 <!-- expect(isExpectedType).toEqual(true) -->
 
-If the behavior of the original code was correct, then we actually don’t need to iterate at all. We can check the latest array item directly:
+If the behavior of the original code was correct, then we actually don’t need to iterate at all. We can check the latest array element directly:
 
 <!-- const products = [{type: 'pizza'}, {type: 'coffee'}], expectedType = 'pizza' -->
 
@@ -209,7 +209,7 @@ const totalPrice = cart
   .reduce((acc, val) => acc + val);
 ```
 
-Now the purpose of each step is more clear. Using the `reduce()` to calculate a sum of all array items is one of the most typical use cases for this method, and this pattern is easier to recognize here than in the original code.
+Now the purpose of each step is more clear. Using the `reduce()` to calculate a sum of all array elements is one of the most typical use cases for this method, and this pattern is easier to recognize here than in the original code.
 
 <!-- expect(totalPrice).toBe(105) -->
 

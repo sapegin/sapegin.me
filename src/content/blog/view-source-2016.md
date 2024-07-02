@@ -62,7 +62,7 @@ tags:
 - Versions are confusing but you don’t have to understand everything to contribute in a meaningful way.
 - Stop using Node 0.10 and 0.12 because OpenSSL used in these versions will stop updating in December.
 - Do not use odd versions in production. Use 4.x now. Maybe.
-- Next month 6.x will become LTS with 30 month support cycle and lots of ES6 goodies.
+- Next month 6.x will become LTS with 30 month support cycle and lots of ECMAScript 2015 goodies.
 - Smoke testing: run tests for the most popular npm modules to ensure no breaking changes.
 - Tools: [branch-diff](https://github.com/rvagg/branch-diff), [changelog-maker](https://github.com/rvagg/changelog-maker).
 
@@ -79,11 +79,15 @@ You can read about most of these things in Helen’s article [What is Beautiful 
 - Load regular, italic and bold separately.
 - Tools: [fontfaceonload](https://github.com/zachleat/fontfaceonload), [utility-opentype](https://github.com/kennethormandy/utility-opentype), [Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css).
 
+<!-- textlint-disable terminology -->
+
 **Things you can do in ES6 that can’t be done in ES5** by [Dan Shappir](https://twitter.com/@danshappir) from Wix.com. [Slides](https://docs.google.com/presentation/d/1rBV0tPiJVqvRsnxscNk_axf-I7IS2pyiR82M6Xp5mDw/edit). [Video](https://www.youtube.com/watch?v=GbVAMgU3Jj0).
 
-- ES6 is mostly syntactic sugar: arrow functions, destructuring, default function parameters, template strings, classes, and so on
+<!-- textlint-enable -->
+
+- ES6 (ECMAScript 2015) is mostly syntactic sugar: arrow functions, destructuring, default function parameters, template strings, classes, and so on
 - It’s good: you want the syntax to be friendly.
-- What ES6 can do is what Babel can do.
+- What ECMAScript 2015 can do is what Babel can do.
 - Map can be emulated in ES5 but much slower.
 - WeakMap and Proxy can’t be emulated in ES5.
 

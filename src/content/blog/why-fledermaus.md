@@ -32,7 +32,7 @@ With the Fledermaus I took a different approach. Actually it’s just a collecti
 
 You can combine them any way you want, add custom processing at any step, generate pages yourself. For example, in my photo gallery I read EXIF metadata from JPEG files and generate pages (`/albums/dogs/2013-08-03-3733`) and albums (`/albums/dogs`) based on this data.
 
-It’s based on fancy modern things like ES6, JSX, Markdown and Intl.
+It’s based on fancy modern things like ECMAScript 2015, JSX, Markdown and Intl.
 
 And it’s very small and fast:
 

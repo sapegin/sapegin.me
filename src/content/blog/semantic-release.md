@@ -28,11 +28,11 @@ Below I’ll describe my own set of scripts that implements this workflow.
 
 3. It determines a release type (PATCH, MINOR or MAJOR) by analyzing commit messages (more on that later).
 
-4. It generates a change log:
+4. It generates a changelog:
 
    a. If the release type is PATCH: from commit messages.
 
-   b. If the release type is MINOR or MAJOR and the latest commit is a change log: uses body of that commit as a changelog.
+   b. If the release type is MINOR or MAJOR and the latest commit is a changelog: uses body of that commit as a changelog.
 
 5. Publishes a new version to npm.
 
@@ -99,7 +99,7 @@ Which is fine and means two things: semantic-release will not make a release unt
 
 ## Use Git commit message convention
 
-By default semantic-release uses [AngularJS conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) which I don’t like aesthetically. So I use [a slightly modified convention](https://github.com/tamiadev/semantic-release-tamia/blob/master/Convention.md):
+By default semantic-release uses [Angular conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) which I don’t like aesthetically. So I use [a slightly modified convention](https://github.com/tamiadev/semantic-release-tamia/blob/master/Convention.md):
 
 ![Git commits following a convention](/images/commits.png)
 
@@ -143,8 +143,8 @@ git commit -m "Fix: Proper commit message" --allow-empty
 - [semantic-release](https://github.com/semantic-release/semantic-release)
 - [My plugins and scripts for semantic-release](https://github.com/tamiadev/semantic-release-tamia)
 - [My commit message conventions](https://github.com/tamiadev/semantic-release-tamia/blob/master/Convention.md)
-- [AngularJS commit message conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
+- [Angular commit message conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
 - [How to Write an Open Source JavaScript Library Egghead course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-automating-releases-with-semantic-release)
 - [Why you need to write changelogs yourself](/blog/changelog)
-- [Keep a CHANGELOG: Don’t let your friends dump git logs into changelogs](http://keepachangelog.com/)
+- [Keep a CHANGELOG: Don’t let your friends dump Git logs into changelogs](http://keepachangelog.com/)
 - [Semantic Versioning](http://semver.org/)

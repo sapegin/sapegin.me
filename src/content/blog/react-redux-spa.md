@@ -17,12 +17,16 @@ You can start from [a very good introduction](http://reactkungfu.com/2015/07/the
 
 ## ECMAScript 6
 
-Thanks to [Babel](http://babeljs.io/) we can write in ES6 (official name is ECMAScript 2015).
+Thanks to [Babel](http://babeljs.io/) we can write in ECMAScript 2015.
 
-- [Learn ES6](http://babeljs.io/learn-es2015/).
-- [An intro to using npm and ES6 modules for frontend development](http://wesbos.com/javascript-modules/) by Wes Bos.
+<!-- textlint-disable terminology -->
+
+- [Learn ES2015](http://babeljs.io/learn-es2015/).
+- [An intro to using npm and ECMAScript 2015 modules for frontend development](http://wesbos.com/javascript-modules/) by Wes Bos.
 - <span aria-label="Book" title="Book">📖</span> [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read/) by Nicholas C. Zakas.
-- <span aria-label="Book" title="Book">📖</span> [Exploring ES6](http://exploringjs.com/es6/) by Dr. Axel Rauschmayer.
+- <span aria-label="Book" title="Book">📖</span> [Exploring JavaScript](http://exploringjs.com/es6/) by Dr. Axel Rauschmayer.
+
+<!-- textlint-enable -->
 
 _Consider using [TypeScript](https://www.typescriptlang.org/)._
 
@@ -32,7 +36,7 @@ Our view layer is [React](https://reactjs.org/).
 
 - [React tutorial](https://reactjs.org/tutorial/tutorial.html).
 - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html).
-- [ReactJS for beginners](https://blog.andrewray.me/reactjs-for-stupid-people/) by Andrew Ray.
+- [React for beginners](https://blog.andrewray.me/reactjs-for-stupid-people/) by Andrew Ray.
 - [Presentational and container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) by Dan Abramov.
 - [React tips and best practices](http://aeflash.com/2015-02/react-tips-and-best-practices.html) by Alexander Early.
 - [Removing user interface complexity, or why React is awesome](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome) by James Long.
@@ -81,7 +85,7 @@ _Consider using CSS in JS library, like [JSS](http://cssinjs.org/) or [styled-co
 
 ## Webpack
 
-[Webpack](https://webpack.js.org/) allows us to use ES6/JSX syntax (including ES6 modules), import modules from npm and use hot reloading to debug frontend code. To simplify webpack configuration and share it between projects we use [webpack-blocks](https://github.com/andywer/webpack-blocks).
+[Webpack](https://webpack.js.org/) allows us to use ES6/JSX syntax (including ECMAScript 2015 modules), import modules from npm and use hot reloading to debug frontend code. To simplify webpack configuration and share it between projects we use [webpack-blocks](https://github.com/andywer/webpack-blocks).
 
 - 📖 [SurviveJS: webpack](https://survivejs.com/webpack/introduction/) by Juho Vepsäläinen.
 
@@ -111,7 +115,7 @@ These tools are as useful as all the resources mentioned above.
 - [React Styleguidist](https://react-styleguidist.js.org/), isolated component development environment and a living style guide.
 - React hot loader (now [React Transform](https://github.com/gaearon/react-transform-boilerplate)).
 - [Redux DevTools](https://github.com/gaearon/redux-devtools).
-- [React plugin for ESLint](https://github.com/yannickcr/eslint-plugin-react), React specific linting rules.
+- [React plugin for ESLint](https://github.com/yannickcr/eslint-plugin-react), React specific linter rules.
 - [React Developer Tools](https://github.com/facebook/react-devtools) for Chrome and Firefox.
 
 We also use [lint-staged](https://github.com/okonet/lint-staged) and [husky](https://github.com/typicode/husky) to run linters on precommit hook.

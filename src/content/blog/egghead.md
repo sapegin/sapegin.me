@@ -15,7 +15,7 @@ Some courses are free but most of them are available only [by subscription](http
 
 ## [Getting started with Redux](https://egghead.io/courses/getting-started-with-redux) by Dan Abramov (free)
 
-Really great course. Teaches you many other things besides Redux: like ES6 and just how to write good code. Watch in any case.
+Really great course. Teaches you many other things besides Redux: like ECMAScript 2015 and just how to write good code. Watch in any case.
 
 ## [Building React applications with idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) by Dan Abramov (free)
 
@@ -41,7 +41,7 @@ Mostly just retelling of the docs (which are hard to read). Watch if you don’t
 
 Short and very basic. Covers shallow rendering, expect-jsx and Redux.
 
-## [React: Flux architecture (ES6)](https://egghead.io/courses/react-flux-architecture-es6) by Joe Maddalone
+## [React: Flux architecture (ECMAScript 2015)](https://egghead.io/courses/react-flux-architecture-es6) by Joe Maddalone
 
 Watch the first Redux course instead. Watch this course only if you really have to use the vanilla Flux.
 

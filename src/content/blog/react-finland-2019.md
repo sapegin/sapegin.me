@@ -161,7 +161,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 [Slides](https://monicalent.com/building-resilient-frontend-architecture.pdf), [video](https://www.youtube.com/watch?v=brMZLmZ1HR0).
 
 - Refactoring only temporarily helps with technical debt.
-- Second system effect: the tendency of small, elegant, and successful systems to be succeeded by over-engineered, bloated systems because of inflated expectations and overconfidence.
+- Second system effect: the tendency of small, elegant, and successful systems to be succeeded by overengineered, bloated systems because of inflated expectations and overconfidence.
 - “‘Legacy code’” often differs from its suggested alternative by actually working and scaling.” — Bjarne Stroustrup.
 - The real cost of software is not the initial development, but maintenance over time.
 - Architecture as enabling constraints: constraints about how we use data and code that help us move faster over time.

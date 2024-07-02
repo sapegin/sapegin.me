@@ -25,7 +25,7 @@ By splitting a big task into smaller ones, you’ll get feedback faster, before 
 
 ## Make sure your code is ready
 
-Before sending your code to review, check it for debug code, commented out code and `TODO` comments, make sure all kinds of automated tests, type checks and linters are passing. Make sure there are no new lint warnings, and code is formatted, if you’re using a tool like Prettier.
+Before sending your code to review, check it for debug code, commented out code and todo comments, make sure all kinds of automated tests, type checks and linters are passing. Make sure there are no new linting warnings, and code is formatted, if you’re using a tool like Prettier.
 
 Manual code reviews are great for improving readability, architecture or accessibility. When reviewers are distracted by catching typos and minor issues that could have been caught by automated checks, they are more likely to miss important problems.
 

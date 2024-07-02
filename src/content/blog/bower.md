@@ -26,7 +26,7 @@ The main difference between npm and Bower is the approach for installing package
 
 ## Installing Bower
 
-To work with Bower you’ll need Node and git. Installation:
+To work with Bower you’ll need Node.js and Git. Installation:
 
 ```bash
 npm install -g bower
@@ -207,8 +207,8 @@ concat: {
 To make your library available to be installed with Bower you need to register it. To do this:
 
 - at the root of a project there should be a `bower.json` manifest file.
-- the project should be a git repository (for example on GitHub)
-- the project should use semantic versioning and the repository should have a git tag for the latest version
+- the project should be a Git repository (for example on GitHub)
+- the project should use semantic versioning and the repository should have a Git tag for the latest version
 
 To create the manifest file the `bower init` command is used:
 
@@ -262,10 +262,10 @@ And, although it’s mandatory to fill in the `name` field, other fields are als
 - `description` and `keywords` will help users find your library through the package search interface.
 - `main` determines the main file of the package. This field can be used by automatic build tools like `grunt-bower-concat`.
 - `license`—always specify a license: it tells a potential user of your package whether they can use it in their project. For example, the `GPL` license required that every project using it is also released with the same license, which isn’t always possible.
-- `ignore`—by default Bower will download the whole repository, which, firstly, will increase installation time, and, secondly, will add unnecessary files to the project. It’s best to exclude everything except the files required for the package to work (main JS file, CSS, etc.), license and README.
+- `ignore`—by default Bower will download the whole repository, which, firstly, will increase installation time, and, secondly, will add unnecessary files to the project. It’s best to exclude everything except the files required for the package to work (main JS file, CSS, etc.), license and readme.
 - `dependencies`—all packages on which your package depends.
 
-Now we need to commit the `bower.json` file, create a git tag with the latest version and push it to the remote repository:
+Now we need to commit the `bower.json` file, create a Git tag with the latest version and push it to the remote repository:
 
 ```bash
 git add bower.json

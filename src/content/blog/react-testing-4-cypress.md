@@ -13,7 +13,11 @@ tags:
   - msw
 ---
 
+<!-- textlint-disable terminology -->
+
 Cypress is a framework-agnostic end-to-end testing (also known as E2E, or integration testing) tool for web apps. Together with Cypress Testing Library and Mock Service Worker, it gives the best test writing experience and makes writing good, resilient to changes, tests straightforward.
+
+<!-- textlint-enable -->
 
 **This is the fourth article in the series**, where we learn how to test React apps end-to-end using Cypress and Cypress Testing Library, and how to mock network requests using Mock Service Worker.
 
