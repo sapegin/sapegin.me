@@ -8,7 +8,7 @@ tags:
 
 _This article was written in 2014, when npm 2 was the latest, and wasn’t popular among fronted developers because of the issues described in the article. Now use [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/), and consider this article historical._
 
-_This article was first published in the [May 2014 issue](https://xakep.ru/issues/xa/?id=184) of Russian “Hacker” magazine. The article in the magazine is a shortened version; the full one is below. Article was [translated](http://frontendbabel.info/articles/bower-why-frontend-package-manager/) by [George Gritsouk](http://gggritso.com/) for [Frontend Babel](http://frontendbabel.info/)._
+_This article was first published in the [May 2014 issue](https://xakep.ru/issues/xa/184/) of Russian “Hacker” magazine. The article in the magazine is a shortened version; the full one is below. Article was [translated](http://frontendbabel.info/articles/bower-why-frontend-package-manager/) by [George Gritsouk](http://gggritso.com/) for [Frontend Babel](http://frontendbabel.info/)._
 
 Package managers simplify installing and updating project dependencies, which are libraries that it uses: jQuery, Fotorama, everything that is used on your site and isn’t written by you.
 
