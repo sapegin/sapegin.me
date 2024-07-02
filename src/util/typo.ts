@@ -1,5 +1,5 @@
 import richtypo from 'richtypo';
-import rules from 'richtypo-rules-en';
+import rules from 'richtypo/rules/en';
 
 /*
  * Enhance typography.

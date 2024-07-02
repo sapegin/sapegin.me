@@ -5,7 +5,7 @@ import typo from '../typo';
 /*
  * Enhance typography.
  *
- * Probably not idea, since it's going to miss things around links or em/strong, but shoud also has fewer issues.
+ * Probably not ideal, since it's going to miss things around links or em/strong, but should also has fewer issues.
  *
  * I liked many things about open source, and it was a bit sad to loose them. Luckily, around the same time I found a new hobby that turned out to be a great, and much more healthy, replacement for open source -- leathercraft.
  * ->
