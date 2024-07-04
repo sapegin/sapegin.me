@@ -232,7 +232,8 @@ function Testimonial({
 					viewBox="0 0 6 5"
 					css={{ ml: 'm', mt: -2 }}
 				>
-					<path
+					<Box
+						as="path"
 						d="M0 0h1v5H0zM1 4h1v1H1zM2 3h1v1H2zM3 2h1v1H3zM4 1h1v1H4zM5 0h1v1H5z"
 						fill="currentColor"
 					/>
