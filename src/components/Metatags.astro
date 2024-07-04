@@ -10,15 +10,32 @@ export type Props = {
 	title?: string;
 	url?: string;
 	description?: string;
+	image?: string;
 };
 
-const { title = '', url = '/', description = SITE_DESCRIPTION } = Astro.props;
+const {
+	title = '',
+	url = '/',
+	description = SITE_DESCRIPTION,
+	image,
+} = Astro.props;
+
+function getImageUrl(pageUrl?: string, pageImage?: string) {
+	if (pageImage) {
+		return pageImage;
+	}
+
+	if (pageUrl) {
+		const imagePath = pageUrl.replace(/\/$/, '.png');
+		return `${SITE_URL}/cards/src/content${imagePath}`;
+	}
+
+	return undefined;
+}
 
 const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');
 const canonicalUrl = `${SITE_URL}${url}`;
-
-const imagePath = url.replace(/\/$/, '.png');
-const imageUrl = `${SITE_URL}/cards/src/content${imagePath}`;
+const imageUrl = getImageUrl(isBlogPost ? url : undefined, image);
 ---
 
 <meta charset="utf-8" />
@@ -61,7 +78,7 @@ const imageUrl = `${SITE_URL}/cards/src/content${imagePath}`;
 <meta property="og:description" content={description} />
 <meta name="twitter:creator" content="@iamsapegin" />
 {
-	isBlogPost && (
+	imageUrl && (
 		<>
 			<meta property="og:image" content={imageUrl} />
 			<meta name="twitter:card" content="summary_large_image" />
