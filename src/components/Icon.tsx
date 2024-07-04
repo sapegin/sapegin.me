@@ -4,6 +4,7 @@ import { IconBase } from './IconBase';
 type IconInfo = {
 	path?: string;
 	children?: React.ReactElement;
+	size?: number;
 };
 
 const BASE_SIZE = 20;
@@ -61,12 +62,12 @@ type Props = {
 };
 
 export function Icon({ icon, size = DEFAULT_SIZE }: Props) {
-	const { path, children } = ICONS[icon];
+	const { path, size: baseSize, children } = ICONS[icon];
 	return (
 		<IconBase
 			viewBox={{
-				width: BASE_SIZE,
-				height: BASE_SIZE,
+				width: baseSize ?? BASE_SIZE,
+				height: baseSize ?? BASE_SIZE,
 			}}
 			width={size}
 			height={size}

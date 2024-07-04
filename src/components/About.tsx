@@ -7,7 +7,7 @@ type Props = {
 
 export function About({ children }: Props) {
 	return (
-		<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
+		<Stack as="section" direction={{ base: 'column', tablet: 'row' }} gap="l">
 			<Box mx={{ base: 'auto', tablet: 0 }} flexShrink={0}>
 				<Image
 					src="/images/artem-sapegin.avif"

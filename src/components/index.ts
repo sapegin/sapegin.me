@@ -13,6 +13,7 @@ export { CodeSpreadSupreme } from './CodeSpreadSupreme';
 export { EventList } from './EventList';
 export { EventName } from './EventName';
 export { Expander } from './Expander';
+export { FeatureList, FeatureListItem } from './FeatureList';
 export { Feedback } from './Feedback';
 export { Flex } from './Flex';
 export { Footer } from './Footer';
