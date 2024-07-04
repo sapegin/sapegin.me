@@ -162,7 +162,9 @@ function ChapterList({ chapters }: { chapters: Chapter[] }) {
 					as="li"
 					key={chapter.url ?? chapter.title}
 					gap="xs"
-					gridColumn={chapter.title === 'Other techniques' && '1/3'}
+					gridColumn={{
+						tablet: chapter.title === 'Other techniques' ? '1/3' : undefined,
+					}}
 				>
 					<Text variant="semilarge">
 						{chapter.url ? (
@@ -405,7 +407,7 @@ export function BookPage({ url, chapters }: Props) {
 					<Stack as="section" gap="m">
 						<Heading level={2}>What readers are saying?</Heading>
 						<Grid
-							gap="m"
+							gap="l"
 							gridTemplateColumns={{
 								base: '1fr',
 								tablet: '1fr 1fr',
