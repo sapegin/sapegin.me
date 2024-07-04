@@ -36,7 +36,7 @@ type TestimonialItem = {
 const testimonials: TestimonialItem[] = [
 	{
 		quote:
-			'I’ve been following the author’s blog for quite some time to grab an advice or to catch up ,on best engineering practices. I was excited to find out there’s a whole dedicated book he was working on 🙌 I’m into several chapters now and already got enlightened on some topics I thought I knew well 🙂 I really like a mix of theory and clear practical examples that are up to a point. It’s never a dry reading so can highly recommend it 👍',
+			'I’ve been following the author’s blog for quite some time to grab an advice or to catch up on best engineering practices. I was excited to find out there’s a whole dedicated book he was working on 🙌 I’m into several chapters now and already got enlightened on some topics I thought I knew well 🙂 I really like a mix of theory and clear practical examples that are up to a point. It’s never a dry reading so can highly recommend it 👍',
 		author: 'Nick Plekhanov',
 		role: 'Senior Fullstack Engineer',
 		image: 'readers-nick.jpg',
