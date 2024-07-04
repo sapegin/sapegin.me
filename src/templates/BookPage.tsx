@@ -236,7 +236,7 @@ function Testimonial({
 						d="M0 0h1v5H0zM1 4h1v1H1zM2 3h1v1H2zM3 2h1v1H3zM4 1h1v1H4zM5 0h1v1H5z"
 						fill="currentColor"
 					/>
-					<path d="M1 0H5v1H1.001z" fill="#fff" />
+					<Box as="path" d="M1 0H5v1H1.001z" fill="background" />
 				</Box>
 			</div>
 			<Stack as="footer" direction="row" gap="s" alignItems="center">
