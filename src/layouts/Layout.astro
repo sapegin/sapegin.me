@@ -9,6 +9,7 @@ export interface Props<P> {
 	title?: string;
 	pageTitle?: string;
 	description?: string;
+	image?: string;
 	component: ComponentType<P>;
 	props?: Omit<P, 'title' | 'url'>;
 }
