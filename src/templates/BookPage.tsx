@@ -310,6 +310,34 @@ export function Spread({
 	);
 }
 
+function Features() {
+	return (
+		<Grid
+			gap="l"
+			gridTemplateColumns={{
+				base: '1fr',
+				tablet: '2fr 1fr',
+			}}
+		>
+			<Box>
+				<Spread image="spread.png" />
+			</Box>
+			<FeatureList>
+				<FeatureListItem>PDF and EPUB formats</FeatureListItem>{' '}
+				<FeatureListItem>
+					20 years of experience packed into 350 pages
+				</FeatureListItem>
+				<FeatureListItem>
+					3700 lines of unit-tested code examples
+				</FeatureListItem>
+				<FeatureListItem>Based on production code</FeatureListItem>
+				<FeatureListItem>Up to date: ECMAScript 2024</FeatureListItem>
+				<FeatureListItem>No bullshit approach</FeatureListItem>
+			</FeatureList>
+		</Grid>
+	);
+}
+
 export function BookPage({ url, chapters }: Props) {
 	return (
 		<Page url={url}>
@@ -373,36 +401,14 @@ export function BookPage({ url, chapters }: Props) {
 						</Box>
 					</Stack>
 					<Stack as="section" gap="m">
+						<Heading level={2}>What’s inside?</Heading>
+						<Features />
+					</Stack>
+					<Stack as="section" gap="m">
 						<Heading level={2} id="toc">
 							Table of contents
 						</Heading>
 						<ChapterList chapters={chapters} />
-					</Stack>
-					<Stack as="section" gap="m">
-						<Heading level={2}>What’s inside?</Heading>
-						<Grid
-							gap="l"
-							gridTemplateColumns={{
-								base: '1fr',
-								tablet: '2fr 1fr',
-							}}
-						>
-							<Box>
-								<Spread image="spread.png" />
-							</Box>
-							<FeatureList>
-								<FeatureListItem>PDF and EPUB formats</FeatureListItem>{' '}
-								<FeatureListItem>
-									20 years of experience packed into 350 pages
-								</FeatureListItem>
-								<FeatureListItem>
-									3700 lines of unit-tested code examples
-								</FeatureListItem>
-								<FeatureListItem>Based on production code</FeatureListItem>
-								<FeatureListItem>Up to date: ECMAScript 2024</FeatureListItem>
-								<FeatureListItem>No bullshit approach</FeatureListItem>
-							</FeatureList>
-						</Grid>
 					</Stack>
 					<Stack as="section" gap="m">
 						<Heading level={2}>What readers are saying?</Heading>
@@ -423,7 +429,9 @@ export function BookPage({ url, chapters }: Props) {
 						<Stack gap="m">
 							{faq.map(({ question, answer }) => (
 								<article key={question}>
-									<TextTypo variant="bold">{question}</TextTypo>
+									<TextTypo as="h3" variant="bold">
+										{question}
+									</TextTypo>
 									<TextTypo>{answer}</TextTypo>
 								</article>
 							))}
