@@ -45,11 +45,7 @@ function InstallationSteps({
 	light,
 	dark,
 	comment,
-	url,
-	urlLight,
-	urlDark,
-	urlName,
-	steps,
+	...steps
 }: Instructions) {
 	return (
 		<Stack as="article" id={id} gap="s">
@@ -61,21 +57,23 @@ function InstallationSteps({
 				</Stack>
 			</Stack>
 			{comment && <Text variant="small">{comment}</Text>}
-			{urlLight && urlDark && (
+			{'urlLight' in steps && (
 				<Text>
-					Follow the instructions on {urlName}:{' '}
-					<Link href={urlLight}>light theme</Link>,{' '}
-					<Link href={urlDark}>dark theme</Link>
+					Follow the instructions on {steps.urlName}:{' '}
+					<Link href={steps.urlLight}>light theme</Link>,{' '}
+					<Link href={steps.urlDark}>dark theme</Link>
 				</Text>
 			)}
-			{url && (
+			{'url' in steps && (
 				<Text>
-					<Link href={url}>Follow the instructions on {urlName}</Link>
+					<Link href={steps.url}>
+						Follow the instructions on {steps.urlName}
+					</Link>
 				</Text>
 			)}
-			{steps && (
+			{'steps' in steps && (
 				<OrderedList>
-					{steps.map((step, index) => (
+					{steps.steps.map((step, index) => (
 						<OrderedListItem key={index}>{step}</OrderedListItem>
 					))}
 				</OrderedList>
