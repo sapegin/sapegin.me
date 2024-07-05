@@ -45,6 +45,7 @@ function InstallationSteps({
 	light,
 	dark,
 	comment,
+	url,
 	urlLight,
 	urlDark,
 	urlName,
@@ -67,11 +68,9 @@ function InstallationSteps({
 					<Link href={urlDark}>dark theme</Link>
 				</Text>
 			)}
-			{((urlLight && !urlDark) || (!urlLight && urlDark)) && (
+			{url && (
 				<Text>
-					<Link href={urlLight || urlDark}>
-						Follow the instructions on {urlName}
-					</Link>
+					<Link href={url}>Follow the instructions on {urlName}</Link>
 				</Text>
 			)}
 			{steps && (

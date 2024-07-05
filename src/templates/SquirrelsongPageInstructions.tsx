@@ -1,17 +1,29 @@
 import type { ReactNode } from 'react';
 import { Link } from '../components';
 
-export type Instructions = {
+type InstructionsShared = {
 	id: string;
 	app: string;
 	light?: boolean;
 	dark?: boolean;
 	comment?: ReactNode;
-	urlLight?: string;
-	urlDark?: string;
-	urlName?: string;
-	steps?: ReactNode[];
 };
+
+export type Instructions = InstructionsShared &
+	(
+		| {
+				steps: ReactNode[];
+		  }
+		| {
+				url: string;
+				urlName: string;
+		  }
+		| {
+				urlLight: string;
+				urlDark: string;
+				urlName: string;
+		  }
+	);
 
 export const instructions: Instructions[] = [
 	{
@@ -88,7 +100,7 @@ export const instructions: Instructions[] = [
 				<Link href="https://github.com/sapegin/squirrelsong/archive/refs/heads/master.zip">
 					Download the repository
 				</Link>{' '}
-				as a ZIP acrhive
+				as a ZIP archive
 			</>,
 			<>Unzip the files</>,
 			<>
@@ -96,8 +108,8 @@ export const instructions: Instructions[] = [
 				Sublime Text packages directory
 			</>,
 			<>
-				Copy the <strong>light/Sublime Text/Squirrelsong Light</strong> or{' '}
-				<strong>dark/Sublime Text/Squirrelsong Dark</strong> folder into your
+				Copy the <strong>themes/Sublime Text/Squirrelsong Light</strong> or{' '}
+				<strong>themes/Sublime Text/Squirrelsong Dark</strong> folder into your
 				Sublime Text packages directory
 			</>,
 			<>
@@ -114,8 +126,7 @@ export const instructions: Instructions[] = [
 		id: 'coteditor',
 		app: 'CotEditor',
 		light: true,
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/CotEditor#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor#readme',
 		urlName: 'GitHub',
 	},
 
@@ -126,8 +137,7 @@ export const instructions: Instructions[] = [
 		id: 'nimblecommander',
 		app: 'Nimble Commander',
 		light: true,
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/Nimble%20Commander#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Nimble%20Commander#readme',
 		urlName: 'GitHub',
 	},
 
@@ -141,7 +151,7 @@ export const instructions: Instructions[] = [
 		steps: [
 			<Link
 				key={1}
-				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/iTerm2/Squirrelsong%20Dark.itermcolors"
+				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/themes/iTerm2/Squirrelsong%20Dark.itermcolors"
 			>
 				Download Squirrelsong Dark.itermcolors
 			</Link>,
@@ -170,8 +180,7 @@ export const instructions: Instructions[] = [
 		id: 'wezterm',
 		app: 'WezTerm',
 		dark: true,
-		urlDark:
-			'https://github.com/sapegin/squirrelsong/tree/master/dark/WezTerm#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/WezTerm#readme',
 		urlName: 'GitHub',
 	},
 
@@ -185,7 +194,7 @@ export const instructions: Instructions[] = [
 		steps: [
 			<Link
 				key={1}
-				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/Terminal/Squirrelsong%20Dark.terminal"
+				href="https://raw.githubusercontent.com/sapegin/squirrelsong/master/themes/Terminal/Squirrelsong%20Dark.terminal"
 			>
 				Download Squirrelsong Dark.terminal
 			</Link>,
@@ -217,8 +226,7 @@ export const instructions: Instructions[] = [
 		light: true,
 		comment:
 			'Also works for Microsoft Edge, and other Chromium-based browsers.',
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/Chrome%20DevTools#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Chrome%20DevTools#readme',
 		urlName: 'GitHub',
 	},
 
@@ -229,10 +237,13 @@ export const instructions: Instructions[] = [
 		id: 'chrome',
 		app: 'Google Chrome',
 		light: true,
+		dark: true,
 		comment:
 			'Also works for Microsoft Edge, and other Chromium-based browsers.',
 		urlLight:
 			'https://chrome.google.com/webstore/detail/squirrelsong-light-theme/djifnfnaealajnoccbifhbgmkholgljn',
+		urlDark:
+			'https://chromewebstore.google.com/detail/squirrelsong-dark-deep-pu/oimeikpbfflafafdppijokbhhldplimj',
 		urlName: 'Chrome Web Store',
 	},
 
@@ -243,7 +254,7 @@ export const instructions: Instructions[] = [
 		id: 'vivaldi',
 		app: 'Vivaldi',
 		light: true,
-		urlLight: 'https://themes.vivaldi.net/themes/zrnvL6V67L4',
+		url: 'https://themes.vivaldi.net/themes/zrnvL6V67L4',
 		urlName: 'Vivaldi Themes',
 	},
 
@@ -254,7 +265,7 @@ export const instructions: Instructions[] = [
 		id: 'alfred',
 		app: 'Alfred',
 		light: true,
-		urlLight: 'https://www.alfredapp.com/extras/theme/5IzAzy3Fuj/',
+		url: 'https://www.alfredapp.com/extras/theme/5IzAzy3Fuj/',
 		urlName: 'Alfredapp.com',
 	},
 
@@ -266,10 +277,7 @@ export const instructions: Instructions[] = [
 		app: 'Slack',
 		light: true,
 		dark: true,
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/Slack#readme',
-		urlDark:
-			'https://github.com/sapegin/squirrelsong/tree/master/dark/Slack#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Slack#readme',
 		urlName: 'GitHub',
 	},
 
@@ -280,7 +288,9 @@ export const instructions: Instructions[] = [
 		id: 'telegram',
 		app: 'Telegram',
 		light: true,
+		dark: true,
 		urlLight: 'https://t.me/addtheme/squirrelsonglight',
+		urlDark: 'https://t.me/addtheme/squirrelsongdarkdp',
 		urlName: 'Telegram',
 	},
 
@@ -291,8 +301,7 @@ export const instructions: Instructions[] = [
 		id: 'Bear',
 		app: 'Bear',
 		light: true,
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/Bear#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Bear#readme',
 		urlName: 'GitHub',
 	},
 
@@ -304,10 +313,7 @@ export const instructions: Instructions[] = [
 		app: 'Prism',
 		light: true,
 		dark: true,
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/PrismJs#readme',
-		urlDark:
-			'https://github.com/sapegin/squirrelsong/tree/master/dark/PrismJs#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/PrismJs#readme',
 		urlName: 'GitHub',
 	},
 
@@ -318,8 +324,7 @@ export const instructions: Instructions[] = [
 		id: 'mc',
 		app: 'Midnight Commander',
 		dark: true,
-		urlDark:
-			'https://github.com/sapegin/squirrelsong/tree/master/dark/Midnight%20Commander#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Midnight%20Commander#readme',
 		urlName: 'GitHub',
 	},
 
@@ -330,8 +335,7 @@ export const instructions: Instructions[] = [
 		id: 'marta',
 		app: 'Marta File Manager',
 		light: true,
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/Marta#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Marta#readme',
 		urlName: 'GitHub',
 	},
 
@@ -342,8 +346,7 @@ export const instructions: Instructions[] = [
 		id: 'warp',
 		app: 'Warp',
 		dark: true,
-		urlDark:
-			'https://github.com/sapegin/squirrelsong/tree/master/dark/Warp#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Warp#readme',
 		urlName: 'GitHub',
 	},
 
@@ -355,8 +358,7 @@ export const instructions: Instructions[] = [
 		app: 'Vim',
 		light: true,
 		comment: 'Also works for Neovim.',
-		urlLight:
-			'https://github.com/sapegin/squirrelsong/tree/master/light/Vim#readme',
+		url: 'https://github.com/sapegin/squirrelsong/tree/master/themes/Vim#readme',
 		urlName: 'GitHub',
 	},
 ];
