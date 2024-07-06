@@ -11,7 +11,7 @@ const lightTheme = JSON.parse(
 			.readFileSync(
 				path.join(
 					THEMES_DIR,
-					'light/VSCode/SquirrelsongLight/SquirrelsongLight.color-theme.json'
+					'themes/VSCode/SquirrelsongLight/SquirrelsongLight.color-theme.json'
 				)
 			)
 			.toString()
@@ -23,7 +23,7 @@ const darkTheme = JSON.parse(
 			.readFileSync(
 				path.join(
 					THEMES_DIR,
-					'dark/VSCode/SquirrelsongDark/SquirrelsongDark.color-theme.json'
+					'themes/VSCode/SquirrelsongDark/SquirrelsongDark.color-theme.json'
 				)
 			)
 			.toString()
