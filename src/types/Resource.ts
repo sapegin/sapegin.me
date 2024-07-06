@@ -4,4 +4,5 @@ export interface Resource {
 	description?: string;
 	image?: string;
 	date?: Date;
+	badges?: string[];
 }

@@ -1,5 +1,5 @@
 import type { Resource } from '../types/Resource';
-import { Stack, Grid, Text, Link } from '.';
+import { Stack, Grid, Text, Link, Badge } from '.';
 
 type Props = {
 	items: Resource[];
@@ -14,6 +14,13 @@ export function ResourceList({ items }: Props) {
 						{item.url ? <Link href={item.url}>{item.title}</Link> : item.title}
 					</Text>
 					{item.description && <Text>{item.description}</Text>}
+					{item.badges && (
+						<Stack as="p" direction="row" gap="xs" alignItems="center">
+							{item.badges.map((badge) => (
+								<Badge key={badge}>{badge}</Badge>
+							))}
+						</Stack>
+					)}
 				</Stack>
 			))}
 		</Grid>
