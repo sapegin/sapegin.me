@@ -52,8 +52,8 @@ function InstallationSteps({
 			<Stack direction="row" gap="m" alignItems="center">
 				<Heading level={3}>{app}</Heading>
 				<Stack as="p" direction="row" gap="xs" alignItems="center">
-					{light && <Badge>light</Badge>}
-					{dark && <Badge variant="inverted">dark</Badge>}
+					{light && <Badge>Light</Badge>}
+					{dark && <Badge variant="inverted">Dark</Badge>}
 				</Stack>
 			</Stack>
 			{comment && <Text variant="small">{comment}</Text>}

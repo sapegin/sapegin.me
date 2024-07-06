@@ -10,6 +10,7 @@ const badge = cva({
 		borderColor: 'accent',
 		borderRadius: 'large',
 		fontSize: 'xs',
+		textTransform: 'lowercase',
 	},
 	variants: {
 		variant: {
