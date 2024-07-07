@@ -22,6 +22,18 @@ const til = defineCollection({
 	schema: baseSchema,
 });
 
+// Squirrelsong themes
+const squirrels = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		app: z.string(),
+		aliases: z.preprocess((x) => String(x).split(', '), z.array(z.string())),
+		light: z.boolean(),
+		dark: z.boolean(),
+	}),
+});
+
 // Zines
 const zines = defineCollection({
 	type: 'content',
@@ -41,5 +53,6 @@ const zines = defineCollection({
 export const collections = {
 	blog,
 	til,
+	squirrels,
 	zines,
 };
