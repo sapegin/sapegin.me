@@ -15,8 +15,10 @@ const URL_PREFIX = 'https://github.com/sapegin/squirrelsong/raw/master';
 
 const read = (file: string) => fs.readFileSync(file, 'utf8');
 
-const getId = (filepath: string) =>
-	path.basename(path.dirname(filepath)).toLowerCase().replace(/ /g, '-');
+const getId = (filepath: string) => path.basename(path.dirname(filepath));
+
+const getSlug = (filepath: string) =>
+	getId(filepath).toLowerCase().replace(/ /g, '-');
 
 const stripMarkdown = (contents: string) =>
 	contents.replace(/\[([^\]]*?)\]\([^)]+\)/g, '$1');
@@ -102,6 +104,7 @@ for (const filepath of readmes) {
 
 	const folder = path.dirname(filepath);
 	const id = getId(filepath);
+	const slug = getSlug(filepath);
 	const app = getAppName(readme);
 	const title = getTitle(readme);
 
@@ -115,6 +118,7 @@ for (const filepath of readmes) {
 	const contents = `---
 title: '${title}'
 app: ${app}
+id: ${id}
 aliases: ${getAliases(readme)}
 light: ${hasLight}
 dark: ${hasDark}
@@ -122,7 +126,7 @@ dark: ${hasDark}
 
 ${markdown}
 `;
-	fs.writeFileSync(`${DEST_DIR}/${id}.md`, contents);
+	fs.writeFileSync(`${DEST_DIR}/${slug}.md`, contents);
 }
 
 console.log('[SQRLSNG] Done 🦜');

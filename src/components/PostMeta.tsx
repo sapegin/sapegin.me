@@ -27,14 +27,14 @@ type Props = Pick<Post, 'url' | 'date'>;
 export function PostMeta({ url, date }: Props) {
 	return (
 		<InlineList>
-			<InlineListItem as="span" variant="small">
+			<InlineListItem variant="small">
 				Discuss on <Link href={getMastodonLink()}>Mastodon</Link> or{' '}
 				<Link href={getTwitterLink()}>Twitter</Link>
 			</InlineListItem>
-			<InlineListItem as="span" variant="small">
+			<InlineListItem variant="small">
 				<Link href={getGitHubLink(url)}>Edit on GitHub</Link>
 			</InlineListItem>
-			<InlineListItem as="span" variant="small">
+			<InlineListItem variant="small">
 				<time dateTime={date.toISOString()}>
 					Published{' '}
 					<Nobr>

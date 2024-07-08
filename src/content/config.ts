@@ -28,6 +28,7 @@ const squirrels = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		app: z.string(),
+		id: z.string(),
 		aliases: z.preprocess(
 			(x) => (typeof x === 'string' ? x.split(', ') : []),
 			z.array(z.string())
