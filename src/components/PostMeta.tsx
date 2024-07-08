@@ -22,8 +22,6 @@ const getGitHubLink = (url: string) => {
 
 type Props = Pick<Post, 'url' | 'date'>;
 
-// TODO: format date
-
 export function PostMeta({ url, date }: Props) {
 	return (
 		<InlineList>
