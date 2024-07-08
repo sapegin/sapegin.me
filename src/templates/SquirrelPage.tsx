@@ -14,7 +14,9 @@ type Props = Post & {
 	related: Post[];
 };
 
-// TODO: Add "Sqrl also available for..."
+// TODO: Add "Sqrlsng also available for..."
+// TODO: Add a short description of what Sqrlsng is
+// TODO: Add a link to GitHub
 
 export function SquirrelPage({ url, title, children }: Props) {
 	return (

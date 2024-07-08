@@ -1,5 +1,3 @@
-import _ from 'lodash';
-import Group from 'react-group';
 import {
 	About,
 	Badge,
@@ -13,8 +11,6 @@ import {
 	Heading,
 	Link,
 	MurderOfCrows,
-	OrderedList,
-	OrderedListItem,
 	SquirrelsongLogo,
 	Stack,
 	Text,
@@ -22,65 +18,16 @@ import {
 	VisuallyHidden,
 } from '../components';
 import { Page } from './Page';
-import {
-	instructions,
-	type Instructions,
-} from './SquirrelsongPageInstructions';
+import type { Squirrel } from '../types/Squirrel';
 
 type Props = {
 	url: string;
+	squirrels: Squirrel[];
 	codes: {
 		light: Record<string, string>;
 		dark: Record<string, string>;
 	};
 };
-
-const sortedInstructions = _.sortBy(instructions, ({ app }) =>
-	app.toLowerCase()
-);
-
-function InstallationSteps({
-	id,
-	app,
-	light,
-	dark,
-	comment,
-	...steps
-}: Instructions) {
-	return (
-		<Stack as="article" id={id} gap="s">
-			<Stack direction="row" gap="m" alignItems="center">
-				<Heading level={3}>{app}</Heading>
-				<Stack as="p" direction="row" gap="xs" alignItems="center">
-					{light && <Badge>Light</Badge>}
-					{dark && <Badge variant="inverted">Dark</Badge>}
-				</Stack>
-			</Stack>
-			{comment && <Text variant="small">{comment}</Text>}
-			{'urlLight' in steps && (
-				<Text>
-					Follow the instructions on {steps.urlName}:{' '}
-					<Link href={steps.urlLight}>light theme</Link>,{' '}
-					<Link href={steps.urlDark}>dark theme</Link>
-				</Text>
-			)}
-			{'url' in steps && (
-				<Text>
-					<Link href={steps.url}>
-						Follow the instructions on {steps.urlName}
-					</Link>
-				</Text>
-			)}
-			{'steps' in steps && (
-				<OrderedList>
-					{steps.steps.map((step, index) => (
-						<OrderedListItem key={index}>{step}</OrderedListItem>
-					))}
-				</OrderedList>
-			)}
-		</Stack>
-	);
-}
 
 function Hero() {
 	return (
@@ -205,7 +152,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 				</Stack>
 			</Stack>
 			<Stack gap="s">
-				<Heading level={3}>UI themes for 13 apps and growing</Heading>
+				<Heading level={3}>UI themes for many apps</Heading>
 				<Stack gap="m">
 					<TextTypo>
 						From your favorite code editor and terminal to Slack and Google
@@ -251,42 +198,59 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 	);
 }
 
-function Installation() {
+function InstallationLink({ app, url, light, dark }: Squirrel) {
+	return (
+		<Stack gap="xs">
+			<Text variant="semilarge">
+				<Link href={url}>{app}</Link>
+			</Text>
+			<Stack as="p" direction="row" gap="xs" alignItems="center">
+				{light && <Badge>Light</Badge>}
+				{dark && <Badge variant="inverted">Dark</Badge>}
+			</Stack>
+		</Stack>
+	);
+}
+
+function Installation({ squirrels }: Pick<Props, 'squirrels'>) {
 	return (
 		<Stack gap="l" id="download">
 			<Stack gap="s">
 				<Heading level={2}>
 					Get it for your editor, terminal, or&nbsp;app
 				</Heading>
-				<Text>
-					<Group separator=", ">
-						{sortedInstructions.map((app) => (
-							<Link key={app.id} href={`#${app.id}`}>
-								{app.app}
-							</Link>
-						))}
-					</Group>
-				</Text>
+				<Text>Themes for {squirrels.length} apps and growing.</Text>
 			</Stack>
-			{sortedInstructions.map((app) => (
-				<InstallationSteps key={app.id} {...app} />
-			))}
+			<Grid
+				gap="m"
+				gridTemplateColumns={{
+					base: '1fr',
+					tablet: '1fr 1fr',
+					desktop: '1fr 1fr 1fr',
+				}}
+			>
+				{squirrels.map((app) => (
+					<InstallationLink key={app.url} {...app} />
+				))}
+			</Grid>
 		</Stack>
 	);
 }
 
-export function SquirrelsongPage({ url, codes }: Props) {
+export function SquirrelsongPage({ url, squirrels, codes }: Props) {
 	return (
 		<Page url={url}>
 			<main>
-				<Stack gap="l">
-					<Hero />
-					<Text variant="intro">
-						A low-contrast, non-distracting, and neurodiverse-friendly theme
-						that is comfortable for all-day coding without sensory overload.
-					</Text>
+				<Stack gap="xl">
+					<Stack gap="l">
+						<Hero />
+						<Text variant="intro">
+							A low-contrast, non-distracting, and neurodiverse-friendly theme
+							that is comfortable for all-day coding without sensory overload.
+						</Text>
+					</Stack>
 					<Features codes={codes} />
-					<Installation />
+					<Installation squirrels={squirrels} />
 					<About>
 						I created the first version of this theme in 2016, and since then
 						use it every day at work and for personal projects. Seven years

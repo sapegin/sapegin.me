@@ -1,9 +1,30 @@
 ---
 import fs from 'fs';
 import path from 'path';
+import _ from 'lodash';
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { SquirrelsongPage } from '../../templates/SquirrelsongPage';
 import { highlightCode, type CodeLang } from '../../util/highlightCode';
+import { squirrelEntryToSquirrel } from '../../util/squirrelEntryToSquirrel';
+
+const entries = await getCollection('squirrels');
+
+const squirrelsBase = entries.map(squirrelEntryToSquirrel);
+const squirrelsWithAliases = squirrelsBase.flatMap((squirrel) => {
+	if (squirrel.aliases.length > 0) {
+		return [
+			squirrel,
+			...squirrel.aliases.map((alias) => ({
+				...squirrel,
+				app: alias,
+			})),
+		];
+	} else {
+		return squirrel;
+	}
+});
+const squirrels = _.sortBy(squirrelsWithAliases, 'app');
 
 const EXAMPLES_DIR = 'assets/squirrelsong/examples';
 
@@ -78,5 +99,5 @@ examples.forEach(({ name, lang, code }) => {
 	pageTitle="Squirrelsong: light & dark themes for web developers by Artem Sapegin"
 	description="Low-contrast light and dark themes for web developers: low-contrast color schemes with great readability and non-distracting UI themes for your IDE or code editor."
 	component={SquirrelsongPage}
-	props={{ codes }}
+	props={{ squirrels, codes }}
 />
