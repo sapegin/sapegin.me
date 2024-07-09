@@ -22,5 +22,5 @@ export async function getAllSquirrels() {
 			return squirrel;
 		}
 	});
-	return _.sortBy(squirrelsWithAliases, 'app');
+	return _.sortBy(squirrelsWithAliases, (x) => x.app.toLocaleLowerCase());
 }
