@@ -3,6 +3,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { SquirrelPage } from '../../templates/SquirrelPage';
 import { squirrelEntryToSquirrel } from '../../util/squirrelEntryToSquirrel';
+import { getAllSquirrels } from '../../util/getAllSquirrels';
 
 type Entry = CollectionEntry<'squirrels'>;
 type Props = Entry;
@@ -18,13 +19,16 @@ export async function getStaticPaths() {
 const entry = Astro.props;
 const post = squirrelEntryToSquirrel(entry);
 
+const squirrels = await getAllSquirrels();
+
 const { Content } = await entry.render();
 ---
 
 <Layout
 	{...post}
-	description="Low-contrast light and dark themes for web developers: low-contrast color schemes with great readability and non-distracting UI themes for your IDE or code editor."
+	description="Low-contrast light and dark themes for web developers: low-contrast color schemes with great readability and non-distracting UI themes for many apps."
 	component={SquirrelPage}
+	props={{ ...post, squirrels }}
 >
 	<Content />
 </Layout>
