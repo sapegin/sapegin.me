@@ -2,13 +2,13 @@
   {
     "url": "/blog/avoid-loops/",
     "title": "Avoid loops",
-    "description": "Working with iterations and why traditional for loops may not be the best way of doing that",
+    "description": "Iterating over collections and why traditional loops like `for` and `while` may not be the best approach",
     "sections": []
   },
   {
     "url": "/blog/avoid-conditions/",
     "title": "Avoid conditions",
-    "description": "Writing good conditions and simplifying the code by avoiding them",
+    "description": "Writing good conditions and simplifying the code by removing unnecessary ones",
     "sections": []
   },
   {
@@ -72,7 +72,8 @@
       "Make impossible states impossible",
       "Don’t try to predict the future",
       "Become a code scout",
-      "Make the code greppable",
+      "Write testable code",
+      "Write greppable code",
       "Avoid not invented here syndrome",
       "Avoid cargo cult programming",
       "Debug code with emojis",
