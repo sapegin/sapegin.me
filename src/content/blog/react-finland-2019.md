@@ -165,7 +165,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - “‘Legacy code’” often differs from its suggested alternative by actually working and scaling.” — Bjarne Stroustrup.
 - The real cost of software is not the initial development, but maintenance over time.
 - Architecture as enabling constraints: constraints about how we use data and code that help us move faster over time.
-- Shared dependencies: add them to the design system or copy-paste.
+- Shared dependencies: add them to the design system or copypaste.
 - Decoupled code is better than DRY.
 
 Three constraints you can use today for more resilient frontend architecture:
