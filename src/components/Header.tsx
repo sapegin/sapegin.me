@@ -16,6 +16,24 @@ export function Header({ url }: Props) {
 			}}
 		>
 			<Box
+				as="a"
+				href="#content"
+				css={{
+					position: 'absolute',
+					top: '-100%',
+					padding: 'm',
+					backgroundColor: 'text',
+					color: 'background',
+					textDecoration: 'none',
+					_focus: {
+						top: 0,
+						outline: 0,
+					},
+				}}
+			>
+				Skip to content
+			</Box>
+			<Box
 				width={{ tablet: LOGO_WIDTH }}
 				mx="auto"
 				mb={{ base: 'm', tablet: '-2.6rem' }}

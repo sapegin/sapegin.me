@@ -240,47 +240,45 @@ function Installation({ squirrels }: Pick<Props, 'squirrels'>) {
 export function SquirrelsongPage({ url, squirrels, codes }: Props) {
 	return (
 		<Page url={url}>
-			<main>
-				<Stack gap="xl">
-					<Stack gap="l">
-						<Hero />
-						<Text variant="intro">
-							A low-contrast, non-distracting, and neurodiverse-friendly theme
-							that is comfortable for all-day coding without sensory overload.
-						</Text>
-					</Stack>
-					<Features codes={codes} />
-					<Installation squirrels={squirrels} />
-					<About>
-						I created the first version of this theme in 2016, and since then
-						use it every day at work and for personal projects. Seven years
-						later, I rebuilt it almost from scratch and improved many things.
-					</About>
-					<Stack gap="m">
-						<Heading level={2}>Have a question?</Heading>
-						<Feedback github="squirrelsong" />
-					</Stack>
-					<Stack gap="m">
-						<Heading level={2}>Like the theme?</Heading>
-						<BuyMeCoffee />
-					</Stack>
-					<MurderOfCrows />
-					<Text variant="small">
-						The font used in all examples and logo is{' '}
-						<Link href="https://www.monolisa.dev/">MonoLisa</Link>. The icons on
-						the Visual Studio Code screenshots are from the{' '}
-						<Link href="https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons">
-							Catppuccin&nbsp;Icons
-						</Link>{' '}
-						extension. The gradient new tab page in the Chrome screenshot is
-						from the{' '}
-						<Link href="https://chromewebstore.google.com/detail/blank-sky-new-tab-page/bafoejhfmmcjdjlkihjbgcmifcinomaj">
-							Blank&nbsp;Sky
-						</Link>{' '}
-						extension.
+			<Stack gap="xl">
+				<Stack gap="l">
+					<Hero />
+					<Text variant="intro">
+						A low-contrast, non-distracting, and neurodiverse-friendly theme
+						that is comfortable for all-day coding without sensory overload.
 					</Text>
 				</Stack>
-			</main>
+				<Features codes={codes} />
+				<Installation squirrels={squirrels} />
+				<About>
+					I created the first version of this theme in 2016, and since then use
+					it every day at work and for personal projects. Seven years later, I
+					rebuilt it almost from scratch and improved many things.
+				</About>
+				<Stack gap="m">
+					<Heading level={2}>Have a question?</Heading>
+					<Feedback github="squirrelsong" />
+				</Stack>
+				<Stack gap="m">
+					<Heading level={2}>Like the theme?</Heading>
+					<BuyMeCoffee />
+				</Stack>
+				<MurderOfCrows />
+				<Text variant="small">
+					The font used in all examples and logo is{' '}
+					<Link href="https://www.monolisa.dev/">MonoLisa</Link>. The icons on
+					the Visual Studio Code screenshots are from the{' '}
+					<Link href="https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons">
+						Catppuccin&nbsp;Icons
+					</Link>{' '}
+					extension. The gradient new tab page in the Chrome screenshot is from
+					the{' '}
+					<Link href="https://chromewebstore.google.com/detail/blank-sky-new-tab-page/bafoejhfmmcjdjlkihjbgcmifcinomaj">
+						Blank&nbsp;Sky
+					</Link>{' '}
+					extension.
+				</Text>
+			</Stack>
 		</Page>
 	);
 }

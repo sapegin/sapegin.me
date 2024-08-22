@@ -12,7 +12,7 @@ export function Page({ children, url }: Props) {
 			<Stack gap="xl">
 				<Stack gap="l">
 					<Header url={url} />
-					{children}
+					<main id="content">{children}</main>
 				</Stack>
 				<Footer />
 			</Stack>

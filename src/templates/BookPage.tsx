@@ -342,117 +342,115 @@ function Features() {
 export function BookPage({ url, chapters }: Props) {
 	return (
 		<Page url={url}>
-			<main>
-				<Stack gap="xl">
-					<Stack gap="s">
-						<Heading level={1}>Washing your code</Heading>
-						<Heading level={3} as="p">
-							A book on clean code for frontend developers
-						</Heading>
-					</Stack>
-					<Stack
-						as="section"
-						direction={{ base: 'column', tablet: 'row' }}
-						gap="l"
-					>
-						<Stack gap="l">
-							<VisuallyHidden as="h2">About the book</VisuallyHidden>
-							<Stack gap="m">
-								<TextTypo variant="intro">
-									We read code much more often than we write it — often to make
-									a one-line change you have to read and understand hundreds of
-									lines of code scattered among dozens of files. That’s why code
-									readability is so important.
-								</TextTypo>
-								<TextTypo>
-									On dozens of examples, based on production code, I’ll show you
-									how to make your code more readable and maintainable, and how
-									to avoid hard-to-track bugs. I’ll show you code smells and
-									antipatterns I often see during code reviews (and I review
-									lots of code every day!) and will walk you through the
-									refactoring process to make your code better.
-								</TextTypo>
-								<TextTypo>
-									These techniques help me every day to write code that my
-									colleagues will have no problems working with. All book’s
-									examples are written in JavaScript with a bit of TypeScript,
-									React, CSS, and HTML.
-								</TextTypo>
-							</Stack>
-							<Stack direction="column" gap="s">
-								<Box>
-									<TheButton />
-								</Box>
-								<Text>
-									<Link href="#toc">Or read selected chapters below</Link>
-								</Text>
-							</Stack>
-						</Stack>
-						<Box
-							mx={{ base: 'auto', tablet: 0 }}
-							order={{ base: -1, tablet: 0 }}
-							flexShrink={0}
-						>
-							<BookCover
-								image="washing-your-code-large"
-								title="Washing your code"
-								width={250}
-								height={324}
-							/>
-						</Box>
-					</Stack>
-					<Stack as="section" gap="m">
-						<Heading level={2}>What’s inside?</Heading>
-						<Features />
-					</Stack>
-					<Stack as="section" gap="m">
-						<Heading level={2} id="toc">
-							Table of contents
-						</Heading>
-						<ChapterList chapters={chapters} />
-					</Stack>
-					<Stack as="section" gap="m">
-						<Heading level={2}>What readers are saying?</Heading>
-						<Grid
-							gap="l"
-							gridTemplateColumns={{
-								base: '1fr',
-								tablet: '1fr 1fr',
-							}}
-						>
-							{testimonials.map((testimonial) => (
-								<Testimonial key={testimonial.author} {...testimonial} />
-							))}
-						</Grid>
-					</Stack>
-					<Stack as="section" gap="m">
-						<Heading level={2}>Frequently asked questions</Heading>
-						<Stack gap="m">
-							{faq.map(({ question, answer }) => (
-								<article key={question}>
-									<TextTypo as="h3" variant="bold">
-										{question}
-									</TextTypo>
-									<TextTypo>{answer}</TextTypo>
-								</article>
-							))}
-						</Stack>
-					</Stack>
-					<Flex justifyContent="center">
-						<TheButton />
-					</Flex>
-					<About>
-						I’ve been <Link href="/blog/">blogging</Link> about frontend
-						development for almost as many years. My favorite topics are
-						component-driven development, testing, and accessibility.
-					</About>
-					<Stack as="section" gap="m">
-						<Heading level={2}>Have a question?</Heading>
-						<Feedback github="washingcode-book" />
-					</Stack>
-					<MurderOfCrows />
+			<Stack gap="xl">
+				<Stack gap="s">
+					<Heading level={1}>Washing your code</Heading>
+					<Heading level={3} as="p">
+						A book on clean code for frontend developers
+					</Heading>
 				</Stack>
-			</main>
+				<Stack
+					as="section"
+					direction={{ base: 'column', tablet: 'row' }}
+					gap="l"
+				>
+					<Stack gap="l">
+						<VisuallyHidden as="h2">About the book</VisuallyHidden>
+						<Stack gap="m">
+							<TextTypo variant="intro">
+								We read code much more often than we write it — often to make a
+								one-line change you have to read and understand hundreds of
+								lines of code scattered among dozens of files. That’s why code
+								readability is so important.
+							</TextTypo>
+							<TextTypo>
+								On dozens of examples, based on production code, I’ll show you
+								how to make your code more readable and maintainable, and how to
+								avoid hard-to-track bugs. I’ll show you code smells and
+								antipatterns I often see during code reviews (and I review lots
+								of code every day!) and will walk you through the refactoring
+								process to make your code better.
+							</TextTypo>
+							<TextTypo>
+								These techniques help me every day to write code that my
+								colleagues will have no problems working with. All book’s
+								examples are written in JavaScript with a bit of TypeScript,
+								React, CSS, and HTML.
+							</TextTypo>
+						</Stack>
+						<Stack direction="column" gap="s">
+							<Box>
+								<TheButton />
+							</Box>
+							<Text>
+								<Link href="#toc">Or read selected chapters below</Link>
+							</Text>
+						</Stack>
+					</Stack>
+					<Box
+						mx={{ base: 'auto', tablet: 0 }}
+						order={{ base: -1, tablet: 0 }}
+						flexShrink={0}
+					>
+						<BookCover
+							image="washing-your-code-large"
+							title="Washing your code"
+							width={250}
+							height={324}
+						/>
+					</Box>
+				</Stack>
+				<Stack as="section" gap="m">
+					<Heading level={2}>What’s inside?</Heading>
+					<Features />
+				</Stack>
+				<Stack as="section" gap="m">
+					<Heading level={2} id="toc">
+						Table of contents
+					</Heading>
+					<ChapterList chapters={chapters} />
+				</Stack>
+				<Stack as="section" gap="m">
+					<Heading level={2}>What readers are saying?</Heading>
+					<Grid
+						gap="l"
+						gridTemplateColumns={{
+							base: '1fr',
+							tablet: '1fr 1fr',
+						}}
+					>
+						{testimonials.map((testimonial) => (
+							<Testimonial key={testimonial.author} {...testimonial} />
+						))}
+					</Grid>
+				</Stack>
+				<Stack as="section" gap="m">
+					<Heading level={2}>Frequently asked questions</Heading>
+					<Stack gap="m">
+						{faq.map(({ question, answer }) => (
+							<article key={question}>
+								<TextTypo as="h3" variant="bold">
+									{question}
+								</TextTypo>
+								<TextTypo>{answer}</TextTypo>
+							</article>
+						))}
+					</Stack>
+				</Stack>
+				<Flex justifyContent="center">
+					<TheButton />
+				</Flex>
+				<About>
+					I’ve been <Link href="/blog/">blogging</Link> about frontend
+					development for almost as many years. My favorite topics are
+					component-driven development, testing, and accessibility.
+				</About>
+				<Stack as="section" gap="m">
+					<Heading level={2}>Have a question?</Heading>
+					<Feedback github="washingcode-book" />
+				</Stack>
+				<MurderOfCrows />
+			</Stack>
 		</Page>
 	);
 }
