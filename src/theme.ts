@@ -6,7 +6,7 @@ export const colors = {
 	light: '#94949e',
 	border: '#3a3d40',
 	primary: '#577290',
-	accent: '#c45a8d',
+	accent: '#be4b83',
 	selection: '#faebaf',
 	codeBlack: '#565a67',
 	codeGray: '#6c7693',
