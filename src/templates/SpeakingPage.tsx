@@ -5,8 +5,8 @@ import type { Gig } from '../types/Gig';
 type Props = {
 	url: string;
 	title: string;
-	upcomingEvents: any;
-	pastEvents: any;
+	upcomingEvents: Gig[];
+	pastEvents: Gig[];
 };
 
 const EventSection = ({ title, items }: { title: string; items: Gig[] }) =>
@@ -15,7 +15,7 @@ const EventSection = ({ title, items }: { title: string; items: Gig[] }) =>
 			<Heading level={2}>{title}</Heading>
 			<EventList items={items} />
 		</Stack>
-	) : null;
+	) : undefined;
 
 export function SpeakingPage({
 	url,

@@ -76,7 +76,7 @@ First, **the complexity of tooling involved in development of a typical open sou
 
 - **Publishing** JavaScript code (can’t speak about other languages — most of my work is JavaScript and TypeScript) in a way that it could be used by many people [is very complex](https://blog.isquaredsoftware.com/2023/08/esm-modernization-lessons/), and it’s getting worse.
 - **Dependency upgrades** often take ages, and if you have multiple projects, it could turn into a year-long adventure (I even made [a tool](https://mrm.js.org) to help with that).
-- Generally, the amount of **configuration** (TypeScript, linters, bundlers, releases, dependencies, testing, continues integration, changelog generation, and more, and more, and more…) is quickly getting out of hand.
+- Generally, the amount of **configuration** (TypeScript, linters, bundlers, releases, dependencies, testing, continuous integration, changelog generation, and more, and more, and more…) is quickly getting out of hand.
 
 Second, GitHub could do so much more (more than nothing) to **protect its users from toxic people**. For example, GitHub could:
 

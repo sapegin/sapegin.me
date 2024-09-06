@@ -22,7 +22,7 @@ const getFileMtime = (filename) => {
 	try {
 		return fs.statSync(filename).mtime;
 	} catch {
-		return undefined;
+		// Ignore errors
 	}
 };
 

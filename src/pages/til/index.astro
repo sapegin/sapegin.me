@@ -17,7 +17,10 @@ const getCategories = (postsByCategory: Record<string, Post[]>): string[] => {
 };
 
 const entries = await getCollection('til');
-const posts = _.sortBy(entries.map(tilEntryToPost), (x) => x.title);
+const posts = _.sortBy(
+	entries.map((x) => tilEntryToPost(x)),
+	(x) => x.title
+);
 const postsByCategory = groupByCategory(posts);
 const categories = getCategories(postsByCategory);
 ---

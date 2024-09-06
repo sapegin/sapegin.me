@@ -29,8 +29,6 @@ function getImageUrl(pageUrl?: string, pageImage?: string) {
 		const imagePath = pageUrl.replace(/\/$/, '.png');
 		return `${SITE_URL}/cards/src/content${imagePath}`;
 	}
-
-	return undefined;
 }
 
 const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');

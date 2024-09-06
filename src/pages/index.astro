@@ -14,7 +14,7 @@ const blogEntries = await getCollection(
 	({ data }) => data.draft !== true
 );
 const blogPosts = _.sortBy(
-	blogEntries.map(blogEntryToPost),
+	blogEntries.map((x) => blogEntryToPost(x)),
 	(x) => -x.date
 ).slice(0, NUM_RECENT_POSTS);
 
@@ -22,10 +22,10 @@ const tilEntries = await getCollection(
 	'til',
 	({ data }) => data.draft !== true
 );
-const tilPosts = _.sortBy(tilEntries.map(tilEntryToPost), (x) => -x.date).slice(
-	0,
-	NUM_RECENT_POSTS
-);
+const tilPosts = _.sortBy(
+	tilEntries.map((x) => tilEntryToPost(x)),
+	(x) => -x.date
+).slice(0, NUM_RECENT_POSTS);
 
 const books: Resource[] = [
 	{

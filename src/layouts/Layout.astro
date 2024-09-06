@@ -19,7 +19,7 @@ const { component: Page } = Astro.props;
 const getTitle = ({
 	title,
 	pageTitle,
-}: Pick<Props<any>, 'title' | 'pageTitle'>) => {
+}: Pick<Props<unknown>, 'title' | 'pageTitle'>) => {
 	if (pageTitle) {
 		return pageTitle;
 	}

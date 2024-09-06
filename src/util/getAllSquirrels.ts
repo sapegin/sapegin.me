@@ -8,7 +8,7 @@ import { squirrelEntryToSquirrel } from './squirrelEntryToSquirrel';
 export async function getAllSquirrels() {
 	const entries = await getCollection('squirrels');
 
-	const squirrelsBase = entries.map(squirrelEntryToSquirrel);
+	const squirrelsBase = entries.map((x) => squirrelEntryToSquirrel(x));
 	const squirrelsWithAliases = squirrelsBase.flatMap((squirrel) => {
 		if (squirrel.aliases.length > 0) {
 			return [

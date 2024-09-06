@@ -30,7 +30,13 @@ export function Subscription({ list = 'default' }: Props) {
 					</>
 				)}
 			</TextTypo>
-			<iframe src={iframeUrl} width="100%" height="320" loading="lazy" />
+			<iframe
+				title="Newsletter form"
+				src={iframeUrl}
+				width="100%"
+				height="320"
+				loading="lazy"
+			/>
 		</Stack>
 	);
 }

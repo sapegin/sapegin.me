@@ -2,8 +2,8 @@
 
 // TODO: Convert to TypeScript
 
-import path from 'path';
-import { execSync } from 'child_process';
+import path from 'node:path';
+import { execSync } from 'node:child_process';
 import fs from 'fs-extra';
 import { globSync } from 'glob';
 
@@ -27,7 +27,7 @@ const getMeta = (contents) =>
 const stripTitle = (contents) => contents.replace(/^#.*?$/m, '');
 
 const updateImageLinks = (contents) =>
-	contents.replace(/\.\.\/images\//g, '../../../../til-master/images/');
+	contents.replaceAll('../images/', '../../../../til-master/images/');
 
 const template = ({ title, date, tags, contents }) => `---
 title: '${title}'
@@ -48,8 +48,8 @@ fs.emptyDirSync(DEST_DIR);
 console.log();
 console.log('[TIL] Syncing files...');
 
-const docs = globSync(`${REPO_DIR}/*/*.md`);
-docs.forEach((filepath) => {
+const documents = globSync(`${REPO_DIR}/*/*.md`);
+for (const filepath of documents) {
 	console.log(`[TIL] 👉 ${filepath}`);
 	const contents = read(filepath);
 	const [, title] = getTitle(contents);
@@ -63,6 +63,6 @@ docs.forEach((filepath) => {
 			contents,
 		})
 	);
-});
+}
 
 console.log('[TIL] Done 🦜');

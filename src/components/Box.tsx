@@ -20,6 +20,7 @@ export type BoxProps<C extends ElementType> = HTMLStyledProps<C> & AsProp<C>;
 export function createBox(
 	// We don't use BoxProps here to suppress the "Expression produces
 	// a union type that is too complex to represent" error
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	{ as, ...props }: Record<string, any>,
 	/** Default HTML element */
 	defaultElement: ElementType = 'div',

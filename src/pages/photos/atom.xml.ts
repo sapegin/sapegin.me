@@ -18,7 +18,7 @@ function globToEntries(items: GlobResult) {
 }
 
 function getPubDate(photo: Image) {
-	const match = photo.url.match(/\/photos\/(\d\d\d\d)-(\d\d)-(\d\d)_/);
+	const match = photo.url.match(/\/photos\/(\d{4})-(\d{2})-(\d{2})_/);
 	if (match === null) {
 		return new Date();
 	}

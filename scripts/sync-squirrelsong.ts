@@ -1,8 +1,8 @@
 // Get themes from the Squirrelsong repo
 // Create pages with instructions for each theme
 
-import { execSync } from 'child_process';
-import path from 'path';
+import { execSync } from 'node:child_process';
+import path from 'node:path';
 import fs from 'fs-extra';
 import _ from 'lodash';
 import { globSync } from 'glob';
@@ -18,10 +18,10 @@ const read = (file: string) => fs.readFileSync(file, 'utf8');
 const getId = (filepath: string) => path.basename(path.dirname(filepath));
 
 const getSlug = (filepath: string) =>
-	getId(filepath).toLowerCase().replace(/ /g, '-');
+	getId(filepath).toLowerCase().replaceAll(' ', '-');
 
 const stripMarkdown = (contents: string) =>
-	contents.replace(/\[([^\]]*?)\]\([^)]+\)/g, '$1');
+	contents.replaceAll(/\[([^\]]*?)]\([^)]+\)/g, '$1');
 
 const stripTitle = (contents: string) => contents.replace(/^#+ .*$/m, '');
 
@@ -49,20 +49,23 @@ const hasLightTheme = (contents: string) =>
 const hasDarkTheme = (contents: string) => contents.includes('screenshot-dark');
 
 const updateTips = (contents: string) =>
-	contents.replace(/\n>\s*\[!(WARNING|NOTE)\]\s*\n>\s*/gm, ($, marker) => {
-		return `\n**${_.upperFirst(marker.toLowerCase())}:** `;
-	});
+	contents.replaceAll(
+		/\n>\s*\[!(WARNING|NOTE)]\s*\n>\s*/gm,
+		(_match, marker) => {
+			return `\n**${_.upperFirst(marker.toLowerCase())}:** `;
+		}
+	);
 
 const updateImages = (prefix: string) => (contents: string) =>
-	contents.replace(
-		/\]\(screenshot-/g,
-		`](../../../${prefix.replace(/ /g, '%20')}/screenshot-`
+	contents.replaceAll(
+		'](screenshot-',
+		`](../../../${prefix.replaceAll(' ', '%20')}/screenshot-`
 	);
 
 // Update links and images
 // foo.png → https://github.com/sapegin/squirrelsong/raw/master/themes/Bear/foo.png
 const updateLinks = (prefix: string) => (contents: string) =>
-	contents.replace(/\[([^\]]*?)\]\(([^)]+)\)/g, ($, title, href) => {
+	contents.replaceAll(/\[([^\]]*?)]\(([^)]+)\)/g, (_match, title, href) => {
 		if (
 			href.startsWith('http') ||
 			href.startsWith('chrome:') ||
@@ -71,7 +74,7 @@ const updateLinks = (prefix: string) => (contents: string) =>
 			return `[${title}](${href})`;
 		}
 
-		return `[${title}](${URL_PREFIX}/${prefix.replace(`${REPO_DIR}/`, '').replace(/ /g, '%20')}/${href})`;
+		return `[${title}](${URL_PREFIX}/${prefix.replace(`${REPO_DIR}/`, '').replaceAll(' ', '%20')}/${href})`;
 	});
 
 console.log('[SQRLSNG] Downloading themes...');

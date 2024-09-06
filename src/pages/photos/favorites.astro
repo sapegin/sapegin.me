@@ -10,7 +10,11 @@ const photosRaw = await Astro.glob<ImageRaw>(
 );
 
 // Sort by date (all photos MUST BE named as YYYY-MM-DD_xxx)
-const allPhotos = _.orderBy(photosRaw.map(unwrapImage), ['url'], ['desc']);
+const allPhotos = _.orderBy(
+	photosRaw.map((x) => unwrapImage(x)),
+	['url'],
+	['desc']
+);
 
 // Group by aspect ratio, but keep all horizontal photos in a single group
 const photosByAspectRatio = _.groupBy(allPhotos, (x) => {
@@ -19,11 +23,11 @@ const photosByAspectRatio = _.groupBy(allPhotos, (x) => {
 });
 
 // Split each group of vertical photos into pairs
-const photoPairs = Object.entries(photosByAspectRatio)
-	.map(([aspectRatio, photos]) => {
+const photoPairs = Object.entries(photosByAspectRatio).flatMap(
+	([aspectRatio, photos]) => {
 		return _.chunk(photos, aspectRatio === '0' ? 1 : 2);
-	})
-	.flat(1);
+	}
+);
 
 // Sort by the date of the first photo in the pair
 const sortedPhotos = _.orderBy(photoPairs, [(x) => x[0].url], ['desc']);

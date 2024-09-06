@@ -1554,7 +1554,7 @@ Most JavaScript and TypeScript style guides suggest the following:
 - PascalCase for class names and types;
 - SCREAMING_SNAKE_CASE for constants.
 
-**Tip:** One of the benefits of naming conventions that use an underscore (`_`) or nothing to glue words together over conventions that use a dash (`-`) is that we can select a full name using a double click or Alt+Shift+Left or Alt+Shift+Right hotkeys (these hotkeys expand the selection to the end of the word).
+**Tip:** One of the benefits of naming conventions that use an underscore (`_`) or nothing to glue words together over conventions that use a dash (`-`) is that we can select a full name using a double-click or Alt+Shift+Left or Alt+Shift+Right hotkeys (these hotkeys expand the selection to the end of the word).
 
 The code that doesn’t follow the established naming conventions for a particular language looks awkward for developers who are used to these conventions:
 
@@ -1580,7 +1580,7 @@ console.log(loudFruits);
 
 <!-- expect(loudFruits).toEqual(['GUAVA', 'PAPAYA', 'PINEAPPLE']) -->
 
-However, in Python, where kebab_case is common, it looks fine:
+However, in Python, where kebab-case is common, it looks fine:
 
 ```python
 fruits = ['Guava', 'Papaya', 'Pineapple']

@@ -21,7 +21,7 @@ const post = blogEntryToPost(entry);
 const { Content } = await entry.render();
 
 const entries = await getCollection('blog', ({ data }) => data.draft !== true);
-const posts = entries.map(blogEntryToPost);
+const posts = entries.map((x) => blogEntryToPost(x));
 const related = getRelatedPosts(posts, post);
 ---
 

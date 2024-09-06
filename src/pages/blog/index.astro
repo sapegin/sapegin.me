@@ -7,7 +7,7 @@ import { blogEntryToPost } from '../../util/blogEntryToPost';
 
 const entries = await getCollection('blog', ({ data }) => data.draft !== true);
 const posts = entries
-	.map(blogEntryToPost)
+	.map((x) => blogEntryToPost(x))
 	.toSorted((a, b) => b.date.getTime() - a.date.getTime());
 
 const postsByYear = _.groupBy(posts, (post) => post.date.getFullYear());

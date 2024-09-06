@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
 // Get Markdown from the Washing code book repo
 
-import { execSync } from 'child_process';
+// TODO: Make a map of all sections with an ID and validate all chapter links
+// TODO: Collect techniques and antipatterns
+
+import { execSync } from 'node:child_process';
 import fs from 'fs-extra';
 import { globSync } from 'glob';
 import matter from 'gray-matter';
@@ -36,11 +37,11 @@ const DEST_DIR = 'src/content/blog';
 const DATA_DIR = 'src/data';
 
 const TIPS = {
-	'I>': 'Info',
-	'W>': 'Warning',
-	'E>': 'Error',
-	'T>': 'Tip',
-};
+	I: 'Info',
+	W: 'Warning',
+	E: 'Error',
+	T: 'Tip',
+} as const;
 
 const slugger = new GithubSlugger();
 
@@ -59,10 +60,10 @@ const getSlug = (file: string) =>
 
 const getUrl = (file: string) => `/blog/${getSlug(file)}/`;
 
-const getMainId = (contents: string) => contents.match(/\{#(.*)\}/m)?.[1] ?? '';
+const getMainId = (contents: string) => contents.match(/{#(.*)}/m)?.[1] ?? '';
 
 const stripIds = (contents: string) =>
-	contents.replace(/\n?\{#[^\n]+\}\n$/gm, '');
+	contents.replaceAll(/\n?{#[^\n]+}\n$/gm, '');
 
 const stripTitle = (contents: string) => contents.replace(/^#+ .*$/m, '');
 
@@ -71,17 +72,18 @@ const getTitle = (contents: string) => contents.match(/^#+ (.*?)$/m)?.[1] ?? '';
 const getDescription = (contents: string) =>
 	contents.match(/<!-- description:\s+(.*?)\s+-->/)?.[1] ?? false;
 
-const getSections = (contents: string) =>
-	Array.from(contents.match(/(?<=\n##\s+)([^\n]+)/gm) ?? []);
+const getSections = (contents: string) => [
+	...(contents.match(/(?<=\n##\s+)([^\n]+)/gm) ?? []),
+];
 
 const shouldIncludeSections = (contents: string) =>
 	/<!-- show-sections: true -->/.test(contents);
 
 const downgradeHeadings = (contents: string) =>
-	contents.replace(/^##(#+) /gm, '$1 ');
+	contents.replaceAll(/^##(#+) /gm, '$1 ');
 
 const updateLinks = (contents: string) =>
-	contents.replace(/\[(.*?)\]\(#(.*?)\)/g, ($, title, anchor) => {
+	contents.replaceAll(/\[(.*?)]\(#(.*?)\)/g, (_match, title, anchor) => {
 		const href = internalLinks[anchor];
 		if (href) {
 			return `[${title}](${href})`;
@@ -92,9 +94,12 @@ const updateLinks = (contents: string) =>
 	});
 
 const updateTips = (contents: string) =>
-	contents.replace(/\n([IWET]>) /gm, ($, marker) => {
-		return `\n**${TIPS[marker]}:** `;
-	});
+	contents.replaceAll(
+		new RegExp(`\\n([${Object.keys(TIPS)}])> `, 'gm'),
+		(_match, marker: keyof typeof TIPS) => {
+			return `\n**${TIPS[marker]}:** `;
+		}
+	);
 
 const updateImages = (contents: string) =>
 	contents.replace(/]\(images\//, '](/images/');
@@ -152,11 +157,10 @@ for (const post of bookPosts) {
 	internalLinks[mainLinkId] = mainLink;
 
 	// Store all internal links
-	const sectionIds =
-		post.sourceContents.match(/\n\{#(.*)\}\n\n##+(.*)/gm) ?? [];
+	const sectionIds = post.sourceContents.match(/\n{#(.*)}\n\n##+(.*)/gm) ?? [];
 	for (const match of sectionIds) {
 		// Get the original ID and a section title
-		const [, id, title] = match.match(/\{#(.*)\}\n\n##+\s*(.*)/) ?? [];
+		const [, id, title] = match.match(/{#(.*)}\n\n##+\s*(.*)/) ?? [];
 
 		// Link to a blog post using internal IDs (from rehype-slug)
 		internalLinks[id] = `${mainLink}#${slugger.slug(title)}`;
@@ -172,7 +176,7 @@ console.log('[BOOK] Syncing files...');
 
 const postLinks: Record<string, string> = {};
 
-bookPosts.forEach((post) => {
+for (const post of bookPosts) {
 	console.log(`[BOOK] 👉 ${post.file}`);
 
 	const chapterFile = post.source.replace('washing-code/', '');
@@ -209,7 +213,7 @@ ${otherChapters}
 `;
 
 	fs.writeFileSync(post.file, contents);
-});
+}
 
 /**
  * Generate table of contents
@@ -222,12 +226,12 @@ const toc: TocItem[] = [];
 const tocRaw = read(`${REPO_DIR}/manuscript/Book.txt`);
 const tocLines = tocRaw.split('\n').filter((x) => x.trim());
 
-tocLines.forEach((line) => {
+for (const line of tocLines) {
 	const fileName = line.replace(/\.md$/, '');
 	const content = readChapter(fileName);
 	const description = getDescription(content);
 	if (description === false) {
-		return;
+		continue;
 	}
 
 	const title = getTitle(stripIds(content));
@@ -239,13 +243,14 @@ tocLines.forEach((line) => {
 		description,
 		sections,
 	});
-});
+}
 
 // Move Other techniques chapter to the end
 const tocSorted = _.sortBy(toc, ({ title }) =>
 	title === 'Other techniques' ? 1 : -1
 );
 
+// eslint-disable-next-line unicorn/no-null
 fs.writeFileSync(`${DATA_DIR}/book.json`, JSON.stringify(tocSorted, null, 2));
 
 console.log('[BOOK] Done 🦜');

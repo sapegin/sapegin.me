@@ -1,6 +1,6 @@
 ---
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import Layout from '../../layouts/Layout.astro';
 import { SquirrelsongPage } from '../../templates/SquirrelsongPage';
 import { highlightCode, type CodeLang } from '../../util/highlightCode';
@@ -69,10 +69,10 @@ const codes: {
 	dark: {},
 };
 
-examples.forEach(({ name, lang, code }) => {
+for (const { name, lang, code } of examples) {
 	codes.light[name] = highlightCode(code, lang, 'light');
 	codes.dark[name] = highlightCode(code, lang, 'dark');
-});
+}
 ---
 
 <Layout
