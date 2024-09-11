@@ -564,7 +564,7 @@ Such comments help to understand how to use a function or a component, highlight
 
 **Tip:** When we use the JSDoc `@example` tag, Visual Studio Code shows a syntax-highlighted example when we hover on the function name anywhere in the code.
 
-![Usage example tooltip in Visual Studio Code](/images/jsdoc-example.png)
+![Usage example tooltip in Visual Studio Code](/images/blog/book/jsdoc-example.png)
 
 ## Bad comments
 

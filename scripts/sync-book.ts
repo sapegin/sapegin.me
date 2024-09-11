@@ -101,8 +101,9 @@ const updateTips = (contents: string) =>
 		}
 	);
 
+// images/ → /images/blog/book/
 const updateImages = (contents: string) =>
-	contents.replace(/]\(images\//, '](/images/');
+	contents.replace(/]\(images\//, '](/images/blog/book/');
 
 /**
  * Download the code
@@ -254,5 +255,9 @@ fs.writeFileSync(
 	`${DATA_DIR}/book.json`,
 	JSON.stringify(tocSorted, undefined, 2)
 );
+
+console.log('[BOOK] Formatting...');
+
+execSync(`prettier --log-level warn --write "${DEST_DIR}/**/*.md"`);
 
 console.log('[BOOK] Done 🦜');
