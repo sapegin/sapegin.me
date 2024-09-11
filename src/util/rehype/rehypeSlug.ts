@@ -21,7 +21,7 @@ export default function rehypeSlug() {
 		visit(tree, 'element', function (node) {
 			if (
 				['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.tagName) &&
-				!node.properties.id
+				node.properties.id === undefined
 			) {
 				// Get heading text content, and replace non-breaking spaces
 				// with regular spaces
