@@ -79,4 +79,7 @@ export default defineConfig({
 		],
 		remarkPlugins: [remarkTips, remarkImages, remarkRichtypo],
 	},
+	experimental: {
+		contentIntellisense: true,
+	},
 });
