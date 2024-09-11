@@ -250,7 +250,9 @@ const tocSorted = _.sortBy(toc, ({ title }) =>
 	title === 'Other techniques' ? 1 : -1
 );
 
-// eslint-disable-next-line unicorn/no-null
-fs.writeFileSync(`${DATA_DIR}/book.json`, JSON.stringify(tocSorted, null, 2));
+fs.writeFileSync(
+	`${DATA_DIR}/book.json`,
+	JSON.stringify(tocSorted, undefined, 2)
+);
 
 console.log('[BOOK] Done 🦜');

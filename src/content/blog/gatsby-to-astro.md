@@ -34,6 +34,8 @@ Probably, the only issue I had so far is that it often [crashes after code chang
 
 Astro has [its own components](https://docs.astro.build/en/core-concepts/astro-components/) that look like a very basic version of React components mixed with MDX, and we could seamlessly use React components inside Astro components:
 
+<!-- eslint-skip -->
+
 ```tsx
 ---
 import Layout from './Layout.astro';
@@ -224,8 +226,11 @@ Here, I’m using `Grid` and `Box` primitive components to create a responsive l
 And I think I changed my mind about responsive props, and now I prefer objects over arrays:
 
 ```tsx
-<Stack direction={{ mobile: 'column', tablet: 'row' }}>
-<Stack direction={['column', null, 'row']}>
+<Stack direction={{ mobile: 'column', tablet: 'row' }}>…</Stack>
+```
+
+```tsx
+<Stack direction={['column', null, 'row']}>…</Stack>
 ```
 
 Both require some learning and getting used to but the object notation now feels more readable to me. Vanilla-extract supports both.

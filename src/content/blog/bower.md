@@ -161,41 +161,51 @@ Bower puts the problem of project builds on the shoulders of the developer. The 
 I use Grunt, so I’ll describe how to concatenate the packages with Grunt. There was a [big article](http://nano.sapegin.ru/all/grunt-0-4) on using Grunt in the June issue of last year, so I’ll show my config of the `grunt-contrib-concat` plugin right away:
 
 ```javascript
-concat: {
+grunt.initConfig({
+  concat: {
     main: {
-        src: [
-            "bower_components/jquery/jquery.min.js",
-            "bower_components/fotorama/….js",
-            "bower_components/jquery-icheck/….js",
-            "bower_components/social-likes/social-likes.min.js",
-            "scripts/*.js"  // Your site’s scripts
-        ],
-        dest: "build/scripts.js"
+      src: [
+        'bower_components/jquery/jquery.min.js',
+        'bower_components/fotorama/….js',
+        'bower_components/jquery-icheck/….js',
+        'bower_components/social-likes/social-likes.min.js',
+        // Your site’s scripts
+        'scripts/*.js'
+      ],
+      dest: 'build/scripts.js'
     }
-}
+  }
+});
 ```
 
 This method has many downsides: you have to watch the files for each package, make sure that the files are assembled in the right order (for example, jQuery should be higher than scripts depending on it). The [grunt-bower-concat](https://github.com/sapegin/grunt-bower-concat) plugin can do this for you: it automatically concatenates all installed dependencies in the right order into a single file:
 
 ```javascript
-bower_concat: {
+grunt.initConfig({
+  bower_concat: {
     all: {
-        dest: "build/_bower.js",  // Concatenated file
-        exclude: [  // Packages excluded from Bower
-                "jquery",  // If jQuery is loaded from the Google CDN
-                "modernizr"  // If loading scripts at the end of the page, modernizr should be loaded in the <head>
-        ]
+      dest: 'build/_bower.js', // Concatenated file
+      // Packages excluded from Bower
+      exclude: [
+        // If jQuery is loaded from the Google CDN
+        'jquery',
+        // If loading scripts at the end of the page, Modernizr should be
+        // loaded in the <head>
+        'modernizr'
+      ]
     }
-},
-concat: {
+  },
+  concat: {
     main: {
-        src: [
-            "build/_bower.js",
-            "scripts/*.js"  // You site’s scripts
-        ],
-        dest: "build/scripts.js"
+      src: [
+        'build/_bower.js',
+        // You site’s scripts
+        'scripts/*.js'
+      ],
+      dest: 'build/scripts.js'
     }
-}
+  }
+});
 ```
 
 ## Registering your packages

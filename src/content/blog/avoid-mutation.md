@@ -45,6 +45,8 @@ One of the most common use cases for mutation is updating objects:
 
 <!-- const hasStringModifiers = m => m.match(/^[ \w]+$/) -->
 
+<!-- eslint-disable unicorn/prevent-abbreviations, unicorn/prefer-optional-catch-binding, unicorn/catch-error-name -->
+
 ```js
 function parseExample(content, lang, modifiers) {
   const example = {
@@ -105,9 +107,9 @@ function getSettings(modifiers) {
   if (hasStringModifiers(modifiers)) {
     // Parse string modifiers:
     // `foo bar` → { foo: true, bar: true }
-    return modifiers.split(' ').reduce((acc, modifier) => {
-      acc[modifier] = true;
-      return acc;
+    return modifiers.split(' ').reduce((accumulator, modifier) => {
+      accumulator[modifier] = true;
+      return accumulator;
     }, {});
   }
 
@@ -115,9 +117,8 @@ function getSettings(modifiers) {
     // Assume that modifiers are in a JSON string:
     // `{"foo": true, "bar": true}` → { foo: true, bar: true }
     return JSON.parse(modifiers);
-  } catch (err) {
+  } catch {
     // Return `undefined` as an error
-    return undefined;
   }
 }
 
@@ -549,14 +550,14 @@ const getMessageProps = ({
   seniors
 }) => {
   return [adults, children, infants, youths, seniors].reduce(
-    (acc, count, index) => {
+    (accumulator, count, index) => {
       if (count > 0) {
-        acc.push({
+        accumulator.push({
           id: MESSAGE_IDS[index],
           count
         });
       }
-      return acc;
+      return accumulator;
     },
     []
   );
@@ -850,7 +851,7 @@ const map2 = produce(map1, draft => {
 
 **Tip:** Immer freezes the resulting object using `Object.freeze()` in the development environment to prevent accidental mutation.
 
-## Even mutation is not so bad sometimes
+## Even mutation is not that bad sometimes
 
 In rare cases, rewriting imperative code with mutation in a declarative way without mutation doesn’t make it any better.
 
@@ -885,6 +886,8 @@ I find the latter example more readable.
 
 Here’s another example:
 
+<!-- eslint-disable unicorn/no-array-for-each -->
+
 ```js
 const friendNames = ['Kili', 'Bilbo', 'Frodo', 'Kili'];
 const counts = {};
@@ -904,7 +907,7 @@ We have a list of friend names, and we calculate how many times each name appear
 
 ```js
 const friendNames = ['Kili', 'Bilbo', 'Frodo', 'Kili'];
-const counts = friendNames.reduce((counts, x) => {
+const friendCount = friendNames.reduce((counts, x) => {
   if (counts[x]) {
     counts[x]++;
   } else {
@@ -915,9 +918,9 @@ const counts = friendNames.reduce((counts, x) => {
 // → { Kili: 2, Bilbo: 1, Frodo: 1 }
 ```
 
-<!-- expect(counts).toEqual({Kili: 2, Bilbo: 1, Frodo: 1}) -->
+<!-- expect(friendCount).toEqual({Kili: 2, Bilbo: 1, Frodo: 1}) -->
 
-What I don’t like about `reduce()` is that we need to return the accumulator every time. Unless the body of the `reduce()` is a single line, and we can use implicit return, the code looks too complex compared to the `forEach()` method. The difference is even more noticeable when compared to a `for of` loop:
+What I don’t like about `reduce()` is that we need to return the accumulator every time. Unless the body of the `reduce()` is a single line, and we can use implicit return, the code looks too complex compared to the `forEach()` method. The difference is even more noticeable when compared to a `for…of` loop:
 
 ```js
 const friendNames = ['Kili', 'Bilbo', 'Frodo', 'Kili'];
@@ -982,7 +985,7 @@ I don’t have good ideas on how to rewrite this code without an imperative loop
 - the code is clear enough;
 - the function is pure: it doesn’t have any internal state or side effects.
 
-## Conclusion
+---
 
 Replacing imperative code, full of loops and conditions, with declarative code is one of my favorite refactorings, as it often makes code more readable and maintainable. This is also one of the most common suggestions I make in code reviews. Code with mutations likely hides other issues — mutation is a good sign to look closer.
 
@@ -992,8 +995,6 @@ Also, immutable operations could [significantly reduce performance](https://tkdo
 
 I’d prefer to have a language that is immutable by default and use mutating operations explicitly where I need them.
 
----
-
 Start thinking about:
 
 - Rewriting imperative code with mutation in a declarative way to improve readability.
@@ -1001,7 +1002,7 @@ Start thinking about:
 - Deduplicating logic and separating “what” from “how.”
 - Avoiding mutating function parameters to prevent hard-to-find bugs.
 - Using `map()`/`filter()` chaining instead of a single `reduce()` method.
-- Making mutation explicit if you have to have it.
+- Making mutation explicit if you have to use it.
 - Preventing mutation in your code by using a linter or read-only types.
 
 ---

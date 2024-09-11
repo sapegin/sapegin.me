@@ -8,9 +8,9 @@ tags:
   - washingcode
 ---
 
-<!-- description: Iterating over collections and why traditional loops like `for` and `while` may not be the best approach -->
+<!-- description: Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best approach -->
 
-Traditional loops, like `for` or `while`, are too low-level for everyday tasks:
+Traditional loops, such as `for` or `while`, are too low-level for everyday tasks:
 
 - they are verbose;
 - they are prone to off-by-one errors;
@@ -23,6 +23,8 @@ And on top of that, I always spell `length` as <!-- cspell:disable -->`lenght`<!
 This is how a typical `for` loop looks like:
 
 <!-- let console = { log: vi.fn() } -->
+
+<!-- eslint-disable unicorn/no-for-loop -->
 
 ```js
 const array = ['eins', 'zwei', 'drei'];
@@ -53,25 +55,48 @@ Such errors are called [off-by-one errors](https://en.wikipedia.org/wiki/Off-by-
 
 It gets worse when we nest loops:
 
-<!-- let console = { log: vi.fn() } -->
+<!--
+let proxy = 'SOCKS5 127.0.0.1:1080'
+let rules = [
+  [
+    [
+      "pizza.com",
+      "tacos.com",
+      "coffee.com",
+    ],
+    [
+      "soup.com",
+      "hotdog.com",
+      "burger.com",
+    ]
+  ]
+]
+let lastRule = ''
+-->
 
 ```js
-const array = [
-  ['eins', 'zwei', 'drei'],
-  ['uno', 'dos', 'tres']
-];
-for (let i = 0; i < array.length; i++) {
-  for (let j = 0; j < array[i].length; j++) {
-    console.log(array[i][j]);
+function testHost(host, index) {
+  for (var i = 0; i < rules[index].length; i++) {
+    for (var j = 0; j < rules[index][i].length; j++) {
+      lastRule = rules[index][i][j];
+      if (host == lastRule || host.endsWith('.' + lastRule))
+        return i % 2 == 0 ? 'DIRECT' : proxy;
+    }
   }
+  lastRule = '';
 }
 ```
 
-<!-- expect(console.log.mock.calls).toEqual([
-  ['eins'], ['zwei'], ['drei'], ['uno'], ['dos'], ['tres']
-]) -->
+<!--
+expect(testHost('pizza.com', 0)).toBe('DIRECT')
+expect(testHost('tacos.com', 0)).toBe('DIRECT')
+expect(testHost('hotdog.com', 0)).toBe(proxy)
+expect(testHost('burger.com', 0)).toBe(proxy)
+-->
 
-With each nested loop, we increase the probability of a mistake and decrease the readability of the code.
+Code like this makes me suspicious: it looks like it does something very simple, but at the same time it’s super complex. What am I missing? We’ll come back to this example later in the chapter.
+
+Each nested loop increases the probability of a mistake and decreases code readability. Additionally, nested loops can have performance implications. It’s best to avoid them whenever possible.
 
 In this chapter, we’ll talk about modern ways of writing loops and when a more traditional approach is still better.
 
@@ -80,6 +105,8 @@ In this chapter, we’ll talk about modern ways of writing loops and when a more
 Modern languages have better ways to express iteration, and [JavaScript has many useful methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) to transform or iterate over arrays, like `map()`, or `find()`.
 
 For example, let’s convert an array of strings to kebab-case using a `for` loop:
+
+<!-- eslint-disable unicorn/no-for-loop -->
 
 ```js
 const characters = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
@@ -100,35 +127,41 @@ Now, let’s use the `map()` array method instead of a `for` loop:
 
 ```js
 const characters = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
+const kebabCharacters = characters.map(function (name) {
+  return _.kebabCase(name);
+});
+// → ['bilbo-baggins', 'gandalf', 'gollum']
+```
+
+<!-- expect(kebabCharacters).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
+
+Here, the code is less verbose and easier to follow because half of the original code was managing the index variable, which obscured the actual task of the loop.
+
+Thanks to _arrow functions_, which are shorter and less cluttered then the old anonymous functions, we can simplify the code even further:
+
+```js
+const characters = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
 const kebabCharacters = characters.map(name => _.kebabCase(name));
 // → ['bilbo-baggins', 'gandalf', 'gollum']
 ```
 
 <!-- expect(kebabCharacters).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
 
-Here, the code is less verbose and easier to follow because half of the original code was managing the index variable, which obscured what we wanted to do during each loop iteration.
+We may want to shorten the code even more by passing the callback function to the `map()` method directly. However, this has several issues.
 
-We can shorten the code even more if our callback function accepts only one parameter, which is the value. Lodash’s `kebabCase()` method that we’re using is this type of function:
+First, this only works with functions that accept a single parameter because the `map()` method also passes an element’s index as the second parameter and the entire array as the third. For example, using the [`Number.parseInt()` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt), which accepts a radix as its second parameter, would lead to unexpected results:
 
-```js
-const characters = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
-const kebabCharacters = characters.map(_.kebabCase);
-// → ['bilbo-baggins', 'gandalf', 'gollum']
-```
-
-<!-- expect(kebabCharacters).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
-
-This wouldn’t work with functions that accept more than one parameter because the `map()` also passes an element’s index as the second parameter, and the whole array as the third. For example, using the [`parseInt()` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) that accepts a radix as its second parameter would lead to unexpected results:
+<!-- eslint-disable unicorn/no-array-callback-reference -->
 
 ```js
 const inputs = ['1', '2', '3'];
 
 // WARNING: This code is incorrect
-const integers_ = inputs.map(parseInt);
+const integers_ = inputs.map(Number.parseInt);
 // → [1, NaN, NaN]
 
 // Correct, only passing values
-const integers = inputs.map(value => parseInt(value));
+const integers = inputs.map(value => Number.parseInt(value));
 // → [1, 2, 3]
 ```
 
@@ -139,19 +172,15 @@ expect(integers).toEqual([1, 2, 3])
 
 Here, in the first example, the `map()` method calls the `parseInt()` function with an element’s index as a radix, resulting in an incorrect result. In the second example, we explicitly pass only the value to the `parseInt()` function, so it uses the default radix of 10.
 
-However, explicitly passing the value inside the `map()` callback function is slightly more readable and doesn’t make the code much more verbose, thanks to _arrow functions_, which are shorter and less cluttered compared to the old anonymous function syntax:
+Second, it may mysteriously break when the callback function adds another parameter. Even TypeScript will miss this issue if the types of the new parameters match those expected by the `map()` method.
 
-```js
-const characters = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
-const kebabCharacters = characters.map(function (name) {
-  return _.kebabCase(name);
-});
-// → ['bilbo-baggins', 'gandalf', 'gollum']
-```
+Lastly, explicitly passing the value inside the `map()` callback function makes the code slightly more readable.
 
-<!-- expect(kebabCharacters).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
+**Tip:** The [unicorn/no-array-callback-reference](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-callback-reference.md) linter rule prevents passing the callback function directly to array methods.
 
 Let’s look at another example: finding an element in an array. First, using a `for` loop:
+
+<!-- eslint-disable unicorn/no-for-loop -->
 
 ```js
 const characters = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
@@ -179,6 +208,110 @@ const foundName = characters.find(name => name.startsWith('B'));
 
 In both examples, I much prefer array methods compared to `for` loops because they are shorter and don’t bloat the code with iteration mechanics.
 
+Here’s an improved version of the nested loop example from this chapter’s introduction:
+
+<!--
+let proxy = 'SOCKS5 127.0.0.1:1080'
+let rules = [
+  [
+    [
+      "pizza.com",
+      "tacos.com",
+      "coffee.com",
+    ],
+    [
+      "soup.com",
+      "hotdog.com",
+      "burger.com",
+    ]
+  ]
+]
+-->
+
+```js
+function testHost(host, index) {
+  const checkHost = x => host === x || host.endsWith(`.${x}`);
+
+  const directHost = rules[index][0].find(x => checkHost(x));
+  if (directHost) {
+    return 'DIRECT';
+  }
+
+  const proxyHost = rules[index][1].find(x => checkHost(x));
+  if (proxyHost) {
+    return proxy;
+  }
+}
+```
+
+<!--
+expect(testHost('pizza.com', 0)).toBe('DIRECT')
+expect(testHost('tacos.com', 0)).toBe('DIRECT')
+expect(testHost('hotdog.com', 0)).toBe(proxy)
+expect(testHost('burger.com', 0)).toBe(proxy)
+-->
+
+We don’t even need to nest loops here, but the data structure used to store rules makes it confusing. The nested arrays always have two items, so an object with two properties would be more appropriate here.
+
+Here’s one more example of nested loops:
+
+<!-- eslint-skip -->
+
+```js
+function hasDiscount(customers) {
+  let result = false;
+  const customerIds = Object.keys(customers);
+  for (let k = 0; k < customerIds.length; k++) {
+    const c = customers[customerIds[k]];
+    if (c.ages) {
+      for (let j = 0; j < c.ages.length; j++) {
+        const a = c.ages[j];
+        if (a && a.customerCards.length) {
+          result = true;
+          break;
+        }
+      }
+    }
+    if (result) {
+      break;
+    }
+  }
+  return result;
+}
+```
+
+<!--
+expect(hasDiscount({gandalf: {}})).toBe(false)
+expect(hasDiscount({gandalf: {ages: [{customerCards: []}]}})).toBe(false)
+expect(hasDiscount({gandalf: {ages: [{customerCards: []}, {customerCards: ['DISCOUNT']}]}})).toBe(true)
+expect(hasDiscount({gandalf: {ages: [{customerCards: ['DISCOUNT']}]}})).toBe(true)
+-->
+
+This code is checking whether any customer has a customer card (and therefore a discount) in any age group, but by reading the code, it’s totally impossible to understand what’s going on. Nested loops with meaningless names are one of the main reasons for this.
+
+**Info:** We talk about naming in the [Naming is hard](/blog/naming/) chapter.
+
+Let’s simplify it:
+
+```js
+function hasDiscount(customers) {
+  return Object.values(customers).some(customer => {
+    return customer.ages?.some(
+      ageGroup => ageGroup.customerCards.length > 0
+    );
+  });
+}
+```
+
+<!--
+expect(hasDiscount({gandalf: {}})).toBe(false)
+expect(hasDiscount({gandalf: {ages: [{customerCards: []}]}})).toBe(false)
+expect(hasDiscount({gandalf: {ages: [{customerCards: []}, {customerCards: ['DISCOUNT']}]}})).toBe(true)
+expect(hasDiscount({gandalf: {ages: [{customerCards: ['DISCOUNT']}]}})).toBe(true)
+-->
+
+Not only the refactored code is three times shorter, but it’s also much clearer: are there any (some) customers with at least one customer card in any (some) age group?
+
 ## Implied semantics of array methods
 
 Array methods aren’t just shorter and more readable; each method has its own clear semantics:
@@ -202,6 +335,8 @@ When all simple cases are covered by array methods, every time we see a traditio
 
 Also, don’t use generic array methods like `map()` or `forEach()` when more specialized array methods would work, and don’t use `forEach()` instead of `map()` to transform an array. Both would confuse the reader by doing something unexpected.
 
+<!-- eslint-disable unicorn/no-array-for-each -->
+
 ```js
 const characters = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
 const kebabCharacters = [];
@@ -218,6 +353,8 @@ This code is a more cryptic and less semantic implementation of the `map()` meth
 Avoid abusing the semantics of array methods:
 
 <!-- const products = [{type: 'pizza'}, {type: 'coffee'}], expectedType = 'pizza' -->
+
+<!-- eslint-skip -->
 
 ```js
 // WARNING: This code is wrong
@@ -259,7 +396,26 @@ Both refactored versions make the code’s intention clearer and leave fewer dou
 
 ## Chaining multiple operations
 
-I’ve seen developers try to squeeze everything into a single `reduce()` method to avoid extra iterations. Consider this example:
+The `reduce()` array method is one of the most controversial. Some programmers use it for almost everything, while others avoid it like a plague. Its main use case is _reducing_ (meaning, converting) an array to a single value.
+
+Calculating the sum of all array elements is one of the most common use cases for the `reduce()` method:
+
+```js
+const array = [1, 2, 3, 4];
+const sum = array.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+// → 10
+```
+
+<!-- expect(sum).toBe(10) -->
+
+Here, we pass a callback function (called _a reducer_) to the `reduce()` method, which adds the current element to the accumulator. The accumulator eventually contains the sum of all the array elements. The second argument is the initial value (`0` in this example).
+
+I’ve seen programmers try to squeeze everything into a single `reduce()` method to avoid extra iterations. Consider this example:
+
+<!-- eslint-disable unicorn/prevent-abbreviations -->
 
 ```js
 const cart = [
@@ -284,13 +440,13 @@ const cart = [
 ];
 const totalPrice = cart
   .map(item => item.price * item.quantity)
-  .reduce((acc, value) => acc + value);
+  .reduce((accumulator, value) => accumulator + value);
 // → 58
 ```
 
 <!-- expect(totalPrice).toBe(58) -->
 
-Now, the purpose of each step is clearer. Using the `reduce()` to calculate a sum of all array elements is one of the most typical use cases for this method, and this pattern is easier to recognize here than in the original code.
+Now, the purpose of each step is clearer. The sum calculation is easier to recognize here than in the original code.
 
 **Tip:** I often see something that I call _the reduce rabbit hole_ during interviews and code reviews: a developer starts writing code with the `reduce()` method, and then digs a deep complexity pit by adding more and more things to the `reduce()`, instead of stopping and rewriting it to something simpler. TkDodo has [a great article](https://tkdodo.eu/blog/why-i-dont-like-reduce) on the pitfalls of `reduce()`.
 
@@ -301,14 +457,16 @@ Side effects make code harder to understand because we can no longer treat a fun
 - they don’t just transform input into output, but can affect the environment in unpredictable ways;
 - they are hard to test because we need to recreate the environment before we run each test, verify the changes in the environment made by the function, and then reset it to its original state before running other tests.
 
-All array methods mentioned in the previous section, except `forEach()`, imply that they don’t have side effects and they only return a value from the callback function. Introducing any side effects into these methods makes the code confusing, since readers don’t expect side effects.
+Array methods mentioned in the previous section imply that they don’t have side effects and instead return a new value. Introducing any side effects into these methods makes the code confusing, since readers don’t expect side effects.
 
-The `forEach()` method doesn’t return any value, and it’s the right choice for handling side effects when we really need them:
+The only exception is the `forEach()` method, that doesn’t return any value, and it’s the right choice for handling side effects when we really need them:
 
 <!--
 const console = { error: vi.fn() }
 const errors = ['dope', 'nope']
 -->
+
+<!-- eslint-disable unicorn/no-array-for-each -->
 
 ```js
 errors.forEach(error => {
@@ -341,11 +499,21 @@ for (const error of errors) {
 
 <!-- expect(console.error.mock.calls).toEqual([['dope'], ['nope']]) -->
 
+The main benefits of `for…of` loops over the `forEach()` method are:
+
+- better readability and less noise;
+- ability to exit early using `break` or `return`;
+- correct type narrowing in TypeScript (which doesn’t work properly when using a callback function in `forEach()`).
+
+**Tip:** The [unicorn/no-array-for-each](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-for-each.md) and [unicorn/no-for-loop](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-for-loop.md) linter rules automatically replace `forEach()` methods and `for` loops with `for…of` loops.
+
 ## Iterating over objects
 
 There are [many ways to iterate over object keys or values](https://stackoverflow.com/questions/684672/how-do-i-loop-through-or-enumerate-a-javascript-object/5737136#5737136) in JavaScript:
 
 <!-- let console = { log: vi.fn() } -->
+
+<!-- eslint-disable unicorn/no-array-for-each -->
 
 ```js
 const characters = {
@@ -357,7 +525,7 @@ const characters = {
 for (const race in characters) {
   // Iterate only over own object properties (skip properties
   // on the prototype chain)
-  if (characters.hasOwnProperty(race)) {
+  if (Object.prototype.hasOwnProperty.call(characters, race)) {
     console.log(race, characters[race]);
   }
 }
@@ -401,6 +569,8 @@ Lodash has several methods for object iteration. For example, we can use [the `f
 
 <!-- let console = { log: vi.fn() } -->
 
+<!-- eslint-disable unicorn/no-array-for-each -->
+
 ```js
 const characters = {
   hobbits: ['Bilbo Baggins'],
@@ -417,7 +587,9 @@ expect(console.log.mock.calls).toEqual([
 ])
 -->
 
-In later chapters, I’ll urge you to avoid not only loops, but also reassigning variables and mutation. Like loops, they _often_ lead to poor code readability, but _sometimes_ they are the best choice. Of all the examples above, I prefer the one, with the `Object.entries()` method and `for…of` loop.
+In later chapters, I’ll urge you to avoid not only loops, but also reassigning variables and mutation. Like loops, they _often_ lead to poor code readability, but _sometimes_ they are the best choice.
+
+Of all the examples above, I prefer the one with the `Object.entries()` method and `for…of` loop. It’s slightly simpler than other options, but not significantly so. I’d avoid the one with the `for…in` loop, though, because of the extra condition it requires.
 
 It’s all good if we’re iterating over an object for a side effect, like in the examples above. Things get more complicated and ugly when we need the result as an object:
 
@@ -498,7 +670,9 @@ if (props.item && props.item.details) {
 
 <!-- expect(tableData).toEqual([{ errorLevel: 2, errorMessage: 'nope', usedIn: 'Pizza' }]) -->
 
-Let’s try to rewrite it using the `reduce()` method to _avoid loops_:
+This code prepares the data for a table of error messages. Let’s try to rewrite it using the `reduce()` method to _avoid loops_:
+
+<!-- eslint-disable unicorn/prevent-abbreviations -->
 
 <!--
 const props = {
@@ -520,8 +694,8 @@ const props = {
 
 ```js
 const tableData = props.item?.details?.clients.reduce(
-  (acc, client) => [
-    ...acc,
+  (accumulator, client) => [
+    ...accumulator,
     ...client.errorConfigurations.reduce(
       (inner, config) => [
         ...inner,
@@ -564,14 +738,14 @@ const props = {
 
 ```js
 const tableData = props.item?.details?.clients.reduce(
-  (acc, client) =>
-    acc.concat(
-      ...client.errorConfigurations.map(config => ({
-        errorMessage: config.error.message,
-        errorLevel: config.error.level,
-        usedIn: client.name
-      }))
-    ),
+  (accumulator, client) => [
+    ...accumulator,
+    ...client.errorConfigurations.map(config => ({
+      errorMessage: config.error.message,
+      errorLevel: config.error.level,
+      usedIn: client.name
+    }))
+  ],
   []
 );
 ```
@@ -610,7 +784,7 @@ const tableData = props.item?.details?.clients.flatMap(client =>
 
 <!-- expect(tableData).toEqual([{ errorLevel: 2, errorMessage: 'nope', usedIn: 'Pizza' }]) -->
 
-This code is good, and though, it’s more in the spirit of this book, the original, with the `for…of` loop, is slightly more readable: it’s less abstract, and it’s a bit easier to understand what’s going on there.
+This code is good, and though, it’s more in the spirit of this book, the original version, with the `for…of` loop, is still more readable: it’s less abstract, making it a bit easier to understand what’s going on there.
 
 I’d be happy to accept either the original, with the `for…of` loop, or the last one, with the `flatMap()` and `map()` chain, during a code review. No `reduce()` for me, thank you!
 
@@ -624,6 +798,8 @@ One might think that functions are slower than loops, and often they are. Howeve
 
 Modern JavaScript engines are very fast and optimized for popular code patterns. Back in the day, we used to write loops like this because checking the array length on every iteration was too slow:
 
+<!-- eslint-disable unicorn/prevent-abbreviations -->
+
 ```js
 var names = ['Bilbo Baggins', 'Gandalf', 'Gollum'];
 var kebabCharacters = [];
@@ -635,17 +811,17 @@ for (var i = 0, len = names.length; i < len; i++) {
 
 <!-- expect(kebabCharacters).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
 
-It’s not slow anymore. Often simpler code patterns are the fastest, or fast enough, so manual optimization is unnecessary.
+It’s not slow anymore. Often, simpler code patterns are the fastest, or fast enough, so manual optimization is unnecessary.
 
 Also, the `every()`, `some()`, `find()`, and `findIndex()` methods are short-circuiting, meaning they don’t iterate over unnecessary array elements.
 
-In any case, we should measure performance to know what to optimize and verify whether our changes really make the code faster in all important browsers and environments.
-
-## Conclusion
-
-Traditional loops aren’t bad as such. Programmers have been using them successfully for decades, and in some cases traditional loops are still the best choice. However, modern programming languages have better, more declarative alternatives to loops that are more readable and less error-prone. In the end, it’s often a good idea to write the same code using both and choose the more readable option.
+In any case, we should measure performance to know what to optimize and verify whether our changes really make the code faster in all important browsers and environments. Web performance is a topic large enough for its own book (and there are books on the subject), but it’s outside the scope of this book.
 
 ---
+
+Traditional loops aren’t bad as such. Programmers have been using them successfully for decades, and in some cases traditional loops are still the best choice. However, modern programming languages have better, more declarative alternatives to loops that are more readable and less error-prone. The implied semantics of array methods make code intentions clearer, while traditional loops are more flexible.
+
+In the end, it’s often a good idea to write the same code using both and choose the more readable option.
 
 Start thinking about:
 

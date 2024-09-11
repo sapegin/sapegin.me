@@ -203,7 +203,8 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 function App() {
-// ...
+  // ...
+}
 ```
 
 Now, every time we run our app in development mode or integration tests, network requests will be mocked, without any changes to the application code or tests, except four lines of code in the root module.
@@ -546,7 +547,7 @@ If the UI differs depending on the screen size, like some of the components are 
 With the Cypress’ [viewport()](https://docs.cypress.io/api/commands/viewport.html) method, we can change the viewport size either by specifying exact width and height or using one of the [presets](https://docs.cypress.io/api/commands/viewport.html#Arguments), like `iphone-x` or `macbook-15`.
 
 ```js
-['iphone-x', 'macbook-15'].forEach(viewport => {
+for (const viewport of ['iphone-x', 'macbook-15']) {
   it(`should show success page after submission (${viewport})`, () => {
     cy.viewport(viewport);
     cy.visit('/signup');
@@ -565,7 +566,7 @@ With the Cypress’ [viewport()](https://docs.cypress.io/api/commands/viewport.h
     cy.log('We are on the success page');
     cy.findByText(/thank you for signing up/i).should('be.visible');
   });
-});
+}
 ```
 
 ## Debugging
@@ -590,9 +591,9 @@ I don’t recommend doing this, but on legacy projects we may not have other cho
 
 ```js
 cy.log('We are on the success page');
-cy.findByText(/thank you for signing up/i, { timeout: 10000 }).should(
-  'be.visible'
-);
+cy.findByText(/thank you for signing up/i, {
+  timeout: 10_000
+}).should('be.visible');
 ```
 
 This is still better than increasing the global timeout.

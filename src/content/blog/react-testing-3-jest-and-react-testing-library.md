@@ -490,11 +490,12 @@ import RemotePizza from '../RemotePizza';
 
 const ingredients = ['bacon', 'tomato', 'mozzarella', 'pineapples'];
 
+const fetchIngredients = () =>
+  Promise.resolve({
+    args: { ingredients }
+  });
+
 test('download ingredients from internets', async () => {
-  const fetchIngredients = () =>
-    Promise.resolve({
-      args: { ingredients }
-    });
   render(<RemotePizza fetchIngredients={fetchIngredients} />);
 
   userEvent.click(screen.getByRole('button', { name: /cook/i }));
@@ -584,16 +585,16 @@ export const fetchIngredients = [
 Then [setup a server](https://github.com/sapegin/rtl-article-2019/blob/master/src/mocks/server.js) that imports all our mock handlers:
 
 ```ts
-import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import { fetchIngredients } from './mocks/fetchIngredients';
 
 const server = setupServer(...fetchIngredients);
 
-export { server, rest };
+export { rest } from 'msw';
+export { server };
 ```
 
-And then we can [use this mock server in our tests](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/RemotePizza_msw.spec.js)):
+And then we can [use this mock server in our tests](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/RemotePizza_msw.spec.js):
 
 ```jsx
 import React from 'react';

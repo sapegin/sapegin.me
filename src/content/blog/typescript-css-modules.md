@@ -46,6 +46,8 @@ To use `import` you need typings for CSS. For example, you have `Button.css` lik
 
 Now you need `Button.css.d.ts` like this:
 
+<!-- eslint-skip -->
+
 ```js
 export const foo: string;
 export const barBaz: string;
@@ -60,24 +62,28 @@ npm install --save-dev typings-for-css-modules-loader
 Then update your webpack config:
 
 ```js
-module: {
-  rules: [
-    {
-      test: /\.css$/,
-      include: path.join(__dirname, 'src/components'),
-      user: [
-        'style-loader',
-        {
-          loader: 'typings-for-css-modules-loader',
-          options: {
-            modules: true,
-            namedExport: true
+module.exports = {
+  // …
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        include: path.join(__dirname, 'src/components'),
+        user: [
+          'style-loader',
+          {
+            loader: 'typings-for-css-modules-loader',
+            options: {
+              modules: true,
+              namedExport: true
+            }
           }
-        }
-      ]
-    }
-  ];
-}
+        ]
+      }
+    ]
+  }
+  // …
+};
 ```
 
 Now you can import styles like this:

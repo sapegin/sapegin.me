@@ -73,10 +73,10 @@ global.mountWithIntl = (
 2. Export your component with and without `injectIntl`:
 
 ```js
-import React, { Component } from 'react';
+import React from 'react';
 import { injectIntl } from 'react-intl';
 
-export class Pony extends Component {
+export function Pony() {
   /* _ */
 }
 

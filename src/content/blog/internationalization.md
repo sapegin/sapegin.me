@@ -154,13 +154,15 @@ Use your internationalization library pluralization functions, instead of adding
 ```jsx
 <p>
   {resultCount > 1 ? (
-    <FormattedMessage id="NumberResults">
-      {resultCount} dogs found
-    </FormattedMessage>
+    <FormattedMessage
+      id="NumberResults"
+      defaultMessage="{resultCount} dogs found"
+    />
   ) : (
-    <FormattedMessage id="NumberResult">
-      {resultCount} dog found
-    </FormattedMessage>
+    <FormattedMessage
+      id="NumberResult"
+      defaultMessage="{resultCount} dog found"
+    />
   )}
 </p>
 ```
@@ -169,9 +171,10 @@ Use your internationalization library pluralization functions, instead of adding
 
 ```jsx
 <p>
-  <FormattedMessage id="NumberResults">
-    {resultCount} dog(s)
-  </FormattedMessage>
+  <FormattedMessage
+    id="NumberResults"
+    defaultMessage="{resultCount} dog(s)"
+  />
 </p>
 ```
 
@@ -179,9 +182,10 @@ Use your internationalization library pluralization functions, instead of adding
 
 ```jsx
 <p>
-  <FormattedMessage id="search.numberResults">
-    {resultCount, plural, one {# dog} other {# dogs}} found
-  </FormattedMessage>
+  <FormattedMessage
+    id="search.numberResults"
+    defaultMessage="{resultCount, plural, one {# dog} other {# dogs}} found"
+  />
 </p>
 ```
 

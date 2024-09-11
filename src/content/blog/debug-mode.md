@@ -14,7 +14,7 @@ Often you want some code to be executed only in development environment but not 
 Debug mode enables when [Grunt](http://gruntjs.com/) runs with `--debug` key. You can determine it in your Gruntfile:
 
 ```javascript
-var debug = !!grunt.option('debug');
+const debug = Boolean(grunt.option('debug'));
 ```
 
 We’ll use this variable very soon.
@@ -25,21 +25,23 @@ in [UglifyJS](https://github.com/mishoo/UglifyJS) you can define global variable
 
 You can define such variables via [command line](https://github.com/mishoo/UglifyJS#usage) or via Gruntfile:
 
-```javascript
-uglify: {
-  options: {
-    compress: {
-      global_defs: {
-        DEBUG: debug  // That very variable
+```js
+grunt.initConfig({
+  uglify: {
+    options: {
+      compress: {
+        global_defs: {
+          DEBUG: debug // That very variable
+        }
+      }
+    },
+    main: {
+      files: {
+        'build/scripts.js': 'build/scripts.js'
       }
     }
-  },
-  main: {
-    files: {
-      "build/scripts.js": "build/scripts.js"
-    }
   }
-}
+});
 ```
 
 Variable usage in JavaScript:
@@ -47,7 +49,9 @@ Variable usage in JavaScript:
 ```javascript
 /*global DEBUG:true*/
 // Debug mode enabled by default (you can do the opposite too)
-if (typeof DEBUG === 'undefined') DEBUG = true;
+if (typeof DEBUG === 'undefined') {
+  DEBUG = true;
+}
 
 (function () {
   'use strict';
@@ -64,19 +68,21 @@ if (typeof DEBUG === 'undefined') DEBUG = true;
 
 [Stylus](http://learnboost.github.io/stylus/) is even easier. Gruntfile:
 
-```javascript
-stylus: {
-  options: {
-    define: {
-      DEBUG: debug
-    }
-  },
-  compile: {
-    files: {
-      "build/styles.css": "styles/index.styl"
+```js
+grunt.initConfig({
+  stylus: {
+    options: {
+      define: {
+        DEBUG: debug
+      }
+    },
+    compile: {
+      files: {
+        'build/styles.css': 'styles/index.styl'
+      }
     }
   }
-}
+});
 ```
 
 And example:

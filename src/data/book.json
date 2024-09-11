@@ -2,7 +2,7 @@
   {
     "url": "/blog/avoid-loops/",
     "title": "Avoid loops",
-    "description": "Iterating over collections and why traditional loops like `for` and `while` may not be the best approach",
+    "description": "Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best approach",
     "sections": []
   },
   {
@@ -32,7 +32,7 @@
   {
     "url": "/blog/naming/",
     "title": "Naming is hard",
-    "description": "How clear names make it easier to understand the code, and how to improve naming in our apps",
+    "description": "How clear names make it easier to understand the code, and how to improve naming in our code",
     "sections": []
   },
   {
@@ -42,7 +42,7 @@
   },
   {
     "title": "Don’t make me think",
-    "description": "All the different ways programmers like to write clever code, and why we should avoid it as much as possible",
+    "description": "All the different ways programmers like to write clever code, and why we should avoid clever code as much as possible",
     "sections": []
   },
   {

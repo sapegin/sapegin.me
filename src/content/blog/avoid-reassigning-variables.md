@@ -18,7 +18,7 @@ let pizzaTopping = 'salami';
 
 <!-- expect(pizzaTopping).toBe('salami') -->
 
-We can’t be sure that our pizza will always have salami on it because variables defined using the `let` keyword can be _reassigned_:
+We can’t be sure that our pizza will always have salami on it because this variable is defined using the `let` keyword, so we can assign it a new value:
 
 <!-- let pizzaTopping -->
 
@@ -52,11 +52,11 @@ const pizzaTopping = 'salami';
 
 This pizza will always have salami on it!
 
-**Info:** The `const` and `let` keywords are relatively new in JavaScript, and were introduced in ECMAScript 2015. Before that, we only had the `var` keyword, which is no longer recommended. The main difference is that the `const` and `let` are block-scoped, while the `var` is function-scoped. Additionally, we can now choose whether to allow reassignments or not, depending on which keyword we use to declare a variable.
+**Info:** The `const` and `let` keywords are relatively new in JavaScript and were introduced in ECMAScript 2015. Before that, JavaScript only had the `var` keyword, which is no longer recommended. The main difference is that `const` and `let` are block-scoped (meaning, the variable is accessible inside a single block, such as an `if` condition or a `for` loop), while `var` is function-scoped (meaning, the variable is accessible anywhere within in a function). Additionally, we can now choose whether to allow reassignments or not, depending on which keyword we use to declare a variable.
 
 Most of the time, we can write code without reassignments, making it easier to reason about.
 
-**Info:** Arrays and objects can also be _mutated_, even if they are defined using the `const` keyword. We talk about mutation in the [next chapter](/blog/avoid-mutation/).
+**Info:** Arrays and objects can also be _mutated_, even if they are defined using the `const` keyword. We talk about mutation in the next chapter, [Avoid mutation](/blog/avoid-mutation/).
 
 ## Don’t reuse variables
 
@@ -78,7 +78,9 @@ Here, the `category` variable is used to store a category ID (a number or a stri
 
 On top of that, a new value is reassigned to a function parameter, which is known as _function parameter shadowing_. I think it’s no different from regular reassignment since it only affects the value inside the function, so I’ll treat it the same way.
 
-**Info:** [Variable shadowing](https://en.wikipedia.org/wiki/Variable_shadowing) happens when we define a variable with the same name that already exists in a larger scope. For example, we define a `text` variable inside a function, but there’s already a module-level `text` variable. Shadowing makes it hard to know which variable we’re looking at any given moment.
+**Info:** [Variable shadowing](https://en.wikipedia.org/wiki/Variable_shadowing) happens when we define a variable with the same name that already exists in a larger scope. For example, we define a `text` variable inside a function, but there’s already a module-level `text` variable. Shadowing makes it hard to know which variable we’re working with at any given moment.  
+**Info:**  
+**Info:** Function parameter shadowing is similar, but happens when we reassign a function parameter.
 
 Such cases are the easiest to fix: we need to use separate variables for each value:
 
@@ -113,7 +115,7 @@ function getProductsOnSale(categoryId: string): Product[] {
 
 This approach makes it significantly easier to reason about the code.
 
-Variables that allow different types end up awkward in TypeScript. I think it’s a clear sign that we’re doing something wrong:
+Variables that allow different types are awkward in TypeScript. I think it’s a clear sign that we’re doing something wrong:
 
 ```ts
 function loadCategory(categoryId: string): Product[] {
@@ -172,7 +174,7 @@ expect(validateVideo({videoFiles: [], title: 'Cat on Roomba', id: 'X13'})).toBe(
 expect(validateVideo({videoFiles: [], title: 'Cat on Roomba', id: 'X-13'})).toBe('Invalid ID')
 -->
 
-I’ve shortened the comments a bit because the original code had lines longer than 200 characters. On a very big screen, it looks like a pretty table; otherwise, it’s an unreadable mess. Any autoformatting tool, like Prettier, will also turn this code into an unreadable mess. Such formatting handcraft was common in the old days, before autoformatting tools became mainstream. Now, it’s a waste of time.
+This code validates a video file upload by checking that it has all required data in the correct formats. I’ve shortened the comments a bit because the original code had lines longer than 200 characters. On a very big screen, it looks like a pretty table; otherwise, it’s an unreadable mess. Any autoformatting tool, like Prettier, will also turn this code into an unreadable mess. Such formatting handcraft was common in the old days, before autoformatting tools became mainstream. Now, it’s a waste of time.
 
 **Info:** We talk about code formatting and Prettier in the Autoformat your code chapter.
 
@@ -243,6 +245,8 @@ expect(console.log.mock.calls).toEqual([['Invalid ID']])
 -->
 
 We’ve separated the validations, the validation logic, and the formatting. Flies separately, kebabs separately, as we say in Russia. Each piece of code now has a single responsibility and a single reason to change. The validations are now defined declaratively and read like a list, not mixed with conditions and string concatenation. We’ve also changed negative conditions (_is invalid?_) to positive ones (_is valid?_). All this improves the readability and maintainability of the code: it’s easier to see all validations and add new ones because we don’t need to know the implementation details of running validations or formatting.
+
+**Info:** We talk more about negative and positive names in the [Naming is hard](/blog/naming/) chapter.
 
 On top of that, now it’s clear that the original code had a bug: there was no space between error messages.
 
@@ -377,7 +381,7 @@ Now, the query object always has the same shape, but some properties can be `und
 
 ## Avoid Pascal-style variables
 
-Some people like to define all variables at the beginning of a function. I call this _Pascal style_ because, in the Pascal programming language, we have to declare all variables at the beginning of a program or a function:
+Some programmers like to define all variables at the beginning of a function. I call this _Pascal style_ because, in the Pascal programming language, we have to declare all variables at the beginning of a program or a function:
 
 ```pascal
 function max(num1, num2: integer): integer;
@@ -394,7 +398,7 @@ begin
 end;
 ```
 
-Some people use this style in languages that don’t require it:
+Some programmers use this style in languages that don’t require it:
 
 <!--
 const submitOrder = vi.fn()
@@ -486,6 +490,8 @@ Another change here is that the `isFreeDelivery` variable is now boolean, which 
 ## Avoid temporary variables for function return values
 
 When a variable is used to store the result of a function, we can often get rid of that variable:
+
+<!-- eslint-disable unicorn/no-array-for-each -->
 
 ```js
 function areEventsValid(events) {
@@ -766,15 +772,13 @@ Both conventions reduce the cognitive load a bit and make the code easier to und
 
 Unfortunately, JavaScript has no true constants, and _mutation_ is still possible even when we define a variable using the `const` keyword.
 
-**Info:** We talk about mutation in [the next chapter](/blog/avoid-mutation/).
+**Info:** We talk about mutation in the next chapter, [Avoid mutation](/blog/avoid-mutation/).
 
-## Conclusion
+---
 
 Code without reassignments is often easier to reason about because variables don’t change their values in the middle of their lifespan.
 
 However, reassignments aren’t pure evil, and exterminating them at all costs won’t make the code better. I treat each reassignment as a sign: if I see a reassignment, I ask myself whether rewriting the code without it would improve readability. There’s no right or wrong answer, but if we do use reassignments, it’s better to isolate them in small functions, making it clear what the current value of a variable is.
-
----
 
 Start thinking about:
 

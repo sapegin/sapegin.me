@@ -219,14 +219,14 @@ We can either query it by its text content:
 
 ```jsx
 const wrapper = mount(<Pizza />);
-wrapper.find({children: "Cook pizza!"]})
+wrapper.find({ children: 'Cook pizza!' });
 ```
 
 Or query it by the test ID:
 
 ```jsx
 const wrapper = mount(<Pizza />);
-wrapper.find({'data-testid': "cookButton"]})
+wrapper.find({ 'data-testid': 'cookButton' });
 ```
 
 Both are valid, and both have their downsides:
@@ -273,9 +273,9 @@ test('contains all ingredients', () => {
   const ingredients = ['bacon', 'tomato', 'mozzarella', 'pineapples'];
   const wrapper = mount(<Pizza ingredients={ingredients} />);
 
-  ingredients.forEach(ingredient => {
+  for (const ingredient of ingredients) {
     expect(wrapper.text()).toMatch(ingredient);
-  });
+  }
 });
 ```
 
@@ -462,26 +462,27 @@ import RemotePizza from '../RemotePizza';
 
 const ingredients = ['bacon', 'tomato', 'mozzarella', 'pineapples'];
 
+const fetchIngredients = () =>
+  Promise.resolve({
+    args: { ingredients }
+  });
+
 test('download ingredients from internets', async () => {
   expect.assertions(4);
 
-  const fetchIngredients = () =>
-    Promise.resolve({
-      args: { ingredients }
-    });
   const wrapper = mount(
     <RemotePizza fetchIngredients={fetchIngredients} />
   );
 
-  await act(async () => {
+  await act(() => {
     wrapper.find({ children: 'Cook' }).simulate('click');
   });
 
   await waitForExpect(() => {
     wrapper.update();
-    ingredients.forEach(ingredient => {
+    for (const ingredient of ingredients) {
       expect(wrapper.text()).toMatch(ingredient);
-    });
+    }
   });
 });
 ```
@@ -539,15 +540,15 @@ test('download ingredients from internets', async () => {
 
   const wrapper = mount(<RemotePizza />);
 
-  await act(async () => {
+  await act(() => {
     wrapper.find({ children: 'Cook' }).simulate('click');
   });
 
   await waitForExpect(() => {
     wrapper.update();
-    ingredients.forEach(ingredient => {
+    for (const ingredient of ingredients) {
       expect(wrapper.text()).toMatch(ingredient);
-    });
+    }
   });
 });
 ```
@@ -581,15 +582,15 @@ test('download ingredients from internets', async () => {
 
   const wrapper = mount(<RemotePizza />);
 
-  await act(async () => {
+  await act(() => {
     wrapper.find({ children: 'Cook' }).simulate('click');
   });
 
   await waitForExpect(() => {
     wrapper.update();
-    ingredients.forEach(ingredient => {
+    for (const ingredient of ingredients) {
       expect(wrapper.text()).toMatch(ingredient);
-    });
+    }
   });
 });
 ```
@@ -624,16 +625,16 @@ test('download ingredients from internets', async () => {
 
   const wrapper = mount(<RemotePizza />);
 
-  await act(async () => {
+  await act(() => {
     wrapper.find({ children: 'Cook' }).simulate('click');
   });
 
   await waitForExpect(() => {
     wrapper.update();
     expect(scope.isDone()).toBe(true);
-    ingredients.forEach(ingredient => {
+    for (const ingredient of ingredients) {
       expect(wrapper.text()).toMatch(ingredient);
-    });
+    }
   });
 });
 ```

@@ -101,14 +101,16 @@ export function doSomethingCool(what) {
 
 function cookiesReducer(state, action) {
   switch (action.type) {
-    case DO_SOMETHING_COOL:
+    case DO_SOMETHING_COOL: {
       return {
         /*_*/
       };
-    default:
+    }
+    default: {
       return {
         /*_*/
       };
+    }
   }
 }
 
@@ -141,6 +143,8 @@ export default combineReducers({
 ```
 
 I use selectors as the only way to access Redux state in components. So I connect selectors and actions to feature’s root component, `FeatureNameView.jsx`:
+
+<!-- eslint-skip -->
 
 ```jsx
 import React, { Component, PropTypes } from 'react';

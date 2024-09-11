@@ -113,10 +113,18 @@ Let’s rewrite our test and fix both problems:
 
 ```jsx
 test('shows a success message after submission', () => {
-  const {getByLabelText, getByText, getByRole} = render(<SubscriptionForm />);
-  fireEvent.change(getByLabelText(/email/i, { target: { value: 'hello@example.com' } });
-  fireEvent.click(getByText(/submit/i);
-  expect(getByRole('status').textContent).toMatch('Thank you for subscribing!');
+  const { getByLabelText, getByText, getByRole } = render(
+    <SubscriptionForm />
+  );
+  fireEvent.change(
+    getByLabelText(/email/i, {
+      target: { value: 'hello@example.com' }
+    })
+  );
+  fireEvent.click(getByText(/submit/i));
+  expect(getByRole('status').textContent).toMatch(
+    'Thank you for subscribing!'
+  );
 });
 ```
 

@@ -10,17 +10,73 @@ tags:
 
 <!-- description: Writing good conditions and simplifying the code by removing unnecessary ones -->
 
-Conditions make code harder to read and test because:
+Conditions are essential for writing code that supports multiple use cases. JavaScript offers multiple ways to write conditional code:
+
+<!--
+let condition = true
+let value = 'value2'
+let object = { getValue: () => 'xxx' }
+-->
+
+```js
+// `if` operator
+if (condition) {
+  // The condition is true
+} else {
+  // The condition is false
+}
+
+// `switch` operator
+switch (value) {
+  case 'value1': {
+    // Code for value1
+    break;
+  }
+  case 'value2': {
+    // Code for value2
+    break;
+  }
+  default: {
+    // Code if no cases match
+    break;
+  }
+}
+
+// Ternary operator
+const value1 = condition ? 'true value' : 'false value';
+
+// Optional chaining operator
+const value2 = object.getValue?.();
+
+// Nullish coalescing operator
+const value3 = value ?? 'default value';
+```
+
+<!--
+expect($1).toBe(true)
+// No test for switch block
+expect(value1).toBe('true value')
+expect(value2).toBe('xxx')
+expect(value3).toBe('value2')
+-->
+
+We’ll talk about each type in more detail in this chapter.
+
+However, conditions can make code harder to read and test because:
 
 - conditions add nesting and increase code complexity;
-- multipart conditions are even harder to understand, especially the ones that mix positive and negative clauses;
+- multipart conditions are even harder to understand, especially those that mix positive and negative clauses;
 - each condition increases the minimum number of test cases we need to write for a certain module or function.
+
+Thus, reducing the number of conditions in our code makes sense.
 
 ## Unnecessary conditions
 
 Many conditions are unnecessary or could be rewritten in a more readable way.
 
 For example, consider the following code that creates two boolean variables:
+
+<!-- eslint-skip -->
 
 ```js
 const value = '';
@@ -55,6 +111,8 @@ expect(hasProducts).toBe(true)
 -->
 
 Even when the initial value isn’t a boolean:
+
+<!-- eslint-disable no-unneeded-ternary -->
 
 ```js
 const value = '';
@@ -109,6 +167,8 @@ Here’s a more complex but great (and real!) example of unnecessary conditions:
 
 <!-- const window = { navigator: { userAgent: '' } } -->
 
+<!-- eslint-skip -->
+
 ```js
 function IsNetscapeOnSolaris() {
   var agent = window.navigator.userAgent;
@@ -135,7 +195,7 @@ window.navigator.userAgent = 'Opera/9.63 (Macintosh; Intel Mac OS X; U; en) Pres
 expect(IsNetscapeOnSolaris()).toBe(false)
 -->
 
-We can replace the entire condition block with a single expression:
+This code checks whether the user has a particular browser and operating system by testing the user agent string. We can replace the nested condition with a single expression that returns a boolean value:
 
 <!-- const window = { navigator: { userAgent: '' } } -->
 
@@ -167,11 +227,12 @@ I often see two conditions for a single boolean variable:
 
 ```jsx
 const RefundLabel = ({
+  htmlFor,
   type,
   typeLabels,
   hasUserSelectableRefundOptions
 }) => (
-  <label>
+  <label htmlFor={htmlFor}>
     {type && typeLabels[type]}
     {!type && hasUserSelectableRefundOptions && 'Estimated:'}
     {!type && !hasUserSelectableRefundOptions && 'Total:'}
@@ -203,8 +264,8 @@ const RefundLabelMessage = ({
   return hasUserSelectableRefundOptions ? 'Estimated:' : 'Total:';
 };
 
-const RefundLabel = props => (
-  <label>
+const RefundLabel = ({ htmlFor, ...props }) => (
+  <label htmlFor={htmlFor}>
     <RefundLabelMessage {...props} />
   </label>
 );
@@ -235,9 +296,9 @@ function getRandomJoke(onDone, onError) {
     .then(data => {
       onDone(data);
     })
-    .catch(err => {
+    .catch(error => {
       if (onError) {
-        onError(err.message);
+        onError(error.message);
       }
     });
 }
@@ -267,8 +328,8 @@ function getRandomJoke(onDone, onError) {
     .then(data => {
       onDone(data);
     })
-    .catch(err => {
-      onError?.(err.message);
+    .catch(error => {
+      onError?.(error.message);
     });
 }
 ```
@@ -297,8 +358,8 @@ function getRandomJoke(onDone, onError = () => {}) {
     .then(data => {
       onDone(data);
     })
-    .catch(err => {
-      onError(err.message);
+    .catch(error => {
+      onError(error.message);
     });
 }
 ```
@@ -430,7 +491,7 @@ We still have a condition, but the overall code structure is simpler.
 
 **Info:** The _nullish coalescing operator_ (`??`) was introduced in ECMAScript 2020 and gives us a better alternative to the _logical or operator_ (`||`) because it only checks for _nullish_ values (`undefined` or `null`), not for _falsy_ values (which would also include, often undesirable, `false`, `''`, and `0`).
 
-In all these examples, we’re removing a separate branch that deals with the absence of data by normalizing the input — converting it to an array — as early as possible and then running a generic algorithm on the normalized data.
+In all these examples, we’re removing a separate branch that deals with the absence of data by _normalizing the input_ — converting it to an array — as early as possible and then running a generic algorithm on the normalized data.
 
 Arrays are convenient because we don’t have to worry about how many elements they contain: the same code will work with a hundred elements, one element, or zero elements.
 
@@ -460,7 +521,7 @@ Here, we’re wrapping a single element in an array so we can use the same code 
 
 Examples in the previous section introduce an important technique: _algorithm deduplication_. Instead of branching the main logic based on the input type, we code the main logic only once, but we normalize the input before running the algorithm. This technique can be used in many other places.
 
-Imagine an article likes counter where we can vote multiple times:
+Imagine an article with a “Like” button and a counter, where every time we press the button, the counter number increases. The object that stores counters for all articles could look like this:
 
 <!--
 function counter() {
@@ -583,11 +644,89 @@ log(LOG_LEVEL.ERROR, errorMessage || DEFAULT_ERROR_MESSAGE);
 
 We’ve removed all code duplication, and the code is shorter and easier to read. It’s also easier to see exactly which values depend on the condition.
 
-## Early return
+## Early returns
 
-Using _early returns_, or _guard clauses_, is a great way to avoid nested conditions and make the code easier to understand. A series of nested conditions is often used for error handling:
+A series of nested conditions is an unfortunate but popular way of handling errors:
+
+<!--
+let isUsernameValid = (x) => typeof x === 'string' && x !== ''
+let isEmailValid = (x) => typeof x === 'string' && x !== ''
+let isAddressValid = (x) => typeof x === 'string' && x !== ''
+let createUserRecord = vi.fn()
+let showNotification = vi.fn()
+-->
+
+```js
+function addUser(user) {
+  if (isUsernameValid(user.username)) {
+    if (isEmailValid(user.email)) {
+      if (isAddressValid(user.address)) {
+        createUserRecord(user);
+        showNotification('Welcome to The Hell!');
+      } else {
+        throw new Error('You must enter a valid address');
+      }
+    } else {
+      throw new Error('You must enter a valid email');
+    }
+  } else {
+    throw new Error('You must enter a valid username');
+  }
+}
+```
+
+<!--
+expect(() => addUser()).toThrowError()
+expect(createUserRecord).not.toHaveBeenCalled()
+expect(() => addUser({username: 'x', email: 'x', address: 'x'})).not.toThrowError()
+expect(createUserRecord).toHaveBeenCalled()
+-->
+
+The main code of this function is on the fourth level of nesting. We need to scroll all the way to the end of the function to see the `else` parts of each condition, which makes it easy to edit the wrong block because the conditions and their `else` blocks are so far apart. The `else` blocks are also in reversed order, which makes the code even more confusing.
+
+**Info:** Deeply nested conditions are also known as the [arrow antipattern](http://wiki.c2.com/?ArrowAntiPattern), or _dangerously deep nesting_, or _if/else hell_.
+
+_Early returns_, or _guard clauses_, are a great way to avoid nested conditions and make the code easier to understand:
+
+<!--
+let isUsernameValid = (x) => typeof x === 'string' && x !== ''
+let isEmailValid = (x) => typeof x === 'string' && x !== ''
+let isAddressValid = (x) => typeof x === 'string' && x !== ''
+let createUserRecord = vi.fn()
+let showNotification = vi.fn()
+-->
+
+```js
+function addUser(user) {
+  if (isUsernameValid(user.username) === false) {
+    throw new Error('You must enter a valid address');
+  }
+  if (isEmailValid(user.email) === false) {
+    throw new Error('You must enter a valid email');
+  }
+  if (isAddressValid(user.address) === false) {
+    throw new Error('You must enter a valid username');
+  }
+
+  createUserRecord(user);
+  showNotification('Welcome to The Hell!');
+}
+```
+
+<!--
+expect(() => addUser()).toThrowError()
+expect(createUserRecord).not.toHaveBeenCalled()
+expect(() => addUser({username: 'x', email: 'x', address: 'x'})).not.toThrowError()
+expect(createUserRecord).toHaveBeenCalled()
+-->
+
+Now, the whole validation is grouped at the beginning of the function using guard clauses, and it’s clear which error message is shown for each validation. We have at most one level of nesting instead of four, and the main code of the function isn’t nested at all.
+
+Here’s a real-life example:
 
 <!-- const getOrderIds = () => ([]), sendOrderStatus = () => {} -->
+
+<!-- eslint-skip -->
 
 ```js
 function postOrderStatus() {
@@ -617,9 +756,7 @@ function postOrderStatus() {
 
 <!-- expect(() => postOrderStatus(0)).not.toThrowError() -->
 
-There are 120 lines between the first condition and its `else` block, and the main return value is somewhere inside three levels of conditions.
-
-**Info:** Deeply nested conditions are also known as the [arrow antipattern](http://wiki.c2.com/?ArrowAntiPattern) or _dangerously deep nesting_.
+This code is building an array with information about orders in an online shop. There are 120 lines between the first condition and its `else` block, and the main return value is somewhere inside the three levels of conditions.
 
 Let’s untangle this spaghetti monster:
 
@@ -627,13 +764,13 @@ Let’s untangle this spaghetti monster:
 
 ```js
 function postOrderStatus() {
-  let idsArrayObj = getOrderIds();
-  if (idsArrayObj === undefined) {
+  let idsArrayObject = getOrderIds();
+  if (idsArrayObject === undefined) {
     return false;
   }
 
-  if (Array.isArray(idsArrayObj) === false) {
-    idsArrayObj = [idsArrayObj];
+  if (Array.isArray(idsArrayObject) === false) {
+    idsArrayObject = [idsArrayObject];
   }
 
   const fullRecordsArray = [];
@@ -704,6 +841,8 @@ let ErrorMessage = () => <p>Error</p>
 let EmptyMessage = () => <p>No data</p>
 let LoadingSpinner = () => <p>Loading…</p>
 -->
+
+<!-- eslint-skip -->
 
 ```jsx
 function Container({
@@ -849,12 +988,15 @@ const DECISION_MAYBE = 2;
 
 const getButtonLabel = decisionButton => {
   switch (decisionButton) {
-    case DECISION_YES:
+    case DECISION_YES: {
       return 'Yes';
-    case DECISION_NO:
+    }
+    case DECISION_NO: {
       return 'No';
-    case DECISION_MAYBE:
+    }
+    case DECISION_MAYBE: {
       return 'Maybe';
+    }
   }
 };
 
@@ -1224,6 +1366,8 @@ You may feel that I have too many similar examples in this book, and you’re ri
 
 So here is another example (the last one, I promise!):
 
+<!-- eslint-skip -->
+
 ```js
 const DATE_FORMAT_ISO = 'iso';
 const DATE_FORMAT_DE = 'de';
@@ -1235,15 +1379,19 @@ const getDateFormat = format => {
   const monthPart = 'M';
 
   switch (format) {
-    case DATE_FORMAT_ISO:
+    case DATE_FORMAT_ISO: {
       return `${monthPart}-${datePart}`;
-    case DATE_FORMAT_DE:
+    }
+    case DATE_FORMAT_DE: {
       return `${datePart}.${monthPart}`;
-    case DATE_FORMAT_UK:
+    }
+    case DATE_FORMAT_UK: {
       return `${datePart}/${monthPart}`;
+    }
     case DATE_FORMAT_US:
-    default:
+    default: {
       return `${monthPart}/${datePart}`;
+    }
   }
 };
 ```
@@ -1286,6 +1434,56 @@ expect(getDateFormat()).toBe('M/D')
 The improved version is shorter, and, more importantly, now it’s easy to see all date formats: now the difference is much easier to spot.
 
 **Info:** There’s a proposal to add [pattern matching](https://github.com/tc39/proposal-pattern-matching) to JavaScript, which may give us another option: more flexible than tables but still readable.
+
+## Negative conditions
+
+Negative conditions are generally harder to read than positive ones:
+
+<!--
+let enabled = true
+let Window = { showInformationMessage: vi.fn() }
+-->
+
+<!-- eslint-skip -->
+
+```js
+if (!enabled) {
+  Window.showInformationMessage(
+    'ESLint is not running because the deprecated setting eslint.enable is set to false…'
+  );
+} else {
+  Window.showInformationMessage(
+    'ESLint is not running. By default only TypeScript and JavaScript files are validated…'
+  );
+}
+```
+
+<!-- expect(Window.showInformationMessage).toHaveBeenCalled('ESLint is not running. By default only TypeScript and JavaScript files are validated…') -->
+
+Decoding “if not enabled” takes a bit more cognitive effort than “if enabled”:
+
+<!--
+let enabled = true
+let Window = { showInformationMessage: vi.fn() }
+-->
+
+```js
+if (enabled) {
+  Window.showInformationMessage(
+    'ESLint is not running. By default only TypeScript and JavaScript files are validated…'
+  );
+} else {
+  Window.showInformationMessage(
+    'ESLint is not running because the deprecated setting eslint.enable is set to false…'
+  );
+}
+```
+
+<!-- expect(Window.showInformationMessage).toHaveBeenCalled('ESLint is not running. By default only TypeScript and JavaScript files are validated…') -->
+
+One notable exception is early returns, which we discussed earlier in this chapter. While negative conditions are harder to read, the overall benefit of structuring functions with early returns outweighs this drawback.
+
+**Tip:** The [unicorn/no-negated-condition](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-negated-condition.md) linter rule automatically converts negative conditions to positive ones.
 
 ## Repeated conditions
 
@@ -1454,7 +1652,11 @@ _Ideally, we should check whether we can implement caching the same way for all 
 
 It may seem like I prefer small or even very small functions, but that’s not the case. The main reason for extracting code into separate functions here is that it violates the _single responsibility principle_. The original function had too many responsibilities: getting special offers, generating cache keys, reading data from the cache, and storing data in the cache, each with two branches for our two brands.
 
-**Info:** The single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) states that any module, class, or method should have only one reason to change, or, in other words, we should keep the code that changes for the same reason together. We talk more about this topic in the [Divide and conquer, or merge and relax chapter.
+**Info:** The [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) states that any module, class, or method should have only one reason to change, or, in other words, we should keep the code that changes for the same reason together.  
+**Info:**  
+**Info:** Imagine a pizzeria where a pizzaiolo is responsible only for cooking pizzas, and a cashier is responsible only for charging customers. In other words, we don’t murder people, and they don’t plaster the walls.  
+**Info:**  
+**Info:** We talk more about this topic in the Divide and conquer, or merge and relax chapter.
 
 Here’s one more example:
 
@@ -1538,20 +1740,31 @@ Now, it’s clear that we want to find the maximum of two types of discounts, ot
 
 ## Formulas
 
-Similar to tables, a single formula can often replace a whole bunch of conditions. Consider [this example](https://x.com/JeroenFrijters/status/1615204074588180481):
+Similar to tables, a single expression, or _a formula_ can often replace a whole bunch of conditions. Consider [this example](https://x.com/JeroenFrijters/status/1615204074588180481):
 
+<!-- prettier-ignore -->
 ```js
 function getStarRating(percentage) {
-  if (percentage === 0) return '✩✩✩✩✩✩✩✩✩✩';
-  if (percentage > 0 && percentage <= 0.1) return '★✩✩✩✩✩✩✩✩✩';
-  if (percentage > 0.1 && percentage <= 0.2) return '★★✩✩✩✩✩✩✩✩';
-  if (percentage > 0.2 && percentage <= 0.3) return '★★★✩✩✩✩✩✩✩';
-  if (percentage > 0.3 && percentage <= 0.4) return '★★★★✩✩✩✩✩✩';
-  if (percentage > 0.4 && percentage <= 0.5) return '★★★★★✩✩✩✩✩';
-  if (percentage > 0.5 && percentage <= 0.6) return '★★★★★★✩✩✩✩';
-  if (percentage > 0.6 && percentage <= 0.7) return '★★★★★★★✩✩✩';
-  if (percentage > 0.7 && percentage <= 0.8) return '★★★★★★★★✩✩';
-  if (percentage > 0.8 && percentage <= 0.9) return '★★★★★★★★★✩';
+  if (percentage === 0)
+    return '✩✩✩✩✩✩✩✩✩✩';
+  if (percentage > 0 && percentage <= 0.1)
+    return '★✩✩✩✩✩✩✩✩✩';
+  if (percentage > 0.1 && percentage <= 0.2)
+    return '★★✩✩✩✩✩✩✩✩';
+  if (percentage > 0.2 && percentage <= 0.3)
+    return '★★★✩✩✩✩✩✩✩';
+  if (percentage > 0.3 && percentage <= 0.4)
+    return '★★★★✩✩✩✩✩✩';
+  if (percentage > 0.4 && percentage <= 0.5)
+    return '★★★★★✩✩✩✩✩';
+  if (percentage > 0.5 && percentage <= 0.6)
+    return '★★★★★★✩✩✩✩';
+  if (percentage > 0.6 && percentage <= 0.7)
+    return '★★★★★★★✩✩✩';
+  if (percentage > 0.7 && percentage <= 0.8)
+    return '★★★★★★★★✩✩';
+  if (percentage > 0.8 && percentage <= 0.9)
+    return '★★★★★★★★★✩';
   return '★★★★★★★★★★';
 }
 ```
@@ -1590,7 +1803,7 @@ expect(getStarRating(0.91)).toBe('★★★★★★★★★★')
 
 It’s harder to understand than the initial implementation, but it requires significantly fewer test cases, and we’ve separated the design and the code. The icons will likely change, but the algorithm probably won’t.
 
-**Info:** This approach is known as _separation of logic and presentation_.
+**Info:** This approach is known as [separation of logic and presentation](https://martinfowler.com/eaaDev/SeparatedPresentation.html).
 
 ## Nested ternaries
 
@@ -1630,13 +1843,17 @@ However, nested ternaries are different beasts: they make code harder to read be
 function Products({products, isError, isLoading}) {
   return isError
     ? <p>Error loading products</p>
-      : isLoading
-        ? <Loading />
-        : products.length > 0
-          ? <ul>{products.map(
-              product => <li key={product.id}>{product.name}</li>
-            )}</ul>
-          : <p>No products found</p>
+    : isLoading
+      ? <Loading />
+      : products.length > 0
+        ? (
+            <ul>
+              {products.map(product => (
+                <li key={product.id}>{product.name}</li>
+              ))}
+            </ul>
+          )
+        : <p>No products found</p>
 }
 ```
 
@@ -1688,7 +1905,7 @@ But maybe it’s intentional and gives us a clear sign that we should rewrite th
 
 **Info:** We talk about code formatting and Prettier in the Autoformat your code chapter.
 
-In this example, we’re rendering one of four UI states:
+In this example, we render one of four UI states:
 
 - a spinner (loading);
 - an error message (failure);
@@ -1740,9 +1957,67 @@ I think it’s much easier to follow now: all special cases are at the top of th
 
 ## Complex conditions
 
-Sometimes, we can’t reduce the number of conditions, and the only way to improve the code is to make it easier to understand what a certain complex condition does. Consider this example:
+Sometimes, we can’t reduce the number of conditions, and the only way to improve the code is to make it easier to understand what a certain complex condition does.
 
-Consider this example:
+Consider [this example](https://refactoring.guru/extract-variable) from the Refactoring Guru:
+
+<!--
+let resize = 1
+let wasInitialized = () => true
+function test(platform, browser) {
+-->
+
+<!-- eslint-disable unicorn/prefer-includes -->
+
+```js
+if (
+  platform.toUpperCase().indexOf('MAC') > -1 &&
+  browser.toUpperCase().indexOf('IE') > 1 &&
+  wasInitialized() &&
+  resize > 0
+) {
+  // Do something…
+}
+```
+
+<!--
+  else {
+    return false
+  }
+}
+expect(test('Mac_PowerPC', 'Mozilla/4.0 (compatible; MSIE 5.17; Mac_PowerPC)')).toBe(undefined)
+expect(test('MacInter', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50')).toBe(false)
+-->
+
+This code checks multiple conditions, such as the user’s browser or the state of the widget. However, all these checks are crammed into a single expression, making it hard to understand. It’s often a good idea to extract complex calculations and conditions from an already long expression into separate variables:
+
+<!--
+let resize = 1
+let wasInitialized = () => true
+function test(platform, browser) {
+-->
+
+```js
+const isMacOs = platform.toUpperCase().includes('MAC');
+const isIE = browser.toUpperCase().includes('IE');
+const wasResized = resize > 0;
+if (isMacOs && isIE && wasInitialized() && wasResized) {
+  // Do something…
+}
+```
+
+<!--
+  else {
+    return false
+  }
+}
+expect(test('Mac_PowerPC', 'Mozilla/4.0 (compatible; MSIE 5.17; Mac_PowerPC)')).toBe(undefined)
+expect(test('MacInter', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50')).toBe(false)
+-->
+
+Now, the condition is shorter and more readable because names help us to understand what the condition does in the context of the function where it’s used.
+
+Here’s another example:
 
 ```js
 function mapTips(allTips, ingredients, tags) {
@@ -1793,20 +2068,18 @@ The code is noticeably longer, but it’s less dense and doesn’t try to do eve
 
 **Info:** The [Naming is hard](/blog/naming/) chapter has a few more examples of extracting complex conditions.
 
-## Conclusion
+---
 
 Conditions allow us to write generic code that supports many use cases. However, when the code has too many conditions, it becomes hard to read and test. We should be vigilant and avoid unnecessary conditions, or replace some conditions with more maintainable and testable alternatives.
-
----
 
 Start thinking about:
 
 - Removing unnecessary conditions, such as explicitly comparing a boolean value to `true` or `false`.
 - Normalizing the input data by converting the absence of data to an array early on to avoid branching and dealing with no data separately.
 - Normalizing the state to avoid algorithm duplication.
+- Replacing complex condition with a single expression (formula) or a map.
+- Replacing nested ternaries or `if` operators with early returns.
 - Caching repeated conditions in a variable.
-- Replacing long groups of conditions with tables or maps.
-- Replacing long, repeated conditions with a formula.
 
 ---
 

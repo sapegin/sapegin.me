@@ -14,7 +14,7 @@ Splitting UI into small reusable components may lead to creation of unnecessary 
 
 ```jsx
 // React 15: extra wrapper element
-const Breakfast = () => (
+const Breakfast150 = () => (
   <ul>
     <li>Coffee</li>
     <li>Croissant</li>
@@ -23,14 +23,14 @@ const Breakfast = () => (
 );
 
 // React 16.0: array (note that keys are required)
-const Breakfast = () => [
+const Breakfast160 = () => [
   <li key="coffee">Coffee</li>,
   <li key="croissant">Croissant</li>,
   <li key="marmalade">Marmalade</li>
 ];
 
 // React 16.2: fragment
-const Breakfast = () => (
+const Breakfast162Fragment = () => (
   <React.Fragment>
     <li>Coffee</li>
     <li>Croissant</li>
@@ -39,7 +39,7 @@ const Breakfast = () => (
 );
 
 // React 16.2: fragment (short syntax)
-const Breakfast = () => (
+const Breakfast162FragmentShort = () => (
   <>
     <li>Coffee</li>
     <li>Croissant</li>
@@ -65,7 +65,7 @@ In React 16 components can return strings and numbers. This is useful for compon
 
 ```jsx
 // React 15
-const LocalDate = ({ date }) => (
+const LocalDate150 = ({ date }) => (
   <span>
     {date.toLocaleDateString('de-DE', {
       year: 'numeric',
@@ -76,7 +76,7 @@ const LocalDate = ({ date }) => (
 );
 
 // React 16
-const LocalDate = ({ date }) =>
+const LocalDate160 = ({ date }) =>
   date.toLocaleDateString('de-DE', {
     year: 'numeric',
     month: 'long',
@@ -93,7 +93,7 @@ In React 15 it wasn’t possible to cancel `setState()` and avoid rerendering, i
 handleChange = event => {
   const city = event.target.value;
   this.setState(prevState =>
-    prevState.city !== city ? { city } : null
+    prevState.city === city ? null : { city }
   );
 };
 ```
@@ -107,9 +107,9 @@ In this example calling `handleChange()` with the same city name as in the state
 ```jsx
 class Root extends React.Component {
   state = { theme: THEME_DARK };
-  handleThemeToggle = theme =>
+  handleThemeToggle = () =>
     this.setState(({ theme }) => ({
-      theme: theme === THEME_DARK ? THEME_LIGHT : THEME_DARK;
+      theme: theme === THEME_DARK ? THEME_LIGHT : THEME_DARK
     }));
   render() {
     return (
@@ -145,7 +145,7 @@ const ThemeContext = React.createContext(THEME_DARK);
 // We should wrap our app in this component
 class ThemeProvider extends React.Component {
   state = { theme: THEME_DARK };
-  handleThemeToggle = theme =>
+  handleThemeToggle = () =>
     this.setState(({ theme }) => ({
       theme: theme === THEME_DARK ? THEME_LIGHT : THEME_DARK
     }));
@@ -184,7 +184,7 @@ The `getDerivedStateFromProps()` lifecycle method is a replacement for `componen
 
 ```jsx
 // React 15
-class Modal extends React.Component {
+class Modal150 extends React.Component {
   state = {
     isOpen: this.props.isOpen
   };
@@ -198,7 +198,7 @@ class Modal extends React.Component {
 }
 
 // React 16.3
-class Modal extends React.Component {
+class Modal163 extends React.Component {
   state = {};
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.isOpen !== prevState.isOpen) {
