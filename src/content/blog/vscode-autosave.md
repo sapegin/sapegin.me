@@ -22,7 +22,7 @@ Two other useful things I like to do here:
 1. Disable autosave when there’s a syntax error in the file, so autosave doesn’t break the dev server, which could cause loss of state, such as scroll position or form data.
 2. Hide all autofixable ESLint issues so they don’t distract me while I’m writing code, since these issues don’t require any action from me and will be autofixed the next time I save the file.
 
-The Visual Studio Code config to achieve this could look like this:
+The [Visual Studio Code config](https://code.visualstudio.com/docs/getstarted/settings#_settingsjson) to achieve this could look like this:
 
 ```json
 // settings.json
@@ -44,7 +44,7 @@ The Visual Studio Code config to achieve this could look like this:
 }
 ```
 
-And the keybinding config could look like this:
+And the [keybinding config](https://code.visualstudio.com/docs/getstarted/keybindings) could look like this:
 
 ```json
 // keybindings.json
