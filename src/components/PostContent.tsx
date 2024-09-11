@@ -96,7 +96,7 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 						willChange: 'opacity',
 					},
 					'& .heading:hover .heading__anchor': {
-						pointerFine: {
+						_pointerFine: {
 							opacity: 1,
 							transitionDelay: '0.1s',
 							transitionDuration: 'fade',
