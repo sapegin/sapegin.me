@@ -33,7 +33,7 @@ function Intro() {
 				<Hola>Hey, I’m Artem!</Hola>
 				<Text variant="intro">
 					<LinkWithIcon icon="mail" href="mailto:artem@sapegin.ru">
-						Write me
+						Write to me
 					</LinkWithIcon>
 					,{' '}
 					<LinkWithIcon icon="comment" href="https://github.com/sapegin/ama">
@@ -98,12 +98,12 @@ function Writing({
 					<PostList posts={tilPosts} showDates />
 				</Stack>
 				<Stack gap="m">
-					<Heading level={3}>Some more writing</Heading>
+					<Heading level={3}>More writing</Heading>
 					<PostList posts={writing} showDescriptions />
 				</Stack>
 			</Stack>
 			<Text>
-				Sometimes, I also <Link href="/speaking/">speak on conferences</Link>.
+				Sometimes, I also <Link href="/speaking/">speak at conferences</Link>.
 			</Text>
 		</Stack>
 	);
@@ -240,8 +240,8 @@ function Cooking() {
 				</Grid>
 			</Expander>
 			<Text>
-				My favorite cuisines to cook are Russian, Mexican, Korean, and Italian.
-				And my girlfriend and I are{' '}
+				My favorite cuisines to cook are Russian, Mexican, Korean, and Italian;
+				my girlfriend and I are{' '}
 				<Link href="https://tacohuaco.co/">collecting recipes</Link>.
 			</Text>
 		</Stack>
