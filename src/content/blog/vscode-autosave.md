@@ -1,5 +1,6 @@
 ---
 title: 'Better autosave and autoformat in Visual Studio Code'
+description: 'Avoid autoformat messing up your code when you need to look something up in the docs halfway through writing a line of code.'
 date: 2024-09-16
 tags:
   - tools
