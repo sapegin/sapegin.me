@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Better autosave and autoformat in Visual Studio Code'
 date: 2024-09-16
 tags:
