@@ -1,7 +1,6 @@
 // Get Markdown from the Washing code book repo
 
 // TODO: Make a map of all sections with an ID and validate all chapter links
-// TODO: Collect techniques and antipatterns
 
 import { execSync } from 'node:child_process';
 import fs from 'fs-extra';
@@ -105,6 +104,30 @@ const updateTips = (contents: string) =>
 const updateImages = (contents: string) =>
 	contents.replace(/]\(images\//, '](/images/blog/book/');
 
+// Get an array from a tagged list:
+// <!-- patterns:start -->
+// - [Foo](#foo).
+// - [Bar](#bar).
+// <!-- patterns:end -->
+// →
+// ['Foo', 'Bar']
+const getTaggedList = (contents: string, tag: string) => {
+	// Get Markdown between tag comments
+	const [, markdown] =
+		contents.match(
+			new RegExp(
+				`<!-- ${tag}:start -->\\s*([\\S\\s]*)\\s*<!-- ${tag}:end -->`,
+				'm'
+			)
+		) ?? [];
+
+	// Remove the markup and split into an array
+	return markdown
+		.replaceAll(/- \[([^\]]+)]\([^)]+\).*\.?/g, '$1')
+		.trim()
+		.split('\n');
+};
+
 /**
  * Download the code
  */
@@ -167,7 +190,6 @@ for (const post of bookPosts) {
 		internalLinks[id] = `${mainLink}#${slugger.slug(title)}`;
 	}
 }
-console.log(internalLinks);
 
 /**
  * Sync files
@@ -251,9 +273,26 @@ const tocSorted = _.sortBy(toc, ({ title }) =>
 	title === 'Other techniques' ? 1 : -1
 );
 
+console.log('[BOOK] Syncing patterns and antipatterns...');
+
+// Read footer chapter
+const footerMarkdown = readChapter('160_Footer');
+
+// Get patterns and antipatterns
+const patterns = getTaggedList(footerMarkdown, 'patterns');
+const antipatterns = getTaggedList(footerMarkdown, 'antipatterns');
+
 fs.writeFileSync(
 	`${DATA_DIR}/book.json`,
-	JSON.stringify(tocSorted, undefined, 2)
+	JSON.stringify(
+		{
+			chapters: tocSorted,
+			patterns,
+			antipatterns,
+		},
+		undefined,
+		2
+	)
 );
 
 console.log('[BOOK] Formatting...');

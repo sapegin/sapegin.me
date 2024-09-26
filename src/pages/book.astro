@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { BookPage } from '../templates/BookPage';
-import chapters from '../data/book.json';
+import info from '../data/book.json';
 ---
 
 <Layout
@@ -11,5 +11,5 @@ import chapters from '../data/book.json';
 	description="Learn how to make your code more readable and maintainable, and how to avoid hard-to-track bugs."
 	image="/images/covers/washing-your-code-large.avif"
 	component={BookPage}
-	props={{ chapters }}
+	props={info}
 />

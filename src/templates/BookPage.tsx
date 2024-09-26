@@ -20,10 +20,13 @@ import {
 } from '../components';
 import type { Chapter } from '../types/Chapter';
 import { Page } from './Page';
+import { Markdown } from '../components/Markdown';
 
 type Props = {
 	url: string;
 	chapters: Chapter[];
+	patterns: string[];
+	antipatterns: string[];
 };
 
 type TestimonialItem = {
@@ -189,8 +192,44 @@ function ChapterList({ chapters }: { chapters: Chapter[] }) {
 							))}
 						</Grid>
 					) : (
-						<TextTypo variant="small">{chapter.description}</TextTypo>
+						<TextTypo variant="small">
+							<Markdown text={chapter.description} />
+						</TextTypo>
 					)}
+				</Stack>
+			))}
+		</Grid>
+	);
+}
+
+function PatternList({
+	patterns,
+	strikethrough,
+}: {
+	patterns: string[];
+	strikethrough?: boolean;
+}) {
+	return (
+		<Grid
+			as="ul"
+			rowGap="m"
+			columnGap="m"
+			gridTemplateColumns={{
+				base: '1fr',
+				tablet: '1fr 1fr',
+				desktop: '1fr 1fr 1fr',
+			}}
+		>
+			{patterns.map((pattern) => (
+				<Stack as="li" key={pattern} gap="xs">
+					<Text
+						variant="semilarge"
+						css={{
+							textDecoration: strikethrough ? 'line-through' : undefined,
+						}}
+					>
+						<Markdown text={pattern} />
+					</Text>
 				</Stack>
 			))}
 		</Grid>
@@ -326,10 +365,10 @@ function Features() {
 			<FeatureList>
 				<FeatureListItem>PDF and EPUB formats</FeatureListItem>{' '}
 				<FeatureListItem>
-					20 years of experience packed into 350 pages
+					20 years of experience packed into 400 pages
 				</FeatureListItem>
 				<FeatureListItem>
-					3700 lines of unit-tested code examples
+					4600 lines of unit-tested code examples
 				</FeatureListItem>
 				<FeatureListItem>Based on production code</FeatureListItem>
 				<FeatureListItem>Up to date: ECMAScript 2024</FeatureListItem>
@@ -339,7 +378,7 @@ function Features() {
 	);
 }
 
-export function BookPage({ url, chapters }: Props) {
+export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 	return (
 		<Page url={url}>
 			<Stack gap="xl">
@@ -409,6 +448,24 @@ export function BookPage({ url, chapters }: Props) {
 						Table of contents
 					</Heading>
 					<ChapterList chapters={chapters} />
+				</Stack>
+				<Stack as="section" gap="m">
+					<Heading level={2} id="toc">
+						Techniques and patterns
+					</Heading>
+					<TextTypo>
+						Here’s a list of all techniques and patterns described in the book.
+					</TextTypo>
+					<PatternList patterns={patterns} />
+				</Stack>
+				<Stack as="section" gap="m">
+					<Heading level={2} id="toc">
+						Antipatterns
+					</Heading>
+					<TextTypo>
+						Here’s a list of all antipatterns described in the book.
+					</TextTypo>
+					<PatternList patterns={antipatterns} strikethrough />
 				</Stack>
 				<Stack as="section" gap="m">
 					<Heading level={2}>What readers are saying?</Heading>

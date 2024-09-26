@@ -1,83 +1,148 @@
-[
-  {
-    "url": "/blog/avoid-loops/",
-    "title": "Avoid loops",
-    "description": "Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best approach",
-    "sections": []
-  },
-  {
-    "url": "/blog/avoid-conditions/",
-    "title": "Avoid conditions",
-    "description": "Writing good conditions and simplifying the code by removing unnecessary ones",
-    "sections": []
-  },
-  {
-    "url": "/blog/avoid-reassigning-variables/",
-    "title": "Avoid reassigning variables",
-    "description": "Improving code readability by making it easier to understand what variables are doing and how they are used in the code",
-    "sections": []
-  },
-  {
-    "url": "/blog/avoid-mutation/",
-    "title": "Avoid mutation",
-    "description": "Why mutation is hindering code readability and what can we do about it",
-    "sections": []
-  },
-  {
-    "url": "/blog/avoid-comments/",
-    "title": "Avoid comments",
-    "description": "Writing useful comments, when to write them and when not",
-    "sections": []
-  },
-  {
-    "url": "/blog/naming/",
-    "title": "Naming is hard",
-    "description": "How clear names make it easier to understand the code, and how to improve naming in our code",
-    "sections": []
-  },
-  {
-    "title": "Divide and conquer, or merge and relax",
-    "description": "Splitting code into functions and modules, when is the right time to introduce an abstraction, and when it’s better to wait",
-    "sections": []
-  },
-  {
-    "title": "Don’t make me think",
-    "description": "All the different ways programmers like to write clever code, and why we should avoid clever code as much as possible",
-    "sections": []
-  },
-  {
-    "title": "Code style",
-    "description": "Which code styles are actually improving readability and which are just opinions that don’t matter much",
-    "sections": []
-  },
-  {
-    "title": "Lint your code",
-    "description": "How linters can help us maintain consistent and modern codebase, and promote some of the techniques discussed in the previous chapters",
-    "sections": []
-  },
-  {
-    "title": "Autoformat your code",
-    "description": "How tools can make our lives much easier by formatting code for us",
-    "sections": []
-  },
-  {
-    "title": "Learn your code editor",
-    "description": "Different techniques for editing code and customizing our environment to make our work more efficient and less tiring",
-    "sections": []
-  },
-  {
-    "title": "Other techniques",
-    "description": "Everything else that didn’t fit into other chapters",
-    "sections": [
-      "Make impossible states impossible",
-      "Don’t try to predict the future",
-      "Become a code scout",
-      "Write testable code",
-      "Write greppable code",
-      "Avoid not invented here syndrome",
-      "Avoid cargo cult programming",
-      "Debug code with emojis",
-      "Go for a walk or talk to a rubber duck"
-    ]
-  }
-]
+{
+  "chapters": [
+    {
+      "url": "/blog/avoid-loops/",
+      "title": "Avoid loops",
+      "description": "Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best approach",
+      "sections": []
+    },
+    {
+      "url": "/blog/avoid-conditions/",
+      "title": "Avoid conditions",
+      "description": "Writing good conditions and simplifying the code by removing unnecessary ones",
+      "sections": []
+    },
+    {
+      "url": "/blog/avoid-reassigning-variables/",
+      "title": "Avoid reassigning variables",
+      "description": "Improving code readability by making it easier to understand what variables are doing and how they are used in the code",
+      "sections": []
+    },
+    {
+      "url": "/blog/avoid-mutation/",
+      "title": "Avoid mutation",
+      "description": "Why mutation is hindering code readability and what can we do about it",
+      "sections": []
+    },
+    {
+      "url": "/blog/avoid-comments/",
+      "title": "Avoid comments",
+      "description": "Writing useful comments, when to write them and when not",
+      "sections": []
+    },
+    {
+      "url": "/blog/naming/",
+      "title": "Naming is hard",
+      "description": "How clear names make it easier to understand the code, and how to improve naming in our code",
+      "sections": []
+    },
+    {
+      "title": "Divide and conquer, or merge and relax",
+      "description": "Splitting code into functions and modules, when is the right time to introduce an abstraction, and when it’s better to wait",
+      "sections": []
+    },
+    {
+      "title": "Don’t make me think",
+      "description": "All the different ways programmers like to write clever code, and why we should avoid clever code as much as possible",
+      "sections": []
+    },
+    {
+      "title": "Code style",
+      "description": "Which code styles are actually improving readability and which are just opinions that don’t matter much",
+      "sections": []
+    },
+    {
+      "title": "Lint your code",
+      "description": "How linters can help us maintain consistent and modern codebase, and promote some of the techniques discussed in the previous chapters",
+      "sections": []
+    },
+    {
+      "title": "Autoformat your code",
+      "description": "How tools can make our lives much easier by formatting code for us",
+      "sections": []
+    },
+    {
+      "title": "Learn your code editor",
+      "description": "Different techniques for editing code and customizing our environment to make our work more efficient and less tiring",
+      "sections": []
+    },
+    {
+      "title": "Other techniques",
+      "description": "Everything else that didn’t fit into other chapters",
+      "sections": [
+        "Make impossible states impossible",
+        "Don’t try to predict the future",
+        "Become a code scout",
+        "Write testable code",
+        "Write greppable code",
+        "Avoid not invented here syndrome",
+        "Avoid cargo cult programming",
+        "Debug code with emojis",
+        "Go for a walk or talk to a rubber duck"
+      ]
+    }
+  ],
+  "patterns": [
+    "2-minute rule",
+    "Algorithm deduplication",
+    "A/HC/LC pattern",
+    "Arrange-Act-Assert",
+    "Array method chaining",
+    "Campsite rule",
+    "Colocation",
+    "Comments with examples",
+    "Condition expansion",
+    "Data normalization",
+    "`defaultProps` for testing React components",
+    "Dependency injection",
+    "Discriminated unions",
+    "Early returns, or guard clauses",
+    "Enums",
+    "Explicit mutation",
+    "Finite-state machines",
+    "Greppable code",
+    "Hack comments",
+    "Hiding complexity",
+    "Implicit assertions",
+    "Inline refactoring",
+    "Iteration using array methods",
+    "Keep it simple, stupid (KISS)",
+    "Named function parameters",
+    "Optional function parameters",
+    "Parallel coding",
+    "Range conditions",
+    "Readable numbers",
+    "Reducing variables’ lifespan",
+    "Rubberducking",
+    "Sections, paragraphs, phrases",
+    "Separation of “what” and “how”",
+    "Separation of code that changes often",
+    "Single responsibility principle",
+    "Tables and maps",
+    "Todo comments",
+    "Write everything twice, or we enjoy typing (WET)",
+    "You aren’t gonna need it (Yagni)"
+  ],
+  "antipatterns": [
+    "100% code coverage",
+    "Abbreviations and acronyms",
+    "`Array.reduce()` method",
+    "Barrel files",
+    "Broken windows theory",
+    "Cargo cult programming",
+    "Default exports",
+    "Function parameters mutation",
+    "Don’t repeat yourself (DRY)",
+    "Monster utility files",
+    "Negative booleans",
+    "Nested ternaries",
+    "Not invented here syndrome (NIH)",
+    "Magic numbers",
+    "Mutating array methods",
+    "Pascal-style variables",
+    "Premature abstraction, or premature generalization, or speculative generality",
+    "Reusing variables",
+    "Shortcuts",
+    "Single return law"
+  ]
+}
