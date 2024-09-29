@@ -451,19 +451,21 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 				</Stack>
 				<Stack as="section" gap="m">
 					<Heading level={2} id="toc">
-						Techniques and patterns
+						Techniques &amp; patterns
 					</Heading>
 					<TextTypo>
-						Here’s a list of all techniques and patterns described in the book.
+						Here’s a list of all the techniques and patterns described in the
+						book.
 					</TextTypo>
 					<PatternList patterns={patterns} />
 				</Stack>
 				<Stack as="section" gap="m">
 					<Heading level={2} id="toc">
-						Antipatterns
+						Code smells &amp; antipatterns
 					</Heading>
 					<TextTypo>
-						Here’s a list of all antipatterns described in the book.
+						Here’s a list of all the code smells and antipatterns described in
+						the book.
 					</TextTypo>
 					<PatternList patterns={antipatterns} strikethrough />
 				</Stack>
