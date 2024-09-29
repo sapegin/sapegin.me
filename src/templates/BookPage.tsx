@@ -411,10 +411,10 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 								process to make your code better.
 							</TextTypo>
 							<TextTypo>
-								These techniques help me every day to write code that my
-								colleagues will have no problems working with. All book’s
-								examples are written in JavaScript with a bit of TypeScript,
-								React, CSS, and HTML.
+								These techniques and patterns help me every day to write code
+								that my colleagues will have no problems working with. All
+								book’s examples are written in JavaScript with a bit of
+								TypeScript, React, CSS, and HTML.
 							</TextTypo>
 						</Stack>
 						<Stack direction="column" gap="s">
