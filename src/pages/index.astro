@@ -5,9 +5,8 @@ import Layout from '../layouts/Layout.astro';
 import { MainPage } from '../templates/MainPage';
 import type { Resource } from '../types/Resource';
 import { blogEntryToPost } from '../util/blogEntryToPost';
-import { tilEntryToPost } from '../util/tilEntryToPost';
 
-const NUM_RECENT_POSTS = 5;
+const NUM_RECENT_POSTS = 7;
 
 const blogEntries = await getCollection(
 	'blog',
@@ -15,15 +14,6 @@ const blogEntries = await getCollection(
 );
 const blogPosts = _.sortBy(
 	blogEntries.map((x) => blogEntryToPost(x)),
-	(x) => -x.date
-).slice(0, NUM_RECENT_POSTS);
-
-const tilEntries = await getCollection(
-	'til',
-	({ data }) => data.draft !== true
-);
-const tilPosts = _.sortBy(
-	tilEntries.map((x) => tilEntryToPost(x)),
 	(x) => -x.date
 ).slice(0, NUM_RECENT_POSTS);
 
@@ -161,7 +151,6 @@ const projects: Resource[] = [
 	component={MainPage}
 	props={{
 		blogPosts,
-		tilPosts,
 		books,
 		writing,
 		projects,

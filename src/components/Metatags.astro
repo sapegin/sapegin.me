@@ -31,7 +31,7 @@ function getImageUrl(pageUrl?: string, pageImage?: string) {
 	}
 }
 
-const isBlogPost = url.startsWith('/blog/') || url.startsWith('/til/');
+const isBlogPost = url.startsWith('/blog/');
 const canonicalUrl = `${SITE_URL}${url}`;
 const imageUrl = getImageUrl(isBlogPost ? url : undefined, image);
 ---

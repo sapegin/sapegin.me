@@ -14,24 +14,17 @@ export async function GET() {
 		'blog',
 		({ data }) => data.draft !== true
 	);
-	const tilEntries = await getCollection(
-		'til',
-		({ data }) => data.draft !== true
+	const entries = _.sortBy(blogEntries, (x) => -x.data.date).slice(
+		0,
+		NUM_POSTS
 	);
-	const entries = _.sortBy(
-		[...blogEntries, ...tilEntries],
-		(x) => -x.data.date
-	).slice(0, NUM_POSTS);
 
 	return rss({
 		title: 'Artem Sapegin’s Blog',
 		description: SITE_DESCRIPTION,
 		site: SITE_URL,
 		items: entries.map((entry) => {
-			const link =
-				entry.collection === 'blog'
-					? `/blog/${entry.slug}/`
-					: `/til/${entry.slug}/`;
+			const link = `/blog/${entry.slug}/`;
 			return {
 				title: entry.data.title,
 				pubDate: entry.data.date,

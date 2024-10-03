@@ -24,16 +24,11 @@ const ITEMS: Item[] = [
 		href: '/blog/',
 	},
 	{
-		title: 'TIL',
-		href: '/til/',
-		alt: 'Today I learned',
-	},
-	{
 		title: 'Book',
 		href: '/book/',
 	},
 	{
-		title: 'Sqrlsng',
+		title: 'Color scheme',
 		href: '/squirrelsong/',
 		alt: 'Squirrelsong',
 	},
@@ -78,6 +73,7 @@ export function Menu({ current }: Props) {
 						<Link
 							href={href}
 							css={{
+								whiteSpace: 'nowrap',
 								textShadow: isCurrent(href, current)
 									? `2px 2px color-mix(in hsl, token(colors.primary), transparent 70%)`
 									: undefined,

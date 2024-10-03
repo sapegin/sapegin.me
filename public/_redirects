@@ -2,6 +2,8 @@ http://sapegin.ru/* https://sapegin.me/:splat 301!
 https://sapegin.ru/* https://sapegin.me/:splat 301!
 http://sapegin.me/all/* https://sapegin.me/blog/:splat 301!
 https://sapegin.me/all/* https://sapegin.me/blog/:splat 301!
+http://sapegin.me/til/* https://sapegin.me/blog/:splat 301!
+https://sapegin.me/til/* https://sapegin.me/blog/:splat 301!
 http://blog.sapegin.me/all/* https://sapegin.me/blog/:splat 301!
 https://blog.sapegin.me/all/* https://sapegin.me/blog/:splat 301!
 http://blog.sapegin.me/* https://sapegin.me/:splat 301!

@@ -20,7 +20,6 @@ import { Page } from './Page';
 type Props = {
 	url: string;
 	blogPosts: Post[];
-	tilPosts: Post[];
 	books: Resource[];
 	writing: Resource[];
 	projects: Resource[];
@@ -73,8 +72,7 @@ function Writing({
 	books,
 	writing,
 	blogPosts,
-	tilPosts,
-}: Pick<Props, 'books' | 'writing' | 'blogPosts' | 'tilPosts'>) {
+}: Pick<Props, 'books' | 'writing' | 'blogPosts'>) {
 	return (
 		<Stack as="section" gap="m">
 			<Heading level={2}>I write about frontend development</Heading>
@@ -92,10 +90,6 @@ function Writing({
 				<Stack gap="m">
 					<Heading level={3}>Recent blog posts</Heading>
 					<PostList posts={blogPosts} showDates />
-				</Stack>
-				<Stack gap="m">
-					<Heading level={3}>Today I learned</Heading>
-					<PostList posts={tilPosts} showDates />
 				</Stack>
 				<Stack gap="m">
 					<Heading level={3}>More writing</Heading>
@@ -318,23 +312,11 @@ function BestViewed() {
 	);
 }
 
-export function MainPage({
-	url,
-	blogPosts,
-	tilPosts,
-	books,
-	writing,
-	projects,
-}: Props) {
+export function MainPage({ url, blogPosts, books, writing, projects }: Props) {
 	return (
 		<Page url={url}>
 			<Intro />
-			<Writing
-				books={books}
-				writing={writing}
-				blogPosts={blogPosts}
-				tilPosts={tilPosts}
-			/>
+			<Writing books={books} writing={writing} blogPosts={blogPosts} />
 			<Projects projects={projects} />
 			<Photography />
 			<Cooking />

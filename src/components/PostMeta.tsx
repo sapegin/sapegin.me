@@ -12,12 +12,7 @@ const getTwitterLink = () => {
 // TODO: Special case for the book?
 const getGitHubLink = (url: string) => {
 	const filename = `${url.slice(0, -1)}.md`;
-	return url.startsWith('/til/')
-		? `https://github.com/sapegin/til/edit/master/${filename.replace(
-				/^\/til\//,
-				''
-			)}`
-		: `https://github.com/sapegin/sapegin.me/edit/master/src/content/${filename}`;
+	return `https://github.com/sapegin/sapegin.me/edit/master/src/content/${filename}`;
 };
 
 type Props = Pick<Post, 'url' | 'date'>;

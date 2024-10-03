@@ -16,12 +16,6 @@ const blog = defineCollection({
 	}),
 });
 
-// Today I learned
-const til = defineCollection({
-	type: 'content',
-	schema: baseSchema,
-});
-
 // Squirrelsong themes
 const squirrels = defineCollection({
 	type: 'content',
@@ -56,7 +50,6 @@ const zines = defineCollection({
 
 export const collections = {
 	blog,
-	til,
 	squirrels,
 	zines,
 };
