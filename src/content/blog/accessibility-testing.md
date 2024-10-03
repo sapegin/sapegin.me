@@ -60,7 +60,7 @@ Unless we test our site or app’s accessibility after every change, we’ll eve
 
 [Cypress-axe](https://github.com/avanslaars/cypress-axe) is based on axe-core. It allows us to run accessibility checks inside [end-to-end Cypress tests](/blog/react-testing-4-cypress/), which is good because we likely already run end-to-end tests during continuous integration, and we render all our pages there. We could also run checks multiple times to test pages in different states. For example, with an open modal or an expanded content section.
 
-![Cypress-axe prints accessibility violations in the terminal](/images/cypress-axe-violations.png)
+![Cypress-axe prints accessibility violations in the terminal](/images/blog/cypress-axe-violations.png)
 
 Such tests could be a good accessibility _smoke test_ that makes sure we’re not breaking our site or app. However, cypress-axe is inconvenient to analyze pages that already have accessibility issues. For that, a browser extension, like Axe or Accessibility Insights, would be more convenient.
 
