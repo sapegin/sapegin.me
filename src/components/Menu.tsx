@@ -11,7 +11,6 @@ type Props = {
 interface Item {
 	title: string;
 	href: string;
-	alt?: string;
 }
 
 const ITEMS: Item[] = [
@@ -30,7 +29,6 @@ const ITEMS: Item[] = [
 	{
 		title: 'Color scheme',
 		href: '/squirrelsong/',
-		alt: 'Squirrelsong',
 	},
 	{
 		title: 'Photos',
@@ -60,7 +58,7 @@ export function Menu({ current }: Props) {
 				},
 			}}
 		>
-			{ITEMS.map(({ title, href, alt }, index) => (
+			{ITEMS.map(({ title, href }, index) => (
 				<Fragment key={href}>
 					{index === HALF && (
 						<Box
@@ -83,8 +81,6 @@ export function Menu({ current }: Props) {
 									textDecoration: 'none',
 								},
 							}}
-							title={alt}
-							aria-label={alt}
 						>
 							{title}
 						</Link>
