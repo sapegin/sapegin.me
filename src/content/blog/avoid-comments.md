@@ -740,10 +740,10 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
-- _Avoid comments (*this post*)_
-- [Avoid conditions](/blog/avoid-conditions/)
 - [Avoid loops](/blog/avoid-loops/)
-- [Avoid mutation](/blog/avoid-mutation/)
+- [Avoid conditions](/blog/avoid-conditions/)
 - [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
-- [Divide and conquer, or merge and relax](/blog/divide/)
+- [Avoid mutation](/blog/avoid-mutation/)
+- _Avoid comments (*this post*)_
 - [Naming is hard](/blog/naming/)
+- [Divide and conquer, or merge and relax](/blog/divide/)

@@ -2082,10 +2082,10 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
-- [Avoid comments](/blog/avoid-comments/)
-- _Avoid conditions (*this post*)_
 - [Avoid loops](/blog/avoid-loops/)
-- [Avoid mutation](/blog/avoid-mutation/)
+- _Avoid conditions (*this post*)_
 - [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
-- [Divide and conquer, or merge and relax](/blog/divide/)
+- [Avoid mutation](/blog/avoid-mutation/)
+- [Avoid comments](/blog/avoid-comments/)
 - [Naming is hard](/blog/naming/)
+- [Divide and conquer, or merge and relax](/blog/divide/)

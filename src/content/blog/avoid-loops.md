@@ -835,10 +835,10 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
-- [Avoid comments](/blog/avoid-comments/)
-- [Avoid conditions](/blog/avoid-conditions/)
 - _Avoid loops (*this post*)_
-- [Avoid mutation](/blog/avoid-mutation/)
+- [Avoid conditions](/blog/avoid-conditions/)
 - [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
-- [Divide and conquer, or merge and relax](/blog/divide/)
+- [Avoid mutation](/blog/avoid-mutation/)
+- [Avoid comments](/blog/avoid-comments/)
 - [Naming is hard](/blog/naming/)
+- [Divide and conquer, or merge and relax](/blog/divide/)

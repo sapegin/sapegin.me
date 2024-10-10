@@ -142,7 +142,7 @@ execSync(`curl "${REPO_TAR_GZ}" | tar xz`);
 console.log();
 console.log('[BOOK] Reading files...');
 
-const files = globSync(`${DEST_DIR}/*.md`).toSorted();
+const files = globSync(`${DEST_DIR}/*.md`);
 const allPosts: Post[] = files.map((filepath) => {
 	const contents = read(filepath);
 	const post = matter(contents);
@@ -154,6 +154,7 @@ const allPosts: Post[] = files.map((filepath) => {
 		contents,
 	};
 });
+
 const bookPosts: BookPost[] = allPosts
 	.filter((x) => x.source?.startsWith('washing-code/'))
 	.map((x) => {
@@ -163,7 +164,8 @@ const bookPosts: BookPost[] = allPosts
 			source,
 			sourceContents: readChapter(source),
 		};
-	});
+	})
+	.toSorted((b, a) => b.source.localeCompare(a.source));
 
 /**
  * Collect internal links
