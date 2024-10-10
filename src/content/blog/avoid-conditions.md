@@ -8,7 +8,7 @@ tags:
   - washingcode
 ---
 
-<!-- description: Writing good conditions and simplifying the code by removing unnecessary ones -->
+<!-- description: Crafting good conditions and simplifying code by removing unnecessary conditions -->
 
 Conditions are essential for writing code that supports multiple use cases. JavaScript offers multiple ways to write conditional code:
 
@@ -134,7 +134,7 @@ const hasValue = Boolean(value);
 
 In all cases, the code without ternaries is both shorter and easier to read.
 
-Here’s another example of an unnecessary condition:
+Let’s have a look at another example of an unnecessary condition:
 
 ```js
 const products = ['taco'];
@@ -170,7 +170,7 @@ Here’s a more complex but great (and real!) example of unnecessary conditions:
 <!-- eslint-skip -->
 
 ```js
-function IsNetscapeOnSolaris() {
+function isNetscapeOnSolaris() {
   var agent = window.navigator.userAgent;
   if (
     agent.indexOf('Mozilla') != -1 &&
@@ -186,13 +186,13 @@ function IsNetscapeOnSolaris() {
 
 <!--
 window.navigator.userAgent = 'Mozilla/3.0 (X11; I; SunOS 5.4 sun4m)'
-expect(IsNetscapeOnSolaris()).toBe(true)
+expect(isNetscapeOnSolaris()).toBe(true)
 window.navigator.userAgent = 'Mozilla/3.0 (Windows 3.11 for Workgroups)'
-expect(IsNetscapeOnSolaris()).toBe(false)
+expect(isNetscapeOnSolaris()).toBe(false)
 window.navigator.userAgent = 'Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)'
-expect(IsNetscapeOnSolaris()).toBe(false)
+expect(isNetscapeOnSolaris()).toBe(false)
 window.navigator.userAgent = 'Opera/9.63 (Macintosh; Intel Mac OS X; U; en) Presto/2.1.1'
-expect(IsNetscapeOnSolaris()).toBe(false)
+expect(isNetscapeOnSolaris()).toBe(false)
 -->
 
 This code checks whether the user has a particular browser and operating system by testing the user agent string. We can replace the nested condition with a single expression that returns a boolean value:
@@ -200,7 +200,7 @@ This code checks whether the user has a particular browser and operating system 
 <!-- const window = { navigator: { userAgent: '' } } -->
 
 ```js
-function IsNetscapeOnSolaris() {
+function isNetscapeOnSolaris() {
   const { userAgent } = window.navigator;
   return (
     userAgent.includes('Mozilla') &&
@@ -212,13 +212,13 @@ function IsNetscapeOnSolaris() {
 
 <!--
 window.navigator.userAgent = 'Mozilla/3.0 (X11; I; SunOS 5.4 sun4m)'
-expect(IsNetscapeOnSolaris()).toBe(true)
+expect(isNetscapeOnSolaris()).toBe(true)
 window.navigator.userAgent = 'Mozilla/3.0 (Windows 3.11 for Workgroups)'
-expect(IsNetscapeOnSolaris()).toBe(false)
+expect(isNetscapeOnSolaris()).toBe(false)
 window.navigator.userAgent = 'Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)'
-expect(IsNetscapeOnSolaris()).toBe(false)
+expect(isNetscapeOnSolaris()).toBe(false)
 window.navigator.userAgent = 'Opera/9.63 (Macintosh; Intel Mac OS X; U; en) Presto/2.1.1'
-expect(IsNetscapeOnSolaris()).toBe(false)
+expect(isNetscapeOnSolaris()).toBe(false)
 -->
 
 By eliminating two levels of nesting and reducing boilerplate code, we made the actual condition clearer.
@@ -249,7 +249,7 @@ const {container: c3} = RTL.render(<RefundLabel />);
 expect(c3.textContent).toEqual('Total:')
 -->
 
-Here, we compare `type` three times and `hasUserSelectableRefundOptions` twice, which is unnecessary and makes the code confusing:
+In the code above, we compare `type` three times and `hasUserSelectableRefundOptions` twice, which is unnecessary and makes the code confusing:
 
 ```jsx
 const RefundLabelMessage = ({
@@ -312,7 +312,7 @@ expect(onError).toBeCalledWith('nope')
 expect(() => getRandomJoke(onDone)).not.toThrowError()
 -->
 
-Here, the `onError` parameter is optional, and we check if it exists before calling it. The problem here is that we need to remember to wrap each call to an optional callback with a condition. It increases complexity and cognitive load and makes the code harder to read.
+In the code above, the `onError` parameter is optional, and we check if it exists before calling it. The problem here is that we need to remember to wrap each call to an optional callback with a condition. It increases complexity and cognitive load and makes the code harder to read.
 
 **Info:** The _cognitive load_ is the mental effort required to understand the code. Artem Zakirullin wrote a [great article on cognitive load in programming](https://github.com/zakirullin/cognitive-load).
 
@@ -515,7 +515,7 @@ expect(getProductsDropdownItems({products: {id: '1', name: 'Tacos'}})).toEqual([
 expect(getProductsDropdownItems({products: [{id: '1', name: 'Tacos'}]})).toEqual([{label: 'Tacos', value: '1'}])
 -->
 
-Here, we’re wrapping a single element in an array so we can use the same code to work with single values and arrays.
+In the code above, we wrap a single element with an array so we can use the same code to work with single values and arrays.
 
 ## Deduplicating algorithms
 
@@ -827,13 +827,11 @@ function postOrderStatus() {
 
 Now, that’s a big improvement over the initial version. I’ve also renamed the variables because “array object” doesn’t make any sense to me and the “array” suffix is unnecessary.
 
-**Info:** We talk about naming in the [Naming is hard](/blog/naming/) chapter.
-
 The next step would be out of the scope of this chapter: the code inside the `// Skipped 70 lines of code building the array…` mutates the `fullRecords`. I usually try to avoid mutation, especially for variables with such a long lifespan.
 
-**Info:** We talk about mutation in the [Avoid mutation](/blog/avoid-mutation/) chapter.
+**Info:** We talk about naming in the [Naming is hard](/blog/naming/) chapter, and about mutation in the [Avoid mutation](/blog/avoid-mutation/) chapter.
 
-Here’s another example:
+Consider another example:
 
 <!--
 let Inner = ({data}) => <p>{data.join('|')}</p>
@@ -874,7 +872,7 @@ const {container: c4} = RTL.render(<Container component={Inner} data={[2, 4]} />
 expect(c4.textContent).toEqual('2|4')
 -->
 
-I have trouble reading nested ternaries in general and prefer not to nest them. Here’s an extreme example of nesting: the good path code, rendering the `Component`, is quite hidden. This is a perfect use case for guard clauses.
+I have trouble reading nested ternaries in general and prefer not to nest them. This is an extreme example of nesting: the good path code, rendering the `Component`, is quite hidden. This is a perfect use case for guard clauses.
 
 Let’s refactor it:
 
@@ -919,7 +917,7 @@ const {container: c4} = RTL.render(<Container component={Inner} data={[2, 4]} />
 expect(c4.textContent).toEqual('2|4')
 -->
 
-Here, the default, happy path isn’t intertwined with the exceptional cases. The default case is at the very bottom of the component, and all exceptions are in front, as guard clauses.
+In the code above, the default, happy path isn’t intertwined with the exceptional cases. The default case is at the very bottom of the component, and all exceptions are in front, as guard clauses.
 
 **Tip:** We discuss a better way of managing loading and error states in the Make impossible states impossible section.
 
@@ -1012,7 +1010,7 @@ const {container: c2} = RTL.render(<DecisionButton decision={DECISION_MAYBE} />)
 expect(c2.textContent).toEqual('Maybe')
 -->
 
-Here, we have a `switch` statement that returns one of the three button labels.
+In the code above, we have a `switch` statement that returns one of the three button labels.
 
 First, let’s replace the `switch` with a table:
 
@@ -1096,7 +1094,7 @@ const {container: c2} = RTL.render(<DecisionButton decision={Decision.Maybe} />)
 expect(c2.textContent).toEqual('Maybe')
 -->
 
-Here, we’ve defined an enum for decisions, and we’re using it to ensure consistency in the button label map and decision button component props:
+In the code above, we define an enum for decisions, and we use it to ensure consistency in the button label map and decision button component props:
 
 - The decision button component accepts only known decisions.
 - The button label map can have only known decisions and _must_ have them all. This is especially useful: every time we update the decision enum, TypeScript makes sure the map is still in sync with it.
@@ -1287,7 +1285,7 @@ Now, we can define our validation table. There are two ways of doing this:
 - using an object where keys represent form fields;
 - using an array.
 
-We’re going to use an array because we want to have several validations with different error messages for some fields. For example, a field can be required _and_ have a maximum length:
+We’ll use an array because we want to have several validations with different error messages for some fields. For example, a field can be required _and_ have a maximum length:
 
 <!--
 const hasStringValue = value => typeof value === 'string' && value.trim() !== ''
@@ -1358,7 +1356,7 @@ expect(validate({name: 'x'.repeat(81)}, validations)).toEqual({name: "Maximum 80
 
 Once again, we’ve separated the “what” from the “how”: we have a readable and maintainable list of validations (“what”), a collection of reusable validation functions, and a generic `validate()` function to validate form values (“how”) that we can reuse to validate other forms.
 
-**Info:** We talk about the separation of “what” and “how” in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
+**Info:** We talk about the separation of “what” and “how” in the [Separate “what” and “how”](/blog/divide/#separate-what-and-how) section of the _Divide and conquer, or merge and relax_ chapter.
 
 **Tip:** Using a third-party library, like [Zod](https://zod.dev/), [Yup](https://github.com/jquense/yup), or [Joi](https://github.com/hapijs/joi) will make code even shorter and save us from needing to write validation functions ourselves.
 
@@ -1498,7 +1496,7 @@ expect(isSmall('2')).toBe(true)
 expect(isSmall('5')).toBe(false)
 -->
 
-Here, we have three clauses that compare the `size` variable to three different values, making the values we compare it to far apart. Instead, we can group them into an array and use the `includes()` array method:
+In the code above, we have three clauses that compare the `size` variable to three different values, making the values we compare it to far apart. Instead, we can group them into an array and use the `includes()` array method:
 
 ```js
 const isSmall = size => ['1', '2', '3'].includes(size);
@@ -1656,9 +1654,9 @@ It may seem like I prefer small or even very small functions, but that’s not t
 **Info:**  
 **Info:** Imagine a pizzeria where a pizzaiolo is responsible only for cooking pizzas, and a cashier is responsible only for charging customers. In other words, we don’t murder people, and they don’t plaster the walls.  
 **Info:**  
-**Info:** We talk more about this topic in the Divide and conquer, or merge and relax chapter.
+**Info:** We talk more about this topic in the [Divide and conquer, or merge and relax](/blog/divide/) chapter.
 
-Here’s one more example:
+Let’s have a look at one more example:
 
 ```js
 function getDiscountAmount(discountOptions) {
@@ -1734,7 +1732,7 @@ expect(getDiscountAmount({promoDiscount: {discountAmount: {displayCurrency: v25}
 expect(getDiscountAmount({})).toEqual(v0)
 -->
 
-Here, we create an array with all possible discounts, then we use Lodash’s [`maxBy()` method](https://lodash.com/docs#maxBy) to find the maximum discount value, and finally, we use the nullish coalescing operator to either return the maximum or 0.
+In the code above, we create an array with all possible discounts, then we use Lodash’s [`maxBy()` method](https://lodash.com/docs#maxBy) to find the maximum discount value, and finally, we use the nullish coalescing operator to either return the maximum or 0.
 
 Now, it’s clear that we want to find the maximum of two types of discounts, otherwise return 0.
 
@@ -1807,7 +1805,7 @@ It’s harder to understand than the initial implementation, but it requires sig
 
 ## Nested ternaries
 
-A _ternary operator_, or just a ternary, is a short, one-line conditional operator. It’s very useful when we want to assign one of two values to a variable. Let’s take this `if` statement as an example:
+A _ternary operator_, or just a ternary, is a short, one-line conditional operator. It’s useful when we want to assign one of two values to a variable. Let’s take this `if` statement as an example:
 
 ```js
 const caffeineLevel = 25;
@@ -1818,7 +1816,7 @@ if (caffeineLevel < 50) {
 } else {
   drink = 'water';
 }
-// → coffee
+// → 'coffee'
 ```
 
 <!-- expect(drink).toBe('coffee') -->
@@ -1827,9 +1825,8 @@ Now, compare it to a ternary:
 
 ```js
 const caffeineLevel = 25;
-
 const drink = caffeineLevel < 50 ? 'coffee' : 'water';
-// → coffee
+// → 'coffee'
 ```
 
 <!-- expect(drink).toBe('coffee') -->
@@ -2085,9 +2082,10 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
-- [Naming is hard](/blog/naming/)
-- [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
-- [Avoid mutation](/blog/avoid-mutation/)
-- [Avoid loops](/blog/avoid-loops/)
-- _Avoid conditions (*this post*)_
 - [Avoid comments](/blog/avoid-comments/)
+- _Avoid conditions (*this post*)_
+- [Avoid loops](/blog/avoid-loops/)
+- [Avoid mutation](/blog/avoid-mutation/)
+- [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
+- [Divide and conquer, or merge and relax](/blog/divide/)
+- [Naming is hard](/blog/naming/)

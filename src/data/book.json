@@ -3,31 +3,31 @@
     {
       "url": "/blog/avoid-loops/",
       "title": "Avoid loops",
-      "description": "Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best approach",
+      "description": "Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best way of doing that",
       "sections": []
     },
     {
       "url": "/blog/avoid-conditions/",
       "title": "Avoid conditions",
-      "description": "Writing good conditions and simplifying the code by removing unnecessary ones",
+      "description": "Crafting good conditions and simplifying code by removing unnecessary conditions",
       "sections": []
     },
     {
       "url": "/blog/avoid-reassigning-variables/",
       "title": "Avoid reassigning variables",
-      "description": "Improving code readability by making it easier to understand what variables are doing and how they are used in the code",
+      "description": "Improving code readability by making it easier to understand what variables are do and how they are used in the code",
       "sections": []
     },
     {
       "url": "/blog/avoid-mutation/",
       "title": "Avoid mutation",
-      "description": "Why mutation is hindering code readability and what can we do about it",
+      "description": "Why mutation hinders code readability and what can we do about it",
       "sections": []
     },
     {
       "url": "/blog/avoid-comments/",
       "title": "Avoid comments",
-      "description": "Writing useful comments, when to write them and when not",
+      "description": "Writing useful comments, when to comment our code, and when it’s better not to",
       "sections": []
     },
     {
@@ -37,8 +37,9 @@
       "sections": []
     },
     {
+      "url": "/blog/divide/",
       "title": "Divide and conquer, or merge and relax",
-      "description": "Splitting code into functions and modules, when is the right time to introduce an abstraction, and when it’s better to wait",
+      "description": "Splitting code into functions and modules, when the right time is to introduce an abstraction, and when it’s better to sleep on it",
       "sections": []
     },
     {
@@ -48,17 +49,17 @@
     },
     {
       "title": "Code style",
-      "description": "Which code styles are actually improving readability and which are just opinions that don’t matter much",
+      "description": "Which code styles are actually improve readability and which are merely preferences that don’t matter much",
       "sections": []
     },
     {
       "title": "Lint your code",
-      "description": "How linters can help us maintain consistent and modern codebase, and promote some of the techniques discussed in the previous chapters",
+      "description": "How linters can help us maintain a consistent and modern codebase, and promote some of the techniques discussed in the book",
       "sections": []
     },
     {
       "title": "Autoformat your code",
-      "description": "How tools can make our lives much easier by formatting code for us",
+      "description": "How tools can make our lives easier by formatting code for us",
       "sections": []
     },
     {
@@ -118,6 +119,7 @@
     "Separation of “what” and “how”",
     "Separation of code that changes often",
     "Single responsibility principle",
+    "Sweeping under the rug",
     "Tables and maps",
     "Todo comments",
     "Write everything twice, or we enjoy typing (WET)",
@@ -133,6 +135,7 @@
     "Default exports",
     "Function parameters mutation",
     "Don’t repeat yourself (DRY)",
+    "Hungarian notation",
     "Monster utility files",
     "Negative booleans",
     "Nested ternaries",
@@ -143,6 +146,7 @@
     "Premature abstraction, or premature generalization, or speculative generality",
     "Reusing variables",
     "Shortcuts",
-    "Single return law"
+    "Single return law",
+    "Yoda conditions"
   ]
 }

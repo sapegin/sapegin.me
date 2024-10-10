@@ -8,7 +8,7 @@ tags:
   - washingcode
 ---
 
-<!-- description: Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best approach -->
+<!-- description: Iterating over collections and why traditional loops, such as `for` or `while`, may not be the best way of doing that -->
 
 Traditional loops, such as `for` or `while`, are too low-level for everyday tasks:
 
@@ -135,7 +135,7 @@ const kebabCharacters = characters.map(function (name) {
 
 <!-- expect(kebabCharacters).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
 
-Here, the code is less verbose and easier to follow because half of the original code was managing the index variable, which obscured the actual task of the loop.
+This code is less verbose and easier to follow because half of the original code was managing the index variable, which obscured the actual task of the loop.
 
 Thanks to _arrow functions_, which are shorter and less cluttered then the old anonymous functions, we can simplify the code even further:
 
@@ -170,7 +170,7 @@ expect(integers_).toEqual([1, NaN, NaN])
 expect(integers).toEqual([1, 2, 3])
 -->
 
-Here, in the first example, the `map()` method calls the `parseInt()` function with an element’s index as a radix, resulting in an incorrect result. In the second example, we explicitly pass only the value to the `parseInt()` function, so it uses the default radix of 10.
+In the first example, the `map()` method calls the `parseInt()` function with an element’s index as a radix, resulting in an incorrect result. In the second example, we explicitly pass only the value to the `parseInt()` function, so it uses the default radix of 10.
 
 Second, it may mysteriously break when the callback function adds another parameter. Even TypeScript will miss this issue if the types of the new parameters match those expected by the `map()` method.
 
@@ -253,7 +253,7 @@ expect(testHost('burger.com', 0)).toBe(proxy)
 
 We don’t even need to nest loops here, but the data structure used to store rules makes it confusing. The nested arrays always have two items, so an object with two properties would be more appropriate here.
 
-Here’s one more example of nested loops:
+Let’s have a look at another example of a nested loop:
 
 <!-- eslint-skip -->
 
@@ -327,9 +327,9 @@ Array methods aren’t just shorter and more readable; each method has its own c
 
 Traditional loops don’t help us understand what the code is doing until we read the whole thing.
 
-When using array methods, we’re separating the “what” (our data) from the “how” (how to loop over it and what to do on each iteration), and the “how to loop over” isn’t obscuring “what to do on each iteration”. In traditional loops, everything is mixed together, and we need to spend extra time writing and reading loop mechanics, which are abstracted away by array methods with meaningful names.
+When we use array methods, we separate the “what” (our data) from the “how” (how to loop over it and what to do on each iteration), and the “how to loop over” isn’t obscures “what to do on each iteration”. In traditional loops, everything is mixed together, and we need to spend extra time writing and reading loop mechanics, which are abstracted away by array methods with meaningful names.
 
-**Info:** We talk about the separation of “what” and “how” in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
+**Info:** We talk about the separation of “what” and “how” in the [Separate “what” and “how”](/blog/divide/#separate-what-and-how) section of the _Divide and conquer, or merge and relax_ chapter.
 
 When all simple cases are covered by array methods, every time we see a traditional loop, we know that something unusual is going on. And that’s good: fewer chances we’ll miss a bug during code review because we can be extra vigilant every time we see a traditional loop.
 
@@ -366,7 +366,7 @@ products.map(product => {
 
 <!-- expect(isExpectedType).toEqual(false) -->
 
-Here, the `map()` method is used to _reduce_ an array to a single value by having a side effect instead of returning a new element’s value from the callback function.
+In the code above, we use the `map()` method to _reduce_ an array to a single value by having a side effect instead of returning a new element’s value from the callback function.
 
 It’s hard to say what this code is doing, and it feels like there’s a bug: it only cares about the last product in a list.
 
@@ -411,9 +411,9 @@ const sum = array.reduce(
 
 <!-- expect(sum).toBe(10) -->
 
-Here, we pass a callback function (called _a reducer_) to the `reduce()` method, which adds the current element to the accumulator. The accumulator eventually contains the sum of all the array elements. The second argument is the initial value (`0` in this example).
+In the code above, we pass a callback function (called _a reducer_) to the `reduce()` method, which adds the current element to the accumulator. The accumulator eventually contains the sum of all the array elements. The second argument is the initial value (`0` in this example).
 
-I’ve seen programmers try to squeeze everything into a single `reduce()` method to avoid extra iterations. Consider this example:
+I’ve seen programmers try to squeeze everything into a single `reduce()` method to avoid extra iterations. Consider this example, that calculates the total price of all items in a shopping cart:
 
 <!-- eslint-disable unicorn/prevent-abbreviations -->
 
@@ -431,7 +431,7 @@ const totalPrice = cart.reduce(
 
 <!-- expect(totalPrice).toBe(58) -->
 
-Here, we’re calculating the total price of all items in a shopping cart. This code is okay, but I’d split it into two steps: calculating a sum for the desired quantity of each item, and then calculating a sum of all items:
+This code is okay, but I’d split it into two steps: calculating a sum for the desired quantity of each item, and then calculating a sum of all items:
 
 ```js
 const cart = [
@@ -579,6 +579,7 @@ const characters = {
 _.forEach(characters, (names, race) => {
   console.log(race, names);
 });
+// → { hobbits: ['bilbo-baggins'], dwarfs: ['fili', 'kili'] }
 ```
 
 <!--
@@ -834,9 +835,10 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
-- [Naming is hard](/blog/naming/)
-- [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
-- [Avoid mutation](/blog/avoid-mutation/)
-- _Avoid loops (*this post*)_
-- [Avoid conditions](/blog/avoid-conditions/)
 - [Avoid comments](/blog/avoid-comments/)
+- [Avoid conditions](/blog/avoid-conditions/)
+- _Avoid loops (*this post*)_
+- [Avoid mutation](/blog/avoid-mutation/)
+- [Avoid reassigning variables](/blog/avoid-reassigning-variables/)
+- [Divide and conquer, or merge and relax](/blog/divide/)
+- [Naming is hard](/blog/naming/)

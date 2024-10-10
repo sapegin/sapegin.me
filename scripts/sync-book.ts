@@ -102,7 +102,7 @@ const updateTips = (contents: string) =>
 
 // images/ → /images/blog/book/
 const updateImages = (contents: string) =>
-	contents.replace(/]\(images\//, '](/images/blog/book/');
+	contents.replaceAll('](images/', '](/images/blog/book/');
 
 // Get an array from a tagged list:
 // <!-- patterns:start -->
@@ -142,7 +142,7 @@ execSync(`curl "${REPO_TAR_GZ}" | tar xz`);
 console.log();
 console.log('[BOOK] Reading files...');
 
-const files = globSync(`${DEST_DIR}/*.md`);
+const files = globSync(`${DEST_DIR}/*.md`).toSorted();
 const allPosts: Post[] = files.map((filepath) => {
 	const contents = read(filepath);
 	const post = matter(contents);
@@ -154,7 +154,7 @@ const allPosts: Post[] = files.map((filepath) => {
 		contents,
 	};
 });
-const bookPosts = allPosts
+const bookPosts: BookPost[] = allPosts
 	.filter((x) => x.source?.startsWith('washing-code/'))
 	.map((x) => {
 		const source = (x.source ?? '').replace('washing-code/', '');
@@ -163,7 +163,7 @@ const bookPosts = allPosts
 			source,
 			sourceContents: readChapter(source),
 		};
-	}) as BookPost[];
+	});
 
 /**
  * Collect internal links

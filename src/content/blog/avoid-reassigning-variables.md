@@ -8,7 +8,7 @@ tags:
   - washingcode
 ---
 
-<!-- description: Improving code readability by making it easier to understand what variables are doing and how they are used in the code -->
+<!-- description: Improving code readability by making it easier to understand what variables are do and how they are used in the code -->
 
 Reassigning variables is like changing the past. When we see code like this:
 
@@ -74,7 +74,7 @@ function getProductsOnSale(category) {
 
 <!-- expect(getProductsOnSale('pizzas')).toEqual([{name: 'pizzas2', onSale: true}]) -->
 
-Here, the `category` variable is used to store a category ID (a number or a string), a list of products in a category (an array), and a list of filtered products (also an array). This function isn’t completely hopeless because it’s short, but imagine more code between each reassignment.
+In the code above, the `category` variable can contain: a category ID (a number or a string), a list of products in a category (an array), and a list of filtered products (also an array). This function isn’t completely hopeless because it’s short, but imagine more code between each reassignment.
 
 On top of that, a new value is reassigned to a function parameter, which is known as _function parameter shadowing_. I think it’s no different from regular reassignment since it only affects the value inside the function, so I’ll treat it the same way.
 
@@ -307,7 +307,7 @@ const VIDEO_VALIDATIONS = [
 
 Now, all the code we need to touch to add, remove, or change validations is contained in the `VIDEO_VALIDATIONS` array. Keep the code, that’s likely to be changed at the same time, in the same place.
 
-**Info:** We talk about keeping code that changes at the same time, at the same place in the Divide and conquer, or merge and relax chapter.
+**Info:** We talk about keeping code that changes at the same time, at the same place in the [Divide and conquer, or merge and relax](/blog/divide/) chapter.
 
 ## Building complex objects
 
@@ -343,7 +343,7 @@ if (dateRangeFrom && dateRangeTo) {
   words: ""
 }) -->
 
-Here, we’re adding the `from` and `to` properties only when they aren’t empty.
+In the code above, we add the `from` and `to` properties only when they aren’t empty.
 
 The code would be clearer if we taught our backend to ignore `undefined` values and build the whole object at once:
 
@@ -510,7 +510,7 @@ expect(areEventsValid([{fromDate: 4, toDate: 14}, {fromDate: 1, toDate: 2}])).to
 expect(areEventsValid([{fromDate: 4, toDate: 1}, {fromDate: 1, toDate: 2}])).toBe(false)
 -->
 
-Here, we check that _every_ event is valid, which would be clearer with the `every()` array method:
+In the code above, we check that _every_ event is valid, which would be clearer with the `every()` array method:
 
 ```js
 function areEventsValid(events) {
@@ -527,7 +527,7 @@ expect(areEventsValid([{fromDate: 4, toDate: 1}, {fromDate: 1, toDate: 2}])).toB
 
 We removed a temporary variable, avoided reassignments, and made the condition positive (_is valid?_) instead of negative (_is invalid?_). Positive conditions are generally easier to understand.
 
-Here’s another example:
+Let’s have a look at another example that returns a value if it’s present and zero otherwise:
 
 ```js
 const handleChangeEstimationHours = event => {
@@ -545,7 +545,7 @@ expect(handleChangeEstimationHours({target: {value: -1}})).toEqual({estimationHo
 expect(handleChangeEstimationHours({target: {value: 1}})).toEqual({estimationHours: 1})
 -->
 
-Here, we can use a ternary operator to avoid reassignment:
+We can use a ternary operator to avoid reassignment:
 
 ```js
 const handleChangeEstimationHours = ({ target: { value } }) => {
@@ -651,9 +651,11 @@ expect(type).toBe('se')
 
 I often call this method _sweeping under the rug refactoring_: we stash a complex or long piece of code into its own function, making it easier to understand the main function.
 
-**Tip:** However, we should avoid splitting code into many small functions: doing so significantly hurts readability because it’s hard to understand the code when useful pieces are hidden in other functions. All good things are best in moderation.
+However, we should avoid splitting code into many small functions: doing so significantly hurts readability because it’s hard to understand the code when useful pieces are hidden in other functions. All good things are best in moderation.
 
-**Tip:** For this particular code, I’d prefer to use a table instead of a function. We talk about tables and maps in the [Tables and maps](/blog/avoid-conditions/#tables-and-maps) section of the _Avoid conditions_ chapter.
+For this particular code, I’d prefer to use a table instead of a function.
+
+**Info:** We talk about splitting code into functions in the [Divide and conquer, or merge and relax](/blog/divide/) chapter, and about tables and maps in the [Tables and maps](/blog/avoid-conditions/#tables-and-maps) section of the _Avoid conditions_ chapter.
 
 ## Indeterminate loops
 
@@ -675,7 +677,7 @@ function getStartOfWeek(selectedDay) {
 
 <!-- expect(getStartOfWeek({getDay: () => 3}).getDay()).toEqual(0) -->
 
-Here, we’re finding the start of the current week by moving one day back in a `while` loop and checking if it’s already Monday or not.
+In the code above, we find the start of the current week by moving one day back in a `while` loop and checking if it’s already Monday or not.
 
 Even if it’s possible to avoid reassignments here, it will likely make the code less readable. Feel free to try, and let me know how it goes, though.
 
@@ -754,7 +756,7 @@ expect(timeout2).not.toThrowError()
 expect(hideNotification).toHaveBeenCalled()
 -->
 
-Now, we’re relying on type inference: TypeScript knows that the `setTimeout()` function returns a `NodeJS.Timeout`, so it can safely assume that `hideTimeout` should use the same type. Additionally, by restructuring the code, we removed the second condition: now we return a _no operation_ function when there’s no need for a timer. This makes the code less cluttered and easier to follow.
+Now, we rely on type inference: TypeScript knows that the `setTimeout()` function returns a `NodeJS.Timeout`, so it can safely assume that `hideTimeout` should use the same type. Additionally, by restructuring the code, we removed the second condition: now we return a _no operation_ function when there’s no need for a timer. This makes the code less cluttered and easier to follow.
 
 **Info:** A _no operation_ or _noop_ function is a function that does nothing. It allows us to write unconditional code that expects a function: if we don’t want any action, we pass a no operation function instead. This makes the code more straightforward. Noop functions are a common pattern in JavaScript, and arrow function syntax gives them a compact and distinctive look: `() => {}`.
 
@@ -792,9 +794,10 @@ Start thinking about:
 
 Read other sample chapters of the book:
 
-- [Naming is hard](/blog/naming/)
-- _Avoid reassigning variables (*this post*)_
-- [Avoid mutation](/blog/avoid-mutation/)
-- [Avoid loops](/blog/avoid-loops/)
-- [Avoid conditions](/blog/avoid-conditions/)
 - [Avoid comments](/blog/avoid-comments/)
+- [Avoid conditions](/blog/avoid-conditions/)
+- [Avoid loops](/blog/avoid-loops/)
+- [Avoid mutation](/blog/avoid-mutation/)
+- _Avoid reassigning variables (*this post*)_
+- [Divide and conquer, or merge and relax](/blog/divide/)
+- [Naming is hard](/blog/naming/)
