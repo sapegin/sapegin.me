@@ -9,7 +9,8 @@ export function BookPostFooter() {
 						If you have any feedback, drop me a line at
 					</Feedback>
 					<Text>
-						<Link href="/book/">Preorder the book now</Link> with 20% discount!
+						<Link href="/book/">Get the book now</Link> with 50% launch
+						discount!
 					</Text>
 				</Stack>
 				<Link href="/book/">

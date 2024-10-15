@@ -5,12 +5,14 @@ export function BookPostHeader() {
 		<PostAddon>
 			<Stack direction="row" gap="m">
 				<Stack gap="m">
+					<Text variant="flag">Just launched!</Text>
 					<Text variant="intro">
 						You’re reading an excerpt of my upcoming book on clean code for
 						frontend developers, “Washing your code.”
 					</Text>
 					<Text>
-						<Link href="/book/">Preorder the book now</Link> with 20% discount!
+						<Link href="/book/">Get the book now</Link> with 50% launch
+						discount!
 					</Text>
 				</Stack>
 				<Link href="/book/">

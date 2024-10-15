@@ -71,7 +71,7 @@ const faq: FaqItem[] = [
 	{
 		question: 'Is the book complete?',
 		answer:
-			'Almost! I’m planning to finish the book by the end of summer 2024.',
+			'Yes! After five years of working on the book, it’s finally complete.',
 	},
 	{
 		question: 'Will the book be updated over time?',
@@ -106,11 +106,19 @@ const faq: FaqItem[] = [
 		question: 'Do you have a money-back guarantee policy?',
 		answer: (
 			<>
-				Yes, LeanPub has{' '}
-				<Link href="https://leanpub.com/refunds" target="_blank">
-					60-day money back
-				</Link>
-				.
+				Yes, I offer 30-day money back. Write me at{' '}
+				<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link> if you’re
+				unhappy with the book.
+			</>
+		),
+	},
+	{
+		question:
+			'I bought a book on LeanPub, can I get beautiful custom PDF and EPUB files?',
+		answer: (
+			<>
+				Absolutely, write me at{' '}
+				<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>.
 			</>
 		),
 	},
@@ -118,7 +126,7 @@ const faq: FaqItem[] = [
 		question: 'Can I buy multiple copies for my team at a reduced price?',
 		answer: (
 			<>
-				Yes, write me at{' '}
+				Of course, write me at{' '}
 				<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>.
 			</>
 		),
@@ -127,8 +135,8 @@ const faq: FaqItem[] = [
 		question: 'Do you offer purchasing power parity or student discounts?',
 		answer: (
 			<>
-				Write me at <Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>
-				, and we’ll think of something.
+				Gumroad offers purchasing power parity, for a student discount, write me
+				at <Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>.
 			</>
 		),
 	},
@@ -139,13 +147,13 @@ function TheButton() {
 		<Button
 			as="a"
 			variant="large"
-			href="http://leanpub.com/washingcode/c/blog-reader"
+			href="https://sapegin.gumroad.com/l/washingcode-book/rocket"
 		>
-			Preorder now!{' '}
+			Get the book!{' '}
 			<Box as="span" px="s" verticalAlign="middle" fontSize="s">
 				■
 			</Box>{' '}
-			<del>$20</del> $12
+			<del>€20</del> €10
 		</Button>
 	);
 }
@@ -383,6 +391,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 		<Page url={url}>
 			<Stack gap="xl">
 				<Stack gap="s">
+					<Text variant="flag">Just launched!</Text>
 					<Heading level={1}>Washing your code</Heading>
 					<Heading level={3} as="p">
 						A book on clean code for frontend developers
@@ -421,6 +430,9 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 							<Box>
 								<TheButton />
 							</Box>
+							<Text hidden>
+								<Link href="">Also available as a paperback on Amazon</Link>
+							</Text>
 							<Text>
 								<Link href="#toc">Or read selected chapters below</Link>
 							</Text>

@@ -59,6 +59,16 @@ const text = cva({
 				lineHeight: 'base',
 				letterSpacing: 'base',
 			},
+			flag: {
+				fontFamily: 'body',
+				fontSize: 'base',
+				fontStyle: 'normal',
+				fontWeight: 'bold',
+				lineHeight: 'base',
+				letterSpacing: 'base',
+				textTransform: 'uppercase',
+				color: 'secondary',
+			},
 		},
 	},
 });

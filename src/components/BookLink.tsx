@@ -15,6 +15,7 @@ export function BookLink({ book: { url, image, title, description } }: Props) {
 					</Box>
 				)}
 				<Stack direction="column" gap="s">
+					{url === '/book/' && <Text variant="flag">Just launched!</Text>}
 					<Text as="u" variant="large">
 						{title}
 					</Text>

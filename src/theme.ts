@@ -3,6 +3,7 @@ import { type Config } from '@pandacss/dev';
 export const colors = {
 	background: '#fff',
 	text: '#3a3d40',
+	secondary: '#75757c',
 	light: '#94949e',
 	border: '#3a3d40',
 	primary: '#577290',
@@ -23,6 +24,7 @@ export const colors = {
 const colorsDark = {
 	background: '#2e3033',
 	text: '#e3e6e8',
+	secondary: '#94949e',
 	light: '#94949e',
 	border: '#dbe2e9',
 	primary: '#89abd2',
