@@ -51,6 +51,13 @@ const testimonials: TestimonialItem[] = [
 		role: 'Senior Frontend Developer',
 		image: 'readers-troy.jpg',
 	},
+	{
+		quote:
+			'I’ve been following Artem’s blog for a while now, and his advice on clean code is always spot on. This book is a great compilation of the ideas he has shared in his articles, plus much more exclusive content. I highly recommend reading this book regardless of you experience.',
+		author: 'Alexei Crecotun',
+		role: 'Senior Frontend Developer',
+		image: 'readers-alexei.jpg',
+	},
 ];
 
 type FaqItem = {
