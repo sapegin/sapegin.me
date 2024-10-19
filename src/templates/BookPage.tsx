@@ -100,11 +100,6 @@ const faq: FaqItem[] = [
 			'Not necessarily, though it will certainly help. However, even if you’re working with other languages, you could still find the book useful.',
 	},
 	{
-		question: 'Is the book available to buy on Amazon?',
-		answer:
-			'Not yet, but I’m planning to publish the book on Amazon as soon I finish writing the book.',
-	},
-	{
 		question: 'Is the book available on paper?',
 		answer:
 			'Not yet, but I’m planning to publish the dead tree version as soon I finish writing the book.',
@@ -437,11 +432,13 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 							<Box>
 								<TheButton />
 							</Box>
-							<Text hidden>
-								<Link href="">Also available as a paperback on Amazon</Link>
+							<Text>
+								<Link href="https://www.amazon.com/dp/B0DK9HHJ1R/">
+									Also as a paperback and Kindle edition on Amazon
+								</Link>
 							</Text>
 							<Text>
-								<Link href="#toc">Or read selected chapters below</Link>
+								<Link href="#toc">Read selected chapters online</Link>
 							</Text>
 						</Stack>
 					</Stack>
