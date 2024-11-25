@@ -1,11 +1,19 @@
 import { BookCover, Box, QuotedLink, Stack, Text } from '.';
 import type { Resource } from '../types/Resource';
+import { campaigns } from '../campaigns';
+
+function getCampaign(url: string) {
+	if (url === '/book/') {
+		return campaigns.washingCode.enabled ? campaigns.washingCode : undefined;
+	}
+}
 
 type Props = {
 	book: Resource;
 };
 
 export function BookLink({ book: { url, image, title, description } }: Props) {
+	const campaign = url ? getCampaign(url) : undefined;
 	return (
 		<QuotedLink key={url} href={url} display="block">
 			<Stack gap="m" direction="row">
@@ -15,7 +23,7 @@ export function BookLink({ book: { url, image, title, description } }: Props) {
 					</Box>
 				)}
 				<Stack direction="column" gap="s">
-					{url === '/book/' && <Text variant="flag">Just launched!</Text>}
+					{campaign && <Text variant="flag">{campaign.badge}</Text>}
 					<Text as="u" variant="large">
 						{title}
 					</Text>

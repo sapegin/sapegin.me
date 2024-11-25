@@ -21,6 +21,15 @@ import {
 import type { Chapter } from '../types/Chapter';
 import { Page } from './Page';
 import { Markdown } from '../components/Markdown';
+import { campaigns } from '../campaigns';
+
+const {
+	enabled: isCampaignEnabled,
+	badge,
+	price,
+	discountedPrice,
+	url: purchaseUrl,
+} = campaigns.washingCode;
 
 type Props = {
 	url: string;
@@ -146,16 +155,18 @@ const faq: FaqItem[] = [
 
 function TheButton() {
 	return (
-		<Button
-			as="a"
-			variant="large"
-			href="https://sapegin.gumroad.com/l/washingcode-book/rocket"
-		>
+		<Button as="a" variant="large" href={purchaseUrl}>
 			Get the book!{' '}
 			<Box as="span" px="s" verticalAlign="middle" fontSize="s">
 				■
 			</Box>{' '}
-			<del>€20</del> €10
+			{isCampaignEnabled ? (
+				<>
+					<del>€{price}</del> €{discountedPrice}
+				</>
+			) : (
+				<>€{price}</>
+			)}
 		</Button>
 	);
 }
@@ -393,7 +404,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 		<Page url={url}>
 			<Stack gap="xl">
 				<Stack gap="s">
-					<Text variant="flag">Just launched!</Text>
+					{isCampaignEnabled && <Text variant="flag">{badge}</Text>}
 					<Heading level={1}>Washing your code</Heading>
 					<Heading level={3} as="p">
 						A book on clean code for frontend developers

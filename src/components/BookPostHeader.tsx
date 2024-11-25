@@ -1,18 +1,20 @@
 import { Stack, Text, Link, BookCover, PostAddon } from '.';
+import { campaigns } from '../campaigns';
+
+const { enabled: isCampaignEnabled, badge } = campaigns.washingCode;
 
 export function BookPostHeader() {
 	return (
 		<PostAddon>
 			<Stack direction="row" gap="m">
 				<Stack gap="m">
-					<Text variant="flag">Just launched!</Text>
+					{isCampaignEnabled && <Text variant="flag">{badge}</Text>}
 					<Text variant="intro">
 						You’re reading an excerpt of my upcoming book on clean code for
 						frontend developers, “Washing your code.”
 					</Text>
 					<Text>
-						<Link href="/book/">Get the book now</Link> with 50% launch
-						discount!
+						<Link href="/book/">Get the book now!</Link>
 					</Text>
 				</Stack>
 				<Link href="/book/">
