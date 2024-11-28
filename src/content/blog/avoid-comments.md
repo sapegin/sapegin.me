@@ -747,3 +747,4 @@ Read other sample chapters of the book:
 - _Avoid comments (*this post*)_
 - [Naming is hard](/blog/naming/)
 - [Divide and conquer, or merge and relax](/blog/divide/)
+- [Don’t make me think](/blog/dont-make-me-think/)
