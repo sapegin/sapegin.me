@@ -1,5 +1,9 @@
 @layer reset, base, tokens, recipes, utilities;
 
+@view-transition {
+	navigation: auto;
+}
+
 @font-face {
 	font-family: 'Mondwest-Regular';
 	src: url('/fonts/Mondwest-Regular.woff2') format('woff2');
