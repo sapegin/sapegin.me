@@ -6,12 +6,13 @@ export interface Campaign {
 	url: string;
 }
 
+// TODO: Add a separate discounted URL
 export const campaigns: Record<string, Campaign> = {
 	washingCode: {
-		enabled: true,
+		enabled: false,
 		badge: 'Now 75% off!',
 		price: 20,
 		discountedPrice: 5,
-		url: 'https://sapegin.gumroad.com/l/washingcode-book/blackest',
+		url: 'https://sapegin.gumroad.com/l/washingcode-book',
 	},
 };
