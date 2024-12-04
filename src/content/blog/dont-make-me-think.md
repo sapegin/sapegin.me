@@ -77,10 +77,10 @@ const value = ~~3.14;
 
 <!-- expect(value).toBe(3) -->
 
-Another obscure use of the bitwise NOT operator is to discard the fractional portion of a number. Use `Math.floor()` instead:
+Another obscure use of the bitwise NOT operator is to discard the fractional portion of a number. Use `Math.trunc()` instead:
 
 ```js
-const value = Math.floor(3.14);
+const value = Math.trunc(3.14);
 // → 3
 ```
 
@@ -90,7 +90,7 @@ expect(value).toBe(3)
 
 **Example 4:**
 
-<!-- let dogs = [1], cats = [2] -->
+<!-- let dogs = [1], cats = [] -->
 <!-- eslint-skip -->
 
 ```js
@@ -103,10 +103,10 @@ if (dogs.length + cats.length > 0) {
 
 This one is understandable after a moment: it checks if either of the two arrays has any elements. However, it’s better to make it clearer:
 
-<!-- let dogs = [1], cats = [2] -->
+<!-- let dogs = [1], cats = [] -->
 
 ```js
-if (dogs.length > 0 && cats.length > 0) {
+if (dogs.length > 0 || cats.length > 0) {
   // Something fishy here…
 }
 ```
