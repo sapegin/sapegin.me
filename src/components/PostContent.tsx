@@ -60,12 +60,12 @@ export function PostContent<C extends ElementType>(props: BoxProps<C>) {
 					'& .tip::before': {
 						content: `''`,
 						position: 'absolute',
-						left: '-s',
+						left: '-m',
 						top: '.3em',
 						bottom: '.3em',
 						borderLeftColor: 'accent',
 						borderLeftStyle: 'solid',
-						borderLeftWidth: 2,
+						borderLeftWidth: 4,
 					},
 					'& .tip:first-child': {
 						marginTop: 0,
