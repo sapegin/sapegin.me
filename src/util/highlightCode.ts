@@ -49,5 +49,7 @@ export function highlightCode(code: string, lang: CodeLang, theme: CodeTheme) {
 	return highlighter.codeToHtml(code, {
 		lang,
 		theme: theme === 'light' ? 'Squirrelsong Light' : 'Squirrelsong Dark',
+		// Make code block not focusable as they wrap instead of scrolling
+		tabindex: false,
 	});
 }

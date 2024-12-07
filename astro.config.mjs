@@ -58,6 +58,14 @@ export default defineConfig({
 					theme,
 					// Removes `style` attribute from <pre>
 					keepBackground: false,
+					// Make code block not focusable as they wrap instead of scrolling
+					transformers: [
+						{
+							pre(node) {
+								node.properties.tabindex = undefined;
+							},
+						},
+					],
 				},
 			],
 			rehypeSlug,
