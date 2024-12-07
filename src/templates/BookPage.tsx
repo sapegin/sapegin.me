@@ -477,9 +477,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 					<ChapterList chapters={chapters} />
 				</Stack>
 				<Stack as="section" gap="m">
-					<Heading level={2} id="toc">
-						Techniques &amp; patterns
-					</Heading>
+					<Heading level={2}>Techniques &amp; patterns</Heading>
 					<TextTypo>
 						Here’s a list of all the techniques and patterns described in the
 						book.
@@ -487,9 +485,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 					<PatternList patterns={patterns} />
 				</Stack>
 				<Stack as="section" gap="m">
-					<Heading level={2} id="toc">
-						Code smells &amp; antipatterns
-					</Heading>
+					<Heading level={2}>Code smells &amp; antipatterns</Heading>
 					<TextTypo>
 						Here’s a list of all the code smells and antipatterns described in
 						the book.
