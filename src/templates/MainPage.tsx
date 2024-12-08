@@ -11,6 +11,7 @@ import { PostList } from '../components/PostList';
 import { ResourceList } from '../components/ResourceList';
 import { Stack } from '../components/Stack';
 import { Text } from '../components/Text';
+import { ME_BLUESKY_URL, ME_GITHUB_URL, ME_MASTODON_URL } from '../constants';
 import type { Post } from '../types/Post';
 import type { Resource } from '../types/Resource';
 import { Page } from './Page';
@@ -33,25 +34,21 @@ function Intro() {
 						Write to me
 					</LinkWithIcon>
 					,{' '}
-					<LinkWithIcon icon="comment" href="https://github.com/sapegin/ama">
+					<LinkWithIcon icon="comment" href={`${ME_GITHUB_URL}/ama`}>
 						ask me anything
 					</LinkWithIcon>
 					,
 					<br />
 					follow me on{' '}
-					<LinkWithIcon icon="twitter" href="https://twitter.com/iamsapegin">
-						Twitter
-					</LinkWithIcon>
-					,{' '}
-					<LinkWithIcon
-						icon="mastodon"
-						href="https://mastodon.cloud/@sapegin"
-						rel="me"
-					>
+					<LinkWithIcon icon="mastodon" href={ME_MASTODON_URL} rel="me">
 						Mastodon
 					</LinkWithIcon>
 					,{' '}
-					<LinkWithIcon icon="github" href="https://github.com/sapegin">
+					<LinkWithIcon icon="bluesky" href={ME_BLUESKY_URL}>
+						Bluesky
+					</LinkWithIcon>
+					,{' '}
+					<LinkWithIcon icon="github" href={ME_GITHUB_URL}>
 						GitHub
 					</LinkWithIcon>
 					, or{' '}
@@ -109,8 +106,7 @@ function Projects({ projects }: Pick<Props, 'projects'>) {
 				<ResourceList items={projects} />
 			</Stack>
 			<Text>
-				See many more projects on{' '}
-				<Link href="https://github.com/sapegin">GitHub</Link>.
+				See many more projects on <Link href={ME_GITHUB_URL}>GitHub</Link>.
 			</Text>
 		</Stack>
 	);

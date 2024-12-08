@@ -213,8 +213,6 @@ Keep in mind that tools can only detect some issues, and we should find a balanc
 
 **Automated accessibility testing** is cheap to run, and it keeps the site or app from regressions. However, automated testing could only find certain types of issues.
 
-Please share your favorite accessibility testing tools and techniques [with me](https://twitter.com/iamsapegin)!
-
 ---
 
 Thanks to [Eldar Amantay](https://twitter.com/steppe_fox), [Wendy Fox](https://twitter.com/drwendyfox), Anna Gerus, Anita Kiss, [Manuel Matuzovic](https://www.matuzo.at/), [Patrick Smith](https://icing.space/).

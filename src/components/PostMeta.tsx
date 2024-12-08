@@ -3,19 +3,12 @@ import { InlineList, InlineListItem } from './InlineList';
 import { Nobr } from './Nobr';
 import { FormattedDate } from './FormattedDate';
 import type { Post } from '../types/Post';
-
-const getMastodonLink = () => {
-	return `https://mastodon.cloud/@sapegin`;
-};
-
-const getTwitterLink = () => {
-	return `https://twitter.com/iamsapegin`;
-};
+import { ME_BLUESKY_URL, ME_GITHUB_URL, ME_MASTODON_URL } from '../constants';
 
 // TODO: Special case for the book?
 const getGitHubLink = (url: string) => {
 	const filename = `${url.slice(0, -1)}.md`;
-	return `https://github.com/sapegin/sapegin.me/edit/master/src/content/${filename}`;
+	return `${ME_GITHUB_URL}/sapegin.me/edit/master/src/content/${filename}`;
 };
 
 type Props = Pick<Post, 'url' | 'date'>;
@@ -24,8 +17,8 @@ export function PostMeta({ url, date }: Props) {
 	return (
 		<InlineList>
 			<InlineListItem variant="small">
-				Discuss on <Link href={getMastodonLink()}>Mastodon</Link> or{' '}
-				<Link href={getTwitterLink()}>Twitter</Link>
+				Discuss on <Link href={ME_MASTODON_URL}>Mastodon</Link> or{' '}
+				<Link href={ME_BLUESKY_URL}>Bluesky</Link>
 			</InlineListItem>
 			<InlineListItem variant="small">
 				<Link href={getGitHubLink(url)}>Edit on GitHub</Link>

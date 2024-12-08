@@ -74,13 +74,4 @@ const imageUrl = getImageUrl(isBlogPost ? url : undefined, image);
 <meta property="og:url" content={canonicalUrl} />
 <meta property="og:site_name" content={SITE_TITLE} />
 <meta property="og:description" content={description} />
-<meta name="twitter:creator" content="@iamsapegin" />
-{
-	imageUrl && (
-		<>
-			<meta property="og:image" content={imageUrl} />
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:image" content={imageUrl} />
-		</>
-	)
-}
+{imageUrl && <meta property="og:image" content={imageUrl} />}

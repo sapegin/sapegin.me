@@ -188,5 +188,3 @@ My main advice to create cross-platform interfaces is:
 **Write platform-specific code on the lowest possible level.**
 
 Improve your primitive components, so you don’t have to write custom styles and split code too much.
-
-And [let me know](https://twitter.com/iamsapegin) if you have any better ideas!

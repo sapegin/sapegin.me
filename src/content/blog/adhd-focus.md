@@ -200,7 +200,7 @@ I’ve created my own color scheme that gives me enough contrast to distinguish 
 
 ## Conclusion
 
-Minimizing distractions and knowing what to do next helps a lot in staying focused and productive. If you’ve got any tips to stay productive, I’ll be delighted to learn about them on [a social network previously known as Twitter](https://twitter.com/iamsapegin) or [Mastodon](https://mastodon.cloud/@sapegin).
+Minimizing distractions and knowing what to do next helps a lot in staying focused and productive. If you’ve got any tips to stay productive, I’ll be delighted to learn about them on [Mastodon](https://mastodon.cloud/@sapegin) or [Bluesky](https://bsky.app/profile/sapegin.bsky.social).
 
 You may be also curious to read [my personal user manual](https://sapegin.me/man/).
 
