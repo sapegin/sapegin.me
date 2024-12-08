@@ -30,6 +30,7 @@ const button = cva({
 		_focusVisible: {
 			outline: 'focus',
 			outlineOffset: 'token(borderWidths.focusOutlineOffset)',
+			borderRadius: '0.2rem',
 		},
 		'&::-moz-focus-inner': {
 			border: 0,
