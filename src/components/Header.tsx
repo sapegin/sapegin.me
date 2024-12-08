@@ -1,5 +1,6 @@
-import { Box, Logo, Menu } from '.';
-import { LOGO_WIDTH } from './Logo';
+import { Box } from './Box';
+import { Logo, LOGO_WIDTH } from './Logo';
+import { Menu } from './Menu';
 
 type Props = {
 	url: string;

@@ -1,23 +1,20 @@
 import type { ReactNode } from 'react';
-import {
-	About,
-	BookCover,
-	Box,
-	Button,
-	Feedback,
-	Grid,
-	Heading,
-	Link,
-	MurderOfCrows,
-	Stack,
-	Text,
-	TextTypo,
-	VisuallyHidden,
-	Image,
-	FeatureList,
-	FeatureListItem,
-	Flex,
-} from '../components';
+import { About } from '../components/About';
+import { BookCover } from '../components/BookCover';
+import { Box } from '../components/Box';
+import { Button } from '../components/Button';
+import { Feedback } from '../components/Feedback';
+import { Grid } from '../components/Grid';
+import { Heading } from '../components/Heading';
+import { Link } from '../components/Link';
+import { MurderOfCrows } from '../components/MurderOfCrows';
+import { Stack } from '../components/Stack';
+import { Text } from '../components/Text';
+import { TextTypo } from '../components/TextTypo';
+import { VisuallyHidden } from '../components/VisuallyHidden';
+import { Image } from '../components/Image';
+import { FeatureList, FeatureListItem } from '../components/FeatureList';
+import { Flex } from '../components/Flex';
 import type { Chapter } from '../types/Chapter';
 import { Page } from './Page';
 import { Markdown } from '../components/Markdown';

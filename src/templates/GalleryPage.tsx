@@ -1,4 +1,7 @@
-import { Flex, FullWidth, Photo, Stack } from '../components';
+import { Flex } from '../components/Flex';
+import { FullWidth } from '../components/FullWidth';
+import { Photo } from '../components/Photo';
+import { Stack } from '../components/Stack';
 import { type Image } from '../types/Image';
 import { getPhotoId } from '../util/getPhotoId';
 import { PageWithTitle } from './PageWithTitle';

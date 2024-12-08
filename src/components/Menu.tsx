@@ -1,5 +1,8 @@
 import { Fragment } from 'react';
-import { Box, Grid, Link, Text } from '.';
+import { Box } from './Box';
+import { Grid } from './Grid';
+import { Link } from './Link';
+import { Text } from './Text';
 
 // Half of total menu items
 export const HALF = 3;

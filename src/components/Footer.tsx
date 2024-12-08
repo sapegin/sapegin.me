@@ -1,4 +1,5 @@
-import { Text, Link } from '.';
+import { Text } from './Text';
+import { Link } from './Link';
 import romanize from 'romanize';
 
 export function Footer() {

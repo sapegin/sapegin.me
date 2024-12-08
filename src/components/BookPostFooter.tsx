@@ -1,4 +1,9 @@
-import { Stack, Text, Link, BookCover, Feedback, PostAddon } from '.';
+import { Stack } from './Stack';
+import { Text } from './Text';
+import { Link } from './Link';
+import { BookCover } from './BookCover';
+import { Feedback } from './Feedback';
+import { PostAddon } from './PostAddon';
 
 export function BookPostFooter() {
 	return (

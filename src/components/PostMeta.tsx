@@ -1,4 +1,7 @@
-import { Link, InlineList, InlineListItem, Nobr, FormattedDate } from '.';
+import { Link } from './Link';
+import { InlineList, InlineListItem } from './InlineList';
+import { Nobr } from './Nobr';
+import { FormattedDate } from './FormattedDate';
 import type { Post } from '../types/Post';
 
 const getMastodonLink = () => {

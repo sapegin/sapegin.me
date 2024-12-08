@@ -1,4 +1,4 @@
-import { Nobr } from '.';
+import { Nobr } from './Nobr';
 
 type Props = {
 	date: Date;

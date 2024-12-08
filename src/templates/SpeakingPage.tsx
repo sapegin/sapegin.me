@@ -1,4 +1,8 @@
-import { Stack, Heading, Text, Link, EventList } from '../components';
+import { Stack } from '../components/Stack';
+import { Heading } from '../components/Heading';
+import { Text } from '../components/Text';
+import { Link } from '../components/Link';
+import { EventList } from '../components/EventList';
 import { PageWithTitle } from './PageWithTitle';
 import type { Gig } from '../types/Gig';
 

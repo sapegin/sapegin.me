@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Box } from '.';
+import { Box } from './Box';
 
 type Props = {
 	children: ReactNode;

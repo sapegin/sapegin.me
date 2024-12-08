@@ -1,5 +1,9 @@
 import type { Resource } from '../types/Resource';
-import { Stack, Grid, Text, Link, Badge } from '.';
+import { Stack } from './Stack';
+import { Grid } from './Grid';
+import { Text } from './Text';
+import { Link } from './Link';
+import { Badge } from './Badge';
 
 type Props = {
 	items: Resource[];

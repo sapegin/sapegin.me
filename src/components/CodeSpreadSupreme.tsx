@@ -1,4 +1,5 @@
-import { Code, Grid } from '.';
+import { Grid } from './Grid';
+import { Code } from './Code';
 
 type Props = {
 	codes: {

@@ -1,18 +1,16 @@
-import {
-	BookLink,
-	Box,
-	Expander,
-	Grid,
-	Heading,
-	Hola,
-	Image,
-	Link,
-	LinkWithIcon,
-	PostList,
-	ResourceList,
-	Stack,
-	Text,
-} from '../components';
+import { BookLink } from '../components/BookLink';
+import { Box } from '../components/Box';
+import { Expander } from '../components/Expander';
+import { Grid } from '../components/Grid';
+import { Heading } from '../components/Heading';
+import { Hola } from '../components/Hola';
+import { Image } from '../components/Image';
+import { Link } from '../components/Link';
+import { LinkWithIcon } from '../components/LinkWithIcon';
+import { PostList } from '../components/PostList';
+import { ResourceList } from '../components/ResourceList';
+import { Stack } from '../components/Stack';
+import { Text } from '../components/Text';
 import type { Post } from '../types/Post';
 import type { Resource } from '../types/Resource';
 import { Page } from './Page';

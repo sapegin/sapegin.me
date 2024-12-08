@@ -1,4 +1,4 @@
-import { Box } from '.';
+import { Box } from './Box';
 
 // TODO: Can we import the colors from the theme or palette file?
 // TODO: Can we avoid inline styles?

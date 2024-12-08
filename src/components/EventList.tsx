@@ -1,5 +1,10 @@
 import Group from 'react-group';
-import { Box, Stack, Heading, Text, Link, EventName } from '.';
+import { Box } from './Box';
+import { Stack } from './Stack';
+import { Heading } from './Heading';
+import { Text } from './Text';
+import { Link } from './Link';
+import { EventName } from './EventName';
 import type { Gig } from '../types/Gig';
 
 type Props = {

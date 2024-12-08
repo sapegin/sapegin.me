@@ -1,4 +1,5 @@
-import { Box, Link } from '.';
+import { Box } from './Box';
+import { Link } from './Link';
 
 export const LOGO_WIDTH = '400px';
 

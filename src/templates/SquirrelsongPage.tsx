@@ -1,22 +1,20 @@
-import {
-	About,
-	Badge,
-	Box,
-	Button,
-	BuyMeCoffee,
-	CodeSpread,
-	CodeSpreadSupreme,
-	Feedback,
-	Grid,
-	Heading,
-	Link,
-	MurderOfCrows,
-	SquirrelsongLogo,
-	Stack,
-	Text,
-	TextTypo,
-	VisuallyHidden,
-} from '../components';
+import { About } from '../components/About';
+import { Badge } from '../components/Badge';
+import { Box } from '../components/Box';
+import { Button } from '../components/Button';
+import { BuyMeCoffee } from '../components/BuyMeCoffee';
+import { CodeSpread } from '../components/CodeSpread';
+import { CodeSpreadSupreme } from '../components/CodeSpreadSupreme';
+import { Feedback } from '../components/Feedback';
+import { Grid } from '../components/Grid';
+import { Heading } from '../components/Heading';
+import { Link } from '../components/Link';
+import { MurderOfCrows } from '../components/MurderOfCrows';
+import { SquirrelsongLogo } from '../components/SquirrelsongLogo';
+import { Stack } from '../components/Stack';
+import { Text } from '../components/Text';
+import { TextTypo } from '../components/TextTypo';
+import { VisuallyHidden } from '../components/VisuallyHidden';
 import { Page } from './Page';
 import type { Squirrel } from '../types/Squirrel';
 

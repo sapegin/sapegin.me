@@ -1,4 +1,6 @@
-import { Stack, Heading, TextTypo } from '.';
+import { Stack } from './Stack';
+import { Heading } from './Heading';
+import { TextTypo } from './TextTypo';
 
 type Props = {
 	list?: 'default' | 'photo';

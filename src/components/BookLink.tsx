@@ -1,4 +1,8 @@
-import { BookCover, Box, QuotedLink, Stack, Text } from '.';
+import { BookCover } from './BookCover';
+import { Box } from './Box';
+import { QuotedLink } from './QuotedLink';
+import { Stack } from './Stack';
+import { Text } from './Text';
 import type { Resource } from '../types/Resource';
 import { campaigns } from '../campaigns';
 

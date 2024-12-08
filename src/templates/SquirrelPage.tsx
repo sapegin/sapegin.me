@@ -1,17 +1,14 @@
 import type { ReactNode } from 'react';
 import Group from 'react-group';
-import {
-	BuyMeCoffee,
-	Heading,
-	InlineList,
-	InlineListItem,
-	Link,
-	Text,
-	MurderOfCrows,
-	PostContent,
-	Stack,
-	TextTypo,
-} from '../components';
+import { BuyMeCoffee } from '../components/BuyMeCoffee';
+import { Heading } from '../components/Heading';
+import { InlineList, InlineListItem } from '../components/InlineList';
+import { Link } from '../components/Link';
+import { Text } from '../components/Text';
+import { MurderOfCrows } from '../components/MurderOfCrows';
+import { PostContent } from '../components/PostContent';
+import { Stack } from '../components/Stack';
+import { TextTypo } from '../components/TextTypo';
 import type { Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
 

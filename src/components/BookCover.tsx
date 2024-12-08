@@ -1,4 +1,5 @@
-import { Box, Image } from '.';
+import { Box } from './Box';
+import { Image } from './Image';
 
 type Props = {
 	title: string;

@@ -1,12 +1,10 @@
-import {
-	Box,
-	Expander,
-	Heading,
-	Image,
-	Link,
-	Stack,
-	TextTypo,
-} from '../components';
+import { Box } from '../components/Box';
+import { Expander } from '../components/Expander';
+import { Heading } from '../components/Heading';
+import { Image } from '../components/Image';
+import { Link } from '../components/Link';
+import { Stack } from '../components/Stack';
+import { TextTypo } from '../components/TextTypo';
 import { Page } from './Page';
 
 type Props = {

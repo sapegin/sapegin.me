@@ -1,4 +1,8 @@
-import { Stack, Text, Link, BookCover, PostAddon } from '.';
+import { Stack } from './Stack';
+import { Text } from './Text';
+import { Link } from './Link';
+import { BookCover } from './BookCover';
+import { PostAddon } from './PostAddon';
 import { campaigns } from '../campaigns';
 
 const { enabled: isCampaignEnabled, badge } = campaigns.washingCode;

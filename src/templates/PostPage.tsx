@@ -1,16 +1,14 @@
 import type { ReactNode } from 'react';
-import {
-	BookPostFooter,
-	BookPostHeader,
-	Heading,
-	MurderOfCrows,
-	PostContent,
-	PostMeta,
-	RelatedPosts,
-	Stack,
-	Subscription,
-	Text,
-} from '../components';
+import { BookPostFooter } from '../components/BookPostFooter';
+import { BookPostHeader } from '../components/BookPostHeader';
+import { Heading } from '../components/Heading';
+import { MurderOfCrows } from '../components/MurderOfCrows';
+import { PostContent } from '../components/PostContent';
+import { PostMeta } from '../components/PostMeta';
+import { RelatedPosts } from '../components/RelatedPosts';
+import { Stack } from '../components/Stack';
+import { Subscription } from '../components/Subscription';
+import { Text } from '../components/Text';
 import type { Post } from '../types/Post';
 import { Page } from './Page';
 

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-import { Text, Link } from '.';
+import { Text } from './Text';
+import { Link } from './Link';
 
 type Props = {
 	children?: ReactNode;

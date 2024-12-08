@@ -1,17 +1,15 @@
 import type { CollectionEntry } from 'astro:content';
-import {
-	BookCover,
-	Box,
-	Button,
-	Expander,
-	Heading,
-	Stack,
-	Subscription,
-	Text,
-	TextContent,
-	TextTypo,
-	Video,
-} from '../components';
+import { BookCover } from '../components/BookCover';
+import { Box } from '../components/Box';
+import { Button } from '../components/Button';
+import { Expander } from '../components/Expander';
+import { Heading } from '../components/Heading';
+import { Stack } from '../components/Stack';
+import { Subscription } from '../components/Subscription';
+import { Text } from '../components/Text';
+import { TextContent } from '../components/TextContent';
+import { TextTypo } from '../components/TextTypo';
+import { Video } from '../components/Video';
 import { PageWithTitle } from './PageWithTitle';
 
 type Issue = CollectionEntry<'zines'>;
