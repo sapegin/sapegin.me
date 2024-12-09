@@ -23,8 +23,8 @@ Thanks to [Babel](http://babeljs.io/) we can write in ECMAScript 2015.
 
 - [Learn ES2015](http://babeljs.io/learn-es2015/).
 - [An intro to using npm and ECMAScript 2015 modules for frontend development](http://wesbos.com/javascript-modules/) by Wes Bos.
-- <span aria-label="Book" title="Book">📖</span> [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read/) by Nicholas C. Zakas.
-- <span aria-label="Book" title="Book">📖</span> [Exploring JavaScript](http://exploringjs.com/es6/) by Dr. Axel Rauschmayer.
+- <span aria-hidden="true" title="Book">📖</span> [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read/) by Nicholas C. Zakas.
+- <span aria-hidden="true" title="Book">📖</span> [Exploring JavaScript](http://exploringjs.com/es6/) by Dr. Axel Rauschmayer.
 
 <!-- textlint-enable -->
 
@@ -42,7 +42,7 @@ Our view layer is [React](https://reactjs.org/).
 - [Removing user interface complexity, or why React is awesome](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome) by James Long.
 - [Structuring React and Redux applications](/blog/react-structure).
 - [React cheat sheet](https://reactcheatsheet.com/).
-- <span aria-label="Book" title="Book">📖</span> [SurviveJS: React](https://survivejs.com/react/introduction/) by Juho Vepsäläinen.
+- <span aria-hidden="true" title="Book">📖</span> [SurviveJS: React](https://survivejs.com/react/introduction/) by Juho Vepsäläinen.
 
 ## Redux
 
@@ -52,9 +52,9 @@ Our view layer is [React](https://reactjs.org/).
 - [Redux best practices](https://medium.com/lexical-labs-engineering/redux-best-practices-64d59775802e) by Will Becker.
 - [Single State Tree + Flux](http://merrickchristensen.com/articles/single-state-tree.html) by Merrick Christensen.
 - [Querying a Redux store](https://medium.com/@adamrackis/querying-a-redux-store-37db8c7f3b0f) by Adam Rackis.
-- <span aria-label="Course" title="Course">🖥</span> [Getting started with Redux](https://egghead.io/courses/getting-started-with-redux) by Dan Abramov.
-- <span aria-label="Course" title="Course">🖥</span> [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) by Dan Abramov.
-- <span aria-label="Video" title="Video">📺</span> [Live React: Hot Reloading with Time Travel](https://youtu.be/xsSnOQynTHs) by Dan Abramov, ReactEurope 2015.
+- <span aria-hidden="true" title="Course">🖥</span> [Getting started with Redux](https://egghead.io/courses/getting-started-with-redux) by Dan Abramov.
+- <span aria-hidden="true" title="Course">🖥</span> [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) by Dan Abramov.
+- <span aria-hidden="true" title="Video">📺</span> [Live React: Hot Reloading with Time Travel](https://youtu.be/xsSnOQynTHs) by Dan Abramov, ReactEurope 2015.
 - [Redux documentation](http://redux.js.org/).
 
 Redux was inspired by the original Facebook’s [Flux architecture](https://facebook.github.io/flux/):
@@ -70,7 +70,7 @@ Redux requires that all the data in the store should be immutable. [Immutable.js
 
 - [The React way: Flux architecture with Immutable.js](https://blog.risingstack.com/the-react-js-way-flux-architecture-with-immutable-js/) by Péter Márton.
 - [Immutable data structures and JavaScript](http://jlongster.com/Using-Immutable-Data-Structures-in-JavaScript) by James Long.
-- <span aria-label="Video" title="Video">📺</span> [Immutable data and React](https://youtu.be/I7IdS-PbEgI) by Lee Byron, React Conf 2015.
+- <span aria-hidden="true" title="Video">📺</span> [Immutable data and React](https://youtu.be/I7IdS-PbEgI) by Lee Byron, React Conf 2015.
 
 _After using Immutable for a while, I feel that it makes more problems than it solves. Consider using [seamless-immutable](https://github.com/rtfeldman/seamless-immutable)._
 
@@ -79,7 +79,7 @@ _After using Immutable for a while, I feel that it makes more problems than it s
 CSS modules are like [BEM](http://getbem.com/) but they provide real class names uniqueness. And you don’t need to write long class names manually. We use CSS modules with [Sass](http://sass-lang.com/) and [Autoprefixer](https://github.com/postcss/autoprefixer).
 
 - [CSS Modules: welcome to the future](https://glenmaddern.com/articles/css-modules) by Glen Maddern.
-- <span aria-label="Video" title="Video">📺</span> [Interoperable CSS](https://youtu.be/aIyhhHTmsXE) by Glen Maddern, CSSconf EU 2015.
+- <span aria-hidden="true" title="Video">📺</span> [Interoperable CSS](https://youtu.be/aIyhhHTmsXE) by Glen Maddern, CSSconf EU 2015.
 
 _Consider using CSS in JS library, like [JSS](http://cssinjs.org/) or [styled-components](https://www.styled-components.com/)._
 

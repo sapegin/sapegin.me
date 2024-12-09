@@ -66,7 +66,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - Designers talk in UI primitives.
 - Design tools talk in shapes, like arrow and triangles.
 - Common language: UI primitives.
-- [component-driven.io](https://component-driven.io/): component-driven design & development for the modern web.
+- [component-driven.dev](https://www.component-driven.dev): component-driven design & development for the modern web.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">That guy again! <a href="https://twitter.com/okonetchnikov?ref_src=twsrc%5Etfw">@okonetchnikov</a> at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a>. <a href="https://t.co/7UwpGzXaPu">pic.twitter.com/7UwpGzXaPu</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121331678771806210?ref_src=twsrc%5Etfw">April 25, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
