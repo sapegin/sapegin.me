@@ -7,6 +7,6 @@ export const SITE_DESCRIPTION =
 
 export const ME_MASTODON_URL = 'https://mastodon.cloud/@sapegin';
 export const ME_MASTODON_HANDLE = '@sapegin@mastodon.cloud';
-export const ME_BLUESKY_URL = 'https://bsky.app/profile/sapegin.bsky.social';
-export const ME_BLUESKY_HANDLE = '@sapegin.bsky.social';
+export const ME_BLUESKY_URL = 'https://bsky.app/profile/sapegin.me';
+export const ME_BLUESKY_HANDLE = '@sapegin.me';
 export const ME_GITHUB_URL = 'https://github.com/sapegin';
