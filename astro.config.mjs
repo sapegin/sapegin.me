@@ -78,7 +78,7 @@ export default defineConfig({
 					},
 					headingProperties: { class: 'heading' },
 					properties: {
-						ariaHidden: true,
+						ariaHidden: 'true',
 						class: 'heading__anchor',
 						tabIndex: '-1',
 					},
