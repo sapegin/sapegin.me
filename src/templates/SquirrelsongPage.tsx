@@ -73,8 +73,8 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 						instead of being distracted and overwhelmed by bright colors.
 					</TextTypo>
 					<Grid auto="wide" gap="m">
-						<Stack gap="s">
-							<Box as="figure" objectFit="cover" overflow="hidden">
+						<Stack as="figure" gap="s">
+							<Box objectFit="cover" overflow="hidden">
 								<Box
 									as="img"
 									src="/images/squirrelsong/squirrelsong-vscode.avif"
@@ -89,8 +89,8 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 								Squirrelsong Light theme
 							</Text>
 						</Stack>
-						<Stack gap="s">
-							<Box as="figure" objectFit="cover" overflow="hidden">
+						<Stack as="figure" gap="s">
+							<Box objectFit="cover" overflow="hidden">
 								<Box
 									as="img"
 									src="/images/squirrelsong/squirrelsong-vscode-default.avif"
