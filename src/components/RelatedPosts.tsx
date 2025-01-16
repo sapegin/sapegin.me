@@ -9,8 +9,8 @@ type Props = {
 
 export function RelatedPosts({ posts }: Props) {
 	return (
-		<Stack gap="m">
-			<Heading as="h2" level={3}>
+		<Stack gap="m" as="nav" aria-labelledby="related-posts-heading">
+			<Heading as="h2" level={3} id="related-posts-heading">
 				You may also like
 			</Heading>
 			<PostList posts={posts} />

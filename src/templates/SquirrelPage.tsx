@@ -32,7 +32,7 @@ function getIssueLink() {
 export function SquirrelPage({ url, title, id, squirrels, children }: Props) {
 	return (
 		<Page url={url}>
-			<Stack as="main" gap="xl">
+			<Stack gap="xl">
 				<Stack gap="l">
 					<Heading level={1} maxWidth="textMaxWidth">
 						{title}
@@ -59,17 +59,19 @@ export function SquirrelPage({ url, title, id, squirrels, children }: Props) {
 							</Group>
 						</Text>
 					</Stack>
-					<InlineList>
-						<InlineListItem variant="small">
-							<Link href={getSourceLink(id)}>View source code</Link>
-						</InlineListItem>
-						<InlineListItem variant="small">
-							<Link href={getIssueLink()}>Report an issue</Link>
-						</InlineListItem>
-						<InlineListItem variant="small">
-							<Link href={getGitHubLink(id)}>Edit on GitHub</Link>
-						</InlineListItem>
-					</InlineList>
+					<nav aria-label="Page tools">
+						<InlineList>
+							<InlineListItem variant="small">
+								<Link href={getSourceLink(id)}>View source code</Link>
+							</InlineListItem>
+							<InlineListItem variant="small">
+								<Link href={getIssueLink()}>Report an issue</Link>
+							</InlineListItem>
+							<InlineListItem variant="small">
+								<Link href={getGitHubLink(id)}>Edit on GitHub</Link>
+							</InlineListItem>
+						</InlineList>
+					</nav>
 				</Stack>
 				<BuyMeCoffee />
 				<MurderOfCrows />

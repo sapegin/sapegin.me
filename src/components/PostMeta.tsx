@@ -15,22 +15,24 @@ type Props = Pick<Post, 'url' | 'date'>;
 
 export function PostMeta({ url, date }: Props) {
 	return (
-		<InlineList>
-			<InlineListItem variant="small">
-				Discuss on <Link href={ME_MASTODON_URL}>Mastodon</Link> or{' '}
-				<Link href={ME_BLUESKY_URL}>Bluesky</Link>
-			</InlineListItem>
-			<InlineListItem variant="small">
-				<Link href={getGitHubLink(url)}>Edit on GitHub</Link>
-			</InlineListItem>
-			<InlineListItem variant="small">
-				<time dateTime={date.toISOString()}>
-					Published{' '}
-					<Nobr>
-						on <FormattedDate date={date} />
-					</Nobr>
-				</time>
-			</InlineListItem>
-		</InlineList>
+		<nav aria-label="Page tools">
+			<InlineList>
+				<InlineListItem variant="small">
+					Discuss on <Link href={ME_MASTODON_URL}>Mastodon</Link> or{' '}
+					<Link href={ME_BLUESKY_URL}>Bluesky</Link>
+				</InlineListItem>
+				<InlineListItem variant="small">
+					<Link href={getGitHubLink(url)}>Edit on GitHub</Link>
+				</InlineListItem>
+				<InlineListItem variant="small">
+					<time dateTime={date.toISOString()}>
+						Published{' '}
+						<Nobr>
+							on <FormattedDate date={date} />
+						</Nobr>
+					</time>
+				</InlineListItem>
+			</InlineList>
+		</nav>
 	);
 }

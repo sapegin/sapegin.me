@@ -28,7 +28,7 @@ export function PostPage({
 }: Props) {
 	return (
 		<Page url={url}>
-			<Stack as="main" gap="xl">
+			<Stack gap="xl">
 				<Stack gap="l">
 					<Heading level={1} maxWidth="textMaxWidth">
 						{title}
@@ -47,11 +47,7 @@ export function PostPage({
 				</Stack>
 				<MurderOfCrows />
 				<Subscription />
-				{related.length > 0 && (
-					<aside aria-label="Related posts">
-						<RelatedPosts posts={related} />
-					</aside>
-				)}
+				{related.length > 0 && <RelatedPosts posts={related} />}
 			</Stack>
 		</Page>
 	);

@@ -100,7 +100,7 @@ function Zine() {
 export function PhotosPage({ url, title }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
-			<Stack as="main" gap="l">
+			<Stack gap="l">
 				<Intro />
 				<Gallery />
 				<Zine />
