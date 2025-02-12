@@ -133,7 +133,7 @@ const getTaggedList = (contents: string, tag: string) => {
  */
 console.log('[BOOK] Downloading source files...');
 
-fs.rmSync(REPO_DIR, { recursive: true });
+fs.rmSync(REPO_DIR, { recursive: true, force: true });
 execSync(`curl "${REPO_TAR_GZ}" | tar xz`);
 
 /**
