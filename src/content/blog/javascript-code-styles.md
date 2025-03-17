@@ -42,7 +42,7 @@ Survey results:
 - Results are almost the opposite.
 - [Airbnb](https://github.com/airbnb/javascript) is the most popular preset.
 - [Standard](https://standardjs.com/) is popular too (looks like all developers who don’t use semicolons use Standard).
-- Which makes some developers quite angry: “Definitely not that ‘standard’ BS”.
+- Which makes some developers quite angry: “Definitely not that _standard_ BS”.
 
 ## Linters
 

@@ -1,7 +1,8 @@
 import path from 'node:path';
+import fs from 'node:fs';
 import { visit } from 'unist-util-visit';
 import type { Root, Image, Html } from 'mdast';
-import sizeOf from 'image-size';
+import { imageSize } from 'image-size';
 
 /*
  * Add dimensions, lazy loading, and captions to Markdown images.
@@ -21,7 +22,9 @@ export default function remarkImages() {
 			}
 
 			const filepath = path.resolve('./public', `.${node.url}`);
-			const { width, height } = sizeOf(filepath);
+			const buffer = fs.readFileSync(filepath);
+			// @ts-expect-error Looks like image-size types are incorrect
+			const { width, height } = imageSize(buffer);
 
 			const img = `
 <figure>
