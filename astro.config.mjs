@@ -29,6 +29,8 @@ const getFileMtime = (filename) => {
 // https://astro.build/config
 export default defineConfig({
 	site: SITE_URL,
+	// Disable HTML minification to make View Source more readable
+	compressHTML: false,
 	integrations: [
 		react(),
 		sitemap({
