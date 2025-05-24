@@ -19,6 +19,7 @@ import type { Chapter } from '../types/Chapter';
 import { Page } from './Page';
 import { Markdown } from '../components/Markdown';
 import { campaigns } from '../campaigns';
+import { css } from '../../styled-system/css';
 
 const {
 	enabled: isCampaignEnabled,
@@ -289,12 +290,18 @@ function Testimonial({
 					viewBox="0 0 6 5"
 					css={{ ml: 'm', mt: -2 }}
 				>
-					<Box
-						as="path"
+					<path
 						d="M0 0h1v5H0zM1 4h1v1H1zM2 3h1v1H2zM3 2h1v1H3zM4 1h1v1H4zM5 0h1v1H5z"
-						fill="currentColor"
+						className={css({
+							fill: 'currentColor',
+						})}
 					/>
-					<Box as="path" d="M1 0H5v1H1.001z" fill="background" />
+					<path
+						d="M1 0H5v1H1.001z"
+						className={css({
+							fill: 'background',
+						})}
+					/>
 				</Box>
 			</div>
 			<Stack as="footer" direction="row" gap="s" alignItems="center">
