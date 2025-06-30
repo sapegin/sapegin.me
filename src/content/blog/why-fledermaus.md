@@ -8,7 +8,7 @@ tags:
   - projects
 ---
 
-For many years I was struggling every time I was using a someone else’s engine to build one of my sites. I’ve tried [WordPress](https://wordpress.com/), [Koken](http://koken.me/), [Aegea](http://blogengine.ru/), [Django](https://www.djangoproject.com/), [DocPad](http://docpad.org/) and [Hexo](https://hexo.io/). Now all my personal sites (this blog, [homepage](http://sapegin.me/) and [photo portfolio](/photos/)) work on my own static site generator — [Fledermaus](https://github.com/sapegin/fledermaus) — and I’ve never been more happy.
+For many years I was struggling every time I was using a someone else’s engine to build one of my sites. I’ve tried [WordPress](https://wordpress.com/), [Koken](http://koken.me/), [Aegea](http://blogengine.ru/), [Django](https://www.djangoproject.com/), [DocPad](http://docpad.org/) and [Hexo](https://hexo.io/). Now all my personal sites (this blog, [homepage](http://sapegin.me/) and [photo portfolio](https://morning.photos/)) work on my own static site generator — [Fledermaus](https://github.com/sapegin/fledermaus) — and I’ve never been more happy.
 
 It’s not my first engine:
 
