@@ -30,7 +30,7 @@ First, we were all sent to work from home. I always liked to work from the offic
 
 Second, my employer was seriously affected by the virus, and we had to work four days a week and for some time even two days a week instead of five. I’d never considered reducing my working hours before but here I am, working four days a week since last summer, and it feels great. 3/4 days distribution is much healthier than 2/5. Now I can [go to a forest in the early morning](https://www.onlandscape.co.uk/2022/03/morning-in-magical-forest/) for some nature photography, come back to have lunch with Margarita, and still have time to do something at home.
 
-[![Friday morning photography](/images/offline-friday-photography.jpg)](/photos/favorites/)
+[![Friday morning photography](/images/offline-friday-photography.jpg)](https://morning.photos/photos/)
 
 I think it’s important to know what you like and don’t like at work and try to find a balance. When you do too much of what you don’t like, work gets depressing very fast. I always liked improving things: doing refactoring or [researching better ways to do something](/blog/), and never liked digging into complex business requirements.
 
@@ -40,7 +40,7 @@ I’ve also realized that most jobs suck, and it doesn’t make sense to change 
 
 I still miss a few things from the office life: meeting my colleagues and postlunch walks; however, I don’t see myself working in the office again, especially one with hot desks, full time.
 
-[![Postlunch walk](/images/offline-postlunch-walk.jpg)](/photos/favorites/)
+[![Postlunch walk](/images/offline-postlunch-walk.jpg)](https://morning.photos/photos/)
 
 I’d also like to try actual remote work, not just working from home. Meaning primarily async work, not when we’re all sitting at our homes and having meetings all day.
 
@@ -68,7 +68,7 @@ Of course, I still use computers a lot for most of my hobbies, and I’m glad I 
 
 **Programming** was my main hobby [since I was 13](https://github.com/sapegin/ama/issues/13), and for many years it was the only one. I was always working on some personal projects and later open source. I was always reading books and articles, and learning something new in my free time. Now I don’t feel like spending time programming just for the fun of programming, and only do it to support my other hobbies.
 
-**Photography**, which I started in 2014, was probably my first offline hobby. There’s a still a lot of sitting in front of the computer involved — editing photos, updating [my site](/photos/), and so on — however, I recently started making more prints and even started [my own photo zine](/photos/zine). It’s nice to see my photos printed! I even started shooting film again with plastic cameras.
+**Photography**, which I started in 2014, was probably my first offline hobby. There’s a still a lot of sitting in front of the computer involved — editing photos, updating [my site](https://morning.photos/), and so on — however, I recently started making more prints and even started [my own photo zine](https://morning.photos/zine/). It’s nice to see my photos printed! I even started shooting film again with plastic cameras.
 
 ![Me making a photo of a dead tree](/images/offline-photographer.jpg)
 
@@ -104,7 +104,7 @@ I was always disappointed in social networks. During the past 20 years, I’ve t
 
 However, I kept trying until I read Cal Newport’s book [Digital minimalism](https://www.calnewport.com/books/digital-minimalism/). This book made me rethink what I was doing, I stopped using Facebook and reduced my feeds on other social networks.
 
-I’ve tried many places to share my photography: 500px, [Instagram](http://instagram.com/sapegin/), [Unsplash](https://unsplash.com/@sapegin), and ended up buying photography books and publishing [my own photo zine](/photos/zine/). And [my site](/photos/) now is the only place to see my photos online.
+I’ve tried many places to share my photography: 500px, [Instagram](http://instagram.com/sapegin/), [Unsplash](https://unsplash.com/@sapegin), and ended up buying photography books and publishing [my own photo zine](https://morning.photos/zine/). And [my site](https://morning.photos/) now is the only place to see my photos online.
 
 ![My photography zine](/images/zine.jpg)
 

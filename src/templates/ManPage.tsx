@@ -55,7 +55,7 @@ export function ManPage({ url }: Props) {
 								<span aria-hidden="true">💾</span> Check out my{' '}
 								<Link href="/blog/">blog</Link>,{' '}
 								<Link href="/book/">book on clean code</Link>,{' '}
-								<Link href="/photos/">photos</Link>, and{' '}
+								<Link href="https://morning.photos/">photos</Link>, and{' '}
 								<Link href="https://tacohuaco.co/">recipes</Link>
 							</TextTypo>
 						</Stack>

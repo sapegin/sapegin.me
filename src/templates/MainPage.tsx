@@ -150,7 +150,10 @@ function Photography() {
 			</Expander>
 			<Text>
 				See{' '}
-				<Link href="/photos/">more of my photos and my photography zine</Link>.
+				<Link href="https://morning.photos/">
+					more of my photos and my photography zine
+				</Link>
+				.
 			</Text>
 		</Stack>
 	);
