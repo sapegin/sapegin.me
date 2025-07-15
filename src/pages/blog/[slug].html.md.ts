@@ -1,5 +1,6 @@
 import { getCollection, getEntry } from 'astro:content';
 import type { APIRoute, GetStaticPaths } from 'astro';
+import { SITE_URL } from '../../constants';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const posts = await getCollection('blog');
@@ -26,7 +27,13 @@ export const GET: APIRoute = async ({ params }) => {
 ${post.body}
 `;
 
-	return new Response(markdown, {
+	// Replace internal blog links with absolute .html.md links
+	const result = markdown.replaceAll(
+		/(\]\()\/blog\/([^/]+)\//g,
+		`$1${SITE_URL}/blog/$2.html.md`
+	);
+
+	return new Response(result, {
 		headers: { 'Content-Type': 'text/plain; charset=utf-8' },
 	});
 };
