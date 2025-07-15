@@ -29,7 +29,7 @@ ${post.body}
 
 	// Replace internal blog links with absolute .html.md links
 	const result = markdown.replaceAll(
-		/(\]\()\/blog\/([^/]+)\//g,
+		/(\]\()\/blog\/([^/)]+)\//g,
 		`$1${SITE_URL}/blog/$2.html.md`
 	);
 
