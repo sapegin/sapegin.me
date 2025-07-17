@@ -8,6 +8,8 @@ import { globSync } from 'glob';
 import matter from 'gray-matter';
 import GithubSlugger from 'github-slugger';
 import _ from 'lodash';
+import path from 'node:path';
+import { SITE_URL } from '../src/constants';
 
 interface Post {
 	title: string;
@@ -32,7 +34,8 @@ interface TocItem {
 const REPO_TAR_GZ =
 	'https://codeload.github.com/sapegin/washingcode-book/tar.gz/master';
 const REPO_DIR = 'washingcode-book-master';
-const DEST_DIR = 'src/content/blog';
+const BLOG_CONTENT_DIR = 'src/content/blog';
+const BOOK_CONTENT_DIR = 'src/content/bookChapters';
 const DATA_DIR = 'src/data';
 
 const TIPS = {
@@ -81,6 +84,9 @@ const shouldIncludeSections = (contents: string) =>
 const downgradeHeadings = (contents: string) =>
 	contents.replaceAll(/^##(#+) /gm, '$1 ');
 
+const removeHtmlComments = (contents: string) =>
+	contents.replaceAll(/<!--[\s\S]*?-->/g, '');
+
 const updateLinks = (contents: string) =>
 	contents.replaceAll(/\[(.*?)]\(#(.*?)\)/g, (_match, title, anchor) => {
 		const href = internalLinks[anchor];
@@ -92,17 +98,37 @@ const updateLinks = (contents: string) =>
 		return title;
 	});
 
-const updateTips = (contents: string) =>
-	contents.replaceAll(
-		new RegExp(`\\n([${Object.keys(TIPS)}])> `, 'gm'),
-		(_match, marker: keyof typeof TIPS) => {
-			return `\n**${TIPS[marker]}:** `;
-		}
+const stripInternalLinks = (contents: string) =>
+	contents.replaceAll(/\[(.*?)]\(#(.*?)\)/g, (_match, title) => {
+		return title;
+	});
+
+const updateTips = (contents: string) => {
+	const keysMask = Object.keys(TIPS).join('');
+	return (
+		contents
+			// Replace paragraph breaks inside tips with double <br>
+			.replaceAll(
+				new RegExp(`\\s*([${keysMask}])>\\s*([${keysMask}])>\\s*`, 'gm'),
+				'<br><br>'
+			)
+			// Replace the first tip marker in a block with a text marker (**Info:**)
+			.replaceAll(
+				new RegExp(`\\n([${keysMask}])> `, 'gm'),
+				(_match, marker: keyof typeof TIPS) => {
+					return `\n**${TIPS[marker]}:** `;
+				}
+			)
 	);
+};
 
 // images/ → /images/blog/book/
 const updateImages = (contents: string) =>
 	contents.replaceAll('](images/', '](/images/blog/book/');
+
+// images/ → https://sapegin.me/images/blog/book/
+const updateImagesAbsolute = (contents: string) =>
+	contents.replaceAll('](images/', `](${SITE_URL}/images/blog/book/`);
 
 // Get an array from a tagged list:
 // <!-- patterns:start -->
@@ -142,7 +168,7 @@ execSync(`curl "${REPO_TAR_GZ}" | tar xz`);
 console.log();
 console.log('[BOOK] Reading files...');
 
-const files = globSync(`${DEST_DIR}/*.md`);
+const files = globSync(`${BLOG_CONTENT_DIR}/*.md`);
 const allPosts: Post[] = files.map((filepath) => {
 	const contents = read(filepath);
 	const post = matter(contents);
@@ -297,8 +323,54 @@ fs.writeFileSync(
 	)
 );
 
+console.log('[BOOK] Generate files for LLMs.txt...');
+const chapters = globSync(`${REPO_DIR}/manuscript/*.md`);
+
+fs.ensureDirSync(BOOK_CONTENT_DIR);
+
+for (const chapterFile of chapters) {
+	// Skip non-content chapters
+	if (
+		chapterFile.endsWith('_Footer.md') ||
+		chapterFile.endsWith('_Header.md')
+	) {
+		continue;
+	}
+
+	console.log(`[BOOK] 👉 ${chapterFile}`);
+
+	const filename = path.basename(chapterFile, '.md');
+	const slug = _.kebabCase(filename.replace(/^[\d]+_/, ''));
+	const chapterContentsRaw = read(chapterFile);
+	const title = getTitle(stripIds(chapterContentsRaw));
+	const description = getDescription(chapterContentsRaw);
+
+	const chapterContents = _.flow(
+		updateImagesAbsolute,
+		updateTips,
+		stripIds,
+		stripTitle,
+		removeHtmlComments,
+		downgradeHeadings,
+		stripInternalLinks
+	)(chapterContentsRaw);
+
+	const markdown = `
+---
+title: '${title}'
+description: 'A chapter from “Washing your code. A book on clean code for frontend developers” by Artem Sapegin. ${description}'
+source: washing-code/${filename}
+---
+
+${chapterContents}
+	`;
+
+	fs.writeFileSync(`${BOOK_CONTENT_DIR}/${slug}.md`, markdown);
+}
+
 console.log('[BOOK] Formatting...');
 
-execSync(`prettier --log-level warn --write "${DEST_DIR}/**/*.md"`);
+execSync(`prettier --log-level warn --write "${BLOG_CONTENT_DIR}/**/*.md"`);
+execSync(`prettier --log-level warn --write "${BOOK_CONTENT_DIR}/**/*.md"`);
 
 console.log('[BOOK] Done 🦜');

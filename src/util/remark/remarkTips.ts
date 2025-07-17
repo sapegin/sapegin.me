@@ -12,6 +12,9 @@ const addClassNameToNode = (node: Paragraph | Strong, cls: string) => {
 	return node;
 };
 
+// TODO: Support multiple paragraphs (replace <br><br> with actual paragraphs
+// and wrap the whole block into something other than <p>)
+
 /*
  * Replace tips with HTML markup
  *

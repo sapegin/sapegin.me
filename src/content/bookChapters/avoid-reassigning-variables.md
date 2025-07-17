@@ -1,14 +1,8 @@
 ---
-title: 'Washing your code: avoid reassigning variables'
-description: Reassigning variables is like changing the past. You can never be sure what’s the current value of a variable and it forces you to read lots of code to understand how things work.
-date: 2019-12-18
+title: 'Avoid reassigning variables'
+description: 'A chapter from “Washing your code. A book on clean code for frontend developers” by Artem Sapegin. Improving code readability by making it easier to understand what variables are do and how they are used in the code'
 source: washing-code/040_Avoid_reassigning_variables
-tags:
-  - javascript
-  - washingcode
 ---
-
-<!-- description: Improving code readability by making it easier to understand what variables are do and how they are used in the code -->
 
 Reassigning variables is like changing the past. When we see code like this:
 
@@ -16,29 +10,19 @@ Reassigning variables is like changing the past. When we see code like this:
 let pizzaTopping = 'salami';
 ```
 
-<!-- expect(pizzaTopping).toBe('salami') -->
-
 We can’t be sure that our pizza will always have salami on it because this variable is defined using the `let` keyword, so we can assign it a new value:
-
-<!-- let pizzaTopping -->
 
 ```js
 pizzaTopping = 'champignon';
 ```
 
-<!-- expect(pizzaTopping).toBe('champignon') -->
-
 No salami anymore!
 
 We can even assign it a value of another type:
 
-<!-- let pizzaTopping -->
-
 ```js
 pizzaTopping = 42;
 ```
-
-<!-- expect(pizzaTopping).toBe(42) -->
 
 Knowing that this is possible makes us wonder, every time we see `pizzaTopping` in the code, which value it has _now_. That’s a huge and unnecessary cognitive load that we should avoid.
 
@@ -48,21 +32,17 @@ We can declare a variable using the `const` keyword to disallow reassignments:
 const pizzaTopping = 'salami';
 ```
 
-<!-- expect(pizzaTopping).toBe('salami') -->
-
 This pizza will always have salami on it!
 
 **Info:** The `const` and `let` keywords are relatively new in JavaScript and were introduced in ECMAScript 2015. Before that, JavaScript only had the `var` keyword, which is no longer recommended. The main difference is that `const` and `let` are block-scoped (meaning, the variable is accessible inside a single block, such as an `if` condition or a `for` loop), while `var` is function-scoped (meaning, the variable is accessible anywhere within in a function). Additionally, we can now choose whether to allow reassignments or not, depending on which keyword we use to declare a variable.
 
 Most of the time, we can write code without reassignments, making it easier to reason about.
 
-**Info:** Arrays and objects can also be _mutated_, even if they are defined using the `const` keyword. We talk about mutation in the next chapter, [Avoid mutation](/blog/avoid-mutation/).
+**Info:** Arrays and objects can also be _mutated_, even if they are defined using the `const` keyword. We talk about mutation in the next chapter, Avoid mutation.
 
 ## Don’t reuse variables
 
 Sometimes, a variable is reused to store different values:
-
-<!-- const loadCategory = (id) => [{name: `${id}1`, onSale: false}, {name: `${id}2`, onSale: true}] -->
 
 ```js
 function getProductsOnSale(category) {
@@ -72,8 +52,6 @@ function getProductsOnSale(category) {
 }
 ```
 
-<!-- expect(getProductsOnSale('pizzas')).toEqual([{name: 'pizzas2', onSale: true}]) -->
-
 In the code above, the `category` variable can contain: a category ID (a number or a string), a list of products in a category (an array), and a list of filtered products (also an array). This function isn’t completely hopeless because it’s short, but imagine more code between each reassignment.
 
 On top of that, a new value is reassigned to a function parameter, which is known as _function parameter shadowing_. I think it’s no different from regular reassignment since it only affects the value inside the function, so I’ll treat it the same way.
@@ -82,16 +60,12 @@ On top of that, a new value is reassigned to a function parameter, which is know
 
 Such cases are the easiest to fix: we need to use separate variables for each value:
 
-<!-- const loadCategory = (id) => [{name: `${id}1`, onSale: false}, {name: `${id}2`, onSale: true}] -->
-
 ```js
 function getProductsOnSale(categoryId) {
   const products = loadCategory(categoryId);
   return products.filter(product => product.onSale);
 }
 ```
-
-<!-- expect(getProductsOnSale('pizzas')).toEqual([{name: 'pizzas2', onSale: true}]) -->
 
 By doing this, we shortened the lifespan of each variable and gave them clearer names, so the code is easier to understand, and we need to read less code to find out the current (and now the only) values of each variable. Also, each variable can have its own type that doesn’t change over its lifespan:
 
@@ -106,8 +80,6 @@ function getProductsOnSale(categoryId: string): Product[] {
   return products.filter(product => product.onSale);
 }
 ```
-
-<!-- expect(getProductsOnSale('pizzas')).toEqual([]) -->
 
 **Info:** _Variable lifespan_ is the number of lines of code between the variable declaration and the last line where this variable is accessed. The longer the lifespan, the harder it is to follow a variable and know which value it has at any given moment.
 
@@ -132,45 +104,35 @@ function getProductsOnSale(category: string | Product[]): Product[] {
 }
 ```
 
-<!-- expect(getProductsOnSale('pizzas')).toEqual([]) -->
-
 These extra types and conditions aren’t just cumbersome, they prevent TypeScript from doing its job: now the type of the `getProductsOnSale()` function says that we can call it with a product array, which doesn’t make sense.
 
 ## Incremental computations
 
 The most common use case for reassignment is probably incremental computations. Consider this example:
 
-<!--
-const ERROR_MESSAGES = {
-  InconsistentWidthHeight: 'Inconsistent width and height',
-  InvalidVideoFiles: 'Invalid video files',
-  InvalidVideoURL: 'Invalid video URL',
-  BlankTitle: 'Blank title',
-  InvalidId: 'Invalid ID',
-}
-const INPUT_TYPES = {Title: 'title', Id: 'id'}, ID_PATTERN = /^[a-z0-9]+$/i
-const validateHeightWidthConsistency = () => true, validateVideoFileAndUrl = () => true, validateVideoURL = () => true
--->
-
-<!-- prettier-ignore -->
 ```js
-const validateVideo = (video) => {
+const validateVideo = video => {
   let errors = '';
 
-  if (!validateHeightWidthConsistency(video.videoFiles))  {errors = errors + ERROR_MESSAGES.InconsistentWidthHeight;} // Must provide either both a height + width, or neither
-  if (!validateVideoFileAndUrl(video.videoFiles))         {errors = errors + ERROR_MESSAGES.InvalidVideoFiles;}       // Must have ONE OF either a file or a URL
-  if (!validateVideoURL(video.videoFiles))                {errors = errors + ERROR_MESSAGES.InvalidVideoURL;}         // Video URL must be a valid link
-  if (!video[INPUT_TYPES.Title])                          {errors = errors + ERROR_MESSAGES.BlankTitle;}              // Title cannot be blank
-  if (!video[INPUT_TYPES.Id].match(ID_PATTERN) !== false) {errors = errors + ERROR_MESSAGES.InvalidId;}               // ID must be alphanumeric
+  if (!validateHeightWidthConsistency(video.videoFiles)) {
+    errors = errors + ERROR_MESSAGES.InconsistentWidthHeight;
+  } // Must provide either both a height + width, or neither
+  if (!validateVideoFileAndUrl(video.videoFiles)) {
+    errors = errors + ERROR_MESSAGES.InvalidVideoFiles;
+  } // Must have ONE OF either a file or a URL
+  if (!validateVideoURL(video.videoFiles)) {
+    errors = errors + ERROR_MESSAGES.InvalidVideoURL;
+  } // Video URL must be a valid link
+  if (!video[INPUT_TYPES.Title]) {
+    errors = errors + ERROR_MESSAGES.BlankTitle;
+  } // Title cannot be blank
+  if (!video[INPUT_TYPES.Id].match(ID_PATTERN) !== false) {
+    errors = errors + ERROR_MESSAGES.InvalidId;
+  } // ID must be alphanumeric
 
   return errors;
 };
 ```
-
-<!--
-expect(validateVideo({videoFiles: [], title: 'Cat on Roomba', id: 'X13'})).toBe('')
-expect(validateVideo({videoFiles: [], title: 'Cat on Roomba', id: 'X-13'})).toBe('Invalid ID')
--->
 
 This code validates a video file upload by checking that it has all required data in the correct formats. I’ve shortened the comments a bit because the original code had lines longer than 200 characters. On a very big screen, it looks like a pretty table; otherwise, it’s an unreadable mess. Any autoformatting tool, like Prettier, will also turn this code into an unreadable mess. Such formatting handcraft was common in the old days, before autoformatting tools became mainstream. Now, it’s a waste of time.
 
@@ -179,19 +141,6 @@ This code validates a video file upload by checking that it has all required dat
 Anyway, this code appends an error message to the `errors` string variable for every failed validation, but now it’s hard to see this because the message formatting code is intertwined with the validation code. To add another validation, we have to understand and copy the formatting code. To print errors as an HTML list instead of plain text, we have to change each line of this function.
 
 Let’s separate the validation from the formatting:
-
-<!--
-const console = { log: vi.fn() }
-const ERROR_MESSAGES = {
-  InconsistentWidthHeight: 'Inconsistent width and height',
-  InvalidVideoFiles: 'Invalid video files',
-  InvalidVideoURL: 'Invalid video URL',
-  BlankTitle: 'Blank title',
-  InvalidId: 'Invalid ID',
-}
-const INPUT_TYPES = {Title: 'title', Id: 'id'}, ID_PATTERN = /^[a-z0-9]+$/i
-const validateHeightWidthConsistency = () => true, validateVideoFileAndUrl = () => true, validateVideoURL = () => true
--->
 
 ```js
 const VIDEO_VALIDATIONS = [
@@ -235,22 +184,13 @@ function printVideoErrors(video) {
 }
 ```
 
-<!--
-expect(validateVideo({videoFiles: [], title: 'Cat on Roomba', id: 'X13'})).toEqual([])
-expect(validateVideo({videoFiles: [], title: 'Cat on Roomba', id: 'X-13'})).toEqual(['Invalid ID'])
-printVideoErrors({videoFiles: [], title: 'Cat on Roomba', id: 'X-13'})
-expect(console.log.mock.calls).toEqual([['Invalid ID']])
--->
-
 We’ve separated the validations, the validation logic, and the formatting. Flies separately, kebabs separately, as we say in Russia. Each piece of code now has a single responsibility and a single reason to change. The validations are now defined declaratively and read like a list, not mixed with conditions and string concatenation. We’ve also changed negative conditions (_is invalid?_) to positive ones (_is valid?_). All this improves the readability and maintainability of the code: it’s easier to see all validations and add new ones because we don’t need to know the implementation details of running validations or formatting.
 
-**Info:** We talk more about negative and positive names in the [Naming is hard](/blog/naming/) chapter.
+**Info:** We talk more about negative and positive names in the Naming is hard chapter.
 
 On top of that, now it’s clear that the original code had a bug: there was no space between error messages.
 
 Finally, we can now swap the formatting function and render errors as an HTML list, for example:
-
-<!-- const Text = ({children}) => children, FileUpload = () => null, validateVideo = () => ['Invalid video'] -->
 
 ```jsx
 function VideoUploader() {
@@ -278,16 +218,9 @@ function VideoUploader() {
 }
 ```
 
-<!--
-const {container: c1} = RTL.render(<VideoUploader />);
-expect(c1.textContent).toEqual('Nooooo, upload failed:Invalid video')
--->
-
 We can also test each validation separately. Have you noticed that I’ve changed `false` to `null` in the last validation? That’s because `match()` returns `null` when there’s no match, not `false`. The original validation always returns `true`.
 
 I would even inline `ERROR_MESSAGES` constants unless they are reused somewhere else. They don’t make the code easier to read, but they make it harder to change because we have change the code in two places.
-
-<!-- const validateHeightWidthConsistency = (x, y) => x === y -->
 
 ```js
 const VIDEO_VALIDATIONS = [
@@ -301,22 +234,13 @@ const VIDEO_VALIDATIONS = [
 ];
 ```
 
-<!-- expect(VIDEO_VALIDATIONS[0].isValid(100, 100)).toBe(true) -->
-
 Now, all the code we need to touch to add, remove, or change validations is contained in the `VIDEO_VALIDATIONS` array. Keep the code, that’s likely to be changed at the same time, in the same place.
 
-**Info:** We talk about keeping code that changes at the same time, at the same place in the [Divide and conquer, or merge and relax](/blog/divide/) chapter.
+**Info:** We talk about keeping code that changes at the same time, at the same place in the Divide and conquer, or merge and relax chapter.
 
 ## Building complex objects
 
 Another common reason for reassignments is building complex objects:
-
-<!--
-const format = x => new Intl.DateTimeFormat().format(x)
-const SORT_DESCENDING = 'desc', DATE_FORMAT = 'YYYY-MM-DD'
-const dateRangeFrom = new Date(2023, 1, 4), dateRangeTo = new Date(2023, 1, 14), sortField = 'id'
-const sortDirection = SORT_DESCENDING, query = ''
--->
 
 ```js
 let queryValues = {
@@ -333,24 +257,9 @@ if (dateRangeFrom && dateRangeTo) {
 }
 ```
 
-<!-- expect(queryValues).toEqual({
-  from: '2/4/2023',
-  orderDesc: true,
-  sortBy: "id",
-  to: '2/14/2023',
-  words: ""
-}) -->
-
 In the code above, we add the `from` and `to` properties only when they aren’t empty.
 
 The code would be clearer if we taught our backend to ignore `undefined` values and build the whole object at once:
-
-<!--
-const format = x => new Intl.DateTimeFormat().format(x)
-const SORT_DESCENDING = 'desc', DATE_FORMAT = 'YYYY-MM-DD'
-const dateRangeFrom = new Date(2023, 1, 4), dateRangeTo = new Date(2023, 1, 14), sortField = 'id'
-const sortDirection = SORT_DESCENDING, query = ''
--->
 
 ```js
 const hasDateRange = dateRangeFrom && dateRangeTo;
@@ -366,14 +275,6 @@ const queryValues = {
     : undefined
 };
 ```
-
-<!-- expect(queryValues).toEqual({
-  from: '2/4/2023',
-  orderDesc: true,
-  sortBy: "id",
-  to: '2/14/2023',
-  words: ""
-}) -->
 
 Now, the query object always has the same shape, but some properties can be `undefined`. The code feels more declarative, and it’s easier to see the final shape of this object.
 
@@ -397,11 +298,6 @@ end;
 ```
 
 Some programmers use this style in languages that don’t require it:
-
-<!--
-const submitOrder = vi.fn()
-const DELIVERY_METHODS = {PIGEON: 'PIGEON', TRAIN_CONDUCTOR: 'TRAIN_CONDUCTOR'}
--->
 
 ```js
 function createOrder(products, firstName, lastName, deliveryMethod) {
@@ -432,25 +328,9 @@ function createOrder(products, firstName, lastName, deliveryMethod) {
 }
 ```
 
-<!--
-createOrder([], 'Chuck', 'Norris', DELIVERY_METHODS.PIGEON)
-expect(submitOrder).toBeCalledWith({
-  products: [],
-  firstName: "Chuck",
-  lastName: "Norris",
-  deliveryMethod: "PIGEON",
-  isFreeDelivery: 1
-})
--->
-
 A long variable lifespan requires a lot of scrolling to understand the current value of the variable. Possible reassignments make it even worse. If there are 50 lines between a variable declaration and its usage, the variable can be reassigned at any of these 50 lines.
 
 We can improve readability by moving variable declarations as close to their usage as possible and by avoiding reassignments:
-
-<!--
-const submitOrder = vi.fn()
-const DELIVERY_METHODS = {PIGEON: 'PIGEON', TRAIN_CONDUCTOR: 'TRAIN_CONDUCTOR'}
--->
 
 ```js
 function createOrder(products, firstName, lastName, deliveryMethod) {
@@ -468,28 +348,15 @@ function createOrder(products, firstName, lastName, deliveryMethod) {
 }
 ```
 
-<!--
-createOrder([], 'Chuck', 'Norris', DELIVERY_METHODS.PIGEON)
-expect(submitOrder).toBeCalledWith({
-  products: [],
-  firstName: "Chuck",
-  lastName: "Norris",
-  deliveryMethod: "PIGEON",
-  isFreeDelivery: 1
-})
--->
-
 We shortened the `isFreeDelivery` variable lifespan from 100 lines to just 10. Now, it’s also clear that its value is the one we assign when we declare it.
 
 Another change here is that the `isFreeDelivery` variable is now boolean, which makes the code more idiomatic. We convert it to a number (a backend requirement) when we submit the order to the server. This is similar to the normalization of variables we talked about in the previous chapter; the only difference is that in the previous chapter we normalized the incoming variable, while here we normalize the outgoing one. The structure of the raw data and the requirements of the backend shouldn’t make us write confusing and non-idiomatic code.
 
-**Tip:** Don’t confuse the Pascal-style with PascalCase though, this naming convention is still in use. We talk more about naming conventions in the [Naming is hard](/blog/naming/) chapter.
+**Tip:** Don’t confuse the Pascal-style with PascalCase though, this naming convention is still in use. We talk more about naming conventions in the Naming is hard chapter.
 
 ## Avoid temporary variables for function return values
 
 When a variable is used to store the result of a function, we can often get rid of that variable:
-
-<!-- eslint-disable unicorn/no-array-for-each -->
 
 ```js
 function areEventsValid(events) {
@@ -503,11 +370,6 @@ function areEventsValid(events) {
 }
 ```
 
-<!--
-expect(areEventsValid([{fromDate: 4, toDate: 14}, {fromDate: 1, toDate: 2}])).toBe(true)
-expect(areEventsValid([{fromDate: 4, toDate: 1}, {fromDate: 1, toDate: 2}])).toBe(false)
--->
-
 In the code above, we check that _every_ event is valid, which would be clearer with the `every()` array method:
 
 ```js
@@ -516,12 +378,7 @@ function areEventsValid(events) {
 }
 ```
 
-<!--
-expect(areEventsValid([{fromDate: 4, toDate: 14}, {fromDate: 1, toDate: 2}])).toBe(true)
-expect(areEventsValid([{fromDate: 4, toDate: 1}, {fromDate: 1, toDate: 2}])).toBe(false)
--->
-
-**Info:** We talk a lot more about array methods in the [Avoid loops](/blog/avoid-loops/) chapter.
+**Info:** We talk a lot more about array methods in the Avoid loops chapter.
 
 We removed a temporary variable, avoided reassignments, and made the condition positive (_is valid?_) instead of negative (_is invalid?_). Positive conditions are generally easier to understand.
 
@@ -537,12 +394,6 @@ const handleChangeEstimationHours = event => {
 };
 ```
 
-<!--
-expect(handleChangeEstimationHours({target: {value: ''}})).toEqual({estimationHours: 0})
-expect(handleChangeEstimationHours({target: {value: -1}})).toEqual({estimationHours: 0})
-expect(handleChangeEstimationHours({target: {value: 1}})).toEqual({estimationHours: 1})
--->
-
 We can use a ternary operator to avoid reassignment:
 
 ```js
@@ -552,12 +403,6 @@ const handleChangeEstimationHours = ({ target: { value } }) => {
 };
 ```
 
-<!--
-expect(handleChangeEstimationHours({target: {value: ''}})).toEqual({estimationHours: 0})
-expect(handleChangeEstimationHours({target: {value: -1}})).toEqual({estimationHours: 0})
-expect(handleChangeEstimationHours({target: {value: 1}})).toEqual({estimationHours: 1})
--->
-
 Now, the flow of the code is more straightforward.
 
 ## Functions as the last resort
@@ -565,13 +410,6 @@ Now, the flow of the code is more straightforward.
 Sometimes, attempting to avoid reassignments makes the code harder to read. In such cases, we can either leave the code as is or extract the code into a function and use the function’s return value instead of a reassignment.
 
 Consider this example:
-
-<!--
-let type;
-let displayError = (props) => { type = props.errorType }
-let captureException = (channel, message, props) => { type = props.extra.errorType }
-let ErrorTypes = {NETWORK_ERROR: 'ne', NOT_FOUND: 'nf', SERVER_ERROR: 'se', OTHER_ERROR: 'oe'}
--->
 
 ```js
 function errorHandler(code, message) {
@@ -601,19 +439,7 @@ function errorHandler(code, message) {
 }
 ```
 
-<!--
-errorHandler(4, 'Shit happened')
-expect(type).toBe('se')
--->
-
 This code is okay. The function isn’t too long to worry much about reassignments or pretty much anything. However, for the sake of example (and because a more realistic example would make it much larger), let’s extract the error type logic into a function:
-
-<!--
-let type;
-let displayError = (props) => { type = props.errorType }
-let captureException = (channel, message, props) => { type = props.extra.errorType }
-let ErrorTypes = {NETWORK_ERROR: 'ne', NOT_FOUND: 'nf', SERVER_ERROR: 'se', OTHER_ERROR: 'oe'}
--->
 
 ```js
 function errorCodeToType(code) {
@@ -642,26 +468,19 @@ function errorHandler(code, message) {
 }
 ```
 
-<!--
-errorHandler(4, 'Shit happened')
-expect(type).toBe('se')
--->
-
 I often call this method _sweeping under the rug refactoring_: we stash a complex or long piece of code into its own function, making it easier to understand the main function.
 
 However, we should avoid splitting code into many small functions: doing so significantly hurts readability because it’s hard to understand the code when useful pieces are hidden in other functions. All good things are best in moderation.
 
 For this particular code, I’d prefer to use a table instead of a function.
 
-**Info:** We talk about splitting code into functions in the [Divide and conquer, or merge and relax](/blog/divide/) chapter, and about tables and maps in the [Tables and maps](/blog/avoid-conditions/#tables-and-maps) section of the _Avoid conditions_ chapter.
+**Info:** We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter, and about tables and maps in the Tables and maps section of the _Avoid conditions_ chapter.
 
 ## Indeterminate loops
 
 Sometimes, having a reassignment is quite okay. Indeterminate loops, where we don’t know the number of iterations up front, are a good case for reassignments.
 
 Consider this example:
-
-<!-- const WEEK_DAY_MONDAY = 0, addDays = (x, d) => ({getDay: () => x.getDay() + d}) -->
 
 ```js
 function getStartOfWeek(selectedDay) {
@@ -673,8 +492,6 @@ function getStartOfWeek(selectedDay) {
 }
 ```
 
-<!-- expect(getStartOfWeek({getDay: () => 3}).getDay()).toEqual(0) -->
-
 In the code above, we find the start of the current week by moving one day back in a `while` loop and checking if it’s already Monday or not.
 
 Even if it’s possible to avoid reassignments here, it will likely make the code less readable. Feel free to try, and let me know how it goes, though.
@@ -682,12 +499,6 @@ Even if it’s possible to avoid reassignments here, it will likely make the cod
 ## TypeScript-related problems with reassignments
 
 Many practices I discourage in this book make TypeScript code awkward and convoluted. Reassignments are no exception. Consider this example:
-
-<!--
-let setTimeout = (fn, time) => fn()
-let clearTimeout = (timer) => {}
-let hideNotification = vi.fn()
--->
 
 ```ts
 function setupHideTimeout() {
@@ -706,26 +517,9 @@ function setupHideTimeout() {
 }
 ```
 
-<!--
-let notificationProperties = {}
-let timeout1 = setupHideTimeout()
-expect(timeout1).not.toThrowError()
-expect(hideNotification).not.toHaveBeenCalled()
-notificationProperties = {hideAfterSeconds: 10}
-let timeout2 = setupHideTimeout()
-expect(timeout2).not.toThrowError()
-expect(hideNotification).toHaveBeenCalled()
--->
-
 TypeScript has great _type inference_, meaning we don’t have to explicitly define types all the time. Often, TypeScript can determine the correct type based on, for example, the value or the function return type. Here, though, we don’t take advantage of type inference: we must specify a type for the `hideTimeout` variable because it has no initial value.
 
 Let’s rewrite this code without reassignments:
-
-<!--
-let setTimeout = (fn, time) => fn()
-let clearTimeout = (timer) => {}
-let hideNotification = vi.fn()
--->
 
 ```ts
 function setupHideTimeout() {
@@ -742,17 +536,6 @@ function setupHideTimeout() {
   }
 }
 ```
-
-<!--
-let notificationProperties = {hideAfterSeconds: 0}
-let timeout1 = setupHideTimeout()
-expect(timeout1).not.toThrowError()
-expect(hideNotification).not.toHaveBeenCalled()
-notificationProperties = {hideAfterSeconds: 10}
-let timeout2 = setupHideTimeout()
-expect(timeout2).not.toThrowError()
-expect(hideNotification).toHaveBeenCalled()
--->
 
 Now, we rely on type inference: TypeScript knows that the `setTimeout()` function returns a `NodeJS.Timeout`, so it can safely assume that `hideTimeout` should use the same type. Additionally, by restructuring the code, we removed the second condition: now we return a _no operation_ function when there’s no need for a timer. This makes the code less cluttered and easier to follow.
 
@@ -772,7 +555,7 @@ Both conventions reduce the cognitive load a bit and make the code easier to und
 
 Unfortunately, JavaScript has no true constants, and _mutation_ is still possible even when we define a variable using the `const` keyword.
 
-**Info:** We talk about mutation in the next chapter, [Avoid mutation](/blog/avoid-mutation/).
+**Info:** We talk about mutation in the next chapter, Avoid mutation.
 
 ---
 
@@ -787,16 +570,3 @@ Start thinking about:
 - Building a complete complex object in a single place instead of building it field by field.
 - Declaring variables as close as possible to where they are used to reduce their lifespan and to make it easier to understand which value a variable has at any particular moment.
 - Extracting a piece of code into a small function to avoid a temporary variable, and using a function return value instead.
-
----
-
-Read other sample chapters of the book:
-
-- [Avoid loops](/blog/avoid-loops/)
-- [Avoid conditions](/blog/avoid-conditions/)
-- _Avoid reassigning variables (*this post*)_
-- [Avoid mutation](/blog/avoid-mutation/)
-- [Avoid comments](/blog/avoid-comments/)
-- [Naming is hard](/blog/naming/)
-- [Divide and conquer, or merge and relax](/blog/divide/)
-- [Don’t make me think](/blog/dont-make-me-think/)

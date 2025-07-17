@@ -16,6 +16,16 @@ const blog = defineCollection({
 	}),
 });
 
+// Book chapters
+const bookChapters = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		description: z.string().optional(),
+		source: z.string(),
+	}),
+});
+
 // Squirrelsong themes
 const squirrels = defineCollection({
 	type: 'content',
@@ -50,6 +60,7 @@ const zines = defineCollection({
 
 export const collections = {
 	blog,
+	bookChapters,
 	squirrels,
 	zines,
 };
