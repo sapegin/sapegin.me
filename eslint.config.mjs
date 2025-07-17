@@ -68,6 +68,7 @@ export default [
 			'squirrelsong-master/',
 			'styled-system/',
 			'washingcode-book-master/',
+			'src/content/bookChapters/',
 		],
 	},
 ];
