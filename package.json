@@ -34,7 +34,7 @@
     "@astrojs/react": "^4.3.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
-    "@pandacss/dev": "^0.53.6",
+    "@pandacss/dev": "^1.0.1",
     "@types/lodash": "^4.17.17",
     "@types/react": "^19.1.5",
     "astro": "^5.8.0",
