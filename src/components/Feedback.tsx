@@ -17,7 +17,7 @@ type Props = {
 export function Feedback({ children = <>Write me at</>, github }: Props) {
 	return (
 		<Text variant="intro">
-			{children} <Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>,{' '}
+			{children} <Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>,{' '}
 			<Link href={ME_MASTODON_URL} rel="me">
 				{ME_MASTODON_HANDLE}
 			</Link>

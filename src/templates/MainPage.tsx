@@ -30,7 +30,7 @@ function Intro() {
 			<Stack gap="m">
 				<Hola>Hey, I’m Artem!</Hola>
 				<Text variant="intro">
-					<LinkWithIcon icon="mail" href="mailto:artem@sapegin.ru">
+					<LinkWithIcon icon="mail" href="mailto:artem@sapegin.me">
 						Write to me
 					</LinkWithIcon>
 					,{' '}

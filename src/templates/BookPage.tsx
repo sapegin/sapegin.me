@@ -116,7 +116,7 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Yes, I offer 30-day money back. Write me at{' '}
-				<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link> if you’re
+				<Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link> if you’re
 				unhappy with the book.
 			</>
 		),
@@ -127,7 +127,7 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Absolutely, write me at{' '}
-				<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>.
+				<Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>.
 			</>
 		),
 	},
@@ -136,7 +136,7 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Of course, write me at{' '}
-				<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>.
+				<Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>.
 			</>
 		),
 	},
@@ -145,7 +145,7 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Gumroad offers purchasing power parity, for a student discount, write me
-				at <Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>.
+				at <Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>.
 			</>
 		),
 	},

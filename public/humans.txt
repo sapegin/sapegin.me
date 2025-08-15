@@ -1,7 +1,7 @@
 /* TEAM */
 
   Web developer: Artem Sapegin
-  Email: artem@sapegin.ru
+  Email: artem@sapegin.me
   Site: https://sapegin.me
   Location: Berlin, Germany
 

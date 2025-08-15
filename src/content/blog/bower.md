@@ -225,7 +225,7 @@ bower init
 [?] description: My awesome jQuery plugin.
 [?] main file: jquery.awesomeplugin
 [?] keywords: jquery awesome yay
-[?] authors: Artem Sapegin <artem@sapegin.ru>
+[?] authors: Artem Sapegin <artem@sapegin.me>
 [?] license: MIT
 [?] homepage: https://github.com/sapegn/jquery.awesomeplugin.js
 [?] set currently installed components as dependencies? Yes
@@ -244,7 +244,7 @@ bower init
         'yay'
     ],
     authors: [
-        'Artem Sapegin <artem@sapegin.ru>'
+        'Artem Sapegin <artem@sapegin.me>'
     ],
     license: 'MIT',
     homepage: 'https://github.com/sapegn/jquery.awesomeplugin',

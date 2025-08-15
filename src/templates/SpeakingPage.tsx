@@ -39,7 +39,7 @@ export function SpeakingPage({
 					</Link>
 					. If you want me to speak at your event or if you want our workshop at
 					your event or your company, drop me a line at&nbsp;
-					<Link href="mailto:artem@sapegin.ru">artem@sapegin.ru</Link>.
+					<Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>.
 				</TextTypo>
 				<EventSection title="Upcoming events" items={upcomingEvents} />
 				<EventSection title="Past events" items={pastEvents} />
