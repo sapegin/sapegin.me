@@ -21,7 +21,7 @@
     "prepare": "husky; panda codegen"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "browserslist": [
     ">1%",
