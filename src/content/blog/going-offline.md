@@ -34,7 +34,7 @@ Second, my employer was seriously affected by the virus, and we had to work four
 
 I think it’s important to know what you like and don’t like at work and try to find a balance. When you do too much of what you don’t like, work gets depressing very fast. I always liked improving things: doing refactoring or [researching better ways to do something](/blog/), and never liked digging into complex business requirements.
 
-It’s also important to know your limits: it’s better to do great work within your limits than poor work trying to go outside. My limits are: I’m good at frontend, not great at backend, and very poor at devops. I’m also not so great at talking to people.
+It’s also important to know your limits: it’s better to do great work within your limits than poor work trying to go outside. My limits are: I’m good at frontend, not great at backend, and very poor at DevOps. I’m also not so great at talking to people.
 
 I’ve also realized that most jobs suck, and it doesn’t make sense to change them too often. Too much stress, and the rest stays the same. In most places, employers don’t care about their employees, doesn’t matter how loud they say otherwise, and how many happy faces they have on their hiring page. What’s really important is your team: if you find one, stick to it.
 
