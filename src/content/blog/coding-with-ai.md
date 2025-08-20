@@ -2,7 +2,6 @@
 title: 'Thoughts on using AI for software development'
 description: 'My somewhat random and disorganized thoughts and experiences on using AI for software development.'
 date: 2025-08-20
-draft: true
 tags:
   - tools
   - howiwork
