@@ -14,6 +14,8 @@ tags:
 
 _In this article, I share my somewhat random and disorganized thoughts and experiences on using AI for software development._
 
+![Clippy saying “you’re absolutely right”](/images/clippy-you-are-absolutely-right.png)
+
 Recently, I stumbled upon the [AI-first developer approach](https://addyo.substack.com/p/the-ai-native-software-engineer) – when you start most of your tasks by asking AI to do it, and then decide whether it was a good idea or not. Similar to a dog that eats everything and then decides whether it was edible or not (I used to have one of those dogs – a remarkable creature!).
 
 It seems that people either worship AI as a tool that can do everything (and will probably replace us all by lunch next Wednesday), or reject it completely. I think such a black-and-white approach is counterproductive and dangerous in the long term. I think the truth is somewhere in-between.
