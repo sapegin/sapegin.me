@@ -30,7 +30,7 @@ AI is great for bootstrapping or trying something new – when you’ve never do
 
 It can also be more efficient to ask AI a semi-generic question, then write your own code – rather than letting it go berserk in your codebase. It’s similar to googling solutions and copypasting code snippets from Stack Overflow.
 
-I don’t really like the rhythm of working with an AI agent (such as Cursor or GitHub Copilot). I find it slow and often in my way, especially during large-scale changes. It’s hard for me to [stay focused on a task](https://sapegin.me/blog/adhd-focus/) if I have to wait longer than a few seconds. My brain also works better with code than with text instructions.
+I don’t really like the rhythm of working with an AI agent (such as Cursor or GitHub Copilot). It often feels slow and gets in my way, especially when making large-scale changes. It’s hard for me to [stay focused on a task](https://sapegin.me/blog/adhd-focus/) if I have to wait longer than a few seconds. My brain also works better with code than with text instructions.
 
 The overall overhead of using AI for writing code is very high for me: prompting, waiting for results, reviewing generated code, asking for adjustments, and so on, and so forth… A highly customized environment with shortcuts is often more efficient for everyday tasks.
 
@@ -40,7 +40,7 @@ Explaining how to do something in words, reviewing whether it was done correctly
 
 Sometimes, it’s almost impossible to make AI do what you want. I’ve lost count of how many times I’ve told AI, “DONT EVEN DUCKING THINK OF DOING THIS,” only for it to do exactly that – “you’re right, I apologize” – and do it again…
 
-Even on good days, I have a very limited number of [spoons](https://neurodivergentinsights.com/the-neurodivergent-spoon-drawer-spoon-theory-for-adhders-and-autists/). Writing code is relatively cheap for me. Talking to people burns more spoons. Arguing with them burns even more. Adjusting prompts to please a machine that doesn’t want to cooperate probably burns as much. If I want to accomplish anything in a day, I have to choose wisely how I spend my energy.
+Even on good days, I have a very limited number of [spoons](https://neurodivergentinsights.com/the-neurodivergent-spoon-drawer-spoon-theory-for-adhders-and-autists/). Writing code is relatively cheap for me. Talking to people burns more spoons. Arguing with them burns even more. Adjusting prompts to please a machine that doesn’t want to cooperate probably burns as much. If I want to accomplish anything in a day, I have to choose wisely how I spend my spoons.
 
 Copypasting existing code, either from the same project or from one of my other projects, is often much faster than asking AI to write it. The quality is usually higher as well, and it requires less fixing.
 
@@ -54,9 +54,9 @@ I’m starting to use AI agents as assistants rather than autonomous coders. I n
 
 **Tip:** I’m experimenting with a [simplified spec-driven approach](https://github.com/sapegin/two-step-ai-coding-modes/) inspired by [Kiro](https://kiro.dev/), where I use two custom agent modes: one to design the feature and give me an implementation outline for approval, and the other to write the code for it.
 
-Another area I’ve started exploring is AI-powered code reviews in the editor, before opening a pull request. It can be a good first check to avoid wasting colleagues’ time on obvious issues, such a stray debug `console.log()` left in the code.
+Another area I’ve started exploring is AI-powered code reviews in the editor, before opening a pull request. It can be a good first check to avoid wasting colleagues’ time on obvious issues, such as a stray debug `console.log()` left in the code.
 
-It’s often faster to use AI chat for one-off operations, such as converting JSON to YAML or formatting JSON, than to google an online service.
+It’s often faster to use AI chat for one-off operations, such as converting JSON to YAML, or formatting JSON, than to google an online service.
 
 It’s true that AI sometimes lets us ship code very quickly. However, understanding and debugging skills are becoming [even more important than before](https://ordep.dev/posts/writing-code-was-never-the-bottleneck), especially for projects with a large amount of AI-written code and little or no supervision by senior engineers. AI is great at analyzing thousands of lines of code at superhuman speed, but sometimes it’s not smart enough to pinpoint the issue. Someone still has to make sense of and fix all the AI slop.
 
@@ -90,4 +90,4 @@ What I want an AI assistant to be is like [Poe in Altered Carbon](https://altere
 
 ---
 
-_Thanks to Nick Plekhanov for his suggestions._
+_Thanks to [Margarita Diaz](https://drtaco.net) and [Nick Plekhanov](https://plekhanov.me/)._
