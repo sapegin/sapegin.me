@@ -14,7 +14,7 @@ tags:
 
 _In this article, I share my somewhat random and disorganized thoughts and experiences on using AI for software development._
 
-![Clippy saying “you’re absolutely right”](/images/clippy-you-are-absolutely-right.png)
+![Clippy saying “you’re absolutely right”](/images/clippy-you-are-absolutely-right.avif)
 
 Recently, I stumbled upon the [AI-first developer approach](https://addyo.substack.com/p/the-ai-native-software-engineer) – when you start most of your tasks by asking AI to do it, and then decide whether it was a good idea or not. Similar to a dog that eats everything and then decides whether it was edible or not (I used to have one of those dogs – a remarkable creature!).
 
