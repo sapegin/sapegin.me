@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { Box } from './Box';
-import { Grid } from './Grid';
 import { Link } from './Link';
 import { Text } from './Text';
 
@@ -50,14 +49,22 @@ function isCurrent(href: string, current: string) {
 export function Menu({ current }: Props) {
 	return (
 		<nav aria-label="Main">
-			<Grid
+			<Box
+				display={{
+					base: 'flex',
+					tablet: 'grid',
+				}}
 				as="ul"
 				columnGap="m"
 				rowGap={{ tablet: 'm' }}
 				justifyItems="center"
+				flexWrap="wrap"
+				justifyContent={{
+					base: 'center',
+					tablet: 'initial',
+				}}
 				css={{
 					gridTemplateColumns: {
-						base: `repeat(${HALF}, 1fr)`,
 						tablet: `repeat(${HALF}, min-content) auto repeat(${HALF}, min-content)`,
 					},
 				}}
@@ -91,7 +98,7 @@ export function Menu({ current }: Props) {
 						</Text>
 					</Fragment>
 				))}
-			</Grid>
+			</Box>
 		</nav>
 	);
 }
