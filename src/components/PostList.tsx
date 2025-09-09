@@ -10,16 +10,18 @@ type Props = {
 	posts: Resource[];
 	showDescriptions?: boolean;
 	showDates?: boolean;
+	startIndex?: number;
 };
 
 export function PostList({
 	posts,
 	showDescriptions = false,
 	showDates = false,
+	startIndex,
 }: Props) {
 	return (
 		<Stack as="ul" direction="column" gap="s">
-			{posts.map((post) => (
+			{posts.map((post, index) => (
 				<Text key={post.url ?? post.title} as="li">
 					<Stack
 						as="span"
@@ -28,7 +30,18 @@ export function PostList({
 						alignItems={{ tablet: 'center' }}
 						flexWrap="wrap"
 					>
-						{post.url ? <Link href={post.url}>{post.title}</Link> : post.title}
+						<span>
+							{startIndex && (
+								<Text as="span" variant="small">
+									{startIndex - index}.{' '}
+								</Text>
+							)}
+							{post.url ? (
+								<Link href={post.url}>{post.title}</Link>
+							) : (
+								post.title
+							)}
+						</span>
 						{showDescriptions && post.description && (
 							<Text variant="small">{post.description}</Text>
 						)}
