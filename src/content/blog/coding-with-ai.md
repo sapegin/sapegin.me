@@ -63,7 +63,7 @@ Often, AI cannot identify the root cause of an issue and falls into a loop of �
 
 **Story time:** Once, I thought I had a bug, and AI was happy to “fix” it by throwing a spaghetti net of duplicate code on top of the existing code, instead of telling me that the code was correct.
 
-For small changes, such as writing a helper function, remembering tricky syntax, or adding types, I like inline chat in GitHub Copilot. It limits edits to the exact spot under the cursor, so you don’t have to explain where you want the changes. I immediately disable AI autocomplete, as I find it incredibly distracting.
+So far, my favorite workflow is writing most of the code manually, and using inline chat in GitHub Copilot for small precise changes, such as writing a complex loop, helper function, remembering tricky syntax, or adding types. It limits edits to the exact spot under the cursor, so you don’t have to explain where you want the changes. I can’t stand AI tab autocomplete, and immediately disable it, as I find it incredibly distracting.
 
 AI can unblock you when you’re stuck or too tired to figure out how to start a new task. It can also help you brainstorm ideas or rubberduck a problem with you.
 
@@ -74,6 +74,8 @@ However, AI is horrible at writing commit messages: they’re too long and gener
 Overall, AI can speed up my work in many cases, though often making it less fun. I feel like I’m spending less time doing what I actually like: writing code and solving problems, and more time on what I try to avoid: interacting with someone, worse when this someone is a machine. Especially if that machine is a mechanical parrot with an infinite power bank.
 
 I hope the hype will calm down a bit and that AI providers will start talking to each other to minimize the configuration mess they’ve created. Each tool expects its own [onboarding docs](https://www.fuzzycomputer.com/posts/onboarding), and if you switch between several tools on the same project (or your colleagues use different tools), you end up with a bunch of similar files, such as `.cursor/rules/something.md` or `.github/instructions/something.instructions.md`.
+
+**Info:** Looks like this is finally changing with the new [AGENTS.md](https://agents.md/) format that is already supported by several popular AI tools.
 
 [Writing good prompts](https://ryanperry.io/post/cost-of-poor-prompting) is an important skill, but it requires a lot of upfront planning – something I was never good at. My approach to most things in life (programming, photography, climbing, and so on) is somewhere between reactive and YOLO.
 
