@@ -2,13 +2,13 @@
 
 // TODO: Make a map of all sections with an ID and validate all chapter links
 
+import fs from 'node:fs';
+import path from 'node:path';
 import { execSync } from 'node:child_process';
-import fs from 'fs-extra';
 import { globSync } from 'glob';
 import matter from 'gray-matter';
 import GithubSlugger from 'github-slugger';
 import _ from 'lodash';
-import path from 'node:path';
 import { SITE_URL } from '../src/constants';
 
 interface Post {
@@ -35,7 +35,7 @@ const REPO_TAR_GZ =
 	'https://codeload.github.com/sapegin/washingcode-book/tar.gz/master';
 const REPO_DIR = 'washingcode-book-master';
 const BLOG_CONTENT_DIR = 'src/content/blog';
-const BOOK_CONTENT_DIR = 'src/content/bookChapters';
+export const BOOK_CONTENT_DIR = 'src/content/bookChapters';
 const DATA_DIR = 'src/data';
 
 const TIPS = {
@@ -326,7 +326,7 @@ fs.writeFileSync(
 console.log('[BOOK] Generate files for LLMs.txt...');
 const chapters = globSync(`${REPO_DIR}/manuscript/*.md`);
 
-fs.ensureDirSync(BOOK_CONTENT_DIR);
+fs.mkdirSync(BOOK_CONTENT_DIR, { recursive: true });
 
 for (const chapterFile of chapters) {
 	// Skip non-content chapters

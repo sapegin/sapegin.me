@@ -1,9 +1,9 @@
 // Get themes from the Squirrelsong repo
 // Create pages with instructions for each theme
 
-import { execSync } from 'node:child_process';
 import path from 'node:path';
-import fs from 'fs-extra';
+import fs from 'node:fs';
+import { execSync } from 'node:child_process';
 import _ from 'lodash';
 import { globSync } from 'glob';
 
@@ -85,13 +85,13 @@ execSync(`curl "${REPO_TAR_GZ}" | tar xz`);
 console.log('[SQRLSNG] Cleaning up...');
 
 // Remove samples not to confuse Astro checker
-fs.removeSync(`${REPO_DIR}/sample`);
+fs.rmSync(`${REPO_DIR}/sample`, { recursive: true, force: true });
 
 console.log('[SQRLSNG] Generating site pages...');
 
 const readmes = globSync(`${REPO_DIR}/themes/*/Readme.md`);
 
-fs.ensureDirSync(DEST_DIR);
+fs.mkdirSync(DEST_DIR, { recursive: true });
 
 for (const filepath of readmes) {
 	console.log(`[SQRLSNG] 👉 ${filepath}`);
