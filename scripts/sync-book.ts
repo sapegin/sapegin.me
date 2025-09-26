@@ -9,7 +9,7 @@ import { globSync } from 'glob';
 import matter from 'gray-matter';
 import GithubSlugger from 'github-slugger';
 import _ from 'lodash';
-import { SITE_URL } from '../src/constants';
+import { SITE_URL } from '../src/constants.ts';
 
 interface Post {
 	title: string;
