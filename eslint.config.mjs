@@ -35,6 +35,7 @@ export default [
 			'no-unreachable': 'off',
 			'no-unused-labels': 'off',
 			'unicorn/no-abusive-eslint-disable': 'off',
+			'unicorn/no-array-sort': 'off',
 			'unicorn/no-negation-in-equality-check': 'off',
 			'unicorn/no-nested-ternary': 'off',
 			'unicorn/prefer-node-protocol': 'off',
