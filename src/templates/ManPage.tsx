@@ -78,9 +78,9 @@ export function ManPage({ url }: Props) {
 					<Heading level={2}>My work preferences</Heading>
 					<TextTypo>
 						I prefer to work from home. I have a perfect workplace, the best
-						coffee in town, catered lunches (by me and my girlfriend). The
-						office environment is too distracting, and I get overwhelmed by too
-						many things going on around me. Also, being around people all day is
+						coffee in town, catered lunches (by me and my fiancée). The office
+						environment is too distracting, and I get overwhelmed by too many
+						things going on around me. Also, being around people all day is
 						draining, and the commute on public transport is too stressful for
 						me.
 					</TextTypo>

@@ -232,7 +232,7 @@ function Cooking() {
 			</Expander>
 			<Text>
 				My favorite cuisines to cook are Russian, Mexican, Korean, and Italian;
-				my girlfriend and I are{' '}
+				my fiancée and I are{' '}
 				<Link href="https://tacohuaco.co/">collecting recipes</Link>.
 			</Text>
 		</Stack>

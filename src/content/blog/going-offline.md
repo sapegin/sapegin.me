@@ -24,7 +24,7 @@ I’m getting dissatisfied with where the frontend community is going. We went f
 
 This all happened around the same time as the Coronavirus thing started, and I’m not sure if Coronavirus is to blame here or not; however, it did two things for me.
 
-First, we were all sent to work from home. I always liked to work from the office but that has changed after I’ve really tried to work from home for several months. Now I have a great home office setup with good hardware, great coffee, and homemade food, without constantly chatting colleagues, without always occupied toilet and everyday commute. I can better plan my day and my girlfriend [Margarita](https://drtaco.net/) is working next to me.
+First, we were all sent to work from home. I always liked to work from the office but that has changed after I’ve really tried to work from home for several months. Now I have a great home office setup with good hardware, great coffee, and homemade food, without constantly chatting colleagues, without always occupied toilet and everyday commute. I can better plan my day and my [fiancée Margarita](https://drtaco.net/) is working next to me.
 
 ![Our home office](/images/offline-home-office.webp)
 

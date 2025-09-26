@@ -126,7 +126,7 @@ I use several tools to keep notes and tasks:
 - [Bear](https://bear.app) for most of my notes and freeform project planning.
 - [Notion](https://www.notion.so/) when I need to share a project with someone (it has poor UX but many great features).
 - Paper todo cards (see “Make a list” section below).
-- [AnyList](https://www.anylist.com) for the shopping list because I can share it with my girlfriend, and even ask Alexa to add things there.
+- [AnyList](https://www.anylist.com) for the shopping list because I can share it with my [fiancée Margarita](https://drtaco.net/), and even ask Alexa to add things there.
 - Apple Notes occasionally for short-term or throw-away notes.
 
 ## Auto close distracting apps
@@ -164,7 +164,7 @@ A typical office is full of distractions, especially one with an open plan, wher
 
 At home, I have very few distractions, and I can organize my workspace in a way that works for me.
 
-However, I feel more productive when my girlfriend is working next to me. We’re not working for the same employer but it kinda sets the right mood for me: we’re working here. When it’s just me, it’s harder to focus on work and not be distracted by something else.
+However, I feel more productive when my fiancée is working next to me. We’re not working for the same employer but it kinda sets the right mood for me: we’re working here. When it’s just me, it’s harder to focus on work and not be distracted by something else.
 
 **Tip:** This is called [body doubling](https://lifehacker.com/use-body-doubling-to-increase-your-productivity-1849021265), and if you live alone, you could try to have a video call with a friend, or even watch someone working on YouTube.
 
