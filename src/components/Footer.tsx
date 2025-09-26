@@ -1,14 +1,11 @@
 import { Text } from './Text';
 import { Link } from './Link';
-import romanize from 'romanize';
 
 export function Footer() {
 	return (
 		<footer>
 			<Text variant="small" mb="xs">
-				© Artem Sapegin
-				{', '}
-				{romanize(1999)}—{romanize(new Date().getFullYear())}
+				© Artem Sapegin, 1999—{new Date().getFullYear()}
 			</Text>
 			<Text variant="small">
 				Powered by <Link href="https://astro.build/">Astro</Link> and{' '}
