@@ -42,7 +42,6 @@
     "github-slugger": "^2.0.0",
     "glob": "^11.0.3",
     "gray-matter": "^4.0.3",
-    "hex-rgb": "^5.0.0",
     "image-size": "^2.0.2",
     "lodash": "^4.17.21",
     "markdown-it": "^14.1.0",

@@ -1,12 +1,7 @@
 import { OGImageRoute } from 'astro-og-canvas';
-import hexRgb from 'hex-rgb';
 import { SITE_AUTHOR } from '../../constants';
 import { colors, lineHeights } from '../../theme';
-
-const hexToRgb = (hex: string): [number, number, number] => {
-	const { red, green, blue } = hexRgb(hex);
-	return [red, green, blue];
-};
+import { hexToRgb } from '../../util/hexToRgb';
 
 export const { getStaticPaths, GET } = OGImageRoute({
 	param: 'route',
