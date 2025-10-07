@@ -11,27 +11,42 @@ import { hexToRgb } from '../../util/hexToRgb';
 
 const PALETTE_DIR = 'squirrelsong-master';
 
+/**
+ * Remove comments from JSON.
+ */
+function removeJsonComments(json: string): string {
+	return (
+		json
+			// Remove /* */ comments
+			.replaceAll(/\/\*[\s\S]*?\*\//g, '')
+			// Remove // comments
+			.replaceAll(/\/\/.*/g, '')
+	);
+}
+
 // Load palette files
 const lightPalette: Record<string, string> = JSON.parse(
-	fs.readFileSync(path.join(PALETTE_DIR, 'light/palette.json')).toString()
+	removeJsonComments(
+		fs.readFileSync(path.join(PALETTE_DIR, 'light/palette.json')).toString()
+	)
 );
 const darkPaletteRaw: Record<string, string> = JSON.parse(
-	fs.readFileSync(path.join(PALETTE_DIR, 'dark/palette.json')).toString()
+	removeJsonComments(
+		fs.readFileSync(path.join(PALETTE_DIR, 'dark/palette.json')).toString()
+	)
 );
 
 const hexToRgbString = (hex: string) => `RGB(${hexToRgb(hex).join(', ')})`;
 
 const getDarkName = (lightName: string) => {
-	return lightName
-		.replace(/^brightPinkLight$/, 'brightPinkDark')
-		.replace(/^brightPinkLighter$/, 'brightPinkDarker')
-		.replace(/^brightYellowLight$/, 'brightYellowDark');
+	return lightName;
 };
 const getDarkPurpleName = (darkName: string) => {
 	return darkName
 		.replace('gray', 'purple')
-		.replace(/^brightYellow$/, 'brightYellowPurple')
-		.replace(/^brightYellowDark$/, 'brightYellowDarkPurple');
+		.replace(/^brightYellowDimer$/, 'brightYellowDimerPurple')
+		.replace(/^brightYellowDim$/, 'brightYellowDimPurple')
+		.replace(/^brightYellow$/, 'brightYellowPurple');
 };
 
 const colorRows: ColorRow[] = Object.entries(lightPalette).map(
