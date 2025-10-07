@@ -30,9 +30,19 @@ const lightPalette: Record<string, string> = JSON.parse(
 		fs.readFileSync(path.join(PALETTE_DIR, 'light/palette.json')).toString()
 	)
 );
-const darkPaletteRaw: Record<string, string> = JSON.parse(
+const lightUiPalette: Record<string, string> = JSON.parse(
+	removeJsonComments(
+		fs.readFileSync(path.join(PALETTE_DIR, 'light/ui.json')).toString()
+	)
+);
+const darkPalette: Record<string, string> = JSON.parse(
 	removeJsonComments(
 		fs.readFileSync(path.join(PALETTE_DIR, 'dark/palette.json')).toString()
+	)
+);
+const darkUiPalette: Record<string, string> = JSON.parse(
+	removeJsonComments(
+		fs.readFileSync(path.join(PALETTE_DIR, 'dark/ui.json')).toString()
 	)
 );
 
@@ -52,9 +62,9 @@ const getDarkPurpleName = (darkName: string) => {
 const colorRows: ColorRow[] = Object.entries(lightPalette).map(
 	([lightName, lightHex]) => {
 		const darkName = getDarkName(lightName);
-		const darkHex = darkPaletteRaw[darkName];
+		const darkHex = darkPalette[darkName];
 		const darkPurpleName = getDarkPurpleName(darkName);
-		const darkPurpleHex = darkPaletteRaw[darkPurpleName];
+		const darkPurpleHex = darkPalette[darkPurpleName];
 
 		return {
 			light: {
@@ -63,25 +73,42 @@ const colorRows: ColorRow[] = Object.entries(lightPalette).map(
 				rgb: hexToRgbString(lightHex),
 				textColor: getContrastingTextColor(lightHex),
 			},
-			dark: darkHex
-				? {
-						name: darkName,
-						hex: darkHex,
-						rgb: hexToRgbString(darkHex),
-						textColor: getContrastingTextColor(darkHex),
-					}
-				: undefined,
-			darkPurple: darkPurpleHex
-				? {
-						name: darkPurpleName,
-						hex: darkPurpleHex,
-						rgb: hexToRgbString(darkPurpleHex),
-						textColor: getContrastingTextColor(darkPurpleHex),
-					}
-				: undefined,
+			dark: {
+				name: darkName,
+				hex: darkHex,
+				rgb: hexToRgbString(darkHex),
+				textColor: getContrastingTextColor(darkHex),
+			},
+			darkPurple: {
+				name: darkPurpleName,
+				hex: darkPurpleHex,
+				rgb: hexToRgbString(darkPurpleHex),
+				textColor: getContrastingTextColor(darkPurpleHex),
+			},
 		};
 	}
 );
+
+const uiColors = {
+	light: Object.fromEntries(
+		Object.entries(lightUiPalette).map(([key, colorName]) => [
+			key,
+			lightPalette[colorName],
+		])
+	),
+	dark: Object.fromEntries(
+		Object.entries(darkUiPalette).map(([key, colorName]) => [
+			key,
+			darkPalette[getDarkName(colorName)],
+		])
+	),
+	darkPurple: Object.fromEntries(
+		Object.entries(darkUiPalette).map(([key, colorName]) => [
+			key,
+			darkPalette[getDarkPurpleName(colorName)],
+		])
+	),
+};
 ---
 
 <Layout
@@ -89,5 +116,5 @@ const colorRows: ColorRow[] = Object.entries(lightPalette).map(
 	title="Squirrelsong color theme specification"
 	description="Complete color specification for Squirrelsong light and dark themes"
 	component={SquirrelsongSpecPage}
-	props={{ colorRows }}
+	props={{ colorRows, uiColors }}
 />
