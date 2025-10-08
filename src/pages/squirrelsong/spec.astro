@@ -9,8 +9,9 @@ import {
 import { getContrastingTextColor } from '../../util/getContrastingTextColor';
 import { hexToRgb } from '../../util/hexToRgb';
 
-// TODO: Accept an env variable to overwrite this value
-const PALETTE_DIR = 'squirrelsong-master';
+// Either take Squirrelsong repository path from the environment, or default to
+// the local folder, created by sync-squirrelsong.ts script
+const PALETTE_DIR = import.meta.env.SQRLSNG_DIR ?? 'squirrelsong-master';
 
 /**
  * Remove comments from JSON.

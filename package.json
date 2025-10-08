@@ -5,6 +5,7 @@
   "license": "See license in <Readme.md>",
   "scripts": {
     "start": "astro dev",
+    "start:sqrlsng": "SQRLSNG_DIR=../squirrelsong astro dev",
     "prebuild": "npm run sync",
     "build": "astro build",
     "preview": "astro preview",
