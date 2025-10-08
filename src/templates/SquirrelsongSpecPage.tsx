@@ -323,6 +323,9 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 					<Box style={{ color: palette['active icon'] }} title="Active icon">
 						★
 					</Box>
+					<Box style={{ color: palette.accent }} title="Accent">
+						★
+					</Box>
 				</Stack>
 			</Stack>
 		</Stack>
