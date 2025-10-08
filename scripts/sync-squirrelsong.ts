@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import { execSync } from 'node:child_process';
 import _ from 'lodash';
 import { globSync } from 'glob';
-import { upperFirst } from '../src/util/upperFirst';
+import { upperFirst } from '../src/util/upperFirst.ts';
 
 const REPO_TAR_GZ =
 	'https://codeload.github.com/sapegin/squirrelsong/tar.gz/master';
