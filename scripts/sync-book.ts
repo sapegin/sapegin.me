@@ -10,6 +10,7 @@ import matter from 'gray-matter';
 import GithubSlugger from 'github-slugger';
 import _ from 'lodash';
 import { SITE_URL } from '../src/constants.ts';
+import { upperFirst } from '../src/util/upperFirst.ts';
 
 interface Post {
 	title: string;
@@ -55,7 +56,7 @@ const getFrontmatter = (contents: string) =>
 	contents.match(/^---[\S\s]*?---/)?.[0];
 
 const getPostTitle = (post: Post) =>
-	_.upperFirst(post.title.replace('Washing your code: ', ''));
+	upperFirst(post.title.replace('Washing your code: ', ''));
 
 const getSlug = (file: string) =>
 	`${file.replace(/^src\/content\/blog\//, '').replace(/\.md$/, '')}`;

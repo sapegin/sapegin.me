@@ -3,6 +3,7 @@ import { Box } from '../components/Box';
 import { PageWithTitle } from './PageWithTitle';
 import { Heading } from '../components/Heading';
 import { Grid } from '../components/Grid';
+import { upperFirst } from '../util/upperFirst';
 
 export type ColorSpec = {
 	name: string;
@@ -31,6 +32,25 @@ type Props = {
 	colorRows: ColorRow[];
 	uiColors: CombinedPalette;
 };
+
+function findColorName(
+	colorRows: ColorRow[],
+	hexColor: string
+): string | undefined {
+	for (const row of colorRows) {
+		if (row.light?.hex === hexColor) {
+			return row.light.name;
+		}
+		if (row.dark?.hex === hexColor) {
+			return row.dark.name;
+		}
+		if (row.darkPurple?.hex === hexColor) {
+			return row.darkPurple.name;
+		}
+	}
+
+	return undefined;
+}
 
 const Table = (props: React.HTMLAttributes<HTMLTableElement>) => (
 	<Box as="table" width="100%" borderCollapse="collapse" {...props} />
@@ -237,6 +257,28 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 			>
 				Line highlight background
 			</Box>
+			<Box
+				px="s"
+				style={{
+					color: palette['text foreground'],
+					borderColor: palette['active border'],
+					borderWidth: '1px',
+					borderStyle: 'solid',
+				}}
+			>
+				Active border
+			</Box>
+			<Box
+				px="s"
+				style={{
+					color: palette['text foreground'],
+					borderColor: palette['focus border'],
+					borderWidth: '1px',
+					borderStyle: 'solid',
+				}}
+			>
+				Focus border
+			</Box>
 			<Stack
 				p="s"
 				gap="m"
@@ -274,8 +316,93 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				>
 					Disabled button
 				</Box>
+				<Stack direction="row" gap="s" fontSize="l" justifyContent="center">
+					<Box style={{ color: palette.icon }} title="Icon">
+						★
+					</Box>
+					<Box style={{ color: palette['active icon'] }} title="Active icon">
+						★
+					</Box>
+				</Stack>
 			</Stack>
 		</Stack>
+	);
+}
+
+function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
+	return (
+		<Stack direction="row" gap="s" alignItems="center">
+			<Box
+				width="2rem"
+				height="2rem"
+				borderRadius="base"
+				style={{
+					backgroundColor: hexColor,
+				}}
+			/>
+			<Stack>
+				<Box fontFamily="code" fontSize="s">
+					{name}
+				</Box>
+				<Box fontFamily="code" fontSize="xs">
+					{hexColor}
+				</Box>
+			</Stack>
+		</Stack>
+	);
+}
+
+function UiColorsTable({
+	uiColors,
+	colorRows,
+}: Pick<Props, 'uiColors' | 'colorRows'>) {
+	return (
+		<Box css={{ overflowX: 'auto' }}>
+			<Table>
+				<Thead>
+					<Tr>
+						<Th>Description</Th>
+						<Th>Light</Th>
+						<Th>Dark</Th>
+						<Th>Dark Deep Purple</Th>
+					</Tr>
+				</Thead>
+				<Tbody>
+					{Object.keys(uiColors.light).map((description) => {
+						const lightHex = uiColors.light[description];
+						const darkHex = uiColors.dark[description];
+						const darkPurpleHex = uiColors.darkPurple[description];
+						return (
+							<Tr key={description}>
+								<Td>
+									<Box fontFamily="code" fontSize="xs">
+										{upperFirst(description)}
+									</Box>
+								</Td>
+								<Td>
+									<MiniSwatch
+										name={findColorName(colorRows, lightHex) ?? ''}
+										hexColor={lightHex}
+									/>
+								</Td>
+								<Td>
+									<MiniSwatch
+										name={findColorName(colorRows, darkHex) ?? ''}
+										hexColor={darkHex}
+									/>
+								</Td>
+								<Td>
+									<MiniSwatch
+										name={findColorName(colorRows, darkPurpleHex) ?? ''}
+										hexColor={darkPurpleHex}
+									/>
+								</Td>
+							</Tr>
+						);
+					})}
+				</Tbody>
+			</Table>
+		</Box>
 	);
 }
 
@@ -290,6 +417,7 @@ export function SquirrelsongSpecPage({
 			<Stack gap="l">
 				<MainPalette colorRows={colorRows} />
 				<Heading level={2}>UI colors</Heading>
+				<UiColorsTable uiColors={uiColors} colorRows={colorRows} />
 				<Grid gap="m" gridTemplateColumns="repeat(3, 1fr)">
 					<UiSample id="light" palette={uiColors.light} />
 					<UiSample id="dark" palette={uiColors.dark} />

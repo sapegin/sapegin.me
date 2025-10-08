@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import { execSync } from 'node:child_process';
 import _ from 'lodash';
 import { globSync } from 'glob';
+import { upperFirst } from '../src/util/upperFirst';
 
 const REPO_TAR_GZ =
 	'https://codeload.github.com/sapegin/squirrelsong/tar.gz/master';
@@ -52,7 +53,7 @@ const updateTips = (contents: string) =>
 	contents.replaceAll(
 		/\n>\s*\[!(WARNING|NOTE)]\s*\n>\s*/gm,
 		(_match, marker) => {
-			return `\n**${_.upperFirst(marker.toLowerCase())}:** `;
+			return `\n**${upperFirst(marker.toLowerCase())}:** `;
 		}
 	);
 
