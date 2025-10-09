@@ -18,7 +18,7 @@ export type ColorRow = {
 	darkPurple: ColorSpec;
 };
 
-type Palette = Record<string, string>;
+export type Palette = Record<string, string>;
 
 export type CombinedPalette = {
 	light: Palette;
@@ -31,6 +31,7 @@ type Props = {
 	title: string;
 	colorRows: ColorRow[];
 	uiColors: CombinedPalette;
+	ansiColors: CombinedPalette;
 };
 
 function findColorName(
@@ -414,6 +415,7 @@ export function SquirrelsongSpecPage({
 	title,
 	colorRows,
 	uiColors,
+	ansiColors,
 }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
@@ -426,6 +428,8 @@ export function SquirrelsongSpecPage({
 					<UiSample id="dark" palette={uiColors.dark} />
 					<UiSample id="darkPurple" palette={uiColors.darkPurple} />
 				</Grid>
+				<Heading level={2}>ANSI colors</Heading>
+				<UiColorsTable uiColors={ansiColors} colorRows={colorRows} />
 			</Stack>
 		</PageWithTitle>
 	);

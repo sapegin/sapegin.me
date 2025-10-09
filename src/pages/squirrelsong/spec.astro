@@ -5,6 +5,8 @@ import Layout from '../../layouts/Layout.astro';
 import {
 	SquirrelsongSpecPage,
 	type ColorRow,
+	type Palette,
+	type CombinedPalette,
 } from '../../templates/SquirrelsongSpecPage';
 import { getContrastingTextColor } from '../../util/getContrastingTextColor';
 import { hexToRgb } from '../../util/hexToRgb';
@@ -12,6 +14,14 @@ import { hexToRgb } from '../../util/hexToRgb';
 // Either take Squirrelsong repository path from the environment, or default to
 // the local folder, created by sync-squirrelsong.ts script
 const PALETTE_DIR = import.meta.env.SQRLSNG_DIR ?? 'squirrelsong-master';
+
+function readPalette(filename: string): Palette {
+	return JSON.parse(
+		removeJsonComments(
+			fs.readFileSync(path.join(PALETTE_DIR, filename)).toString()
+		)
+	);
+}
 
 /**
  * Remove comments from JSON.
@@ -26,40 +36,52 @@ function removeJsonComments(json: string): string {
 	);
 }
 
-// Load palette files
-const lightPalette: Record<string, string> = JSON.parse(
-	removeJsonComments(
-		fs.readFileSync(path.join(PALETTE_DIR, 'light/palette.json')).toString()
-	)
-);
-const lightUiPalette: Record<string, string> = JSON.parse(
-	removeJsonComments(
-		fs.readFileSync(path.join(PALETTE_DIR, 'light/ui.json')).toString()
-	)
-);
-const darkPalette: Record<string, string> = JSON.parse(
-	removeJsonComments(
-		fs.readFileSync(path.join(PALETTE_DIR, 'dark/palette.json')).toString()
-	)
-);
-const darkUiPalette: Record<string, string> = JSON.parse(
-	removeJsonComments(
-		fs.readFileSync(path.join(PALETTE_DIR, 'dark/ui.json')).toString()
-	)
-);
+function hexToRgbString(hex: string) {
+	return `RGB(${hexToRgb(hex).join(', ')})`;
+}
 
-const hexToRgbString = (hex: string) => `RGB(${hexToRgb(hex).join(', ')})`;
-
-const getDarkName = (lightName: string) => {
+function getDarkName(lightName: string) {
 	return lightName;
-};
-const getDarkPurpleName = (darkName: string) => {
+}
+
+function getDarkPurpleName(darkName: string) {
 	return darkName
 		.replace('gray', 'purple')
 		.replace(/^brightYellowDimer$/, 'brightYellowDimerPurple')
 		.replace(/^brightYellowDim$/, 'brightYellowDimPurple')
 		.replace(/^brightYellow$/, 'brightYellowPurple');
-};
+}
+
+function preparePalette(light: Palette, dark: Palette): CombinedPalette {
+	return {
+		light: Object.fromEntries(
+			Object.entries(light).map(([key, colorName]) => [
+				key,
+				lightPalette[colorName],
+			])
+		),
+		dark: Object.fromEntries(
+			Object.entries(dark).map(([key, colorName]) => [
+				key,
+				darkPalette[getDarkName(colorName)],
+			])
+		),
+		darkPurple: Object.fromEntries(
+			Object.entries(dark).map(([key, colorName]) => [
+				key,
+				darkPalette[getDarkPurpleName(colorName)],
+			])
+		),
+	};
+}
+
+// Load palette files
+const lightPalette = readPalette('light/palette.json');
+const lightUiPalette = readPalette('light/ui.json');
+const lightAnsiPalette = readPalette('light/ansi.json');
+const darkPalette = readPalette('dark/palette.json');
+const darkUiPalette = readPalette('dark/ui.json');
+const darkAnsiPalette = readPalette('dark/ansi.json');
 
 const colorRows: ColorRow[] = Object.entries(lightPalette).map(
 	([lightName, lightHex]) => {
@@ -91,26 +113,8 @@ const colorRows: ColorRow[] = Object.entries(lightPalette).map(
 	}
 );
 
-const uiColors = {
-	light: Object.fromEntries(
-		Object.entries(lightUiPalette).map(([key, colorName]) => [
-			key,
-			lightPalette[colorName],
-		])
-	),
-	dark: Object.fromEntries(
-		Object.entries(darkUiPalette).map(([key, colorName]) => [
-			key,
-			darkPalette[getDarkName(colorName)],
-		])
-	),
-	darkPurple: Object.fromEntries(
-		Object.entries(darkUiPalette).map(([key, colorName]) => [
-			key,
-			darkPalette[getDarkPurpleName(colorName)],
-		])
-	),
-};
+const uiColors = preparePalette(lightUiPalette, darkUiPalette);
+const ansiColors = preparePalette(lightAnsiPalette, darkAnsiPalette);
 ---
 
 <Layout
@@ -118,5 +122,5 @@ const uiColors = {
 	title="Squirrelsong color theme specification"
 	description="Complete color specification for Squirrelsong light and dark themes"
 	component={SquirrelsongSpecPage}
-	props={{ colorRows, uiColors }}
+	props={{ colorRows, uiColors, ansiColors }}
 />
