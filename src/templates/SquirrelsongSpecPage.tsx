@@ -2,8 +2,10 @@ import { Stack } from '../components/Stack';
 import { Box } from '../components/Box';
 import { PageWithTitle } from './PageWithTitle';
 import { Heading } from '../components/Heading';
+import { Text } from '../components/Text';
 import { Grid } from '../components/Grid';
 import { upperFirst } from '../util/upperFirst';
+import { css } from '../../styled-system/css';
 
 export type ColorSpec = {
 	name: string;
@@ -60,7 +62,13 @@ export function getHexFromPaletteItem(item: PaletteItem) {
 }
 
 const Table = (props: React.HTMLAttributes<HTMLTableElement>) => (
-	<Box as="table" width="100%" borderCollapse="collapse" {...props} />
+	<Box
+		as="table"
+		width="100%"
+		borderCollapse="collapse"
+		css={{ tableLayout: 'fixed' }}
+		{...props}
+	/>
 );
 const Thead = (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
 	<Box as="thead" {...props} />
@@ -174,18 +182,28 @@ function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
 	return (
 		<Stack direction="row" gap="s" alignItems="center">
 			<Box
-				width="2rem"
-				height="2rem"
+				width="1.8rem"
+				height="1.8rem"
 				borderRadius="base"
 				style={{
 					backgroundColor: hexColor,
 				}}
 			/>
-			<Stack css={{ whiteSpace: 'nowrap' }}>
-				<Box fontFamily="code" fontSize="s">
+			<Stack>
+				<Box
+					fontFamily="code"
+					fontSize="xs"
+					css={{
+						color: 'text',
+						overflow: 'hidden',
+						whiteSpace: 'nowrap',
+						textOverflow: 'ellipsis',
+						maxWidth: '8rem',
+					}}
+				>
 					{name}
 				</Box>
-				<Box fontFamily="code" fontSize="xs">
+				<Box fontFamily="code" fontSize="xs" css={{ color: 'secondary' }}>
 					{hexColor}
 				</Box>
 			</Stack>
@@ -220,24 +238,22 @@ function ColorsTable({
 						);
 						return (
 							<Tr key={description}>
-								<Td>
-									<Box fontFamily="code" fontSize="xs">
-										{upperFirst(description)}
-									</Box>
+								<Td className={css({ width: '25%' })}>
+									<Text variant="small">{upperFirst(description)}</Text>
 								</Td>
-								<Td>
+								<Td className={css({ width: '25%' })}>
 									<MiniSwatch
 										name={findColorName(colorRows, lightHex) ?? ''}
 										hexColor={lightHex}
 									/>
 								</Td>
-								<Td>
+								<Td className={css({ width: '25%' })}>
 									<MiniSwatch
 										name={findColorName(colorRows, darkHex) ?? ''}
 										hexColor={darkHex}
 									/>
 								</Td>
-								<Td>
+								<Td className={css({ width: '25%' })}>
 									<MiniSwatch
 										name={findColorName(colorRows, darkPurpleHex) ?? ''}
 										hexColor={darkPurpleHex}
