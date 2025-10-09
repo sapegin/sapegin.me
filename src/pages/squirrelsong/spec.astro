@@ -7,6 +7,8 @@ import {
 	type ColorRow,
 	type Palette,
 	type CombinedPalette,
+	type PaletteItem,
+	getHexFromPaletteItem,
 } from '../../templates/SquirrelsongSpecPage';
 import { getContrastingTextColor } from '../../util/getContrastingTextColor';
 import { hexToRgb } from '../../util/hexToRgb';
@@ -55,40 +57,53 @@ function getDarkPurpleName(darkName: string) {
 function preparePalette(light: Palette, dark: Palette): CombinedPalette {
 	return {
 		light: Object.fromEntries(
-			Object.entries(light).map(([key, colorName]) => [
+			Object.entries(light).map(([key, item]) => [
 				key,
-				lightPalette[colorName],
+				(Array.isArray(item)
+					? [lightPalette[item[0]], item[1]]
+					: lightPalette[item]) as PaletteItem,
 			])
 		),
 		dark: Object.fromEntries(
-			Object.entries(dark).map(([key, colorName]) => [
+			Object.entries(dark).map(([key, item]) => [
 				key,
-				darkPalette[getDarkName(colorName)],
+				(Array.isArray(item)
+					? [darkPalette[item[0]], item[1]]
+					: darkPalette[item]) as PaletteItem,
 			])
 		),
 		darkPurple: Object.fromEntries(
-			Object.entries(dark).map(([key, colorName]) => [
+			Object.entries(dark).map(([key, item]) => [
 				key,
-				darkPalette[getDarkPurpleName(colorName)],
+				(Array.isArray(item)
+					? [darkPalette[getDarkPurpleName(item[0])], item[1]]
+					: darkPalette[getDarkPurpleName(item)]) as PaletteItem,
 			])
 		),
 	};
 }
 
+// --------------------- 8< -- 8< ---------------------
+
 // Load palette files
 const lightPalette = readPalette('light/palette.json');
 const lightUiPalette = readPalette('light/ui.json');
+const lightCodePalette = readPalette('light/code.json');
 const lightAnsiPalette = readPalette('light/ansi.json');
 const darkPalette = readPalette('dark/palette.json');
 const darkUiPalette = readPalette('dark/ui.json');
+const darkCodePalette = readPalette('dark/code.json');
 const darkAnsiPalette = readPalette('dark/ansi.json');
 
 const colorRows: ColorRow[] = Object.entries(lightPalette).map(
-	([lightName, lightHex]) => {
+	([lightName, lightItem]) => {
+		const lightHex = getHexFromPaletteItem(lightItem);
 		const darkName = getDarkName(lightName);
-		const darkHex = darkPalette[darkName];
+		const darkItem = darkPalette[darkName];
+		const darkHex = getHexFromPaletteItem(darkItem);
 		const darkPurpleName = getDarkPurpleName(darkName);
-		const darkPurpleHex = darkPalette[darkPurpleName];
+		const darkPurpleItem = darkPalette[darkPurpleName];
+		const darkPurpleHex = getHexFromPaletteItem(darkPurpleItem);
 
 		return {
 			light: {
@@ -114,6 +129,7 @@ const colorRows: ColorRow[] = Object.entries(lightPalette).map(
 );
 
 const uiColors = preparePalette(lightUiPalette, darkUiPalette);
+const codeColors = preparePalette(lightCodePalette, darkCodePalette);
 const ansiColors = preparePalette(lightAnsiPalette, darkAnsiPalette);
 ---
 
@@ -122,5 +138,5 @@ const ansiColors = preparePalette(lightAnsiPalette, darkAnsiPalette);
 	title="Squirrelsong color theme specification"
 	description="Complete color specification for Squirrelsong light and dark themes"
 	component={SquirrelsongSpecPage}
-	props={{ colorRows, uiColors, ansiColors }}
+	props={{ colorRows, uiColors, codeColors, ansiColors }}
 />

@@ -18,7 +18,8 @@ export type ColorRow = {
 	darkPurple: ColorSpec;
 };
 
-export type Palette = Record<string, string>;
+export type PaletteItem = string | [string, 'italic' | 'bold'];
+export type Palette = Record<string, PaletteItem>;
 
 export type CombinedPalette = {
 	light: Palette;
@@ -31,6 +32,7 @@ type Props = {
 	title: string;
 	colorRows: ColorRow[];
 	uiColors: CombinedPalette;
+	codeColors: CombinedPalette;
 	ansiColors: CombinedPalette;
 };
 
@@ -51,6 +53,10 @@ function findColorName(
 	}
 
 	return undefined;
+}
+
+export function getHexFromPaletteItem(item: PaletteItem) {
+	return Array.isArray(item) ? item[0] : item;
 }
 
 const Table = (props: React.HTMLAttributes<HTMLTableElement>) => (
@@ -158,6 +164,88 @@ function MainPalette({ colorRows }: Pick<Props, 'colorRows'>) {
 							</Td>
 						</Tr>
 					))}
+				</Tbody>
+			</Table>
+		</Box>
+	);
+}
+
+function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
+	return (
+		<Stack direction="row" gap="s" alignItems="center">
+			<Box
+				width="2rem"
+				height="2rem"
+				borderRadius="base"
+				style={{
+					backgroundColor: hexColor,
+				}}
+			/>
+			<Stack css={{ whiteSpace: 'nowrap' }}>
+				<Box fontFamily="code" fontSize="s">
+					{name}
+				</Box>
+				<Box fontFamily="code" fontSize="xs">
+					{hexColor}
+				</Box>
+			</Stack>
+		</Stack>
+	);
+}
+
+function ColorsTable({
+	colors,
+	colorRows,
+}: {
+	colors: CombinedPalette;
+	colorRows: Props['colorRows'];
+}) {
+	return (
+		<Box css={{ overflowX: 'auto' }}>
+			<Table>
+				<Thead>
+					<Tr>
+						<Th>Description</Th>
+						<Th>Light</Th>
+						<Th>Dark</Th>
+						<Th>Dark Deep Purple</Th>
+					</Tr>
+				</Thead>
+				<Tbody>
+					{Object.keys(colors.light).map((description) => {
+						const lightHex = getHexFromPaletteItem(colors.light[description]);
+						const darkHex = getHexFromPaletteItem(colors.dark[description]);
+						const darkPurpleHex = getHexFromPaletteItem(
+							colors.darkPurple[description]
+						);
+						return (
+							<Tr key={description}>
+								<Td>
+									<Box fontFamily="code" fontSize="xs">
+										{upperFirst(description)}
+									</Box>
+								</Td>
+								<Td>
+									<MiniSwatch
+										name={findColorName(colorRows, lightHex) ?? ''}
+										hexColor={lightHex}
+									/>
+								</Td>
+								<Td>
+									<MiniSwatch
+										name={findColorName(colorRows, darkHex) ?? ''}
+										hexColor={darkHex}
+									/>
+								</Td>
+								<Td>
+									<MiniSwatch
+										name={findColorName(colorRows, darkPurpleHex) ?? ''}
+										hexColor={darkPurpleHex}
+									/>
+								</Td>
+							</Tr>
+						);
+					})}
 				</Tbody>
 			</Table>
 		</Box>
@@ -333,88 +421,12 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 	);
 }
 
-function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
-	return (
-		<Stack direction="row" gap="s" alignItems="center">
-			<Box
-				width="2rem"
-				height="2rem"
-				borderRadius="base"
-				style={{
-					backgroundColor: hexColor,
-				}}
-			/>
-			<Stack>
-				<Box fontFamily="code" fontSize="s">
-					{name}
-				</Box>
-				<Box fontFamily="code" fontSize="xs">
-					{hexColor}
-				</Box>
-			</Stack>
-		</Stack>
-	);
-}
-
-function UiColorsTable({
-	uiColors,
-	colorRows,
-}: Pick<Props, 'uiColors' | 'colorRows'>) {
-	return (
-		<Box css={{ overflowX: 'auto' }}>
-			<Table>
-				<Thead>
-					<Tr>
-						<Th>Description</Th>
-						<Th>Light</Th>
-						<Th>Dark</Th>
-						<Th>Dark Deep Purple</Th>
-					</Tr>
-				</Thead>
-				<Tbody>
-					{Object.keys(uiColors.light).map((description) => {
-						const lightHex = uiColors.light[description];
-						const darkHex = uiColors.dark[description];
-						const darkPurpleHex = uiColors.darkPurple[description];
-						return (
-							<Tr key={description}>
-								<Td>
-									<Box fontFamily="code" fontSize="xs">
-										{upperFirst(description)}
-									</Box>
-								</Td>
-								<Td>
-									<MiniSwatch
-										name={findColorName(colorRows, lightHex) ?? ''}
-										hexColor={lightHex}
-									/>
-								</Td>
-								<Td>
-									<MiniSwatch
-										name={findColorName(colorRows, darkHex) ?? ''}
-										hexColor={darkHex}
-									/>
-								</Td>
-								<Td>
-									<MiniSwatch
-										name={findColorName(colorRows, darkPurpleHex) ?? ''}
-										hexColor={darkPurpleHex}
-									/>
-								</Td>
-							</Tr>
-						);
-					})}
-				</Tbody>
-			</Table>
-		</Box>
-	);
-}
-
 export function SquirrelsongSpecPage({
 	url,
 	title,
 	colorRows,
 	uiColors,
+	codeColors,
 	ansiColors,
 }: Props) {
 	return (
@@ -422,14 +434,16 @@ export function SquirrelsongSpecPage({
 			<Stack gap="l">
 				<MainPalette colorRows={colorRows} />
 				<Heading level={2}>UI colors</Heading>
-				<UiColorsTable uiColors={uiColors} colorRows={colorRows} />
+				<ColorsTable colors={uiColors} colorRows={colorRows} />
 				<Grid gap="m" gridTemplateColumns="repeat(3, 1fr)">
 					<UiSample id="light" palette={uiColors.light} />
 					<UiSample id="dark" palette={uiColors.dark} />
 					<UiSample id="darkPurple" palette={uiColors.darkPurple} />
 				</Grid>
+				<Heading level={2}>Code colors</Heading>
+				<ColorsTable colors={codeColors} colorRows={colorRows} />
 				<Heading level={2}>ANSI colors</Heading>
-				<UiColorsTable uiColors={ansiColors} colorRows={colorRows} />
+				<ColorsTable colors={ansiColors} colorRows={colorRows} />
 			</Stack>
 		</PageWithTitle>
 	);
