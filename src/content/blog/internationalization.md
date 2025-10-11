@@ -215,7 +215,7 @@ Only send data from the backend and translate text on the frontend, instead of s
 
 ## Bonus: Don’t use &quot;dumb quotes&quot;
 
-This isn’t rally an internationalization issue but still worth mentioning.
+This isn’t exactly an internationalization issue but somewhat related to it.
 
 Using incorrect typography characters makes our pages look unprofessional.
 
