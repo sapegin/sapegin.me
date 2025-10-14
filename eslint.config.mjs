@@ -2,12 +2,22 @@ import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
 import eslintPluginAstro from 'eslint-plugin-astro';
 import markdown from '@eslint/markdown';
 import jsxAccessibility from 'eslint-plugin-jsx-a11y';
+import washingCode from 'eslint-plugin-washing-code';
 
 export default [
 	...tamiaTypeScriptReact,
 	...eslintPluginAstro.configs.recommended,
 	...markdown.configs.processor,
 	jsxAccessibility.flatConfigs.strict,
+	washingCode.configs.recommended,
+	{
+		files: ['**/*.{ts,tsx}'],
+		languageOptions: {
+			parserOptions: {
+				projectService: true,
+			},
+		},
+	},
 	{
 		files: ['**/*.astro'],
 		rules: {
@@ -23,6 +33,12 @@ export default [
 	},
 	{
 		files: ['**/*.md/*.{js,jsx,ts,tsx}'],
+		languageOptions: {
+			parserOptions: {
+				// Disable types because they don't work in Markdown files
+				projectService: false,
+			},
+		},
 		rules: {
 			// Can't disable these for a particular example because
 			// of the prettier-ignore comment
@@ -54,6 +70,7 @@ export default [
 			'unicorn/prefer-module': 'off',
 			'unicorn/prefer-regexp-test': 'off',
 			'unicorn/prefer-top-level-await': 'off',
+			'washing-code/explicit-boolean-check': 'off',
 
 			// Some examples use it
 			// Most examples define variables or functions

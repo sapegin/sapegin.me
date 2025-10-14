@@ -33,7 +33,7 @@ export default function remarkTips() {
 			const [titleTextNode] = titleNode.children;
 
 			if ('value' in titleTextNode) {
-				if (!titleTextNode.value.endsWith(':')) {
+				if (titleTextNode.value.endsWith(':') === false) {
 					return;
 				}
 
