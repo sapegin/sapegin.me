@@ -8,7 +8,7 @@ import {
 	type Palette,
 	type CombinedPalette,
 	type PaletteItem,
-	getHexFromPaletteItem,
+	getColorValue,
 } from '../../templates/SquirrelsongSpecPage';
 import { getContrastingTextColor } from '../../util/getContrastingTextColor';
 import { hexToRgb } from '../../util/hexToRgb';
@@ -97,13 +97,13 @@ const darkAnsiPalette = readPalette('dark/ansi.json');
 
 const colorRows: ColorRow[] = Object.entries(lightPalette).map(
 	([lightName, lightItem]) => {
-		const lightHex = getHexFromPaletteItem(lightItem);
+		const lightHex = getColorValue(lightItem);
 		const darkName = getDarkName(lightName);
 		const darkItem = darkPalette[darkName];
-		const darkHex = getHexFromPaletteItem(darkItem);
+		const darkHex = getColorValue(darkItem);
 		const darkPurpleName = getDarkPurpleName(darkName);
 		const darkPurpleItem = darkPalette[darkPurpleName];
-		const darkPurpleHex = getHexFromPaletteItem(darkPurpleItem);
+		const darkPurpleHex = getColorValue(darkPurpleItem);
 
 		return {
 			light: {

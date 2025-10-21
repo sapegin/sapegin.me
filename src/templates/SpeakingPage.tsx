@@ -6,12 +6,12 @@ import { PageWithTitle } from './PageWithTitle';
 import type { Gig } from '../types/Gig';
 import { TextTypo } from '../components/TextTypo';
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	upcomingEvents: Gig[];
 	pastEvents: Gig[];
-};
+}
 
 const EventSection = ({ title, items }: { title: string; items: Gig[] }) =>
 	items.length > 0 ? (

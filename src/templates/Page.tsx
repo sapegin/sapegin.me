@@ -4,10 +4,10 @@ import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Stack } from '../components/Stack';
 
-type Props = {
+interface Props {
 	children: ReactNode;
 	url: string;
-};
+}
 
 export function Page({ children, url }: Props) {
 	return (

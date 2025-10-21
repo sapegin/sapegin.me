@@ -24,10 +24,10 @@ const ICONS = {
 	},
 };
 
-type Props = {
+interface Props {
 	type: TalkType;
 	children: ReactNode;
-};
+}
 
 export function EventName({ type = 'talk', children }: Props) {
 	const { icon, alt, label, suffix } = ICONS[type];

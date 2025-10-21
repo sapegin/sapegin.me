@@ -7,9 +7,9 @@ import { Stack } from '../components/Stack';
 import { TextTypo } from '../components/TextTypo';
 import { Page } from './Page';
 
-type Props = {
+interface Props {
 	url: string;
-};
+}
 
 export function ManPage({ url }: Props) {
 	return (

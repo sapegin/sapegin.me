@@ -5,9 +5,9 @@ import { Text } from './Text';
 import { Link } from './Link';
 import { Badge } from './Badge';
 
-type Props = {
+interface Props {
 	items: Resource[];
-};
+}
 
 export function ResourceList({ items }: Props) {
 	return (

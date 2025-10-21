@@ -1,9 +1,9 @@
 import { Children, type ReactNode } from 'react';
 import typo from '../util/typo';
 
-type TypoProps = {
+interface TypoProps {
 	children: ReactNode;
-};
+}
 
 /**
  * Enhance typography

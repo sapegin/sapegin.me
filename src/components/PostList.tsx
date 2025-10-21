@@ -6,12 +6,12 @@ import { InlineSeparator } from './InlineSeparator';
 import { Box } from './Box';
 import type { Resource } from '../types/Resource';
 
-type Props = {
+interface Props {
 	posts: Resource[];
 	showDescriptions?: boolean;
 	showDates?: boolean;
 	startIndex?: number;
-};
+}
 
 export function PostList({
 	posts,

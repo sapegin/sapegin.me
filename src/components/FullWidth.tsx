@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 import { Box } from './Box';
 
-type Props = {
+interface Props {
 	children: ReactNode;
-};
+}
 
 /**
  * Container that expands to 100% of page width

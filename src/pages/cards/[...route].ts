@@ -2,11 +2,12 @@ import { OGImageRoute } from 'astro-og-canvas';
 import { SITE_AUTHOR } from '../../constants';
 import { colors, lineHeights } from '../../theme';
 import { hexToRgb } from '../../util/hexToRgb';
+import type { Post } from '../../types/Post';
 
 export const { getStaticPaths, GET } = OGImageRoute({
 	param: 'route',
 	pages: import.meta.glob('/src/content/**/*.md', { eager: true }),
-	getImageOptions: (_path, page) => ({
+	getImageOptions: (_path, page: { frontmatter: Post }) => ({
 		title: page.frontmatter.title,
 		description: `By ${SITE_AUTHOR}`,
 		bgGradient: [hexToRgb(colors.background), hexToRgb(colors.background)],

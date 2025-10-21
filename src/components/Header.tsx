@@ -2,9 +2,9 @@ import { Box } from './Box';
 import { Logo, LOGO_WIDTH } from './Logo';
 import { Menu } from './Menu';
 
-type Props = {
+interface Props {
 	url: string;
-};
+}
 
 export function Header({ url }: Props) {
 	return (

@@ -2,9 +2,9 @@ import { Stack } from './Stack';
 import { Heading } from './Heading';
 import { TextTypo } from './TextTypo';
 
-type Props = {
+interface Props {
 	list?: 'default' | 'photo';
-};
+}
 
 export function Subscription({ list = 'default' }: Props) {
 	const substackId = list === 'default' ? 'sapegin' : 'morningphotos';

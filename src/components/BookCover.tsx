@@ -1,12 +1,12 @@
 import { Box } from './Box';
 import { Image } from './Image';
 
-type Props = {
+interface Props {
 	title: string;
 	image: string;
 	width?: number;
 	height?: number;
-};
+}
 
 const colors = {
 	shadow: 'rgba(0, 0, 0, 0.25)',

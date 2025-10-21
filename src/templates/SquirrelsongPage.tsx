@@ -18,14 +18,14 @@ import { VisuallyHidden } from '../components/VisuallyHidden';
 import { Page } from './Page';
 import type { Squirrel } from '../types/Squirrel';
 
-type Props = {
+interface Props {
 	url: string;
 	squirrels: Squirrel[];
 	codes: {
 		light: Record<string, string>;
 		dark: Record<string, string>;
 	};
-};
+}
 
 function Hero() {
 	return (

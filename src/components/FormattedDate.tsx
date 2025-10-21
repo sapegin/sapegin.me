@@ -1,8 +1,8 @@
 import { Nobr } from './Nobr';
 
-type Props = {
+interface Props {
 	date: Date;
-};
+}
 
 function formatDate(date: Date) {
 	if (date.getFullYear() === new Date().getFullYear()) {

@@ -29,19 +29,19 @@ const {
 	url: purchaseUrl,
 } = campaigns.washingCode;
 
-type Props = {
+interface Props {
 	url: string;
 	chapters: Chapter[];
 	patterns: string[];
 	antipatterns: string[];
-};
+}
 
-type TestimonialItem = {
+interface TestimonialItem {
 	quote: string;
 	author: string;
 	role: string;
 	image: string;
-};
+}
 
 const testimonials: TestimonialItem[] = [
 	{
@@ -67,10 +67,10 @@ const testimonials: TestimonialItem[] = [
 	},
 ];
 
-type FaqItem = {
+interface FaqItem {
 	question: string;
 	answer: ReactNode;
-};
+}
 
 const faq: FaqItem[] = [
 	{

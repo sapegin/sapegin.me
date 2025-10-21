@@ -59,7 +59,7 @@ const getPostTitle = (post: Post) =>
 	upperFirst(post.title.replace('Washing your code: ', ''));
 
 const getSlug = (file: string) =>
-	`${file.replace(/^src\/content\/blog\//, '').replace(/\.md$/, '')}`;
+	file.replace(/^src\/content\/blog\//, '').replace(/\.md$/, '');
 
 const getUrl = (file: string) => `/blog/${getSlug(file)}/`;
 
@@ -89,18 +89,21 @@ const removeHtmlComments = (contents: string) =>
 	contents.replaceAll(/<!--[\s\S]*?-->/g, '');
 
 const updateLinks = (contents: string) =>
-	contents.replaceAll(/\[(.*?)]\(#(.*?)\)/g, (_match, title, anchor) => {
-		const href = internalLinks[anchor];
-		if (href) {
-			return `[${title}](${href})`;
-		}
+	contents.replaceAll(
+		/\[(.*?)]\(#(.*?)\)/g,
+		(_match, title: string, anchor: string) => {
+			const href = internalLinks[anchor];
+			if (href) {
+				return `[${title}](${href})`;
+			}
 
-		console.error(`[BOOK] 🦀 Cannot generate link to #${anchor}`);
-		return title;
-	});
+			console.error(`[BOOK] 🦀 Cannot generate link to #${anchor}`);
+			return title;
+		}
+	);
 
 const stripInternalLinks = (contents: string) =>
-	contents.replaceAll(/\[(.*?)]\(#(.*?)\)/g, (_match, title) => {
+	contents.replaceAll(/\[(.*?)]\(#(.*?)\)/g, (_match, title: string) => {
 		return title;
 	});
 

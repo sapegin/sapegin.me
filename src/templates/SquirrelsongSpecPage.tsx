@@ -7,58 +7,58 @@ import { Grid } from '../components/Grid';
 import { upperFirst } from '../util/upperFirst';
 import { css } from '../../styled-system/css';
 
-export type ColorSpec = {
+export interface ColorSpec {
 	name: string;
 	hex: string;
 	rgb: string;
 	textColor: string;
-};
+}
 
-export type ColorRow = {
+export interface ColorRow {
 	light: ColorSpec;
 	dark: ColorSpec;
 	darkPurple: ColorSpec;
-};
+}
 
 export type PaletteItem = string | [string, 'italic' | 'bold'];
 export type Palette = Record<string, PaletteItem>;
 
-export type CombinedPalette = {
+export interface CombinedPalette {
 	light: Palette;
 	dark: Palette;
 	darkPurple: Palette;
-};
+}
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	colorRows: ColorRow[];
 	uiColors: CombinedPalette;
 	codeColors: CombinedPalette;
 	ansiColors: CombinedPalette;
-};
+}
+
+export function getColorValue(color: PaletteItem) {
+	return Array.isArray(color) ? color[0] : color;
+}
 
 function findColorName(
 	colorRows: ColorRow[],
 	hexColor: string
 ): string | undefined {
 	for (const row of colorRows) {
-		if (row.light?.hex === hexColor) {
+		if (row.light.hex === hexColor) {
 			return row.light.name;
 		}
-		if (row.dark?.hex === hexColor) {
+		if (row.dark.hex === hexColor) {
 			return row.dark.name;
 		}
-		if (row.darkPurple?.hex === hexColor) {
+		if (row.darkPurple.hex === hexColor) {
 			return row.darkPurple.name;
 		}
 	}
 
 	return undefined;
-}
-
-export function getHexFromPaletteItem(item: PaletteItem) {
-	return Array.isArray(item) ? item[0] : item;
 }
 
 const Table = (props: React.HTMLAttributes<HTMLTableElement>) => (
@@ -139,36 +139,30 @@ function MainPalette({ colorRows }: Pick<Props, 'colorRows'>) {
 				</Thead>
 				<Tbody>
 					{colorRows.map((row) => (
-						<Tr key={row.light?.name ?? row.dark?.name ?? row.darkPurple?.name}>
+						<Tr key={row.light.name}>
 							<Td>
-								{row.light && (
-									<ColorCell
-										name={row.light.name}
-										hex={row.light.hex}
-										rgb={row.light.rgb}
-										textColor={row.light.textColor}
-									/>
-								)}
+								<ColorCell
+									name={row.light.name}
+									hex={row.light.hex}
+									rgb={row.light.rgb}
+									textColor={row.light.textColor}
+								/>
 							</Td>
 							<Td>
-								{row.dark && (
-									<ColorCell
-										name={row.dark.name}
-										hex={row.dark.hex}
-										rgb={row.dark.rgb}
-										textColor={row.dark.textColor}
-									/>
-								)}
+								<ColorCell
+									name={row.dark.name}
+									hex={row.dark.hex}
+									rgb={row.dark.rgb}
+									textColor={row.dark.textColor}
+								/>
 							</Td>
 							<Td>
-								{row.darkPurple && (
-									<ColorCell
-										name={row.darkPurple.name}
-										hex={row.darkPurple.hex}
-										rgb={row.darkPurple.rgb}
-										textColor={row.darkPurple.textColor}
-									/>
-								)}
+								<ColorCell
+									name={row.darkPurple.name}
+									hex={row.darkPurple.hex}
+									rgb={row.darkPurple.rgb}
+									textColor={row.darkPurple.textColor}
+								/>
 							</Td>
 						</Tr>
 					))}
@@ -231,11 +225,9 @@ function ColorsTable({
 				</Thead>
 				<Tbody>
 					{Object.keys(colors.light).map((description) => {
-						const lightHex = getHexFromPaletteItem(colors.light[description]);
-						const darkHex = getHexFromPaletteItem(colors.dark[description]);
-						const darkPurpleHex = getHexFromPaletteItem(
-							colors.darkPurple[description]
-						);
+						const lightHex = getColorValue(colors.light[description]);
+						const darkHex = getColorValue(colors.dark[description]);
+						const darkPurpleHex = getColorValue(colors.darkPurple[description]);
 						return (
 							<Tr key={description}>
 								<Td className={css({ width: '25%' })}>
@@ -281,33 +273,33 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 					__html: `
 			.${id}__link {
 				cursor: pointer;
-				color: ${palette['link foreground']};
+				color: ${getColorValue(palette['link foreground'])};
 			}
 			.${id}__link:hover {
-				color: ${palette['link hover foreground']};
+				color: ${getColorValue(palette['link hover foreground'])};
 			}
 			.${id}__button {
 				cursor: pointer;
-				color: ${palette['button foreground']};
-				background-color: ${palette['button background']};
+				color: ${getColorValue(palette['button foreground'])};
+				background-color: ${getColorValue(palette['button background'])};
 			}
 			.${id}__button:hover {
-				background-color: ${palette['button hover background']};
+				background-color: ${getColorValue(palette['button hover background'])};
 			}
 			.${id}__secondaryButton {
 				cursor: pointer;
-				color: ${palette['secondary button foreground']};
-				background-color: ${palette['secondary button background']};
+				color: ${getColorValue(palette['secondary button foreground'])};
+				background-color: ${getColorValue(palette['secondary button background'])};
 			}
 			.${id}__secondaryButton:hover {
-				background-color: ${palette['secondary button hover background']};
+				background-color: ${getColorValue(palette['secondary button hover background'])};
 			}
 			.${id}__disabledButton {
-				color: ${palette['disabled foreground']};
-				background-color: ${palette['disabled button background']};
+				color: ${getColorValue(palette['disabled foreground'])};
+				background-color: ${getColorValue(palette['disabled button background'])};
 			}
 			.${id}__disabledButton:hover {
-				background-color: ${palette['disabled button hover background']};
+				background-color: ${getColorValue(palette['disabled button hover background'])};
 			}
 			`,
 				}}

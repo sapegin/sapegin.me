@@ -3,9 +3,9 @@ import { PostList } from './PostList';
 import { Stack } from './Stack';
 import type { Post } from '../types/Post';
 
-type Props = {
+interface Props {
 	posts: Post[];
-};
+}
 
 export function RelatedPosts({ posts }: Props) {
 	return (

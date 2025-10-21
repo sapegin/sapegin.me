@@ -12,9 +12,9 @@ function getCampaign(url: string) {
 	}
 }
 
-type Props = {
+interface Props {
 	book: Resource;
-};
+}
 
 export function BookLink({ book: { url, image, title, description } }: Props) {
 	const campaign = url ? getCampaign(url) : undefined;

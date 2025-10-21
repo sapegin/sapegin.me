@@ -14,7 +14,7 @@ export async function GET() {
 		'blog',
 		({ data }) => data.draft !== true
 	);
-	const entries = _.sortBy(blogEntries, (x) => -x.data.date).slice(
+	const entries = _.sortBy(blogEntries, (x) => -x.data.date.getTime()).slice(
 		0,
 		NUM_POSTS
 	);

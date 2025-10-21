@@ -52,7 +52,7 @@ const hasDarkTheme = (contents: string) => contents.includes('screenshot-dark');
 const updateTips = (contents: string) =>
 	contents.replaceAll(
 		/\n>\s*\[!(WARNING|NOTE)]\s*\n>\s*/gm,
-		(_match, marker) => {
+		(_match, marker: string) => {
 			return `\n**${upperFirst(marker.toLowerCase())}:** `;
 		}
 	);
@@ -66,17 +66,20 @@ const updateImages = (prefix: string) => (contents: string) =>
 // Update links and images
 // foo.png → https://github.com/sapegin/squirrelsong/raw/master/themes/Bear/foo.png
 const updateLinks = (prefix: string) => (contents: string) =>
-	contents.replaceAll(/\[([^\]]*?)]\(([^)]+)\)/g, (_match, title, href) => {
-		if (
-			href.startsWith('http') ||
-			href.startsWith('chrome:') ||
-			href.startsWith('../')
-		) {
-			return `[${title}](${href})`;
-		}
+	contents.replaceAll(
+		/\[([^\]]*?)]\(([^)]+)\)/g,
+		(_match, title: string, href: string) => {
+			if (
+				href.startsWith('http') ||
+				href.startsWith('chrome:') ||
+				href.startsWith('../')
+			) {
+				return `[${title}](${href})`;
+			}
 
-		return `[${title}](${URL_PREFIX}/${prefix.replace(`${REPO_DIR}/`, '').replaceAll(' ', '%20')}/${href})`;
-	});
+			return `[${title}](${URL_PREFIX}/${prefix.replace(`${REPO_DIR}/`, '').replaceAll(' ', '%20')}/${href})`;
+		}
+	);
 
 console.log('[SQRLSNG] Downloading themes...');
 

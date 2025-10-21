@@ -1,11 +1,11 @@
 import { css } from '../../styled-system/css';
 import { IconBase } from './IconBase';
 
-type IconInfo = {
+interface IconInfo {
 	path?: string;
 	children?: React.ReactElement;
 	size?: number;
-};
+}
 
 const BASE_SIZE = 20;
 const DEFAULT_SIZE = 20;
@@ -59,10 +59,10 @@ const ICONS: Record<string, IconInfo> = {
 
 export type IconName = keyof typeof ICONS;
 
-type Props = {
+interface Props {
 	icon: IconName;
 	size?: number;
-};
+}
 
 export function Icon({ icon, size = DEFAULT_SIZE }: Props) {
 	const { path, size: baseSize, children } = ICONS[icon];

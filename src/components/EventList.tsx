@@ -7,9 +7,9 @@ import { Link } from './Link';
 import { EventName } from './EventName';
 import type { Gig } from '../types/Gig';
 
-type Props = {
+interface Props {
 	items: Gig[];
-};
+}
 
 export function EventList({ items }: Props) {
 	return (

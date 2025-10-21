@@ -2,29 +2,21 @@ import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
 import eslintPluginAstro from 'eslint-plugin-astro';
 import markdown from '@eslint/markdown';
 import jsxAccessibility from 'eslint-plugin-jsx-a11y';
-import washingCode from 'eslint-plugin-washing-code';
+import tseslint from 'typescript-eslint';
 
 export default [
 	...tamiaTypeScriptReact,
 	...eslintPluginAstro.configs.recommended,
+	// ...eslintPluginAstro.configs['jsx-a11y-recommended'],
 	...markdown.configs.processor,
 	jsxAccessibility.flatConfigs.strict,
-	washingCode.configs.recommended,
-	{
-		files: ['**/*.{ts,tsx}'],
-		languageOptions: {
-			parserOptions: {
-				projectService: true,
-			},
-		},
-	},
-	{
-		files: ['**/*.astro'],
-		rules: {
-			// Stop linter from replacing `class` with `className`
-			'react/no-unknown-property': 'off',
-		},
-	},
+	// {
+	// 	files: ['**/*.astro'],
+	// 	// rules: {
+	// 	// 	// Stop linter from replacing `class` with `className`
+	// 	// 	'react/no-unknown-property': 'off',
+	// 	// },
+	// },
 	{
 		files: ['src/env.d.ts'],
 		rules: {
@@ -40,6 +32,9 @@ export default [
 			},
 		},
 		rules: {
+			// Disable rules that require types
+			...tseslint.configs.disableTypeChecked.rules,
+
 			// Can't disable these for a particular example because
 			// of the prettier-ignore comment
 			curly: 'off',
@@ -72,7 +67,6 @@ export default [
 			'unicorn/prefer-top-level-await': 'off',
 			'washing-code/explicit-boolean-check': 'off',
 
-			// Some examples use it
 			// Most examples define variables or functions
 			'@typescript-eslint/no-unused-vars': 'off',
 		},

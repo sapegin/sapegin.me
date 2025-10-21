@@ -9,10 +9,10 @@ import {
 	ME_MASTODON_URL,
 } from '../constants';
 
-type Props = {
+interface Props {
 	children?: ReactNode;
 	github: string;
-};
+}
 
 export function Feedback({ children = <>Write me at</>, github }: Props) {
 	return (

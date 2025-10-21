@@ -1,6 +1,6 @@
-type Props = {
+interface Props {
 	code: string;
-};
+}
 
 export function Code({ code }: Props) {
 	// TODO: Make aria-hidden optional if this component

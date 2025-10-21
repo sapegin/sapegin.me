@@ -4,12 +4,12 @@ import { PostList } from '../components/PostList';
 import type { Post } from '../types/Post';
 import { PageWithTitle } from './PageWithTitle';
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	years: string[];
 	postsByYear: Record<string, Post[]>;
-};
+}
 
 function getStartIndex(
 	years: string[],

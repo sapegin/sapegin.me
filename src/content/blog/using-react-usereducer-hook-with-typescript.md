@@ -21,13 +21,13 @@ enum ActionType {
   DECREMENT = 'DECREMENT'
 }
 
-type Action = {
+interface Action {
   type: ActionType;
-};
+}
 
-type State = {
+interface State {
   count: number;
-};
+}
 
 const initialState = {
   count: 0

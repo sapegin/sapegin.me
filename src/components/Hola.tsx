@@ -4,9 +4,9 @@ import { Stack } from './Stack';
 import { Heading } from './Heading';
 import { IconCoffee } from './IconCoffee';
 
-type Props = {
+interface Props {
 	children: ReactNode;
-};
+}
 
 export function Hola({ children }: Props) {
 	return (

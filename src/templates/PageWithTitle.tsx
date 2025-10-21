@@ -4,11 +4,11 @@ import { Heading } from '../components/Heading';
 import { Stack } from '../components/Stack';
 import { Page } from './Page';
 
-type Props = {
+interface Props {
 	children: ReactNode;
 	url: string;
 	title: string;
-};
+}
 
 export function PageWithTitle({ url, title, children }: Props) {
 	return (

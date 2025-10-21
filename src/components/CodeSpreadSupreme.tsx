@@ -1,13 +1,13 @@
 import { Grid } from './Grid';
 import { Code } from './Code';
 
-type Props = {
+interface Props {
 	codes: {
 		light: Record<string, string>;
 		dark: Record<string, string>;
 	};
 	names: [string, string, string];
-};
+}
 
 export function CodeSpreadSupreme({ codes, names }: Props) {
 	return (
@@ -46,18 +46,10 @@ export function CodeSpreadSupreme({ codes, names }: Props) {
 			}}
 		>
 			{names.map((name) => {
-				const code = codes.light[name];
-				if (code === undefined) {
-					return <p key={name}>Code sample not found for “{name}”</p>;
-				}
-				return <Code key={name} code={code} />;
+				return <Code key={name} code={codes.light[name]} />;
 			})}
 			{names.map((name) => {
-				const code = codes.dark[name];
-				if (code === undefined) {
-					return <p key={name}>Code sample not found for “{name}”</p>;
-				}
-				return <Code key={name} code={code} />;
+				return <Code key={name} code={codes.dark[name]} />;
 			})}
 		</Grid>
 	);

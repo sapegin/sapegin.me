@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { createHighlighter } from 'shiki';
+import { createHighlighter, type RawTheme } from 'shiki';
 import stripJsonComments from 'strip-json-comments';
 
 const THEMES_DIR = 'squirrelsong-master';
@@ -16,7 +16,7 @@ const lightTheme = JSON.parse(
 			)
 			.toString()
 	)
-);
+) as RawTheme;
 const darkTheme = JSON.parse(
 	stripJsonComments(
 		fs
@@ -28,7 +28,7 @@ const darkTheme = JSON.parse(
 			)
 			.toString()
 	)
-);
+) as RawTheme;
 
 export type CodeLang =
 	| 'tsx'

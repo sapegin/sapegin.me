@@ -4,9 +4,9 @@
  */
 function getLuminance(hex: string): number {
 	const rgb = Number.parseInt(hex.slice(1), 16);
-	const r = (rgb >> 16) & 0xFF;
-	const g = (rgb >> 8) & 0xFF;
-	const b = Math.trunc(rgb) & 0xFF;
+	const r = (rgb >> 16) & 0xff;
+	const g = (rgb >> 8) & 0xff;
+	const b = Math.trunc(rgb) & 0xff;
 
 	const [rs, gs, bs] = [r, g, b].map((c) => {
 		const sRGB = c / 255;

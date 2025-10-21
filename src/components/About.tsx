@@ -6,9 +6,9 @@ import { Stack } from '../components/Stack';
 import { Text } from '../components/Text';
 import { TextTypo } from '../components/TextTypo';
 
-type Props = {
+interface Props {
 	children: ReactNode;
-};
+}
 
 export function About({ children }: Props) {
 	return (

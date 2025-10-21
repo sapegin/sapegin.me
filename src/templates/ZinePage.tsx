@@ -14,11 +14,11 @@ import { PageWithTitle } from './PageWithTitle';
 
 type Issue = CollectionEntry<'zines'>;
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	issues: Issue[];
-};
+}
 
 export function ZinePage({ url, title, issues }: Props) {
 	return (

@@ -99,9 +99,9 @@ import type { ReactNode } from 'react';
 import styled from 'styled-components';
 import { Box, Stack, Heading, IconCoffee } from '.';
 
-type Props = {
+interface Props {
   children: ReactNode;
-};
+}
 
 const Name = styled.span({
   fontSize: 'clamp(2.6rem, 7vw, 4rem)',
@@ -154,9 +154,9 @@ import type { ReactNode } from 'react';
 import { Stack, Heading, IconCoffee } from '.';
 import { name, icon } from './Hola.css';
 
-type Props = {
+interface Props {
   children: ReactNode;
-};
+}
 
 export function Hola({ children }: Props) {
   return (

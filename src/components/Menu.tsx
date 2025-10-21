@@ -6,9 +6,9 @@ import { Text } from './Text';
 // Half of total menu items
 export const HALF = 3;
 
-type Props = {
+interface Props {
 	current: string;
-};
+}
 
 interface Item {
 	title: string;

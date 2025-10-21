@@ -16,13 +16,13 @@ import type { Post } from '../types/Post';
 import type { Resource } from '../types/Resource';
 import { Page } from './Page';
 
-type Props = {
+interface Props {
 	url: string;
 	blogPosts: Post[];
 	books: Resource[];
 	writing: Resource[];
 	projects: Resource[];
-};
+}
 
 function Intro() {
 	return (
