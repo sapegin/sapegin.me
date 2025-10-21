@@ -7,16 +7,8 @@ import tseslint from 'typescript-eslint';
 export default [
 	...tamiaTypeScriptReact,
 	...eslintPluginAstro.configs.recommended,
-	// ...eslintPluginAstro.configs['jsx-a11y-recommended'],
 	...markdown.configs.processor,
 	jsxAccessibility.flatConfigs.strict,
-	// {
-	// 	files: ['**/*.astro'],
-	// 	// rules: {
-	// 	// 	// Stop linter from replacing `class` with `className`
-	// 	// 	'react/no-unknown-property': 'off',
-	// 	// },
-	// },
 	{
 		files: ['src/env.d.ts'],
 		rules: {
