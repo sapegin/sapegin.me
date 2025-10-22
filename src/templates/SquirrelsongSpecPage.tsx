@@ -6,6 +6,8 @@ import { Text } from '../components/Text';
 import { Grid } from '../components/Grid';
 import { upperFirst } from '../util/upperFirst';
 import { css } from '../../styled-system/css';
+import { VisuallyHidden } from '../components/VisuallyHidden';
+import { Link } from '../components/Link';
 
 export interface ColorSpec {
 	name: string;
@@ -470,6 +472,28 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 	);
 }
 
+function TableOfContents() {
+	return (
+		<Box as="nav">
+			<VisuallyHidden as="h2">Table of contents</VisuallyHidden>
+			<Stack as="ul" direction="row" gap="m">
+				<Box as="li">
+					<Link href="#palette">Palette</Link>
+				</Box>
+				<Box as="li">
+					<Link href="#ui-colors">UI colors</Link>
+				</Box>
+				<Box as="li">
+					<Link href="#code-colors">Code colors</Link>
+				</Box>
+				<Box as="li">
+					<Link href="#ansi-colors">ANSI colors</Link>
+				</Box>
+			</Stack>
+		</Box>
+	);
+}
+
 export function SquirrelsongSpecPage({
 	url,
 	title,
@@ -481,17 +505,27 @@ export function SquirrelsongSpecPage({
 	return (
 		<PageWithTitle url={url} title={title}>
 			<Stack gap="l">
+				<TableOfContents />
+				<Heading level={2} id="palette">
+					Palette
+				</Heading>
 				<MainPalette colorRows={colorRows} />
-				<Heading level={2}>UI colors</Heading>
+				<Heading level={2} id="ui-colors">
+					UI colors
+				</Heading>
 				<ColorsTable colors={uiColors} colorRows={colorRows} />
 				<Grid gap="m" gridTemplateColumns="repeat(3, 1fr)">
 					<UiSample id="light" palette={uiColors.light} />
 					<UiSample id="dark" palette={uiColors.dark} />
 					<UiSample id="darkPurple" palette={uiColors.darkPurple} />
 				</Grid>
-				<Heading level={2}>Code colors</Heading>
+				<Heading level={2} id="code-colors">
+					Code colors
+				</Heading>
 				<ColorsTable colors={codeColors} colorRows={colorRows} />
-				<Heading level={2}>ANSI colors</Heading>
+				<Heading level={2} id="ansi-colors">
+					ANSI colors
+				</Heading>
 				<ColorsTable colors={ansiColors} colorRows={colorRows} />
 			</Stack>
 		</PageWithTitle>
