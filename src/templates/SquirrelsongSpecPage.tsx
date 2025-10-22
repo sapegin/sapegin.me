@@ -130,7 +130,7 @@ function ColorCell({
 
 function MainPalette({ colorRows }: Pick<Props, 'colorRows'>) {
 	return (
-		<Box css={{ overflowX: 'auto' }}>
+		<Box overflowX="auto">
 			<Table>
 				<Thead>
 					<Tr>
@@ -215,7 +215,7 @@ function ColorsTable({
 	colorRows: Props['colorRows'];
 }) {
 	return (
-		<Box css={{ overflowX: 'auto' }}>
+		<Box overflowX="auto">
 			<Table>
 				<Thead>
 					<Tr>
@@ -472,6 +472,52 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 	);
 }
 
+function getAnsiDisplayName(fullName: string) {
+	const name = fullName.replace('terminal', '').replace('Bright', '');
+	return `${name.slice(0, 2)}${fullName.includes('Bright') ? '+' : ''}`;
+}
+
+function AnsiSample({ palette }: { palette: Palette }) {
+	const entries = Object.entries(palette);
+	const width = `${Math.floor(100 / Object.entries(palette).length)}%`;
+	return (
+		<Box overflowX="auto">
+			<Table
+				style={{ backgroundColor: getColorValue(palette.terminalBackground) }}
+			>
+				<Thead>
+					<Tr>
+						{entries.map(([rowName]) => (
+							<Th key={rowName} style={{ width, textAlign: 'center' }}>
+								{getAnsiDisplayName(rowName)}
+							</Th>
+						))}
+					</Tr>
+				</Thead>
+				<Tbody>
+					{entries.map(([rowName, rowItem]) => (
+						<Tr key={rowName}>
+							{entries.map(([name, item]) => (
+								<Td
+									key={name}
+									title={`${rowName} on ${name}`}
+									style={{
+										textAlign: 'center',
+										backgroundColor: getColorValue(item),
+										color: getColorValue(rowItem),
+									}}
+								>
+									{getAnsiDisplayName(rowName)}
+								</Td>
+							))}
+						</Tr>
+					))}
+				</Tbody>
+			</Table>
+		</Box>
+	);
+}
+
 function TableOfContents() {
 	return (
 		<Box as="nav">
@@ -527,6 +573,18 @@ export function SquirrelsongSpecPage({
 					ANSI colors
 				</Heading>
 				<ColorsTable colors={ansiColors} colorRows={colorRows} />
+				<Stack gap="s">
+					<Heading level={3}>ANSI Light</Heading>
+					<AnsiSample palette={ansiColors.light} />
+				</Stack>
+				<Stack gap="s">
+					<Heading level={3}>ANSI Dark</Heading>
+					<AnsiSample palette={ansiColors.dark} />
+				</Stack>
+				<Stack gap="s">
+					<Heading level={3}>ANSI Dark Deep Purple</Heading>
+					<AnsiSample palette={ansiColors.darkPurple} />
+				</Stack>
 			</Stack>
 		</PageWithTitle>
 	);
