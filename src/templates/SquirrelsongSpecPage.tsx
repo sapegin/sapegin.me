@@ -4,7 +4,6 @@ import { PageWithTitle } from './PageWithTitle';
 import { Heading } from '../components/Heading';
 import { Text } from '../components/Text';
 import { Grid } from '../components/Grid';
-import { upperFirst } from '../util/upperFirst';
 import { css } from '../../styled-system/css';
 import { VisuallyHidden } from '../components/VisuallyHidden';
 import { Link } from '../components/Link';
@@ -84,7 +83,8 @@ const Tr = (props: React.HTMLAttributes<HTMLTableRowElement>) => (
 const Th = (props: React.HTMLAttributes<HTMLTableCellElement>) => (
 	<Box
 		as="th"
-		p="s"
+		py="s"
+		pr="s"
 		width="33.3%"
 		textAlign="left"
 		fontWeight="bold"
@@ -92,7 +92,7 @@ const Th = (props: React.HTMLAttributes<HTMLTableCellElement>) => (
 	/>
 );
 const Td = (props: React.HTMLAttributes<HTMLTableCellElement>) => (
-	<Box as="td" p="s" {...props} />
+	<Box as="td" py="s" pr="s" {...props} />
 );
 
 function ColorCell({
@@ -219,21 +219,23 @@ function ColorsTable({
 			<Table>
 				<Thead>
 					<Tr>
-						<Th>Description</Th>
+						<Th>Name</Th>
 						<Th>Light</Th>
 						<Th>Dark</Th>
 						<Th>Dark Deep Purple</Th>
 					</Tr>
 				</Thead>
 				<Tbody>
-					{Object.keys(colors.light).map((description) => {
-						const lightHex = getColorValue(colors.light[description]);
-						const darkHex = getColorValue(colors.dark[description]);
-						const darkPurpleHex = getColorValue(colors.darkPurple[description]);
+					{Object.keys(colors.light).map((name) => {
+						const lightHex = getColorValue(colors.light[name]);
+						const darkHex = getColorValue(colors.dark[name]);
+						const darkPurpleHex = getColorValue(colors.darkPurple[name]);
 						return (
-							<Tr key={description}>
+							<Tr key={name}>
 								<Td className={css({ width: '25%' })}>
-									<Text variant="small">{upperFirst(description)}</Text>
+									<Text variant="small" hyphens="auto">
+										{name}
+									</Text>
 								</Td>
 								<Td className={css({ width: '25%' })}>
 									<MiniSwatch
@@ -268,145 +270,145 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 			p="s"
 			gap="m"
 			borderRadius="base"
-			style={{ backgroundColor: palette['text background'] }}
+			style={{ backgroundColor: palette.textBackground }}
 		>
 			<style
 				dangerouslySetInnerHTML={{
 					__html: `
 			.${id}__link {
 				cursor: pointer;
-				color: ${getColorValue(palette['link foreground'])};
+				color: ${getColorValue(palette.linkForeground)};
 			}
 			.${id}__link:hover {
-				color: ${getColorValue(palette['link hover foreground'])};
+				color: ${getColorValue(palette.linkHoverForeground)};
 			}
 			.${id}__button {
 				cursor: pointer;
-				color: ${getColorValue(palette['button foreground'])};
-				background-color: ${getColorValue(palette['button background'])};
+				color: ${getColorValue(palette.buttonForeground)};
+				background-color: ${getColorValue(palette.buttonBackground)};
 			}
 			.${id}__button:hover {
-				background-color: ${getColorValue(palette['button hover background'])};
+				background-color: ${getColorValue(palette.buttonHoverBackground)};
 			}
 			.${id}__secondaryButton {
 				cursor: pointer;
-				color: ${getColorValue(palette['secondary button foreground'])};
-				background-color: ${getColorValue(palette['secondary button background'])};
+				color: ${getColorValue(palette.secondaryButtonForeground)};
+				background-color: ${getColorValue(palette.secondaryButtonBackground)};
 			}
 			.${id}__secondaryButton:hover {
-				background-color: ${getColorValue(palette['secondary button hover background'])};
+				background-color: ${getColorValue(palette.secondaryButtonHoverBackground)};
 			}
 			.${id}__disabledButton {
-				color: ${getColorValue(palette['disabled foreground'])};
-				background-color: ${getColorValue(palette['disabled button background'])};
+				color: ${getColorValue(palette.disabledForeground)};
+				background-color: ${getColorValue(palette.disabledButtonBackground)};
 			}
 			.${id}__disabledButton:hover {
-				background-color: ${getColorValue(palette['disabled button hover background'])};
+				background-color: ${getColorValue(palette.disabledButtonHoverBackground)};
 			}
 			`,
 				}}
 			/>
-			<Box style={{ color: palette['title foreground'] }}>Title foreground</Box>
-			<Box style={{ color: palette['text foreground'] }}>Text foreground</Box>
-			<Box style={{ color: palette['secondary text foreground'] }}>
-				Secondary text foreground
+			<Box style={{ color: palette.titleForeground }}>titleForeground</Box>
+			<Box style={{ color: palette.textForeground }}>textForeground</Box>
+			<Box style={{ color: palette.secondaryTextForeground }}>
+				secondaryTextForeground
 			</Box>
 			<Box height={1} style={{ backgroundColor: palette.border }} />
-			<Box style={{ color: palette['disabled foreground'] }}>
-				Disabled foreground
+			<Box style={{ color: palette.disabledForeground }}>
+				disabledForeground
 			</Box>
-			<Box className={`${id}__link`}>Link foreground</Box>
+			<Box className={`${id}__link`}>linkForeground</Box>
 			<Box
 				mx="-s"
 				px="s"
 				style={{
-					color: palette['active foreground'],
-					backgroundColor: palette['active background'],
+					color: palette.activeForeground,
+					backgroundColor: palette.activeBackground,
 				}}
 			>
-				Active foreground/background
-			</Box>
-			<Box
-				mx="-s"
-				px="s"
-				style={{
-					color: palette['text foreground'],
-					backgroundColor: palette['hover background'],
-				}}
-			>
-				Hover background
+				activeForeground/activeBackground
 			</Box>
 			<Box
 				mx="-s"
 				px="s"
 				style={{
-					color: palette['match foreground'],
-					backgroundColor: palette['match background'],
+					color: palette.textForeground,
+					backgroundColor: palette.hoverBackground,
 				}}
 			>
-				Match foreground/background
+				hoverBackground
 			</Box>
 			<Box
 				mx="-s"
 				px="s"
 				style={{
-					color: palette['match foreground'],
-					backgroundColor: palette['secondary match background'],
+					color: palette.matchForeground,
+					backgroundColor: palette.matchBackground,
 				}}
 			>
-				Secondary match background
+				matchForeground/matchBackground
 			</Box>
 			<Box
 				mx="-s"
 				px="s"
 				style={{
-					color: palette['text foreground'],
-					backgroundColor: palette['selection background'],
+					color: palette.matchForeground,
+					backgroundColor: palette.secondaryMatchBackground,
 				}}
 			>
-				Selection foreground/background
+				secondaryMatchBackground
 			</Box>
 			<Box
 				mx="-s"
 				px="s"
 				style={{
-					color: palette['text foreground'],
-					backgroundColor: palette['secondary selection background'],
+					color: palette.textForeground,
+					backgroundColor: palette.selectionBackground,
 				}}
 			>
-				Secondary selection background
+				selectionForeground/selectionBackground
 			</Box>
 			<Box
 				mx="-s"
 				px="s"
 				style={{
-					color: palette['text foreground'],
-					backgroundColor: palette['line highlight background'],
+					color: palette.textForeground,
+					backgroundColor: palette.secondarySelectionBackground,
 				}}
 			>
-				Line highlight background
+				secondarySelectionBackground
+			</Box>
+			<Box
+				mx="-s"
+				px="s"
+				style={{
+					color: palette.textForeground,
+					backgroundColor: palette.lineHighlightBackground,
+				}}
+			>
+				lineHighlightBackground
 			</Box>
 			<Box
 				px="s"
 				style={{
-					color: palette['text foreground'],
-					borderColor: palette['active border'],
+					color: palette.textForeground,
+					borderColor: palette.activeBorder,
 					borderWidth: '1px',
 					borderStyle: 'solid',
 				}}
 			>
-				Active border
+				activeBorder
 			</Box>
 			<Box
 				px="s"
 				style={{
-					color: palette['text foreground'],
-					borderColor: palette['focus border'],
+					color: palette.textForeground,
+					borderColor: palette.focusBorder,
 					borderWidth: '1px',
 					borderStyle: 'solid',
 				}}
 			>
-				Focus border
+				focusBorder
 			</Box>
 			<Stack
 				p="s"
@@ -414,21 +416,19 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				borderRadius="base"
 				overflow="hidden"
 				style={{
-					backgroundColor: palette['ui background'],
-					borderColor: palette['light border'],
+					backgroundColor: palette.uiBackground,
+					borderColor: palette.lightBorder,
 					borderWidth: '1px',
 					borderStyle: 'solid',
 				}}
 			>
-				<Box style={{ color: palette['title foreground'] }}>
-					Title foreground
-				</Box>
-				<Box style={{ color: palette['text foreground'] }}>Text foreground</Box>
-				<Box style={{ color: palette['secondary text foreground'] }}>
-					Secondary text foreground
+				<Box style={{ color: palette.titleForeground }}>titleForeground</Box>
+				<Box style={{ color: palette.textForeground }}>textForeground</Box>
+				<Box style={{ color: palette.secondaryTextForeground }}>
+					secondaryTextForeground
 				</Box>
 				<Box px="s" py="xs" borderRadius="base" className={`${id}__button`}>
-					Button
+					button
 				</Box>
 				<Box
 					px="s"
@@ -436,7 +436,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 					borderRadius="base"
 					className={`${id}__secondaryButton`}
 				>
-					Secondary button
+					secondaryButton
 				</Box>
 				<Box
 					px="s"
@@ -444,7 +444,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 					borderRadius="base"
 					className={`${id}__disabledButton`}
 				>
-					Disabled button
+					disabledButton
 				</Box>
 				<Stack
 					direction="row"
@@ -452,18 +452,18 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 					m="-s"
 					fontSize="l"
 					justifyContent="center"
-					style={{ backgroundColor: palette['secondary ui background'] }}
+					style={{ backgroundColor: palette.secondaryUiBackground }}
 				>
-					<Box style={{ color: palette.icon }} title="Icon">
+					<Box style={{ color: palette.icon }} title="icon">
 						★
 					</Box>
-					<Box style={{ color: palette['active icon'] }} title="Active icon">
+					<Box style={{ color: palette.activeIcon }} title="activeIcon">
 						★
 					</Box>
-					<Box style={{ color: palette['shy accent'] }} title="Shy accent">
+					<Box style={{ color: palette.shyAccent }} title="shyAccent">
 						★
 					</Box>
-					<Box style={{ color: palette['bold accent'] }} title="Bold accent">
+					<Box style={{ color: palette.boldAccent }} title="boldAccent">
 						★
 					</Box>
 				</Stack>
