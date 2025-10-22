@@ -318,11 +318,41 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				mx="-s"
 				px="s"
 				style={{
+					color: palette['active foreground'],
+					backgroundColor: palette['active background'],
+				}}
+			>
+				Active foreground/background
+			</Box>
+			<Box
+				mx="-s"
+				px="s"
+				style={{
+					color: palette['text foreground'],
+					backgroundColor: palette['hover background'],
+				}}
+			>
+				Hover background
+			</Box>
+			<Box
+				mx="-s"
+				px="s"
+				style={{
 					color: palette['match foreground'],
 					backgroundColor: palette['match background'],
 				}}
 			>
 				Match foreground/background
+			</Box>
+			<Box
+				mx="-s"
+				px="s"
+				style={{
+					color: palette['match foreground'],
+					backgroundColor: palette['secondary match background'],
+				}}
+			>
+				Secondary match background
 			</Box>
 			<Box
 				mx="-s"
@@ -338,11 +368,11 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				mx="-s"
 				px="s"
 				style={{
-					color: palette['active foreground'],
-					backgroundColor: palette['active background'],
+					color: palette['text foreground'],
+					backgroundColor: palette['secondary selection background'],
 				}}
 			>
-				Active foreground/background
+				Secondary selection background
 			</Box>
 			<Box
 				mx="-s"
@@ -380,6 +410,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				p="s"
 				gap="m"
 				borderRadius="base"
+				overflow="hidden"
 				style={{
 					backgroundColor: palette['ui background'],
 					borderColor: palette['light border'],
@@ -413,14 +444,24 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				>
 					Disabled button
 				</Box>
-				<Stack direction="row" gap="s" fontSize="l" justifyContent="center">
+				<Stack
+					direction="row"
+					gap="s"
+					m="-s"
+					fontSize="l"
+					justifyContent="center"
+					style={{ backgroundColor: palette['secondary ui background'] }}
+				>
 					<Box style={{ color: palette.icon }} title="Icon">
 						★
 					</Box>
 					<Box style={{ color: palette['active icon'] }} title="Active icon">
 						★
 					</Box>
-					<Box style={{ color: palette.accent }} title="Accent">
+					<Box style={{ color: palette['shy accent'] }} title="Shy accent">
+						★
+					</Box>
+					<Box style={{ color: palette['bold accent'] }} title="Bold accent">
 						★
 					</Box>
 				</Stack>
