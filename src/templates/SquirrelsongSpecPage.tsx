@@ -119,7 +119,7 @@ function ColorCell({
 				{name}
 			</Box>
 			<Box as="code" fontSize="xs">
-				{hex.toUpperCase()}
+				{hex}
 			</Box>
 			<Box as="code" fontSize="xs">
 				{rgb}
@@ -366,7 +366,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 					backgroundColor: palette.selectionBackground,
 				}}
 			>
-				selectionForeground/selectionBackground
+				selectionBackground
 			</Box>
 			<Box
 				mx="-s"
@@ -387,6 +387,54 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				}}
 			>
 				lineHighlightBackground
+			</Box>
+			<Box
+				px="s"
+				style={{
+					color: palette.infoForeground,
+					backgroundColor: palette.infoBackground,
+					borderColor: palette.infoBorder,
+					borderWidth: '1px',
+					borderStyle: 'solid',
+				}}
+			>
+				infoForeground/infoBackground/infoBorder
+			</Box>
+			<Box
+				px="s"
+				style={{
+					color: palette.successForeground,
+					backgroundColor: palette.successBackground,
+					borderColor: palette.successBorder,
+					borderWidth: '1px',
+					borderStyle: 'solid',
+				}}
+			>
+				successForeground/successBackground/successBorder
+			</Box>
+			<Box
+				px="s"
+				style={{
+					color: palette.warningForeground,
+					backgroundColor: palette.warningBackground,
+					borderColor: palette.warningBorder,
+					borderWidth: '1px',
+					borderStyle: 'solid',
+				}}
+			>
+				warningForeground/warningBackground/warningBorder
+			</Box>
+			<Box
+				px="s"
+				style={{
+					color: palette.errorForeground,
+					backgroundColor: palette.errorBackground,
+					borderColor: palette.errorBorder,
+					borderWidth: '1px',
+					borderStyle: 'solid',
+				}}
+			>
+				errorForeground/errorBackground/errorBorder
 			</Box>
 			<Box
 				px="s"
@@ -460,10 +508,13 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 					<Box style={{ color: palette.activeIcon }} title="activeIcon">
 						★
 					</Box>
-					<Box style={{ color: palette.shyAccent }} title="shyAccent">
+					<Box style={{ color: palette.accent1 }} title="accent1">
 						★
 					</Box>
-					<Box style={{ color: palette.boldAccent }} title="boldAccent">
+					<Box style={{ color: palette.accent2 }} title="accent2">
+						★
+					</Box>
+					<Box style={{ color: palette.accent3 }} title="accent3">
 						★
 					</Box>
 				</Stack>
