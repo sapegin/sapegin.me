@@ -113,12 +113,12 @@ const updateTips = (contents: string) => {
 		contents
 			// Replace paragraph breaks inside tips with double <br>
 			.replaceAll(
-				new RegExp(`\\s*([${keysMask}])>\\s*([${keysMask}])>\\s*`, 'gm'),
+				new RegExp(String.raw`\s*([${keysMask}])>\s*([${keysMask}])>\s*`, 'gm'),
 				'<br><br>'
 			)
 			// Replace the first tip marker in a block with a text marker (**Info:**)
 			.replaceAll(
-				new RegExp(`\\n([${keysMask}])> `, 'gm'),
+				new RegExp(String.raw`\n([${keysMask}])> `, 'gm'),
 				(_match, marker: keyof typeof TIPS) => {
 					return `\n**${TIPS[marker]}:** `;
 				}
@@ -146,7 +146,7 @@ const getTaggedList = (contents: string, tag: string) => {
 	const [, markdown] =
 		contents.match(
 			new RegExp(
-				`<!-- ${tag}:start -->\\s*([\\S\\s]*)\\s*<!-- ${tag}:end -->`,
+				String.raw`<!-- ${tag}:start -->\s*([\S\s]*)\s*<!-- ${tag}:end -->`,
 				'm'
 			)
 		) ?? [];

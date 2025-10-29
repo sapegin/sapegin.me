@@ -198,24 +198,24 @@ For example, aligning object values or the right-hand side of assignments horizo
 
 ```js
 var fs = require('fs'),
-  readme = require('./readme'),
-  examples = readme(fs.readFileSync('./README.md', 'utf8'));
+  path = require('path'),
+  readline = require('readline');
 ```
 
 Editing code written in this style takes an enormous amount of work. Luckily, code formatters will remove all the artisanal, handcrafted spaces and make code look equally good without requiring any extra work from a developer:
 
 ```js
 var fs = require('fs'),
-  readme = require('./readme'),
-  examples = readme(fs.readFileSync('./README.md', 'utf8'));
+  path = require('path'),
+  readline = require('readline');
 ```
 
 I’d go one step further and replace the single `var` with one `var` per assignment (or even better, `const`):
 
 ```js
 const fs = require('fs');
-const readme = require('./readme');
-const examples = readme(fs.readFileSync('./README.md', 'utf8'));
+const path = require('path');
+const readline = require('readline');
 ```
 
 This will not only make it slightly more readable but also make it easier to add, remove, or move variable declarations.

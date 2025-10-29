@@ -225,11 +225,11 @@ Reducers and state machines are even more powerful with TypeScript, allowing us 
 type Status = 'Idle' | 'Loading' | 'Ready' | 'Failed';
 type ActionType = 'Load' | 'LoadSuccess' | 'LoadFailed';
 
-type Tweet = {
+interface Tweet {
   id: string;
   username: string;
   html: string;
-};
+}
 
 type State =
   | {

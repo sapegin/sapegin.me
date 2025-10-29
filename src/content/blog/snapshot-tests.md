@@ -101,6 +101,8 @@ expect(className).toMatchInlineSnapshot(
 
   Babel plugins are a good example of that, see [babel-plugin-tester](https://github.com/babel-utils/babel-plugin-tester):
 
+<!-- eslint-disable unicorn/prefer-string-raw -->
+
 ```js
 exports[`macros basic usage: basic usage 1`] = `
 "

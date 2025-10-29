@@ -102,9 +102,9 @@ I use multiple cursors all the time when editing code. Usually, I use them one o
 Imagine we have this code, and we want to replace `require`s with more modern `import`s:
 
 ```js
-const fs = require('fs-extra');
-const glob = require('glob');
-const userHome = require('user-home');
+const fs = require('fs');
+const path = require('path');
+const readline = require('readline');
 ```
 
 Here’s how I’d do it:
@@ -123,9 +123,9 @@ Here’s how I’d do it:
 We’ll end up with this after reformatting the code:
 
 ```js
-import fs from 'fs-extra';
-import glob from 'glob';
-import userHome from 'user-home';
+import fs from 'fs';
+import path from 'path';
+import readline from 'readline';
 ```
 
 Another approach is to use **add selection to the next find match**, so instead of steps 1–3, we do:
