@@ -5,7 +5,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
-import { globSync } from 'glob';
 import matter from 'gray-matter';
 import GithubSlugger from 'github-slugger';
 import _ from 'lodash';
@@ -172,7 +171,7 @@ execSync(`curl "${REPO_TAR_GZ}" | tar xz`);
 console.log();
 console.log('[BOOK] Reading files...');
 
-const files = globSync(`${BLOG_CONTENT_DIR}/*.md`);
+const files = fs.globSync(`${BLOG_CONTENT_DIR}/*.md`);
 const allPosts: Post[] = files.map((filepath) => {
 	const contents = read(filepath);
 	const post = matter(contents);
@@ -328,7 +327,7 @@ fs.writeFileSync(
 );
 
 console.log('[BOOK] Generate files for LLMs.txt...');
-const chapters = globSync(`${REPO_DIR}/manuscript/*.md`);
+const chapters = fs.globSync(`${REPO_DIR}/manuscript/*.md`);
 
 fs.mkdirSync(BOOK_CONTENT_DIR, { recursive: true });
 

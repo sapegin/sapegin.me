@@ -22,7 +22,7 @@
     "prepare": "husky; panda codegen"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "browserslist": [
     ">1%",
@@ -41,7 +41,6 @@
     "astro": "^5.15.2",
     "astro-og-canvas": "^0.7.2",
     "github-slugger": "^2.0.0",
-    "glob": "^11.0.3",
     "gray-matter": "^4.0.3",
     "image-size": "^2.0.2",
     "lodash": "^4.17.21",
@@ -62,6 +61,7 @@
   "devDependencies": {
     "@eslint/markdown": "^7.5.0",
     "@types/markdown-it": "^14.1.2",
+    "@types/node": "24.9.2",
     "@types/sanitize-html": "^2.16.0",
     "eslint": "^9.38.0",
     "eslint-config-tamia": "^9.7.0",

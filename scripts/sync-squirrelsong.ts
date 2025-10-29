@@ -5,7 +5,6 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { execSync } from 'node:child_process';
 import _ from 'lodash';
-import { globSync } from 'glob';
 import { upperFirst } from '../src/util/upperFirst.ts';
 
 const REPO_TAR_GZ =
@@ -93,7 +92,7 @@ fs.rmSync(`${REPO_DIR}/sample`, { recursive: true, force: true });
 
 console.log('[SQRLSNG] Generating site pages...');
 
-const readmes = globSync(`${REPO_DIR}/themes/*/Readme.md`);
+const readmes = fs.globSync(`${REPO_DIR}/themes/*/Readme.md`);
 
 fs.mkdirSync(DEST_DIR, { recursive: true });
 
