@@ -4,15 +4,13 @@ import { colors, lineHeights } from '../../theme';
 import { hexToRgb } from '../../util/hexToRgb';
 import type { Post } from '../../types/Post';
 
-const background = hexToRgb(colors.background);
-
 export const { getStaticPaths, GET } = OGImageRoute({
 	param: 'route',
 	pages: import.meta.glob('/src/content/**/*.md', { eager: true }),
 	getImageOptions: (_path, page: { frontmatter: Post }) => ({
 		title: page.frontmatter.title,
 		description: `By ${SITE_AUTHOR}`,
-		bgGradient: [background],
+		bgGradient: [hexToRgb(colors.background)],
 		padding: 48,
 		border: {
 			color: hexToRgb(colors.accent),
