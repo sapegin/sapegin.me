@@ -1,7 +1,7 @@
 import { type Config } from '@pandacss/dev';
 
 export const colors = {
-	background: '#fff',
+	background: '#ffffff',
 	text: '#3a3d40',
 	secondary: '#75757c',
 	light: '#94949e',
