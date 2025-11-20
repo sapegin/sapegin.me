@@ -23,7 +23,6 @@ export default function remarkImages() {
 
 			const filepath = path.resolve('./public', `.${node.url}`);
 			const buffer = fs.readFileSync(filepath);
-			// @ts-expect-error Looks like image-size types are incorrect
 			const { width, height } = imageSize(buffer);
 
 			const img = `
