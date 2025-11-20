@@ -1,5 +1,5 @@
-import { getCollection, getEntry } from 'astro:content';
 import type { APIRoute, GetStaticPaths } from 'astro';
+import { getCollection, getEntry } from 'astro:content';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const posts = await getCollection('bookChapters');

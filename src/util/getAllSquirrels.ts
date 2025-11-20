@@ -1,5 +1,5 @@
-import _ from 'lodash';
 import { getCollection } from 'astro:content';
+import _ from 'lodash';
 import { squirrelEntryToSquirrel } from './squirrelEntryToSquirrel';
 
 /**

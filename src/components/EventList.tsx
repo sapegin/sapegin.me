@@ -1,11 +1,11 @@
 import Group from 'react-group';
-import { Box } from './Box';
-import { Stack } from './Stack';
-import { Heading } from './Heading';
-import { Text } from './Text';
-import { Link } from './Link';
-import { EventName } from './EventName';
 import type { Gig } from '../types/Gig';
+import { Box } from './Box';
+import { EventName } from './EventName';
+import { Heading } from './Heading';
+import { Link } from './Link';
+import { Stack } from './Stack';
+import { Text } from './Text';
 
 interface Props {
 	items: Gig[];

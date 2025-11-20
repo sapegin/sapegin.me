@@ -1,5 +1,5 @@
+import type { Html, Root, Text } from 'mdast';
 import { visit } from 'unist-util-visit';
-import type { Root, Text, Html } from 'mdast';
 import typo from '../typo';
 
 /*

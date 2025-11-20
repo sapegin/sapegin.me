@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
 import { expander } from '../../styled-system/patterns/expander';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 export type ExpanderProps<C extends ElementType> = Omit<
 	BoxProps<C>,

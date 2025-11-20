@@ -1,10 +1,10 @@
-import { Stack } from '../components/Stack';
+import { EventList } from '../components/EventList';
 import { Heading } from '../components/Heading';
 import { Link } from '../components/Link';
-import { EventList } from '../components/EventList';
-import { PageWithTitle } from './PageWithTitle';
-import type { Gig } from '../types/Gig';
+import { Stack } from '../components/Stack';
 import { TextTypo } from '../components/TextTypo';
+import type { Gig } from '../types/Gig';
+import { PageWithTitle } from './PageWithTitle';
 
 interface Props {
 	url: string;

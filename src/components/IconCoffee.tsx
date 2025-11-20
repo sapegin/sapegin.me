@@ -1,5 +1,5 @@
 import { css } from '../../styled-system/css';
-import { IconBase, type BaseIconProps } from './IconBase';
+import { type BaseIconProps, IconBase } from './IconBase';
 
 const SIZE = 36;
 

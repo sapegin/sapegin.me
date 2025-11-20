@@ -1,7 +1,7 @@
+import type { Post } from '../types/Post';
 import { Heading } from './Heading';
 import { PostList } from './PostList';
 import { Stack } from './Stack';
-import type { Post } from '../types/Post';
 
 interface Props {
 	posts: Post[];

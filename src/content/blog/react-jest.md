@@ -140,7 +140,7 @@ Update your `package.json`:
 Create a `test/jestsetup.js` file to customize Jest environment (see `setupFiles` above):
 
 ```javascript
-import Enzyme, { shallow, render, mount } from 'enzyme';
+import Enzyme, { mount, render, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 // React 16 Enzyme adapter

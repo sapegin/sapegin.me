@@ -184,7 +184,7 @@ npx msw init public/
 Create another JavaScript module that will register our Service Worker with our mocks, [src/mocks/browser.js](https://github.com/sapegin/cypress-article-2020/blob/master/src/mocks/browser.js):
 
 ```js
-import { setupWorker, rest } from 'msw';
+import { rest, setupWorker } from 'msw';
 import { handlers } from './handlers';
 
 // This configures a Service Worker with the given request handlers

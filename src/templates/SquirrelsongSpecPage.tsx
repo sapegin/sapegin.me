@@ -1,12 +1,12 @@
-import { Stack } from '../components/Stack';
-import { Box } from '../components/Box';
-import { PageWithTitle } from './PageWithTitle';
-import { Heading } from '../components/Heading';
-import { Text } from '../components/Text';
-import { Grid } from '../components/Grid';
 import { css } from '../../styled-system/css';
-import { VisuallyHidden } from '../components/VisuallyHidden';
+import { Box } from '../components/Box';
+import { Grid } from '../components/Grid';
+import { Heading } from '../components/Heading';
 import { Link } from '../components/Link';
+import { Stack } from '../components/Stack';
+import { Text } from '../components/Text';
+import { VisuallyHidden } from '../components/VisuallyHidden';
+import { PageWithTitle } from './PageWithTitle';
 
 export interface ColorSpec {
 	name: string;
@@ -273,6 +273,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 			style={{ backgroundColor: palette.textBackground }}
 		>
 			<style
+				// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
 				dangerouslySetInnerHTML={{
 					__html: `
 			.${id}__link {

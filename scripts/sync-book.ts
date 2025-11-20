@@ -2,11 +2,11 @@
 
 // TODO: Make a map of all sections with an ID and validate all chapter links
 
+import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import { execSync } from 'node:child_process';
-import matter from 'gray-matter';
 import GithubSlugger from 'github-slugger';
+import matter from 'gray-matter';
 import _ from 'lodash';
 import { SITE_URL } from '../src/constants.ts';
 import { upperFirst } from '../src/util/upperFirst.ts';

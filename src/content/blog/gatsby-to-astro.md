@@ -97,7 +97,7 @@ Here’s what I’d write using styled-components:
 // Hola.tsx
 import type { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Box, Stack, Heading, IconCoffee } from '.';
+import { Box, Heading, IconCoffee, Stack } from '.';
 
 interface Props {
   children: ReactNode;
@@ -151,8 +151,8 @@ export const icon = style({
 
 // Hola.tsx
 import type { ReactNode } from 'react';
-import { Stack, Heading, IconCoffee } from '.';
-import { name, icon } from './Hola.css';
+import { Heading, IconCoffee, Stack } from '.';
+import { icon, name } from './Hola.css';
 
 interface Props {
   children: ReactNode;

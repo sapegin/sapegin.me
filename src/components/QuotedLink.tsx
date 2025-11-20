@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
 import { quotedLink } from '../../styled-system/patterns/quoted-link';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 export type QuotedLinkProps<C extends ElementType> = Omit<
 	BoxProps<C>,

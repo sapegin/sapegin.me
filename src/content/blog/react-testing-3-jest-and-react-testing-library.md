@@ -125,8 +125,8 @@ The best location for a test is close to the source code. For example, if we hav
 So, let’s create [out first test](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/Hello.spec.js):
 
 ```jsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+import React from 'react';
 
 test('hello world', () => {
   render(<p>Hello Jest!</p>);
@@ -283,8 +283,8 @@ Check the Testing Library docs for more details on [which query to use](https://
 These tests can be useful when our component has several variations and we want to test that a certain combination of props renders the correct variation.
 
 ```jsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+import React from 'react';
 import Pizza from '../Pizza';
 
 test('contains all ingredients', () => {
@@ -304,9 +304,9 @@ test('contains all ingredients', () => {
 To simulate user interaction, like clicking or typing, use [user-event](https://github.com/testing-library/user-event) methods, and then [test the output](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/ExpandCollapse.spec.js):
 
 ```jsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import ExpandCollapse from '../ExpandCollapse';
 
 test('button expands and collapses the content', async () => {
@@ -344,9 +344,9 @@ When we unit test a single component, event handlers are often defined in the pa
 [jest.fn()](https://jestjs.io/docs/en/jest-object#jestfnimplementation) creates a _mock function_, or a _spy_, that [allows us to check](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/Login.spec.js) how many times it was called and with which parameters.
 
 ```jsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import Login from '../Login';
 
 test('submits username and password', async () => {
@@ -483,9 +483,9 @@ When we use our component without passing the `fetchIngredients` prop, it’ll u
 But [in a test](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/RemotePizza_di.spec.js) we’re passing a custom implementation, that returns mock data instead:
 
 ```jsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import RemotePizza from '../RemotePizza';
 
 const ingredients = ['bacon', 'tomato', 'mozzarella', 'pineapples'];
@@ -531,11 +531,11 @@ Then import it in a component:
 And now we can mock it [in our test](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/RemotePizza_jestmock.spec.js):
 
 ```jsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import RemotePizza from '../RemotePizza';
+import React from 'react';
 import { fetchIngredients } from '../../services';
+import RemotePizza from '../RemotePizza';
 
 jest.mock('../../services');
 
@@ -597,9 +597,9 @@ export { server };
 And then we can [use this mock server in our tests](https://github.com/sapegin/rtl-article-2019/blob/master/src/components/__tests__/RemotePizza_msw.spec.js):
 
 ```jsx
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import { server } from '../../mocks/server';
 import RemotePizza from '../RemotePizza';
 

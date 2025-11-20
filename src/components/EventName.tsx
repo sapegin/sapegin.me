@@ -1,5 +1,5 @@
-import Group from 'react-group';
 import type { ReactNode } from 'react';
+import Group from 'react-group';
 import type { TalkType } from '../types/Gig';
 import { VisuallyHidden } from './VisuallyHidden';
 

@@ -1,8 +1,8 @@
-import path from 'node:path';
 import fs from 'node:fs';
-import { visit } from 'unist-util-visit';
-import type { Root, Image, Html } from 'mdast';
+import path from 'node:path';
 import { imageSize } from 'image-size';
+import type { Html, Image, Root } from 'mdast';
+import { visit } from 'unist-util-visit';
 
 /*
  * Add dimensions, lazy loading, and captions to Markdown images.

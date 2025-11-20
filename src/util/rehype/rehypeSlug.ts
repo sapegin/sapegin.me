@@ -1,7 +1,7 @@
 import GithubSlugger from 'github-slugger';
+import type { Root } from 'hast';
 import { toString } from 'hast-util-to-string';
 import { visit } from 'unist-util-visit';
-import type { Root } from 'hast';
 
 const slugs = new GithubSlugger();
 

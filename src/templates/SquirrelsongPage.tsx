@@ -15,8 +15,8 @@ import { Stack } from '../components/Stack';
 import { Text } from '../components/Text';
 import { TextTypo } from '../components/TextTypo';
 import { VisuallyHidden } from '../components/VisuallyHidden';
-import { Page } from './Page';
 import type { Squirrel } from '../types/Squirrel';
+import { Page } from './Page';
 
 interface Props {
 	url: string;

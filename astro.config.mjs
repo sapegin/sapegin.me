@@ -1,15 +1,15 @@
 import fs from 'node:fs';
-import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-import rehypePrettyCode from 'rehype-pretty-code';
+import { defineConfig } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import remarkTips from './src/util/remark/remarkTips';
+import rehypePrettyCode from 'rehype-pretty-code';
+import { SITE_URL } from './src/constants';
+import theme from './src/styles/shiki-themes/blog.color-theme.json';
+import rehypeSlug from './src/util/rehype/rehypeSlug';
 import remarkImages from './src/util/remark/remarkImages';
 import remarkRichtypo from './src/util/remark/remarkRichtypo';
-import rehypeSlug from './src/util/rehype/rehypeSlug';
-import theme from './src/styles/shiki-themes/blog.color-theme.json';
-import { SITE_URL } from './src/constants';
+import remarkTips from './src/util/remark/remarkTips';
 
 const getFileByUrl = (url) => {
 	const relativeUrl = url.replace(SITE_URL, '');

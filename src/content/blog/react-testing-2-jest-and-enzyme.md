@@ -107,8 +107,8 @@ The best location for a test is close to the source code. For example, if you ha
 So, let’s create our first test:
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 
 test('hello world', () => {
   const wrapper = mount(<p>Hello Jest!</p>);
@@ -265,8 +265,8 @@ Check out all the examples [on CodeSandbox](https://codesandbox.io/s/github/sape
 This kind of test can be useful when your component has several variations and you want to test that a certain prop renders the correct variation.
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 import Pizza from '../Pizza';
 
 test('contains all ingredients', () => {
@@ -286,8 +286,8 @@ Here we’re testing that our `Pizza` component renders all ingredients passed t
 To “simulate” (see “To `simulate()` or not” above) an event like `click` or `change`, call the `simulate` method and then test the output:
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 import ExpandCollapse from '../ExpandCollapse';
 
 test('button expands and collapses the content', () => {
@@ -324,8 +324,8 @@ When you unit test a single component, event handlers are often defined in the p
 `jest.fn()` creates a _mock function_, or a _spy_, that allows you to check how many times it was called and with which parameters.
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 import Login from '../Login';
 
 test('submits username and password', () => {
@@ -454,8 +454,8 @@ When we use our component without passing the `fetchIngredients` prop, it’ll u
 But in tests we’ll pass a custom implementation, that returns mock data instead of making an actual network request:
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 import { act } from 'react-dom/test-utils';
 import waitForExpect from 'wait-for-expect';
 import RemotePizza from '../RemotePizza';
@@ -518,12 +518,12 @@ export default function RemotePizza() {
 And now we can mock it in our test:
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 import { act } from 'react-dom/test-utils';
 import waitForExpect from 'wait-for-expect';
-import RemotePizza from '../RemotePizza';
 import { fetchIngredients } from '../../services';
+import RemotePizza from '../RemotePizza';
 
 jest.mock('../../services');
 
@@ -560,9 +560,9 @@ We’re using Jest’s [mockResolvedValue](https://jestjs.io/docs/en/mock-functi
 We’ll use [fetch-mock](http://www.wheresrhys.co.uk/fetch-mock/) to mock the API request:
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
 import fetchMock from 'fetch-mock';
+import React from 'react';
 import { act } from 'react-dom/test-utils';
 import waitForExpect from 'wait-for-expect';
 import RemotePizza from '../RemotePizza';
@@ -602,9 +602,9 @@ Here we’re using `mock()` method from fetch-mock to return a mock response to 
 We’ll use [Nock](https://github.com/nock/nock) to mock the network request:
 
 ```jsx
-import React from 'react';
 import { mount } from 'enzyme';
 import nock from 'nock';
+import React from 'react';
 import { act } from 'react-dom/test-utils';
 import waitForExpect from 'wait-for-expect';
 import RemotePizza from '../RemotePizza';

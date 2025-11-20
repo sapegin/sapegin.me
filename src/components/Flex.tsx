@@ -1,6 +1,6 @@
 import { type ElementType } from 'react';
 import { flex } from '../../styled-system/patterns/flex';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 export type FlexProps<C extends ElementType> = Omit<BoxProps<C>, 'className'>;
 

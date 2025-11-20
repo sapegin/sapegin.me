@@ -3,7 +3,7 @@ import {
 	stack,
 	type StackProperties,
 } from '../../styled-system/patterns/stack';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 export type StackProps<C extends ElementType> = Omit<BoxProps<C>, 'className'> &
 	StackProperties;

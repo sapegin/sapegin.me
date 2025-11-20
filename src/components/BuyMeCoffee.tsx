@@ -1,8 +1,8 @@
 import { Box } from './Box';
-import { Stack } from './Stack';
-import { IconCoffee } from './IconCoffee';
 import { Button } from './Button';
 import { Flex } from './Flex';
+import { IconCoffee } from './IconCoffee';
+import { Stack } from './Stack';
 
 export function BuyMeCoffee() {
 	return (

@@ -3,8 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import Layout from '../../layouts/Layout.astro';
 import { SquirrelsongPage } from '../../templates/SquirrelsongPage';
-import { highlightCode, type CodeLang } from '../../util/highlightCode';
 import { getAllSquirrels } from '../../util/getAllSquirrels';
+import { type CodeLang, highlightCode } from '../../util/highlightCode';
 
 const squirrels = await getAllSquirrels();
 

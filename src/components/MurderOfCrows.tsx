@@ -1,6 +1,6 @@
-import { IconBase } from './IconBase';
-import { Box } from './Box';
 import { css } from '../../styled-system/css';
+import { Box } from './Box';
+import { IconBase } from './IconBase';
 
 const SIZE = 34;
 

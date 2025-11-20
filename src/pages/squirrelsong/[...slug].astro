@@ -1,9 +1,9 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { SquirrelPage } from '../../templates/SquirrelPage';
-import { squirrelEntryToSquirrel } from '../../util/squirrelEntryToSquirrel';
 import { getAllSquirrels } from '../../util/getAllSquirrels';
+import { squirrelEntryToSquirrel } from '../../util/squirrelEntryToSquirrel';
 
 type Entry = CollectionEntry<'squirrels'>;
 type Props = Entry;

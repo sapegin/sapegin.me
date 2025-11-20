@@ -1,6 +1,6 @@
-import { Stack } from '../components/Stack';
 import { Heading } from '../components/Heading';
 import { PostList } from '../components/PostList';
+import { Stack } from '../components/Stack';
 import type { Post } from '../types/Post';
 import { PageWithTitle } from './PageWithTitle';
 

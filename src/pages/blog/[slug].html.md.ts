@@ -1,5 +1,5 @@
-import { getCollection, getEntry } from 'astro:content';
 import type { APIRoute, GetStaticPaths } from 'astro';
+import { getCollection, getEntry } from 'astro:content';
 import { SITE_URL } from '../../constants';
 
 export const getStaticPaths: GetStaticPaths = async () => {

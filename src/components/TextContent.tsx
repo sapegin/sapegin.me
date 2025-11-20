@@ -1,5 +1,5 @@
 import { textContent } from '../../styled-system/patterns/text-content';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 /**
  * Container for user generated content with styles for all common HTML elements.

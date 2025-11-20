@@ -1,6 +1,4 @@
 import type { ReactNode } from 'react';
-import { Text } from './Text';
-import { Link } from './Link';
 import {
 	ME_BLUESKY_HANDLE,
 	ME_BLUESKY_URL,
@@ -8,6 +6,8 @@ import {
 	ME_MASTODON_HANDLE,
 	ME_MASTODON_URL,
 } from '../constants';
+import { Link } from './Link';
+import { Text } from './Text';
 
 interface Props {
 	children?: ReactNode;

@@ -1,5 +1,5 @@
-import { Stack } from './Stack';
 import { Heading } from './Heading';
+import { Stack } from './Stack';
 import { TextTypo } from './TextTypo';
 
 interface Props {

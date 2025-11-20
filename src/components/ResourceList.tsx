@@ -1,9 +1,9 @@
 import type { Resource } from '../types/Resource';
-import { Stack } from './Stack';
-import { Grid } from './Grid';
-import { Text } from './Text';
-import { Link } from './Link';
 import { Badge } from './Badge';
+import { Grid } from './Grid';
+import { Link } from './Link';
+import { Stack } from './Stack';
+import { Text } from './Text';
 
 interface Props {
 	items: Resource[];

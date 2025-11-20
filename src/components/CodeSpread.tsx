@@ -1,5 +1,5 @@
-import { Grid } from './Grid';
 import { Code } from './Code';
+import { Grid } from './Grid';
 
 interface Props {
 	codes: {

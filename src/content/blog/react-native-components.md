@@ -114,7 +114,7 @@ export const Elements = {
 } as const;
 
 // elements.native.ts
-import { View, Text } from 'react-native';
+import { Text, View } from 'react-native';
 export const Elements = {
   div: View,
   h1: Text,
@@ -156,8 +156,8 @@ export const Link = ({ href, children }) => (
 
 // Link.native.tsx
 import {
-  Text,
   Linking,
+  Text,
   TouchableWithoutFeedback
 } from 'react-native';
 export const Link = ({ href, children }) => (

@@ -1,6 +1,6 @@
 import { type ElementType } from 'react';
 import { cva, type RecipeVariantProps } from '../../styled-system/css';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 const text = cva({
 	base: {

@@ -1,6 +1,6 @@
 import { type ImgHTMLAttributes } from 'react';
 import { css } from '../../styled-system/css';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 /**
  * Responsive image.

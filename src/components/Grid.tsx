@@ -1,6 +1,6 @@
 import { type ElementType } from 'react';
 import { grid, type GridProperties } from '../../styled-system/patterns/grid';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 export type GridProps<C extends ElementType> = Omit<BoxProps<C>, 'className'> &
 	GridProperties;

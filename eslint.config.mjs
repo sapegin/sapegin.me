@@ -1,6 +1,7 @@
+import markdown from '@eslint/markdown';
+import reactPlugin from '@eslint-react/eslint-plugin';
 import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
 import eslintPluginAstro from 'eslint-plugin-astro';
-import markdown from '@eslint/markdown';
 import jsxAccessibility from 'eslint-plugin-jsx-a11y';
 import tseslint from 'typescript-eslint';
 
@@ -26,6 +27,7 @@ export default [
 		rules: {
 			// Disable rules that require types
 			...tseslint.configs.disableTypeChecked.rules,
+			...reactPlugin.configs['disable-type-checked'].rules,
 
 			// Can't disable these for a particular example because
 			// of the prettier-ignore comment

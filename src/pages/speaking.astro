@@ -1,9 +1,9 @@
 ---
+import _ from 'lodash';
+import data from '../data/events.json';
 import Layout from '../layouts/Layout.astro';
 import { SpeakingPage } from '../templates/SpeakingPage';
-import data from '../data/events.json';
-import _ from 'lodash';
-import type { Gig, Talk, Event } from '../types/Gig';
+import type { Event, Gig, Talk } from '../types/Gig';
 
 const NOW = new Date();
 const TODAY = new Date(

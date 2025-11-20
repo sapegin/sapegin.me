@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
 import { Box } from './Box';
-import { Stack } from './Stack';
 import { Heading } from './Heading';
 import { IconCoffee } from './IconCoffee';
+import { Stack } from './Stack';
 
 interface Props {
 	children: ReactNode;

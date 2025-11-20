@@ -1,6 +1,6 @@
-import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
-import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from '../constants';
+import { getCollection } from 'astro:content';
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '../constants';
 
 function getMarkdownLinkList(
 	entries: {

@@ -1,10 +1,10 @@
-import { Stack } from './Stack';
-import { Text } from './Text';
-import { Link } from './Link';
+import type { Resource } from '../types/Resource';
+import { Box } from './Box';
 import { FormattedDate } from './FormattedDate';
 import { InlineSeparator } from './InlineSeparator';
-import { Box } from './Box';
-import type { Resource } from '../types/Resource';
+import { Link } from './Link';
+import { Stack } from './Stack';
+import { Text } from './Text';
 
 interface Props {
 	posts: Resource[];
@@ -31,7 +31,7 @@ export function PostList({
 						flexWrap="wrap"
 					>
 						<span>
-							{startIndex && (
+							{startIndex !== undefined && (
 								<Text as="span" variant="small">
 									{startIndex - index}.{' '}
 								</Text>

@@ -1,10 +1,10 @@
+import { campaigns } from '../campaigns';
+import type { Resource } from '../types/Resource';
 import { BookCover } from './BookCover';
 import { Box } from './Box';
 import { QuotedLink } from './QuotedLink';
 import { Stack } from './Stack';
 import { Text } from './Text';
-import type { Resource } from '../types/Resource';
-import { campaigns } from '../campaigns';
 
 function getCampaign(url: string) {
 	if (url === '/book/') {

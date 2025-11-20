@@ -1,6 +1,6 @@
 import { type ElementType } from 'react';
 import { visuallyHidden } from '../../styled-system/patterns/visually-hidden';
-import { createBox, type BoxProps } from './Box';
+import { type BoxProps, createBox } from './Box';
 
 export type VisuallyHiddenProps<C extends ElementType> = Omit<
 	BoxProps<C>,

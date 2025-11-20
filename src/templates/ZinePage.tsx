@@ -40,10 +40,12 @@ export function ZinePage({ url, title, issues }: Props) {
 								<Stack gap="m">
 									<TextContent>
 										<Text
+											// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
 											dangerouslySetInnerHTML={{ __html: issue.description }}
 										/>
 										<Text
 											variant="small"
+											// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
 											dangerouslySetInnerHTML={{ __html: issue.meta }}
 										/>
 									</TextContent>

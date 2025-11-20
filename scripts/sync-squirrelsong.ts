@@ -1,9 +1,9 @@
 // Get themes from the Squirrelsong repo
 // Create pages with instructions for each theme
 
-import path from 'node:path';
-import fs from 'node:fs';
 import { execSync } from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
 import _ from 'lodash';
 import { upperFirst } from '../src/util/upperFirst.ts';
 
