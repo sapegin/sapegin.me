@@ -188,7 +188,7 @@ Think of it as a slightly smarter Stack Overflow or an assistant who can google 
 
 ![ChatGPT with some coding question](/images/focus-chatgpt.png)
 
-**Tip:** I usually use ChatGPT via [QuckGPT app](https://sindresorhus.com/quickgpt).
+**Tip:** I usually use ChatGPT via [QuickGPT app](https://sindresorhus.com/quickgpt).
 
 ## Choose a non-distracting color scheme for your editor
 

@@ -174,7 +174,7 @@ Snapshot testing sounds like a good idea, but has [several problems](/blog/snaps
 - coupling with low-level modules;
 - test intentions are hard to understand;
 - they give a false sense of security
-- they don’t prove that the app work or even look as exepected.
+- they don’t prove that the app work or even look as expected.
 
 Avoid snapshot testing except testing short output with clear intent, like class names or error messages, or when we _really_ want to verify that the output is the same.
 
@@ -214,12 +214,12 @@ Let’s compare different methods of querying DOM elements:
 | `[alt="Chuck Norris"]`, `[role="banner"]` | Often | Good: still not visible to users, but already part of the app UI |
 | `[children="Cook pizza!"]` | Always | Best: visible to the user part of the app UI |
 
-To summarise:
+To summarize:
 
 - Text content may change and we’ll need to update our tests. This is good: we want our test to work with the actual text users see in the app.
 - Test IDs clutter the markup with props we only need in tests. Test IDs are also something that users of our app don’t see: if we remove a label from a button, a test with test ID will still pass.
 
-Testing Library has methods for all good queries, they are called _sematic queries_. There are [six variants of query methods](https://testing-library.com/docs/queries/about/#types-of-queries):
+Testing Library has methods for all good queries, they are called _semantic queries_. There are [six variants of query methods](https://testing-library.com/docs/queries/about/#types-of-queries):
 
 - `getBy*()` returns the first matching element and throws when an element not found or more than one element found;
 - `queryBy*()` returns the first matching element but doesn’t throw;
@@ -280,7 +280,7 @@ Check the Testing Library docs for more details on [which query to use](https://
 
 ### Testing rendering
 
-These tests can be useful when our component has several variations and we want to test that a certain combinnation of props renders the correct variation.
+These tests can be useful when our component has several variations and we want to test that a certain combination of props renders the correct variation.
 
 ```jsx
 import React from 'react';
@@ -626,7 +626,7 @@ Here we’re starting the mock server before running the first test and stopping
 
 To summarize the difference between `jest.mock()` and Mock Service Worker:
 
-- `jest.mock()` is already available with Jest and we don’t need to set up and learn anything new — it works the same way as mocking any other module, however it dependes on the implementation of service modules and may break tests when the implementaiton changes.
+- `jest.mock()` is already available with Jest and we don’t need to set up and learn anything new — it works the same way as mocking any other module, however it depends on the implementation of service modules and may break tests when the implementation changes.
 - Mock Service Worker has a specialized API to describe network requests and responses, and debugging tools to help us when something isn’t working. It’s easier to customize responses for particular tests. It also works the same way in the browser and Node.js so we could reuse mocks.
 
 ### Debugging

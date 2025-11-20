@@ -124,7 +124,7 @@ _Example: “Username:” in English would be “Nom d’utilisateur :” in Fre
 
 The same English strings may be translated differently in different contexts, or a translation can be tweaked for a specific page without realizing it would affect other pages.
 
-Create unique localization strings for your features, instaed of reusing phrases that look the same in English in many places.
+Create unique localization strings for your features, instead of reusing phrases that look the same in English in many places.
 
 **Bad:**
 

@@ -97,7 +97,7 @@ Cons:
 
 ## RequireJS bundles
 
-Bundle is a special module, which you create with [the RequieJS optimizer](http://requirejs.org/docs/optimization.html). Any time you require one of the modules inside the bundle RequireJS will load the bundle instead.
+Bundle is a special module, which you create with [the RequireJS optimizer](http://requirejs.org/docs/optimization.html). Any time you require one of the modules inside the bundle RequireJS will load the bundle instead.
 
 ```javascript
 // config.js

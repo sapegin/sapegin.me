@@ -39,7 +39,7 @@ docpad run --env en  # Run local server with English version
 docpad generate --env ru  # Generate files for Russian version
 ```
 
-## Translating unser interface
+## Translating user interface
 
 Create YAML files for every language.
 
@@ -81,7 +81,7 @@ docpadConfig = {
       moment(date).format('LL')  # December 23 2013
 
     # Translated string
-    # Will return input string if thanslation not found
+    # Will return input string if translation not found
     # You can use simple templates: @_ 'Lorem {num} ipsum', num: 42
     _: (s, params=null) ->
       params ?= []

@@ -170,6 +170,6 @@ I’m quite happy with my current setup:
 - NuPhy Air60 mechanical keyboard with a leather case;
 - iA Writer as a main writing app.
 
-The overall weight (almost 1.5 kg) is comparable to a MacBook, but I like the comfort and flexibility of the external mechanical keyboard. I also like the single-taskedness of the iPad, which allows me to better focus on writing.
+The overall weight (almost 1.5 kg) is comparable to a MacBook, but I like the comfort and flexibility of the external mechanical keyboard. I also like the singletaskedness of the iPad, which allows me to better focus on writing.
 
 And if I want to go out to do some coding, I’ll take my MacBook instead.

@@ -58,7 +58,7 @@ This has several benefits:
 - **Easier debugging:** each commit corresponds to a pull request, so once we find where the bug was introduced, we know which pull request is responsible for it.
 - **Easier reverts:** we revert a complete feature, so the author could fix it, retest, and submit it as a new pull request. Reverting a whole pull request brings the project back to a previous known working state, reverting atomic commits will have unpredictable consequences, and likely break something.
 
-**Tip:** Allow only squash merging on GitHub, and aisable other merge types. Also, disable force pushing to prevent various problems, like overwriting someone else’s work.
+**Tip:** Allow only squash merging on GitHub, and disable other merge types. Also, disable force pushing to prevent various problems, like overwriting someone else’s work.
 
 ![Squash and merge pull request on GitHub](/images/squash-and-merge.png)
 
