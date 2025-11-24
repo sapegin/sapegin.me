@@ -1,3 +1,4 @@
+import { Banner } from './Banner';
 import { Box } from './Box';
 import { Logo, LOGO_WIDTH } from './Logo';
 import { Menu } from './Menu';
@@ -34,6 +35,7 @@ export function Header({ url }: Props) {
 			>
 				Skip to content
 			</Box>
+			<Banner />
 			<Box
 				width={{ tablet: LOGO_WIDTH }}
 				mx="auto"
