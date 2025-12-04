@@ -10,7 +10,7 @@ export interface Campaign {
 // TODO: Add a separate discounted URL
 export const campaigns: Record<string, Campaign> = {
 	washingCode: {
-		enabled: true,
+		enabled: false,
 		badge: 'Now 50% off!',
 		banner: 'Black Friday deal: get my book on clean code with 50% off',
 		price: 20,
