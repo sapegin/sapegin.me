@@ -29,10 +29,6 @@ export function ManPage({ url }: Props) {
 								but sleepy all day)
 							</TextTypo>
 							<TextTypo as="li">
-								<span aria-hidden="true">🥨</span> Live in Berlin, Germany, but
-								originally from Soviet Russia
-							</TextTypo>
-							<TextTypo as="li">
 								<span aria-hidden="true">☕️</span> Like coffee, tacos, books,
 								nature
 							</TextTypo>
@@ -54,9 +50,8 @@ export function ManPage({ url }: Props) {
 							<TextTypo as="li">
 								<span aria-hidden="true">💾</span> Check out my{' '}
 								<Link href="/blog/">blog</Link>,{' '}
-								<Link href="/book/">book on clean code</Link>,{' '}
-								<Link href="https://morning.photos/">photos</Link>, and{' '}
-								<Link href="https://tacohuaco.co/">recipes</Link>
+								<Link href="/book/">book on clean code</Link>, and
+								<Link href="https://morning.photos/">photos</Link>.
 							</TextTypo>
 						</Stack>
 						<Box
@@ -87,10 +82,16 @@ export function ManPage({ url }: Props) {
 					<TextTypo>
 						I prefer written asynchronous communication over calls. It allows me
 						to reread the question multiple times, think about what to answer,
-						edit the text to make it clear, and have your response to reference
-						later. I have trouble staying focused during calls and quickly
-						forget important details (unless I make notes, which makes it even
-						harder to focus).
+						edit the text to make it clear, and have your response in text form
+						to reference later. I have trouble staying focused during calls and
+						quickly forget important details unless I make notes.
+					</TextTypo>
+					<TextTypo>
+						I work in a way that I call _progressive JPEG method_: I try to make
+						a minimal working version of a task as soon as possible, and share
+						it, so I can have early and continuous feedback. It also means, if
+						there’s a deadline, there are more chances we’ll have something to
+						deploy.
 					</TextTypo>
 					<TextTypo>
 						Probably, I’ll decline a “quick” call right now or a request to join
@@ -106,15 +107,17 @@ export function ManPage({ url }: Props) {
 						Lunch is sacred, and I have time for lunch blocked every day in my
 						calendar. Also, you don’t want to work with me when I’m hangry.
 					</TextTypo>
-					<TextTypo>I mostly work between 9am and 5pm CET.</TextTypo>
 					<TextTypo>
-						I’m always “away” in chat. It doesn’t mean I’m not there but don’t
+						I mostly work between 9am and 5pm{' '}
+						<abbr title="Central European Time">CET</abbr>.
+					</TextTypo>
+					<TextTypo>
+						I’m always “away” in chat. It doesn’t mean I’m not there, but don’t
 						expect an immediate answer — I often close chat and email to focus
 						on work.
 					</TextTypo>
 					<TextTypo>
-						I don’t have any work-related communication tools on my personal
-						phone, and I don’t check messages or emails during off-hours.
+						I don’t check messages or emails during off-hours.
 					</TextTypo>
 				</Stack>
 				<Stack gap="m" as="section">
@@ -126,7 +129,7 @@ export function ManPage({ url }: Props) {
 					<TextTypo>
 						I understand why are we doing something, especially regarding the
 						processes. If a certain task feels unnecessary or like a waste of
-						time, I’d do anything to avoid it.
+						time, I will do anything to avoid it.
 					</TextTypo>
 					<TextTypo>
 						I know where things are, meaning all the tools and processes I need
@@ -135,7 +138,7 @@ export function ManPage({ url }: Props) {
 					</TextTypo>
 					<TextTypo>I work with one or two people at a time.</TextTypo>
 					<TextTypo>
-						I receive feedback regularly so I know I’m moving in the right
+						I receive feedback regularly, so I know I’m moving in the right
 						direction.
 					</TextTypo>
 				</Stack>
@@ -170,7 +173,7 @@ export function ManPage({ url }: Props) {
 					<Heading level={2}>A bit of my quirks and personality</Heading>
 					<TextTypo>
 						I’m happy to meet my team for lunch or anyone for coffee one-on-one
-						once in a while but you probably won’t see me in many social
+						once in a while, but you probably won’t see me in many social
 						activities, all-company gatherings, etc.
 					</TextTypo>
 					<TextTypo>
@@ -183,8 +186,8 @@ export function ManPage({ url }: Props) {
 						is way more direct.
 					</TextTypo>
 					<TextTypo>
-						If I seem angry, I’m probably very tired, stressed, or overwhelmed.
-						Feel free to tell me about it.
+						If I seem angry, I’m probably very tired, stressed, or overwhelmed,
+						or hungry. Feel free to tell me about it.
 					</TextTypo>
 					<TextTypo>
 						I’m not good at small talk, and I’ll probably be awkwardly quiet
