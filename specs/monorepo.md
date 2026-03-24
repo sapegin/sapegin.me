@@ -23,16 +23,17 @@ Target repository (monorepo-in-a-single-package): https://github.com/sapegin/sap
 # 2. Target Structure
 
 ```
-/sites
-  /sapegin.me
-  /morning.photos
-  /tacohuaco
-/shared
-/components
-/utils
-/styles
-/packages
-  /tamia   (Tailwind v4 theme)
+/src
+  /sites
+    /sapegin.me
+    /morning.photos
+    /tacohuaco
+  /shared
+  /components
+  /utils
+  /styles
+  /packages
+    /tamia   (Tailwind v4 theme)
 /scripts
 /astro.config.mjs
 /package.json
