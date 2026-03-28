@@ -43,8 +43,8 @@ Target repository (monorepo-in-a-single-package): https://github.com/sapegin/sap
 
 # 3. Migration Order
 
-1. Prepare base Astro repo
-2. Convert Tâmia → Tailwind v4 theme
+1. Convert Tâmia → Tailwind v4 theme
+2. Prepare Astro "monorepo" switching
 3. Migrate sapegin.me
 4. Migrate morning.photos
 5. Migrate tacohuaco
