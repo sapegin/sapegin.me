@@ -42,12 +42,14 @@ npm install tailwindcss clsx
 /* Import Tailwind, Tâmia, and the theme */
 @import 'tailwindcss';
 @import '../../packages/tamia/index.css';
-@import './theme.css';
 
 /* Explicitly import each component */
 @import '../../packages/tamia/components/prose.css';
 @import '../../packages/tamia/components/input.css';
 @import '../../packages/tamia/components/button.css';
+
+/* Import site theme */
+@import './theme.css';
 ```
 
 4. Install the Prettier plugin for automatic class sorting:

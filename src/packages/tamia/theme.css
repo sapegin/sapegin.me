@@ -24,10 +24,10 @@
 	--color-text: #222;
 	--color-background: #fff;
 	--color-primary: #6e56ba;
+	--color-secondary: #75757c;
 	--color-accent: #d396c3;
 	--color-border: #ddd;
 	--color-selection: #faebaf;
-	--color-secondary: #75757c;
 
 	/* Fonts */
 	--font-body: system-ui, sans-serif;
