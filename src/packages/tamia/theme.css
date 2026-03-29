@@ -1,0 +1,87 @@
+/* @todo: Update migration with the new names (better matching default Tailwind names) */
+/* @todo: Install and document Prettier and ESLint plugins */
+
+/**
+ * Default Tâmia theme, extends default Tailwind theme (except colors, text
+ * sizes and border radii).
+ *
+ * Each site can overwrite these values, as well as add custom ones.
+ *
+ * To add dark mode:
+ *
+ * @media (prefers-color-scheme: dark) {
+ *   :root {
+ *     --color-text: #e3e6e8;
+ *     --color-background: #2e3033;
+ *     --color-primary: #89abd2;
+ *   }
+ * }
+ */
+
+@theme {
+	/* Colors (light defaults) */
+	--color-*: initial;
+	--color-text: #222;
+	--color-background: #fff;
+	--color-primary: #6e56ba;
+	--color-accent: #d396c3;
+	--color-border: #ddd;
+	--color-selection: #faebaf;
+	--color-secondary: #75757c;
+
+	/* Fonts */
+	--font-body: system-ui, sans-serif;
+	--font-heading: system-ui, sans-serif;
+	--font-code: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+	/* Font sizes */
+	--text-*: initial;
+	--text-xs: 0.75rem;
+	--text-sm: 0.9rem;
+	--text-base: 1rem;
+	--text-lg: 2rem;
+	--text-xl: 3rem;
+
+	/* Font weights */
+	--font-weight-*: initial;
+	--font-weight-normal: 400;
+	--font-weight-heading: 300;
+	--font-weight-bold: 700;
+
+	/* Line heights */
+	--leading-*: initial;
+	--leading-normal: 1.5;
+	--leading-heading: 1.1;
+	--leading-code: 1.3;
+
+	/* Semantic spacing */
+	/* Whitespace under block elements (p, h1, h2, table, etc.) */
+	--spacing-block-margin: 1rem;
+	/* Whitespace above headings (h1, h2, etc.) */
+	--spacing-heading-margin-top: 2rem;
+	/* Horizontal spacing in lists */
+	--spacing-list-margin: 1.3em;
+	/* Site content horizontal spacing */
+	--spacing-content-padding-x: 1rem;
+
+	/* Sizes */
+	/* Maximum width of text elements (p, h1, h2, blockquote, etc.) */
+	--size-text-max-width: 45rem;
+
+	/* Radii */
+	--radius-*: initial;
+	--radius-base: 0.25em;
+	--radius-button: 0.25em;
+	--radius-full: calc(infinity * 1px);
+
+	/* Borders */
+	--border-width-focus: 3px;
+	/* Distance from an element to the focus outline */
+	--border-width-focus-offset: 2px;
+
+	/* Transitions */
+	--ease-fade: ease-out;
+	--ease-hover: ease-in;
+	--duration-fade: 0.15s;
+	--duration-hover: 0.1s;
+}

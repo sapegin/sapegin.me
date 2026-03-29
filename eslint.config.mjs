@@ -2,6 +2,7 @@ import markdown from '@eslint/markdown';
 import reactPlugin from '@eslint-react/eslint-plugin';
 import tamiaTypeScriptReact from 'eslint-config-tamia/typescript-react';
 import eslintPluginAstro from 'eslint-plugin-astro';
+import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss';
 import jsxAccessibility from 'eslint-plugin-jsx-a11y';
 import tseslint from 'typescript-eslint';
 
@@ -10,6 +11,14 @@ export default [
 	...eslintPluginAstro.configs.recommended,
 	...markdown.configs.processor,
 	jsxAccessibility.flatConfigs.strict,
+	{
+		...eslintPluginBetterTailwindcss.configs.recommended,
+		settings: {
+			'better-tailwindcss': {
+				entryPoint: 'src/index.css',
+			},
+		},
+	},
 	{
 		files: ['src/env.d.ts'],
 		rules: {

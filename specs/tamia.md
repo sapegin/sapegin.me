@@ -33,7 +33,7 @@ Map every Panda token to a Tailwind v4 `@theme` variable. Per-site overrides are
 
 ```css
 @theme {
-  /* ---- Colors (light defaults) ---- */
+  /* Colors (light defaults) */
   --color-text: #222;
   --color-background: #fff;
   --color-primary: #6e56ba;
@@ -42,29 +42,29 @@ Map every Panda token to a Tailwind v4 `@theme` variable. Per-site overrides are
   --color-selection: #faebaf;
   --color-secondary: #75757c;
 
-  /* ---- Fonts ---- */
+  /* Fonts */
   --font-body: system-ui, sans-serif;
   --font-heading: system-ui, sans-serif;
   --font-code: ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* ---- Font sizes ---- */
+  /* Font sizes */
   --text-xs: 0.75rem;
   --text-s: 0.9rem;
   --text-m: 1rem;
   --text-l: 2rem;
   --text-xl: 3rem;
 
-  /* ---- Font weights ---- */
+  /* Font weights */
   --font-weight-normal: 400;
   --font-weight-heading: 300;
   --font-weight-bold: 800;
 
-  /* ---- Line heights ---- */
+  /* Line heights */
   --leading-base: 1.5;
   --leading-heading: 1.1;
   --leading-code: 1.3;
 
-  /* ---- Spacing ---- */
+  /* Spacing */
   --spacing-xxs: 0.125rem;
   --spacing-xs: 0.25rem;
   --spacing-s: 0.5rem;
@@ -74,31 +74,31 @@ Map every Panda token to a Tailwind v4 `@theme` variable. Per-site overrides are
   --spacing-xxl: 8rem;
   --spacing-xxxl: 16rem;
 
-  /* ---- Semantic spacing ---- */
+  /* Semantic spacing */
   --spacing-block-margin: 1rem;
   --spacing-heading-margin-top: 2rem;
   --spacing-list-margin: 1.3em;
   --spacing-content-padding-x: 1rem;
 
-  /* ---- Sizes ---- */
+  /* Sizes */
   --size-text-max-width: 45rem;
 
-  /* ---- Radii ---- */
+  /* Radii */
   --radius-base: 0.25em;
   --radius-button: 0.25em;
   --radius-round: 99999em;
 
-  /* ---- Borders ---- */
+  /* Borders */
   --border-width-focus: 3px;
   --border-width-focus-offset: 2px;
 
-  /* ---- Transitions ---- */
+  /* Transitions */
   --ease-fade: ease-out;
   --ease-hover: ease-in;
   --duration-fade: 0.15s;
   --duration-hover: 0.1s;
 
-  /* ---- Breakpoints ---- */
+  /* Breakpoints */
   --breakpoint-tablet: 48rem;
   --breakpoint-desktop: 62rem;
 }
@@ -290,7 +290,7 @@ These become `@utility` definitions — usable as single classes with full varia
   }
 }
 
-/* ---- Headings ---- */
+/* Headings */
 /* Base heading styles shared by all levels */
 @utility heading {
   color: var(--color-text);
@@ -322,7 +322,7 @@ These become `@utility` definitions — usable as single classes with full varia
   font-style: italic;
 }
 
-/* ---- Typography presets ---- */
+/* Typography presets */
 @utility typo-body {
   font-family: var(--font-body);
   font-size: var(--text-m);
@@ -353,7 +353,7 @@ These become `@utility` definitions — usable as single classes with full varia
 }
 /* Sites add their own typo-* variants (e.g. typo-menu, typo-intro, typo-flag) */
 
-/* ---- Frame: aspect-ratio container with cover children ---- */
+/* Frame: aspect-ratio container with cover children */
 @utility frame {
   & > :is(img, video) {
     width: 100%;
@@ -669,7 +669,7 @@ src/packages/tamia/
     - `Expander` → `<div className="expander">`
     - `Heading` → `<h1 className="heading-1">`, `<h2 className="heading-2">`, etc.
     - `Text` → `<p className="typo-body">`, `<span className="typo-small">`, etc.
-    - `Frame` → `<div className="frame aspect-[9/6]">`
+    - `Frame` → `<div className="frame aspect-9/6">`
     - `Button` → copy and adapt from component template
 16. Remove `panda.config.ts`, `styled-system/`, `@pandacss/dev` dependency
 
