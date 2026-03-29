@@ -70,7 +70,7 @@
 
 	/* Radii */
 	--radius-*: initial;
-	--radius-base: 0.25em;
+	--radius-normal: 0.25em;
 	--radius-button: 0.25em;
 	--radius-full: calc(infinity * 1px);
 

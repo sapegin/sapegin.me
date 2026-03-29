@@ -1,6 +1,6 @@
 # Tâmia
 
-An opinionated CSS Tailwind v4 theme with sensible defaults for typography, colors, spacing, and common UI patterns. Restricts and enhances the default Tailwind theme for faster decision making and improved consistency.
+An opinionated CSS Tailwind v4 theme with sensible defaults for typography, colors, spacing, and common UI patterns. Restricts and enhances the default Tailwind theme for faster decision making and improved consistency, leans towards semantic design tokens (`--radius-button`, `--leading-heading`) rather than presentational (`--radius-sm`, `--leading-snug`).
 
 This is a work-in-progress rewrite of the [tamia](https://github.com/sapegin/tamia) package.
 
@@ -101,10 +101,10 @@ export default [
 
 Most Tailwind classes work as they should, with the following additions:
 
-- `heading` / `heading-1` / `heading-2` / `heading-3` — heading typography
-- `typo-body` / `typo-bold` / `typo-small` / `typo-large` — text typography presets
+- `heading-1` / `heading-2` / `heading-3` — headings of various levels
+- `typo-body` / `typo-small` / `typo-large` — basic typography presets
 - `grid-auto-narrow` / `grid-auto-wide` — auto-fit grid layouts
-- `expander` — full-bleed on mobile
+- `expander` — makes the element full-bleed on mobile
 - `frame` — aspect-ratio container with cover children (combine with `aspect-*`)
 
 ## Tailwind components
