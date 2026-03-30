@@ -1,16 +1,17 @@
-import { type ElementType } from 'react';
-import {
-	stack,
-	type StackProperties,
-} from '../../styled-system/patterns/stack';
-import { type BoxProps, createBox } from './Box';
+import clsx from 'clsx';
+import type { ComponentPropsWithoutRef, ElementType } from 'react';
 
-export type StackProps<C extends ElementType> = Omit<BoxProps<C>, 'className'> &
-	StackProperties;
+export type StackProps<C extends ElementType = 'div'> =
+	ComponentPropsWithoutRef<C> & {
+		as?: C;
+		className?: string;
+	};
 
-export function Stack<C extends ElementType>({
-	direction,
+export function Stack<C extends ElementType = 'div'>({
+	as,
+	className,
 	...props
 }: StackProps<C>) {
-	return createBox({ ...props, className: stack({ direction }) });
+	const Component = as ?? 'div';
+	return <Component className={clsx('flex flex-col', className)} {...props} />;
 }

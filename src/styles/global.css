@@ -1,0 +1,40 @@
+pre {
+	display: 'block';
+	line-height: 'code';
+	font-size: 's';
+	font-family: 'code';
+	font-family: 'normal';
+	white-space: 'pre-wrap';
+	tab-size: 4;
+	text-size-adjust: 'none';
+	/* Expand background for dark themes */
+	height: '100%';
+	margin-inline: calc(--spacing(4) * -1);
+	padding: --spacing(4);
+
+	@media (width >= 48rem) {
+		margin-inline: calc(--spacing(2) * -1);
+		padding: --spacing(2);
+		border-radius: var(--radius-normal);
+	}
+}
+
+pre code {
+	display: block;
+	font-size: inherit;
+	font-style: inherit;
+	color: inherit;
+}
+
+[data-highlighted-line] {
+	background-color: #f5f5f7;
+	@media (prefers-color-scheme: dark) {
+		background-color: #3a3d40;
+	}
+}
+
+/* HACK: Override default Astro/Shiki styles */
+.astro-code[style],
+.shiki[style] {
+	overflow-x: visible !important;
+}

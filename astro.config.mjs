@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
@@ -88,6 +89,9 @@ export default defineConfig({
 			],
 		],
 		remarkPlugins: [remarkTips, remarkImages, remarkRichtypo],
+	},
+	vite: {
+		plugins: [tailwindcss()],
 	},
 	experimental: {
 		contentIntellisense: true,

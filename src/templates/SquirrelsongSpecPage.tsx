@@ -1,11 +1,5 @@
-import { css } from '../../styled-system/css';
-import { Box } from '../components/Box';
-import { Grid } from '../components/Grid';
-import { Heading } from '../components/Heading';
-import { Link } from '../components/Link';
-import { Stack } from '../components/Stack';
-import { Text } from '../components/Text';
-import { VisuallyHidden } from '../components/VisuallyHidden';
+import clsx from 'clsx';
+import type { ComponentPropsWithoutRef } from 'react';
 import { PageWithTitle } from './PageWithTitle';
 
 export interface ColorSpec {
@@ -62,37 +56,16 @@ function findColorName(
 	return undefined;
 }
 
-const Table = (props: React.HTMLAttributes<HTMLTableElement>) => (
-	<Box
-		as="table"
-		width="100%"
-		borderCollapse="collapse"
-		css={{ tableLayout: 'fixed' }}
-		{...props}
-	/>
+const Table = (props: ComponentPropsWithoutRef<'table'>) => (
+	<table className="w-full table-fixed border-collapse" {...props} />
 );
-const Thead = (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
-	<Box as="thead" {...props} />
+
+const Th = (props: ComponentPropsWithoutRef<'th'>) => (
+	<th className="w-1/3 py-2 pr-2 text-left font-bold" {...props} />
 );
-const Tbody = (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
-	<Box as="tbody" {...props} />
-);
-const Tr = (props: React.HTMLAttributes<HTMLTableRowElement>) => (
-	<Box as="tr" {...props} />
-);
-const Th = (props: React.HTMLAttributes<HTMLTableCellElement>) => (
-	<Box
-		as="th"
-		py="s"
-		pr="s"
-		width="33.3%"
-		textAlign="left"
-		fontWeight="bold"
-		{...props}
-	/>
-);
-const Td = (props: React.HTMLAttributes<HTMLTableCellElement>) => (
-	<Box as="td" py="s" pr="s" {...props} />
+
+const Td = (props: ComponentPropsWithoutRef<'td'>) => (
+	<td className="py-2 pr-2" {...props} />
 );
 
 function ColorCell({
@@ -107,41 +80,31 @@ function ColorCell({
 	textColor: string;
 }) {
 	return (
-		<Stack
-			as="p"
-			gap="s"
-			p="s"
-			borderRadius="base"
-			fontFamily="code"
+		<p
+			className="gap-2 rounded-normal p-2 font-code"
 			style={{ backgroundColor: hex, color: textColor }}
 		>
-			<Box as="strong" fontSize="s">
-				{name}
-			</Box>
-			<Box as="code" fontSize="xs">
-				{hex}
-			</Box>
-			<Box as="code" fontSize="xs">
-				{rgb}
-			</Box>
-		</Stack>
+			<strong className="text-sm">{name}</strong>
+			<code className="text-xs">{hex}</code>
+			<code className="text-xs">{rgb}</code>
+		</p>
 	);
 }
 
 function MainPalette({ colorRows }: Pick<Props, 'colorRows'>) {
 	return (
-		<Box overflowX="auto">
+		<div className="overflow-x-auto">
 			<Table>
-				<Thead>
-					<Tr>
+				<thead>
+					<tr>
 						<Th>Light</Th>
 						<Th>Dark</Th>
 						<Th>Dark Deep Purple</Th>
-					</Tr>
-				</Thead>
-				<Tbody>
+					</tr>
+				</thead>
+				<tbody>
 					{colorRows.map((row) => (
-						<Tr key={row.light.name}>
+						<tr key={row.light.name}>
 							<Td>
 								<ColorCell
 									name={row.light.name}
@@ -166,44 +129,30 @@ function MainPalette({ colorRows }: Pick<Props, 'colorRows'>) {
 									textColor={row.darkPurple.textColor}
 								/>
 							</Td>
-						</Tr>
+						</tr>
 					))}
-				</Tbody>
+				</tbody>
 			</Table>
-		</Box>
+		</div>
 	);
 }
 
 function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
 	return (
-		<Stack direction="row" gap="s" alignItems="center">
-			<Box
-				width="1.8rem"
-				height="1.8rem"
-				borderRadius="base"
+		<div className="flex items-center gap-2">
+			<div
+				className="size-[1.8rem] rounded-normal"
 				style={{
 					backgroundColor: hexColor,
 				}}
 			/>
-			<Stack>
-				<Box
-					fontFamily="code"
-					fontSize="xs"
-					css={{
-						color: 'text',
-						overflow: 'hidden',
-						whiteSpace: 'nowrap',
-						textOverflow: 'ellipsis',
-						maxWidth: '8rem',
-					}}
-				>
+			<div>
+				<div className="max-w-32 truncate font-code text-xs text-text">
 					{name}
-				</Box>
-				<Box fontFamily="code" fontSize="xs" css={{ color: 'secondary' }}>
-					{hexColor}
-				</Box>
-			</Stack>
-		</Stack>
+				</div>
+				<div className="font-code text-xs text-secondary">{hexColor}</div>
+			</div>
+		</div>
 	);
 }
 
@@ -215,62 +164,61 @@ function ColorsTable({
 	colorRows: Props['colorRows'];
 }) {
 	return (
-		<Box overflowX="auto">
+		<div className="overflow-x-auto">
 			<Table>
-				<Thead>
-					<Tr>
+				<thead>
+					<tr>
 						<Th>Name</Th>
 						<Th>Light</Th>
 						<Th>Dark</Th>
 						<Th>Dark Deep Purple</Th>
-					</Tr>
-				</Thead>
-				<Tbody>
+					</tr>
+				</thead>
+				<tbody>
 					{Object.keys(colors.light).map((name) => {
 						const lightHex = getColorValue(colors.light[name]);
 						const darkHex = getColorValue(colors.dark[name]);
 						const darkPurpleHex = getColorValue(colors.darkPurple[name]);
 						return (
-							<Tr key={name}>
-								<Td className={css({ width: '25%' })}>
-									<Text variant="small" hyphens="auto">
-										{name}
-									</Text>
+							<tr key={name}>
+								<Td className="w-1/4">
+									<p className="typo-small hyphens-auto">{name}</p>
 								</Td>
-								<Td className={css({ width: '25%' })}>
+								<Td className="w-1/4">
 									<MiniSwatch
 										name={findColorName(colorRows, lightHex) ?? ''}
 										hexColor={lightHex}
 									/>
 								</Td>
-								<Td className={css({ width: '25%' })}>
+								<Td className="w-1/4">
 									<MiniSwatch
 										name={findColorName(colorRows, darkHex) ?? ''}
 										hexColor={darkHex}
 									/>
 								</Td>
-								<Td className={css({ width: '25%' })}>
+								<Td className="w-1/4">
 									<MiniSwatch
 										name={findColorName(colorRows, darkPurpleHex) ?? ''}
 										hexColor={darkPurpleHex}
 									/>
 								</Td>
-							</Tr>
+							</tr>
 						);
 					})}
-				</Tbody>
+				</tbody>
 			</Table>
-		</Box>
+		</div>
 	);
 }
 
+// @todo: Find a better solution
+/* eslint-disable better-tailwindcss/no-unknown-classes */
+
 function UiSample({ id, palette }: { id: string; palette: Palette }) {
 	return (
-		<Stack
-			p="s"
-			gap="m"
-			borderRadius="base"
-			style={{ backgroundColor: palette.textBackground }}
+		<div
+			className="gap-4 rounded-normal p-2"
+			style={{ backgroundColor: getColorValue(palette.textBackground) }}
 		>
 			<style
 				// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
@@ -309,220 +257,236 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 			`,
 				}}
 			/>
-			<Box style={{ color: palette.titleForeground }}>titleForeground</Box>
-			<Box style={{ color: palette.textForeground }}>textForeground</Box>
-			<Box style={{ color: palette.secondaryTextForeground }}>
+			<div style={{ color: getColorValue(palette.titleForeground) }}>
+				titleForeground
+			</div>
+			<div style={{ color: getColorValue(palette.textForeground) }}>
+				textForeground
+			</div>
+			<div style={{ color: getColorValue(palette.secondaryTextForeground) }}>
 				secondaryTextForeground
-			</Box>
-			<Box height={1} style={{ backgroundColor: palette.border }} />
-			<Box style={{ color: palette.disabledForeground }}>
+			</div>
+			<div
+				className="h-full"
+				style={{ backgroundColor: getColorValue(palette.border) }}
+			/>
+			<div style={{ color: getColorValue(palette.disabledForeground) }}>
 				disabledForeground
-			</Box>
-			<Box className={`${id}__link`}>linkForeground</Box>
-			<Box
-				mx="-s"
-				px="s"
+			</div>
+			<div
+				className={`
+      ${id}__link
+    `}
+			>
+				linkForeground
+			</div>
+			<div
+				className="-mx-2 px-2"
 				style={{
-					color: palette.activeForeground,
-					backgroundColor: palette.activeBackground,
+					color: getColorValue(palette.activeForeground),
+					backgroundColor: getColorValue(palette.activeBackground),
 				}}
 			>
 				activeForeground/activeBackground
-			</Box>
-			<Box
-				mx="-s"
-				px="s"
+			</div>
+			<div
+				className="-mx-2 px-2"
 				style={{
-					color: palette.textForeground,
-					backgroundColor: palette.hoverBackground,
+					color: getColorValue(palette.textForeground),
+					backgroundColor: getColorValue(palette.hoverBackground),
 				}}
 			>
 				hoverBackground
-			</Box>
-			<Box
-				mx="-s"
-				px="s"
+			</div>
+			<div
+				className="-mx-2 px-2"
 				style={{
-					color: palette.matchForeground,
-					backgroundColor: palette.matchBackground,
+					color: getColorValue(palette.matchForeground),
+					backgroundColor: getColorValue(palette.matchBackground),
 				}}
 			>
 				matchForeground/matchBackground
-			</Box>
-			<Box
-				mx="-s"
-				px="s"
+			</div>
+			<div
+				className="-mx-2 px-2"
 				style={{
-					color: palette.matchForeground,
-					backgroundColor: palette.secondaryMatchBackground,
+					color: getColorValue(palette.matchForeground),
+					backgroundColor: getColorValue(palette.secondaryMatchBackground),
 				}}
 			>
 				secondaryMatchBackground
-			</Box>
-			<Box
-				mx="-s"
-				px="s"
+			</div>
+			<div
+				className="-mx-2 px-2"
 				style={{
-					color: palette.textForeground,
-					backgroundColor: palette.selectionBackground,
+					color: getColorValue(palette.textForeground),
+					backgroundColor: getColorValue(palette.selectionBackground),
 				}}
 			>
 				selectionBackground
-			</Box>
-			<Box
-				mx="-s"
-				px="s"
+			</div>
+			<div
+				className="-mx-2 px-2"
 				style={{
-					color: palette.textForeground,
-					backgroundColor: palette.secondarySelectionBackground,
+					color: getColorValue(palette.textForeground),
+					backgroundColor: getColorValue(palette.secondarySelectionBackground),
 				}}
 			>
 				secondarySelectionBackground
-			</Box>
-			<Box
-				mx="-s"
-				px="s"
+			</div>
+			<div
+				className="-mx-2 px-2"
 				style={{
-					color: palette.textForeground,
-					backgroundColor: palette.lineHighlightBackground,
+					color: getColorValue(palette.textForeground),
+					backgroundColor: getColorValue(palette.lineHighlightBackground),
 				}}
 			>
 				lineHighlightBackground
-			</Box>
-			<Box
-				px="s"
+			</div>
+			<div
+				className="border border-solid px-2"
 				style={{
-					color: palette.infoForeground,
-					backgroundColor: palette.infoBackground,
-					borderColor: palette.infoBorder,
-					borderWidth: '1px',
-					borderStyle: 'solid',
+					color: getColorValue(palette.infoForeground),
+					backgroundColor: getColorValue(palette.infoBackground),
+					borderColor: getColorValue(palette.infoBorder),
 				}}
 			>
 				infoForeground/infoBackground/infoBorder
-			</Box>
-			<Box
-				px="s"
+			</div>
+			<div
+				className="border border-solid px-2"
 				style={{
-					color: palette.successForeground,
-					backgroundColor: palette.successBackground,
-					borderColor: palette.successBorder,
-					borderWidth: '1px',
-					borderStyle: 'solid',
+					color: getColorValue(palette.successForeground),
+					backgroundColor: getColorValue(palette.successBackground),
+					borderColor: getColorValue(palette.successBorder),
 				}}
 			>
 				successForeground/successBackground/successBorder
-			</Box>
-			<Box
-				px="s"
+			</div>
+			<div
+				className="border border-solid px-2"
 				style={{
-					color: palette.warningForeground,
-					backgroundColor: palette.warningBackground,
-					borderColor: palette.warningBorder,
-					borderWidth: '1px',
-					borderStyle: 'solid',
+					color: getColorValue(palette.warningForeground),
+					backgroundColor: getColorValue(palette.warningBackground),
+					borderColor: getColorValue(palette.warningBorder),
 				}}
 			>
 				warningForeground/warningBackground/warningBorder
-			</Box>
-			<Box
-				px="s"
+			</div>
+			<div
+				className="border border-solid px-2"
 				style={{
-					color: palette.errorForeground,
-					backgroundColor: palette.errorBackground,
-					borderColor: palette.errorBorder,
-					borderWidth: '1px',
-					borderStyle: 'solid',
+					color: getColorValue(palette.errorForeground),
+					backgroundColor: getColorValue(palette.errorBackground),
+					borderColor: getColorValue(palette.errorBorder),
 				}}
 			>
 				errorForeground/errorBackground/errorBorder
-			</Box>
-			<Box
-				px="s"
+			</div>
+			<div
+				className="border border-solid px-2"
 				style={{
-					color: palette.textForeground,
-					borderColor: palette.activeBorder,
-					borderWidth: '1px',
-					borderStyle: 'solid',
+					color: getColorValue(palette.textForeground),
+					borderColor: getColorValue(palette.activeBorder),
 				}}
 			>
 				activeBorder
-			</Box>
-			<Box
-				px="s"
+			</div>
+			<div
+				className="border border-solid px-2"
 				style={{
-					color: palette.textForeground,
-					borderColor: palette.focusBorder,
-					borderWidth: '1px',
-					borderStyle: 'solid',
+					color: getColorValue(palette.textForeground),
+					borderColor: getColorValue(palette.focusBorder),
 				}}
 			>
 				focusBorder
-			</Box>
-			<Stack
-				p="s"
-				gap="m"
-				borderRadius="base"
-				overflow="hidden"
+			</div>
+			<div
+				className="gap-4 overflow-hidden rounded-normal border border-solid p-2"
 				style={{
-					backgroundColor: palette.uiBackground,
-					borderColor: palette.lightBorder,
-					borderWidth: '1px',
-					borderStyle: 'solid',
+					backgroundColor: getColorValue(palette.uiBackground),
+					borderColor: getColorValue(palette.lightBorder),
 				}}
 			>
-				<Box style={{ color: palette.titleForeground }}>titleForeground</Box>
-				<Box style={{ color: palette.textForeground }}>textForeground</Box>
-				<Box style={{ color: palette.secondaryTextForeground }}>
+				<div style={{ color: getColorValue(palette.titleForeground) }}>
+					titleForeground
+				</div>
+				<div style={{ color: getColorValue(palette.textForeground) }}>
+					textForeground
+				</div>
+				<div style={{ color: getColorValue(palette.secondaryTextForeground) }}>
 					secondaryTextForeground
-				</Box>
-				<Box px="s" py="xs" borderRadius="base" className={`${id}__button`}>
+				</div>
+				<div
+					className={clsx(
+						`
+        ${id}__button
+      `,
+						'rounded-normal px-2 py-1'
+					)}
+				>
 					button
-				</Box>
-				<Box
-					px="s"
-					py="xs"
-					borderRadius="base"
-					className={`${id}__secondaryButton`}
+				</div>
+				<div
+					className={clsx(
+						`
+        ${id}__secondaryButton
+      `,
+						'rounded-normal px-2 py-1'
+					)}
 				>
 					secondaryButton
-				</Box>
-				<Box
-					px="s"
-					py="xs"
-					borderRadius="base"
-					className={`${id}__disabledButton`}
+				</div>
+				<div
+					className={clsx(
+						`
+        ${id}__disabledButton
+      `,
+						'rounded-normal px-2 py-1'
+					)}
 				>
 					disabledButton
-				</Box>
-				<Stack
-					direction="row"
-					gap="s"
-					m="-s"
-					fontSize="l"
-					justifyContent="center"
-					style={{ backgroundColor: palette.secondaryUiBackground }}
+				</div>
+				<div
+					className="-m-2 flex content-center gap-2 text-lg"
+					style={{
+						backgroundColor: getColorValue(palette.secondaryUiBackground),
+					}}
 				>
-					<Box style={{ color: palette.icon }} title="icon">
+					<div style={{ color: getColorValue(palette.icon) }} title="icon">
 						★
-					</Box>
-					<Box style={{ color: palette.activeIcon }} title="activeIcon">
+					</div>
+					<div
+						style={{ color: getColorValue(palette.activeIcon) }}
+						title="activeIcon"
+					>
 						★
-					</Box>
-					<Box style={{ color: palette.accent1 }} title="accent1">
+					</div>
+					<div
+						style={{ color: getColorValue(palette.accent1) }}
+						title="accent1"
+					>
 						★
-					</Box>
-					<Box style={{ color: palette.accent2 }} title="accent2">
+					</div>
+					<div
+						style={{ color: getColorValue(palette.accent2) }}
+						title="accent2"
+					>
 						★
-					</Box>
-					<Box style={{ color: palette.accent3 }} title="accent3">
+					</div>
+					<div
+						style={{ color: getColorValue(palette.accent3) }}
+						title="accent3"
+					>
 						★
-					</Box>
-				</Stack>
-			</Stack>
-		</Stack>
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 }
+
+/* eslint-enable better-tailwindcss/no-unknown-classes */
 
 function getAnsiDisplayName(fullName: string) {
 	const name = fullName.replace('terminal', '').replace('Bright', '');
@@ -533,22 +497,22 @@ function AnsiSample({ palette }: { palette: Palette }) {
 	const entries = Object.entries(palette);
 	const width = `${Math.floor(100 / Object.entries(palette).length)}%`;
 	return (
-		<Box overflowX="auto">
+		<div className="overflow-x-auto">
 			<Table
 				style={{ backgroundColor: getColorValue(palette.terminalBackground) }}
 			>
-				<Thead>
-					<Tr>
+				<thead>
+					<tr>
 						{entries.map(([rowName]) => (
 							<Th key={rowName} style={{ width, textAlign: 'center' }}>
 								{getAnsiDisplayName(rowName)}
 							</Th>
 						))}
-					</Tr>
-				</Thead>
-				<Tbody>
+					</tr>
+				</thead>
+				<tbody>
 					{entries.map(([rowName, rowItem]) => (
-						<Tr key={rowName}>
+						<tr key={rowName}>
 							{entries.map(([name, item]) => (
 								<Td
 									key={name}
@@ -562,33 +526,41 @@ function AnsiSample({ palette }: { palette: Palette }) {
 									{getAnsiDisplayName(rowName)}
 								</Td>
 							))}
-						</Tr>
+						</tr>
 					))}
-				</Tbody>
+				</tbody>
 			</Table>
-		</Box>
+		</div>
 	);
 }
 
 function TableOfContents() {
 	return (
-		<Box as="nav">
-			<VisuallyHidden as="h2">Table of contents</VisuallyHidden>
-			<Stack as="ul" direction="row" gap="m">
-				<Box as="li">
-					<Link href="#palette">Palette</Link>
-				</Box>
-				<Box as="li">
-					<Link href="#ui-colors">UI colors</Link>
-				</Box>
-				<Box as="li">
-					<Link href="#code-colors">Code colors</Link>
-				</Box>
-				<Box as="li">
-					<Link href="#ansi-colors">ANSI colors</Link>
-				</Box>
-			</Stack>
-		</Box>
+		<nav>
+			<h2 className="sr-only">Table of contents</h2>
+			<ul className="flex gap-4">
+				<li>
+					<a className="link" href="#palette">
+						Palette
+					</a>
+				</li>
+				<li>
+					<a className="link" href="#ui-colors">
+						UI colors
+					</a>
+				</li>
+				<li>
+					<a className="link" href="#code-colors">
+						Code colors
+					</a>
+				</li>
+				<li>
+					<a className="link" href="#ansi-colors">
+						ANSI colors
+					</a>
+				</li>
+			</ul>
+		</nav>
 	);
 }
 
@@ -602,42 +574,42 @@ export function SquirrelsongSpecPage({
 }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
-			<Stack gap="l">
+			<div className="flex flex-col gap-8">
 				<TableOfContents />
-				<Heading level={2} id="palette">
+				<h2 className="heading-2" id="palette">
 					Palette
-				</Heading>
+				</h2>
 				<MainPalette colorRows={colorRows} />
-				<Heading level={2} id="ui-colors">
+				<h2 className="heading-2" id="ui-colors">
 					UI colors
-				</Heading>
+				</h2>
 				<ColorsTable colors={uiColors} colorRows={colorRows} />
-				<Grid gap="m" gridTemplateColumns="repeat(3, 1fr)">
+				<div className="grid grid-cols-3 gap-4">
 					<UiSample id="light" palette={uiColors.light} />
 					<UiSample id="dark" palette={uiColors.dark} />
 					<UiSample id="darkPurple" palette={uiColors.darkPurple} />
-				</Grid>
-				<Heading level={2} id="code-colors">
+				</div>
+				<h2 className="heading-2" id="code-colors">
 					Code colors
-				</Heading>
+				</h2>
 				<ColorsTable colors={codeColors} colorRows={colorRows} />
-				<Heading level={2} id="ansi-colors">
+				<h2 className="heading-2" id="ansi-colors">
 					ANSI colors
-				</Heading>
+				</h2>
 				<ColorsTable colors={ansiColors} colorRows={colorRows} />
-				<Stack gap="s">
-					<Heading level={3}>ANSI Light</Heading>
+				<div className="flex flex-col gap-2">
+					<h3 className="heading-3">ANSI Light</h3>
 					<AnsiSample palette={ansiColors.light} />
-				</Stack>
-				<Stack gap="s">
-					<Heading level={3}>ANSI Dark</Heading>
+				</div>
+				<div className="flex flex-col gap-2">
+					<h3 className="heading-3">ANSI Dark</h3>
 					<AnsiSample palette={ansiColors.dark} />
-				</Stack>
-				<Stack gap="s">
-					<Heading level={3}>ANSI Dark Deep Purple</Heading>
+				</div>
+				<div className="flex flex-col gap-2">
+					<h3 className="heading-3">ANSI Dark Deep Purple</h3>
 					<AnsiSample palette={ansiColors.darkPurple} />
-				</Stack>
-			</Stack>
+				</div>
+			</div>
 		</PageWithTitle>
 	);
 }

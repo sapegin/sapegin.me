@@ -1,10 +1,6 @@
 import type { Resource } from '../types/Resource';
-import { Box } from './Box';
 import { FormattedDate } from './FormattedDate';
 import { InlineSeparator } from './InlineSeparator';
-import { Link } from './Link';
-import { Stack } from './Stack';
-import { Text } from './Text';
 
 interface Props {
 	posts: Resource[];
@@ -20,48 +16,48 @@ export function PostList({
 	startIndex,
 }: Props) {
 	return (
-		<Stack as="ul" direction="column" gap="s">
+		<ul className="flex flex-col gap-2">
 			{posts.map((post, index) => (
-				<Text key={post.url ?? post.title} as="li">
-					<Stack
-						as="span"
-						direction={{ base: 'column', tablet: 'row' }}
-						columnGap="s"
-						alignItems={{ tablet: 'center' }}
-						flexWrap="wrap"
+				<li key={post.url ?? post.title} className="typo-body">
+					<span
+						className="
+        flex flex-col flex-wrap gap-x-2
+        md:flex-row md:items-center
+      "
 					>
 						<span>
 							{startIndex !== undefined && (
-								<Text as="span" variant="small">
-									{startIndex - index}.{' '}
-								</Text>
+								<span className="typo-small">{startIndex - index}. </span>
 							)}
 							{post.url ? (
-								<Link href={post.url}>{post.title}</Link>
+								<a className="link" href={post.url}>
+									{post.title}
+								</a>
 							) : (
 								post.title
 							)}
 						</span>
 						{showDescriptions && post.description && (
-							<Text variant="small">{post.description}</Text>
+							<p className="typo-small">{post.description}</p>
 						)}
 						{showDates && post.date && (
 							<>
-								<Box as="span" display={{ base: 'none', tablet: 'flex' }}>
-									<InlineSeparator />
-								</Box>
-								<Text
-									as="time"
-									variant="small"
-									dateTime={post.date.toISOString()}
+								<span
+									className="
+           hidden
+           md:flex
+         "
 								>
+									<InlineSeparator />
+								</span>
+								<time className="typo-small" dateTime={post.date.toISOString()}>
 									<FormattedDate date={post.date} />
-								</Text>
+								</time>
 							</>
 						)}
-					</Stack>
-				</Text>
+					</span>
+				</li>
 			))}
-		</Stack>
+		</ul>
 	);
 }

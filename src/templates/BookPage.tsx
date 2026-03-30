@@ -1,23 +1,15 @@
+import clsx from 'clsx';
 import type { ReactNode } from 'react';
-import { css } from '../../styled-system/css';
 import { campaigns } from '../campaigns';
 import { About } from '../components/About';
 import { BookCover } from '../components/BookCover';
-import { Box } from '../components/Box';
 import { Button } from '../components/Button';
 import { FeatureList, FeatureListItem } from '../components/FeatureList';
 import { Feedback } from '../components/Feedback';
-import { Flex } from '../components/Flex';
-import { Grid } from '../components/Grid';
-import { Heading } from '../components/Heading';
 import { Image } from '../components/Image';
-import { Link } from '../components/Link';
 import { Markdown } from '../components/Markdown';
 import { MurderOfCrows } from '../components/MurderOfCrows';
-import { Stack } from '../components/Stack';
-import { Text } from '../components/Text';
-import { TextTypo } from '../components/TextTypo';
-import { VisuallyHidden } from '../components/VisuallyHidden';
+import { Typo } from '../components/Typo';
 import type { Chapter } from '../types/Chapter';
 import { Page } from './Page';
 
@@ -78,7 +70,10 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Of course! Many chapters are{' '}
-				<Link href="#toc">available to read online</Link>.
+				<a className="link" href="#toc">
+					available to read online
+				</a>
+				.
 			</>
 		),
 	},
@@ -94,9 +89,9 @@ const faq: FaqItem[] = [
 				Yes, I’m planning to keep the book as a living snapshot of my
 				programming knowledge, and also update the example with the latest
 				JavaScript features. Subscribe to{' '}
-				<Link href="https://sapegin.substack.com" target="_blank">
+				<a className="link" href="https://sapegin.substack.com" target="_blank">
 					my newsletter
-				</Link>{' '}
+				</a>{' '}
 				to know about major updates.
 			</>
 		),
@@ -116,8 +111,10 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Yes, I offer 30-day money back. Write me at{' '}
-				<Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link> if you’re
-				unhappy with the book.
+				<a className="link" href="mailto:artem@sapegin.me">
+					artem@sapegin.me
+				</a>{' '}
+				if you’re unhappy with the book.
 			</>
 		),
 	},
@@ -127,7 +124,10 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Absolutely, write me at{' '}
-				<Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>.
+				<a className="link" href="mailto:artem@sapegin.me">
+					artem@sapegin.me
+				</a>
+				.
 			</>
 		),
 	},
@@ -136,7 +136,10 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Of course, write me at{' '}
-				<Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>.
+				<a className="link" href="mailto:artem@sapegin.me">
+					artem@sapegin.me
+				</a>
+				.
 			</>
 		),
 	},
@@ -145,7 +148,11 @@ const faq: FaqItem[] = [
 		answer: (
 			<>
 				Gumroad offers purchasing power parity, for a student discount, write me
-				at <Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>.
+				at{' '}
+				<a className="link" href="mailto:artem@sapegin.me">
+					artem@sapegin.me
+				</a>
+				.
 			</>
 		),
 	},
@@ -154,10 +161,7 @@ const faq: FaqItem[] = [
 function TheButton() {
 	return (
 		<Button as="a" variant="large" href={purchaseUrl}>
-			Get the book!{' '}
-			<Box as="span" px="s" verticalAlign="middle" fontSize="s">
-				■
-			</Box>{' '}
+			Get the book! <span className="px-2 align-middle text-sm">■</span>{' '}
 			{isCampaignEnabled ? (
 				<>
 					<del>€{price}</del> €{discountedPrice}
@@ -171,53 +175,52 @@ function TheButton() {
 
 function ChapterList({ chapters }: { chapters: Chapter[] }) {
 	return (
-		<Grid
-			as="ul"
-			gap="l"
-			gridTemplateColumns={{
-				base: '1fr',
-				tablet: '1fr 1fr',
-			}}
+		<ul
+			className="
+     grid grid-cols-1 gap-8
+     md:grid-cols-2
+   "
 		>
 			{chapters.map((chapter) => (
-				<Stack
-					as="li"
+				<li
 					key={chapter.url ?? chapter.title}
-					gap="xs"
-					gridColumn={{
-						tablet: chapter.title === 'Other techniques' ? '1/3' : undefined,
-					}}
+					className={clsx(
+						'grid gap-1',
+						chapter.title === 'Other techniques' && 'md:grid-cols-[1/3]'
+					)}
 				>
-					<Text variant="semilarge">
+					<p className="typo-semilarge">
 						{chapter.url ? (
-							<Link href={chapter.url}>{chapter.title}</Link>
+							<a className="link" href={chapter.url}>
+								{chapter.title}
+							</a>
 						) : (
 							chapter.title
 						)}
-					</Text>
+					</p>
 					{chapter.sections.length > 0 ? (
-						<Grid
-							columnGap="l"
-							rowGap="s"
-							gridTemplateColumns={{
-								base: '1fr',
-								tablet: '1fr 1fr',
-							}}
+						<div
+							className="
+         grid grid-cols-1 gap-x-8
+         md:grid-cols-2
+       "
 						>
 							{chapter.sections.map((section) => (
-								<Text key={section} variant="small">
+								<p key={section} className="typo-small">
 									{section}
-								</Text>
+								</p>
 							))}
-						</Grid>
+						</div>
 					) : (
-						<TextTypo variant="small">
-							<Markdown text={chapter.description} />
-						</TextTypo>
+						<p className="typo-small">
+							<Typo>
+								<Markdown text={chapter.description} />
+							</Typo>
+						</p>
 					)}
-				</Stack>
+				</li>
 			))}
-		</Grid>
+		</ul>
 	);
 }
 
@@ -229,29 +232,23 @@ function PatternList({
 	strikethrough?: boolean;
 }) {
 	return (
-		<Grid
-			as="ul"
-			rowGap="m"
-			columnGap="m"
-			gridTemplateColumns={{
-				base: '1fr',
-				tablet: '1fr 1fr',
-				desktop: '1fr 1fr 1fr',
-			}}
+		<ul
+			className="
+     grid grid-cols-1 gap-4
+     md:grid-cols-2
+     lg:grid-cols-3
+   "
 		>
 			{patterns.map((pattern) => (
-				<Stack as="li" key={pattern} gap="xs">
-					<Text
-						variant="semilarge"
-						css={{
-							textDecoration: strikethrough ? 'line-through' : undefined,
-						}}
+				<li key={pattern} className="flex flex-col gap-1">
+					<p
+						className={clsx('typo-semilarge', strikethrough && 'line-through')}
 					>
 						<Markdown text={pattern} />
-					</Text>
-				</Stack>
+					</p>
+				</li>
 			))}
-		</Grid>
+		</ul>
 	);
 }
 
@@ -267,20 +264,12 @@ function Testimonial({
 	image: string;
 }) {
 	return (
-		<Stack as="blockquote" gap="xs">
+		<blockquote className="flex flex-col gap-1">
 			<div>
-				<TextTypo
-					variant="body"
-					p="m"
-					css={{
-						borderStyle: 'solid',
-						borderWidth: 2,
-					}}
-				>
-					{quote}
-				</TextTypo>
-				<Box
-					as="svg"
+				<p className="border-2 border-solid p-4 typo-body">
+					<Typo>{quote}</Typo>
+				</p>
+				<svg
 					width={12}
 					height={10}
 					fillRule="evenodd"
@@ -288,51 +277,32 @@ function Testimonial({
 					strokeMiterlimit="2"
 					clipRule="evenodd"
 					viewBox="0 0 6 5"
-					css={{ ml: 'm', mt: -2 }}
+					className="-mt-2 ml-4"
 				>
 					<path
 						d="M0 0h1v5H0zM1 4h1v1H1zM2 3h1v1H2zM3 2h1v1H3zM4 1h1v1H4zM5 0h1v1H5z"
-						className={css({
-							fill: 'currentColor',
-						})}
+						className="fill-current"
 					/>
-					<path
-						d="M1 0H5v1H1.001z"
-						className={css({
-							fill: 'background',
-						})}
-					/>
-				</Box>
+					<path d="M1 0H5v1H1.001z" className="fill-background" />
+				</svg>
 			</div>
-			<Stack as="footer" direction="row" gap="s" alignItems="center">
-				<Box
-					as="img"
+			<footer className="flex items-center gap-2">
+				<img
 					src={`/images/book/${image}`}
 					width={40}
 					height={40}
 					alt=""
 					loading="lazy"
-					borderRadius="round"
+					className="rounded-full"
 				/>
-				<Stack as="p" gap="xs">
-					<Text as="span" variant="small" lineHeight={1}>
-						{author}
-					</Text>
-					<Text as="span" variant="small" lineHeight={1}>
-						{role}
-					</Text>
-				</Stack>
-			</Stack>
-		</Stack>
+				<p className="flex flex-col gap-1">
+					<span className="typo-small leading-none">{author}</span>
+					<span className="typo-small leading-none">{role}</span>
+				</p>
+			</footer>
+		</blockquote>
 	);
 }
-
-const colors = {
-	shadow: 'rgba(0, 0, 0, 0.1)',
-	outlineLight: 'rgba(255, 255, 255, 0.9)',
-	outlineDark: 'rgba(0, 0, 0, 0.15)',
-	insetLight: 'rgba(0, 0, 0, 0.15)',
-};
 
 export function Spread({
 	image,
@@ -346,47 +316,37 @@ export function Spread({
 	alt?: string;
 }) {
 	return (
-		<Box
-			css={{
-				position: 'relative',
-				boxShadow: `0 10px 20px ${colors.shadow}`,
-				borderRadius: 3,
-				borderStyle: 'solid',
-				borderWidth: 1,
-				borderColor: `${colors.outlineLight} ${colors.outlineDark} ${colors.outlineDark} ${colors.outlineLight}`,
-				_before: {
-					content: `''`,
-					position: 'absolute',
-					top: 0,
-					bottom: 0,
-					left: '50%',
-					borderLeft: `1px solid ${colors.insetLight}`,
-				},
-			}}
+		<div
+			className="
+     relative rounded-lg border border-solid border-t-book-outline-light
+     border-r-book-outline-dark border-b-book-outline-dark
+     border-l-book-outline-light shadow-[0_10px_20px_var(--color-book-shadow)]
+     before:absolute before:-inset-y-list-margin before:left-[50%] before:border
+     before:border-solid before:border-book-inset-light
+   "
 		>
 			<Image
 				src={`/images/book/${image}`}
 				width={width}
 				height={height}
 				alt={alt}
-				m={0}
+				className="m-0"
 			/>
-		</Box>
+		</div>
 	);
 }
 
 function Features() {
 	return (
-		<Grid
-			gap="l"
-			gridTemplateColumns={{
-				base: '1fr',
-				tablet: '2fr 1fr',
-			}}
+		<div
+			className="
+     grid grid-cols-1 gap-8
+     md:grid-cols-[2fr_1fr]
+   "
 		>
-			<Box>
+			<div>
 				<Spread image="spread.png" />
-			</Box>
+			</div>
 			<FeatureList>
 				<FeatureListItem>PDF and EPUB formats</FeatureListItem>{' '}
 				<FeatureListItem>
@@ -399,68 +359,81 @@ function Features() {
 				<FeatureListItem>Up to date: ECMAScript 2024</FeatureListItem>
 				<FeatureListItem>No bullshit approach</FeatureListItem>
 			</FeatureList>
-		</Grid>
+		</div>
 	);
 }
 
 export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 	return (
 		<Page url={url}>
-			<Stack gap="xl">
-				<Stack gap="s">
-					{isCampaignEnabled && <Text variant="flag">{badge}</Text>}
-					<Heading level={1}>Washing your code</Heading>
-					<Heading level={3} as="p">
+			<div className="flex flex-col gap-16">
+				<div className="flex flex-col gap-2">
+					{isCampaignEnabled && <p className="typo-flag">{badge}</p>}
+					<h1 className="heading-1">Washing your code</h1>
+					<p className="heading-3">
 						A book on clean code for frontend developers
-					</Heading>
-				</Stack>
-				<Stack
-					as="section"
-					direction={{ base: 'column', tablet: 'row' }}
-					gap="l"
+					</p>
+				</div>
+				<section
+					className="
+       flex flex-col gap-8
+       md:flex-row
+     "
 				>
-					<Stack gap="l">
-						<VisuallyHidden as="h2">About the book</VisuallyHidden>
-						<Stack gap="m">
-							<TextTypo variant="intro">
-								We read code much more often than we write it — often to make a
-								one-line change you have to read and understand hundreds of
-								lines of code scattered among dozens of files. That’s why code
-								readability is so important.
-							</TextTypo>
-							<TextTypo>
-								On dozens of examples, based on production code, I’ll show you
-								how to make your code more readable and maintainable, and how to
-								avoid hard-to-track bugs. I’ll show you code smells and
-								antipatterns I often see during code reviews (and I review lots
-								of code every day!) and will walk you through the refactoring
-								process to make your code better.
-							</TextTypo>
-							<TextTypo>
-								These techniques and patterns help me every day to write code
-								that my colleagues will have no problems working with. All
-								book’s examples are written in JavaScript with a bit of
-								TypeScript, React, CSS, and HTML.
-							</TextTypo>
-						</Stack>
-						<Stack direction="column" gap="s">
-							<Box>
+					<div className="flex flex-col gap-8">
+						<h2 className="sr-only">About the book</h2>
+						<div className="flex flex-col gap-4">
+							<p className="typo-intro">
+								<Typo>
+									We read code much more often than we write it — often to make
+									a one-line change you have to read and understand hundreds of
+									lines of code scattered among dozens of files. That’s why code
+									readability is so important.
+								</Typo>
+							</p>
+							<p className="typo-body">
+								<Typo>
+									On dozens of examples, based on production code, I’ll show you
+									how to make your code more readable and maintainable, and how
+									to avoid hard-to-track bugs. I’ll show you code smells and
+									antipatterns I often see during code reviews (and I review
+									lots of code every day!) and will walk you through the
+									refactoring process to make your code better.
+								</Typo>
+							</p>
+							<p className="typo-body">
+								<Typo>
+									These techniques and patterns help me every day to write code
+									that my colleagues will have no problems working with. All
+									book’s examples are written in JavaScript with a bit of
+									TypeScript, React, CSS, and HTML.
+								</Typo>
+							</p>
+						</div>
+						<div className="flex flex-col gap-2">
+							<div>
 								<TheButton />
-							</Box>
-							<Text>
-								<Link href="https://www.amazon.com/dp/B0DK9HHJ1R/">
+							</div>
+							<p className="typo-body">
+								<a
+									className="link"
+									href="https://www.amazon.com/dp/B0DK9HHJ1R/"
+								>
 									Also as a paperback and Kindle edition on Amazon
-								</Link>
-							</Text>
-							<Text>
-								<Link href="#toc">Read selected chapters online</Link>
-							</Text>
-						</Stack>
-					</Stack>
-					<Box
-						mx={{ base: 'auto', tablet: 0 }}
-						order={{ base: -1, tablet: 0 }}
-						flexShrink={0}
+								</a>
+							</p>
+							<p className="typo-body">
+								<a className="link" href="#toc">
+									Read selected chapters online
+								</a>
+							</p>
+						</div>
+					</div>
+					<div
+						className="
+        -order-1 mx-auto shrink-0
+        md:order-0 md:mx-0
+      "
 					>
 						<BookCover
 							image="washing-your-code-large"
@@ -468,75 +441,83 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 							width={250}
 							height={324}
 						/>
-					</Box>
-				</Stack>
-				<Stack as="section" gap="m">
-					<Heading level={2}>What’s inside?</Heading>
+					</div>
+				</section>
+				<section className="flex flex-col gap-4">
+					<h2 className="heading-2">What’s inside?</h2>
 					<Features />
-				</Stack>
-				<Stack as="section" gap="m">
-					<Heading level={2} id="toc">
+				</section>
+				<section className="flex flex-col gap-4">
+					<h2 className="heading-2" id="toc">
 						Table of contents
-					</Heading>
+					</h2>
 					<ChapterList chapters={chapters} />
-				</Stack>
-				<Stack as="section" gap="m">
-					<Heading level={2}>Techniques &amp; patterns</Heading>
-					<TextTypo>
-						Here’s a list of all the techniques and patterns described in the
-						book.
-					</TextTypo>
+				</section>
+				<section className="flex flex-col gap-4">
+					<h2 className="heading-2">Techniques &amp; patterns</h2>
+					<p className="typo-body">
+						<Typo>
+							Here’s a list of all the techniques and patterns described in the
+							book.
+						</Typo>
+					</p>
 					<PatternList patterns={patterns} />
-				</Stack>
-				<Stack as="section" gap="m">
-					<Heading level={2}>Code smells &amp; antipatterns</Heading>
-					<TextTypo>
-						Here’s a list of all the code smells and antipatterns described in
-						the book.
-					</TextTypo>
+				</section>
+				<section className="flex flex-col gap-4">
+					<h2 className="heading-2">Code smells &amp; antipatterns</h2>
+					<p className="typo-body">
+						<Typo>
+							Here’s a list of all the code smells and antipatterns described in
+							the book.
+						</Typo>
+					</p>
 					<PatternList patterns={antipatterns} strikethrough />
-				</Stack>
-				<Stack as="section" gap="m">
-					<Heading level={2}>What readers are saying?</Heading>
-					<Grid
-						gap="l"
-						gridTemplateColumns={{
-							base: '1fr',
-							tablet: '1fr 1fr',
-						}}
+				</section>
+				<section className="flex flex-col gap-4">
+					<h2 className="heading-2">What readers are saying?</h2>
+					<div
+						className="
+        grid grid-cols-1 gap-8
+        md:grid-cols-2
+      "
 					>
 						{testimonials.map((testimonial) => (
 							<Testimonial key={testimonial.author} {...testimonial} />
 						))}
-					</Grid>
-				</Stack>
-				<Stack as="section" gap="m">
-					<Heading level={2}>Frequently asked questions</Heading>
-					<Stack gap="m">
+					</div>
+				</section>
+				<section className="flex flex-col gap-4">
+					<h2 className="heading-2">Frequently asked questions</h2>
+					<div className="flex flex-col gap-4">
 						{faq.map(({ question, answer }) => (
 							<article key={question}>
-								<TextTypo as="h3" variant="bold">
-									{question}
-								</TextTypo>
-								<TextTypo>{answer}</TextTypo>
+								<h3 className="typo-body font-bold">
+									<Typo>{question}</Typo>
+								</h3>
+								<p className="typo-body">
+									<Typo>{answer}</Typo>
+								</p>
 							</article>
 						))}
-					</Stack>
-				</Stack>
-				<Flex justifyContent="center">
+					</div>
+				</section>
+				<div className="flex content-center">
 					<TheButton />
-				</Flex>
+				</div>
 				<About>
-					I’ve been <Link href="/blog/">blogging</Link> about frontend
-					development for almost as many years. My favorite topics are
-					component-driven development, testing, and accessibility.
+					I’ve been{' '}
+					<a className="link" href="/blog/">
+						blogging
+					</a>{' '}
+					about frontend development for almost as many years. My favorite
+					topics are component-driven development, testing, and accessibility.
 				</About>
-				<Stack as="section" gap="m">
-					<Heading level={2}>Have a question?</Heading>
+				<section className="flex flex-col gap-4">
+					<h2 className="heading-2">Have a question?</h2>
 					<Feedback github="washingcode-book" />
-				</Stack>
+				</section>
 				<MurderOfCrows />
-			</Stack>
+			</div>
 		</Page>
 	);
 }

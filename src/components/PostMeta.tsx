@@ -2,8 +2,6 @@ import { ME_BLUESKY_URL, ME_GITHUB_URL, ME_MASTODON_URL } from '../constants';
 import type { Post } from '../types/Post';
 import { FormattedDate } from './FormattedDate';
 import { InlineList, InlineListItem } from './InlineList';
-import { Link } from './Link';
-import { Nobr } from './Nobr';
 
 // TODO: Special case for the book?
 const getGitHubLink = (url: string) => {
@@ -17,19 +15,27 @@ export function PostMeta({ url, date }: Props) {
 	return (
 		<nav aria-label="Page tools">
 			<InlineList>
-				<InlineListItem variant="small">
-					Discuss on <Link href={ME_MASTODON_URL}>Mastodon</Link> or{' '}
-					<Link href={ME_BLUESKY_URL}>Bluesky</Link>
+				<InlineListItem>
+					Discuss on{' '}
+					<a className="link" href={ME_MASTODON_URL}>
+						Mastodon
+					</a>{' '}
+					or{' '}
+					<a className="link" href={ME_BLUESKY_URL}>
+						Bluesky
+					</a>
 				</InlineListItem>
-				<InlineListItem variant="small">
-					<Link href={getGitHubLink(url)}>Edit on GitHub</Link>
+				<InlineListItem>
+					<a className="link" href={getGitHubLink(url)}>
+						Edit on GitHub
+					</a>
 				</InlineListItem>
-				<InlineListItem variant="small">
+				<InlineListItem>
 					<time dateTime={date.toISOString()}>
 						Published{' '}
-						<Nobr>
+						<span className="text-nowrap">
 							on <FormattedDate date={date} />
-						</Nobr>
+						</span>
 					</time>
 				</InlineListItem>
 			</InlineList>

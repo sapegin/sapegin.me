@@ -1,7 +1,5 @@
 import type { Post } from '../types/Post';
-import { Heading } from './Heading';
 import { PostList } from './PostList';
-import { Stack } from './Stack';
 
 interface Props {
 	posts: Post[];
@@ -9,11 +7,14 @@ interface Props {
 
 export function RelatedPosts({ posts }: Props) {
 	return (
-		<Stack gap="m" as="nav" aria-labelledby="related-posts-heading">
-			<Heading as="h2" level={3} id="related-posts-heading">
+		<nav
+			className="flex flex-col gap-4"
+			aria-labelledby="related-posts-heading"
+		>
+			<h2 className="heading-3" id="related-posts-heading">
 				You may also like
-			</Heading>
+			</h2>
 			<PostList posts={posts} />
-		</Stack>
+		</nav>
 	);
 }

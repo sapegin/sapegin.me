@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import Group from 'react-group';
 import type { TalkType } from '../types/Gig';
-import { VisuallyHidden } from './VisuallyHidden';
 
 const ICONS = {
 	talk: {
@@ -34,7 +33,7 @@ export function EventName({ type = 'talk', children }: Props) {
 	return (
 		<Group>
 			<span title={alt}>
-				{label && <VisuallyHidden>{label}</VisuallyHidden>}
+				{label && <span className="sr-only">{label}</span>}
 				{icon}
 			</span>
 			{children}

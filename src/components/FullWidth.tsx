@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Box } from './Box';
 
 interface Props {
 	children: ReactNode;
@@ -10,10 +9,8 @@ interface Props {
  */
 export function FullWidth({ children }: Props) {
 	return (
-		<Box width="100vw" marginLeft="calc(50% - 50vw)">
-			<Box maxWidth={1200} marginInline="auto">
-				{children}
-			</Box>
-		</Box>
+		<div className="ml-[calc(50%-50vw)] w-screen">
+			<div className="mx-auto max-w-[1200px]">{children}</div>
+		</div>
 	);
 }

@@ -1,14 +1,10 @@
 import type { ReactNode } from 'react';
 import Group from 'react-group';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
-import { Heading } from '../components/Heading';
 import { InlineList, InlineListItem } from '../components/InlineList';
-import { Link } from '../components/Link';
 import { MurderOfCrows } from '../components/MurderOfCrows';
 import { PostContent } from '../components/PostContent';
-import { Stack } from '../components/Stack';
-import { Text } from '../components/Text';
-import { TextTypo } from '../components/TextTypo';
+import { Typo } from '../components/Typo';
 import type { Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
 
@@ -32,50 +28,58 @@ function getIssueLink() {
 export function SquirrelPage({ url, title, id, squirrels, children }: Props) {
 	return (
 		<Page url={url}>
-			<Stack gap="xl">
-				<Stack gap="l">
-					<Heading level={1} maxWidth="textMaxWidth">
-						{title}
-					</Heading>
+			<div className="flex flex-col gap-16">
+				<div className="flex flex-col gap-8">
+					<h1 className="max-w-text-max-width heading-1">{title}</h1>
 					<PostContent>{children}</PostContent>
-					<Stack gap="xs">
-						<TextTypo>
-							<Link href="/squirrelsong/">Squirrelsong themes</Link> are
-							low-contrast color schemes with great readability for web
-							developers and non-distracting UI themes for many apps. It’s also
-							available for:
-						</TextTypo>
-						<Text>
+					<div className="flex flex-col gap-1">
+						<p className="typo-body">
+							<Typo>
+								<a className="link" href="/squirrelsong/">
+									Squirrelsong themes
+								</a>{' '}
+								are low-contrast color schemes with great readability for web
+								developers and non-distracting UI themes for many apps. It’s
+								also available for:
+							</Typo>
+						</p>
+						<p className="typo-body">
 							<Group separator=", ">
 								{squirrels.map((squirrel) =>
 									squirrel.id === id ? (
 										squirrel.app
 									) : (
-										<Link key={squirrel.id} href={squirrel.url}>
+										<a className="link" key={squirrel.id} href={squirrel.url}>
 											{squirrel.app}
-										</Link>
+										</a>
 									)
 								)}
 							</Group>
-						</Text>
-					</Stack>
+						</p>
+					</div>
 					<nav aria-label="Page tools">
 						<InlineList>
-							<InlineListItem variant="small">
-								<Link href={getSourceLink(id)}>View source code</Link>
+							<InlineListItem>
+								<a className="link" href={getSourceLink(id)}>
+									View source code
+								</a>
 							</InlineListItem>
-							<InlineListItem variant="small">
-								<Link href={getIssueLink()}>Report an issue</Link>
+							<InlineListItem>
+								<a className="link" href={getIssueLink()}>
+									Report an issue
+								</a>
 							</InlineListItem>
-							<InlineListItem variant="small">
-								<Link href={getGitHubLink(id)}>Edit on GitHub</Link>
+							<InlineListItem>
+								<a className="link" href={getGitHubLink(id)}>
+									Edit on GitHub
+								</a>
 							</InlineListItem>
 						</InlineList>
 					</nav>
-				</Stack>
+				</div>
 				<BuyMeCoffee />
 				<MurderOfCrows />
-			</Stack>
+			</div>
 		</Page>
 	);
 }

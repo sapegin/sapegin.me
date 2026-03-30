@@ -1,16 +1,8 @@
-import { Box } from './Box';
-
 export function InlineSeparator() {
 	return (
-		<Box
-			as="span"
+		<span
 			role="separator"
-			css={{
-				display: 'inline-block',
-				width: '0.3rem',
-				height: '0.3rem',
-				backgroundColor: 'border',
-			}}
+			className="inline-block h-[0.3rem] w-[0.3rem] bg-border"
 		/>
 	);
 }

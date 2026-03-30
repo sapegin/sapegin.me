@@ -4,7 +4,7 @@
 
 @layer base {
 	html {
-		font-size: var(--text-base);
+		font-size: var(--text-root);
 		font-family: var(--font-body);
 		color: var(--color-text);
 		background-color: var(--color-background);

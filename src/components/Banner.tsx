@@ -1,6 +1,4 @@
-import { css } from '../../styled-system/css';
 import { campaigns } from '../campaigns';
-import { Box } from './Box';
 
 const { enabled: isCampaignEnabled, banner } = campaigns.washingCode;
 
@@ -10,33 +8,23 @@ export function Banner() {
 	}
 
 	return (
-		<Box
-			as="aside"
-			width="100vw"
-			marginLeft="calc(50% - 50vw)"
-			bg="accent"
-			textAlign="center"
-			mt="-m"
-			mb="s"
-			px="m"
-			py="s"
+		<aside
+			className="
+     -mt-4 mb-2 ml-[calc(50%-50vw)] w-screen bg-accent px-4 py-2 text-center
+   "
 		>
 			<a
 				href="/book/"
-				className={css({
-					color: 'background',
-					_hover: {
-						textDecoration: 'none',
-					},
-					_focusVisible: {
-						outline: '2px solid currentColor',
-						outlineOffset: 'token(borderWidths.focusOutlineOffset)',
-						borderRadius: 'default',
-					},
-				})}
+				className="
+      text-background
+      hover:no-underline
+      focus-visible:rounded-normal focus-visible:outline-2
+      focus-visible:outline-offset-(--border-width-focus-offset)
+      focus-visible:outline-current
+    "
 			>
 				{banner}
 			</a>
-		</Box>
+		</aside>
 	);
 }

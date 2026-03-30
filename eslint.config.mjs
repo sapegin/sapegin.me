@@ -72,6 +72,9 @@ export default [
 
 			// Most examples define variables or functions
 			'@typescript-eslint/no-unused-vars': 'off',
+
+			// Disable Tailwind linting
+			'better-tailwindcss/no-unknown-classes': 'off',
 		},
 	},
 	{

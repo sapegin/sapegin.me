@@ -6,8 +6,6 @@ import {
 	ME_MASTODON_HANDLE,
 	ME_MASTODON_URL,
 } from '../constants';
-import { Link } from './Link';
-import { Text } from './Text';
 
 interface Props {
 	children?: ReactNode;
@@ -16,13 +14,24 @@ interface Props {
 
 export function Feedback({ children = <>Write me at</>, github }: Props) {
 	return (
-		<Text variant="intro">
-			{children} <Link href="mailto:artem@sapegin.me">artem@sapegin.me</Link>,{' '}
-			<Link href={ME_MASTODON_URL} rel="me">
+		<p className="typo-intro">
+			{children}{' '}
+			<a className="link" href="mailto:artem@sapegin.me">
+				artem@sapegin.me
+			</a>
+			,{' '}
+			<a className="link" href={ME_MASTODON_URL} rel="me">
 				{ME_MASTODON_HANDLE}
-			</Link>
-			, <Link href={ME_BLUESKY_URL}>{ME_BLUESKY_HANDLE}</Link>, or{' '}
-			<Link href={`${ME_GITHUB_URL}/${github}/issues`}>open an issue</Link>.
-		</Text>
+			</a>
+			,{' '}
+			<a className="link" href={ME_BLUESKY_URL}>
+				{ME_BLUESKY_HANDLE}
+			</a>
+			, or{' '}
+			<a className="link" href={`${ME_GITHUB_URL}/${github}/issues`}>
+				open an issue
+			</a>
+			.
+		</p>
 	);
 }

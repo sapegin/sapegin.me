@@ -1,75 +1,25 @@
-import { type ElementType, type ReactNode } from 'react';
-import { cva, type RecipeVariantProps } from '../../styled-system/css';
-import { Box, type BoxProps } from './Box';
+import clsx from 'clsx';
+import type { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
 
-const button = cva({
-	base: {
-		position: 'relative',
-		display: 'inline-block',
-		px: { base: 'm', tablet: 'l' },
-		pt: { base: 'm', tablet: 'calc(token(spacing.m) + token(spacing.xs))' },
-		pb: { base: 'm', tablet: 'm' },
-		fontFamily: 'ui',
-		color: 'text',
-		borderStyle: 'solid',
-		borderWidth: 2,
-		lineHeight: '1rem',
-		textDecoration: 'none',
-		userSelect: 'none',
-		outline: 0,
-		transitionDuration: 'hover',
-		transitionTimingFunction: 'hover',
-		transitionProperty: 'all',
-		_hover: {
-			cursor: 'pointer',
-			color: 'accent',
-		},
-		_active: {
-			transform: 'translateY(1px)',
-		},
-		_focusVisible: {
-			outline: 'focus',
-			outlineOffset: 'token(borderWidths.focusOutlineOffset)',
-			borderRadius: '0.2rem',
-		},
-		'&::-moz-focus-inner': {
-			border: 0,
-		},
-	},
-	variants: {
-		variant: {
-			medium: {
-				backgroundColor: 'background',
-				height: '2.2rem',
-				py: 's',
-				fontSize: 'ui',
-			},
-			large: {
-				backgroundColor: 'background',
-				py: 'm',
-				fontSize: 'xl',
-			},
-			coffee: {
-				background: 'coffeeBackground',
-				color: 'coffeeText',
-				py: 'm',
-				fontSize: 'xl',
-				_hover: {
-					color: 'coffeeHover',
-				},
-			},
-		},
-	},
-});
+// TODO: Find a better way to implement it, avoid `as` prop
 
-export type ButtonProps<C extends ElementType> = BoxProps<C> &
-	RecipeVariantProps<typeof button> & {
+type Variant = 'medium' | 'large';
+
+const VARIANT_CLASSES: Record<Variant, string> = {
+	medium: 'button-medium',
+	large: 'button-large',
+};
+
+export type ButtonProps<C extends ElementType = 'button'> =
+	ComponentPropsWithoutRef<C> & {
+		as?: C;
+		variant?: Variant;
 		children: ReactNode;
 	};
 
 function Pixel({
 	type = 'print',
-	...props
+	...style
 }: {
 	type?: 'print' | 'erase';
 	top?: number;
@@ -78,25 +28,30 @@ function Pixel({
 	left?: number;
 }) {
 	return (
-		<Box
-			{...props}
-			position="absolute"
-			width={2}
-			height={2}
-			bg={type === 'print' ? 'currentColor' : 'background'}
-			css={{ content: `''` }}
+		<span
+			className={clsx(
+				'absolute size-0.5',
+				type === 'print' ? 'bg-current' : 'bg-background'
+			)}
+			style={style}
+			aria-hidden="true"
 		/>
 	);
 }
 
 export function Button<C extends ElementType = 'button'>({
+	as,
 	variant = 'medium',
+	className,
 	children,
 	...props
 }: ButtonProps<C>) {
+	const Component = as ?? 'button';
 	return (
-		// @ts-expect-error: I have no idea what's wrong here but it works...
-		<Box {...props} className={button({ variant })}>
+		<Component
+			className={clsx('button', VARIANT_CLASSES[variant], className as string)}
+			{...props}
+		>
 			{children}
 			{/* Top left corner */}
 			<Pixel top={0} left={0} />
@@ -121,6 +76,6 @@ export function Button<C extends ElementType = 'button'>({
 			<Pixel bottom={-2} right={-2} type="erase" />
 			<Pixel bottom={0} right={-2} type="erase" />
 			<Pixel bottom={-2} right={0} type="erase" />
-		</Box>
+		</Component>
 	);
 }

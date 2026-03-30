@@ -1,14 +1,9 @@
 import type { CollectionEntry } from 'astro:content';
 import { BookCover } from '../components/BookCover';
-import { Box } from '../components/Box';
 import { Button } from '../components/Button';
 import { Expander } from '../components/Expander';
-import { Heading } from '../components/Heading';
-import { Stack } from '../components/Stack';
 import { Subscription } from '../components/Subscription';
-import { Text } from '../components/Text';
-import { TextContent } from '../components/TextContent';
-import { TextTypo } from '../components/TextTypo';
+import { Typo } from '../components/Typo';
 import { Video } from '../components/Video';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -23,32 +18,38 @@ interface Props {
 export function ZinePage({ url, title, issues }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
-			<Stack gap="l">
-				<TextTypo variant="intro">
-					This is a zine with my photos that I publish to share my work and
-					reflect on my photography, kind of a better Instagram. I’m planning to
-					publish a new issue about once a year, each dedicated to a particular
-					theme.
-				</TextTypo>
+			<div className="flex flex-col gap-8">
+				<p className="typo-intro">
+					<Typo>
+						This is a zine with my photos that I publish to share my work and
+						reflect on my photography, kind of a better Instagram. I’m planning
+						to publish a new issue about once a year, each dedicated to a
+						particular theme.
+					</Typo>
+				</p>
 				{issues.map(({ id, data: issue }) => {
 					return (
-						<Stack key={id} as="article" gap="m">
-							<Heading as="h2" level={2}>
-								{issue.title}
-							</Heading>
-							<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
-								<Stack gap="m">
-									<TextContent>
-										<Text
+						<article key={id} className="flex flex-col gap-4">
+							<h2 className="heading-2">{issue.title}</h2>
+							<div
+								className="
+          flex flex-col gap-8
+          md:flex-row
+        "
+							>
+								<div className="flex flex-col gap-4">
+									<div className="prose">
+										<p
+											className="typo-body"
 											// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
 											dangerouslySetInnerHTML={{ __html: issue.description }}
 										/>
-										<Text
-											variant="small"
+										<p
+											className="typo-small"
 											// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
 											dangerouslySetInnerHTML={{ __html: issue.meta }}
 										/>
-									</TextContent>
+									</div>
 									{issue.price && issue.available ? (
 										<Button
 											as="a"
@@ -57,27 +58,23 @@ export function ZinePage({ url, title, issues }: Props) {
 											rel="noopener"
 										>
 											Buy now!
-											<Text
-												as="span"
-												px="s"
-												verticalAlign="middle"
-												fontSize="s"
-												color="inherit"
-											>
+											<span className="px-2 align-middle text-sm text-inherit">
 												■
-											</Text>{' '}
+											</span>{' '}
 											{issue.price} (excluding shipping)
 										</Button>
 									) : (
-										<Text variant="bold">Sold out</Text>
+										<p className="typo-body font-bold">Sold out</p>
 									)}
 									<Expander>
 										<Video src={issue.video} />
 									</Expander>
-								</Stack>
-								<Box
-									mx={{ base: 'auto', tablet: 0 }}
-									order={{ base: -1, tablet: 0 }}
+								</div>
+								<div
+									className="
+           -order-1 mx-auto
+           md:order-0 md:mx-0
+         "
 								>
 									<BookCover
 										title={issue.title}
@@ -85,13 +82,13 @@ export function ZinePage({ url, title, issues }: Props) {
 										width={320}
 										height={450}
 									/>
-								</Box>
-							</Stack>
-						</Stack>
+								</div>
+							</div>
+						</article>
 					);
 				})}
 				<Subscription list="photo" />
-			</Stack>
+			</div>
 		</PageWithTitle>
 	);
 }

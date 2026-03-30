@@ -1,14 +1,23 @@
+/* @todo: Move to styles/? */
+
 @import 'tailwindcss';
+
 @import './packages/tamia/index.css';
 @import './packages/tamia/components/prose.css';
 @import './packages/tamia/components/link.css';
 @import './packages/tamia/components/quoted-link.css';
+@import './components/button.css';
+@import './components/post-content.css';
+@import './components/code-spread-supreme.css';
+
 @import './theme.css';
+@import './styles/global.css';
 
 @view-transition {
 	navigation: auto;
 }
 
+/* TODO: Move to styles/fonts.css */
 @font-face {
 	font-family: 'Mondwest-Regular';
 	src: url('/fonts/Mondwest-Regular.woff2') format('woff2');

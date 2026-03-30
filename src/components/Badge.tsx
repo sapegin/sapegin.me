@@ -1,33 +1,24 @@
-import { cva, type RecipeVariantProps } from '../../styled-system/css';
-import { Box, type BoxProps } from './Box';
+import clsx from 'clsx';
+import type { ComponentPropsWithoutRef } from 'react';
 
-const badge = cva({
-	base: {
-		display: 'inline-block',
-		px: 'xs',
-		py: 'xxxs',
-		border: 'thin',
-		borderColor: 'accent',
-		borderRadius: 'large',
-		fontSize: 'xs',
-		textTransform: 'lowercase',
-	},
-	variants: {
-		variant: {
-			default: {
-				color: 'accent',
-			},
-			inverted: {
-				color: 'background',
-				background: 'accent',
-			},
-		},
-	},
-});
+type BadgeProps = ComponentPropsWithoutRef<'span'> & {
+	variant?: 'default' | 'inverted';
+};
 
-type BadgeProps = Omit<BoxProps<'span'>, 'as' | 'className'> &
-	RecipeVariantProps<typeof badge>;
-
-export function Badge({ variant = 'default', ...props }: BadgeProps) {
-	return <Box as="span" className={badge({ variant })} {...props} />;
+export function Badge({
+	variant = 'default',
+	className,
+	...props
+}: BadgeProps) {
+	return (
+		<span
+			className={clsx(
+				'inline-block rounded-lg border border-accent px-1 py-px text-xs lowercase',
+				variant === 'default' && 'text-accent',
+				variant === 'inverted' && 'bg-accent text-background',
+				className
+			)}
+			{...props}
+		/>
+	);
 }

@@ -1,0 +1,52 @@
+@utility button {
+	position: relative;
+	display: inline-block;
+	padding: 1rem;
+	padding-inline: 1rem;
+	font-family: var(--font-ui);
+	color: var(--color-text);
+	border: 2px solid;
+	line-height: 1rem;
+	text-decoration: none;
+	user-select: none;
+	outline: 0;
+	transition: all var(--duration-hover) var(--ease-hover);
+
+	@media (width >= 48rem) {
+		padding-inline: 2rem;
+		padding-top: calc(1rem + 0.25rem);
+		padding-bottom: 1rem;
+	}
+
+	&:hover {
+		cursor: pointer;
+		color: var(--color-accent);
+	}
+
+	&:active {
+		transform: translateY(1px);
+	}
+
+	&:focus-visible {
+		outline: var(--border-width-focus) solid var(--color-accent);
+		outline-offset: var(--border-width-focus-offset);
+		border-radius: 0.2rem;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+	}
+}
+
+@utility button-medium {
+	background-color: var(--color-background);
+	height: 2.2rem;
+	padding-block: 0.5rem;
+	font-size: var(--text-ui);
+}
+
+@utility button-large {
+	background-color: var(--color-background);
+	padding-block: 1rem;
+	font-size: var(--text-xl);
+}

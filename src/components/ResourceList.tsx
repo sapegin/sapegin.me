@@ -1,9 +1,5 @@
 import type { Resource } from '../types/Resource';
 import { Badge } from './Badge';
-import { Grid } from './Grid';
-import { Link } from './Link';
-import { Stack } from './Stack';
-import { Text } from './Text';
 
 interface Props {
 	items: Resource[];
@@ -11,22 +7,28 @@ interface Props {
 
 export function ResourceList({ items }: Props) {
 	return (
-		<Grid as="ul" auto="wide" gap="m">
+		<ul className="grid-auto-wide grid gap-4">
 			{items.map((item) => (
-				<Stack key={item.url ?? item.title} as="li" gap="s">
-					<Text variant="large">
-						{item.url ? <Link href={item.url}>{item.title}</Link> : item.title}
-					</Text>
-					{item.description && <Text>{item.description}</Text>}
+				<li key={item.url ?? item.title} className="gap-2">
+					<p className="typo-large">
+						{item.url ? (
+							<a className="link" href={item.url}>
+								{item.title}
+							</a>
+						) : (
+							item.title
+						)}
+					</p>
+					{item.description && <p className="typo-body">{item.description}</p>}
 					{item.badges && (
-						<Stack as="p" direction="row" gap="xs" alignItems="center">
+						<p className="flex items-center gap-1">
 							{item.badges.map((badge) => (
 								<Badge key={badge}>{badge}</Badge>
 							))}
-						</Stack>
+						</p>
 					)}
-				</Stack>
+				</li>
 			))}
-		</Grid>
+		</ul>
 	);
 }

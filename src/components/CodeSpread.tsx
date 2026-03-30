@@ -1,5 +1,4 @@
 import { Code } from './Code';
-import { Grid } from './Grid';
 
 interface Props {
 	codes: {
@@ -14,9 +13,9 @@ export function CodeSpread({ codes, name }: Props) {
 	const darkCode = codes.dark[name];
 
 	return (
-		<Grid auto="wide" rowGap="m" columnGap="l">
+		<div className="grid-auto-wide grid gap-x-8 gap-y-4">
 			<Code code={lightCode} />
 			<Code code={darkCode} />
-		</Grid>
+		</div>
 	);
 }

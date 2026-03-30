@@ -1,5 +1,3 @@
-import { Nobr } from './Nobr';
-
 interface Props {
 	date: Date;
 }
@@ -20,5 +18,5 @@ function formatDate(date: Date) {
 }
 
 export function FormattedDate({ date }: Props) {
-	return <Nobr>{formatDate(date)}</Nobr>;
+	return <span className="text-nowrap">{formatDate(date)}</span>;
 }

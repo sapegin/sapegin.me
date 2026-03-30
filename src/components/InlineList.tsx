@@ -1,27 +1,28 @@
-import { Box, type BoxProps } from './Box';
-import { Text, type TextProps } from './Text';
+import clsx from 'clsx';
+import type { ComponentPropsWithoutRef } from 'react';
 
-export function InlineList(props: BoxProps<'p'>) {
-	return <Box as="p" display={{ tablet: 'flex' }} {...props} />;
+export function InlineList({
+	className,
+	...props
+}: ComponentPropsWithoutRef<'p'>) {
+	return <p className={clsx('md:flex', className)} {...props} />;
 }
 
-export function InlineListItem(props: TextProps<'span'>) {
+export function InlineListItem({
+	className,
+	...props
+}: ComponentPropsWithoutRef<'span'>) {
 	return (
-		<Text
-			as="span"
-			fontStyle="italic"
-			mb="xs"
-			css={{
-				'&:not(:last-child)::after': {
-					content: `''`,
-					display: 'inline-block',
-					marginInline: 's',
-					marginBottom: '0.1rem',
-					width: '0.3rem',
-					height: '0.3rem',
-					backgroundColor: 'border',
-				},
-			}}
+		<span
+			className={clsx(
+				`
+      mb-1 italic
+      not-last:after:mx-2 not-last:after:mb-[0.1rem] not-last:after:inline-block
+      not-last:after:h-[0.3rem] not-last:after:w-[0.3rem]
+      not-last:after:bg-border not-last:after:content-[""]
+    `,
+				className
+			)}
 			{...props}
 		/>
 	);

@@ -1,6 +1,4 @@
-import { Heading } from '../components/Heading';
 import { PostList } from '../components/PostList';
-import { Stack } from '../components/Stack';
 import type { Post } from '../types/Post';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -26,19 +24,17 @@ function getStartIndex(
 export function BlogPage({ url, title, years, postsByYear }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
-			<Stack gap="l">
+			<div className="flex flex-col gap-8">
 				{years.map((year) => {
 					const yearStartIndex = getStartIndex(years, postsByYear, year);
 					return (
-						<Stack key={year} as="section" gap="m">
-							<Heading as="h2" level={2}>
-								{year}
-							</Heading>
+						<section key={year} className="flex flex-col gap-4">
+							<h2 className="heading-2">{year}</h2>
 							<PostList posts={postsByYear[year]} startIndex={yearStartIndex} />
-						</Stack>
+						</section>
 					);
 				})}
-			</Stack>
+			</div>
 		</PageWithTitle>
 	);
 }

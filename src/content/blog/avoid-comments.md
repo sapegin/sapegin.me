@@ -393,7 +393,10 @@ let Test = () => (
 // hardcoded in Swiper styles
 <SliderSlide
   key={item.image ?? item.text}
-  className="mr-8 !h-auto !w-80 shrink-0 last:mr-0"
+  className="
+    mr-8 h-auto! w-80! shrink-0
+    last:mr-0
+  "
 >
   …
 </SliderSlide>

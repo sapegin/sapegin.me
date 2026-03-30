@@ -1,3 +1,6 @@
+/**
+ * Site theme, extends Tâmia theme.
+ */
 @theme {
 	/* Colors */
 	--color-text: #3a3d40;
@@ -7,6 +10,8 @@
 	--color-secondary: #75757c;
 	--color-accent: #be4b83;
 	--color-light: #94949e;
+
+	/* Syntax highlighting colors */
 	--color-code-black: #565a67;
 	--color-code-gray: #6c7693;
 	--color-code-green: #00805e;
@@ -14,9 +19,18 @@
 	--color-code-blue: #0f73a7;
 	--color-code-purple: #7859a6;
 	--color-code-red: #b71818;
+
+	/* Coffee button colors */
+	/* @todo: replace it with normal button */
 	--color-coffee-text: #754c06;
 	--color-coffee-background: #fbc024;
 	--color-coffee-hover: #3a3d40;
+
+	/* Book spread colors */
+	--color-book-shadow: rgba(0, 0, 0, 0.1);
+	--color-book-outline-light: rgba(255, 255, 255, 0.9);
+	--color-book-outline-dark: rgba(0, 0, 0, 0.15);
+	--color-book-inset-light: rgba(0, 0, 0, 0.15);
 
 	/* Fonts */
 	--font-body: 'Helvetica Neue', Arial, sans-serif;
@@ -25,11 +39,11 @@
 	--font-code: MonoLisa, monospace;
 
 	/* Text sizes */
+	--text-root: 1.125em;
 	--text-lg: 1.7rem;
 	--text-xl: 2rem;
 	--text-xxl: 2.4rem;
 	--text-xxxl: 3.2rem;
-	--text-root: 1.125em;
 	--text-article: 1.2rem;
 	--text-ui: 1.5rem;
 
@@ -46,12 +60,16 @@
 	--radius-normal: 2px;
 	--radius-lg: 3px;
 
-	/* Transitions */
+	/* Easings */
 	--ease-fadeout: ease-out;
+
+	/* Durations (not in Tailwind theme) */
 	--duration-fadeout: 1s;
 }
 
-/* Dark theme */
+/**
+ * Dark theme.
+ */
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-text: #e3e6e8;
@@ -71,4 +89,45 @@
 		--color-code-red: #f96c78;
 		--color-coffee-hover: #2e3033;
 	}
+}
+
+/**
+ * Tailwind utilities
+ */
+
+@utility typo-semilarge {
+	font-family: var(--font-body);
+	font-size: var(--text-article);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--leading-normal);
+	color: var(--color-text);
+}
+
+@utility typo-menu {
+	font-family: var(--font-ui);
+	font-size: var(--text-ui);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--leading-normal);
+	letter-spacing: var(--tracking-menu);
+	text-transform: uppercase;
+	color: var(--color-text);
+}
+
+@utility typo-intro {
+	font-family: var(--font-body);
+	font-size: var(--text-article);
+	font-style: italic;
+	font-weight: var(--font-weight-normal);
+	line-height: var(--leading-normal);
+	color: var(--color-text);
+}
+
+@utility typo-flag {
+	font-family: var(--font-body);
+	font-size: var(--text-base);
+	font-style: normal;
+	font-weight: var(--font-weight-bold);
+	line-height: var(--leading-normal);
+	text-transform: uppercase;
+	color: var(--color-secondary);
 }

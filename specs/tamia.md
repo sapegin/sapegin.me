@@ -64,24 +64,12 @@ Map every Panda token to a Tailwind v4 `@theme` variable. Per-site overrides are
   --leading-heading: 1.1;
   --leading-code: 1.3;
 
-  /* Spacing */
-  --spacing-xxs: 0.125rem;
-  --spacing-xs: 0.25rem;
-  --spacing-s: 0.5rem;
-  --spacing-m: 1rem;
-  --spacing-l: 2rem;
-  --spacing-xl: 4rem;
-  --spacing-xxl: 8rem;
-  --spacing-xxxl: 16rem;
-
   /* Semantic spacing */
   --spacing-block-margin: 1rem;
   --spacing-heading-margin-top: 2rem;
   --spacing-list-margin: 1.3em;
   --spacing-content-padding-x: 1rem;
-
-  /* Sizes */
-  --size-text-max-width: 45rem;
+  --spacing-text-max-width: 45rem;
 
   /* Radii */
   --radius-base: 0.25em;
@@ -262,7 +250,7 @@ These components become plain HTML + class names. No component file needed.
 | `Image` | `<img className="max-w-full h-auto" loading="lazy">` |
 | `Expander` | `<div className="expander">` (see custom utility below) |
 | `Heading` | `<h1 className="heading-1">`, `<h2 className="heading-2">`, `<h3 className="heading-3">` — separate HTML element from visual style |
-| `Text` | `<p className="typo-body">`, `<p className="typo-small">`, `<span className="typo-menu">`, etc. |
+| `Text` | `<p className="typo-body">>`, `<p className="typo-small">`, `<span className="typo-menu">`, etc. |
 | `Frame` | `<div className="frame aspect-[9/6]">` — uses Tailwind's built-in `aspect-*` classes |
 | `List` | `<ol className="flex flex-col gap-m list-none">` |
 | `FullWidth` | `<div className="w-screen ml-[calc(50%-50vw)]"><div className="max-w-[1200px] mx-auto">` |
@@ -330,13 +318,6 @@ These become `@utility` definitions — usable as single classes with full varia
   line-height: var(--leading-base);
   color: var(--color-text);
 }
-@utility typo-bold {
-  font-family: var(--font-body);
-  font-size: var(--text-m);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--leading-base);
-  color: var(--color-text);
-}
 @utility typo-small {
   font-family: var(--font-body);
   font-size: var(--text-s);
@@ -367,7 +348,7 @@ Usage:
 
 - **Grid**: `<div className="grid-auto-narrow gap-m">`
 - **Heading**: `<h2 className="heading-2">` (decoupled from HTML element — can use `heading-1` on an `h2` if needed)
-- **Text**: `<p className="typo-body">`, `<span className="typo-small">`
+- **Text**: `<p className="typo-body">>`, `<span className="typo-small">`
 - **Frame**: `<div className="frame aspect-[9/6]">` (combine with Tailwind's `aspect-*`)
 
 ### 4.3 CSS Component Classes (`components.css`)
@@ -613,6 +594,31 @@ These must stay as components because they have **complex JS behavior or site-sp
 | `OrderedList` | CSS counter-based numbering via `::before` | Provide as CSS class + thin component wrapper |
 | `IconBase` | SVG `viewBox` normalization, `aria-hidden`, `preserveAspectRatio` defaults | Pure utility component, no styling dependency |
 
+### 4.5 Spacing
+
+Tailwind uses a spacing scale based on 4px.
+
+| Tâmia  | Value          | Tailwind |
+| ------ | -------------- | -------- |
+| `xxs`  | 0.125rem / 2px | gap-0.5  |
+| `xs`   | 0.25rem / 4px  | gap-1    |
+| `s`    | 0.5rem / 8px   | gap-2    |
+| `m`    | 1rem / 16px    | gap-4    |
+| `l`    | 2rem / 32px    | gap-8    |
+| `xl`   | 4rem / 64px    | gap-16   |
+| `xxl`  | 8rem / 128px   | gap-32   |
+| `xxxl` | 16rem / 256px  | gap-64   |
+
+### 4.6 Responsive breakpoints
+
+Tailwind uses a t-shirt size breakpoints scale.
+
+| Tâmia     | Value | Tailwind |
+| --------- | ----- | -------- |
+| `base`    |       |          |
+| `tablet`  | 48rem | `md:*`   |
+| `desktop` | 62rem | `lg:`    |
+
 ---
 
 ## 5. File Structure
@@ -668,7 +674,7 @@ src/packages/tamia/
     - `Grid` → `<div className="grid-auto-narrow gap-m">`
     - `Expander` → `<div className="expander">`
     - `Heading` → `<h1 className="heading-1">`, `<h2 className="heading-2">`, etc.
-    - `Text` → `<p className="typo-body">`, `<span className="typo-small">`, etc.
+    - `Text` → `<p className="typo-body">>`, `<span className="typo-small">`, etc.
     - `Frame` → `<div className="frame aspect-9/6">`
     - `Button` → copy and adapt from component template
 16. Remove `panda.config.ts`, `styled-system/`, `@pandacss/dev` dependency

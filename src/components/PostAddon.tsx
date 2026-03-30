@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Box } from './Box';
 
 interface Props {
 	children: ReactNode;
@@ -7,18 +6,13 @@ interface Props {
 
 export function PostAddon({ children }: Props) {
 	return (
-		<Box
-			mx="-m"
-			px="m"
-			py="l"
-			css={{
-				borderColor: 'accent',
-				borderStyle: `solid`,
-				borderWidth: `2px 0`,
+		<div
+			className="-mx-4 border-x-0 border-y-2 border-solid border-accent px-4 py-8"
+			style={{
 				background: 'linear-gradient(0deg, #57729030 0%, #c45a8d30 100%)',
 			}}
 		>
 			{children}
-		</Box>
+		</div>
 	);
 }

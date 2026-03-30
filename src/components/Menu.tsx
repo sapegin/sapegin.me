@@ -1,7 +1,4 @@
 import { Fragment } from 'react';
-import { Box } from './Box';
-import { Link } from './Link';
-import { Text } from './Text';
 
 // Half of total menu items
 export const HALF = 3;
@@ -49,56 +46,44 @@ function isCurrent(href: string, current: string) {
 export function Menu({ current }: Props) {
 	return (
 		<nav aria-label="Main">
-			<Box
-				display={{
-					base: 'flex',
-					tablet: 'grid',
-				}}
-				as="ul"
-				columnGap="m"
-				rowGap={{ tablet: 'm' }}
-				justifyItems="center"
-				flexWrap="wrap"
-				justifyContent={{
-					base: 'center',
-					tablet: 'initial',
-				}}
-				css={{
-					gridTemplateColumns: {
-						tablet: `repeat(${HALF}, min-content) auto repeat(${HALF}, min-content)`,
-					},
+			<ul
+				className="
+      flex flex-wrap justify-center gap-x-4
+      md:grid md:justify-normal md:justify-items-center md:gap-y-4
+    "
+				style={{
+					gridTemplateColumns: `repeat(${HALF}, min-content) auto repeat(${HALF}, min-content)`,
 				}}
 			>
 				{ITEMS.map(({ title, href }, index) => (
 					<Fragment key={href}>
 						{index === HALF && (
-							<Box
-								as="li"
+							<li
 								aria-hidden="true"
-								display={{ base: 'none', tablet: 'block' }}
+								className="
+          hidden
+          md:block
+        "
 							/>
 						)}
-						<Text as="li" variant="menu">
-							<Link
+						<li className="typo-menu">
+							<a
 								href={href}
-								css={{
-									whiteSpace: 'nowrap',
-									textShadow: isCurrent(href, current)
-										? `2px 2px color-mix(in hsl, token(colors.primary), transparent 70%)`
-										: undefined,
-									// HACK: Increase specificity to override Link styles (Astro production
-									// build imports CSS in a different order)
-									'&&': {
-										textDecoration: 'none',
-									},
-								}}
+								className="link text-nowrap no-underline!"
+								style={
+									isCurrent(href, current)
+										? {
+												textShadow: `2px 2px color-mix(in hsl, var(--color-primary), transparent 70%)`,
+											}
+										: undefined
+								}
 							>
 								{title}
-							</Link>
-						</Text>
+							</a>
+						</li>
 					</Fragment>
 				))}
-			</Box>
+			</ul>
 		</nav>
 	);
 }

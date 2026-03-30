@@ -36,6 +36,7 @@
 
 	/* Font sizes */
 	--text-*: initial;
+	--text-root: 1;
 	--text-xs: 0.75rem;
 	--text-sm: 0.9rem;
 	--text-base: 1rem;
@@ -63,10 +64,8 @@
 	--spacing-list-margin: 1.3em;
 	/* Site content horizontal spacing */
 	--spacing-content-padding-x: 1rem;
-
-	/* Sizes */
 	/* Maximum width of text elements (p, h1, h2, blockquote, etc.) */
-	--size-text-max-width: 45rem;
+	--spacing-text-max-width: 45rem;
 
 	/* Radii */
 	--radius-*: initial;
@@ -79,9 +78,11 @@
 	/* Distance from an element to the focus outline */
 	--border-width-focus-offset: 2px;
 
-	/* Transitions */
+	/* Easings */
 	--ease-fade: ease-out;
 	--ease-hover: ease-in;
+
+	/* Durations (not in Tailwind theme) */
 	--duration-fade: 0.15s;
 	--duration-hover: 0.1s;
 }

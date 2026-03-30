@@ -1,8 +1,5 @@
 import type { ReactNode } from 'react';
-import { Box } from './Box';
-import { Heading } from './Heading';
 import { IconCoffee } from './IconCoffee';
-import { Stack } from './Stack';
 
 interface Props {
 	children: ReactNode;
@@ -10,28 +7,20 @@ interface Props {
 
 export function Hola({ children }: Props) {
 	return (
-		<Heading level={1}>
-			<Stack
-				as="span"
-				display="inline-flex"
-				direction="row"
-				gap="s"
-				alignItems="baseline"
-			>
-				<Box
-					css={{
-						fontSize: 'clamp(2.6rem, 7vw, 4rem)',
-						background: `linear-gradient(token(colors.accent), token(colors.primary))`,
-						backgroundClip: 'text',
-						WebkitTextFillColor: 'transparent',
-					}}
+		<h1 className="heading-1">
+			<span className="inline-flex flex-row items-baseline gap-2">
+				<span
+					className="
+       bg-linear-to-b from-accent to-primary bg-clip-text
+       text-[clamp(2.6rem,7vw,4rem)] [-webkit-text-fill-color:transparent]
+     "
 				>
 					{children}
-				</Box>
-				<Box>
-					<IconCoffee mt={-6} />
-				</Box>
-			</Stack>
-		</Heading>
+				</span>
+				<span className="-mt-1.5">
+					<IconCoffee />
+				</span>
+			</span>
+		</h1>
 	);
 }

@@ -1,22 +1,16 @@
-import type { PropsWithoutRef } from 'react';
-import { Box, type BoxProps } from './Box';
+import type { ComponentPropsWithoutRef } from 'react';
 
 /**
- * Responsive photo with max height.
+ * Responsive video embed.
  */
-export function Video(props: PropsWithoutRef<BoxProps<'iframe'>>) {
+export function Video(props: ComponentPropsWithoutRef<'iframe'>) {
 	return (
-		<Box
-			as="iframe"
+		<iframe
 			{...props}
 			title="YouTube video player"
 			allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowFullScreen
-			css={{
-				aspectRatio: '16 / 9',
-				width: '100%',
-				border: 0,
-			}}
+			className="aspect-video w-full border-0"
 		/>
 	);
 }

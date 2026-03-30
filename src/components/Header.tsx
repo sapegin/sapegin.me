@@ -1,6 +1,5 @@
 import { Banner } from './Banner';
-import { Box } from './Box';
-import { Logo, LOGO_WIDTH } from './Logo';
+import { Logo } from './Logo';
 import { Menu } from './Menu';
 
 interface Props {
@@ -9,42 +8,26 @@ interface Props {
 
 export function Header({ url }: Props) {
 	return (
-		<Box
-			as="header"
-			css={{
-				// @ts-expect-error: no types for Firefox property but it works
-				MozOsxFontSmoothing: 'grayscale',
-				WebkitFontSmoothing: 'antialiased',
-			}}
-		>
-			<Box
-				as="a"
+		<header className="antialiased">
+			<a
 				href="#content"
-				css={{
-					position: 'absolute',
-					top: '-100%',
-					padding: 'm',
-					backgroundColor: 'text',
-					color: 'background',
-					textDecoration: 'none',
-					_focus: {
-						top: 0,
-						outline: 0,
-					},
-				}}
+				className="
+      absolute -top-full bg-text p-4 text-background no-underline
+      focus:top-0 focus:outline-0
+    "
 			>
 				Skip to content
-			</Box>
+			</a>
 			<Banner />
-			<Box
-				width={{ tablet: LOGO_WIDTH }}
-				mx="auto"
-				mb={{ base: 'm', tablet: '-2.6rem' }}
-				textAlign="center"
+			<div
+				className="
+      mx-auto mb-4 text-center
+      md:-mb-[2.6rem] md:w-[400px]
+    "
 			>
 				<Logo />
-			</Box>
+			</div>
 			<Menu current={url} />
-		</Box>
+		</header>
 	);
 }

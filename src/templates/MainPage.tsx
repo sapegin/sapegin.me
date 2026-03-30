@@ -1,16 +1,10 @@
 import { BookLink } from '../components/BookLink';
-import { Box } from '../components/Box';
 import { Expander } from '../components/Expander';
-import { Grid } from '../components/Grid';
-import { Heading } from '../components/Heading';
 import { Hola } from '../components/Hola';
 import { Image } from '../components/Image';
-import { Link } from '../components/Link';
 import { LinkWithIcon } from '../components/LinkWithIcon';
 import { PostList } from '../components/PostList';
 import { ResourceList } from '../components/ResourceList';
-import { Stack } from '../components/Stack';
-import { Text } from '../components/Text';
 import { ME_BLUESKY_URL, ME_GITHUB_URL, ME_MASTODON_URL } from '../constants';
 import type { Post } from '../types/Post';
 import type { Resource } from '../types/Resource';
@@ -26,10 +20,10 @@ interface Props {
 
 function Intro() {
 	return (
-		<Stack as="section" gap="m">
-			<Stack gap="m">
+		<section className="flex flex-col gap-4">
+			<div className="flex flex-col gap-4">
 				<Hola>Hey, I’m Artem!</Hola>
-				<Text variant="intro">
+				<p className="typo-intro">
 					<LinkWithIcon icon="mail" href="mailto:artem@sapegin.me">
 						Write to me
 					</LinkWithIcon>
@@ -57,9 +51,9 @@ function Intro() {
 					</LinkWithIcon>
 					,<br />
 					or keep reading about me:
-				</Text>
-			</Stack>
-		</Stack>
+				</p>
+			</div>
+		</section>
 	);
 }
 
@@ -69,53 +63,63 @@ function Writing({
 	blogPosts,
 }: Pick<Props, 'books' | 'writing' | 'blogPosts'>) {
 	return (
-		<Stack as="section" gap="m">
-			<Heading level={2}>I write about frontend development</Heading>
-			<Stack gap="l">
-				<Stack gap="m">
-					<Heading level={3}>My books</Heading>
-					<Grid as="ul" gap="l" auto="wide">
+		<section className="flex flex-col gap-4">
+			<h2 className="heading-2">I write about frontend development</h2>
+			<div className="flex flex-col gap-8">
+				<div className="flex flex-col gap-4">
+					<h3 className="heading-3">My books</h3>
+					<ul className="grid-auto-wide grid gap-8">
 						{books.map((book) => (
-							<Box as="li" key={book.url}>
+							<li key={book.url}>
 								<BookLink book={book} />
-							</Box>
+							</li>
 						))}
-					</Grid>
-				</Stack>
-				<Stack gap="m">
-					<Heading level={3}>Recent blog posts</Heading>
+					</ul>
+				</div>
+				<div className="flex flex-col gap-4">
+					<h3 className="heading-3">Recent blog posts</h3>
 					<PostList posts={blogPosts} showDates />
-				</Stack>
-				<Stack gap="m">
-					<Heading level={3}>More writing</Heading>
+				</div>
+				<div className="flex flex-col gap-4">
+					<h3 className="heading-3">More writing</h3>
 					<PostList posts={writing} showDescriptions />
-				</Stack>
-			</Stack>
-			<Text>
-				Sometimes, I also <Link href="/speaking/">speak at conferences</Link>.
-			</Text>
-		</Stack>
+				</div>
+			</div>
+			<p className="typo-body">
+				Sometimes, I also{' '}
+				<a className="link" href="/speaking/">
+					speak at conferences
+				</a>
+				.
+			</p>
+		</section>
 	);
 }
 
 function Projects({ projects }: Pick<Props, 'projects'>) {
 	return (
-		<Stack as="section" gap="m">
-			<Heading level={2}>I do things sometimes</Heading>
-			<Stack gap="l">
+		<section className="flex flex-col gap-4">
+			<h2 className="heading-2">I do things sometimes</h2>
+			<div className="flex flex-col gap-8">
 				<ResourceList items={projects} />
-			</Stack>
-			<Text>
-				See many more projects on <Link href={ME_GITHUB_URL}>GitHub</Link>.
-			</Text>
-		</Stack>
+			</div>
+			<p className="typo-body">
+				See many more projects on{' '}
+				<a className="link" href={ME_GITHUB_URL}>
+					GitHub
+				</a>
+				.
+			</p>
+		</section>
 	);
 }
 
 function Photography() {
 	return (
-		<Stack as="section" gap="m">
-			<Heading level={2}>I make photos of trees, buildings, and things</Heading>
+		<section className="flex flex-col gap-4">
+			<h2 className="heading-2">
+				I make photos of trees, buildings, and things
+			</h2>
 			<Expander>
 				<Image
 					src="/images/photos-1.avif"
@@ -125,54 +129,64 @@ function Photography() {
 				/>
 			</Expander>
 			<Expander>
-				<Grid gap="m" auto="narrow">
+				<div className="grid-auto-narrow grid gap-4">
 					<Image
 						src="/images/photos-2.avif"
 						alt="Dawn in Berlin, Germany"
 						width={600}
 						height={840}
 					/>
-					<Box display={{ base: 'none', tablet: 'block' }}>
+					<div
+						className="
+        hidden
+        md:block
+      "
+					>
 						<Image
 							src="/images/photos-3.avif"
 							alt="Foggy Berliner Dom, Germany"
 							width={600}
 							height={840}
 						/>
-					</Box>
+					</div>
 					<Image
 						src="/images/photos-4.avif"
 						alt="Sunrise in Rome, Italy"
 						width={600}
 						height={840}
 					/>
-				</Grid>
+				</div>
 			</Expander>
-			<Text>
+			<p className="typo-body">
 				See{' '}
-				<Link href="https://morning.photos/">
+				<a className="link" href="https://morning.photos/">
 					more of my photos and my photography zine
-				</Link>
+				</a>
 				.
-			</Text>
-		</Stack>
+			</p>
+		</section>
 	);
 }
 
 function Coffee() {
 	return (
-		<Stack as="section" gap="m">
-			<Heading level={2}>I drink lots of coffee</Heading>
+		<section className="flex flex-col gap-4">
+			<h2 className="heading-2">I drink lots of coffee</h2>
 			<Expander>
-				<Grid gap="m" auto="narrow">
-					<Box display={{ base: 'none', tablet: 'block' }}>
+				<div className="grid-auto-narrow grid gap-4">
+					<div
+						className="
+        hidden
+        md:block
+      "
+					>
 						<Image
 							src="/images/coffee-1.avif"
 							alt="Coffee"
 							width={600}
 							height={750}
 						/>
-					</Box>
+					</div>
 					<Image
 						src="/images/coffee-2.avif"
 						alt="Coffee"
@@ -185,96 +199,118 @@ function Coffee() {
 						width={600}
 						height={750}
 					/>
-				</Grid>
+				</div>
 			</Expander>
-			<Text>
+			<p className="typo-body">
 				No milk, no sugar, preferably filter.{' '}
 				<del>Dark and bitter, like life.</del> Check out my pour over{' '}
-				<Link href="https://coffee.morning.photos/">coffee timer</Link>.
-			</Text>
-		</Stack>
+				<a className="link" href="https://coffee.morning.photos/">
+					coffee timer
+				</a>
+				.
+			</p>
+		</section>
 	);
 }
 
 function Cooking() {
 	return (
-		<Stack as="section" gap="m">
-			<Heading level={2}>I learn how to cook great food</Heading>
+		<section className="flex flex-col gap-4">
+			<h2 className="heading-2">I learn how to cook great food</h2>
 			<Expander>
-				<Grid gap="m" auto="narrow">
-					<Link href="https://tacohuaco.co/recipes/tres-leches-cake/">
+				<div className="grid-auto-narrow grid gap-4">
+					<a
+						className="link"
+						href="https://tacohuaco.co/recipes/tres-leches-cake/"
+					>
 						<Image
 							src="/images/food-1.avif"
 							alt="Tres leches cake"
 							width={750}
 							height={563}
 						/>
-					</Link>
-					<Box display={{ base: 'none', tablet: 'block' }}>
-						<Link href="https://tacohuaco.co/recipes/svekolnik/">
+					</a>
+					<div
+						className="
+        hidden
+        md:block
+      "
+					>
+						<a className="link" href="https://tacohuaco.co/recipes/svekolnik/">
 							<Image
 								src="/images/food-2.avif"
 								alt="Svekolnik (cold borscht)"
 								width={750}
 								height={563}
 							/>
-						</Link>
-					</Box>
-					<Link href="https://tacohuaco.co/recipes/cottage-cheesecake/">
+						</a>
+					</div>
+					<a
+						className="link"
+						href="https://tacohuaco.co/recipes/cottage-cheesecake/"
+					>
 						<Image
 							src="/images/food-3.avif"
 							alt="Cottage cheesecake"
 							width={750}
 							height={563}
 						/>
-					</Link>
-				</Grid>
+					</a>
+				</div>
 			</Expander>
-			<Text>
+			<p className="typo-body">
 				My favorite cuisines to cook are Russian, Mexican, Korean, and Italian;
 				my fiancée and I are{' '}
-				<Link href="https://tacohuaco.co/">collecting recipes</Link>.
-			</Text>
-		</Stack>
+				<a className="link" href="https://tacohuaco.co/">
+					collecting recipes
+				</a>
+				.
+			</p>
+		</section>
 	);
 }
 
 function Me() {
 	return (
-		<Stack as="section" gap="m">
-			<Heading level={2}>I may (or may not) look like this</Heading>
+		<section className="flex flex-col gap-4">
+			<h2 className="heading-2">I may (or may not) look like this</h2>
 			<Expander>
-				<Grid gap="m" auto="narrow">
+				<div className="grid-auto-narrow grid gap-4">
 					<Image
 						src="/images/me-1.avif"
 						alt="Artem Sapegin is making a photo"
 						width={700}
 						height={700}
 					/>
-					<Box display={{ base: 'none', tablet: 'block' }}>
+					<div
+						className="
+        hidden
+        md:block
+      "
+					>
 						<Image
 							src="/images/me-2.avif"
 							alt="Artem Sapegin is drinking coffee"
 							width={700}
 							height={700}
 						/>
-					</Box>
+					</div>
 					<Image
 						src="/images/me-3.avif"
 						alt="Artem Sapegin is making a photo"
 						width={700}
 						height={700}
 					/>
-				</Grid>
+				</div>
 			</Expander>
-		</Stack>
+		</section>
 	);
 }
 
 function Leather() {
 	return (
-		<Stack as="section" gap="m">
-			<Heading level={2}>I make things from leather</Heading>
+		<section className="flex flex-col gap-4">
+			<h2 className="heading-2">I make things from leather</h2>
 			<Expander>
 				<Image
 					src="/images/leathercraft.avif"
@@ -283,29 +319,31 @@ function Leather() {
 					height={1008}
 				/>
 			</Expander>
-			<Text>
+			<p className="typo-body">
 				Check out my digital leather patterns{' '}
-				<Link href="https://klatzleathergoods.etsy.com/">on Etsy</Link>.
-			</Text>
-		</Stack>
+				<a className="link" href="https://klatzleathergoods.etsy.com/">
+					on Etsy
+				</a>
+				.
+			</p>
+		</section>
 	);
 }
 
 function BestViewed() {
 	return (
-		<Stack as="section" gap="s" textAlign="center">
-			<Text>This page is best viewed in:</Text>
-			<Box
-				as="img"
+		<section className="flex gap-2 text-center">
+			<p className="typo-body">This page is best viewed in:</p>
+			<img
+				className="mx-auto"
 				src="/images/netscape.gif"
 				alt="Netscape Navigator"
 				title="Netscape Navigator"
-				mx="auto"
 				width={60}
 				height={60}
 				loading="lazy"
 			/>
-		</Stack>
+		</section>
 	);
 }
 
