@@ -159,7 +159,7 @@ const faq: FaqItem[] = [
 
 function TheButton() {
 	return (
-		<a href={purchaseUrl} className="button button-large">
+		<a href={purchaseUrl} className="button">
 			Get the book!{' '}
 			<span className="px-2 align-middle text-sm" aria-hidden="true">
 				■
@@ -188,7 +188,7 @@ function ChapterList({ chapters }: { chapters: Chapter[] }) {
 					key={chapter.url ?? chapter.title}
 					className={clsx(
 						'grid gap-1',
-						chapter.title === 'Other techniques' && 'md:grid-cols-[1/3]'
+						chapter.title === 'Other techniques' && 'md:col-span-full'
 					)}
 				>
 					<p className="typo-semilarge">
@@ -203,7 +203,7 @@ function ChapterList({ chapters }: { chapters: Chapter[] }) {
 					{chapter.sections.length > 0 ? (
 						<div
 							className="
-         grid grid-cols-1 gap-x-8
+         grid grid-cols-1 gap-x-8 gap-y-2
          md:grid-cols-2
        "
 						>
@@ -279,7 +279,7 @@ function Testimonial({
 					strokeMiterlimit="2"
 					clipRule="evenodd"
 					viewBox="0 0 6 5"
-					className="-mt-2 ml-4"
+					className="-mt-0.5 ml-4"
 				>
 					<path
 						d="M0 0h1v5H0zM1 4h1v1H1zM2 3h1v1H2zM3 2h1v1H3zM4 1h1v1H4zM5 0h1v1H5z"
@@ -323,8 +323,8 @@ export function Spread({
      relative rounded-lg border border-solid border-t-book-outline-light
      border-r-book-outline-dark border-b-book-outline-dark
      border-l-book-outline-light shadow-[0_10px_20px_var(--color-book-shadow)]
-     before:absolute before:-inset-y-list-margin before:left-[50%] before:border
-     before:border-solid before:border-book-inset-light
+     before:absolute before:inset-y-0 before:left-[50%] before:w-0
+     before:border-l before:border-solid before:border-book-inset-light
    "
 		>
 			<Image
@@ -503,7 +503,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 						))}
 					</div>
 				</section>
-				<div className="flex content-center">
+				<div className="mx-auto">
 					<TheButton />
 				</div>
 				<About>

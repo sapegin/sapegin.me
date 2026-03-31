@@ -36,7 +36,18 @@ npm install tailwindcss clsx
 }
 ```
 
-3. Add the following to your global styles:
+3. Create typography utilities, `components/typography.css` (or import [default ones](./components/typography.css)):
+
+```css
+@utility heading-1 {
+  /* ... */
+}
+@utility typo-body {
+  /* ... */
+}
+```
+
+4. Add the following to your global styles:
 
 ```css
 /* Import Tailwind, Tâmia, and the theme */
@@ -50,6 +61,9 @@ npm install tailwindcss clsx
 
 /* Import site theme */
 @import './theme.css';
+
+/* Import site utilities */
+@import './components/typography.css';
 ```
 
 4. Install the Prettier plugin for automatic class sorting:

@@ -27,7 +27,7 @@ function Hero() {
 				<h1 className="heading-1">Squirrelsong</h1>
 				<p className="heading-3">Light &amp; dark themes for web developers</p>
 			</div>
-			<a href="#download" className="button button-large">
+			<a href="#download" className="button">
 				Get it now!
 			</a>
 		</div>

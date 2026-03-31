@@ -12,10 +12,13 @@
 
 	position: relative;
 	display: inline-block;
-	padding: 1rem;
+	padding-top: --spacing(2);
+	padding-bottom: --spacing(1);
+	padding-inline: --spacing(4);
+	font-size: var(--text-xl);
 	font-family: var(--font-ui);
 	color: var(--color-text);
-	line-height: 1rem;
+	line-height: 1;
 	text-decoration: none;
 	user-select: none;
 	outline: 0;
@@ -56,20 +59,13 @@
 		border-radius: 0.2rem;
 	}
 
+	@media (width >= 48rem) {
+		padding-inline: --spacing(6);
+	}
+
 	@media (prefers-color-scheme: dark) {
 		--_button-border: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2 0H6V1H7V2H8V6H7V7H6V8H2V7H1V6H0V2H1V1H2ZM2 1H6V2H7V6H6V7H2V6H1V2H2Z' fill='%23e3e6e8' fill-rule='evenodd'/%3E%3C/svg%3E");
 
 		--_button-border-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2 0H6V1H7V2H8V6H7V7H6V8H2V7H1V6H0V2H1V1H2ZM2 1H6V2H7V6H6V7H2V6H1V2H2Z' fill='%23db76a7' fill-rule='evenodd'/%3E%3C/svg%3E");
 	}
-}
-
-@utility button-medium {
-	height: 2.2rem;
-	padding-block: 0.5rem;
-	font-size: var(--text-ui);
-}
-
-@utility button-large {
-	padding-block: 1rem;
-	font-size: var(--text-xl);
 }

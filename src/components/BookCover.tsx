@@ -7,6 +7,8 @@ interface Props {
 	height?: number;
 }
 
+// TODO: Can we reuse book-* colors here?
+
 export function BookCover({ title, image, width = 150, height = 194 }: Props) {
 	return (
 		<div
