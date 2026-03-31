@@ -81,7 +81,7 @@ function ColorCell({
 }) {
 	return (
 		<p
-			className="gap-2 rounded-normal p-2 font-code"
+			className="gap-2 rounded-normal p-2 font-mono"
 			style={{ backgroundColor: hex, color: textColor }}
 		>
 			<strong className="text-sm">{name}</strong>
@@ -147,10 +147,10 @@ function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
 				}}
 			/>
 			<div>
-				<div className="max-w-32 truncate font-code text-xs text-text">
+				<div className="max-w-32 truncate font-mono text-xs text-text">
 					{name}
 				</div>
-				<div className="font-code text-xs text-secondary">{hexColor}</div>
+				<div className="font-mono text-xs text-secondary">{hexColor}</div>
 			</div>
 		</div>
 	);

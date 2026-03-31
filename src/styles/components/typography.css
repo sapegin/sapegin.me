@@ -6,7 +6,7 @@
 	font-family: var(--font-heading);
 	font-weight: var(--font-weight-heading);
 	line-height: var(--leading-heading);
-	font-size: var(--text-xxxl);
+	font-size: var(--text-3l);
 }
 
 /**
@@ -17,7 +17,7 @@
 	font-family: var(--font-heading);
 	font-weight: var(--font-weight-heading);
 	line-height: var(--leading-heading);
-	font-size: var(--text-xxl);
+	font-size: var(--text-2xl);
 }
 
 /**

@@ -30,18 +30,18 @@
 	--font-body: 'Helvetica Neue', Arial, sans-serif;
 	--font-heading: 'Mondwest-Regular', sans-serif;
 	--font-ui: NeueBit, sans-serif;
-	--font-code: MonoLisa, monospace;
+	--font-mono: MonoLisa, monospace;
 
 	/* Text sizes */
 	--text-root: 1.125em;
 	--text-lg: 1.7rem;
 	--text-xl: 2rem;
-	--text-xxl: 2.4rem;
-	--text-xxxl: 3.2rem;
+	--text-2xl: 2.4rem;
+	--text-3xl: 3.2rem;
 	--text-article: 1.2rem;
 	--text-ui: 1.5rem;
-	--text-heading-1: var(--text-xxxl);
-	--text-heading-2: var(--text-xxl);
+	--text-heading-1: var(--text-3l);
+	--text-heading-2: var(--text-2l);
 	--text-heading-3: var(--text-xl);
 
 	/* Line heights */

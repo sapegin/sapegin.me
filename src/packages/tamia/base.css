@@ -3,7 +3,8 @@
  */
 
 @layer base {
-	html {
+	html,
+	:host {
 		font-size: var(--text-root);
 		font-family: var(--font-body);
 		color: var(--color-text);
@@ -12,9 +13,6 @@
 		word-wrap: break-word;
 		text-rendering: optimizeSpeed;
 		font-kerning: normal;
-		font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-		/* Prevent adjustments of font size after orientation changes in iOS */
-		-webkit-text-size-adjust: 100%;
 		hyphens: auto;
 	}
 
