@@ -2,7 +2,6 @@
 	position: relative;
 	display: inline-block;
 	padding: 1rem;
-	padding-inline: 1rem;
 	font-family: var(--font-ui);
 	color: var(--color-text);
 	border: 2px solid;

@@ -20,12 +20,6 @@
 	--color-code-purple: #7859a6;
 	--color-code-red: #b71818;
 
-	/* Coffee button colors */
-	/* @todo: replace it with normal button */
-	--color-coffee-text: #754c06;
-	--color-coffee-background: #fbc024;
-	--color-coffee-hover: #3a3d40;
-
 	/* Book spread colors */
 	--color-book-shadow: rgba(0, 0, 0, 0.1);
 	--color-book-outline-light: rgba(255, 255, 255, 0.9);
