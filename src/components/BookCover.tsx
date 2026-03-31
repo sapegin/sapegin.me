@@ -12,9 +12,9 @@ export function BookCover({ title, image, width = 150, height = 194 }: Props) {
 		<div
 			className="
      relative rounded-lg border border-solid
-     before:absolute before:-inset-y-list-margin before:left-[10px]
-     before:border-l before:border-[rgba(0,0,0,0.15)] before:content-['']
-     after:absolute after:-inset-y-list-margin after:left-[11px] after:border-l
+     before:absolute before:inset-y-0 before:left-[10px] before:border-l
+     before:border-[rgba(0,0,0,0.15)] before:content-['']
+     after:absolute after:inset-y-0 after:left-[11px] after:border-l
      after:border-[rgba(255,255,255,0.5)] after:content-['']
    "
 			style={{

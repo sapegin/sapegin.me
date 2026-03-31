@@ -103,8 +103,6 @@ export default [
 
 Most Tailwind classes work as they should, with the following additions:
 
-- `heading-1` / `heading-2` / `heading-3` — headings of various levels
-- `typo-body` / `typo-small` / `typo-large` — basic typography presets
 - `grid-auto-narrow` / `grid-auto-wide` — auto-fit grid layouts
 - `expander` — makes the element full-bleed on mobile
 - `frame` — aspect-ratio container with cover children (combine with `aspect-*`)
@@ -113,6 +111,8 @@ Most Tailwind classes work as they should, with the following additions:
 
 These components should be imported explicitly to the app CSS file:
 
+- `heading-1` / `heading-2` / `heading-3` — headings of various levels
+- `typo-body` / `typo-small` / `typo-large` — basic typography presets
 - `.link` — styled anchor with hover/focus states
 - `.quoted-link` — link where only `<u>` children are underlined
 - `.prose` — rich text container (headings, lists, tables, blockquotes, images)

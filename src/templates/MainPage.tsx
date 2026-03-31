@@ -332,7 +332,7 @@ function Leather() {
 
 function BestViewed() {
 	return (
-		<section className="flex gap-2 text-center">
+		<section className="flex flex-col gap-2 text-center">
 			<p className="typo-body">This page is best viewed in:</p>
 			<img
 				className="mx-auto"

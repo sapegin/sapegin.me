@@ -9,7 +9,7 @@ export function ResourceList({ items }: Props) {
 	return (
 		<ul className="grid-auto-wide grid gap-4">
 			{items.map((item) => (
-				<li key={item.url ?? item.title} className="gap-2">
+				<li key={item.url ?? item.title} className="flex flex-col gap-2">
 					<p className="typo-large">
 						{item.url ? (
 							<a className="link" href={item.url}>
