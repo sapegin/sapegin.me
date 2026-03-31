@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import { BookPostFooter } from '../components/BookPostFooter';
 import { BookPostHeader } from '../components/BookPostHeader';
 import { MurderOfCrows } from '../components/MurderOfCrows';
-import { PostContent } from '../components/PostContent';
 import { PostMeta } from '../components/PostMeta';
 import { RelatedPosts } from '../components/RelatedPosts';
 import { Subscription } from '../components/Subscription';
@@ -34,7 +33,7 @@ export function PostPage({
 						</p>
 					)}
 					{source && <BookPostHeader />}
-					<PostContent>{children}</PostContent>
+					<div className="post-content prose">{children}</div>
 					{source && <BookPostFooter />}
 					<footer>
 						<PostMeta url={url} date={date} />

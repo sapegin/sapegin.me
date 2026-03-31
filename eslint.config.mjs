@@ -15,7 +15,7 @@ export default [
 		...eslintPluginBetterTailwindcss.configs.recommended,
 		settings: {
 			'better-tailwindcss': {
-				entryPoint: 'src/index.css',
+				entryPoint: 'src/styles/index.css',
 			},
 		},
 	},

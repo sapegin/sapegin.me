@@ -19,7 +19,7 @@
     "test": "astro check",
     "sync": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts",
     "posttest": "npm run format",
-    "prepare": "husky; panda codegen"
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=24"
@@ -35,7 +35,6 @@
     "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
-    "@pandacss/dev": "^1.5.1",
     "@tailwindcss/vite": "4.2.2",
     "@types/lodash": "^4.17.20",
     "@types/react": "^19.2.6",

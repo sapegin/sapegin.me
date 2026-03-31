@@ -3,7 +3,6 @@ import Group from 'react-group';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
 import { InlineList, InlineListItem } from '../components/InlineList';
 import { MurderOfCrows } from '../components/MurderOfCrows';
-import { PostContent } from '../components/PostContent';
 import { Typo } from '../components/Typo';
 import type { Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
@@ -31,7 +30,7 @@ export function SquirrelPage({ url, title, id, squirrels, children }: Props) {
 			<div className="flex flex-col gap-16">
 				<div className="flex flex-col gap-8">
 					<h1 className="max-w-text-max-width heading-1">{title}</h1>
-					<PostContent>{children}</PostContent>
+					<div className="post-content prose">{children}</div>
 					<div className="flex flex-col gap-1">
 						<p className="typo-body">
 							<Typo>
