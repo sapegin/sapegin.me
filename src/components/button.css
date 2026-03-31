@@ -1,25 +1,49 @@
 @utility button {
+	--button-border-width: 6px;
+
+	/* Light mode border image */
+	--_button-border: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2 0H6V1H7V2H8V6H7V7H6V8H2V7H1V6H0V2H1V1H2ZM2 1H6V2H7V6H6V7H2V6H1V2H2Z' fill='%233a3d40' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+	/*
+	  Hover image (we cannot use currentColor, so we have to duplicate the image
+	  with a changed color)
+	*/
+	--_button-border-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2 0H6V1H7V2H8V6H7V7H6V8H2V7H1V6H0V2H1V1H2ZM2 1H6V2H7V6H6V7H2V6H1V2H2Z' fill='%23be4b83' fill-rule='evenodd'/%3E%3C/svg%3E");
+
 	position: relative;
 	display: inline-block;
 	padding: 1rem;
 	font-family: var(--font-ui);
 	color: var(--color-text);
-	border: 2px solid;
 	line-height: 1rem;
 	text-decoration: none;
 	user-select: none;
 	outline: 0;
-	transition: all var(--duration-hover) var(--ease-hover);
+	border: var(--button-border-width) solid transparent;
+	border-image-source: var(--_button-border);
+	border-image-slice: 3 fill;
+	border-image-width: var(--button-border-width);
+	transition: color var(--duration-hover) var(--ease-hover);
 
-	@media (width >= 48rem) {
-		padding-inline: 2rem;
-		padding-top: calc(1rem + 0.25rem);
-		padding-bottom: 1rem;
+	&::after {
+		content: '';
+		position: absolute;
+		inset: calc(-1 * var(--button-border-width));
+		border: var(--button-border-width) solid transparent;
+		border-image-source: var(--_button-border-hover);
+		border-image-slice: 3 fill;
+		border-image-width: var(--button-border-width);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity var(--duration-hover) var(--ease-hover);
 	}
 
 	&:hover {
-		cursor: pointer;
 		color: var(--color-accent);
+	}
+
+	&:hover::after {
+		opacity: 1;
 	}
 
 	&:active {
@@ -32,20 +56,20 @@
 		border-radius: 0.2rem;
 	}
 
-	&::-moz-focus-inner {
-		border: 0;
+	@media (prefers-color-scheme: dark) {
+		--_button-border: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2 0H6V1H7V2H8V6H7V7H6V8H2V7H1V6H0V2H1V1H2ZM2 1H6V2H7V6H6V7H2V6H1V2H2Z' fill='%23e3e6e8' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+		--_button-border-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2 0H6V1H7V2H8V6H7V7H6V8H2V7H1V6H0V2H1V1H2ZM2 1H6V2H7V6H6V7H2V6H1V2H2Z' fill='%23db76a7' fill-rule='evenodd'/%3E%3C/svg%3E");
 	}
 }
 
 @utility button-medium {
-	background-color: var(--color-background);
 	height: 2.2rem;
 	padding-block: 0.5rem;
 	font-size: var(--text-ui);
 }
 
 @utility button-large {
-	background-color: var(--color-background);
 	padding-block: 1rem;
 	font-size: var(--text-xl);
 }

@@ -134,8 +134,8 @@ const Header = ({ theme, onThemeToggle }) => (
     className={cx(
       'header',
       `
-    header--${theme}
-  `
+        header--${theme}
+      `
     )}
   >
     ...
@@ -178,8 +178,8 @@ const Header = () => (
         className={cx(
           'header',
           `
-        header--${theme}
-      `
+            header--${theme}
+          `
         )}
       >
         ...

@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 import { campaigns } from '../campaigns';
 import { About } from '../components/About';
 import { BookCover } from '../components/BookCover';
-import { Button } from '../components/Button';
 import { FeatureList, FeatureListItem } from '../components/FeatureList';
 import { Feedback } from '../components/Feedback';
 import { Image } from '../components/Image';
@@ -160,8 +159,11 @@ const faq: FaqItem[] = [
 
 function TheButton() {
 	return (
-		<Button as="a" variant="large" href={purchaseUrl}>
-			Get the book! <span className="px-2 align-middle text-sm">■</span>{' '}
+		<a href={purchaseUrl} className="button button-large">
+			Get the book!{' '}
+			<span className="px-2 align-middle text-sm" aria-hidden="true">
+				■
+			</span>{' '}
 			{isCampaignEnabled ? (
 				<>
 					<del>€{price}</del> €{discountedPrice}
@@ -169,7 +171,7 @@ function TheButton() {
 			) : (
 				<>€{price}</>
 			)}
-		</Button>
+		</a>
 	);
 }
 

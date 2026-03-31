@@ -1,6 +1,5 @@
 import { About } from '../components/About';
 import { Badge } from '../components/Badge';
-import { Button } from '../components/Button';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
 import { CodeSpread } from '../components/CodeSpread';
 import { CodeSpreadSupreme } from '../components/CodeSpreadSupreme';
@@ -28,9 +27,9 @@ function Hero() {
 				<h1 className="heading-1">Squirrelsong</h1>
 				<p className="heading-3">Light &amp; dark themes for web developers</p>
 			</div>
-			<Button as="a" variant="large" href="#download">
+			<a href="#download" className="button button-large">
 				Get it now!
-			</Button>
+			</a>
 		</div>
 	);
 }
