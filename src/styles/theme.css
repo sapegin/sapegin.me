@@ -40,8 +40,8 @@
 	--text-3xl: 3.2rem;
 	--text-article: 1.2rem;
 	--text-ui: 1.5rem;
-	--text-heading-1: var(--text-3l);
-	--text-heading-2: var(--text-2l);
+	--text-heading-1: var(--text-3xl);
+	--text-heading-2: var(--text-2xl);
 	--text-heading-3: var(--text-xl);
 
 	/* Line heights */
