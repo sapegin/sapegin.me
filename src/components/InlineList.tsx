@@ -16,7 +16,7 @@ export function InlineListItem({
 		<span
 			className={clsx(
 				`
-      mb-1 italic
+      mb-1 typo-small italic
       not-last:after:mx-2 not-last:after:mb-[0.1rem] not-last:after:inline-block
       not-last:after:h-[0.3rem] not-last:after:w-[0.3rem]
       not-last:after:bg-border not-last:after:content-[""]

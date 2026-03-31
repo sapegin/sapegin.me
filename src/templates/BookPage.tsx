@@ -323,10 +323,14 @@ export function Spread({
      relative rounded-lg border border-solid border-t-book-outline-light
      border-r-book-outline-dark border-b-book-outline-dark
      border-l-book-outline-light shadow-[0_10px_20px_var(--color-book-shadow)]
-     before:absolute before:inset-y-0 before:left-[50%] before:w-0
-     before:border-l before:border-solid before:border-book-inset-light
    "
 		>
+			<div
+				className="
+      absolute inset-y-0 left-[50%] w-0 border-l border-solid
+      border-book-inset-light
+    "
+			/>
 			<Image
 				src={`/images/book/${image}`}
 				width={width}

@@ -56,16 +56,22 @@ function findColorName(
 	return undefined;
 }
 
-const Table = (props: ComponentPropsWithoutRef<'table'>) => (
-	<table className="w-full table-fixed border-collapse" {...props} />
+const Table = ({ className, ...props }: ComponentPropsWithoutRef<'table'>) => (
+	<table
+		className={clsx('w-full table-fixed border-collapse', className)}
+		{...props}
+	/>
 );
 
-const Th = (props: ComponentPropsWithoutRef<'th'>) => (
-	<th className="w-1/3 py-2 pr-2 text-left font-bold" {...props} />
+const Th = ({ className, ...props }: ComponentPropsWithoutRef<'th'>) => (
+	<th
+		className={clsx('w-1/3 py-2 pr-2 text-left font-bold', className)}
+		{...props}
+	/>
 );
 
-const Td = (props: ComponentPropsWithoutRef<'td'>) => (
-	<td className="py-2 pr-2" {...props} />
+const Td = ({ className, ...props }: ComponentPropsWithoutRef<'td'>) => (
+	<td className={clsx('py-2 pr-2', className)} {...props} />
 );
 
 function ColorCell({
@@ -81,7 +87,7 @@ function ColorCell({
 }) {
 	return (
 		<p
-			className="gap-2 rounded-normal p-2 font-mono"
+			className="flex flex-col gap-2 rounded-button p-2 font-mono"
 			style={{ backgroundColor: hex, color: textColor }}
 		>
 			<strong className="text-sm">{name}</strong>
@@ -141,7 +147,7 @@ function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
 	return (
 		<div className="flex items-center gap-2">
 			<div
-				className="size-[1.8rem] rounded-normal"
+				className="size-[1.8rem] rounded-button"
 				style={{
 					backgroundColor: hexColor,
 				}}
@@ -217,7 +223,7 @@ function ColorsTable({
 function UiSample({ id, palette }: { id: string; palette: Palette }) {
 	return (
 		<div
-			className="gap-4 rounded-normal p-2"
+			className="flex flex-col gap-4 rounded-button p-2"
 			style={{ backgroundColor: getColorValue(palette.textBackground) }}
 		>
 			<style
@@ -267,7 +273,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				secondaryTextForeground
 			</div>
 			<div
-				className="h-full"
+				className="h-px"
 				style={{ backgroundColor: getColorValue(palette.border) }}
 			/>
 			<div style={{ color: getColorValue(palette.disabledForeground) }}>
@@ -402,7 +408,9 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 				focusBorder
 			</div>
 			<div
-				className="gap-4 overflow-hidden rounded-normal border border-solid p-2"
+				className="
+      flex flex-col gap-4 overflow-hidden rounded-button border border-solid p-2
+    "
 				style={{
 					backgroundColor: getColorValue(palette.uiBackground),
 					borderColor: getColorValue(palette.lightBorder),
@@ -422,7 +430,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 						`
         ${id}__button
       `,
-						'rounded-normal px-2 py-1'
+						'rounded-button px-2 py-1'
 					)}
 				>
 					button
@@ -432,7 +440,7 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 						`
         ${id}__secondaryButton
       `,
-						'rounded-normal px-2 py-1'
+						'rounded-button px-2 py-1'
 					)}
 				>
 					secondaryButton
@@ -442,13 +450,13 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 						`
         ${id}__disabledButton
       `,
-						'rounded-normal px-2 py-1'
+						'rounded-button px-2 py-1'
 					)}
 				>
 					disabledButton
 				</div>
 				<div
-					className="-m-2 flex content-center gap-2 text-lg"
+					className="-m-2 flex justify-center gap-2 text-lg"
 					style={{
 						backgroundColor: getColorValue(palette.secondaryUiBackground),
 					}}

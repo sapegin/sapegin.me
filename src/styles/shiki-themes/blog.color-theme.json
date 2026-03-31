@@ -34,7 +34,7 @@
         "source.diff"
       ],
       "settings": {
-        "foreground": "var(--colors-code-gray)"
+        "foreground": "var(--color-code-gray)"
       }
     },
     {
@@ -46,7 +46,7 @@
         "support.type"
       ],
       "settings": {
-        "foreground": "var(--colors-code-green)"
+        "foreground": "var(--color-code-green)"
       }
     },
     {
@@ -62,7 +62,7 @@
         "meta.object-literal.key.tsx"
       ],
       "settings": {
-        "foreground": "var(--colors-code-orange)"
+        "foreground": "var(--color-code-orange)"
       }
     },
     {
@@ -86,7 +86,7 @@
         "support.variable.property.js"
       ],
       "settings": {
-        "foreground": "var(--colors-code-blue)"
+        "foreground": "var(--color-code-blue)"
       }
     },
     {
@@ -97,7 +97,7 @@
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "var(--colors-code-purple)"
+        "foreground": "var(--color-code-purple)"
       }
     },
     {
@@ -113,13 +113,13 @@
         "source.shell"
       ],
       "settings": {
-        "foreground": "var(--colors-code-black)"
+        "foreground": "var(--color-code-black)"
       }
     },
     {
       "scope": ["invalid.illegal", "token.error-token", "markup.deleted.diff"],
       "settings": {
-        "foreground": "var(--colors-code-red)"
+        "foreground": "var(--color-code-red)"
       }
     },
     {
