@@ -1,6 +1,5 @@
 import { BookLink } from '../components/BookLink';
 import { Hola } from '../components/Hola';
-import { Image } from '../components/Image';
 import { LinkWithIcon } from '../components/LinkWithIcon';
 import { PostList } from '../components/PostList';
 import { ResourceList } from '../components/ResourceList';
@@ -120,20 +119,24 @@ function Photography() {
 				I make photos of trees, buildings, and things
 			</h2>
 			<div className="expander">
-				<Image
+				<img
 					src="/images/photos-1.avif"
 					alt="Saxon Switzerland forest, Germany"
 					width={900}
 					height={505}
+					className="image"
+					loading="lazy"
 				/>
 			</div>
 			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
-					<Image
+					<img
 						src="/images/photos-2.avif"
 						alt="Dawn in Berlin, Germany"
 						width={600}
 						height={840}
+						className="image"
+						loading="lazy"
 					/>
 					<div
 						className="
@@ -141,18 +144,22 @@ function Photography() {
         md:block
       "
 					>
-						<Image
+						<img
 							src="/images/photos-3.avif"
 							alt="Foggy Berliner Dom, Germany"
 							width={600}
 							height={840}
+							className="image"
+							loading="lazy"
 						/>
 					</div>
-					<Image
+					<img
 						src="/images/photos-4.avif"
 						alt="Sunrise in Rome, Italy"
 						width={600}
 						height={840}
+						className="image"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -179,24 +186,30 @@ function Coffee() {
         md:block
       "
 					>
-						<Image
+						<img
 							src="/images/coffee-1.avif"
 							alt="Coffee"
 							width={600}
 							height={750}
+							className="image"
+							loading="lazy"
 						/>
 					</div>
-					<Image
+					<img
 						src="/images/coffee-2.avif"
 						alt="Coffee"
 						width={600}
 						height={750}
+						className="image"
+						loading="lazy"
 					/>
-					<Image
+					<img
 						src="/images/coffee-3.avif"
 						alt="Coffee"
 						width={600}
 						height={750}
+						className="image"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -222,11 +235,13 @@ function Cooking() {
 						className="link"
 						href="https://tacohuaco.co/recipes/tres-leches-cake/"
 					>
-						<Image
+						<img
 							src="/images/food-1.avif"
 							alt="Tres leches cake"
 							width={750}
 							height={563}
+							className="image"
+							loading="lazy"
 						/>
 					</a>
 					<div
@@ -236,11 +251,13 @@ function Cooking() {
       "
 					>
 						<a className="link" href="https://tacohuaco.co/recipes/svekolnik/">
-							<Image
+							<img
 								src="/images/food-2.avif"
 								alt="Svekolnik (cold borscht)"
 								width={750}
 								height={563}
+								className="image"
+								loading="lazy"
 							/>
 						</a>
 					</div>
@@ -248,11 +265,13 @@ function Cooking() {
 						className="link"
 						href="https://tacohuaco.co/recipes/cottage-cheesecake/"
 					>
-						<Image
+						<img
 							src="/images/food-3.avif"
 							alt="Cottage cheesecake"
 							width={750}
 							height={563}
+							className="image"
+							loading="lazy"
 						/>
 					</a>
 				</div>
@@ -275,11 +294,13 @@ function Me() {
 			<h2 className="heading-2">I may (or may not) look like this</h2>
 			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
-					<Image
+					<img
 						src="/images/me-1.avif"
-						alt="Artem Sapegin is making a photo"
+						alt="Artem Sapegin is making some photos"
 						width={700}
 						height={700}
+						className="image"
+						loading="lazy"
 					/>
 					<div
 						className="
@@ -287,18 +308,22 @@ function Me() {
         md:block
       "
 					>
-						<Image
+						<img
 							src="/images/me-2.avif"
 							alt="Artem Sapegin is drinking coffee"
 							width={700}
 							height={700}
+							className="image"
+							loading="lazy"
 						/>
 					</div>
-					<Image
+					<img
 						src="/images/me-3.avif"
-						alt="Artem Sapegin is making a photo"
+						alt="Artem Sapegin is making some photos"
 						width={700}
 						height={700}
+						className="image"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -311,11 +336,13 @@ function Leather() {
 		<section className="flex flex-col gap-4">
 			<h2 className="heading-2">I make things from leather</h2>
 			<div className="expander">
-				<Image
+				<img
 					src="/images/leathercraft.avif"
 					alt="Leather goods I have made"
 					width={1512}
 					height={1008}
+					className="image"
+					loading="lazy"
 				/>
 			</div>
 			<p className="typo-body">

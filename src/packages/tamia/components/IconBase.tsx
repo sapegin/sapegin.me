@@ -10,7 +10,7 @@ export interface IconBaseProps
 	height: number;
 	viewBox: { width: number; height: number };
 	fill?: string;
-	children: ReactNode;
+	children?: ReactNode;
 }
 
 /**

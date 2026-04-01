@@ -9,6 +9,14 @@
 }
 
 /**
+ * Responsive image.
+ */
+@utility image {
+	height: auto;
+	max-width: 100%;
+}
+
+/**
  * CSS Grid with magic auto layout: narrow (min 200px).
  */
 @utility grid-auto-narrow {

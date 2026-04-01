@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Image } from '../components/Image';
 import { Typo } from './Typo';
 
 interface Props {
@@ -20,12 +19,13 @@ export function About({ children }: Props) {
       md:mx-0
     "
 			>
-				<Image
+				<img
 					src="/images/artem-sapegin.avif"
 					alt="Artem Sapegin"
 					width={200}
 					height={200}
-					className="rounded-full"
+					className="image rounded-full"
+					loading="lazy"
 				/>
 			</div>
 			<div className="flex flex-col gap-8">

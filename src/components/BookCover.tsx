@@ -1,5 +1,3 @@
-import { Image } from './Image';
-
 interface Props {
 	title: string;
 	image: string;
@@ -10,11 +8,13 @@ interface Props {
 export function BookCover({ title, image, width = 150, height = 194 }: Props) {
 	return (
 		<div className="book book-cover">
-			<Image
+			<img
 				src={`/images/covers/${image}.avif`}
 				width={width}
 				height={height}
 				alt={`${title} book cover`}
+				className="image"
+				loading="lazy"
 			/>
 		</div>
 	);

@@ -5,7 +5,6 @@ import { About } from '../components/About';
 import { BookCover } from '../components/BookCover';
 import { FeatureList, FeatureListItem } from '../components/FeatureList';
 import { Feedback } from '../components/Feedback';
-import { Image } from '../components/Image';
 import { Markdown } from '../components/Markdown';
 import { MurderOfCrows } from '../components/MurderOfCrows';
 import { Typo } from '../components/Typo';
@@ -319,12 +318,13 @@ export function Spread({
 }) {
 	return (
 		<div className="book book-spread">
-			<Image
+			<img
 				src={`/images/book/${image}`}
 				width={width}
 				height={height}
 				alt={alt}
-				className="m-0"
+				className="m-0 image"
+				loading="lazy"
 			/>
 		</div>
 	);
