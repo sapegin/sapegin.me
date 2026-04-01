@@ -15,12 +15,13 @@ export default [
 		...eslintPluginBetterTailwindcss.configs.recommended,
 		settings: {
 			'better-tailwindcss': {
-				entryPoint: 'src/styles/index.css',
+				// TODO: We should move this to each site's config or limit using files[]
+				entryPoint: 'src/sites/sapegin.me/styles/index.css',
 			},
 		},
 	},
 	{
-		files: ['src/env.d.ts'],
+		files: ['src/sites/*/env.d.ts'],
 		rules: {
 			'@typescript-eslint/triple-slash-reference': 'off',
 		},
@@ -86,7 +87,7 @@ export default [
 			'squirrelsong-master/',
 			'styled-system/',
 			'washingcode-book-master/',
-			'src/content/bookChapters/',
+			'content/bookChapters/',
 		],
 	},
 ];

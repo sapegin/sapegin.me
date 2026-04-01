@@ -5,12 +5,12 @@ import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import _ from 'lodash';
-import { upperFirst } from '../src/util/upperFirst.ts';
+import { upperFirst } from '../src/sites/sapegin.me/util/upperFirst.ts';
 
 const REPO_TAR_GZ =
 	'https://codeload.github.com/sapegin/squirrelsong/tar.gz/master';
 const REPO_DIR = 'squirrelsong-master';
-const DEST_DIR = 'src/content/squirrels';
+const DEST_DIR = 'content/squirrels';
 const URL_PREFIX = 'https://github.com/sapegin/squirrelsong/raw/master';
 
 const read = (file: string) => fs.readFileSync(file, 'utf8');
@@ -59,7 +59,7 @@ const updateTips = (contents: string) =>
 const updateImages = (prefix: string) => (contents: string) =>
 	contents.replaceAll(
 		'](screenshot-',
-		`](../../../${prefix.replaceAll(' ', '%20')}/screenshot-`
+		`](../../${prefix.replaceAll(' ', '%20')}/screenshot-`
 	);
 
 // Update links and images

@@ -1,4 +1,4 @@
-import { Group } from '../packages/tamia/components/Group';
+import { Group } from '../../../packages/tamia/components/Group';
 import type { Gig } from '../types/Gig';
 import { EventName } from './EventName';
 

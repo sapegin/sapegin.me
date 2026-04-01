@@ -5,17 +5,22 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
-import { SITE_URL } from './src/constants';
-import theme from './src/styles/shiki-themes/blog.color-theme.json';
-import rehypeSlug from './src/util/rehype/rehypeSlug';
-import remarkImages from './src/util/remark/remarkImages';
-import remarkRichtypo from './src/util/remark/remarkRichtypo';
-import remarkTips from './src/util/remark/remarkTips';
+
+const SITE = process.env.SITE || 'sapegin.me';
+const siteDir = `./src/sites/${SITE}`;
+
+const { SITE_URL } = await import(/* @vite-ignore */ `${siteDir}/constants.ts`);
+
+import rehypeSlug from './src/shared/rehype/rehypeSlug';
+import remarkImages from './src/shared/remark/remarkImages';
+import remarkRichtypo from './src/shared/remark/remarkRichtypo';
+import remarkTips from './src/shared/remark/remarkTips';
+import theme from './src/sites/sapegin.me/styles/shiki-themes/blog.color-theme.json';
 
 const getFileByUrl = (url) => {
 	const relativeUrl = url.replace(SITE_URL, '');
 	if (relativeUrl.startsWith('/blog/')) {
-		return `src/content${relativeUrl.replace(/\/$/, '.md')}`;
+		return `content${relativeUrl.replace(/\/$/, '.md')}`;
 	}
 };
 
@@ -29,6 +34,7 @@ const getFileMtime = (filename) => {
 
 // https://astro.build/config
 export default defineConfig({
+	srcDir: siteDir,
 	site: SITE_URL,
 	// Disable HTML minification to make View Source more readable
 	compressHTML: false,

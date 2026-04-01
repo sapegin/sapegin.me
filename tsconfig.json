@@ -7,5 +7,5 @@
     "strictNullChecks": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["src/", "scripts/", "*.config.ts"]
+  "include": ["src/", "scripts/", "*.config.ts", ".astro/"]
 }

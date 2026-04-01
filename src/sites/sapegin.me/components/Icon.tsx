@@ -1,4 +1,4 @@
-import { IconBase } from '../packages/tamia/components/IconBase';
+import { IconBase } from '../../../packages/tamia/components/IconBase';
 
 interface IconInfo {
 	path?: string;

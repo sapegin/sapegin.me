@@ -8,8 +8,8 @@ import path from 'node:path';
 import GithubSlugger from 'github-slugger';
 import matter from 'gray-matter';
 import _ from 'lodash';
-import { SITE_URL } from '../src/constants.ts';
-import { upperFirst } from '../src/util/upperFirst.ts';
+import { SITE_URL } from '../src/sites/sapegin.me/constants.ts';
+import { upperFirst } from '../src/sites/sapegin.me/util/upperFirst.ts';
 
 interface Post {
 	title: string;
@@ -34,9 +34,9 @@ interface TocItem {
 const REPO_TAR_GZ =
 	'https://codeload.github.com/sapegin/washingcode-book/tar.gz/master';
 const REPO_DIR = 'washingcode-book-master';
-const BLOG_CONTENT_DIR = 'src/content/blog';
-export const BOOK_CONTENT_DIR = 'src/content/bookChapters';
-const DATA_DIR = 'src/data';
+const BLOG_CONTENT_DIR = 'content/blog';
+export const BOOK_CONTENT_DIR = 'content/bookChapters';
+const DATA_DIR = 'src/sites/sapegin.me/data';
 
 const TIPS = {
 	I: 'Info',

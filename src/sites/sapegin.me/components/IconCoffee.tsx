@@ -1,7 +1,7 @@
 import {
 	IconBase,
 	type IconBaseProps,
-} from '../packages/tamia/components/IconBase';
+} from '../../../packages/tamia/components/IconBase';
 
 const SIZE = 36;
 
