@@ -24,13 +24,13 @@ export async function GET() {
 		description: SITE_DESCRIPTION,
 		site: SITE_URL,
 		items: entries.map((entry) => {
-			const link = `/blog/${entry.slug}/`;
+			const link = `/blog/${entry.id}/`;
 			return {
 				title: entry.data.title,
 				pubDate: entry.data.date,
 				description: entry.data.description,
 				link,
-				content: sanitizeHtml(parser.render(entry.body)),
+				content: sanitizeHtml(parser.render(entry.body ?? '')),
 			};
 		}),
 		customData: `<language>en-us</language>`,

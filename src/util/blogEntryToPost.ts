@@ -6,6 +6,6 @@ type Entry = CollectionEntry<'blog'>;
 export function blogEntryToPost(entry: Entry): Post {
 	return {
 		...entry.data,
-		url: `/blog/${entry.slug}/`,
+		url: `/blog/${entry.id}/`,
 	};
 }

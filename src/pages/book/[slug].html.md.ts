@@ -4,7 +4,7 @@ import { getCollection, getEntry } from 'astro:content';
 export const getStaticPaths: GetStaticPaths = async () => {
 	const posts = await getCollection('bookChapters');
 	return posts.map((post) => ({
-		params: { slug: post.slug },
+		params: { slug: post.id },
 	}));
 };
 

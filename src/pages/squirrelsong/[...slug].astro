@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { SquirrelPage } from '../../templates/SquirrelPage';
 import { getAllSquirrels } from '../../util/getAllSquirrels';
@@ -11,7 +11,7 @@ type Props = Entry;
 export async function getStaticPaths() {
 	const posts = await getCollection('squirrels');
 	return posts.map((post) => ({
-		params: { slug: post.slug },
+		params: { slug: post.id },
 		props: post,
 	}));
 }
@@ -21,7 +21,7 @@ const post = squirrelEntryToSquirrel(entry);
 
 const squirrels = await getAllSquirrels();
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <Layout

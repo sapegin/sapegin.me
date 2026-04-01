@@ -1,4 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+import { defineCollection } from 'astro:content';
 
 const baseSchema = z.object({
 	title: z.string(),
@@ -10,7 +12,7 @@ const baseSchema = z.object({
 
 // Blog posts
 const blog = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '*.md', base: './src/content/blog' }),
 	schema: baseSchema.extend({
 		source: z.string().optional(),
 	}),
@@ -18,7 +20,7 @@ const blog = defineCollection({
 
 // Book chapters
 const bookChapters = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '*.md', base: './src/content/bookChapters' }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),
@@ -28,7 +30,7 @@ const bookChapters = defineCollection({
 
 // Squirrelsong themes
 const squirrels = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '*.md', base: './src/content/squirrels' }),
 	schema: z.object({
 		title: z.string(),
 		app: z.string(),
@@ -42,25 +44,8 @@ const squirrels = defineCollection({
 	}),
 });
 
-// Zines
-const zines = defineCollection({
-	type: 'content',
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-		cover: z.string(),
-		video: z.string().optional(),
-		shop: z.string().optional(),
-		meta: z.string(),
-		price: z.number().optional(),
-		available: z.boolean(),
-		preorder: z.boolean(),
-	}),
-});
-
 export const collections = {
 	blog,
 	bookChapters,
 	squirrels,
-	zines,
 };

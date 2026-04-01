@@ -9,9 +9,11 @@ const COLOR_BACKGROUND: RgbColor = [255, 255, 255];
 const COLOR_TEXT: RgbColor = [190, 75, 131];
 const COLOR_ACCENT: RgbColor = [190, 75, 131];
 
-export const { getStaticPaths, GET } = OGImageRoute({
+export const { getStaticPaths, GET } = await OGImageRoute({
 	param: 'route',
-	pages: import.meta.glob('/src/content/**/*.md', { eager: true }),
+	pages: import.meta.glob<{ frontmatter: Post }>('/src/content/**/*.md', {
+		eager: true,
+	}),
 	getImageOptions: (_path, page: { frontmatter: Post }) => ({
 		title: page.frontmatter.title,
 		description: `By ${SITE_AUTHOR}`,
