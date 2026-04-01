@@ -10,6 +10,7 @@
 @import './theme.css';
 @import './global.css';
 @import './fonts.css';
-@import './components/typography.css';
+@import './components/book.css';
 @import './components/button.css';
 @import './components/post-content.css';
+@import './components/typography.css';

@@ -20,12 +20,6 @@
 	--color-code-purple: #7859a6;
 	--color-code-red: #b71818;
 
-	/* Book spread colors */
-	--color-book-shadow: rgba(0, 0, 0, 0.1);
-	--color-book-outline-light: rgba(255, 255, 255, 0.9);
-	--color-book-outline-dark: rgba(0, 0, 0, 0.15);
-	--color-book-inset-light: rgba(0, 0, 0, 0.15);
-
 	/* Fonts */
 	--font-body: 'Helvetica Neue', Arial, sans-serif;
 	--font-heading: 'Mondwest-Regular', sans-serif;
@@ -56,6 +50,9 @@
 	/* Radii */
 	--radius-normal: 2px;
 	--radius-lg: 3px;
+
+	/* Shadows */
+	--shadow-book: 0 10px 20px rgba(0, 0, 0, 0.15);
 
 	/* Easings */
 	--ease-fadeout: ease-out;

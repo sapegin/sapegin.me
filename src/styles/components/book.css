@@ -1,0 +1,41 @@
+/**
+ * Book cover or spread with a subtle 3D effect.
+ */
+@utility book {
+	--color-book-outline-light: rgba(255, 255, 255, 0.9);
+	--color-book-outline-dark: rgba(0, 0, 0, 0.15);
+	--color-book-inset-light: rgba(255, 255, 255, 0.5);
+	--color-book-inset-dark: rgba(0, 0, 0, 0.15);
+
+	position: relative;
+	overflow: hidden;
+	border-radius: var(--radius-normal);
+	border: 1px solid;
+	border-top-color: var(--color-book-outline-light);
+	border-right-color: var(--color-book-outline-dark);
+	border-bottom-color: var(--color-book-outline-dark);
+	border-left-color: var(--color-book-outline-light);
+	box-shadow: var(--shadow-book);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 0;
+		border-left: 1px solid var(--color-book-inset-dark);
+		border-right: 1px solid var(--color-book-inset-light);
+	}
+}
+
+@utility book-cover {
+	&::before {
+		left: 10px;
+	}
+}
+
+@utility book-spread {
+	&::before {
+		left: 50%;
+	}
+}

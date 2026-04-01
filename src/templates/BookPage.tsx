@@ -318,19 +318,7 @@ export function Spread({
 	alt?: string;
 }) {
 	return (
-		<div
-			className="
-     relative rounded-lg border border-solid border-t-book-outline-light
-     border-r-book-outline-dark border-b-book-outline-dark
-     border-l-book-outline-light shadow-[0_10px_20px_var(--color-book-shadow)]
-   "
-		>
-			<div
-				className="
-      absolute inset-y-0 left-[50%] w-0 border-l border-solid
-      border-book-inset-light
-    "
-			/>
+		<div className="book book-spread">
 			<Image
 				src={`/images/book/${image}`}
 				width={width}
