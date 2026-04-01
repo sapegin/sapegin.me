@@ -8,15 +8,16 @@ interface Props {
 	names: [string, string, string];
 }
 
-// Order values to rearrange items from interleaved:
-// Light 1   Dark 1
-// Light 2   Dark 2
-// Light 3   Dark 3
-// to grouped:
-// Light 1   Dark 1
-// Light 2   Dark 2
-// Light 3   Dark 3
-// on the 3-column breakpoint
+// Order values to rearrange items from interleaved to grouped on the 3-column
+// breakpoint
+//
+// Before:
+// Light 1   Dark 2    Light 2
+// Dark 2    Light 3   Dark 3
+//
+// After:
+// Light 1   Light 2   Light 3
+// Dark 1    Dark 2    Dark 3
 const ORDER: [light: string, dark: string][] = [
 	['lg:order-1', 'lg:order-4'],
 	['lg:order-2', 'lg:order-5'],
