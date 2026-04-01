@@ -217,275 +217,234 @@ function ColorsTable({
 	);
 }
 
-// @todo: Find a better solution
-/* eslint-disable better-tailwindcss/no-unknown-classes */
-
-function UiSample({ id, palette }: { id: string; palette: Palette }) {
+function UiSample({ palette }: { palette: Palette }) {
 	return (
 		<div
-			className="flex flex-col gap-4 rounded-button p-2"
-			style={{ backgroundColor: getColorValue(palette.textBackground) }}
+			className="flex flex-col gap-4 rounded-button bg-(--text-background) p-2"
+			style={
+				{
+					'--text-background': getColorValue(palette.textBackground),
+					'--title-foreground': getColorValue(palette.titleForeground),
+					'--text-foreground': getColorValue(palette.textForeground),
+					'--secondary-text-foreground': getColorValue(
+						palette.secondaryTextForeground
+					),
+					'--border-color': getColorValue(palette.border),
+					'--disabled-foreground': getColorValue(palette.disabledForeground),
+					'--link-foreground': getColorValue(palette.linkForeground),
+					'--link-hover-foreground': getColorValue(palette.linkHoverForeground),
+					'--active-foreground': getColorValue(palette.activeForeground),
+					'--active-background': getColorValue(palette.activeBackground),
+					'--hover-background': getColorValue(palette.hoverBackground),
+					'--match-foreground': getColorValue(palette.matchForeground),
+					'--match-background': getColorValue(palette.matchBackground),
+					'--secondary-match-background': getColorValue(
+						palette.secondaryMatchBackground
+					),
+					'--selection-background': getColorValue(palette.selectionBackground),
+					'--secondary-sel-background': getColorValue(
+						palette.secondarySelectionBackground
+					),
+					'--line-highlight-background': getColorValue(
+						palette.lineHighlightBackground
+					),
+					'--info-foreground': getColorValue(palette.infoForeground),
+					'--info-background': getColorValue(palette.infoBackground),
+					'--info-border': getColorValue(palette.infoBorder),
+					'--success-foreground': getColorValue(palette.successForeground),
+					'--success-background': getColorValue(palette.successBackground),
+					'--success-border': getColorValue(palette.successBorder),
+					'--warning-foreground': getColorValue(palette.warningForeground),
+					'--warning-background': getColorValue(palette.warningBackground),
+					'--warning-border': getColorValue(palette.warningBorder),
+					'--error-foreground': getColorValue(palette.errorForeground),
+					'--error-background': getColorValue(palette.errorBackground),
+					'--error-border': getColorValue(palette.errorBorder),
+					'--active-border': getColorValue(palette.activeBorder),
+					'--focus-border': getColorValue(palette.focusBorder),
+					'--ui-background': getColorValue(palette.uiBackground),
+					'--light-border': getColorValue(palette.lightBorder),
+					'--button-foreground': getColorValue(palette.buttonForeground),
+					'--button-background': getColorValue(palette.buttonBackground),
+					'--button-hover-background': getColorValue(
+						palette.buttonHoverBackground
+					),
+					'--secondary-button-foreground': getColorValue(
+						palette.secondaryButtonForeground
+					),
+					'--secondary-button-background': getColorValue(
+						palette.secondaryButtonBackground
+					),
+					'--secondary-button-hover-background': getColorValue(
+						palette.secondaryButtonHoverBackground
+					),
+					'--disabled-button-background': getColorValue(
+						palette.disabledButtonBackground
+					),
+					'--secondary-ui-background': getColorValue(
+						palette.secondaryUiBackground
+					),
+					'--icon-color': getColorValue(palette.icon),
+					'--active-icon': getColorValue(palette.activeIcon),
+					'--accent1': getColorValue(palette.accent1),
+					'--accent2': getColorValue(palette.accent2),
+					'--accent3': getColorValue(palette.accent3),
+				} as React.CSSProperties
+			}
 		>
-			<style
-				// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
-				dangerouslySetInnerHTML={{
-					__html: `
-			.${id}__link {
-				cursor: pointer;
-				color: ${getColorValue(palette.linkForeground)};
-			}
-			.${id}__link:hover {
-				color: ${getColorValue(palette.linkHoverForeground)};
-			}
-			.${id}__button {
-				cursor: pointer;
-				color: ${getColorValue(palette.buttonForeground)};
-				background-color: ${getColorValue(palette.buttonBackground)};
-			}
-			.${id}__button:hover {
-				background-color: ${getColorValue(palette.buttonHoverBackground)};
-			}
-			.${id}__secondaryButton {
-				cursor: pointer;
-				color: ${getColorValue(palette.secondaryButtonForeground)};
-				background-color: ${getColorValue(palette.secondaryButtonBackground)};
-			}
-			.${id}__secondaryButton:hover {
-				background-color: ${getColorValue(palette.secondaryButtonHoverBackground)};
-			}
-			.${id}__disabledButton {
-				color: ${getColorValue(palette.disabledForeground)};
-				background-color: ${getColorValue(palette.disabledButtonBackground)};
-			}
-			.${id}__disabledButton:hover {
-				background-color: ${getColorValue(palette.disabledButtonHoverBackground)};
-			}
-			`,
-				}}
-			/>
-			<div style={{ color: getColorValue(palette.titleForeground) }}>
-				titleForeground
-			</div>
-			<div style={{ color: getColorValue(palette.textForeground) }}>
-				textForeground
-			</div>
-			<div style={{ color: getColorValue(palette.secondaryTextForeground) }}>
+			<div className="text-(--title-foreground)">titleForeground</div>
+			<div className="text-(--text-foreground)">textForeground</div>
+			<div className="text-(--secondary-text-foreground)">
 				secondaryTextForeground
 			</div>
+			<div className="h-px bg-(--border-color)" />
+			<div className="text-(--disabled-foreground)">disabledForeground</div>
 			<div
-				className="h-px"
-				style={{ backgroundColor: getColorValue(palette.border) }}
-			/>
-			<div style={{ color: getColorValue(palette.disabledForeground) }}>
-				disabledForeground
-			</div>
-			<div
-				className={`
-      ${id}__link
-    `}
+				className="
+      cursor-pointer text-(--link-foreground)
+      hover:text-(--link-hover-foreground)
+    "
 			>
 				linkForeground
 			</div>
 			<div
-				className="-mx-2 px-2"
-				style={{
-					color: getColorValue(palette.activeForeground),
-					backgroundColor: getColorValue(palette.activeBackground),
-				}}
+				className="-mx-2 bg-(--active-background) px-2 text-(--active-foreground)"
 			>
 				activeForeground/activeBackground
 			</div>
-			<div
-				className="-mx-2 px-2"
-				style={{
-					color: getColorValue(palette.textForeground),
-					backgroundColor: getColorValue(palette.hoverBackground),
-				}}
-			>
+			<div className="-mx-2 bg-(--hover-background) px-2 text-(--text-foreground)">
 				hoverBackground
 			</div>
-			<div
-				className="-mx-2 px-2"
-				style={{
-					color: getColorValue(palette.matchForeground),
-					backgroundColor: getColorValue(palette.matchBackground),
-				}}
-			>
+			<div className="-mx-2 bg-(--match-background) px-2 text-(--match-foreground)">
 				matchForeground/matchBackground
 			</div>
 			<div
-				className="-mx-2 px-2"
-				style={{
-					color: getColorValue(palette.matchForeground),
-					backgroundColor: getColorValue(palette.secondaryMatchBackground),
-				}}
+				className="
+      -mx-2 bg-(--secondary-match-background) px-2 text-(--match-foreground)
+    "
 			>
 				secondaryMatchBackground
 			</div>
 			<div
-				className="-mx-2 px-2"
-				style={{
-					color: getColorValue(palette.textForeground),
-					backgroundColor: getColorValue(palette.selectionBackground),
-				}}
+				className="-mx-2 bg-(--selection-background) px-2 text-(--text-foreground)"
 			>
 				selectionBackground
 			</div>
 			<div
-				className="-mx-2 px-2"
-				style={{
-					color: getColorValue(palette.textForeground),
-					backgroundColor: getColorValue(palette.secondarySelectionBackground),
-				}}
+				className="
+      -mx-2 bg-(--secondary-sel-background) px-2 text-(--text-foreground)
+    "
 			>
 				secondarySelectionBackground
 			</div>
 			<div
-				className="-mx-2 px-2"
-				style={{
-					color: getColorValue(palette.textForeground),
-					backgroundColor: getColorValue(palette.lineHighlightBackground),
-				}}
+				className="
+      -mx-2 bg-(--line-highlight-background) px-2 text-(--text-foreground)
+    "
 			>
 				lineHighlightBackground
 			</div>
 			<div
-				className="border border-solid px-2"
-				style={{
-					color: getColorValue(palette.infoForeground),
-					backgroundColor: getColorValue(palette.infoBackground),
-					borderColor: getColorValue(palette.infoBorder),
-				}}
+				className="
+      border border-solid border-(--info-border) bg-(--info-background) px-2
+      text-(--info-foreground)
+    "
 			>
 				infoForeground/infoBackground/infoBorder
 			</div>
 			<div
-				className="border border-solid px-2"
-				style={{
-					color: getColorValue(palette.successForeground),
-					backgroundColor: getColorValue(palette.successBackground),
-					borderColor: getColorValue(palette.successBorder),
-				}}
+				className="
+      border border-solid border-(--success-border) bg-(--success-background)
+      px-2 text-(--success-foreground)
+    "
 			>
 				successForeground/successBackground/successBorder
 			</div>
 			<div
-				className="border border-solid px-2"
-				style={{
-					color: getColorValue(palette.warningForeground),
-					backgroundColor: getColorValue(palette.warningBackground),
-					borderColor: getColorValue(palette.warningBorder),
-				}}
+				className="
+      border border-solid border-(--warning-border) bg-(--warning-background)
+      px-2 text-(--warning-foreground)
+    "
 			>
 				warningForeground/warningBackground/warningBorder
 			</div>
 			<div
-				className="border border-solid px-2"
-				style={{
-					color: getColorValue(palette.errorForeground),
-					backgroundColor: getColorValue(palette.errorBackground),
-					borderColor: getColorValue(palette.errorBorder),
-				}}
+				className="
+      border border-solid border-(--error-border) bg-(--error-background) px-2
+      text-(--error-foreground)
+    "
 			>
 				errorForeground/errorBackground/errorBorder
 			</div>
 			<div
-				className="border border-solid px-2"
-				style={{
-					color: getColorValue(palette.textForeground),
-					borderColor: getColorValue(palette.activeBorder),
-				}}
+				className="
+      border border-solid border-(--active-border) px-2 text-(--text-foreground)
+    "
 			>
 				activeBorder
 			</div>
 			<div
-				className="border border-solid px-2"
-				style={{
-					color: getColorValue(palette.textForeground),
-					borderColor: getColorValue(palette.focusBorder),
-				}}
+				className="
+      border border-solid border-(--focus-border) px-2 text-(--text-foreground)
+    "
 			>
 				focusBorder
 			</div>
 			<div
 				className="
-      flex flex-col gap-4 overflow-hidden rounded-button border border-solid p-2
+      flex flex-col gap-4 overflow-hidden rounded-button border border-solid
+      border-(--light-border) bg-(--ui-background) p-2
     "
-				style={{
-					backgroundColor: getColorValue(palette.uiBackground),
-					borderColor: getColorValue(palette.lightBorder),
-				}}
 			>
-				<div style={{ color: getColorValue(palette.titleForeground) }}>
-					titleForeground
-				</div>
-				<div style={{ color: getColorValue(palette.textForeground) }}>
-					textForeground
-				</div>
-				<div style={{ color: getColorValue(palette.secondaryTextForeground) }}>
+				<div className="text-(--title-foreground)">titleForeground</div>
+				<div className="text-(--text-foreground)">textForeground</div>
+				<div className="text-(--secondary-text-foreground)">
 					secondaryTextForeground
 				</div>
 				<div
-					className={clsx(
-						`
-        ${id}__button
-      `,
-						'rounded-button px-2 py-1'
-					)}
+					className="
+       cursor-pointer rounded-button bg-(--button-background) px-2 py-1
+       text-(--button-foreground)
+       hover:bg-(--button-hover-background)
+     "
 				>
 					button
 				</div>
 				<div
-					className={clsx(
-						`
-        ${id}__secondaryButton
-      `,
-						'rounded-button px-2 py-1'
-					)}
+					className="
+       cursor-pointer rounded-button bg-(--secondary-button-background) px-2
+       py-1 text-(--secondary-button-foreground)
+       hover:bg-(--secondary-button-hover-background)
+     "
 				>
 					secondaryButton
 				</div>
 				<div
-					className={clsx(
-						`
-        ${id}__disabledButton
-      `,
-						'rounded-button px-2 py-1'
-					)}
+					className="
+       rounded-button bg-(--disabled-button-background) px-2 py-1
+       text-(--disabled-foreground)
+     "
 				>
 					disabledButton
 				</div>
 				<div
-					className="-m-2 flex justify-center gap-2 text-lg"
-					style={{
-						backgroundColor: getColorValue(palette.secondaryUiBackground),
-					}}
+					className="
+       -m-2 flex justify-center gap-2 bg-(--secondary-ui-background) text-lg
+     "
 				>
-					<div style={{ color: getColorValue(palette.icon) }} title="icon">
+					<div className="text-(--icon-color)" title="icon">
 						★
 					</div>
-					<div
-						style={{ color: getColorValue(palette.activeIcon) }}
-						title="activeIcon"
-					>
+					<div className="text-(--active-icon)" title="activeIcon">
 						★
 					</div>
-					<div
-						style={{ color: getColorValue(palette.accent1) }}
-						title="accent1"
-					>
+					<div className="text-(--accent1)" title="accent1">
 						★
 					</div>
-					<div
-						style={{ color: getColorValue(palette.accent2) }}
-						title="accent2"
-					>
+					<div className="text-(--accent2)" title="accent2">
 						★
 					</div>
-					<div
-						style={{ color: getColorValue(palette.accent3) }}
-						title="accent3"
-					>
+					<div className="text-(--accent3)" title="accent3">
 						★
 					</div>
 				</div>
@@ -493,8 +452,6 @@ function UiSample({ id, palette }: { id: string; palette: Palette }) {
 		</div>
 	);
 }
-
-/* eslint-enable better-tailwindcss/no-unknown-classes */
 
 function getAnsiDisplayName(fullName: string) {
 	const name = fullName.replace('terminal', '').replace('Bright', '');
@@ -593,9 +550,9 @@ export function SquirrelsongSpecPage({
 				</h2>
 				<ColorsTable colors={uiColors} colorRows={colorRows} />
 				<div className="grid grid-cols-3 gap-4">
-					<UiSample id="light" palette={uiColors.light} />
-					<UiSample id="dark" palette={uiColors.dark} />
-					<UiSample id="darkPurple" palette={uiColors.darkPurple} />
+					<UiSample palette={uiColors.light} />
+					<UiSample palette={uiColors.dark} />
+					<UiSample palette={uiColors.darkPurple} />
 				</div>
 				<h2 className="heading-2" id="code-colors">
 					Code colors
