@@ -1,11 +1,14 @@
-import { type BaseIconProps, IconBase } from './IconBase';
+import {
+	IconBase,
+	type IconBaseProps,
+} from '../packages/tamia/components/IconBase';
 
 const SIZE = 36;
 
 export function IconCoffee({
 	variant = 'default',
 	...props
-}: Omit<BaseIconProps, 'fill' | 'height' | 'viewBox' | 'width' | 'children'> & {
+}: Omit<IconBaseProps, 'fill' | 'height' | 'viewBox' | 'width' | 'children'> & {
 	variant?: 'default' | 'hola';
 }) {
 	return (
