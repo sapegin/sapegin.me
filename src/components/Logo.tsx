@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react';
+
 export const LOGO_WIDTH = '400px';
 
-const Span = ({ children }: { children: React.ReactNode }) => (
+const Span = ({ children }: { children: ReactNode }) => (
 	<span
 		className="
     inline-block bg-text px-2 pt-0.5 font-ui text-ui leading-[0.8]

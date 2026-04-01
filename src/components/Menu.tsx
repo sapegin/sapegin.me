@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { Fragment } from 'react';
 
 // Half of total menu items
@@ -69,14 +70,11 @@ export function Menu({ current }: Props) {
 						<li className="typo-menu">
 							<a
 								href={href}
-								className="link text-nowrap no-underline!"
-								style={
-									isCurrent(href, current)
-										? {
-												textShadow: `2px 2px color-mix(in hsl, var(--color-primary), transparent 70%)`,
-											}
-										: undefined
-								}
+								className={clsx(
+									'link text-nowrap no-underline',
+									isCurrent(href, current) &&
+										`text-shadow-[2px_2px] text-shadow-primary/30`
+								)}
 							>
 								{title}
 							</a>
