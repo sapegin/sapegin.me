@@ -1,5 +1,4 @@
 import { BookLink } from '../components/BookLink';
-import { Expander } from '../components/Expander';
 import { Hola } from '../components/Hola';
 import { Image } from '../components/Image';
 import { LinkWithIcon } from '../components/LinkWithIcon';
@@ -120,15 +119,15 @@ function Photography() {
 			<h2 className="heading-2">
 				I make photos of trees, buildings, and things
 			</h2>
-			<Expander>
+			<div className="expander">
 				<Image
 					src="/images/photos-1.avif"
 					alt="Saxon Switzerland forest, Germany"
 					width={900}
 					height={505}
 				/>
-			</Expander>
-			<Expander>
+			</div>
+			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
 					<Image
 						src="/images/photos-2.avif"
@@ -156,7 +155,7 @@ function Photography() {
 						height={840}
 					/>
 				</div>
-			</Expander>
+			</div>
 			<p className="typo-body">
 				See{' '}
 				<a className="link" href="https://morning.photos/">
@@ -172,7 +171,7 @@ function Coffee() {
 	return (
 		<section className="flex flex-col gap-4">
 			<h2 className="heading-2">I drink lots of coffee</h2>
-			<Expander>
+			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
 					<div
 						className="
@@ -200,7 +199,7 @@ function Coffee() {
 						height={750}
 					/>
 				</div>
-			</Expander>
+			</div>
 			<p className="typo-body">
 				No milk, no sugar, preferably filter.{' '}
 				<del>Dark and bitter, like life.</del> Check out my pour over{' '}
@@ -217,7 +216,7 @@ function Cooking() {
 	return (
 		<section className="flex flex-col gap-4">
 			<h2 className="heading-2">I learn how to cook great food</h2>
-			<Expander>
+			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
 					<a
 						className="link"
@@ -257,7 +256,7 @@ function Cooking() {
 						/>
 					</a>
 				</div>
-			</Expander>
+			</div>
 			<p className="typo-body">
 				My favorite cuisines to cook are Russian, Mexican, Korean, and Italian;
 				my fiancée and I are{' '}
@@ -274,7 +273,7 @@ function Me() {
 	return (
 		<section className="flex flex-col gap-4">
 			<h2 className="heading-2">I may (or may not) look like this</h2>
-			<Expander>
+			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
 					<Image
 						src="/images/me-1.avif"
@@ -302,7 +301,7 @@ function Me() {
 						height={700}
 					/>
 				</div>
-			</Expander>
+			</div>
 		</section>
 	);
 }
@@ -311,14 +310,14 @@ function Leather() {
 	return (
 		<section className="flex flex-col gap-4">
 			<h2 className="heading-2">I make things from leather</h2>
-			<Expander>
+			<div className="expander">
 				<Image
 					src="/images/leathercraft.avif"
 					alt="Leather goods I have made"
 					width={1512}
 					height={1008}
 				/>
-			</Expander>
+			</div>
 			<p className="typo-body">
 				Check out my digital leather patterns{' '}
 				<a className="link" href="https://klatzleathergoods.etsy.com/">

@@ -1,4 +1,3 @@
-import { Expander } from '../components/Expander';
 import { Image } from '../components/Image';
 import { Typo } from '../components/Typo';
 import { Page } from './Page';
@@ -86,14 +85,14 @@ export function ManPage({ url }: Props) {
          md:order-0 md:mx-0
        "
 						>
-							<Expander>
+							<div className="expander">
 								<Image
 									src="/images/me-4.jpg"
 									alt="Artem Sapegin on the sea"
 									width={700}
 									height={700}
 								/>
-							</Expander>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -273,14 +272,14 @@ export function ManPage({ url }: Props) {
 				</section>
 				<section className="flex flex-col gap-4">
 					<h2 className="heading-2">And here’s where I work</h2>
-					<Expander>
+					<div className="expander">
 						<Image
 							src="/images/workplace-2024.webp"
 							alt="My home office"
 							width={1512}
 							height={1207}
 						/>
-					</Expander>
+					</div>
 				</section>
 				<section className="flex flex-col gap-4">
 					<p className="typo-body">
