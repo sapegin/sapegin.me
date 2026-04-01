@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
-import Group from 'react-group';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
 import { InlineList, InlineListItem } from '../components/InlineList';
 import { MurderOfCrows } from '../components/MurderOfCrows';
 import { Typo } from '../components/Typo';
+import { Group } from '../packages/tamia/components/Group';
 import type { Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
 

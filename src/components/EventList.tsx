@@ -1,4 +1,4 @@
-import Group from 'react-group';
+import { Group } from '../packages/tamia/components/Group';
 import type { Gig } from '../types/Gig';
 import { EventName } from './EventName';
 
