@@ -1,11 +1,10 @@
 import clsx from 'clsx';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-export interface IconBaseProps
-	extends Omit<
-		ComponentPropsWithoutRef<'svg'>,
-		'viewBox' | 'fill' | 'width' | 'height'
-	> {
+export interface IconBaseProps extends Omit<
+	ComponentPropsWithoutRef<'svg'>,
+	'viewBox' | 'fill' | 'width' | 'height'
+> {
 	width: number;
 	height: number;
 	viewBox: { width: number; height: number };
