@@ -1,8 +1,24 @@
-# [Artem Sapegin’s home page and blog version 2023](https://sapegin.me/)
+# [Artem Sapegin's home page and blog version 2023](https://sapegin.me/)
 
 [![Node.js CI status](https://github.com/sapegin/sapegin.me/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/sapegin.me/actions) [![Netlify Status](https://api.netlify.com/api/v1/badges/2f9e1773-89f3-49a9-aa07-367687293d09/deploy-status)](https://app.netlify.com/sites/sapegin/deploys)
 
 [WordPress](https://wordpress.org/) (2008) → [Aegea](http://blogengine.ru/) (2012) → [DocPad](http://docpad.org/) (2013) → [Hexo](https://hexo.io/) (2015, unpublished) → [Fledermaus](https://github.com/sapegin/fledermaus) (2015) → [Gatsby](https://www.gatsbyjs.org/) (2018) → [Astro](https://astro.build/) (2023).
+
+## Architecture
+
+Multi-site monorepo (single package, no workspaces) powered by [Astro](https://astro.build/) and [Tailwind CSS v4](https://tailwindcss.com/). The active site is selected via the `SITE` env variable, which switches Astro’s `srcDir`.
+
+### Folder structure
+
+```
+src/
+  sites/            — per-site source
+    sapegin.me/
+  shared/           — shared code
+content/            — synced content (generated, do not edit directly)
+public/             — static assets
+scripts/            — build-time scripts (book sync, Squirrelsong sync)
+```
 
 ## Running locally
 
@@ -14,10 +30,18 @@ cd sapegin.me
 npm install
 ```
 
-Then run dev server (it will refresh the page after any changes in code, or content):
+### Per-site commands
 
 ```bash
-npm start
+npm run dev:sapegin
+npm run build:sapegin
+```
+
+### Lint & test
+
+```bash
+npm run lint             # ESLint + textlint
+npm test                 # lint → astro check → prettier format
 ```
 
 ## Sponsoring
