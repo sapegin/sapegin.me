@@ -1,7 +1,7 @@
 import GithubSlugger from 'github-slugger';
+import type { Root } from 'hast';
 import { toString } from 'hast-util-to-string';
 import { visit } from 'unist-util-visit';
-import type { Root } from 'hast';
 
 const slugs = new GithubSlugger();
 
@@ -25,7 +25,7 @@ export default function rehypeSlug() {
 			) {
 				// Get heading text content, and replace non-breaking spaces
 				// with regular spaces
-				const text = toString(node).replaceAll('\u00A0', ' ');
+				const text = toString(node).replaceAll('\u00a0', ' ');
 				node.properties.id = slugs.slug(text);
 			}
 		});

@@ -1,6 +1,6 @@
 ---
+import { type CollectionEntry, getCollection } from 'astro:content';
 import _ from 'lodash';
-import { getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { AlbumPage } from '../../templates/AlbumPage';
 import type { Photo } from '../../types/Photo';
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 		// Sort by capture date: new first
 		const sortedPhotos = _.orderBy(photos, ['timestamp'], ['desc']);
 		return {
-			params: { slug: album.slug },
+			params: { slug: album.id },
 			props: {
 				album,
 				photos: sortedPhotos,
@@ -36,7 +36,7 @@ const { album, photos } = Astro.props;
 ---
 
 <Layout
-	url={`/series/${album.slug}/`}
+	url={`/series/${album.id}/`}
 	title={album.data.title}
 	pageTitle={album.data.pageTitle}
 	description={album.body?.trim()}

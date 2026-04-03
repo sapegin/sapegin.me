@@ -1,5 +1,5 @@
-// Copies all photos from iCloud Photos folder, converts them to AVIF,
-// and creates JSON files with metadata for Astro collections
+// Reads all photos from iCloud Photos folder, converts them to AVIF, and
+// creates JSON files with metadata for Astro collections
 
 import fs from 'node:fs';
 import os from 'node:os';

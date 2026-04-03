@@ -3,37 +3,28 @@
  */
 @theme {
 	/* Colors */
+	--color-background: #fff;
 	--color-text: #3a3d40;
-	--color-background: #ffffff;
-	--color-border: #3a3d40;
-	--color-primary: #577290;
 	--color-secondary: #75757c;
-	--color-accent: #be4b83;
 	--color-light: #94949e;
-
-	/* Syntax highlighting colors */
-	--color-code-black: #565a67;
-	--color-code-gray: #6c7693;
-	--color-code-green: #00805e;
-	--color-code-orange: #ad5528;
-	--color-code-blue: #0f73a7;
-	--color-code-purple: #7859a6;
-	--color-code-red: #b71818;
+	--color-border: #3a3d40;
+	--color-primary: #776487;
+	--color-accent: #c25341;
+	--color-gradient-1: #90b7e3;
+	--color-gradient-2: #72597d;
 
 	/* Fonts */
 	--font-body: 'Helvetica Neue', Arial, sans-serif;
-	--font-heading: 'Mondwest-Regular', sans-serif;
-	--font-ui: NeueBit, sans-serif;
-	--font-mono: MonoLisa, monospace;
+	--font-heading: 'Helvetica Neue', Arial, sans-serif;
+	--font-ui: 'Helvetica Neue', Arial, sans-serif;
+	--font-mono: monospace;
 
 	/* Text sizes */
-	--text-root: 1.125em;
 	--text-lg: 1.7rem;
 	--text-xl: 2rem;
 	--text-2xl: 2.4rem;
 	--text-3xl: 3.2rem;
-	--text-article: 1.2rem;
-	--text-ui: 1.5rem;
+	--text-ui: 1.1rem;
 	--text-heading-1: var(--text-3xl);
 	--text-heading-2: var(--text-2xl);
 	--text-heading-3: var(--text-xl);
@@ -63,21 +54,15 @@
  */
 @media (prefers-color-scheme: dark) {
 	:root {
+		--color-background: #313131;
 		--color-text: #e3e6e8;
-		--color-background: #2e3033;
 		--color-secondary: #94949e;
 		--color-light: #94949e;
 		--color-border: #dbe2e9;
-		--color-primary: #89abd2;
-		--color-accent: #db76a7;
+		--color-primary: #b28bbd;
+		--color-accent: #dc7f71;
 		--color-selection: #61656b;
-		--color-code-black: #9397a5;
-		--color-code-gray: #a7adbe;
-		--color-code-green: #09b987;
-		--color-code-orange: #dbaf57;
-		--color-code-blue: #46a7ec;
-		--color-code-purple: #ac92d3;
-		--color-code-red: #f96c78;
-		--color-coffee-hover: #2e3033;
+		--color-gradient-1: #89abd2;
+		--color-gradient-2: #b28bbd;
 	}
 }

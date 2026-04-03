@@ -4,22 +4,22 @@ import { Box } from '../components/Box';
 import { Button } from '../components/Button';
 import { Expander } from '../components/Expander';
 import { Heading } from '../components/Heading';
+import { Markdown } from '../components/Markdown';
 import { Stack } from '../components/Stack';
+import { Support } from '../components/Support';
 import { Text } from '../components/Text';
 import { TextContent } from '../components/TextContent';
 import { TextTypo } from '../components/TextTypo';
 import { Video } from '../components/Video';
 import { PageWithTitle } from './PageWithTitle';
-import { Markdown } from '../components/Markdown';
-import { Support } from '../components/Support';
 
 type Issue = CollectionEntry<'zines'>;
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	issues: Issue[];
-};
+}
 
 export function ZinePage({ url, title, issues }: Props) {
 	return (
@@ -34,9 +34,7 @@ export function ZinePage({ url, title, issues }: Props) {
 				{issues.map(({ id, data: issue }) => {
 					return (
 						<Stack key={id} as="article" gap="m">
-							<Heading as="h2" level={2}>
-								{issue.title}
-							</Heading>
+							<h2 className="typo-">{issue.title}</h2>
 							<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
 								<Stack gap="m">
 									<TextContent>

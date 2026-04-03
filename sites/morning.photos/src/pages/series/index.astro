@@ -1,6 +1,6 @@
 ---
-import _ from 'lodash';
 import { getCollection } from 'astro:content';
+import _ from 'lodash';
 import Layout from '../../layouts/Layout.astro';
 import { AlbumsPage, type AlbumTeaser } from '../../templates/AlbumsPage';
 
@@ -11,7 +11,7 @@ const photosEntries = await getCollection('photos');
 const sortedSeries = _.orderBy(seriesEntries, ['data.position'], ['asc']);
 
 const albums: AlbumTeaser[] = sortedSeries.map((album) => ({
-	url: `/series/${album.slug}/`,
+	url: `/series/${album.id}/`,
 	title: album.data.title,
 	cover: photosEntries.find((x) => x.data.name === album.data.cover)?.data,
 }));

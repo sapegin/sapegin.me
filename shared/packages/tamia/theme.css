@@ -45,7 +45,7 @@
 	--font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
 	/* Font sizes */
-	--text-root: 1;
+	--text-root: 1rem;
 	--text-xs: 0.75rem;
 	--text-sm: 0.9rem;
 	--text-base: 1rem;
@@ -61,6 +61,7 @@
 	--leading-normal: 1.5;
 	--leading-heading: 1.1;
 	--leading-code: 1.3;
+	--leading-snug: 1.4;
 
 	/* Semantic spacing */
 	/* Whitespace under block elements (p, h1, h2, table, etc.) */
@@ -96,4 +97,19 @@
 	--default-font-family: var(--font-body);
 	--default-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 	--default-mono-font-feature-settings: normal;
+}
+
+/**
+ * Dark theme.
+ */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text: #e3e6e8;
+		--color-background: #2e3033;
+		--color-primary: #89abd2;
+		--color-secondary: #94949e;
+		--color-accent: #db76a7;
+		--color-border: #dbe2e9;
+		--color-selection: #61656b;
+	}
 }

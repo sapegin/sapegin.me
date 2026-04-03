@@ -1,10 +1,12 @@
-import { z, defineCollection } from 'astro:content';
-import type { Photo } from '../types/Photo';
-import type { Album } from '../types/Album';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+import { defineCollection } from 'astro:content';
+import type { Album } from './types/Album';
+import type { Photo } from './types/Photo';
 
 // Photos
 const photos = defineCollection({
-	type: 'data',
+	loader: glob({ pattern: '*.json', base: '../../content/photos' }),
 	schema: z.object({
 		name: z.string(),
 		title: z.string(),
@@ -24,7 +26,7 @@ const photos = defineCollection({
 
 // Series
 const series = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '*.md', base: '../../content/series' }),
 	schema: z.object({
 		title: z.string(),
 		pageTitle: z.string(),
@@ -34,21 +36,9 @@ const series = defineCollection({
 	}) satisfies z.ZodType<Album>,
 });
 
-// Blog posts
-const blog = defineCollection({
-	type: 'content',
-	schema: z.object({
-		title: z.string(),
-		tags: z.array(z.string()),
-		date: z.date(),
-		description: z.string().optional(),
-		draft: z.boolean().optional(),
-	}),
-});
-
 // Zines
 const zines = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '*.md', base: '../../content/zines' }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
@@ -65,6 +55,5 @@ const zines = defineCollection({
 export const collections = {
 	photos,
 	series,
-	blog,
 	zines,
 };
