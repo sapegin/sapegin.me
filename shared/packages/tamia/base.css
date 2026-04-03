@@ -14,6 +14,11 @@
 		text-rendering: optimizeSpeed;
 		font-kerning: normal;
 		hyphens: auto;
+		/*
+		  Reserve space for scrollbar on short pages to avoid layout shift on
+		  navigation
+		*/
+		scrollbar-gutter: stable;
 	}
 
 	/* Enable smooth scroll only for folks who don't have reduce motion enabled */
@@ -24,7 +29,8 @@
 	}
 
 	body {
-		min-height: 100vh;
+		/* Make the body fill the full screen height */
+		min-block-size: 100svh;
 	}
 
 	/* Disable hyphenation in links */
