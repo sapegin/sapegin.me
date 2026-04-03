@@ -27,7 +27,7 @@
 					'title',
 					'referrer',
 					'event',
-				].includes(k)
+				].indexOf(k) > -1
 			) {
 				window.goatcounter[k] = set[k];
 			}
@@ -42,7 +42,7 @@
 			p: vars.path === undefined ? goatcounter.path : vars.path,
 			r: vars.referrer === undefined ? goatcounter.referrer : vars.referrer,
 			t: vars.title === undefined ? goatcounter.title : vars.title,
-			e: Boolean(vars.event || goatcounter.event),
+			e: !!(vars.event || goatcounter.event),
 			s: [
 				window.screen.width,
 				window.screen.height,
@@ -195,8 +195,8 @@
 		}
 		if (
 			!goatcounter.allow_local &&
-			/(localhost$|^127\.|^10\.|^172\.(1[6-9]|2[0-9]|3[0-1])\.|^192\.168\.|^0\.0\.0\.0$)/.test(
-				location.hostname
+			location.hostname.match(
+				/(localhost$|^127\.|^10\.|^172\.(1[6-9]|2[0-9]|3[0-1])\.|^192\.168\.|^0\.0\.0\.0$)/
 			)
 		) {
 			return 'localhost';
@@ -217,7 +217,7 @@
 			// null from user callback.
 			return;
 		}
-		data.rnd = Math.random().toString(36).slice(2, 7); // Browsers don't always listen to Cache-Control.
+		data.rnd = Math.random().toString(36).substr(2, 5); // Browsers don't always listen to Cache-Control.
 
 		const endpoint = get_endpoint();
 		if (!endpoint) {
@@ -242,10 +242,10 @@
 
 	// Get a query parameter.
 	window.goatcounter.get_query = function (name) {
-		const s = location.search.slice(1).split('&');
+		const s = location.search.substr(1).split('&');
 		for (let i = 0; i < s.length; i++) {
 			if (s[i].toLowerCase().indexOf(name.toLowerCase() + '=') === 0) {
-				return s[i].slice(name.length + 1);
+				return s[i].substr(name.length + 1);
 			}
 		}
 	};
@@ -265,7 +265,7 @@
 					title:
 						elem.dataset.goatcounterTitle ||
 						elem.title ||
-						(elem.innerHTML || '').slice(0, 200) ||
+						(elem.innerHTML || '').substr(0, 200) ||
 						'',
 					referrer:
 						elem.dataset.goatcounterReferrer ||
@@ -275,17 +275,17 @@
 			};
 		};
 
-		for (const elem of Array.prototype.slice.call(
-			document.querySelectorAll('*[data-goatcounter-click]')
-		)) {
-			if (elem.dataset.goatcounterBound) {
-				continue;
-			}
-			const f = send(elem);
-			elem.addEventListener('click', f, false);
-			elem.addEventListener('auxclick', f, false); // Middle click.
-			elem.dataset.goatcounterBound = 'true';
-		}
+		Array.prototype.slice
+			.call(document.querySelectorAll('*[data-goatcounter-click]'))
+			.forEach(function (elem) {
+				if (elem.dataset.goatcounterBound) {
+					return;
+				}
+				const f = send(elem);
+				elem.addEventListener('click', f, false);
+				elem.addEventListener('auxclick', f, false); // Middle click.
+				elem.dataset.goatcounterBound = 'true';
+			});
 	};
 
 	// Add a "visitor counter" frame or image.
@@ -334,7 +334,7 @@
 			if (!p) {
 				return warn('visit_count: append not found: ' + opt.append);
 			}
-			p.append(d);
+			p.appendChild(d);
 		});
 	};
 
