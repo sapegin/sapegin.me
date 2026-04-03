@@ -1,11 +1,10 @@
 node_modules/
-dist/
-.astro/
 sites/*/.astro/
+sites/*/dist/
+sites/*/public/cards/
+content/squirrels/
 washingcode-book-master/
 squirrelsong-master/
-src/content/squirrels/
-public/cards/
 .idea/
 .vscode/
 npm-debug.log*
