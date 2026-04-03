@@ -462,7 +462,14 @@ Benefits:
 
 ---
 
-# 14. Risks
+## 14. Future improvements
+
+1. Define fonts using Astro fonts config: https://docs.astro.build/en/guides/fonts/
+2. Look if we can optimize performance a bit.
+
+---
+
+# 15. Risks
 
 - Tailwind v4 requires proper CSS imports
 - content sync complexity
@@ -471,7 +478,7 @@ Benefits:
 
 ---
 
-# 15. Final State
+# 16. Final State
 
 - Single repository, per-site Astro `root` with own `.astro/` types
 - Multiple isolated sites
