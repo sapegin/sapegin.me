@@ -16,14 +16,8 @@ export default [
 		settings: {
 			'better-tailwindcss': {
 				// TODO: We should move this to each site's config or limit using files[]
-				entryPoint: 'src/sites/sapegin.me/styles/index.css',
+				entryPoint: 'sites/sapegin.me/src/styles/index.css',
 			},
-		},
-	},
-	{
-		files: ['src/sites/*/env.d.ts'],
-		rules: {
-			'@typescript-eslint/triple-slash-reference': 'off',
 		},
 	},
 	{
@@ -80,12 +74,11 @@ export default [
 	},
 	{
 		ignores: [
-			'.astro/',
+			'sites/sapegin.me/.astro/',
+			'sites/sapegin.me/public/counter/',
+			'sites/sapegin.me/dist/',
 			'assets/squirrelsong/examples/',
-			'dist/',
-			'public/counter/',
 			'squirrelsong-master/',
-			'styled-system/',
 			'washingcode-book-master/',
 			'content/bookChapters/',
 		],

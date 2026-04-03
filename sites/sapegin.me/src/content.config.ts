@@ -12,7 +12,7 @@ const baseSchema = z.object({
 
 // Blog posts
 const blog = defineCollection({
-	loader: glob({ pattern: '*.md', base: './content/blog' }),
+	loader: glob({ pattern: '*.md', base: '../../content/blog' }),
 	schema: baseSchema.extend({
 		source: z.string().optional(),
 	}),
@@ -20,7 +20,7 @@ const blog = defineCollection({
 
 // Book chapters
 const bookChapters = defineCollection({
-	loader: glob({ pattern: '*.md', base: './content/bookChapters' }),
+	loader: glob({ pattern: '*.md', base: '../../content/bookChapters' }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),
@@ -30,7 +30,7 @@ const bookChapters = defineCollection({
 
 // Squirrelsong themes
 const squirrels = defineCollection({
-	loader: glob({ pattern: '*.md', base: './content/squirrels' }),
+	loader: glob({ pattern: '*.md', base: '../../content/squirrels' }),
 	schema: z.object({
 		title: z.string(),
 		app: z.string(),

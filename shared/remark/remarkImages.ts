@@ -14,14 +14,16 @@ import { visit } from 'unist-util-visit';
  *   <figcaption>Image caption</figcaption>
  * </figure>
  */
-export default function remarkImages() {
+export default function remarkImages({
+	publicDir = './public',
+}: { publicDir?: string } = {}) {
 	return (tree: Root) =>
 		visit(tree, 'image', (node: Image) => {
 			if (node.url.startsWith('/') === false) {
 				return;
 			}
 
-			const filepath = path.resolve('./public', `.${node.url}`);
+			const filepath = path.resolve(publicDir, `.${node.url}`);
 			const buffer = fs.readFileSync(filepath);
 			const { width, height } = imageSize(buffer);
 

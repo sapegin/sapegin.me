@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .astro/
+sites/*/.astro/
 washingcode-book-master/
 squirrelsong-master/
 src/content/squirrels/

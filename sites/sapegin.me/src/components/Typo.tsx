@@ -1,5 +1,5 @@
 import { Children, type ReactNode } from 'react';
-import typo from '../../../shared/typo';
+import typo from '../../../../shared/typo';
 
 interface TypoProps {
 	children: ReactNode;

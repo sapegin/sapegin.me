@@ -5,7 +5,7 @@ import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import _ from 'lodash';
-import { upperFirst } from '../src/sites/sapegin.me/util/upperFirst.ts';
+import { upperFirst } from '../sites/sapegin.me/src/util/upperFirst.ts';
 
 const REPO_TAR_GZ =
 	'https://codeload.github.com/sapegin/squirrelsong/tar.gz/master';

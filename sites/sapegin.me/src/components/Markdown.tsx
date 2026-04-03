@@ -1,5 +1,5 @@
 import MarkdownToJsx, { type MarkdownToJSX } from 'markdown-to-jsx';
-import typo from '../../../shared/typo';
+import typo from '../../../../shared/typo';
 
 interface Props {
 	text: string;

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Group } from '../../../packages/tamia/components/Group';
+import { Group } from '../../../../shared/packages/tamia/components/Group';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
 import { InlineList, InlineListItem } from '../components/InlineList';
 import { MurderOfCrows } from '../components/MurderOfCrows';

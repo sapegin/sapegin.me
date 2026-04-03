@@ -8,8 +8,8 @@ import path from 'node:path';
 import GithubSlugger from 'github-slugger';
 import matter from 'gray-matter';
 import _ from 'lodash';
-import { SITE_URL } from '../src/sites/sapegin.me/constants.ts';
-import { upperFirst } from '../src/sites/sapegin.me/util/upperFirst.ts';
+import { SITE_URL } from '../sites/sapegin.me/src/constants.ts';
+import { upperFirst } from '../sites/sapegin.me/src/util/upperFirst.ts';
 
 interface Post {
 	title: string;
@@ -36,7 +36,7 @@ const REPO_TAR_GZ =
 const REPO_DIR = 'washingcode-book-master';
 const BLOG_CONTENT_DIR = 'content/blog';
 export const BOOK_CONTENT_DIR = 'content/bookChapters';
-const DATA_DIR = 'src/sites/sapegin.me/data';
+const DATA_DIR = 'sites/sapegin.me/src/data';
 
 const TIPS = {
 	I: 'Info',

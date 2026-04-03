@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Group } from '../../../packages/tamia/components/Group';
+import { Group } from '../../../../shared/packages/tamia/components/Group';
 import type { TalkType } from '../types/Gig';
 
 const ICONS = {

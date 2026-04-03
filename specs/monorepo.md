@@ -1,6 +1,6 @@
 # Astro Multi-Site Consolidation Plan
 
-This document outlines a step-by-step migration of existing projects into a single Astro repository with per-site `srcDir` switching and Tailwind v4 CSS configuration.
+This document outlines a step-by-step migration of existing projects into a single Astro repository with per-site `root` switching and Tailwind v4 CSS configuration.
 
 Target repository (monorepo-in-a-single-package): https://github.com/sapegin/sapegin.me
 
@@ -8,7 +8,7 @@ Target repository (monorepo-in-a-single-package): https://github.com/sapegin/sap
 
 # 1. Goals
 
-- Consolidate multiple sites into a **single Astro instance**
+- Consolidate multiple sites into a **single repository** with per-site Astro instances
 - Avoid monorepo complexity (no workspaces/packages)
 - Keep **full design separation per site**
 - Share:
@@ -16,26 +16,44 @@ Target repository (monorepo-in-a-single-package): https://github.com/sapegin/sap
   - low-level components
   - styles (via Tâmia)
 - Use **Tailwind v4 CSS-based configuration**
-- Enable **per-site build via `SITE` env variable**
+- Enable **per-site build via `--root` flag**
 
 ---
 
 # 2. Target Structure
 
 ```
-/src
-  /sites
-    /sapegin.me
-    /morning.photos
-    /tacohuaco
-  /shared
+/sites
+  /sapegin.me
+    /components
+    /layouts
+    /pages
+    /styles
+    /templates
+    /types
+    /util
+    /public            (static assets)
+    astro.config.mjs   (per-site, imports shared base config)
+    content.config.ts
+    constants.ts
+    env.d.ts
+    .astro/            (auto-generated types, gitignored)
+  /morning.photos
+    astro.config.mjs
+    ...
+/content              (all content lives here)
+  /blog
+  /photos
+  ...
+/shared
   /components
-  /utils
-  /styles
   /packages
-    /tamia   (Tailwind v4 theme)
+    /tamia             (Tailwind v4 theme)
+  /remark
+  /rehype
+  /util
+  astro.config.base.mjs  (shared Astro config)
 /scripts
-/astro.config.mjs
 /package.json
 ```
 
@@ -61,30 +79,37 @@ Target repository (monorepo-in-a-single-package): https://github.com/sapegin/sap
 - Astro
 - Tailwind v4 (via Vite plugin)
 
-## 4.2 Dynamic `srcDir`
+## 4.2 Per-site `root` via `--root` flag
+
+Each site has its own `astro.config.mjs` that imports a shared base config:
 
 ```js
-import { defineConfig } from 'astro/config';
-
-const SITE = process.env.SITE || 'sapegin.me';
+// sites/sapegin.me/astro.config.mjs
+import {
+  defineConfig,
+  getBaseConfig
+} from '../../shared/astro.config.base.mjs';
 
 export default defineConfig({
-  srcDir: `./sites/${SITE}`
+  ...getBaseConfig({ site: 'sapegin.me' })
+  // site-specific overrides here
 });
 ```
+
+Astro generates `.astro/` (content types, `content.d.ts`) inside each site's root — no regeneration needed when switching sites.
 
 ## 4.3 Scripts
 
 ```json
 {
   "scripts": {
-    "dev:sapegin": "SITE=sapegin.me astro dev",
-    "dev:morning": "SITE=morning.photos astro dev",
-    "dev:tacohuaco": "SITE=tacohuaco astro dev",
+    "dev:sapegin": "astro dev --root ./sites/sapegin.me",
+    "dev:morning": "astro dev --root ./sites/morning.photos",
+    "dev:tacohuaco": "astro dev --root ./sites/tacohuaco",
 
-    "build:sapegin": "SITE=sapegin.me astro build",
-    "build:morning": "SITE=morning.photos astro build",
-    "build:tacohuaco": "SITE=tacohuaco astro build",
+    "build:sapegin": "astro build --root ./sites/sapegin.me",
+    "build:morning": "astro build --root ./sites/morning.photos",
+    "build:tacohuaco": "astro build --root ./sites/tacohuaco",
 
     "sync": "node scripts/sync-content.ts"
   }
@@ -160,14 +185,15 @@ Replace with:
 ## 5.5 Usage
 
 ```css
-@import '../../../packages/tamia/theme.css';
+@import '../../shared/packages/tamia/theme.css';
 ```
 
 ---
 
 # 6. Step 3 — Migrate sapegin.me
 
-- Move code to `/sites/sapegin.me`
+- Move code to `/sites/sapegin.me/`
+- Add per-site `astro.config.mjs` importing shared base config
 - Replace styling with Tailwind + Tâmia
 - Add:
 
@@ -177,7 +203,7 @@ Replace with:
 
 ```css
 @import 'tailwindcss';
-@import '../../../packages/tamia/theme.css';
+@import '../../shared/packages/tamia/theme.css';
 ```
 
 - Import in layout:
@@ -226,9 +252,9 @@ Avoid:
 ```json
 {
   "tailwindCSS.experimental.configFile": {
-    "sites/sapegin.me/**": "sites/sapegin.me/styles/app.css",
-    "sites/morning.photos/**": "sites/morning.photos/styles/app.css",
-    "sites/tacohuaco/**": "sites/tacohuaco/styles/app.css"
+    "sites/sapegin.me/**": "sites/sapegin.me/src/styles/app.css",
+    "sites/morning.photos/**": "sites/morning.photos/src/styles/app.css",
+    "sites/tacohuaco/**": "sites/tacohuaco/src/styles/app.css"
   }
 }
 ```
@@ -237,7 +263,7 @@ Avoid:
 
 # 11. Step 8 — Obsidian Content Sync
 
-## 11.1 Source vault structure
+## 11.1 Source vault structure (TBD)
 
 ```
 /🌐 Sites
@@ -251,7 +277,10 @@ Avoid:
 ## 11.2 Monorepo target
 
 ```
-/sites/<site>/content
+/content
+  /blog
+  /photos
+  ...
 ```
 
 ---
@@ -371,7 +400,7 @@ npm run build:sapegin
 Do not edit:
 
 ```
-/sites/*/content
+/content
 ```
 
 Optional header:
@@ -404,7 +433,7 @@ Optional header:
 Each site builds independently:
 
 ```bash
-SITE=morning.photos astro build
+astro build --root ./sites/morning.photos
 ```
 
 Deploy:
@@ -444,7 +473,7 @@ Benefits:
 
 # 15. Final State
 
-- Single Astro repository
+- Single repository, per-site Astro `root` with own `.astro/` types
 - Multiple isolated sites
 - Shared Tailwind v4 theme (Tâmia)
 - Deterministic content pipeline

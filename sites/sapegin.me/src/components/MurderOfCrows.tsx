@@ -1,4 +1,4 @@
-import { IconBase } from '../../../packages/tamia/components/IconBase';
+import { IconBase } from '../../../../shared/packages/tamia/components/IconBase';
 
 const SIZE = 34;
 
