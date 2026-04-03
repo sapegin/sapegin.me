@@ -1,0 +1,19 @@
+---
+import Layout from './Layout.astro';
+import { PostPage } from '../templates/PostPage';
+import type { Post } from '../types/Post';
+
+type Props = Post & { related: Post[] };
+
+const { url, title, description } = Astro.props;
+---
+
+<Layout
+	url={url}
+	title={title}
+	description={description}
+	component={PostPage}
+	props={Astro.props}
+>
+	<slot />
+</Layout>

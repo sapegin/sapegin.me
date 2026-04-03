@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { MainPage } from '../templates/MainPage';
+import type { Resource } from '../types/Resource';
+
+const entries = await getCollection('photos');
+
+// Unwrap entries to keep only Photo objects
+const photos = entries.map((x) => x.data);
+
+const text = `
+Hello, my name is Artem, and I make photos of trees, buildings, and things. For more than 20 years since I picked up photography as a hobby, I couldn’t settle on a single genre or style. It used to bother me, but I learned to accept it.
+
+I equally enjoy taking quick snaps with my iPhone and standing for an hour beside my big camera on a tripod, watching the light change during sunrise or sunset. I love bright pictures with _a lo-fi beach city vibe_, and I love sombre cinematic images of _a quite desperation_. My own mood usually leans to the former, but the aesthetics of sadness and decay attract me in art, cinema, and music.
+`;
+
+const links: Resource[][] = [
+	[
+		{
+			title: 'artem@sapegin.me',
+			url: 'mailto:artem@sapegin.me',
+		},
+	],
+	[
+		{
+			title: 'Mastodon',
+			url: 'https://mastodon.cloud/@sapegin',
+		},
+		{
+			title: 'Bluesky',
+			url: 'https://bsky.app/profile/sapegin.me',
+		},
+		{
+			title: 'Substack',
+			url: 'https://lofisunshine.substack.com/',
+		},
+	],
+	[
+		{
+			title: 'Unsplash',
+			url: 'https://unsplash.com/@sapegin',
+		},
+		{
+			title: 'Tacohuaco',
+			url: 'https://tacohuaco.co/',
+		},
+	],
+];
+---
+
+<Layout
+	url="/"
+	title="Morning.photos: photography by Artem Sapegin"
+	pageTitle="Morning.photos – photography by Artem Sapegin"
+	component={MainPage}
+	props={{
+		text,
+		photos,
+		links,
+	}}
+/>

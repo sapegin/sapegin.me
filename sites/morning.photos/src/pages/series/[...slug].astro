@@ -1,0 +1,47 @@
+---
+import _ from 'lodash';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { AlbumPage } from '../../templates/AlbumPage';
+import type { Photo } from '../../types/Photo';
+
+type Props = {
+	album: CollectionEntry<'series'>;
+	photos: Photo[];
+};
+
+export async function getStaticPaths() {
+	const seriesEntries = await getCollection('series');
+	const photosEntries = await getCollection('photos');
+	const allPhotos = photosEntries.map((x) => x.data);
+
+	return seriesEntries.map((album) => {
+		const photos = allPhotos.filter((x) =>
+			x.keywords.includes(album.data.keyword)
+		);
+
+		// Sort by capture date: new first
+		const sortedPhotos = _.orderBy(photos, ['timestamp'], ['desc']);
+		return {
+			params: { slug: album.slug },
+			props: {
+				album,
+				photos: sortedPhotos,
+			},
+		};
+	});
+}
+
+const { album, photos } = Astro.props;
+---
+
+<Layout
+	url={`/series/${album.slug}/`}
+	title={album.data.title}
+	pageTitle={album.data.pageTitle}
+	description={album.body?.trim()}
+	component={AlbumPage}
+	props={{
+		photos,
+	}}
+/>

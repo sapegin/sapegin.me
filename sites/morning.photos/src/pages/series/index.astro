@@ -1,0 +1,29 @@
+---
+import _ from 'lodash';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { AlbumsPage, type AlbumTeaser } from '../../templates/AlbumsPage';
+
+const seriesEntries = await getCollection('series');
+const photosEntries = await getCollection('photos');
+
+// Sort by position
+const sortedSeries = _.orderBy(seriesEntries, ['data.position'], ['asc']);
+
+const albums: AlbumTeaser[] = sortedSeries.map((album) => ({
+	url: `/series/${album.slug}/`,
+	title: album.data.title,
+	cover: photosEntries.find((x) => x.data.name === album.data.cover)?.data,
+}));
+---
+
+<Layout
+	url={`/series/`}
+	title="Series"
+	pageTitle="Artem Sapegin photo series"
+	description="Landscapes, travel, cityscapes, nature and street photos."
+	component={AlbumsPage}
+	props={{
+		albums,
+	}}
+/>

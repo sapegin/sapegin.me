@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { ZinePage } from '../templates/ZinePage';
+
+const issues = await getCollection('zines');
+---
+
+<Layout
+	url="/zine/"
+	title="From dawn till coffee photography zine"
+	description="This is a zine with my photos that I publish to share my work and reflect on my photography, kind of a better Instagram. I’m planning to publish a new issue about once a year, each dedicated to a particular theme."
+	component={ZinePage}
+	props={{ issues }}
+/>

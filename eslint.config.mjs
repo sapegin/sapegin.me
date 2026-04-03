@@ -74,9 +74,9 @@ export default [
 	},
 	{
 		ignores: [
-			'sites/sapegin.me/.astro/',
-			'sites/sapegin.me/public/counter/',
-			'sites/sapegin.me/dist/',
+			'sites/*/.astro/',
+			'sites/*/public/counter/',
+			'sites/*/dist/',
 			'assets/squirrelsong/examples/',
 			'squirrelsong-master/',
 			'washingcode-book-master/',

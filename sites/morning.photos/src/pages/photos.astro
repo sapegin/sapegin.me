@@ -1,0 +1,26 @@
+---
+import _ from 'lodash';
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { AlbumPage } from '../templates/AlbumPage';
+
+const entries = await getCollection('photos');
+
+// Unwrap entries to keep only Photo objects
+const allPhotos = entries.map((x) => x.data);
+
+// Keep only photos with 5-star rating
+const fiveStarPhotos = allPhotos.filter((x) => x.rating === 5);
+
+// Sort by date
+const sortedFiveStarPhotos = _.orderBy(fiveStarPhotos, ['timestamp'], ['desc']);
+---
+
+<Layout
+	url="/photos/"
+	title="Photos"
+	pageTitle="Favorite photos by Artem Sapegin"
+	description="Artem Sapegin’s favorite photos: landscapes, travel, cityscapes, nature, street"
+	component={AlbumPage}
+	props={{ photos: sortedFiveStarPhotos, description: '' }}
+/>

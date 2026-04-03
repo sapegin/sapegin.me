@@ -1,0 +1,16 @@
+/* TEAM */
+
+  Web developer: Artem Sapegin
+  Email: artem@sapegin.me
+  Site: https://sapegin.me
+
+/* POWERED BY */
+
+  Astro: https://astro.build/
+  Panda CSS: https://panda-css.com/
+  Tâmia: https://github.com/sapegin/tamia/
+
+  -_-_-_-_-_-_-_,------,
+  _-_-_-_-_-_-_-|   /\_/\\
+  -_-_-_-_-_-_-~|__( ^ .^)
+  -_-_-_-_-_-_-""  ""

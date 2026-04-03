@@ -1,0 +1,11 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "jsx": "preserve",
+    "strictNullChecks": true,
+    "verbatimModuleSyntax": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/", "scripts/"]
+}
