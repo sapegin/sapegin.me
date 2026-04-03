@@ -1,4 +1,3 @@
-import fs from 'node:fs';
 import path from 'node:path';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
@@ -12,15 +11,7 @@ import remarkTips from './remark/remarkTips.js';
 
 export { astroDefineConfig as defineConfig };
 
-const getFileMtime = (filename) => {
-	try {
-		return fs.statSync(filename).mtime;
-	} catch {
-		// Ignore errors
-	}
-};
-
-export function getBaseConfig({ siteHost, getFileByUrl, rehypePlugins }) {
+export function getBaseConfig({ siteHost, rehypePlugins }) {
 	const publicDir = path.join('sites', siteHost, 'public');
 	const siteUrl = `https://${siteHost}`;
 
@@ -28,23 +19,7 @@ export function getBaseConfig({ siteHost, getFileByUrl, rehypePlugins }) {
 		site: siteUrl,
 		// Disable HTML minification to make View Source more readable
 		compressHTML: false,
-		integrations: [
-			react(),
-			sitemap({
-				serialize: (item) => {
-					const filename = getFileByUrl?.(item.url);
-					if (filename !== undefined) {
-						// Google doesn't see some pages even if they are in the
-						// sitemap. Try to add modification date to see if it helps
-						const mtime = getFileMtime(filename);
-						if (mtime) {
-							item.lastmod = mtime;
-						}
-					}
-					return item;
-				},
-			}),
-		],
+		integrations: [react(), sitemap()],
 		markdown: {
 			syntaxHighlight: false,
 			rehypePlugins: [
