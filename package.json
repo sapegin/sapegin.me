@@ -15,7 +15,8 @@
     "check:sapegin": "astro check --root ./sites/sapegin.me",
     "format": "prettier --log-level warn --write \"**/*.{js,cjs,mjs,ts,tsx,astro,css,json,md}\"",
     "test": "npm run check:sapegin && npm run lint:js && npm run lint:text",
-    "sync": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts",
+    "sync": "npm run sync:sapegin",
+    "sync:sapegin": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts",
     "posttest": "npm run format",
     "prepare": "husky"
   },
