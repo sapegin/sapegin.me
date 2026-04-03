@@ -2,6 +2,7 @@ import path from 'node:path';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import type { RehypePlugins, RemarkPlugins } from 'astro';
 import { defineConfig as astroDefineConfig } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from './rehype/rehypeSlug.js';
@@ -11,7 +12,13 @@ import remarkTips from './remark/remarkTips.js';
 
 export { astroDefineConfig as defineConfig };
 
-export function getBaseConfig({ siteHost, rehypePlugins }) {
+export function getBaseConfig({
+	siteHost,
+	rehypePlugins,
+}: {
+	siteHost: string;
+	rehypePlugins: RehypePlugins;
+}) {
 	const publicDir = path.join('sites', siteHost, 'public');
 	const siteUrl = `https://${siteHost}`;
 
@@ -40,12 +47,12 @@ export function getBaseConfig({ siteHost, rehypePlugins }) {
 					},
 				],
 				...rehypePlugins,
-			],
+			] satisfies RehypePlugins,
 			remarkPlugins: [
 				remarkTips,
 				[remarkImages, { publicDir }],
 				remarkRichtypo,
-			],
+			] satisfies RemarkPlugins,
 		},
 		vite: {
 			plugins: [tailwindcss()],
