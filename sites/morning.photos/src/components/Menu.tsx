@@ -1,10 +1,8 @@
-import { Link } from './Link';
-import { Text } from './Text';
-import { Stack } from './Stack';
+import clsx from 'clsx';
 
-type Props = {
+interface Props {
 	current: string;
-};
+}
 
 interface Item {
 	title: string;
@@ -24,10 +22,6 @@ const ITEMS: Item[] = [
 		title: 'Series',
 		href: '/series/',
 	},
-	// {
-	// 	title: 'Blog',
-	// 	href: '/blog/',
-	// },
 	{
 		title: 'Zine',
 		href: '/zine/',
@@ -45,38 +39,26 @@ function isCurrent(href: string, current: string) {
 export function Menu({ current }: Props) {
 	return (
 		<nav aria-label="Main">
-			<Stack
-				as="ul"
-				direction="row"
-				columnGap="m"
-				rowGap={{ tablet: 'm' }}
-				flexWrap="wrap"
-				justifyItems="center"
-				justifyContent="center"
+			<ul
+				className="
+      flex flex-wrap content-center items-center gap-x-4
+      md:gap-y-4
+    "
 			>
 				{ITEMS.map(({ title, href }) => (
-					<Text key={href} as="li" variant="menu">
-						<Link
+					<li className="typo-menu" key={href}>
+						<a
 							href={href}
-							css={{
-								whiteSpace: 'nowrap',
-								// HACK: Increase specificity to override Link styles (Astro production
-								// build imports CSS in a different order)
-								'&&': {
-									textDecoration: isCurrent(href, current)
-										? 'underline'
-										: 'none',
-								},
-								_hover: {
-									textDecoration: 'underline',
-								},
-							}}
+							className={clsx(
+								'link text-nowrap',
+								isCurrent(href, current) ? 'underline' : 'no-underline'
+							)}
 						>
 							{title}
-						</Link>
-					</Text>
+						</a>
+					</li>
 				))}
-			</Stack>
+			</ul>
 		</nav>
 	);
 }

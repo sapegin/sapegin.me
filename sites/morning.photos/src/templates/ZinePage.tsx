@@ -1,16 +1,9 @@
 import type { CollectionEntry } from 'astro:content';
+import { Markdown } from '../../../../shared/components/Markdown';
+import { Typo } from '../../../../shared/components/Typo';
+import { Video } from '../../../../shared/components/Video';
 import { BookCover } from '../components/BookCover';
-import { Box } from '../components/Box';
-import { Button } from '../components/Button';
-import { Expander } from '../components/Expander';
-import { Heading } from '../components/Heading';
-import { Markdown } from '../components/Markdown';
-import { Stack } from '../components/Stack';
 import { Support } from '../components/Support';
-import { Text } from '../components/Text';
-import { TextContent } from '../components/TextContent';
-import { TextTypo } from '../components/TextTypo';
-import { Video } from '../components/Video';
 import { PageWithTitle } from './PageWithTitle';
 
 type Issue = CollectionEntry<'zines'>;
@@ -24,52 +17,58 @@ interface Props {
 export function ZinePage({ url, title, issues }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
-			<Stack gap="l">
-				<TextTypo variant="intro">
-					This is a zine with my photos that I publish to share my work and
-					reflect on my photography, kind of a better Instagram. I’m planning to
-					publish a new issue about once a year, each dedicated to a particular
-					theme.
-				</TextTypo>
+			<div className="flex flex-col gap-8">
+				<p className="typo-intro">
+					<Typo>
+						This is a zine with my photos that I publish to share my work and
+						reflect on my photography, kind of a better Instagram. I’m planning
+						to publish a new issue about once a year, each dedicated to a
+						particular theme.
+					</Typo>
+				</p>
 				{issues.map(({ id, data: issue }) => {
 					return (
-						<Stack key={id} as="article" gap="m">
-							<h2 className="typo-">{issue.title}</h2>
-							<Stack direction={{ base: 'column', tablet: 'row' }} gap="l">
-								<Stack gap="m">
-									<TextContent>
+						<article key={id} className="flex flex-col gap-4">
+							<h2 className="heading-2">{issue.title}</h2>
+							<div
+								className="
+          flex flex-col gap-8
+          md:flex-row
+        "
+							>
+								<div className="flex flex-col gap-4">
+									<div className="prose">
 										<Markdown text={issue.description} forceBlock />
 										<Markdown text={issue.meta} forceBlock />
-									</TextContent>
+									</div>
 									{issue.price && issue.available ? (
-										<Button
-											as="a"
+										<a
+											className="button"
 											href={issue.shop}
 											target="_blank"
 											rel="noopener"
 										>
 											Buy now!
-											<Text
-												as="span"
-												px="s"
-												verticalAlign="middle"
-												fontSize="s"
-												color="inherit"
+											<span
+												className="px-2 align-middle typo-body text-xs text-inherit"
+												aria-hidden="true"
 											>
 												■
-											</Text>{' '}
+											</span>{' '}
 											{issue.price} (excluding shipping)
-										</Button>
+										</a>
 									) : (
-										<Text variant="bold">Sold out</Text>
+										<p className="typo-body font-bold">Sold out</p>
 									)}
-									<Expander>
+									<div className="expander">
 										<Video src={issue.video} />
-									</Expander>
-								</Stack>
-								<Box
-									mx={{ base: 'auto', tablet: 0 }}
-									order={{ base: -1, tablet: 0 }}
+									</div>
+								</div>
+								<div
+									className="
+           -order-1 mx-auto
+           md:order-0 md:mx-0
+         "
 								>
 									<BookCover
 										title={issue.title}
@@ -77,13 +76,13 @@ export function ZinePage({ url, title, issues }: Props) {
 										width={320}
 										height={450}
 									/>
-								</Box>
-							</Stack>
-						</Stack>
+								</div>
+							</div>
+						</article>
 					);
 				})}
 				<Support />
-			</Stack>
+			</div>
 		</PageWithTitle>
 	);
 }

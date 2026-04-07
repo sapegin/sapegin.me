@@ -1,42 +1,48 @@
 import { FullWidth } from '../components/FullWidth';
-import { PageWithTitle } from './PageWithTitle';
-import { Heading } from '../components/Heading';
-import { QuotedLink } from '../components/QuotedLink';
-import type { Photo } from '../types/Photo';
-import { Grid } from '../components/Grid';
 import { Thumbnail } from '../components/Thumbnail';
-import { Frame } from '../components/Frame';
+import type { Photo } from '../types/Photo';
+import { PageWithTitle } from './PageWithTitle';
 
-export type AlbumTeaser = {
+export interface AlbumTeaser {
 	url: string;
 	title: string;
 	cover?: Photo;
-};
+}
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	albums: AlbumTeaser[];
-};
+}
 
 export function AlbumsPage({ url, title, albums }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
 			<FullWidth>
-				<Grid auto="wide" columnGap="l" rowGap={{ base: 'l', desktop: 'xl' }}>
+				<div
+					className="
+       grid-auto-wide grid gap-8
+       md:gap-y-16
+     "
+				>
 					{albums.map((album) => (
-						<QuotedLink key={album.url} mb="l" href={album.url}>
+						<a key={album.url} href={album.url} className="mb-8 quoted-link">
 							{album.cover && (
-								<Frame aspectRatio="9/6">
+								<div className="aspect-9/6 frame">
 									<Thumbnail photo={album.cover} />
-								</Frame>
+								</div>
 							)}
-							<Heading level={3} as="h2" mt="s" mx={{ base: 'm', desktop: 0 }}>
+							<h2
+								className="
+          mx-2 mt-2 heading-3
+          md:mx-0
+        "
+							>
 								<u>{album.title}</u>
-							</Heading>
-						</QuotedLink>
+							</h2>
+						</a>
 					))}
-				</Grid>
+				</div>
 			</FullWidth>
 		</PageWithTitle>
 	);

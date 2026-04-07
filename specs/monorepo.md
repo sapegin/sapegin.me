@@ -465,7 +465,8 @@ Benefits:
 ## 14. Future improvements
 
 1. Define fonts using Astro fonts config: https://docs.astro.build/en/guides/fonts/
-2. Look if we can optimize performance a bit.
+2. Remove some dependencies such as Lodash.
+3. Look if we can optimize performance a bit.
 
 ---
 

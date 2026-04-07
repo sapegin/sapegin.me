@@ -1,6 +1,6 @@
 import type { Html, Root, Text } from 'mdast';
 import { visit } from 'unist-util-visit';
-import typo from '../typo';
+import typo from '../util/typo';
 
 /*
  * Enhance typography.

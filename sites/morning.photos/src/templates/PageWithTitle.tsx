@@ -1,24 +1,19 @@
 import type { ReactNode } from 'react';
-import { Box } from '../components/Box';
-import { Heading } from '../components/Heading';
-import { Stack } from '../components/Stack';
 import { Page } from './Page';
 
-type Props = {
+interface Props {
 	children: ReactNode;
 	url: string;
 	title: string;
-};
+}
 
 export function PageWithTitle({ url, title, children }: Props) {
 	return (
 		<Page url={url}>
-			<Stack gap="l">
-				<Heading level={1} maxWidth="textMaxWidth">
-					{title}
-				</Heading>
-				<Box>{children}</Box>
-			</Stack>
+			<div className="flex flex-col gap-8">
+				<h1 className="max-w-text-max-width heading-1">{title}</h1>
+				<div>{children}</div>
+			</div>
 		</Page>
 	);
 }

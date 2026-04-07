@@ -1,3 +1,5 @@
+// TODO: Should this be a Tailwind utility on <hr> element?
+
 export function InlineSeparator() {
 	return (
 		<span

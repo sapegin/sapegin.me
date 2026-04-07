@@ -1,7 +1,6 @@
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { defineCollection } from 'astro:content';
-import type { Album } from './types/Album';
 import type { Photo } from './types/Photo';
 
 // Photos
@@ -33,7 +32,7 @@ const series = defineCollection({
 		keyword: z.string(),
 		cover: z.string(),
 		position: z.number(),
-	}) satisfies z.ZodType<Album>,
+	}),
 });
 
 // Zines

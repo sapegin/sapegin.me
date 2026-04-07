@@ -1,5 +1,5 @@
 import MarkdownToJsx, { type MarkdownToJSX } from 'markdown-to-jsx';
-import typo from '../../../../shared/typo';
+import typo from '../util/typo';
 
 interface Props {
 	text: string;
@@ -7,6 +7,9 @@ interface Props {
 	forceBlock?: boolean;
 }
 
+/**
+ * Renders Markdown with enhanced typography.
+ */
 export function Markdown({ text, overrides = {}, forceBlock = false }: Props) {
 	const textTypo = typo(text);
 	return (

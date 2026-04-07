@@ -1,3 +1,5 @@
+// TODO: Can we get this type from Zod config?
+
 export interface Photo {
 	name: string;
 	title: string;

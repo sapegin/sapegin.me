@@ -45,7 +45,7 @@
 	--font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
 	/* Font sizes */
-	--text-root: 1rem;
+	--text-root: 1.125em;
 	--text-xs: 0.75rem;
 	--text-sm: 0.9rem;
 	--text-base: 1rem;

@@ -1,13 +1,13 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
+import { Markdown } from '../../../../shared/components/Markdown';
+import { Typo } from '../../../../shared/components/Typo';
 import { campaigns } from '../campaigns';
 import { About } from '../components/About';
 import { BookCover } from '../components/BookCover';
 import { FeatureList, FeatureListItem } from '../components/FeatureList';
 import { Feedback } from '../components/Feedback';
-import { Markdown } from '../components/Markdown';
 import { MurderOfCrows } from '../components/MurderOfCrows';
-import { Typo } from '../components/Typo';
 import type { Chapter } from '../types/Chapter';
 import { Page } from './Page';
 

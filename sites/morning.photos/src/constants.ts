@@ -1,3 +1,5 @@
+// TODO: Most of this can be generalized, potentially converted to JSON?
+
 export const SITE_HOST = 'morning.photos';
 export const SITE_URL = `https://${SITE_HOST}`;
 export const SITE_AUTHOR = 'Artem Sapegin';

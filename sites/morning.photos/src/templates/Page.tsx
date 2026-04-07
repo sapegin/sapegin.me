@@ -1,26 +1,24 @@
 import type { ReactNode } from 'react';
-import { Box } from '../components/Box';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
-import { Stack } from '../components/Stack';
 
-type Props = {
+interface Props {
 	children: ReactNode;
 	url: string;
-};
+}
 
 export function Page({ children, url }: Props) {
 	return (
-		<Box maxWidth="52rem" mx="auto" px="contentPaddingX" py="m">
-			<Stack gap="xl">
-				<Stack gap="l">
+		<div className="mx-auto max-w-208 p-4">
+			<div className="flex flex-col gap-16">
+				<div className="flex flex-col gap-8">
 					<Header url={url} />
-					<Stack as="main" gap="l" id="content">
+					<main className="flex flex-col gap-8" id="content">
 						{children}
-					</Stack>
-				</Stack>
+					</main>
+				</div>
 				<Footer />
-			</Stack>
-		</Box>
+			</div>
+		</div>
 	);
 }

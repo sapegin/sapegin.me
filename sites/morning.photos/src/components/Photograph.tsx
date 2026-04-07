@@ -1,4 +1,3 @@
-import { css } from '../../styled-system/css';
 import type { Photo } from '../types/Photo';
 import { getPhotoUrl } from '../util/getPhotoUrl';
 
@@ -17,15 +16,10 @@ export function Photograph({ photo, id }: { photo: Photo; id?: string }) {
 			height={photo.height}
 			alt={photo.title ? `${photo.title} (${photo.location})` : photo.location}
 			loading="lazy"
-			className={css({
-				width: 'auto',
-				height: 'auto',
-				maxWidth: '100%',
-				maxHeight: {
-					base: 'min(900px, 100vh)',
-					tablet: 'min(900px, calc(100vh - (token(spacing.m) * 2)))',
-				},
-			})}
+			className="
+     size-auto max-h-[min(900px,100vh)] max-w-full
+     md:max-h-[min(900px,calc(100vh-2rem))]
+   "
 			style={{
 				backgroundColor: photo.color,
 			}}

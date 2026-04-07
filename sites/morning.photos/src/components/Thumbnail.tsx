@@ -1,4 +1,3 @@
-import { css } from '../../styled-system/css';
 import type { Photo } from '../types/Photo';
 import { getPhotoUrl, type PhotoSize } from '../util/getPhotoUrl';
 
@@ -24,10 +23,7 @@ export function Thumbnail({
 			height={photo.height}
 			alt={alt ?? ''}
 			loading="lazy"
-			className={css({
-				width: '100%',
-				height: 'auto',
-			})}
+			className="h-auto w-full"
 			style={{ backgroundColor: photo.color }}
 		/>
 	);

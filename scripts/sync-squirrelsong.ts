@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Get themes from the Squirrelsong repo
 // Create pages with instructions for each theme
 

@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef } from 'react';
-import { Typo } from './Typo';
+import { Typo } from '../../../../shared/components/Typo';
 
 // HACK: I had to hardcoded colors to support dark mode because currentColor or
 // CSS properties don’t work in background SVGs. Also Panda’s css prop explodes

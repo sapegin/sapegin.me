@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
+import { Typo } from '../../../../shared/components/Typo';
 import { Group } from '../../../../shared/packages/tamia/components/Group';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
 import { InlineList, InlineListItem } from '../components/InlineList';
 import { MurderOfCrows } from '../components/MurderOfCrows';
-import { Typo } from '../components/Typo';
 import type { Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
 

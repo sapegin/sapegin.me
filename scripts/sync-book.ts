@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Get Markdown from the Washing code book repo
 
 // TODO: Make a map of all sections with an ID and validate all chapter links

@@ -28,7 +28,7 @@ export function getBaseConfig({
 		compressHTML: false,
 		integrations: [react(), sitemap()],
 		markdown: {
-			syntaxHighlight: false,
+			syntaxHighlight: false as const,
 			rehypePlugins: [
 				rehypeSlug,
 				[

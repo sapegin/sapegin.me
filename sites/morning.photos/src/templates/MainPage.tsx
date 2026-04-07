@@ -1,26 +1,17 @@
-import { VisuallyHidden } from '../components/VisuallyHidden';
-import { Box } from '../components/Box';
-import { Expander } from '../components/Expander';
-import { Frame } from '../components/Frame';
-import { Grid } from '../components/Grid';
-import { Image } from '../components/Image';
-import { Link } from '../components/Link';
-import { Markdown } from '../components/Markdown';
-import { Stack } from '../components/Stack';
-import { TextContent } from '../components/TextContent';
+import { Markdown } from '../../../../shared/components/Markdown';
+import { Support } from '../components/Support';
 import { Thumbnail } from '../components/Thumbnail';
 import type { Photo } from '../types/Photo';
 import type { Resource } from '../types/Resource';
 import { Page } from './Page';
-import { Support } from '../components/Support';
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	text: string;
 	photos: Photo[];
 	links: Resource[][];
-};
+}
 
 function findPhoto(photos: Photo[], name: string) {
 	return photos.find((x) => x.name === name);
@@ -31,13 +22,14 @@ function Links({ links }: Pick<Props, 'links'>) {
 		<ul>
 			{links.map((group) =>
 				group.map(({ url, title }, index) => (
-					<Box
+					<li
+						className={index === group.length - 1 ? 'mb-4' : undefined}
 						key={url}
-						as="li"
-						mb={index === group.length - 1 ? 'm' : undefined}
 					>
-						<Link href={url}>{title}</Link>
-					</Box>
+						<a href={url} className="link">
+							{title}
+						</a>
+					</li>
 				))
 			)}
 		</ul>
@@ -50,49 +42,54 @@ function Photos({ photos }: Pick<Props, 'photos'>) {
 	const photo3 = findPhoto(photos, '2021-02-07_8254_Artem_Sapegin');
 	const photo4 = findPhoto(photos, '2021-07-30_4525_Artem_Sapegin');
 	return (
-		<Stack as="section" gap="m">
+		<section className="flex flex-col gap-4">
 			{photo1 && (
-				<Expander>
-					<Link href={`/photos/#${photo1.name}`} display="block">
+				<div className="expander">
+					<a className="block link" href={`/photos/#${photo1.name}`}>
 						<Thumbnail
 							photo={photo1}
 							size="full"
 							alt="Saxon Switzerland forest, Germany"
 						/>
-					</Link>
-				</Expander>
+					</a>
+				</div>
 			)}
-			<Expander>
-				<Grid gap="m" auto="narrow">
+			<div className="expander">
+				<div className="grid-auto-narrow grid gap-4">
 					{photo2 && (
-						<Link href={`/photos/#${photo2.name}`} display="block">
-							<Frame aspectRatio="65/90">
+						<a className="block link" href={`/photos/#${photo2.name}`}>
+							<div className="aspect-65/90 frame">
 								<Thumbnail photo={photo2} alt="Dawn in Berlin, Germany" />
-							</Frame>
-						</Link>
+							</div>
+						</a>
 					)}
-					<Box display={{ base: 'none', tablet: 'block' }}>
+					<div
+						className="
+        hidden
+        md:block
+      "
+					>
 						{photo3 && (
-							<Link href={`/photos/#${photo3.name}`} display="block">
-								<Frame aspectRatio="65/90">
+							<a className="block link" href={`/photos/#${photo3.name}`}>
+								<div className="aspect-65/90 frame">
 									<Thumbnail
 										photo={photo3}
 										alt="Snowstorm in Berlin, Germany"
 									/>
-								</Frame>
-							</Link>
+								</div>
+							</a>
 						)}
-					</Box>
+					</div>
 					{photo4 && (
-						<Link href={`/photos/#${photo4.name}`} display="block">
-							<Frame aspectRatio="65/90">
+						<a className="block link" href={`/photos/#${photo4.name}`}>
+							<div className="aspect-65/90 frame">
 								<Thumbnail photo={photo4} alt="Sunrise in Rome, Italy" />
-							</Frame>
-						</Link>
+							</div>
+						</a>
 					)}
-				</Grid>
-			</Expander>
-		</Stack>
+				</div>
+			</div>
+		</section>
 	);
 }
 
@@ -102,122 +99,146 @@ function Photos2({ photos }: Pick<Props, 'photos'>) {
 	const photo3 = findPhoto(photos, 'IMG_8108');
 	const photo4 = findPhoto(photos, '2023-12-30_1325_Artem_Sapegin');
 	return (
-		<Stack as="section" gap="m">
+		<section className="flex flex-col gap-4">
 			<Me />
 			{photo4 && (
-				<Expander>
-					<Link href={`/photos/#${photo4.name}`} display="block">
+				<div className="expander">
+					<a className="block link" href={`/photos/#${photo4.name}`}>
 						<Thumbnail
 							photo={photo4}
 							size="full"
 							alt="Mall near Valencia, Spain"
 						/>
-					</Link>
-				</Expander>
+					</a>
+				</div>
 			)}
-			<Expander>
-				<Grid gap="m" auto="narrow">
+			<div className="expander">
+				<div className="grid-auto-narrow grid gap-4">
 					{photo1 && (
-						<Link href={`/series/gol/#${photo1.name}`} display="block">
-							<Frame aspectRatio="65/90">
+						<a className="block link" href={`/series/gol/#${photo1.name}`}>
+							<div className="aspect-65/90 frame">
 								<Thumbnail
 									photo={photo1}
 									alt="View from the top floor of Pressehaus, Berlin, Germany"
 								/>
-							</Frame>
-						</Link>
+							</div>
+						</a>
 					)}
-					<Box display={{ base: 'none', tablet: 'block' }}>
+					<div
+						className="
+        hidden
+        md:block
+      "
+					>
 						{photo2 && (
-							<Link href={`/series/moire/#${photo2.name}`} display="block">
-								<Frame aspectRatio="65/90">
+							<a className="block link" href={`/series/moire/#${photo2.name}`}>
+								<div className="aspect-65/90 frame">
 									<Thumbnail
 										photo={photo2}
 										alt="Peeled advertisement posters, Berlin, Germany"
 									/>
-								</Frame>
-							</Link>
+								</div>
+							</a>
 						)}
-					</Box>
+					</div>
 					{photo3 && (
-						<Link href={`/series/sfop/#${photo3.name}`} display="block">
-							<Frame aspectRatio="65/90">
+						<a className="block link" href={`/series/sfop/#${photo3.name}`}>
+							<div className="aspect-65/90 frame">
 								<Thumbnail
 									photo={photo3}
 									alt="Birds chasing an airplane, Berlin, Germany"
 								/>
-							</Frame>
-						</Link>
+							</div>
+						</a>
 					)}
-				</Grid>
-			</Expander>
-		</Stack>
+				</div>
+			</div>
+		</section>
 	);
 }
 
 function Me() {
 	return (
-		<Expander>
-			<Grid gap="m" auto="narrow">
-				<Image
+		<div className="expander">
+			<div className="grid-auto-narrow grid gap-4">
+				<img
+					className="image bg-[#69716e]"
 					src="/images/about/me-1.avif"
-					alt="Artem Sapegin is making a photo with a toy camera"
+					alt="Artem Sapegin is making photos with a toy camera"
 					width={700}
 					height={700}
-					style={{ backgroundColor: '#69716e' }}
 				/>
-				<Box display={{ base: 'none', tablet: 'block' }}>
-					<Image
+				<div
+					className="
+       hidden
+       md:block
+     "
+				>
+					<img
+						className="image bg-[#978b7f]"
 						src="/images/about/me-2.avif"
-						alt="Artem Sapegin is making a photo with a phone"
+						alt="Artem Sapegin is making photos with a phone"
 						width={700}
 						height={700}
-						style={{ backgroundColor: '#978b7f' }}
 					/>
-				</Box>
-				<Image
+				</div>
+				<img
+					className="image bg-[#615c45]"
 					src="/images/about/me-3.avif"
-					alt="Artem Sapegin is making a photo in a forest"
+					alt="Artem Sapegin is making photos in a forest"
 					width={700}
 					height={700}
-					style={{ backgroundColor: '#615c45' }}
 				/>
-			</Grid>
-		</Expander>
+			</div>
+		</div>
 	);
 }
 
 export function MainPage({ url, title, text, photos, links }: Props) {
 	return (
 		<Page url={url}>
-			<Stack gap="xl">
-				<VisuallyHidden as="h1">{title}</VisuallyHidden>
+			<div className="flex flex-col gap-16">
+				<h1 className="sr-only">{title}</h1>
 				<Photos photos={photos} />
-				<Stack gap="l">
-					<Grid
-						gridColumnGap="l"
-						gridTemplateColumns={{ base: '1fr', desktop: '2fr 1fr' }}
+				<div className="flex flex-col gap-8">
+					<div
+						className="
+        grid grid-cols-1 gap-x-8
+        md:grid-cols-[2fr_1fr]
+      "
 					>
-						<TextContent>
+						<div className="prose">
 							<Markdown text={text} />
-						</TextContent>
+						</div>
 						<Links links={links} />
-					</Grid>
+					</div>
 					<Photos2 photos={photos} />
-					<TextContent>
-						Have a look at my <Link href="/photos/">photo portfolio</Link>,{' '}
-						<Link href="/photos/">series</Link>,{' '}
-						<Link href="/photos/">my photography zine</Link>. Subscribe to{' '}
-						<Link href="https://lofisunshine.substack.com/">my Substack</Link>{' '}
+					<div className="prose">
+						Have a look at my{' '}
+						<a className="link" href="/photos/">
+							photo portfolio
+						</a>
+						,{' '}
+						<a className="link" href="/photos/">
+							series
+						</a>
+						,{' '}
+						<a className="link" href="/photos/">
+							my photography zine
+						</a>
+						. Subscribe to{' '}
+						<a className="link" href="https://lofisunshine.substack.com/">
+							my Substack
+						</a>{' '}
 						or{' '}
-						<Link href="https://buymeacoffee.com/sapegin">
+						<a className="link" href="https://buymeacoffee.com/sapegin">
 							buy me a cup of coffee
-						</Link>
+						</a>
 						.
-					</TextContent>
+					</div>
 					<Support />
-				</Stack>
-			</Stack>
+				</div>
+			</div>
 		</Page>
 	);
 }

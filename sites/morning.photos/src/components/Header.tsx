@@ -1,42 +1,31 @@
-import { Box } from './Box';
 import { Logo } from './Logo';
 import { Menu } from './Menu';
-import { Stack } from './Stack';
 
-type Props = {
+interface Props {
 	url: string;
-};
+}
 
 export function Header({ url }: Props) {
 	return (
-		<Box as="header">
-			<Box
-				as="a"
+		<header>
+			<a
 				href="#content"
-				css={{
-					position: 'absolute',
-					top: '-100%',
-					padding: 'm',
-					backgroundColor: 'text',
-					color: 'background',
-					textDecoration: 'none',
-					_focus: {
-						top: 0,
-						outline: 0,
-					},
-				}}
+				className="
+      absolute -top-full bg-text p-4 text-background no-underline
+      focus:top-0 focus:outline-0
+    "
 			>
 				Skip to content
-			</Box>
-			<Stack
-				direction={{ base: 'column', tablet: 'row' }}
-				justifyContent="space-between"
-				alignItems="center"
-				gap="s"
+			</a>
+			<div
+				className="
+      flex flex-col items-center justify-between gap-2
+      md:flex-row
+    "
 			>
 				<Logo />
 				<Menu current={url} />
-			</Stack>
-		</Box>
+			</div>
+		</header>
 	);
 }

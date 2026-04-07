@@ -1,20 +1,17 @@
 import _ from 'lodash';
+import { Markdown } from '../../../../shared/components/Markdown';
 import { FullWidth } from '../components/FullWidth';
 import { Photograph } from '../components/Photograph';
-import { Stack } from '../components/Stack';
+import { Support } from '../components/Support';
 import { type Photo } from '../types/Photo';
 import { PageWithTitle } from './PageWithTitle';
-import { Markdown } from '../components/Markdown';
-import { TextContent } from '../components/TextContent';
-import { Grid } from '../components/Grid';
-import { Support } from '../components/Support';
 
-type Props = {
+interface Props {
 	url: string;
 	title: string;
 	description?: string;
 	photos: Photo[];
-};
+}
 
 export function AlbumPage({ url, title, description, photos }: Props) {
 	// Group by aspect ratio, but keep all horizontal photos in a single group
@@ -35,34 +32,33 @@ export function AlbumPage({ url, title, description, photos }: Props) {
 
 	return (
 		<PageWithTitle url={url} title={title}>
-			<Stack gap={{ base: 'l', desktop: 'xl' }}>
+			<div
+				className="
+      flex flex-col gap-8
+      md:gap-16
+    "
+			>
 				{description && (
-					<TextContent>
+					<div className="prose">
 						<Markdown text={description} forceBlock />
-					</TextContent>
+					</div>
 				)}
 				<FullWidth>
-					<Stack gap={{ base: 'xl', desktop: 'xxl' }}>
+					<div
+						className="
+        flex flex-col gap-16
+        md:gap-32
+      "
+					>
 						{sortedPhotos.map((pair) => (
-							<Grid
+							<div
 								key={pair[0].name}
 								id={pair[0].name}
-								rowGap="xl"
-								columnGap="m"
-								alignItems="center"
-								justifyItems="center"
-								gridTemplateColumns={{
-									base: '1fr',
-									tablet: 'repeat(auto-fit, minmax(320px,1fr))',
-								}}
-								height={{
-									base: 'auto',
-									tablet: 'min(900px, calc(100vh - (token(spacing.m) * 2)))',
-								}}
-								margin={{
-									base: 0,
-									tablet: 'm',
-								}}
+								className="
+          grid grid-cols-1 items-center justify-items-center gap-x-4 gap-y-16
+          md:m-4 md:h-[min(900px,calc(100vh-2rem))]
+          md:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
+        "
 							>
 								{pair.map((photo, index) => (
 									<Photograph
@@ -71,12 +67,12 @@ export function AlbumPage({ url, title, description, photos }: Props) {
 										photo={photo}
 									/>
 								))}
-							</Grid>
+							</div>
 						))}
-					</Stack>
+					</div>
 				</FullWidth>
 				<Support />
-			</Stack>
+			</div>
 		</PageWithTitle>
 	);
 }

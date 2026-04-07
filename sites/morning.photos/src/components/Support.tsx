@@ -1,15 +1,13 @@
-import { Stack } from './Stack';
+import { BuyMeCoffee } from '../components/BuyMeCoffee';
 import { SubscriptionForm } from './SubscriptionForm';
-import { VisuallyHidden } from './VisuallyHidden';
-import { BuyMeCoffee } from './BuyMeCoffee';
 
 export function Support() {
 	return (
-		<Stack as="aside" gap="m" aria-label="Newsletter & support">
-			<VisuallyHidden as="h2">Join the newsletter</VisuallyHidden>
+		<aside className="flex flex-col gap-4" aria-label="Newsletter & support">
+			<h2 className="sr-only">Join the newsletter</h2>
 			<SubscriptionForm />
-			<VisuallyHidden as="h2">Support my work</VisuallyHidden>
+			<h2 className="sr-only">Support my work</h2>
 			<BuyMeCoffee />
-		</Stack>
+		</aside>
 	);
 }

@@ -4,11 +4,11 @@
 @import '../../../../shared/packages/tamia/components/prose.css';
 @import '../../../../shared/packages/tamia/components/link.css';
 @import '../../../../shared/packages/tamia/components/quoted-link.css';
+@import '../../../../shared/styles/components/book.css';
 
 @import './theme.css';
 @import './global.css';
 @import './fonts.css';
-@import './components/book.css';
 @import './components/button.css';
 @import './components/post-content.css';
 @import './components/typography.css';

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Reads all photos from iCloud Photos folder, converts them to AVIF, and
 // creates JSON files with metadata for Astro collections
 
@@ -6,14 +8,14 @@ import os from 'node:os';
 import path from 'node:path';
 import ExifReader from 'exifreader';
 import sharp from 'sharp';
-import type { Photo } from '../src/types/Photo';
+import type { Photo } from '../sites/morning.photos/src/types/Photo';
 
 const PHOTO_DIR = path.join(
 	os.homedir(),
 	'Library/Mobile Documents/com~apple~CloudDocs/Pictures/photos'
 );
-const DEST_DIR = 'src/content/photos';
-const PUBLIC_PHOTO_DIR = 'public/photos';
+const DEST_DIR = 'content/photos';
+const PUBLIC_PHOTO_DIR = 'sites/morning.photos/public/photos';
 const AVIF_QUALITY = 80;
 const AVIF_QUALITY_STEP = 10;
 const AVIF_MIN_QUALITY = 40;
@@ -38,7 +40,10 @@ function readImage(filepath: string) {
 function readMetadata(slug: string): Photo | undefined {
 	const filepath = path.join(DEST_DIR, `${slug}.json`);
 	if (fs.existsSync(filepath)) {
-		const json = JSON.parse(fs.readFileSync(filepath).toString());
+		const json = JSON.parse(fs.readFileSync(filepath).toString()) as Photo & {
+			modified: string;
+			timestamp?: string;
+		};
 		return {
 			...json,
 			modified: new Date(Date.parse(json.modified)),
@@ -175,14 +180,14 @@ function enhanceMetadata({
 		title: exif['Object Name']?.description ?? '',
 		caption: exif['Caption/Abstract']?.description ?? '',
 		location: asList([
-			exif.Sublocation?.description,
-			exif.City?.description,
-			exif.Country?.description,
+			exif.Sublocation.description,
+			exif.City.description,
+			exif.Country.description,
 		]),
 		keywords: Array.isArray(exif.Keywords)
 			? exif.Keywords.map((x) => x.description)
 			: [],
-		rating: exif.Rating?.value ? Number(exif.Rating?.value) : 0,
+		rating: exif.Rating.value ? Number(exif.Rating.value) : 0,
 	};
 }
 
@@ -218,8 +223,7 @@ for (const filepath of photoFiles) {
 	const buffer = readImage(filepath);
 
 	const sharpMeta = await sharp(buffer).metadata();
-	const width = sharpMeta.width ?? 0;
-	const height = sharpMeta.height ?? 0;
+	const { width, height } = sharpMeta;
 
 	const exif = ExifReader.load(buffer);
 

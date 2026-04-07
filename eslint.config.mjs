@@ -13,10 +13,28 @@ export default [
 	jsxAccessibility.flatConfigs.strict,
 	{
 		...eslintPluginBetterTailwindcss.configs.recommended,
+		files: ['sites/sapegin.me/**/*.{ts,tsx,astro}'],
 		settings: {
 			'better-tailwindcss': {
-				// TODO: We should move this to each site's config or limit using files[]
 				entryPoint: 'sites/sapegin.me/src/styles/index.css',
+			},
+		},
+	},
+	{
+		...eslintPluginBetterTailwindcss.configs.recommended,
+		files: ['sites/morning.photos/**/*.{ts,tsx,astro}'],
+		settings: {
+			'better-tailwindcss': {
+				entryPoint: 'sites/morning.photos/src/styles/index.css',
+			},
+		},
+	},
+	{
+		...eslintPluginBetterTailwindcss.configs.recommended,
+		files: ['shared/**/*.{ts,tsx}'],
+		settings: {
+			'better-tailwindcss': {
+				entryPoint: 'shared/styles/index.css',
 			},
 		},
 	},

@@ -1,3 +1,4 @@
+import { Typo } from '../../../../shared/components/Typo';
 import { About } from '../components/About';
 import { Badge } from '../components/Badge';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
@@ -6,7 +7,6 @@ import { CodeSpreadSupreme } from '../components/CodeSpreadSupreme';
 import { Feedback } from '../components/Feedback';
 import { MurderOfCrows } from '../components/MurderOfCrows';
 import { SquirrelsongLogo } from '../components/SquirrelsongLogo';
-import { Typo } from '../components/Typo';
 import type { Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
 

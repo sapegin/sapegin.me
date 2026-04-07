@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@import '../../shared/packages/tamia/components/button.css';
+@import '../../shared/packages/tamia/index.css';
+
+@import './components/book.css';
