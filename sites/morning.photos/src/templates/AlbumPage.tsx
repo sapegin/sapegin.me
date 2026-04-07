@@ -1,5 +1,5 @@
+import { Markdown } from '@shared/components/Markdown';
 import _ from 'lodash';
-import { Markdown } from '../../../../shared/components/Markdown';
 import { FullWidth } from '../components/FullWidth';
 import { Photograph } from '../components/Photograph';
 import { Support } from '../components/Support';

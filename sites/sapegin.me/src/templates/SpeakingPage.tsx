@@ -1,4 +1,4 @@
-import { Typo } from '../../../../shared/components/Typo';
+import { Typo } from '@shared/components/Typo';
 import { EventList } from '../components/EventList';
 import type { Gig } from '../types/Gig';
 import { PageWithTitle } from './PageWithTitle';

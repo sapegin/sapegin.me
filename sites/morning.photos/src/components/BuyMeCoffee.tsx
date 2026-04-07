@@ -1,4 +1,4 @@
-import { IconCoffee } from '../../../../shared/components/IconCoffee';
+import { IconCoffee } from '@shared/components/IconCoffee';
 
 export function BuyMeCoffee() {
 	return (

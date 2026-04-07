@@ -1,4 +1,4 @@
-import { Typo } from '../../../../shared/components/Typo';
+import { Typo } from '@shared/components/Typo';
 import { Page } from './Page';
 
 interface Props {

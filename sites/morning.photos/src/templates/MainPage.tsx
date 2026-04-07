@@ -1,4 +1,4 @@
-import { Markdown } from '../../../../shared/components/Markdown';
+import { Markdown } from '@shared/components/Markdown';
 import { Support } from '../components/Support';
 import { Thumbnail } from '../components/Thumbnail';
 import type { Photo } from '../types/Photo';

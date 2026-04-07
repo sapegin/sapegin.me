@@ -5,7 +5,12 @@
     "jsx": "preserve",
     "strictNullChecks": true,
     "verbatimModuleSyntax": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["../../shared/*"],
+      "@tamia/*": ["../../shared/packages/tamia/*"]
+    }
   },
-  "include": ["src/"]
+  "include": ["src/", "../../shared/"]
 }

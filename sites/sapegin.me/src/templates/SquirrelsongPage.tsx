@@ -1,4 +1,4 @@
-import { Typo } from '../../../../shared/components/Typo';
+import { Typo } from '@shared/components/Typo';
 import { About } from '../components/About';
 import { Badge } from '../components/Badge';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';

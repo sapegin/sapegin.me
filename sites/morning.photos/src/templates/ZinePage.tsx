@@ -1,7 +1,7 @@
+import { Markdown } from '@shared/components/Markdown';
+import { Typo } from '@shared/components/Typo';
+import { Video } from '@shared/components/Video';
 import type { CollectionEntry } from 'astro:content';
-import { Markdown } from '../../../../shared/components/Markdown';
-import { Typo } from '../../../../shared/components/Typo';
-import { Video } from '../../../../shared/components/Video';
 import { BookCover } from '../components/BookCover';
 import { Support } from '../components/Support';
 import { PageWithTitle } from './PageWithTitle';

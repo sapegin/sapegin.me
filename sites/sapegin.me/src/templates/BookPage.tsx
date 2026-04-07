@@ -1,7 +1,7 @@
+import { Markdown } from '@shared/components/Markdown';
+import { Typo } from '@shared/components/Typo';
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
-import { Markdown } from '../../../../shared/components/Markdown';
-import { Typo } from '../../../../shared/components/Typo';
 import { campaigns } from '../campaigns';
 import { About } from '../components/About';
 import { BookCover } from '../components/BookCover';

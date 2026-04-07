@@ -1,5 +1,5 @@
+import { IconCoffee } from '@shared/components/IconCoffee';
 import type { ReactNode } from 'react';
-import { IconCoffee } from '../../../../shared/components/IconCoffee';
 
 interface Props {
 	children: ReactNode;

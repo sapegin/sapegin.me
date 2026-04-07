@@ -21,6 +21,7 @@ export function getBaseConfig({
 }) {
 	const publicDir = path.join('sites', siteHost, 'public');
 	const siteUrl = `https://${siteHost}`;
+	const rootDir = path.resolve(import.meta.dirname, '..');
 
 	return {
 		site: siteUrl,
@@ -56,6 +57,12 @@ export function getBaseConfig({
 		},
 		vite: {
 			plugins: [tailwindcss()],
+			resolve: {
+				alias: {
+					'@shared': path.join(rootDir, 'shared'),
+					'@tamia': path.join(rootDir, 'shared', 'packages', 'tamia'),
+				},
+			},
 		},
 		experimental: {
 			contentIntellisense: true,
