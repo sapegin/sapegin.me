@@ -20,6 +20,7 @@
 	--font-mono: monospace;
 
 	/* Text sizes */
+	--text-root: 1.125em;
 	--text-lg: 1.7rem;
 	--text-xl: 2rem;
 	--text-2xl: 2.4rem;
