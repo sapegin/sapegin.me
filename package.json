@@ -29,6 +29,7 @@
   "engines": {
     "node": ">=24"
   },
+  "packageManager": "npm@11.11.0",
   "browserslist": [
     ">1%",
     "last 1 version",
