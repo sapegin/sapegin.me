@@ -14,7 +14,7 @@ export function Photograph({ photo, id }: { photo: Photo; id?: string }) {
 			src={getPhotoUrl(photo)}
 			width={photo.width}
 			height={photo.height}
-			alt={photo.title ? `${photo.title} (${photo.location})` : photo.location}
+			alt={photo.title}
 			loading="lazy"
 			className="
      size-auto max-h-[min(900px,100vh)] max-w-full

@@ -5,7 +5,6 @@ export interface Photo {
 	title: string;
 	slug: string;
 	caption?: string;
-	location?: string;
 	modified: Date;
 	timestamp?: Date;
 	formattedDate?: string;

@@ -2,7 +2,6 @@ node_modules/
 sites/*/.astro/
 sites/*/dist/
 sites/*/public/cards/
-sites/morning.photos/public/photos/
 content/squirrels/
 washingcode-book-master/
 squirrelsong-master/

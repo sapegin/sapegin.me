@@ -307,9 +307,9 @@ function UiSample({ palette }: { palette: Palette }) {
 			>
 				linkForeground
 			</div>
-			<div className="
-     -mx-2 bg-(--active-background) px-2 text-(--active-foreground)
-   ">
+			<div
+				className="-mx-2 bg-(--active-background) px-2 text-(--active-foreground)"
+			>
 				activeForeground/activeBackground
 			</div>
 			<div className="-mx-2 bg-(--hover-background) px-2 text-(--text-foreground)">
@@ -325,9 +325,9 @@ function UiSample({ palette }: { palette: Palette }) {
 			>
 				secondaryMatchBackground
 			</div>
-			<div className="
-     -mx-2 bg-(--selection-background) px-2 text-(--text-foreground)
-   ">
+			<div
+				className="-mx-2 bg-(--selection-background) px-2 text-(--text-foreground)"
+			>
 				selectionBackground
 			</div>
 			<div

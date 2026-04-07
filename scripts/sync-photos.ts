@@ -70,14 +70,6 @@ function slugify(name: string) {
 }
 
 /**
- * Join non-empty array items with a comma:
- * ['Foo', null, 'Bar'] → 'Foo, Bar'
- */
-function asList(array: (string | undefined | null)[]) {
-	return array.filter(Boolean).join(', ');
-}
-
-/**
  * Parse EXIF date strings and convert them to integer timestamps:
  * 2025:02:13 18:25:59 → 1739467559000
  */
@@ -179,15 +171,12 @@ function enhanceMetadata({
 		formattedDate: date ? formatDate(date) : undefined,
 		title: exif['Object Name']?.description ?? '',
 		caption: exif['Caption/Abstract']?.description ?? '',
-		location: asList([
-			exif.Sublocation.description,
-			exif.City.description,
-			exif.Country.description,
-		]),
 		keywords: Array.isArray(exif.Keywords)
 			? exif.Keywords.map((x) => x.description)
 			: [],
-		rating: exif.Rating.value ? Number(exif.Rating.value) : 0,
+		// Types are wrong: exif.Rating can be undefined
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		rating: exif.Rating?.value ? Number(exif.Rating.value) : 0,
 	};
 }
 
