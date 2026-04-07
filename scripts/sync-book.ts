@@ -10,8 +10,8 @@ import path from 'node:path';
 import GithubSlugger from 'github-slugger';
 import matter from 'gray-matter';
 import _ from 'lodash';
+import { upperFirst } from '../shared/util/upperFirst.ts';
 import { SITE_URL } from '../sites/sapegin.me/src/constants.ts';
-import { upperFirst } from '../sites/sapegin.me/src/util/upperFirst.ts';
 
 interface Post {
 	title: string;
