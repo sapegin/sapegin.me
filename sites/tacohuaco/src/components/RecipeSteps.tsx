@@ -19,8 +19,8 @@ function findIngredient(
 	modifier?: string
 ) {
 	return (
-		ingredients.find((x) => x.name === name && x.modifier === modifier) ||
-		ingredients.find((x) => x.name === name) ||
+		ingredients.find((x) => x.name === name && x.modifier === modifier) ??
+		ingredients.find((x) => x.name === name) ??
 		ingredients.find((x) => x.name.endsWith(name))
 	);
 }
@@ -108,7 +108,9 @@ export function RecipeSteps({ steps, ingredients }: Props) {
 				</p>
 			)}
 			{steps.map((section, index) => {
-				if (section.steps.length === 0) {return null;}
+				if (section.steps.length === 0) {
+					return null;
+				}
 				const sectionIngredients = ingredients[index]?.ingredients.flat();
 				return (
 					<div key={section.name} className="flex flex-col gap-4">

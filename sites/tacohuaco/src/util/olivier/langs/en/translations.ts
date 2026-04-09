@@ -1,5 +1,3 @@
-import { GROUPS } from './info.ts';
-
 export const WORDS_TO_NUMBERS: Record<string, number> = {
 	zero: 0,
 	one: 1,
@@ -41,28 +39,3 @@ export const RANGE_SEPARATORS = ['-', '–', '—', 'or', 'to'];
 export const UNITLESS = ['bit', 'some'];
 export const ARTICLES = ['a', 'an'];
 export const CONNECTORS = [OF];
-export const DEFAULT_GROUP_NAME = 'Misc.';
-export const GROUP_NAMES: Record<keyof typeof GROUPS, string> = {
-	Produce: 'Produce',
-	Fruits: 'Fruits',
-	Meat: 'Meats, fish & poultry',
-	Dairy: 'Dairy & eggs',
-	Legumes: 'Legumes',
-	DriedFruits: 'Dried fruits & nuts',
-	Baking: 'Baking',
-	Oils: 'Oils & sauces',
-	Spices: 'Spices',
-};
-export const GROUP_NAMES_ORDER = [
-	'Produce',
-	'Fruits',
-	'Meat',
-	'Dairy',
-	'Legumes',
-	'Flours',
-	'DriedFruits',
-	'Baking',
-	'Oils',
-	'Spices',
-	undefined, // Misc.
-];

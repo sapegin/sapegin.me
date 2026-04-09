@@ -4,15 +4,18 @@ import { Typo } from './Typo';
 
 interface Props {
 	as?: 'p' | 'b' | 'span';
-	variant?: 'body' | 'small';
 	className?: string;
 	children: ReactNode;
 }
 
-export function TextTypo({ as: Component = 'p', variant = 'body', className, children, ...rest }: Props) {
-	const variantClass = variant === 'small' ? 'font-body text-sm leading-snug' : 'font-body text-base leading-normal';
+export function TextTypo({
+	as: Component = 'p',
+	className,
+	children,
+	...rest
+}: Props) {
 	return (
-		<Component className={clsx(variantClass, 'text-text', className)} {...rest}>
+		<Component className={clsx('text-text', className)} {...rest}>
 			<Typo>{children}</Typo>
 		</Component>
 	);

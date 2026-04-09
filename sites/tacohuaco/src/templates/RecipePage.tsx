@@ -1,9 +1,9 @@
 import { type ReactNode } from 'react';
-import { RecipeMeta } from '../components/RecipeMeta';
-import { TextContent } from '../components/TextContent';
 import { HygraphImage } from '../components/HygraphImage';
 import { Markdown } from '../components/Markdown';
 import { RecipeList } from '../components/RecipeList';
+import { RecipeMeta } from '../components/RecipeMeta';
+import { TextContent } from '../components/TextContent';
 import type { Recipe, RecipeFragment } from '../types/Recipe';
 import { Page } from './Page';
 
@@ -23,7 +23,7 @@ export function RecipePage(props: Props) {
 					<div className="flex flex-col gap-4">
 						<div className="flex flex-col gap-1">
 							<h1 className="heading-1">{title}</h1>
-							{titleEnglish && <p className="font-body italic text-text">{titleEnglish}</p>}
+							{titleEnglish && <p className="font-body text-text italic">{titleEnglish}</p>}
 						</div>
 						<RecipeMeta {...props} />
 					</div>

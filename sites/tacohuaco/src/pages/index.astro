@@ -1,44 +1,22 @@
 ---
-import countBy from 'lodash/countBy';
-import orderBy from 'lodash/orderBy';
-import intersection from 'lodash/intersection';
 import { getCollection } from 'astro:content';
+import countBy from 'lodash/countBy';
+import intersection from 'lodash/intersection';
+import orderBy from 'lodash/orderBy';
 import Layout from '../layouts/Layout.astro';
 import { MainPage } from '../templates/MainPage';
-import { recipeEntryToRecipe } from '../util/recipeEntryToRecipe';
 import type { Recipe } from '../types/Recipe';
-import { SEASONS } from '../util/olivier/regions/valencia';
-import type { Month } from '../util/olivier';
+import { recipeEntryToRecipe } from '../util/recipeEntryToRecipe';
 
 const MEAL_TAGS = ['Lunch', 'Dinner', 'Breakfast', 'Brunch'];
 
 const entries = await getCollection('recipes');
 const allRecipes = entries.map((x) => recipeEntryToRecipe(x));
 
-const CURRENT_SEASON = (new Date().getMonth() + 1) as Month;
-const NEXT_SEASON = (CURRENT_SEASON === 12 ? 1 : CURRENT_SEASON + 1) as Month;
 const NEW_RECIPES_TO_SHOW = 6;
 
 function getNewRecipes(recipes: Recipe[]): Recipe[] {
 	return orderBy(recipes, (x) => -x.createdAt).slice(0, NEW_RECIPES_TO_SHOW);
-}
-
-// Order recipes by the lengths of the seasons list:
-// recipes with shorter season first, and discard foundational recipes
-function getRecipesInSeason(recipes: Recipe[], seasonMonth: Month): Recipe[] {
-	return orderBy(
-		recipes
-			.filter((x) => x.seasons.includes(seasonMonth))
-			.filter((x) => x.tags.includes('Foundation') === false),
-		(x) => x.seasons.length
-	);
-}
-
-function getIngredientsInSeason(seasonMonth: Month) {
-	const inSeason = Object.entries(SEASONS).filter(([, months]) =>
-		months.includes(seasonMonth)
-	);
-	return inSeason.map(([ingredient]) => ingredient);
 }
 
 // Recipes under 30 minutes
@@ -48,13 +26,6 @@ function getQuickRecipes(recipes: Recipe[]) {
 			.filter((x) => (x.time ?? Infinity) <= 30)
 			.filter((x) => intersection(x.tags, MEAL_TAGS).length > 0),
 		(x) => x.time
-	);
-}
-
-function getFavoriteRecipes(recipes: Recipe[]) {
-	return orderBy(
-		recipes.filter((x) => x.favorite),
-		(x) => x.seasons.length
 	);
 }
 
@@ -86,12 +57,7 @@ function getTags(recipes: Recipe[]) {
 	component={MainPage}
 	props={{
 		newRecipes: getNewRecipes(allRecipes),
-		recipesInSeason: getRecipesInSeason(allRecipes, CURRENT_SEASON),
-		recipesNextSeason: getRecipesInSeason(allRecipes, NEXT_SEASON),
-		favoriteRecipes: getFavoriteRecipes(allRecipes),
 		quickRecipes: getQuickRecipes(allRecipes),
-		ingredientsInSeason: getIngredientsInSeason(CURRENT_SEASON),
-		ingredientsNextSeason: getIngredientsInSeason(NEXT_SEASON),
 		cuisines: getCuisines(allRecipes),
 		meals: getMeals(allRecipes),
 		tags: getTags(allRecipes),

@@ -84,7 +84,7 @@ function normalizeUnit(unit?: string): string | undefined {
 
 	const unitLowerCase = unit.toLowerCase();
 	const aliases = UNITS.find((u) => u.includes(unitLowerCase));
-	return aliases?.[0] || unit;
+	return aliases?.[0] ?? unit;
 }
 
 export function normalizeName(
@@ -98,7 +98,8 @@ export function normalizeName(
 		);
 		if (alias) {
 			const modifier =
-				name.replace(new RegExp(String.raw`\s*${alias}$`, 'i'), '') || undefined;
+				name.replace(new RegExp(String.raw`\s*${alias}$`, 'i'), '') ||
+				undefined;
 
 			return {
 				name: aliases[0],

@@ -23,10 +23,11 @@ export function useUrlState<T>({
 	defaultValue,
 }: UseUrlStateInterface<T>): UseUrlStateReturnInterface<T> {
 	if (isBrowser() === false) {
-		return useState(defaultValue);
+		const [state, setState] = useState(defaultValue);
+		return [state, setState];
 	}
 
-	const url = new URL(window?.location.href);
+	const url = new URL(window.location.href);
 	const [value, setValue] = useState<T>(() => {
 		const urlValue = url.searchParams.get(name);
 		return urlValue === null ? defaultValue : (urlValue as unknown as T);

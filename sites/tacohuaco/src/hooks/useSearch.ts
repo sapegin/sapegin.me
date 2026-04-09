@@ -1,31 +1,12 @@
-import { useCallback,useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useDebouncedValue } from '../hooks/useDebouncedValue';
-import {
-	FLAG_VEGAN,
-	FLAG_VEGETARIAN,
-	MONTH_TO_NAME,
-	SEASON_AUTUMN,
-	SEASON_SPRING,
-	SEASON_SUMMER,
-	SEASON_WINTER,
-	useSearchIndex,
-} from '../hooks/useSearchIndex';
+import { useSearchIndex } from '../hooks/useSearchIndex';
 import { useSearchResults } from '../hooks/useSearchResults';
 import type { RecipeFragment } from '../types/Recipe';
 import { formatTagName } from '../util/formatTagName';
 import { getAllIngredients } from '../util/getAllIngredients';
 import { INGREDIENTS } from '../util/olivier/langs/en/ingredients';
 import { useUrlState } from './useUrlState';
-
-const DEFAULT_AUTOCOMPLETE_ITEMS = [
-	...Object.values(MONTH_TO_NAME),
-	...SEASON_WINTER,
-	...SEASON_SPRING,
-	...SEASON_SUMMER,
-	...SEASON_AUTUMN,
-	FLAG_VEGAN,
-	FLAG_VEGETARIAN,
-];
 
 const getIngredientAliases = (name: string) => {
 	const aliases = INGREDIENTS.find((x) => x[0][0] === name) ?? [];
@@ -81,13 +62,7 @@ const getAutocompleteItems = (
 	}
 
 	const textItems = [
-		...new Set([
-			...DEFAULT_AUTOCOMPLETE_ITEMS,
-			...allIngredients,
-			...allTags,
-			...allCuisines,
-			...allKeywords,
-		]),
+		...new Set([...allIngredients, ...allTags, ...allCuisines, ...allKeywords]),
 	].map(
 		(value): AutocompleteItem => ({
 			type: 'text',

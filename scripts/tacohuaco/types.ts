@@ -7,7 +7,6 @@ export interface RecipeModelRaw {
 	createdAt: string;
 	cuisines: string[];
 	description: Maybe<string>;
-	favorite: boolean;
 	images: Asset[];
 	ingredients: string;
 	keywords: Maybe<string>;
@@ -30,7 +29,6 @@ export interface RecipeModelRaw {
 		RecipeModelRaw,
 		| 'createdAt'
 		| 'cuisines'
-		| 'favorite'
 		| 'images'
 		| 'ingredients'
 		| 'overnight'

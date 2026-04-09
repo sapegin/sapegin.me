@@ -1,30 +1,10 @@
 import type { IngredientsSection } from '../../../sites/tacohuaco/src/types/Recipe.ts';
-import { analyzeOption } from '../../../sites/tacohuaco/src/util/olivier/analyze.ts';
 import { normalize } from '../../../sites/tacohuaco/src/util/olivier/normalize.ts';
 import { parse } from '../../../sites/tacohuaco/src/util/olivier/parse.ts';
-import { IngredientKind } from '../../../sites/tacohuaco/src/util/olivier/types.ts';
 import type { RecipeModelRaw } from '../types.ts';
 import { getListLines } from './getListLines.ts';
 import { getSubrecipeSlug } from './getSubrecipeSlug.ts';
-import { mapFlags } from './mapFlags.ts';
-import { mapSeasons } from './mapSeasons.ts';
 import { splitBySection } from './splitBySection.ts';
-
-// TODO: Can we unify recipe flags and ingredient flags?
-// Kind vs vegan/vegetarian, hasGluten vs glutenFree
-
-function getSubrecipeKind(flags: ReturnType<typeof mapFlags>): IngredientKind {
-	if (flags.vegan) {
-		return IngredientKind.Vegan;
-	}
-
-	if (flags.vegetarian) {
-		return IngredientKind.Vegetarian;
-	}
-
-	// HACK: For our purposes this should be enough to have the correct flags on recipes
-	return IngredientKind.Meat;
-}
 
 export function mapIngredients(
 	ingredients: RecipeModelRaw['ingredients'],
@@ -56,7 +36,7 @@ export function mapIngredients(
 			}
 			return {
 				name,
-				ingredients: mapIngredients(subrecipe?.ingredients)[0].ingredients,
+				ingredients: mapIngredients(subrecipe.ingredients)[0].ingredients,
 			};
 		} else {
 			// Parsing section ingredients
@@ -73,25 +53,13 @@ export function mapIngredients(
 
 						if (subrecipe) {
 							// Ingredient is a subrecipe link
-							const subrecipeIngredients = mapIngredients(
-								subrecipe?.ingredients
-							)[0].ingredients.flat();
-							const flags = mapFlags(subrecipeIngredients);
 							return {
 								...option,
-								kind: getSubrecipeKind(flags),
-								hasGluten: flags.glutenFree === false,
-								hasDairy: flags.dairyFree === false,
-								hasSugar: flags.noAddedSugar === false,
-								seasons: mapSeasons(subrecipeIngredients),
 								subrecipeSlug: subrecipe.slug,
 							};
 						}
 
-						return {
-							...option,
-							...analyzeOption(option),
-						};
+						return option;
 					});
 				}),
 			};

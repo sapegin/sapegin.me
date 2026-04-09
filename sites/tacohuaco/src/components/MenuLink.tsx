@@ -5,14 +5,15 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
 	isCurrent?: boolean;
 };
 
-export function MenuLink({ isCurrent, className, ...props }: Props) {
+export function MenuLink({ isCurrent, className, children, ...props }: Props) {
 	return (
 		<a
 			className={clsx(
 				`
-      duration-hover m-[calc(0.25rem+2px)] rounded-none border-0 border-solid
-      border-accent bg-background p-2 font-ui text-base/heading font-normal
-      tracking-menu text-accent uppercase no-underline transition-all ease-hover
+      m-[calc(0.25rem+2px)] rounded-none border-0 border-solid border-accent
+      bg-background p-2 font-ui text-base/heading font-normal tracking-menu
+      text-accent uppercase no-underline transition-all
+      duration-(--duration-hover) ease-hover
     `,
 				isCurrent
 					? `
@@ -30,6 +31,8 @@ export function MenuLink({ isCurrent, className, ...props }: Props) {
 				className
 			)}
 			{...props}
-		/>
+		>
+			{children}
+		</a>
 	);
 }

@@ -228,12 +228,12 @@ export function Taco({
 			height={height}
 			aria-hidden="true"
 		>
-			{FILLINGS[filling]?.(colors)}
-			{TORTILLAS[tortilla]?.(colors)}
-			{EYES[eyes]?.(colors)}
-			{NOSES[nose]?.(colors)}
-			{MOUTHES[mouth]?.(colors)}
-			{glasses && GLASSES[glasses]?.(colors)}
+			{FILLINGS[filling](colors)}
+			{TORTILLAS[tortilla](colors)}
+			{EYES[eyes](colors)}
+			{NOSES[nose](colors)}
+			{MOUTHES[mouth](colors)}
+			{glasses && GLASSES[glasses](colors)}
 		</svg>
 	);
 }

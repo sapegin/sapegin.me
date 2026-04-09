@@ -3,12 +3,13 @@ import { SearchResults } from '../components/SearchResults';
 import { useSearch } from '../hooks/useSearch';
 import type { RecipeFragment } from '../types/Recipe';
 
-type Props = {
+interface Props {
 	recipes: RecipeFragment[];
-};
+}
 
 export function SearchPage({ recipes }: Props) {
-	const { getSearchFieldProps, searchQuery, searchResults } = useSearch(recipes);
+	const { getSearchFieldProps, searchQuery, searchResults } =
+		useSearch(recipes);
 	return (
 		<div className="flex flex-col gap-8">
 			<header>
@@ -16,14 +17,17 @@ export function SearchPage({ recipes }: Props) {
 			</header>
 			<main className="flex flex-col gap-8">
 				{searchQuery === '' ? (
-					<p className="font-body text-base leading-normal text-text">
-						Try searching for recipe names (<em>pozole</em>, <em>tres leches</em>),
-						cuisines (<em>Mexican</em>, <em>Russian</em>), ingredients (<em>kimchi</em>,
-						<em>tomatoes</em>), kinds of dishes (<em>lunch</em>, <em>soup</em>),
-						seasons (<em>autumn</em>)...
+					<p className="font-body text-base/normal text-text">
+						Try searching for recipe names (<em>pozole</em>,{' '}
+						<em>tres leches</em>), cuisines (<em>Mexican</em>, <em>Russian</em>
+						), ingredients (<em>kimchi</em>,<em>tomatoes</em>), kinds of dishes
+						(<em>lunch</em>, <em>soup</em>)…
 					</p>
 				) : (
-					<SearchResults searchQuery={searchQuery} searchResults={searchResults} />
+					<SearchResults
+						searchQuery={searchQuery}
+						searchResults={searchResults}
+					/>
 				)}
 			</main>
 		</div>

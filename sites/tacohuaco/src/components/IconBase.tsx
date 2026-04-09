@@ -1,6 +1,8 @@
 import type { PropsWithoutRef, SVGAttributes } from 'react';
 
-export type BaseIconProps = PropsWithoutRef<SVGAttributes<SVGSVGElement>> & {
+export type BaseIconProps = PropsWithoutRef<
+	Omit<SVGAttributes<SVGSVGElement>, 'width' | 'height' | 'viewBox' | 'fill'>
+> & {
 	width: number | string;
 	height: number | string;
 	viewBox: {

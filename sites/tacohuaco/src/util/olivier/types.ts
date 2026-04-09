@@ -56,29 +56,10 @@ export interface Ingredient {
 	readonly comment?: string;
 }
 
-export const IngredientKind = {
-	Vegan: 'Vegan',
-	Vegetarian: 'Vegetarian',
-	Poultry: 'Poultry',
-	Fish: 'Fish',
-	Meat: 'Meat',
-	Unknown: 'Unknown',
-} as const;
-
-export type IngredientKind =
-	(typeof IngredientKind)[keyof typeof IngredientKind];
-
-export interface IngredientInfo {
-	readonly name: string;
-	readonly kind: IngredientKind;
-	readonly hasGluten: boolean;
-	readonly hasDairy: boolean;
-	readonly hasSugar: boolean;
-	readonly seasons: readonly Month[];
-}
-
-export interface PrintIngredient
-	extends Omit<Ingredient, 'minAmount' | 'maxAmount' | 'unit'> {
+export interface PrintIngredient extends Omit<
+	Ingredient,
+	'minAmount' | 'maxAmount' | 'unit'
+> {
 	readonly amount?: string;
 	readonly suffix?: string;
 }

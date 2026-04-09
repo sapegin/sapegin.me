@@ -1,4 +1,4 @@
-import { expect,test } from 'vitest';
+import { expect, test } from 'vitest';
 import type { RecipeModelRaw } from '../../types';
 import { mapRecipe } from '../mapRecipe';
 
@@ -9,7 +9,6 @@ test('map recipe', () => {
 		description: 'Good stuff!',
 		ingredients: `- 2 fresh jalapeños\n- 1 kg floury potatoes\n100 g butter; room temperature\n- salt`,
 		keywords: 'green sauce',
-		favorite: true,
 		overnight: false,
 		slug: 'salsa-verde-de',
 		source: null,
@@ -65,23 +64,12 @@ test('map recipe', () => {
 	];
 	expect(mapRecipe(recipe, allIngredients, allTips)).toMatchInlineSnapshot(`
 		{
-		  "chart": [
-		    {
-		      "covered": false,
-		      "overnight": false,
-		      "subtype": "butter",
-		      "type": "WarmToRoomTemp",
-		    },
-		  ],
 		  "createdAt": 2023-09-18T12:12:59.151Z,
 		  "cuisines": [
 		    "Mexican",
 		    "Klatzlandian",
 		  ],
-		  "dairyFree": false,
 		  "description": "Good stuff!",
-		  "favorite": true,
-		  "glutenFree": true,
 		  "images": [
 		    {
 		      "handle": "xxx",
@@ -96,45 +84,30 @@ test('map recipe', () => {
 		        [
 		          {
 		            "comment": undefined,
-		            "hasDairy": false,
-		            "hasGluten": false,
-		            "hasSugar": false,
-		            "kind": "Vegan",
 		            "maxAmount": 2,
 		            "minAmount": 2,
 		            "modifier": "fresh",
 		            "name": "jalapeño",
-		            "seasons": [],
 		            "unit": undefined,
 		          },
 		        ],
 		        [
 		          {
 		            "comment": "room temperature",
-		            "hasDairy": true,
-		            "hasGluten": false,
-		            "hasSugar": false,
-		            "kind": "Vegetarian",
 		            "maxAmount": 1000,
 		            "minAmount": 1000,
 		            "modifier": "floury potatoes 100 g",
 		            "name": "butter",
-		            "seasons": [],
 		            "unit": "g",
 		          },
 		        ],
 		        [
 		          {
 		            "comment": undefined,
-		            "hasDairy": false,
-		            "hasGluten": false,
-		            "hasSugar": false,
-		            "kind": "Vegan",
 		            "maxAmount": undefined,
 		            "minAmount": undefined,
 		            "modifier": undefined,
 		            "name": "salt",
-		            "seasons": [],
 		            "unit": undefined,
 		          },
 		        ],
@@ -145,15 +118,12 @@ test('map recipe', () => {
 		  "keywords": [
 		    "green sauce",
 		  ],
-		  "lowGluten": false,
-		  "noAddedSugar": true,
 		  "notes": [
 		    "Do it good!",
 		    "Do it gooder",
 		  ],
 		  "overnight": false,
 		  "recipes": [],
-		  "seasons": [],
 		  "slug": "salsa-verde-de",
 		  "source": undefined,
 		  "steps": [
@@ -190,8 +160,6 @@ test('map recipe', () => {
 		  "tools": [
 		    "blender or food processor",
 		  ],
-		  "vegan": false,
-		  "vegetarian": true,
 		  "warnings": [
 		    "Warning about salt 1",
 		    "Warning about salt 2",

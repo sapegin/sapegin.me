@@ -39,7 +39,7 @@ function asString(amount?: Amount) {
 	if (amount === undefined) {
 		return amount;
 	}
-	return formatQuantity(amount, true) || String(amount);
+	return formatQuantity(amount, true) ?? String(amount);
 }
 
 function pluralize(
@@ -63,7 +63,11 @@ function pluralizeName({
 	minAmount,
 	maxAmount,
 }: Ingredient): string {
-	if (unit === undefined && typeof minAmount === 'number' && minAmount === maxAmount) {
+	if (
+		unit === undefined &&
+		typeof minAmount === 'number' &&
+		minAmount === maxAmount
+	) {
 		return pluralize(ALL_INGREDIENTS, name, maxAmount);
 	}
 

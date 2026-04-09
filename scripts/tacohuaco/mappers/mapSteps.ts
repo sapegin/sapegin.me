@@ -1,4 +1,7 @@
-import type { Step, StepsSection } from '../../../sites/tacohuaco/src/types/Recipe.ts';
+import type {
+	Step,
+	StepsSection,
+} from '../../../sites/tacohuaco/src/types/Recipe.ts';
 import { normalizeOption } from '../../../sites/tacohuaco/src/util/olivier/normalize.ts';
 import { parseOption } from '../../../sites/tacohuaco/src/util/olivier/parse.ts';
 import type { RecipeModelRaw } from '../types.ts';
@@ -25,7 +28,7 @@ function hasPause(text: string) {
 // Normalize ingredient placeholders:
 // *} large cucumbers* → <Ingredient name="cucumber" modifier="large"/>
 function normalizePlaceholders(text: string) {
-	return text.replaceAll(/\*}\s*([^*]+)\*/g, (_, $1) => {
+	return text.replaceAll(/\*}\s*([^*]+)\*/g, (_, $1: string) => {
 		const { name, modifier } = normalizeOption(parseOption($1));
 		const modifierProp = modifier ? `modifier="${modifier}"` : '';
 		return `<Ingredient name="${name}" ${modifierProp} />`;
@@ -76,7 +79,7 @@ export function mapSteps(
 			}
 			return {
 				name,
-				steps: mapSteps(subrecipe?.steps)[0].steps,
+				steps: mapSteps(subrecipe.steps)[0].steps,
 			};
 		} else {
 			// Parsing section steps

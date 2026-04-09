@@ -1,4 +1,3 @@
-export { analyze, analyzeOption } from './analyze';
 export { format, formatOption } from './format';
 export { merge } from './merge';
 export {

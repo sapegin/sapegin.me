@@ -1,6 +1,9 @@
 import type { AnchorHTMLAttributes } from 'react';
 
-export function Tag(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
+export function Tag({
+	children,
+	...props
+}: AnchorHTMLAttributes<HTMLAnchorElement>) {
 	return (
 		<a
 			className="
@@ -11,6 +14,8 @@ export function Tag(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
      focus-visible:outline-accent
    "
 			{...props}
-		/>
+		>
+			{children}
+		</a>
 	);
 }

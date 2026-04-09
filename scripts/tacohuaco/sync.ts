@@ -5,12 +5,7 @@ import { gql, request } from 'graphql-request';
 import { mapIngredientsModel } from './mappers/mapIngredientsModel.ts';
 import { mapRecipe } from './mappers/mapRecipe.ts';
 import { mapTipsModel } from './mappers/mapTipsModel.ts';
-import type {
-	CalendarMonthModelRaw,
-	IngredientModelRaw,
-	RecipeModelRaw,
-	TipModelRaw,
-} from './types';
+import type { IngredientModelRaw, RecipeModelRaw, TipModelRaw } from './types';
 
 // Fetch _all_ the data from Hygraph and convert it to JSON files that could
 // be used in Astro
@@ -98,14 +93,6 @@ const query = gql`
 			tags
 			ingredient
 		}
-		calendarMonths {
-			name
-			breakfasts
-			lunches
-			specials
-			sweets
-			snacks
-		}
 	}
 `;
 
@@ -118,14 +105,12 @@ const results = await request<{
 	recipes: RecipeModelRaw[];
 	ingredients: IngredientModelRaw[];
 	tips: TipModelRaw[];
-	calendarMonths: CalendarMonthModelRaw[];
 }>(endpoint, query);
 
 console.log();
 console.log('🌭 Parsing data...');
 
 fs.ensureDirSync('content/recipes');
-fs.ensureDirSync('content/calendarMonths');
 
 const ingredients = mapIngredientsModel(results.ingredients);
 const tips = mapTipsModel(results.tips);

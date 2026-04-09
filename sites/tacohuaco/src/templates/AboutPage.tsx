@@ -2,10 +2,10 @@ import type { ReactNode } from 'react';
 import { TextContent } from '../components/TextContent';
 import { PageWithTitle } from './PageWithTitle';
 
-type Props = {
+interface Props {
 	url: string;
 	children: ReactNode;
-};
+}
 
 export function AboutPage({ url, children }: Props) {
 	return (

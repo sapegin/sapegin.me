@@ -105,7 +105,8 @@
     "textlint-rule-stop-words": "^5.2.0",
     "textlint-rule-terminology": "^5.2.16",
     "textlint-rule-write-good": "^2.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "4.1.4"
   },
   "nano-staged": {
     "*.{js,cjs,mjs,ts,tsx,astro,css,json,md}": "prettier --write",

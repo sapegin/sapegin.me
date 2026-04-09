@@ -65,6 +65,18 @@
 }
 
 /**
+ * Typography: intro text.
+ */
+@utility typo-intro {
+	font-family: var(--font-body);
+	font-size: var(--text-article);
+	font-style: italic;
+	font-weight: var(--font-weight-normal);
+	line-height: var(--leading-normal);
+	color: var(--color-text);
+}
+
+/**
  * Typography: menu text.
  */
 @utility typo-menu {

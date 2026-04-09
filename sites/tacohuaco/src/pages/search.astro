@@ -1,30 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import { SearchPage } from '../templates/SearchPage';
 import { PageWithTitle } from '../templates/PageWithTitle';
+import { SearchPage } from '../templates/SearchPage';
 
 const entries = await getCollection('recipes');
 const recipes = entries.map(({ data }) => ({
 	createdAt: data.createdAt,
 	cuisines: data.cuisines,
-	dairyFree: data.dairyFree,
-	glutenFree: data.glutenFree,
 	images: data.images,
 	ingredients: data.ingredients,
 	keywords: data.keywords,
-	lowGluten: data.lowGluten,
-	favorite: data.favorite,
-	noAddedSugar: data.noAddedSugar,
 	overnight: data.overnight,
-	seasons: data.seasons,
 	slug: data.slug,
 	tags: data.tags,
 	time: data.time,
 	title: data.title,
 	titleEnglish: data.titleEnglish,
-	vegan: data.vegan,
-	vegetarian: data.vegetarian,
 }));
 ---
 

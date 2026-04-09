@@ -1,9 +1,9 @@
-import { PageWithTitle } from './PageWithTitle';
-import { type CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
 import type { ReactNode } from 'react';
+import Group from 'react-group';
 import { Markdown } from '../components/Markdown';
 import { TextContent } from '../components/TextContent';
-import Group from 'react-group';
+import { type CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
+import { PageWithTitle } from './PageWithTitle';
 
 type Props = CoffeeRecipeType & {
 	url: string;

@@ -6,12 +6,9 @@ import { getAllIngredients } from '../../../sites/tacohuaco/src/util/getAllIngre
 import { normalizeOption } from '../../../sites/tacohuaco/src/util/olivier/normalize.ts';
 import { parseOption } from '../../../sites/tacohuaco/src/util/olivier/parse.ts';
 import type { IngredientModel, RecipeModelRaw, TipModel } from '../types.ts';
-import { mapChart } from './mapChart.ts';
-import { mapFlags } from './mapFlags.ts';
 import { mapIngredients } from './mapIngredients.ts';
 import { mapMaybeNumber } from './mapMaybeNumber.ts';
 import { mapMaybeString } from './mapMaybeString.ts';
-import { mapSeasons } from './mapSeasons.ts';
 import { mapSteps } from './mapSteps.ts';
 import { mapTips } from './mapTips.ts';
 import { mapTools } from './mapTools.ts';
@@ -34,7 +31,7 @@ function mapNotes(notes: RecipeModelRaw['notes']) {
 // TODO: in the future make it a required field in Hygraph
 function mapYields(yields: RecipeModelRaw['yields']): Yields {
 	const { minAmount, unit } = normalizeOption(
-		parseOption(`${yields === null ? '1 portion' : yields} yields`)
+		parseOption(`${yields ?? '1 portion'} yields`)
 	);
 	return {
 		amount: Number(minAmount ?? 1),
@@ -81,14 +78,11 @@ export function mapRecipe(
 		keywords: mapKeywords(recipe.keywords),
 		tools: mapTools(recipe.tools, recipe.subrecipes, ingredientsSections),
 		notes: mapNotes(recipe.notes),
-		seasons: mapSeasons(ingredients),
-		chart: mapChart(ingredients, stepsSections),
 		description: mapMaybeString(recipe.description),
 		source: mapMaybeString(recipe.source),
 		yields: mapYields(recipe.yields),
 		time: mapMaybeNumber(recipe.time),
 		tips: mapTips(ingredients, recipe.tags, allTips),
 		warnings: mapWarnings(ingredients, allIngredients),
-		...mapFlags(ingredients),
 	};
 }

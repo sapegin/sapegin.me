@@ -24,7 +24,7 @@ export function useSearchResults(
 		const results = index.search(deburr(query));
 
 		return results.flatMap(
-			({ ref }) => store.find((x) => x.slug === ref) || []
+			({ ref }) => store.find((x) => x.slug === ref) ?? []
 		);
 	}, [query, index, store]);
 }

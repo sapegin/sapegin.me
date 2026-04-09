@@ -5,11 +5,6 @@ type Props = ImgHTMLAttributes<HTMLImageElement> & {
 	className?: string;
 };
 
-export function Image({ className, ...props }: Props) {
-	return (
-		<img
-			className={clsx('image', className)}
-			{...props}
-		/>
-	);
+export function Image({ className, alt = '', ...props }: Props) {
+	return <img alt={alt} className={clsx('image', className)} {...props} />;
 }
