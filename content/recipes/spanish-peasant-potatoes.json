@@ -1,0 +1,257 @@
+{
+  "createdAt": "2024-06-30T15:04:54.695Z",
+  "cuisines": [
+    "Spanish"
+  ],
+  "description": "Yet another way of cooking potatoes: moderately spicy, and rich in flavors of bell peppers.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "potato",
+            "modifier": "floury",
+            "minAmount": 1500,
+            "maxAmount": 1500,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bacon",
+            "minAmount": 250,
+            "maxAmount": 250,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bell pepper",
+            "modifier": "red",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bell pepper",
+            "modifier": "green",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coriander seeds",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "fennel seeds",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parsley",
+            "comment": "for garnish",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "spanish-peasant-potatoes",
+  "source": "This recipe is based on [Spanish poor man’s potatoes recipe](https://spainonafork.com/spanish-poor-mans-potatoes-one-of-spains-most-iconic-dishes/) by Spain on a Fork.",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Cut the potatoes into large chunks, and cook them either in salted water, until they softened a bit for about 15 minutes, or in an air fryer at 210C for 18 minutes with olive oil and salt. (The potatoes should be 99% ready, and not very soft.)",
+          "pause": false
+        },
+        {
+          "text": "Wile the potatoes are cooking, take a Dutch oven (or a very large skillet), and start warming the bacon on medium heat.",
+          "pause": false
+        },
+        {
+          "text": "Prepare the vegetables. Chili: remove the roots and seeds, and thinly slice. Onion: peel, halve, and slice into 1/2 cm slices. Garlic: crush and peel.",
+          "pause": false
+        },
+        {
+          "text": "When the bacon gets crispy, add the onions, chili, and garlic, add olive oil if the bacon didn’t release enough fat, and cook until the onion is transparent.",
+          "pause": false
+        },
+        {
+          "text": "When the potatoes are ready, discard the water, and let them dry for a bit.",
+          "pause": false
+        },
+        {
+          "text": "While the bacon with vegetables are cooking, remove the roots and seeds of bell peppers, and cut them into thin strips.",
+          "pause": false
+        },
+        {
+          "text": "Add the coriander seeds, and fennel seeds to the vegetables and bacon, stir, and cook for another minute.",
+          "pause": false
+        },
+        {
+          "text": "Add the bell peppers to the vegetables and bacon, and cook until the peppers soften.",
+          "pause": false
+        },
+        {
+          "text": "Add the potatoes, and cook, stirring occasionally, until the potatoes are fully cooked.",
+          "pause": false
+        },
+        {
+          "text": "Add more salt if needed.",
+          "pause": false
+        },
+        {
+          "text": "Serve sprinkled with chopped parsley.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Potatoes",
+    "AirFryer",
+    "Dinner",
+    "DutchOven"
+  ],
+  "time": 60,
+  "title": "Spanish peasant potatoes",
+  "tools": [
+    "Dutch oven or very large skillet"
+  ],
+  "yields": {
+    "amount": 4,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/5pBgDnKRTfes7LhbxR10",
+      "handle": "5pBgDnKRTfes7LhbxR10",
+      "width": 5230,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "18 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

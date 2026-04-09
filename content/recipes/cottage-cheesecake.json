@@ -1,0 +1,314 @@
+{
+  "createdAt": "2021-08-31T14:56:32.446Z",
+  "cuisines": [
+    "Russian"
+  ],
+  "description": "Zapekanka (запеканка) is a Russian village cheesecake made of cottage cheese (tvorog, творог) and smetana (сметана). It's less sweet and smooth than the New York cheesecake and makes a great breakfast (if you cook it the evening before) topped with some marmalade and fresh berries. (And don't forget to brew a cup of [café de olla](/recipes/cafe-de-olla/)!)",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the base",
+      "ingredients": [
+        [
+          {
+            "name": "cottage cheese (tvorog)",
+            "minAmount": 550,
+            "maxAmount": 550,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "honey",
+            "minAmount": 35,
+            "maxAmount": 35,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "corn starch",
+            "minAmount": 15,
+            "maxAmount": 15,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "vanilla extract",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "zest",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "smetana",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "comment": "room temperature, for greasing",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the topping",
+      "ingredients": [
+        [
+          {
+            "name": "smetana",
+            "minAmount": 300,
+            "maxAmount": 300,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "honey",
+            "minAmount": 15,
+            "maxAmount": 15,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "vanilla extract",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "You could buy both cottage cheese (tvorog) and smetana in any [Russian store](/shops/).",
+    "You could replace honey and vanilla extract in the base with 35 g of date syrup."
+  ],
+  "overnight": false,
+  "slug": "cottage-cheesecake",
+  "source": "This recipe is based on a recipe from [Viktoria Melnik’s](https://www.instagram.com/vicky_bakery/) book “Food as it is”.",
+  "steps": [
+    {
+      "name": "To cook the base",
+      "steps": [
+        {
+          "text": "Preheat oven to 170C.",
+          "pause": false
+        },
+        {
+          "text": "Mix cottage cheese (tvorog) using a food processor or push it through a sieve to smoothen the grains.",
+          "pause": false
+        },
+        {
+          "text": "In a big mixing bowl, combine <Ingredient name=\"egg\"  /> and <Ingredient name=\"honey\"  /> until you have fluffy light beige mass, using a mixer.",
+          "pause": false
+        },
+        {
+          "text": "Add the cottage cheese of step 2, <Ingredient name=\"corn starch\"  />, <Ingredient name=\"vanilla extract\"  />, and zest of <Ingredient name=\"lime\"  />, then mix using a silicone spatula.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"smetana\"  /> and mix again.",
+          "pause": false
+        },
+        {
+          "text": "Put baking paper onto the bottom of the baking form and butter its sides.",
+          "pause": false
+        },
+        {
+          "text": "Pour the mixture into the baking form.",
+          "pause": false
+        },
+        {
+          "text": "Bake 10-20 minutes.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To finish zapekanka",
+      "steps": [
+        {
+          "text": "While the base is baking, prepare the topping. Mix <Ingredient name=\"smetana\"  />, <Ingredient name=\"egg\"  />, <Ingredient name=\"honey\"  />, <Ingredient name=\"vanilla extract\"  />, and juice of <Ingredient name=\"lime\"  /> using a mixer.",
+          "pause": false
+        },
+        {
+          "text": "Pour the topping on top of the base, and bake for 30-40 minutes more.",
+          "pause": false
+        },
+        {
+          "text": "Cool down the cake in a turned-off oven and then refrigerate for about 1 hour.",
+          "pause": true
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Baking",
+    "Breakfast",
+    "Dessert"
+  ],
+  "time": 70,
+  "title": "Cottage cheesecake (zapekanka)",
+  "tools": [
+    "mixer",
+    "oven",
+    "16-18 cm baking form",
+    "food processor (optional)"
+  ],
+  "yields": {
+    "amount": 4,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/HQpvETDuSACxKY4laFqr",
+      "handle": "HQpvETDuSACxKY4laFqr",
+      "width": 5665,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "WarmToRoomTemp",
+      "subtype": "butter",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "170C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "30-40 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Rest",
+      "value": "1 hour",
+      "overnight": false,
+      "covered": false
+    }
+  ],
+  "tips": [
+    "Smetana _(сметана)_ is a type of sour cream similar to crème fraîche."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": true,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

@@ -1,0 +1,189 @@
+{
+  "createdAt": "2021-08-24T07:08:45.698Z",
+  "cuisines": [
+    "Italian"
+  ],
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "basil",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "bunch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parsley",
+            "minAmount": 0.25,
+            "maxAmount": 0.25,
+            "unit": "bunch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "sunflower seeds",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "comment": "roasted",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parmesan cheese",
+            "minAmount": 20,
+            "maxAmount": 20,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "minAmount": 50,
+            "maxAmount": 50,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "The amounts aren’t precise and will depend on how much basil you have. "
+  ],
+  "overnight": false,
+  "slug": "pesto",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Pick basil and parsley leaves (only good ones, without black spots and not too wilted), wash them and roughly chop.",
+          "pause": false
+        },
+        {
+          "text": "Peel and roughly chop garlic.",
+          "pause": false
+        },
+        {
+          "text": "Grate parmesan.",
+          "pause": false
+        },
+        {
+          "text": "Mix basil, parsley, garlic, sunflower seeds, parmesan cheese, olive oil using a blender or a food processor until all bigger chunks are chopped. It shouldn’t be too smooth and creamy either: it’s nice when pesto has a rustic texture.",
+          "pause": false
+        },
+        {
+          "text": "Season with salt and pepper.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dip",
+    "Foundation",
+    "Sauce"
+  ],
+  "time": 10,
+  "title": "Pesto",
+  "tools": [
+    "blender or food processor"
+  ],
+  "yields": {
+    "amount": 100,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/e3ELgUZSrGQZLRcRnAgN",
+      "handle": "e3ELgUZSrGQZLRcRnAgN",
+      "width": 4687,
+      "height": 3927
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "caprese-salad-with-pesto",
+      "title": "Caprese salad with pesto"
+    }
+  ],
+  "seasons": [],
+  "chart": [],
+  "tips": [
+    "Keep the basil flowers, and add them when you make your evening tea next time.",
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

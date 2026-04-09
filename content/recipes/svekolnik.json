@@ -1,0 +1,398 @@
+{
+  "createdAt": "2022-08-02T07:34:27.848Z",
+  "cuisines": [
+    "Russian"
+  ],
+  "description": "Svekolnik (or cold borscht) is a soup Artem’s grandma makes every summer in her dacha (summer house). This is not the same recipe but works great on hot summer days. It even feels almost like lemonade with the cold sweetness of beets and the gentle tickling of radishes.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "For the beet broth",
+      "ingredients": [
+        [
+          {
+            "name": "beetroot",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          }
+        ],
+        [
+          {
+            "name": "horseradish",
+            "minAmount": 30,
+            "maxAmount": 30,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "ginger",
+            "minAmount": 30,
+            "maxAmount": 30,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the borsch",
+      "ingredients": [
+        [
+          {
+            "name": "beetroot",
+            "modifier": "young",
+            "minAmount": 4,
+            "maxAmount": 6,
+            "comment": "with stems",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          }
+        ],
+        [
+          {
+            "name": "cucumber",
+            "minAmount": 2,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "radish",
+            "minAmount": 1,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "vinegar",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "scallion",
+            "minAmount": 2,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "dill",
+            "minAmount": 2,
+            "maxAmount": 3,
+            "unit": "bunch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "comment": "hard-boiled",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "smetana",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "crème fraîche",
+            "comment": "for serving",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "svekolnik",
+  "source": "This recipe is based on the cold borsch recipe from Vlad Piskunov’s book “Russian cuisine. Best in 500 years”.",
+  "steps": [
+    {
+      "name": "To cook the beet broth",
+      "steps": [
+        {
+          "text": "Peel the beets and shred them in a food processor or grate on a grater.",
+          "pause": false
+        },
+        {
+          "text": "Cook in 3 liters of water for about 45 minutes, once the water is boiling.",
+          "pause": false
+        },
+        {
+          "text": "While the beets are cooking, thinly slice the horseradish or ginger.",
+          "pause": false
+        },
+        {
+          "text": "Add the ginger to the cooking beets, and cook the beets for 15 minutes more.",
+          "pause": false
+        },
+        {
+          "text": "Let the beet broth cool completely.",
+          "pause": false
+        },
+        {
+          "text": "Filter the beet broth using a sieve.",
+          "pause": false
+        },
+        {
+          "text": "Season with salt, sugar, and lime juice.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the borsch",
+      "steps": [
+        {
+          "text": "Preheat oven to 200C.",
+          "pause": false
+        },
+        {
+          "text": "Distribute unpeeled young beats on the baking sheet, and drizzle them with olive oil and salt.",
+          "pause": false
+        },
+        {
+          "text": "Roast beets until tender (so you could easily insert a knife or a fork).",
+          "pause": false
+        },
+        {
+          "text": "While the beets are roasting, cut the beet stems into 1 cm slices.",
+          "pause": false
+        },
+        {
+          "text": "Cool down the roasted beets, and peel them.",
+          "pause": false
+        },
+        {
+          "text": "In a medium saucepan, add beet stems and about 100 ml of water and <Ingredient name=\"vinegar\"  />. Cook the beet stems for about 10 minutes, until tender.",
+          "pause": false
+        },
+        {
+          "text": "Discard the water of beet stems, and cool the stems down.",
+          "pause": false
+        },
+        {
+          "text": "Cut the roasted beets, cucumbers, and radishes into 1 cm cubes.",
+          "pause": false
+        },
+        {
+          "text": "Slice the spring onions, and thinly chop the dill.",
+          "pause": false
+        },
+        {
+          "text": "Combine beet stems, roasted beets, cucumbers, radishes, spring onions, and dill.",
+          "pause": false
+        },
+        {
+          "text": "Add the beet broth, and thoroughly mix everything.",
+          "pause": false
+        },
+        {
+          "text": "Cook the eggs in water, for 9 minutes after the water starts to boil. Remove the eggs from the water and transfer them to a bowl with cold water to cool them down and make peeling easier.",
+          "pause": false
+        },
+        {
+          "text": "Serve the soup with a tablespoon of smetana (or crème fraîche) and a halved hardboiled egg.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Soup",
+    "Lunch",
+    "Cold"
+  ],
+  "time": 180,
+  "title": "Svekolnik (cold borscht)",
+  "tools": [
+    "oven",
+    "baking tray"
+  ],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/23YHylvBQaKMi1if3i3D",
+      "handle": "23YHylvBQaKMi1if3i3D",
+      "width": 4714,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    7,
+    8,
+    9
+  ],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "45 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "15 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "200C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "10 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "9 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "Smetana _(сметана)_ is a type of sour cream similar to crème fraîche."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

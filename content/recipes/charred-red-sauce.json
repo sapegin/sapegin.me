@@ -1,0 +1,200 @@
+{
+  "createdAt": "2021-07-06T16:08:48.585Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "A classic Mexican must-have as a complement to any main dish.\n",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "tomato",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "modifier": "mildly spicy",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 3,
+            "maxAmount": 4,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile flakes",
+            "comment": "optional",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "Get a Molcajete and make your sauce as a true Mexican señora if you want to go real! ;-)",
+    "We usually make this sauce with dried jalapeños or whatever fresh spicy chile we have."
+  ],
+  "overnight": false,
+  "slug": "charred-red-sauce",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the vegetables. **Tomatoes:** If they are small and juicy, leave them whole; otherwise halve. **Chiles:** leave as is. **Onion:** peel and halve. **Garlic:** peel.",
+          "pause": false
+        },
+        {
+          "text": "Char all the vegetables without adding any oil on a skillet, until they softened a bit. Don't worry if they look burned, this will add an amazing flavor to our sauce!",
+          "pause": false
+        },
+        {
+          "text": "Transfer the vegetables onto a plate, and let them cool down a bit.",
+          "pause": false
+        },
+        {
+          "text": "When the vegetables are cold enough to touch them, roughly cut them, and remove the roots of the tomatoes and chiles.",
+          "pause": false
+        },
+        {
+          "text": "Purée the vegetables using a hand blender or a food processor until you have a smooth paste (but not too smooth, some texture is nice to have here).",
+          "pause": false
+        },
+        {
+          "text": "Add some chili flakes if not spicy enough, and season with salt to your taste.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Sauce",
+    "Spicy",
+    "Charring",
+    "Foundation",
+    "Salsa"
+  ],
+  "time": 30,
+  "title": "Salsa roja tatemada",
+  "titleEnglish": "Charred red sauce",
+  "tools": [
+    "blender or food processor"
+  ],
+  "yields": {
+    "amount": 200,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/MBQKOd8lRSGFIeD3bvrC",
+      "handle": "MBQKOd8lRSGFIeD3bvrC",
+      "width": 6240,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "huevos-rancheros-en-sombrero",
+      "title": "Huevos rancheros en sombrero"
+    },
+    {
+      "slug": "cochinita-pibil-tacos",
+      "title": "Cochinita pibil tacos"
+    },
+    {
+      "slug": "donerritos",
+      "title": "Dönerritos"
+    },
+    {
+      "slug": "klatz-burger",
+      "title": "Klatz burger"
+    },
+    {
+      "slug": "tacos-de-higado",
+      "title": "Tacos de hígado"
+    }
+  ],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

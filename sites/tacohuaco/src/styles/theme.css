@@ -1,0 +1,71 @@
+/**
+ * Site theme, extends Tâmia theme.
+ */
+@theme {
+	/* Colors */
+	--color-background: #fff;
+	--color-text: #362a1b;
+	--color-primary: #362a1b;
+	--color-border: #362a1b;
+	--color-secondary: #664f33;
+	--color-light: #eee6dd;
+	--color-accent: #c94a4a;
+	--color-moon: #7277c0;
+	--color-selection: #faebaf;
+
+	/* Fonts */
+	--font-body: ProximaNova, 'Helvetica Neue', Arial, sans-serif;
+	--font-heading: AzoSans, 'Helvetica Neue', Arial, sans-serif;
+	--font-ui: AzoSans, 'Helvetica Neue', Arial, sans-serif;
+
+	/* Text sizes */
+	--text-root: 1.125em;
+	--text-lg: 1.3rem;
+	--text-xl: 1.7rem;
+	--text-2xl: 2.1rem;
+	--text-article: 1.1rem;
+	--text-ui: 1.1rem;
+	--text-heading-1: var(--text-2xl);
+	--text-heading-2: var(--text-xl);
+	--text-heading-3: var(--text-lg);
+
+	/* Letter spacings */
+	--tracking-menu: 0.15ex;
+
+	/* Spacing */
+	--spacing-list-margin: 1.2rem;
+
+	/* Radii */
+	--radius-normal: 1px;
+	--radius-button: 0;
+
+	/* Shadows */
+	--shadow-popover: 0 6px 20px -2px hsla(0, 0%, 0%, 0.2);
+	--shadow-menu: 5px 5px 0 -2px var(--color-background),
+		5px 5px 0 var(--color-accent);
+	--shadow-input: 5px 5px 0 var(--color-accent);
+	--shadow-heading: 2px 2px 0 var(--color-light);
+
+	/* Easings */
+	--ease-expand: ease-in-out;
+
+	/* Durations */
+	--duration-expand: 300ms;
+}
+
+/**
+ * Dark theme.
+ */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #362a1b;
+		--color-text: #d7cbc1;
+		--color-primary: #d7cbc1;
+		--color-border: #d7cbc1;
+		--color-secondary: #d1c1b8;
+		--color-light: #5e4f3d;
+		--color-accent: #f06958;
+		--color-moon: #7277c0;
+		--color-selection: #61656b;
+	}
+}

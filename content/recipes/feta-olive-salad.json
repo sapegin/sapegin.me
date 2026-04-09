@@ -1,0 +1,136 @@
+{
+  "createdAt": "2024-01-23T11:49:08.456Z",
+  "cuisines": [
+    "Mediterranean"
+  ],
+  "description": "This super simple salad works great with roasted chicken and potatoes…",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "cheese",
+            "modifier": "feta",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive",
+            "comment": "mix of green and black",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coriander seeds",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "fennel seeds",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "feta-olive-salad",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Cut the feta cheese into 2 cm cubes.",
+          "pause": false
+        },
+        {
+          "text": "In a bowl, add the feta cheese, olives, and a bit of olive oil.",
+          "pause": false
+        },
+        {
+          "text": "Grind the cumin, coriander, and fennel seeds into the salad.",
+          "pause": false
+        },
+        {
+          "text": "Thoroughly mix everything.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Salad",
+    "Quick",
+    "Picnic"
+  ],
+  "time": 10,
+  "title": "Feta olive salad",
+  "tools": [],
+  "yields": {
+    "amount": 1,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/x9SW0orSBuUqU8fEiKTs",
+      "handle": "x9SW0orSBuUqU8fEiKTs",
+      "width": 5249,
+      "height": 4068
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

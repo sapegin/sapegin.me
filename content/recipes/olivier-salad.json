@@ -1,0 +1,371 @@
+{
+  "createdAt": "2022-01-02T11:11:13.629Z",
+  "cuisines": [
+    "Russian"
+  ],
+  "description": "Olivier salad is known as Russian salad outside of Russia. It is an essential part of the Russian New Year’s Eve feast. This recipe is using chicken (feel free to skip it for a vegetarian variation) instead of beef, which would be more common, and [homemade mayonnaise](https://tacohuaco.co/recipes/mayonnaise/) that gives it a very nice light olive flavor, in comparison to most store-bought mayonnaise with its unpleasant fattiness.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the mayonnaise",
+      "ingredients": [
+        [
+          {
+            "name": "egg",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "yolk",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "Dijon",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "minAmount": 80,
+            "maxAmount": 80,
+            "unit": "ml",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the salad",
+      "ingredients": [
+        [
+          {
+            "name": "chicken",
+            "minAmount": 300,
+            "maxAmount": 300,
+            "unit": "g",
+            "comment": "1 breast or 2 legs",
+            "kind": 2,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "potato",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "carrot",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cucumber",
+            "modifier": "pickled",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "comment": "hard-boiled",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pea",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "g",
+            "comment": "frozen or fresh",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bay leaf",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "Russian salad"
+  ],
+  "notes": [],
+  "overnight": false,
+  "slug": "olivier-salad",
+  "steps": [
+    {
+      "name": "To make the mayonnaise",
+      "steps": [
+        {
+          "text": "Take a blender jar and place it on a kitchen towel to stabilize it.",
+          "pause": false
+        },
+        {
+          "text": "Peel garlic.",
+          "pause": false
+        },
+        {
+          "text": "Separate egg yolk from egg white into the blender jar (you don’t need whites for this recipe).",
+          "pause": false
+        },
+        {
+          "text": "Add to the blender jar mustard, press the garlic, and juice the lime.",
+          "pause": false
+        },
+        {
+          "text": "Add 2 tablespoons of olive oil and a teaspoon of water.",
+          "pause": false
+        },
+        {
+          "text": "Mix everything using a blender.",
+          "pause": false
+        },
+        {
+          "text": "Now start slowly pouring the olive oil. Don't add more oil until it's fully incorporated.",
+          "pause": false
+        },
+        {
+          "text": "Add more water to achieve desired consistency. Add more salt if needed.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To make the salad",
+      "steps": [
+        {
+          "text": "Rinse the chicken in cold water, put it into a medium-sized pot, add <Ingredient name=\"bay leaf\"  />, a bit of salt, and cover with water. Cook for about 30 minutes after the water is boiling on medium heat, until the chicken is tender.",
+          "pause": false
+        },
+        {
+          "text": "Cool down the chicken in the broth, and then take it out (this will make the taste more intense).",
+          "pause": false
+        },
+        {
+          "text": "While the chicken is cooking, put the potatoes and the carrot into another medium-sized pot (both unpeeled), add salt and cook on medium heat until tender.",
+          "pause": false
+        },
+        {
+          "text": "When the vegetables are ready, remove them from water, cool down, and peel. (The carrots may be ready earlier than the potatoes, remove them from the water and keep cooking the carrot until it’s ready.)",
+          "pause": false
+        },
+        {
+          "text": "Cook the eggs in water, for 9 minutes after the water starts to boil. Remove the eggs from the water and run cold water over them to cool them down and make peeling easier.",
+          "pause": false
+        },
+        {
+          "text": "Defrost the peas, if frozen: put them into a colander and pour about 2 liters of boiling water over them.",
+          "pause": false
+        },
+        {
+          "text": "Cut the meat, eggs, and all the vegetables into 1/2 cm cubes.",
+          "pause": false
+        },
+        {
+          "text": "Transfer the meat, eggs, and all the vegetables into a large bowl, and add peas.",
+          "pause": false
+        },
+        {
+          "text": "Add mayonnaise and thoroughly mix everything.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Salad",
+    "NewYear",
+    "Celebration",
+    "Cold",
+    "Christmas"
+  ],
+  "time": 90,
+  "title": "Olivier salad with chicken",
+  "tools": [
+    "hand blender"
+  ],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/6TN0k6CURSyZ9DqeA4mN",
+      "handle": "6TN0k6CURSyZ9DqeA4mN",
+      "width": 5396,
+      "height": 4050
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "mayonnaise",
+      "title": "Mayonnaise"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "30 minutes",
+      "covered": true,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "9 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

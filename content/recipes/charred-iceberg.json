@@ -1,0 +1,100 @@
+{
+  "createdAt": "2021-08-24T06:56:28.599Z",
+  "cuisines": [
+    "Klatzlandian"
+  ],
+  "description": "If you have a retired iceberg salad at the back of your fridge that's too old for an actual salad, in 10 minutes you could make a nice snack. Works great with [charred red sauce](/recipes/charred-red-sauce/), but could be served with any other sauce you have: [pesto](/recipes/pesto/), or even a [salad dressing](/recipes/golden-salad-dressing/).",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "iceberg salad",
+            "comment": "as much as you have",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "sesame seeds",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "charred-iceberg",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Remove the root from the iceberg and cut the iceberg into 2 cm slices, discard the root.",
+          "pause": false
+        },
+        {
+          "text": "Char both sides on a pan without adding oil, on medium-high heat, until softened and burned a bit.",
+          "pause": false
+        },
+        {
+          "text": "Serve with salt, sesame seeds, and any sauce you have.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Charring",
+    "Leftovers"
+  ],
+  "time": 10,
+  "title": "Charred iceberg",
+  "tools": [],
+  "yields": {
+    "amount": 1,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/jbgvMq88S3uL4YDgF8ZJ",
+      "handle": "jbgvMq88S3uL4YDgF8ZJ",
+      "width": 2925,
+      "height": 2925
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

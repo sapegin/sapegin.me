@@ -1,0 +1,385 @@
+{
+  "createdAt": "2024-11-10T13:23:37.301Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Tacos al pastor, one of Mexico's most beloved street foods, is known for its vibrant flavors and aromatic spices. These tacos originated from Lebanese immigrants who brought shawarma to Mexico in the early 20th century. Over time, Mexicans adapted the dish, swapping lamb for pork and adding pineapple for a touch of sweetness. Traditionally, *tacos al pastor* are cooked on a *trompo* — a vertical rotisserie where marinated pork is stacked and roasted in front of an open flame until perfectly tender and caramelized. Our recipe is made for cooking at home, on a skillet.\n\nFor Margarita, this recipe seemed very daunting until she tried to cook it for the first time. We hope you’ll enjoy making these tacos at home and sharing them with friends and family. Don’t forget to put some spicy salsita on your taco!",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the meat",
+      "ingredients": [
+        [
+          {
+            "name": "pork",
+            "minAmount": 1500,
+            "maxAmount": 1500,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "orange",
+            "minAmount": 4,
+            "maxAmount": 4,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              1,
+              2,
+              3,
+              4,
+              11,
+              12
+            ]
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "achiote",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "dried oregano",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "pinch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the pineapple",
+      "ingredients": [
+        [
+          {
+            "name": "pineapple",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 6,
+            "maxAmount": 9,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cinnamon",
+            "modifier": "ground",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For serving",
+      "ingredients": [
+        [
+          {
+            "name": "tortilla",
+            "modifier": "corn",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "avocado",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              1,
+              2,
+              3,
+              4,
+              11,
+              12
+            ]
+          }
+        ],
+        [
+          {
+            "name": "pico de gallo",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "subrecipeSlug": "pico-de-gallo"
+          }
+        ],
+        [
+          {
+            "name": "first world salsa verde",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "salsa-verde-de"
+          }
+        ],
+        [
+          {
+            "name": "pickled onions",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "pickled-onions"
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": true,
+  "slug": "tacos-al-pastor",
+  "steps": [
+    {
+      "name": "To cook the meat",
+      "steps": [
+        {
+          "text": "Halve the onion, peel, and slice into 1/2 cm slices.",
+          "pause": false
+        },
+        {
+          "text": "Prepare the marinade: juice the oranges, dilute <Ingredient name=\"achiote\"  /> in orange juice, add onions, <Ingredient name=\"dried oregano\"  />, and salt.",
+          "pause": false
+        },
+        {
+          "text": "Wash the meat, and cut into 2 cm cubes, add the meat to the marinade, and thoroughly mix.",
+          "pause": false
+        },
+        {
+          "text": "Refrigerate the meat overnight in a closed container.",
+          "pause": false
+        },
+        {
+          "text": "In a medium-size pot set on medium-high heat, start cooking the meat. Bring to a boil, reduce the heat to medium-low, and cook covered for about 40 minutes, until the meat is soft.",
+          "pause": false
+        },
+        {
+          "text": "Heat a bit of olive oil on a medium-size skillet set on medium-high heat, and fry the meat with a bit of juice and onions for about 10 minutes, until it starts to brown a bit.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the pineapple",
+      "steps": [
+        {
+          "text": "While the meet is cooking, peel the pineapple, remove the core, and cut it into 1 cm cubes.",
+          "pause": false
+        },
+        {
+          "text": "In a medium-sized non-sticking pot, melt the butter.",
+          "pause": false
+        },
+        {
+          "text": "Add the pineapple, <Ingredient name=\"coconut sugar\"  />, and <Ingredient name=\"cinnamon\" modifier=\"ground\" />. Stir thoroughly, and cook covered for about 15 minutes, until the pineapple is soft.",
+          "pause": false
+        },
+        {
+          "text": "Uncover the pineapples, and cook for about 5 minutes more to reduce the liquid.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To serve",
+      "steps": [
+        {
+          "text": "Warm up the tortillas: heat a non-sticking or cast iron skillet on medium-high until hot (don’t add oil). Warm the tortillas one by one: for about 30 seconds on one side, then for about one minute on the other side, then flip again and cook a bit more, until crispy but still slightly flexible (they shouldn’t be too soft because the meat is very juicy, and they may break).",
+          "pause": false
+        },
+        {
+          "text": "Serve all the ingredients separately: meat, tortillas, avocado, pineapples, pico de gallo, salsa verde, and pickled onions, so everyone can assemble a taco of their dream.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Tacos",
+    "Celebration",
+    "Crowd",
+    "Dinner"
+  ],
+  "time": 190,
+  "title": "Tacos al pastor",
+  "tools": [
+    "large skillet with a lid",
+    "medium-sized non-sticking pot with a lid"
+  ],
+  "yields": {
+    "amount": 35,
+    "unit": "taco"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/VLcSk0ZDQUWx4dxpYNNT",
+      "handle": "VLcSk0ZDQUWx4dxpYNNT",
+      "width": 4032,
+      "height": 3024
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "salsa-verde-de",
+      "title": "First world salsa verde"
+    },
+    {
+      "slug": "pickled-onions",
+      "title": "Pickled onions"
+    },
+    {
+      "slug": "pico-de-gallo",
+      "title": "Pico de gallo"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    3,
+    4
+  ],
+  "chart": [
+    {
+      "type": "Refrigerate",
+      "overnight": true,
+      "covered": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "boil",
+      "value": "40 minutes",
+      "covered": true,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "fry",
+      "value": "10 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "15 minutes",
+      "covered": true,
+      "overnight": false
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

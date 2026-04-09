@@ -31,6 +31,15 @@ export default [
 	},
 	{
 		...eslintPluginBetterTailwindcss.configs.recommended,
+		files: ['sites/tacohuaco/**/*.{ts,tsx,astro}'],
+		settings: {
+			'better-tailwindcss': {
+				entryPoint: 'sites/tacohuaco/src/styles/index.css',
+			},
+		},
+	},
+	{
+		...eslintPluginBetterTailwindcss.configs.recommended,
 		files: ['shared/**/*.{ts,tsx}'],
 		settings: {
 			'better-tailwindcss': {

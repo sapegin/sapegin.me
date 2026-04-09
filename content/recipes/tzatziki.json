@@ -1,0 +1,154 @@
+{
+  "createdAt": "2021-09-08T14:08:39.094Z",
+  "cuisines": [
+    "Greek"
+  ],
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "cucumber",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "dill",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "sprig",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "yogurt",
+            "minAmount": 150,
+            "maxAmount": 150,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "If you don't have cucumbers, replace them with green paprika."
+  ],
+  "overnight": false,
+  "slug": "tzatziki",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Trim sides of the cucumber, remove the seeds, and grate it on a medium side of a grater into a medium bowl. Grate the short side of the cucumber, so the pieces aren’t too long.",
+          "pause": false
+        },
+        {
+          "text": "Peel the garlic and press it into the bowl with the cucumber.",
+          "pause": false
+        },
+        {
+          "text": "Juice the lime into the bowl.",
+          "pause": false
+        },
+        {
+          "text": "Remove stems of the dill and finely chop the fronds. Add chopped fronds into the bowl.",
+          "pause": false
+        },
+        {
+          "text": "Add yogurt into the bowl, and mix everything.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dip",
+    "Sauce"
+  ],
+  "time": 10,
+  "title": "Tzatziki",
+  "tools": [],
+  "yields": {
+    "amount": 200,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/uNIxemn7RT6GEncr0xqD",
+      "handle": "uNIxemn7RT6GEncr0xqD",
+      "width": 3945,
+      "height": 3945
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

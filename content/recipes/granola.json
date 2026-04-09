@@ -1,0 +1,203 @@
+{
+  "createdAt": "2021-08-04T06:45:55.436Z",
+  "cuisines": [
+    "UnitedStates",
+    "Klatzlandian"
+  ],
+  "description": "Most granola recipes are using a combination of nuts and dried fruits, but our favorite is the simplest of all: with just dried cranberries.\n\nCombined with yogurt and fresh berries, makes an awesome breakfast.\n\nThis _was_ our favorite granola recipe until we became date addicts and invented [date granola](https://tacohuaco.co/recipes/date-granola/), and later the [Morning crunch granola](https://tacohuaco.co/recipes/morning-crunch-granola/).",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "oat",
+            "minAmount": 300,
+            "maxAmount": 300,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "modifier": "fine",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cinnamon",
+            "modifier": "ground",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut oil",
+            "modifier": "melted",
+            "minAmount": 80,
+            "maxAmount": 80,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "maple syrup",
+            "minAmount": 80,
+            "maxAmount": 80,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "vanilla extract",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "dried cranberry",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "unit": "cup",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": true,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "muesli"
+  ],
+  "notes": [
+    "Store the granola in an airtight container at room temperature for up to two weeks."
+  ],
+  "overnight": false,
+  "slug": "granola",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Preheat oven to 180C. Line a baking sheet with parchment paper.",
+          "pause": false
+        },
+        {
+          "text": "Melt <Ingredient name=\"coconut oil\"  /> and let it cool a bit.",
+          "pause": false
+        },
+        {
+          "text": "In a large bowl, combine <Ingredient name=\"oat\"  />, <Ingredient name=\"salt\"  />, and <Ingredient name=\"cinnamon\"  />. Mix everything.",
+          "pause": false
+        },
+        {
+          "text": "Pour in the coconut oil, <Ingredient name=\"maple syrup\"  />, and <Ingredient name=\"vanilla extract\"  />. Mix well, until every oat is lightly coated.",
+          "pause": false
+        },
+        {
+          "text": "Evenly distribute the granola on the baking sheet using a large spoon.",
+          "pause": false
+        },
+        {
+          "text": "Bake for 8 minutes, stir, bake for another 5-8 minutes, until golden but not dark.",
+          "pause": false
+        },
+        {
+          "text": "Let the granola cool completely.",
+          "pause": false
+        },
+        {
+          "text": "Break it into pieces, and stir in the dried cranberries.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Breakfast"
+  ],
+  "time": 25,
+  "title": "Cranberry granola",
+  "tools": [
+    "oven"
+  ],
+  "yields": {
+    "amount": 500,
+    "unit": "g"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/v6D7LisWSt6tk4Nc5Pw7",
+      "handle": "v6D7LisWSt6tk4Nc5Pw7",
+      "width": 5392,
+      "height": 3595
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "PreheatOven",
+      "value": "180C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "5-8 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": false
+}

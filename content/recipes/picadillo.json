@@ -1,0 +1,219 @@
+{
+  "createdAt": "2022-09-12T17:51:48.759Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Picadillo is a Mexican dish that, depending on the region, could look different. It’s not a fancy recipe but it’s a very cost-efficient one since you could double the final amount by adding more vegetables without sacrificing so much flavor along the way.\n\nThis one here is also called *dried picadillo* since it’s not served as a stew, and is mostly used as a filling for tacos, burritos, sopes, and gorditas, among many other things; or even just served with some refried beans on the side.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "modifier": "fresh",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "carrot",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pork",
+            "modifier": "ground",
+            "minAmount": 200,
+            "maxAmount": 200,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "beef",
+            "modifier": "ground",
+            "minAmount": 200,
+            "maxAmount": 200,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pea",
+            "minAmount": 50,
+            "maxAmount": 50,
+            "unit": "g",
+            "comment": "fresh or frozen",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "modifier": "ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "dried picadillo"
+  ],
+  "notes": [
+    "If you find fresh Serrano chilies, they are the best option for this picadillo. You can also replace the fresh chili with chili flakes, or mix a fresh chili with flakes to reach the level of spiciness you like.",
+    "If you want to increase the amount, try to add a couple of new potatoes together with carrots."
+  ],
+  "overnight": false,
+  "slug": "picadillo",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the vegetables. **Onion, chili, garlic, and carrot:** peel, and cut into small dice.",
+          "pause": false
+        },
+        {
+          "text": "In a large skillet set on medium fire with a generous amount of olive oil, sauté the onion and the garlic, until the onion is transparent.",
+          "pause": false
+        },
+        {
+          "text": "Add the chili and stir for a couple of minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the carrots, and cook for about 5 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the ground meat. Season with salt, and ground cumin. Cook stirring occasionally until there are no pink spots on the meat.",
+          "pause": false
+        },
+        {
+          "text": "Add the peas, and cook stirring occasionally until the peas are warm.",
+          "pause": false
+        },
+        {
+          "text": "Add more salt if needed.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Foundation"
+  ],
+  "time": 30,
+  "title": "Picadillo",
+  "tools": [],
+  "yields": {
+    "amount": 500,
+    "unit": "g"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/I2ayLy2JTduoalptPmd6",
+      "handle": "I2ayLy2JTduoalptPmd6",
+      "width": 4622,
+      "height": 3120
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "burritos",
+      "title": "Burritos"
+    }
+  ],
+  "seasons": [],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

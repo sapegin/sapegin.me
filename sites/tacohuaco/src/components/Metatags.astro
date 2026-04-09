@@ -1,0 +1,76 @@
+---
+import removeMarkdown from 'remove-markdown';
+import {
+	SITE_DESCRIPTION,
+	SITE_HOST,
+	SITE_TITLE,
+	SITE_URL,
+} from '../constants';
+import { getHygraphImageUrl } from '../util/getHygraphImageUrl';
+
+const TACO_SVG =
+	'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌮</text></svg>';
+
+export type Props = {
+	title?: string;
+	url?: string;
+	description?: string;
+	hygraphImageHandle?: string;
+};
+
+const {
+	title = '',
+	url = '/',
+	description = SITE_DESCRIPTION,
+	hygraphImageHandle,
+} = Astro.props;
+
+const descriptionText = removeMarkdown(description);
+
+const isArticle = url.startsWith('/recipes/');
+const canonicalUrl = `${SITE_URL}${url}`;
+
+const imageUrl = hygraphImageHandle
+	? getHygraphImageUrl(hygraphImageHandle, {
+			width: 1200,
+			height: 1200,
+			quality: 50,
+			webP: false,
+		})
+	: undefined;
+---
+
+<meta charset="utf-8" />
+<meta
+	name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+<link rel="icon" href={TACO_SVG} />
+<meta name="description" content={descriptionText} />
+<meta property="og:type" content={isArticle ? 'article' : 'website'} />
+<meta property="og:title" content={title} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:description" content={descriptionText} />
+<link
+	rel="canonical"
+	href={canonicalUrl}
+	data-baseprotocol="https:"
+	data-basehost={SITE_HOST}
+/>
+<link
+	rel="alternate"
+	type="application/rss+xml"
+	title="RSS Feed"
+	href={`${SITE_URL}/atom.xml`}
+/>
+<link rel="sitemap" href={`${SITE_URL}/sitemap-index.xml`} />
+{
+	imageUrl && (
+		<>
+			<meta property="og:image" content={imageUrl} />
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:image" content={imageUrl} />
+		</>
+	)
+}

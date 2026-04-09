@@ -1,0 +1,347 @@
+{
+  "createdAt": "2022-08-09T10:16:45.904Z",
+  "cuisines": [
+    "Uzbek"
+  ],
+  "description": "This is our simplified variation of a famous Uzbek rice dish plov (or pilaf). It may not be very authentic and uses the wrong meat (pork instead of lamb) but it’s still full of flavor that will make you smile and want to eat more. And you could make enough for all your friends or eat it yourself for several days.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "rice",
+            "minAmount": 500,
+            "maxAmount": 500,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pork",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "carrot",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "modifier": "fresh",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "head",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cardamon",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "curcuma powder",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "turmeric powder",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "peppercorn",
+            "modifier": "black",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "star anise",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "raisin",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "handful",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "ml",
+            "comment": "boiling",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "pilaf",
+    "palov"
+  ],
+  "notes": [],
+  "overnight": true,
+  "slug": "plov",
+  "source": "This recipe was inspired by the recipes in Hakim Ganiev’s “Plov” book.",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Rinse the meat in cold water, dry using paper towels, season it with salt, and refrigerate it in a sealed container (or wrapped in a film) overnight.",
+          "pause": true
+        },
+        {
+          "text": "Rinse the rice in cold water until the water is clear, remove the stones from the rice, and soak it in warm water (30-35C).",
+          "pause": false
+        },
+        {
+          "text": "Cut the meat into 3 cm cubes.",
+          "pause": false
+        },
+        {
+          "text": "Prepare the vegetables. **Onions:** peel, halve it and cut into 1/2 cm slices. **Carrots:** peel, halve lengthwise, and cut into 1/2 cm half-moons. **Chiles:** halve lengthwise, remove the seeds, and thinly slice. **Garlic:** remove the outer peels, and cut the top part of the heads to expose the cloves (but keep them attached together).",
+          "pause": false
+        },
+        {
+          "text": "Brown the meat in a dutch oven with olive oil on medium heat until golden on all sides, stirring occasionally, for about 10-15 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add onions, carrots, and chiles to the dutch oven, and cook for 10 more minutes, stirring occasionally.",
+          "pause": false
+        },
+        {
+          "text": "Cover with boiling water, so all the vegetables and meat are underwater.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"cumin seeds\"  />, <Ingredient name=\"cardamon\"  />, <Ingredient name=\"curcuma powder\"  />, <Ingredient name=\"peppercorn\"  />, <Ingredient name=\"star anise\"  />, and <Ingredient name=\"raisin\"  />, then stir gently.",
+          "pause": false
+        },
+        {
+          "text": "Place the garlic head in the middle, bring to a boil, then reduce the heat to low and simmer for 30-40 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Discard the rice water, and add the rice to the vegetables and meat, gently stir.",
+          "pause": false
+        },
+        {
+          "text": "If needed, add more boiling water, so there’s around 1 cm of water on top of everything.",
+          "pause": false
+        },
+        {
+          "text": "Add more salt if needed.",
+          "pause": false
+        },
+        {
+          "text": "Cook covered for 15-25 minutes.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Crowd",
+    "Dinner",
+    "DutchOven",
+    "OnePot",
+    "Celebration",
+    "rice"
+  ],
+  "time": 120,
+  "title": "Plov",
+  "tools": [
+    "dutch oven"
+  ],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/12R3MIfWTYSfbeexGalp",
+      "handle": "12R3MIfWTYSfbeexGalp",
+      "width": 5019,
+      "height": 4069
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "Refrigerate",
+      "overnight": true,
+      "covered": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "10 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "boil",
+      "value": "30-40 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "15-25 minutes",
+      "covered": true,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

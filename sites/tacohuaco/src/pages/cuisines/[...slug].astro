@@ -1,0 +1,44 @@
+---
+import uniq from 'lodash/uniq';
+import kebabCase from 'lodash/kebabCase';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { RecipesPage } from '../../templates/RecipesPage';
+import { recipeEntryToRecipe } from '../../util/recipeEntryToRecipe';
+import type { Recipe } from '../../types/Recipe';
+
+type Props = {
+	slug: string;
+	cuisine: string;
+	recipes: Recipe[];
+};
+
+export async function getStaticPaths() {
+	const entries = await getCollection('recipes');
+	const cuisines = uniq(entries.flatMap((x) => x.data.cuisines));
+	return cuisines.map((cuisine) => {
+		const slug = kebabCase(cuisine);
+		return {
+			params: { slug },
+			props: {
+				slug,
+				cuisine,
+				recipes: entries
+					.filter((x) => x.data.cuisines.includes(cuisine))
+					.map((x) => recipeEntryToRecipe(x)),
+			},
+		};
+	});
+}
+
+const { slug, cuisine, recipes } = Astro.props;
+---
+
+<Layout
+	url={`/cuisines/${slug}/`}
+	title={`${cuisine} recipes`}
+	component={RecipesPage}
+	props={{
+		recipes,
+	}}
+/>

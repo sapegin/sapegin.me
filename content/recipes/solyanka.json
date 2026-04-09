@@ -1,0 +1,367 @@
+{
+  "createdAt": "2022-01-03T08:02:53.387Z",
+  "cuisines": [
+    "Russian"
+  ],
+  "description": "The distinctive features of this recipe are the mix of three different types of meat (you could use any meats you like, not just the ones mentioned in the recipe) and the pleasant acidity from the capers, olives, pickled cucumbers, and lime. All this makes a very nice, complex flavor.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "pork",
+            "minAmount": 400,
+            "maxAmount": 400,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "ham",
+            "minAmount": 150,
+            "maxAmount": 150,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "sausage",
+            "modifier": "smoked",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato",
+            "minAmount": 4,
+            "maxAmount": 4,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "modifier": "fresh",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive",
+            "minAmount": 8,
+            "maxAmount": 8,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "caper",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bay leaf",
+            "minAmount": 4,
+            "maxAmount": 4,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coriander seeds",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cucumber",
+            "modifier": "pickled",
+            "comment": "for serving",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "smetana",
+            "comment": "for serving",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "solyanka",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Rinse the pork in cold water, cut into big chunks, put it into a pot, and cover it with 2 liters of water. Add salt, <Ingredient name=\"bay leaf\"  />, and cook until soft on medium heat, for about 30 minutes after the water starts to boil.",
+          "pause": false
+        },
+        {
+          "text": "While the pork is cooking, cut the ham and the sausages into 1/2 cm cubes.",
+          "pause": false
+        },
+        {
+          "text": "On a medium-sized skillet, heat olive oil on medium heat, cook the ham and the sausages for about 15 minutes, until brown on all sides.",
+          "pause": false
+        },
+        {
+          "text": "While the meats are cooking, prepare the vegetables.<br>\n**Tomatoes:** quarter and remove the roots.<br>\n**Onion:** peel and cut into small dice. **Garlic:** peel, and thinly slice. **Chile:** halve lengthwise, remove the root and seeds, and thinly slice.<br>\n**Olives:** thinly slice.",
+          "pause": false
+        },
+        {
+          "text": "When the pork is ready, let it cool, and remove it from the broth. Filter the broth using a metal sieve.",
+          "pause": false
+        },
+        {
+          "text": "Blend the tomatoes using a blender.",
+          "pause": false
+        },
+        {
+          "text": "Sauté the onion and chiles on a skillet with a bit of salt (add more olive oil if necessary), on medium heat, for about 2-3 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the garlic to the onions and chiles, and keep cooking for 2-3 minutes more, until transparent.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"cumin seeds\"  />, and <Ingredient name=\"coriander seeds\"  />, and cook for another 30 seconds.",
+          "pause": false
+        },
+        {
+          "text": "Transfer the pork, the ham and the sausages into the pot with the broth.",
+          "pause": false
+        },
+        {
+          "text": "Add the onion, chiles, garlic, and tomato sauce to the pot with the soup, and bring it to a boil.",
+          "pause": false
+        },
+        {
+          "text": "Add the olives and capers.",
+          "pause": false
+        },
+        {
+          "text": "Reduce the heat to medium-low, and simmer the soup for about 30 minutes, stirring occasionally, then remove from the heat.",
+          "pause": false
+        },
+        {
+          "text": "Add more salt if needed.",
+          "pause": false
+        },
+        {
+          "text": "Prepare the vegetables for serving.<br>\n**Lime:** cut into 8 wedges. **Pickled cucumbers:** thinly slice.",
+          "pause": false
+        },
+        {
+          "text": "Serve: add into each plate of the soup two wedges of lime, 1/2 sliced pickled cucumber with a bit of its liquid, and a dollop of smetana.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Soup",
+    "Celebration",
+    "Crowd",
+    "Dinner",
+    "Lunch",
+    "NewYear",
+    "Warming"
+  ],
+  "time": 120,
+  "title": "Solyanka",
+  "tools": [
+    "medium-sized skillet",
+    "blender"
+  ],
+  "yields": {
+    "amount": 8,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/8wZu3UmDRE6alSEz6PcV",
+      "handle": "8wZu3UmDRE6alSEz6PcV",
+      "width": 5989,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "30 minutes",
+      "covered": true,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "15 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "simmer",
+      "value": "30 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove.",
+    "Smetana _(сметана)_ is a type of sour cream similar to crème fraîche."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

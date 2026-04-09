@@ -1,0 +1,201 @@
+{
+  "createdAt": "2022-01-02T10:58:08.365Z",
+  "cuisines": [
+    "French"
+  ],
+  "description": "In comparison to most store-bought mayonnaises with their unpleasant fattiness, this mayonnaise has a very nice light olive flavor.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "egg",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "yolk",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "Dijon",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "minAmount": 80,
+            "maxAmount": 80,
+            "unit": "ml",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "The flavor of the mayonnaise depends a lot on the olive oil you’re using. If olive oil has bitter flavor, mayonnaise will be bitter too, so choose lighter, more fruity olive oil.",
+    "The mayonnaise can be stored in the fridge in an air-tight container for up to two weeks."
+  ],
+  "overnight": false,
+  "slug": "mayonnaise",
+  "source": "This recipe is based on J. Kenji Lopez-Alt’s book “The Food Lab: Better Home Cooking Through Science”",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Take a blender jar and place it on a kitchen towel to stabilize it.",
+          "pause": false
+        },
+        {
+          "text": "Peel garlic.",
+          "pause": false
+        },
+        {
+          "text": "Separate egg yolk from egg white into the blender jar (you don’t need whites for this recipe).",
+          "pause": false
+        },
+        {
+          "text": "Add to the blender jar mustard, press the garlic, and juice the lime.",
+          "pause": false
+        },
+        {
+          "text": "Add 2 tablespoons of olive oil and a teaspoon of water.",
+          "pause": false
+        },
+        {
+          "text": "Mix everything using a blender.",
+          "pause": false
+        },
+        {
+          "text": "Now start slowly pouring the olive oil. Don't add more oil until it's fully incorporated.",
+          "pause": false
+        },
+        {
+          "text": "Add more water to achieve desired consistency. Add more salt if needed.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dressing",
+    "Dip",
+    "Sauce",
+    "Foundation"
+  ],
+  "time": 15,
+  "title": "Mayonnaise",
+  "tools": [
+    "hand blender"
+  ],
+  "yields": {
+    "amount": 100,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/EGQ3qiGBSdGY0PfSzuAi",
+      "handle": "EGQ3qiGBSdGY0PfSzuAi",
+      "width": 4467,
+      "height": 3924
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "olivier-salad",
+      "title": "Olivier salad with chicken"
+    }
+  ],
+  "seasons": [],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

@@ -1,0 +1,22 @@
+---
+import sortBy from 'lodash/sortBy';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { RecipesPage } from '../../templates/RecipesPage';
+import { recipeEntryToRecipe } from '../../util/recipeEntryToRecipe';
+
+const entries = await getCollection('recipes');
+const recipes = sortBy(
+	entries.map((x) => recipeEntryToRecipe(x)),
+	'title'
+);
+---
+
+<Layout
+	url="/recipes/"
+	title="All recipes"
+	component={RecipesPage}
+	props={{
+		recipes,
+	}}
+/>

@@ -1,0 +1,57 @@
+---
+import uniq from 'lodash/uniq';
+import kebabCase from 'lodash/kebabCase';
+import upperFirst from 'lodash/upperFirst';
+import lowerCase from 'lodash/lowerCase';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { RecipesPage } from '../../templates/RecipesPage';
+import { recipeEntryToRecipe } from '../../util/recipeEntryToRecipe';
+import type { Recipe } from '../../types/Recipe';
+
+const TAGS_TO_TITLES: Record<string, string> = {
+	NewYear: 'New Yearʼs eve recipes',
+};
+
+type Props = {
+	slug: string;
+	tag: string;
+	recipes: Recipe[];
+};
+
+export async function getStaticPaths() {
+	const entries = await getCollection('recipes');
+	const tags = uniq(entries.flatMap((x) => x.data.tags));
+	return tags.map((tag) => {
+		const slug = kebabCase(tag);
+		return {
+			params: { slug },
+			props: {
+				slug,
+				tag,
+				recipes: entries
+					.filter((x) => x.data.tags.includes(tag))
+					.map((x) => recipeEntryToRecipe(x)),
+			},
+		};
+	});
+}
+
+function tagToTitle(tagName: string) {
+	if (tagName in TAGS_TO_TITLES) {
+		return TAGS_TO_TITLES[tagName];
+	}
+	return `${upperFirst(lowerCase(tagName))} recipes`;
+}
+
+const { slug, tag, recipes } = Astro.props;
+---
+
+<Layout
+	url={`/tags/${slug}/`}
+	title={tagToTitle(tag)}
+	component={RecipesPage}
+	props={{
+		recipes,
+	}}
+/>

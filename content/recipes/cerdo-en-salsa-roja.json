@@ -1,0 +1,206 @@
+{
+  "createdAt": "2024-01-29T16:23:41.563Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "This is one of Artem’s favorite Mexican recipes, and it can be very very very spicy — if you add a lot of chiles. It takes a bit of time to cook but doesn’t take a lot of attention, and you could cook a lot of it at once and then eat it for several days.\n\nIt makes an amazing lunch with beans ([refried](/recipes/frijoles-refritos/) or just boiled) and warmed-up tortillas.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the meat",
+      "ingredients": [
+        [
+          {
+            "name": "pork",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the salsa",
+      "ingredients": [
+        [
+          {
+            "name": "tomato",
+            "minAmount": 4,
+            "maxAmount": 4,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile de árbol",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "handful",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "cerdo-en-salsa-roja",
+  "steps": [
+    {
+      "name": "To cook the meat",
+      "steps": [
+        {
+          "text": "Rinse the meat in cold water, and cut into 3 cm cubes.",
+          "pause": false
+        },
+        {
+          "text": "Cook the meat in salty water (1/2 of the height of meat, not more) covered for about 10 min (until it starts to boil).",
+          "pause": false
+        },
+        {
+          "text": "Reduce the heat to medium, uncover, stir, and cook uncovered for about 30 minutes, until the water evaporates.",
+          "pause": false
+        },
+        {
+          "text": "While the meat is cooking, prepare the salsa (see below).",
+          "pause": false
+        },
+        {
+          "text": "Add a bit of olive oil (unless the meat has a lot of fat already).",
+          "pause": false
+        },
+        {
+          "text": "Increase the heat a bit and brown the meat.",
+          "pause": false
+        },
+        {
+          "text": "Add the salsa and just enough water to cover the meat.",
+          "pause": false
+        },
+        {
+          "text": "Bring to a boil, then reduce the heat to low, and cook covered until the meat is tender, for about 40 minutes more.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the salsa",
+      "steps": [
+        {
+          "text": "Prepare the ingredients. **Tomatoes:** halve, and remove the roots. **Chilies:** remove the roots and stems. **Garlic:** peel.",
+          "pause": false
+        },
+        {
+          "text": "In a blender, mix tomatoes, chiles, and garlic with about 3/4 cup of water. (Don’t add salt at this step, since the meat is already salted.)",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Spicy",
+    "DutchOven",
+    "Lunch"
+  ],
+  "time": 120,
+  "title": "Cerdo en salsa roja",
+  "titleEnglish": "Pork in spicy red sauce",
+  "tools": [
+    "Dutch over or a medium-sized pot",
+    "blender"
+  ],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/mK3XvMteRwuqgjiO8U2V",
+      "handle": "mK3XvMteRwuqgjiO8U2V",
+      "width": 6240,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "30 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "boil",
+      "value": "40 minutes",
+      "covered": true,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

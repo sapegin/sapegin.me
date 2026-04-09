@@ -1,0 +1,250 @@
+{
+  "createdAt": "2022-07-13T06:36:05.219Z",
+  "cuisines": [
+    "Korean"
+  ],
+  "description": "This magic paste could be used not only to make kimchi but also to roast vegetables (try potatoes!), meat, chicken, or in soups.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "chile flakes",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "cup",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "modifier": "kosher",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "head",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "horseradish",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "ginger",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "fish sauce",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 3,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "oyster sauce",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 3,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "vinegar",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "soy sauce",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "unit": "cup",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "We use a mix of dry chiles we brought from Mexico (5-7 árbol, 2 guajillos, 1-2 ancho). You could use gochugaru or any spicy chili flakes you can find.",
+    "The paste will keep forever in a sealed container in the fridge."
+  ],
+  "overnight": false,
+  "slug": "kimchi-paste",
+  "source": "This recipe is based on Roy Choi’s recipe from MasterClass.",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "In a blender, combine all dry ingredients: chile flakes, salt, and coconut sugar. Mix until you have a consistent powder.",
+          "pause": false
+        },
+        {
+          "text": "Peel the garlic, horseradish or ginger, and onion. Quarter the onion.",
+          "pause": false
+        },
+        {
+          "text": "Add the remaining ingredients to the blender: garlic, horseradish or ginger, onion, <Ingredient name=\"fish sauce\"  />, <Ingredient name=\"oyster sauce\"  />, <Ingredient name=\"vinegar\"  />, <Ingredient name=\"soy sauce\"  />, and <Ingredient name=\"water\"  />. Mix until they form a smooth paste. Add more water if the paste is too thick.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Foundation",
+    "Spicy"
+  ],
+  "time": 10,
+  "title": "Kimchi paste",
+  "tools": [
+    "blender"
+  ],
+  "yields": {
+    "amount": 600,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/yiAEFAxcQZqkUsb6Cd4P",
+      "handle": "yiAEFAxcQZqkUsb6Cd4P",
+      "width": 4212,
+      "height": 3927
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "kimchi",
+      "title": "Kimchi"
+    },
+    {
+      "slug": "kimchi-soup",
+      "title": "Kimchi lava soup"
+    },
+    {
+      "slug": "klatz-pie",
+      "title": "Klatz pie"
+    },
+    {
+      "slug": "bibimbap",
+      "title": "Bibimbap"
+    }
+  ],
+  "seasons": [],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [
+    "**Soy sauce** is likely not gluten-free and contains wheat."
+  ],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

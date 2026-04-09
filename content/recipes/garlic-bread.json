@@ -1,0 +1,223 @@
+{
+  "createdAt": "2022-03-22T06:50:52.974Z",
+  "cuisines": [
+    "Italian",
+    "Klatzlandian"
+  ],
+  "description": "This is a perfect Sunday breakfast recipe — the smell and the taste of just baked garlic bread are amazing. You could do it with any kind of bread, we like to make it with our own [easy bread](/recipes/easy-bread/), baked the evening before.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "For the butter",
+      "ingredients": [
+        [
+          {
+            "name": "butter",
+            "minAmount": 125,
+            "maxAmount": 125,
+            "unit": "g",
+            "comment": "room temperature",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 4,
+            "maxAmount": 5,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parsley",
+            "minAmount": 4,
+            "maxAmount": 5,
+            "unit": "sprig",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cheese",
+            "modifier": "table spoons Parmigiano Reggiano",
+            "minAmount": 3,
+            "maxAmount": 4,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the bread",
+      "ingredients": [
+        [
+          {
+            "name": "bread",
+            "comment": "of your choice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "garlic-bread",
+  "steps": [
+    {
+      "name": "To make the butter",
+      "steps": [
+        {
+          "text": "Finely chop parsley.",
+          "pause": false
+        },
+        {
+          "text": "Put butter and parsley into a medium-sized bowl.",
+          "pause": false
+        },
+        {
+          "text": "Press the garlic into the bowl.",
+          "pause": false
+        },
+        {
+          "text": "Grate Parmigiano Reggiano into the bowl.",
+          "pause": false
+        },
+        {
+          "text": "Season with black pepper.",
+          "pause": false
+        },
+        {
+          "text": "Thoroughly mix all the ingredients.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To make the bread",
+      "steps": [
+        {
+          "text": "Preheat oven to 200C.",
+          "pause": false
+        },
+        {
+          "text": "Halve the bread lengthwise.",
+          "pause": false
+        },
+        {
+          "text": "Spread the garlic butter on both halves of the bread, coating the whole area (put a bit more in the middle so melting butter soaks the bread but doesn’t drip too much from the edges).",
+          "pause": false
+        },
+        {
+          "text": "Put the bread on a grid, and put a baking tray under (there should be something to catch the dripping butter, otherwise it’ll burn on the bottom of the oven).",
+          "pause": false
+        },
+        {
+          "text": "Bake for 10-20 minutes, until golden. (If the bread was just baked and still hot, 7-10 minutes should be enough.)",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Breakfast",
+    "Bread"
+  ],
+  "time": 25,
+  "title": "Garlic bread",
+  "tools": [
+    "oven",
+    "baking grid",
+    "baking tray",
+    "medium oven-safe glass bowl"
+  ],
+  "yields": {
+    "amount": 1,
+    "unit": "loaf"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/pxild3eRR7WPhloHWtcu",
+      "handle": "pxild3eRR7WPhloHWtcu",
+      "width": 5973,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "garlic-butter",
+      "title": "Garlic butter"
+    },
+    {
+      "slug": "easy-bread",
+      "title": "Easy bread"
+    }
+  ],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "WarmToRoomTemp",
+      "subtype": "butter",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "200C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "10-20 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

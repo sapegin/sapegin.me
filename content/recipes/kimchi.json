@@ -1,0 +1,369 @@
+{
+  "createdAt": "2022-07-13T07:18:12.280Z",
+  "cuisines": [
+    "Korean"
+  ],
+  "description": "We always loved kimchi (and all the spicy food in general) but since we watched [Roy Choi's course on MasterClass](https://www.masterclass.com/classes/roy-choi-teaches-intuitive-cooking) and tried to make kimchi ourselves, it's opened a whole new world of flavors and possibilities. Now we always have homemade kimchi in our fridge.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the kimchi paste",
+      "ingredients": [
+        [
+          {
+            "name": "chile flakes",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "cup",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "modifier": "kosher",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "head",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "horseradish",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "ginger",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "fish sauce",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 3,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "oyster sauce",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 3,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "vinegar",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "soy sauce",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "unit": "cup",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the kimchi",
+      "ingredients": [
+        [
+          {
+            "name": "napa cabbage",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "modifier": "kosher",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "Wear gloves and an apron, otherwise, you'll ruin your clothes and end up with burning hands.",
+    "You could kimchi (yes, it's a verb!) any kind of cabbage or lettuce. For example, try to kimchi that iceberg lettuce dying in your fridge since you made burgers two weeks ago.",
+    "Kimchi will keep forever in a sealed container in the fridge (but we're sure it won't!)."
+  ],
+  "overnight": true,
+  "slug": "kimchi",
+  "source": "This recipe is based on Roy Choi’s recipe from MasterClass.",
+  "steps": [
+    {
+      "name": "To cook the kimchi paste",
+      "steps": [
+        {
+          "text": "In a blender, combine all dry ingredients: chile flakes, salt, and coconut sugar. Mix until you have a consistent powder.",
+          "pause": false
+        },
+        {
+          "text": "Peel the garlic, horseradish or ginger, and onion. Quarter the onion.",
+          "pause": false
+        },
+        {
+          "text": "Add the remaining ingredients to the blender: garlic, horseradish or ginger, onion, <Ingredient name=\"fish sauce\"  />, <Ingredient name=\"oyster sauce\"  />, <Ingredient name=\"vinegar\"  />, <Ingredient name=\"soy sauce\"  />, and <Ingredient name=\"water\"  />. Mix until they form a smooth paste. Add more water if the paste is too thick.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the kimchi",
+      "steps": [
+        {
+          "text": "Fill the large bowl with water, and dissolve <Ingredient name=\"salt\"  /> in it.",
+          "pause": false
+        },
+        {
+          "text": "Quarter the cabbage lengthwise.",
+          "pause": false
+        },
+        {
+          "text": "Add the cabbage to the bowl, and let it soak for at least 3 hours or overnight.",
+          "pause": true
+        },
+        {
+          "text": "When the cabbage is slightly wilted, remove it from the water and drain well.",
+          "pause": false
+        },
+        {
+          "text": "Using a spoon, rub the kimchi paste inside each layer of cabbage. Make sure to reach deep between layers. Rub more paste on the outside of the cabbage. It should get messy here.",
+          "pause": false
+        },
+        {
+          "text": "Roll each cabbage quarter, and place them into a jar. Pack them well. Leave a few centimeters of space between the cabbage and the jar lead, because the fermentation will produce a bit of gas.",
+          "pause": false
+        },
+        {
+          "text": "Leave the kimchi on the counter (but out of direct sunlight) for 2 days.",
+          "pause": true
+        },
+        {
+          "text": "Refrigerate for 2 weeks or more to let the kimchi ferment (the more, the better!).",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Pickling",
+    "Picnic",
+    "Spicy",
+    "Snack"
+  ],
+  "time": 30,
+  "title": "Kimchi",
+  "tools": [
+    "gloves",
+    "apron",
+    "blender"
+  ],
+  "yields": {
+    "amount": 500,
+    "unit": "g"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/K1kLeVyoQdifVFmaVOVB",
+      "handle": "K1kLeVyoQdifVFmaVOVB",
+      "width": 4646,
+      "height": 3824
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "kimchi-paste",
+      "title": "Kimchi paste"
+    }
+  ],
+  "recipes": [
+    {
+      "slug": "kimchi-noodles",
+      "title": "Kimchi noodles"
+    },
+    {
+      "slug": "bibimbap",
+      "title": "Bibimbap"
+    },
+    {
+      "slug": "kimchi-fried-rice",
+      "title": "Kimchi fried rice"
+    },
+    {
+      "slug": "kimchi-cauliflower-rice",
+      "title": "Kimchi cauliflower rice"
+    },
+    {
+      "slug": "potato-hash-with-kimchi",
+      "title": "Potato hash with kimchi"
+    },
+    {
+      "slug": "kimchi-soup",
+      "title": "Kimchi lava soup"
+    },
+    {
+      "slug": "fusion-de-huevo-en-sombrero",
+      "title": "Fusion de huevo en sombrero"
+    }
+  ],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "Soak",
+      "value": "3 hours",
+      "overnight": true,
+      "covered": false
+    },
+    {
+      "type": "Rest",
+      "value": "2 days",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "Refrigerate",
+      "value": "2 weeks",
+      "overnight": false,
+      "covered": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [
+    "**Soy sauce** is likely not gluten-free and contains wheat."
+  ],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

@@ -1,0 +1,179 @@
+{
+  "createdAt": "2022-12-13T16:30:25.791Z",
+  "cuisines": [
+    "Mexican",
+    "Klatzlandian",
+    "Korean"
+  ],
+  "description": "This super quick breakfast is a variation of [Huevos rancheros en sombrero](/recipes/huevos-rancheros-en-sombrero) but doesn’t need [salsa de frijol](/recipes/salsa-de-frijol), refried beans, [charred red sauce](/recipes/charred-red-sauce) or [guacamole](/recipes/guacamole), so it’s a good option when you only have a piece of cheese and a jar of kimchi (or any other [pickle](/tags/pickling/)) in your fridge. A combination of melted cheese and kimchi makes it surprisingly hot and juicy — a perfect dish to wake you up in the morning.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "tortilla",
+            "modifier": "corn",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cheese",
+            "modifier": "cheddar",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "slice",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "kimchi",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "kimchi"
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "oregano",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "fusion-de-huevo-en-sombrero",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Heat a medium-sized skillet with a bit of olive oil to medium-high heat.",
+          "pause": false
+        },
+        {
+          "text": "Put a tortilla on one side of the skillet, and break an egg onto another side. Season the egg with a bit of salt, black pepper, and oregano.",
+          "pause": false
+        },
+        {
+          "text": "While the egg and the tortilla are cooking, cut the cheese.",
+          "pause": false
+        },
+        {
+          "text": "When the egg is almost ready, flip the tortilla, put the cheese and kimchi on top of the tortilla, and place the fried egg on top of everything.",
+          "pause": false
+        },
+        {
+          "text": "Increase the heat to high, and cook until the tortilla is crispy on the bottom and the cheese is melted.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Breakfast",
+    "Brunch",
+    "Spicy"
+  ],
+  "time": 15,
+  "title": "Fusion de huevo en sombrero",
+  "titleEnglish": "Fried egg on tortilla fusion",
+  "tools": [],
+  "yields": {
+    "amount": 1,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/N97KAnhSj2LZaIA8vsEQ",
+      "handle": "N97KAnhSj2LZaIA8vsEQ",
+      "width": 5546,
+      "height": 3985
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "kimchi",
+      "title": "Kimchi"
+    }
+  ],
+  "recipes": [],
+  "seasons": [],
+  "chart": [],
+  "tips": [],
+  "warnings": [
+    "**Kimchi could be non-vegan:** if not labeled as vegan, it may contain fish sauce."
+  ],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

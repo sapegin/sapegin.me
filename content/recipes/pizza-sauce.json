@@ -1,0 +1,189 @@
+{
+  "createdAt": "2022-01-02T09:31:13.203Z",
+  "cuisines": [
+    "Italian"
+  ],
+  "description": "Very simple and universal pizza sauce. Works great with our [gluten-free pizza dough](https://tacohuaco.co/recipes/gluten-free-pizza-dough/).",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "tomato",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 3,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "basil",
+            "modifier": "fresh",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "sprig",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato paste",
+            "minAmount": 9,
+            "maxAmount": 9,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "dried rosemary",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "You can substitute basil with mint, it also tastes great."
+  ],
+  "overnight": false,
+  "slug": "pizza-sauce",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the vegetables. **Tomatoes:** remove the kernel and quarter. **Garlic:** peel and roughly cut. **Basil:** pick leaves without black spots and not too wilted.",
+          "pause": false
+        },
+        {
+          "text": "Put the tomatoes, garlic, tomato paste, olive oil, salt, dried rosemary, and black pepper into the blender, and mix until you have smooth uniform liquid.",
+          "pause": false
+        },
+        {
+          "text": "Add the basil and briefly pulse to chop the basil just a bit.",
+          "pause": false
+        },
+        {
+          "text": "Add more salt and black pepper if needed.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Sauce",
+    "Foundation"
+  ],
+  "time": 10,
+  "title": "Pizza sauce",
+  "tools": [
+    "blender"
+  ],
+  "yields": {
+    "amount": 200,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/PcDoUhdkQ9KrEItX6evF",
+      "handle": "PcDoUhdkQ9KrEItX6evF",
+      "width": 4713,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [
+    "Keep the basil flowers, and add them when you make your evening tea next time.",
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

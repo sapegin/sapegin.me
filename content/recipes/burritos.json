@@ -1,0 +1,149 @@
+{
+  "createdAt": "2022-09-15T16:20:20.200Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Burritos are best known as a tex mex recipe, or served more commonly in the north of Mexico. However, Mexicans also eat them in the rest of the country with some different variations. Burritos are a great breakfast for the way, a road trip food, or just an easy-to-cook dish for any time. They are also great to make use of leftovers hanging around your fridge.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "cheese",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "wheat tortilla",
+            "modifier": "large",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "frijoles refritos",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "frijoles-refritos"
+          },
+          {
+            "name": "frijol sauce",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "picadillo",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "picadillo"
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "It's important to keep out lettuce or too much salad from inside the burritos, since it will make the tortilla too soggy."
+  ],
+  "overnight": false,
+  "slug": "burritos",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Cut the cheese into not-so-thin slices.",
+          "pause": false
+        },
+        {
+          "text": "Warm up the tortillas on a large dry skillet.",
+          "pause": false
+        },
+        {
+          "text": "Assemble the burritos: spread the frijole sauce in the middle-low section of the tortilla, distribute the picadillo on top, and put the cheese on top of the picadillo. Now roll the tortilla: flip the lower part over the filling, flip the sides, and tightly roll from the bottom.",
+          "pause": false
+        },
+        {
+          "text": "Repeat for the remaining tortillas.",
+          "pause": false
+        },
+        {
+          "text": "Briefly toast the burritos on a skillet on all sides.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Lunch",
+    "Quick",
+    "Breakfast",
+    "Travel"
+  ],
+  "time": 15,
+  "title": "Burritos",
+  "tools": [
+    "blender"
+  ],
+  "yields": {
+    "amount": 2,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/cG3KamgkTGQOP9IFp3VP",
+      "handle": "cG3KamgkTGQOP9IFp3VP",
+      "width": 5440,
+      "height": 4080
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "picadillo",
+      "title": "Picadillo"
+    },
+    {
+      "slug": "frijol-sauce",
+      "title": "Salsa de frijol"
+    },
+    {
+      "slug": "frijoles-refritos",
+      "title": "Frijoles refritos"
+    }
+  ],
+  "recipes": [],
+  "seasons": [],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

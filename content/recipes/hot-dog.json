@@ -1,0 +1,239 @@
+{
+  "createdAt": "2024-01-23T10:01:50.389Z",
+  "cuisines": [
+    "UnitedStates"
+  ],
+  "description": "The tradition of eating hot dogs in our family started in winter 2023 when our friend Junisa stayed with us to help us move to a new apartment. One evening we were too tired and lazy to cook something more complex, so we decided to make hot dogs…",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "sausage",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "hot dog buns",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bacon",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "package",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "cucumber",
+            "modifier": "pickled",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "jalapeño",
+            "modifier": "pickled",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "modifier": "dried",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "smetana",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "crème fraîche",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "wholegrain",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "ketchup",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "hot-dog",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "**Prepare all the ingredients.** **Bacon:** cut into small pieces. **Onion:** peel, halve and thinly slice. **Tomato:** halve, remove the root, and cut into 1/2 cm pieces. **Pickled cucumbers:** thinly slice lengthwise. **Pickled jalapeños:** thinly slice lengthwise.",
+          "pause": false
+        },
+        {
+          "text": "**Cook the bacon:** put the bacon in a skillet and start warming it up. When the bacon starts to release the fat, add the onions. Cook until the onion is soft and transparent, and the bacon is slightly crunchy.",
+          "pause": false
+        },
+        {
+          "text": "**Cook the sausages:** put the sausages in a skillet with a bit of olive oil. Cook, turning them occasionally, until they are browned on all sides.",
+          "pause": false
+        },
+        {
+          "text": "**Warm up the buns:** put the hot dog buns in a skillet with a bit of olive oil (you can reuse the skillet you used for the bacon or sausages), and cook on medium heat until slightly golden on both sides.",
+          "pause": false
+        },
+        {
+          "text": "**Assemble the hot dog of your dream:** open the bun, and spread a bit of smetana or crème fraîche on each side of the bun; place a sausage in the middle; and all the other ingredients, ketchup, and mustard — you can go crazy here (it’s okay if you can’t close the bun again or put it into your mouth — that’s not the point here).",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "time": 30,
+  "title": "Klatz hot dog",
+  "tools": [],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/0orOhhbzRZa07Ngxvcv4",
+      "handle": "0orOhhbzRZa07Ngxvcv4",
+      "width": 3441,
+      "height": 2767
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [
+    "Smetana _(сметана)_ is a type of sour cream similar to crème fraîche."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

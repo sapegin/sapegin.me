@@ -1,0 +1,411 @@
+{
+  "createdAt": "2023-06-06T12:48:21.409Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Indulge in the irresistible flavors of Mexico with this tres leches cake, a delightful treat to cool you down on a hot summer day.\n\nThe tres leches cake holds a special place in Margarita's heart, as she eagerly craves its moist goodness every summer since she was a kid in Mexico. What makes her especially happy is the chocolate variation, a rare gem in the world of tres leches cakes. Her mom is also a huge fan of this cake.\n\nSurprisingly, Margarita used to believe that tres leches cake was difficult to make. However, she discovered that it was far more approachable than she initially thought. \n\nSo, gather your ingredients, don your apron, and let's create magic in the kitchen with this delectable Mexican delight.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the sponge cake",
+      "ingredients": [
+        [
+          {
+            "name": "egg",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 90,
+            "maxAmount": 90,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "all-purpose flour",
+            "minAmount": 160,
+            "maxAmount": 160,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "comment": "room temperature, for greasing",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the tres leches",
+      "ingredients": [
+        [
+          {
+            "name": "evaporated milk",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "can",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "condensed milk",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "can",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "milk",
+            "minAmount": 250,
+            "maxAmount": 250,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "vanilla pod",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For assembling the cake",
+      "ingredients": [
+        [
+          {
+            "name": "whipping cream",
+            "minAmount": 500,
+            "maxAmount": 500,
+            "unit": "g",
+            "comment": "cold",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 30,
+            "maxAmount": 30,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cocoa powder",
+            "minAmount": 30,
+            "maxAmount": 30,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "strawberry",
+            "modifier": "fresh",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        [
+          {
+            "name": "blueberry",
+            "modifier": "fresh",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7
+            ]
+          }
+        ],
+        [
+          {
+            "name": "pecan",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "pastel de tres leches",
+    "sponge cake",
+    "three milks cake"
+  ],
+  "notes": [
+    "Feel free to use any berries that are in season (or sold with a discount).",
+    "Try other flavors for the whipped cream instead of cocoa: vanilla, coconut, berries, nuts…"
+  ],
+  "overnight": true,
+  "slug": "tres-leches-cake",
+  "source": "This recipe is based on [Pastel de tres leches](https://thesweetmolcajete.com/pastel-de-tres-leches/) by Michelle Chavez.",
+  "steps": [
+    {
+      "name": "To cook the sponge cake",
+      "steps": [
+        {
+          "text": "Preheat oven to 180C.",
+          "pause": false
+        },
+        {
+          "text": "Separate the yolks of <Ingredient name=\"egg\"  /> from the whites, place the whites in the mixer bowl, and save the yolks (we’ll need them later).",
+          "pause": false
+        },
+        {
+          "text": "Beat the egg whites using the mixer’s whisk attachment on high speed until they reach snow point.",
+          "pause": false
+        },
+        {
+          "text": "Add **half** of <Ingredient name=\"coconut sugar\"  /> and beat just until the sugar is incorporated.",
+          "pause": false
+        },
+        {
+          "text": "Take another mixer bowl (or, if you don’t have it, empty this one into a medium-sized bowl, and save the bitten eggs for later).",
+          "pause": false
+        },
+        {
+          "text": "In the mixer bowl, put the egg yolks and the rest of the sugar, beat the yolks until they look pale, almost white, and fluffy.",
+          "pause": false
+        },
+        {
+          "text": "Add the beaten yolks to the whites, and use a silicon spatula to incorporate the whites and yolks gently in an enveloping way.",
+          "pause": false
+        },
+        {
+          "text": "Add **half** of <Ingredient name=\"all-purpose flour\"  /> and continue mixing in an enveloping way, allowing as much air as possible to be incorporated into the mixture. Repeat with the rest of the flour.",
+          "pause": false
+        },
+        {
+          "text": "Grease the baking form, and pour the mixture into it.",
+          "pause": false
+        },
+        {
+          "text": "Bake the sponge cake for 22-25 minutes.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the tres leches",
+      "steps": [
+        {
+          "text": "While the sponge cake is baking, place the three milks (evaporated milk, condensed milk, and <Ingredient name=\"milk\"  />) in a blender, slice the vanilla pod lengthwise, scrape the content of each half of the pod using a knife, and put it in the blender. Blend until the milks form a homogeneous mixture. Stash in the refrigerator.",
+          "pause": false
+        },
+        {
+          "text": "When the sponge cake is ready, unmold the bread on a cooling rack, and allow it to cool down for about 15 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Once the sponge cake is not so hot, cut it horizontally into two equal layers, and place each layer onto a deep dish. Using a fork, make holes in the top (hard) layer of the bread for better absorption.",
+          "pause": false
+        },
+        {
+          "text": "Divide the mixture of tres leches in two and pour over each sponge cake evenly.",
+          "pause": false
+        },
+        {
+          "text": "Refrigerate until the tres leches mix is fully absorbed, or overnight.",
+          "pause": true
+        }
+      ]
+    },
+    {
+      "name": "To assemble the cake",
+      "steps": [
+        {
+          "text": "Make sure that the whipping cream is very cold. Ideally, chill the mixer bowl in the fridge before whipping.",
+          "pause": false
+        },
+        {
+          "text": "Pour <Ingredient name=\"whipping cream\"  /> into the bowl of your mixer and using the whisk attachment beat on high speed until soft peaks form.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"coconut sugar\"  /> and continue beating until incorporated, you will see how firmer peaks form.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"cocoa powder\"  /> and beat a bit more until incorporated.",
+          "pause": false
+        },
+        {
+          "text": "Cut the berries, and coarsely chop the pecans.",
+          "pause": false
+        },
+        {
+          "text": "Take the sponge cakes out of the refrigerator.",
+          "pause": false
+        },
+        {
+          "text": "Empty a little less than half of the whipped cream into the center of the bottom sponge cake and spread it until the bread is well covered. Be generous with the amount of cream you use here, it must be at least 1.5 cm thick. Put a layer of berries on top of the cream, and press them gently into the cream.",
+          "pause": false
+        },
+        {
+          "text": "Carefully place the other sponge cake on top of the first one.",
+          "pause": false
+        },
+        {
+          "text": "Empty the rest of the whipping cream over the cake and using a spatula distribute the cream over the entire surface. Feel free to cover the sides if you have enough cream.",
+          "pause": false
+        },
+        {
+          "text": "Sprinkle chopped pecans, and decorate with strawberries and blueberries.",
+          "pause": false
+        },
+        {
+          "text": "Serve cold.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dessert",
+    "Celebration",
+    "Cake",
+    "Baking"
+  ],
+  "time": 140,
+  "title": "Pastel tres leches",
+  "titleEnglish": "Three milks cake",
+  "tools": [
+    "mixer",
+    "blender",
+    "round baking form (about 20 cm)",
+    "2 deep dishes (larger than the baking form)"
+  ],
+  "yields": {
+    "amount": 1,
+    "unit": "cake"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/VrotCaaMQpaxlxXip5fT",
+      "handle": "VrotCaaMQpaxlxXip5fT",
+      "width": 5903,
+      "height": 4106
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    6,
+    7
+  ],
+  "chart": [
+    {
+      "type": "WarmToRoomTemp",
+      "subtype": "butter",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "180C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "22-25 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Rest",
+      "value": "15 minutes",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "Refrigerate",
+      "overnight": true,
+      "covered": false
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

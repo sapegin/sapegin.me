@@ -19,3 +19,4 @@ jobs:
       - run: node --experimental-strip-types scripts/sync-squirrelsong.ts
       - run: npm run build:sapegin
       - run: npm run build:morning
+      - run: npm run build:tacohuaco

@@ -1,0 +1,317 @@
+{
+  "createdAt": "2021-07-11T19:13:02.966Z",
+  "cuisines": [
+    "Russian"
+  ],
+  "description": "Popular, fancy and easy Russian salad to delight young and elders! (Villagers, hipsters, and vegans adequate ;—)\n\nIt can be employed as main or side dish, and served over tostadas or eat just alone (and in the darkness)!",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "For the dressing ",
+      "ingredients": [
+        [
+          {
+            "name": "vinegar",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lemon",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "honey",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "Dijon",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "minAmount": 70,
+            "maxAmount": 70,
+            "unit": "ml",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the salat ",
+      "ingredients": [
+        [
+          {
+            "name": "beetroot",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          }
+        ],
+        [
+          {
+            "name": "potato",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "carrot",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pea",
+            "modifier": "fresh or frozen",
+            "minAmount": 200,
+            "maxAmount": 200,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cucumber",
+            "modifier": "pickled",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "dill",
+            "minAmount": 3,
+            "maxAmount": 4,
+            "unit": "sprig",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "vinaigrette-salad",
+  "source": "This recipe is based on Vlad Piskunov’s book “Russian cuisine: the best of last 500 years”.",
+  "steps": [
+    {
+      "name": "To make the dressing",
+      "steps": [
+        {
+          "text": "Mix <Ingredient name=\"vinegar\"  /> and lemon juice in a bowl.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"honey\"  /> and <Ingredient name=\"mustard\"  /> to the bowl and mix well.",
+          "pause": false
+        },
+        {
+          "text": "Slowly pour <Ingredient name=\"olive oil\"  /> while whisking continuously to create an emulsion.",
+          "pause": false
+        },
+        {
+          "text": "Season with and black pepper as your ~~goat~~ gut mandates.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To make the salad",
+      "steps": [
+        {
+          "text": "Cooking the vegetables: put non-pealed potatoes and carrots into a pot, and add enough water to cover them. Cook them on medium heat until they can be pinched softly with a fork (it will take about 10-15 min depending on how big and old the potatoes are). When cooked, remove them from the pot to cool down, and without turning the heat off (while the water is boiling) add the peas and cook for 4-6 min or until they become softer. When the peas are cooked, take them out into a bowl to cool down with a spoon or small strainer but without throwing the water. Put the non-pealed beetroots into the pot. Cook the beetroots until they can be pinched softly with a fork too. Finally, turn off the heat and remove beetroots from the water to let them cool down.",
+          "pause": false
+        },
+        {
+          "text": "While the vegetables are cooking, dice the onion and cucumbers in small cubes, and add them into the salad bowl.",
+          "pause": false
+        },
+        {
+          "text": "Finely chop the dill and add it to the salad bowl.",
+          "pause": false
+        },
+        {
+          "text": "When the potatoes and carrots are cooked and cooled, dice them in small cubes, and add them into the salad bowl.",
+          "pause": false
+        },
+        {
+          "text": "When the peas are cooled add them to the salad bowl too.",
+          "pause": false
+        },
+        {
+          "text": "Peel the beetroots when they are cold enough to hold them with your hands, and dice them in small cubes. Mix them in a separate bowl with olive oil, just enough to coat them.",
+          "pause": false
+        },
+        {
+          "text": "Add the dressing to the vegetables and mix them softly with a wooden spoon.",
+          "pause": false
+        },
+        {
+          "text": "Add the mix of oil-beetroots to the salad bowl and mix everything softly.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Salad",
+    "Cold"
+  ],
+  "title": "Vinaigrette salad",
+  "tools": [],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/f6YiclKIT8ilnp8eh55u",
+      "handle": "f6YiclKIT8ilnp8eh55u",
+      "width": 3860,
+      "height": 2965
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "vinaigrette-dressing",
+      "title": "Vinaigrette dressing"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    7,
+    8,
+    9
+  ],
+  "chart": [
+    {
+      "type": "Rest",
+      "value": "",
+      "overnight": false,
+      "covered": true
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

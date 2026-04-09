@@ -1,0 +1,156 @@
+{
+  "createdAt": "2021-08-10T05:57:24.663Z",
+  "cuisines": [
+    "Russian"
+  ],
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "vinegar",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lemon",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "honey",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "Dijon",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "minAmount": 70,
+            "maxAmount": 70,
+            "unit": "ml",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "vinaigrette-dressing",
+  "source": "This recipe is based on Vlad Piskunov’s book “Russian cuisine: the best of last 500 years”.",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Mix <Ingredient name=\"vinegar\"  /> and lemon juice in a bowl.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"honey\"  /> and <Ingredient name=\"mustard\"  /> to the bowl and mix well.",
+          "pause": false
+        },
+        {
+          "text": "Slowly pour <Ingredient name=\"olive oil\"  /> while whisking continuously to create an emulsion.",
+          "pause": false
+        },
+        {
+          "text": "Season with and black pepper as your ~~goat~~ gut mandates.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dressing"
+  ],
+  "title": "Vinaigrette dressing",
+  "tools": [],
+  "yields": {
+    "amount": 1,
+    "unit": "portion"
+  },
+  "images": [],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "vinaigrette-salad",
+      "title": "Vinaigrette salad"
+    }
+  ],
+  "seasons": [],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

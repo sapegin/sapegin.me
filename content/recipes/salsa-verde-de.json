@@ -1,0 +1,164 @@
+{
+  "createdAt": "2023-09-18T12:12:59.151Z",
+  "cuisines": [
+    "Mexican",
+    "Klatzlandian"
+  ],
+  "description": "This is Artem’s attempt to find an alternative to *salsa verde*, traditionally made with *tomatillos*, but made from ingredients available in Germany. He wanted to achieve its sour-bitter freshness and is using green bell peppers for that. Of course, it’s incomparable to the original. Still, one has to be creative in a country where almost nothing grows, and even the most basic vegetables are imported and very expensive.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "bell pepper",
+            "modifier": "green",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "jalapeño",
+            "modifier": "fresh",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 3,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "green sauce"
+  ],
+  "notes": [
+    "This salsa will keep in a sealed container in the fridge for one or two weeks."
+  ],
+  "overnight": false,
+  "slug": "salsa-verde-de",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the vegetables. **Onion:** peel and halve. **Garlic:** peel.",
+          "pause": false
+        },
+        {
+          "text": "Char (blister) all the vegetables without adding any oil on a skillet sat on medium heat, until they softened a bit. Don’t worry if they look burned, this will add an amazing flavor to our salsa!",
+          "pause": false
+        },
+        {
+          "text": "Remove the skillet from heat, and let the vegetables cool down a bit.",
+          "pause": false
+        },
+        {
+          "text": "When the vegetables are cold enough to touch them, remove the roots and seeds of the bell peppers, and cut the roots of the jalapeños.",
+          "pause": false
+        },
+        {
+          "text": "Purée the vegetables with a pinch of salt using a blender or a food processor until you have a smooth paste (but not too smooth, some texture is nice to have here).",
+          "pause": false
+        },
+        {
+          "text": "Add more salt if needed.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Sauce",
+    "Salsa",
+    "Spicy",
+    "Foundation",
+    "Charring",
+    "Dip"
+  ],
+  "time": 40,
+  "title": "First world salsa verde",
+  "tools": [
+    "blender or food processor"
+  ],
+  "yields": {
+    "amount": 200,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/I59Wv3CRFGYNMCszATCg",
+      "handle": "I59Wv3CRFGYNMCszATCg",
+      "width": 4910,
+      "height": 3746
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "tacos-al-pastor",
+      "title": "Tacos al pastor"
+    },
+    {
+      "slug": "klatz-burger",
+      "title": "Klatz burger"
+    }
+  ],
+  "seasons": [],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

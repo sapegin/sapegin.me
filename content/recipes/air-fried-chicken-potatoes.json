@@ -1,0 +1,324 @@
+{
+  "createdAt": "2024-02-19T12:20:00.315Z",
+  "cuisines": [
+    "Klatzlandian"
+  ],
+  "description": "This is one of our favorite air fryer recipes. Apart from marinating the chicken overnight, it doesn’t take a lot of time to prepare, and you could start eating while the second and third batches are still cooking. This is a perfect Monday dinner recipe (we usually buy a full chicken on Saturday, so we have marinated legs and wings ready to be fried on Monday).",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the chicken",
+      "ingredients": [
+        [
+          {
+            "name": "chicken leg",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 2,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chicken wing",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 2,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "achiote paste",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 2,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the potatoes",
+      "ingredients": [
+        [
+          {
+            "name": "potato",
+            "modifier": "floury",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "pinch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coriander seeds",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "pinch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "fennel seeds",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "unit": "pinch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile flakes",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "unit": "pinch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": true,
+  "slug": "air-fried-chicken-potatoes",
+  "steps": [
+    {
+      "name": "To cook the chicken",
+      "steps": [
+        {
+          "text": "Rinse the chicken parts.",
+          "pause": false
+        },
+        {
+          "text": "Chop achiote into small pieces.",
+          "pause": false
+        },
+        {
+          "text": "Juice the lime, and mix it with the achiote until the achiote is fully diluted.",
+          "pause": false
+        },
+        {
+          "text": "Peel the garlic, and press it into the mix.",
+          "pause": false
+        },
+        {
+          "text": "Liberally season with salt.",
+          "pause": false
+        },
+        {
+          "text": "Rub the chicken parts with the marinade mixture.",
+          "pause": false
+        },
+        {
+          "text": "Refrigerate in an airtight container for at least 4 hours, better overnight.",
+          "pause": true
+        },
+        {
+          "text": "If using an oven, preheat it to 210C.",
+          "pause": false
+        },
+        {
+          "text": "Roast in an air fryer at 210C for 20 minutes, turn the legs and wings after 10 minutes, and remove the legs after 15 minutes. (Or roast in the oven at 210C for about 40 minutes.)",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the potatoes",
+      "steps": [
+        {
+          "text": "If using an oven, preheat it to 210C.",
+          "pause": false
+        },
+        {
+          "text": "Cut the potatoes into chunky wedges (don't peel them).",
+          "pause": false
+        },
+        {
+          "text": "In a large wide bowl, put the potatoes, and liberally sprinkle them with olive oil, and a couple of pinches of salt.",
+          "pause": false
+        },
+        {
+          "text": "Grind the spices: <Ingredient name=\"cumin seeds\"  />, <Ingredient name=\"coriander seeds\"  />, <Ingredient name=\"fennel seeds\"  />, and <Ingredient name=\"chile flakes\"  />. Add the spices to the bowls with the potatoes.",
+          "pause": false
+        },
+        {
+          "text": "Thoroughly mix everything using your hands.",
+          "pause": false
+        },
+        {
+          "text": "Roast in an air fryer in two batches (to avoid overcrowding and steaming instead of baking) at 210C for 18 minutes, and give it a shake in the middle. (Or roast in the oven at 210C for about 40 minutes.)",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Potatoes",
+    "AirFryer",
+    "Dinner"
+  ],
+  "time": 60,
+  "title": "Air-fried chicken wings and legs with potatoes",
+  "tools": [
+    "air fryer or oven"
+  ],
+  "yields": {
+    "amount": 3,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/k2fqRKVHRemZ23azuH8q",
+      "handle": "k2fqRKVHRemZ23azuH8q",
+      "width": 6240,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "Refrigerate",
+      "value": "4 hours",
+      "overnight": true,
+      "covered": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "210C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "roast",
+      "value": "40 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "210C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "roast",
+      "value": "40 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

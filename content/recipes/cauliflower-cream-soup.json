@@ -1,0 +1,304 @@
+{
+  "createdAt": "2021-08-23T08:54:10.143Z",
+  "cuisines": [
+    "Klatzlandian"
+  ],
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "cauliflower",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "head",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              1,
+              2,
+              3,
+              10,
+              11,
+              12
+            ]
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "modifier": "medium",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parsley",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "sprig",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chicken broth",
+            "minAmount": 500,
+            "maxAmount": 500,
+            "unit": "ml",
+            "kind": 2,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "comment": "zest and juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cinnamon",
+            "modifier": "ground",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "modifier": "ground",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "curry powder",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile flakes",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "cauliflower-cream-soup",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Preheat oven to 200C. Line a baking sheet with parchment paper.",
+          "pause": false
+        },
+        {
+          "text": "Prepare the vegetables. **Cauliflower:** separate florets from the root, remove green leaves from the root and discard the leaves, halve the root. **Garlic:** peel. **Onion:** dice. **Parsley:** finely chop.",
+          "pause": false
+        },
+        {
+          "text": "Distribute the cauliflower and garlic on the baking sheet. Grease using olive oil, and season with salt, black pepper, and a sprinkle of dried jalapeños.",
+          "pause": false
+        },
+        {
+          "text": "Roast for about 15 minutes, toss and roast for another 15 minutes until the cauliflower is soft and charred a bit. Remove from the oven, and cool down.",
+          "pause": false
+        },
+        {
+          "text": "While the cauliflower is cooling, put a large pot over medium-high heat with a bit of olive oil.",
+          "pause": false
+        },
+        {
+          "text": "Add the onion to the pot. Cook, frequently stirring, until softened but not browned, about 4 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the chicken stock to the pot.",
+          "pause": false
+        },
+        {
+          "text": "Add the lime zest, <Ingredient name=\"cinnamon\"  />, <Ingredient name=\"curry powder\"  />, and chili flakes to the pot, and stir until fragrant, about 30 seconds.",
+          "pause": false
+        },
+        {
+          "text": "Transfer cauliflower (except the smallest florets) and garlic to the pot. Add enough water to barely cover the cauliflower and bring to a simmer.",
+          "pause": false
+        },
+        {
+          "text": "Purée the soup using a blender until completely smooth. Add lime juice and more stock or water to achieve desired consistency.",
+          "pause": false
+        },
+        {
+          "text": "Season with salt and pepper.",
+          "pause": false
+        },
+        {
+          "text": "Serve topped with the rest of the cauliflower florets, and parsley.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Lunch",
+    "Soup",
+    "CreamSoup"
+  ],
+  "time": 60,
+  "title": "Cauliflower cream soup",
+  "tools": [
+    "blender or food processor",
+    "oven"
+  ],
+  "yields": {
+    "amount": 2,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/RcZYCPXyRxCoYSXwfTHW",
+      "handle": "RcZYCPXyRxCoYSXwfTHW",
+      "width": 3993,
+      "height": 3993
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    1,
+    2,
+    3,
+    10,
+    11,
+    12
+  ],
+  "chart": [
+    {
+      "type": "WarmToRoomTemp",
+      "subtype": "chicken broth",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "200C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "roast",
+      "value": "15 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

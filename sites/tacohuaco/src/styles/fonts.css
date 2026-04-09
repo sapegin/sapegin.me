@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('/fonts/Proxima-Nova-Regular.woff2') format('woff2');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('/fonts/Proxima-Nova-Italic.woff2') format('woff2');
+	font-style: italic;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('/fonts/Proxima-Nova-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('/fonts/Proxima-Nova-Bold-Italic.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'AzoSans';
+	src: url('/fonts/Azo-Sans-Light.woff2') format('woff2');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'AzoSans';
+	src: url('/fonts/Azo-Sans-Light-Italic.woff2') format('woff2');
+	font-style: italic;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'AzoSans';
+	src: url('/fonts/Azo-Sans-Regular.woff2') format('woff2');
+	font-weight: bold;
+	font-display: fallback;
+}

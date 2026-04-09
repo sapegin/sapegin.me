@@ -1,0 +1,168 @@
+{
+  "createdAt": "2022-09-08T08:38:37.755Z",
+  "cuisines": [
+    "French"
+  ],
+  "description": "It took us many attempts to master the galette dough — the keys are keeping the butter very cold, not letting it melt, and rolling the dough very-very thin. As the result, we have an incredible crunchy and crumbly crust.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "all-purpose flour",
+            "minAmount": 200,
+            "maxAmount": 200,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 10,
+            "maxAmount": 10,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "modifier": "fine",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "minAmount": 125,
+            "maxAmount": 125,
+            "unit": "g",
+            "comment": "very cold",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "buttermilk",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "ml",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "yogurt",
+            "minAmount": 100,
+            "maxAmount": 100,
+            "unit": "g",
+            "comment": "very cold",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "You could make the dough up to two days in advance and refrigerate it."
+  ],
+  "overnight": false,
+  "slug": "galette-dough",
+  "source": "This recipe is based on Athena Calderone’s “Cook Beautiful” book.",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "In a food processor, pulse <Ingredient name=\"all-purpose flour\"  />, <Ingredient name=\"coconut sugar\"  />, and <Ingredient name=\"salt\"  />, until combined. You should work fast with this recipe, and never let the butter melt. It’s a good idea to keep the dough in the fridge between the steps.",
+          "pause": false
+        },
+        {
+          "text": "Cut the butter into 2 cm cubes, and add it to the flour mixture. Pulse until the butter is mixed with the flour but not fully incorporated into it.",
+          "pause": false
+        },
+        {
+          "text": "Pour slowly <Ingredient name=\"buttermilk\"  /> or yogurt into the dough mixture, pulsing until all the buttermilk is absorbed. The dough should look dry and crumbly at this stage, with visible pieces of cold butter.",
+          "pause": false
+        },
+        {
+          "text": "Take a container about 15x20 cm, transfer the dough into the container, and gently press to incorporate loose bits. Cover the container, and refrigerate for at least 1 hour or overnight.",
+          "pause": true
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Baking",
+    "Dessert",
+    "Foundation"
+  ],
+  "time": 80,
+  "title": "Galette dough",
+  "tools": [
+    "food processor",
+    "oven",
+    "container with a lid, about 15x20 cm",
+    "baking paper"
+  ],
+  "yields": {
+    "amount": 1,
+    "unit": "cake"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/UccbQGhbQEaY9FxY3Gdv",
+      "handle": "UccbQGhbQEaY9FxY3Gdv",
+      "width": 4878,
+      "height": 3483
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "Refrigerate",
+      "value": "1 hour",
+      "overnight": true,
+      "covered": true
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

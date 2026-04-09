@@ -1,0 +1,164 @@
+{
+  "createdAt": "2022-08-01T07:51:02.506Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Pico de gallo also known as *salsa Mexicana*, is a great garnishing for tacos, burritos, tamales, salads, quesadillas, steaks, or basically any dish (even just to eat it with tortilla chips while watching TV). Try to have it ready before starting to cook the rest of your dishes — it will be perfect when serving! ",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "tomato",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parsley",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "bunch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "salsa Mexicana"
+  ],
+  "notes": [
+    "Pico de gallo tastes better when prepared on the same day, but a couple of hours ahead of eating it, to maximize flavors.",
+    "Try different types of chilies to find the suitable ones for you, also try different amounts of chilies when preparing pico de gallo to find the right level of spiciness."
+  ],
+  "overnight": false,
+  "slug": "pico-de-gallo",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the ingredients. **Tomatoes:** remove the root, and cut into small dice. **Onion:** peel and cut into small dice. **Chili:** quarter, remove the seeds, and thinly slice. **Parsley:** thinly chop.",
+          "pause": false
+        },
+        {
+          "text": "Put all the vegetables into a bowl, juice the lime into the bowl, and season with salt.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Salad",
+    "Salsa",
+    "Cold"
+  ],
+  "time": 10,
+  "title": "Pico de gallo",
+  "tools": [],
+  "yields": {
+    "amount": 1,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/RxDJOU80Qj6NLvIaTywN",
+      "handle": "RxDJOU80Qj6NLvIaTywN",
+      "width": 5571,
+      "height": 3979
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "tacos-al-pastor",
+      "title": "Tacos al pastor"
+    }
+  ],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

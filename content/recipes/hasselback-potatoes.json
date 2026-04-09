@@ -1,0 +1,170 @@
+{
+  "createdAt": "2022-08-09T13:42:43.666Z",
+  "cuisines": [
+    "Swedish"
+  ],
+  "description": "Crispy, buttery, garlicky, and very pretty potatoes. Take some time to cut the potatoes, and probably you will not want to make enough of them to have a full meal. A great addition to any celebration feast,\nthey are like gold — small and precious.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "potato",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "minAmount": 40,
+            "maxAmount": 40,
+            "unit": "g",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "Choose medium-size (but not too small) young potatoes that don‘t need peeling."
+  ],
+  "overnight": false,
+  "slug": "hasselback-potatoes",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Preheat oven to 240C.",
+          "pause": false
+        },
+        {
+          "text": "Wash and dry potatoes.",
+          "pause": false
+        },
+        {
+          "text": "On each potato, make a series of cuts from the top around 3/4 deep with a sharp knife. Each potato should look like a comb with thin teeth.",
+          "pause": false
+        },
+        {
+          "text": "Lightly coat each potato with olive oil (for example, pour a bit of olive oil into a bowl, take a potato with one hand, and with your other hand rub a light coating of olive oil on a potato), place the potatoes on a baking sheet, sprinkle with salt and black pepper.",
+          "pause": false
+        },
+        {
+          "text": "Bake the potatoes until they start to crisp.",
+          "pause": false
+        },
+        {
+          "text": "While the potatoes are baking, put the butter into a saucepan, press the garlic into it, and melt the butter.",
+          "pause": false
+        },
+        {
+          "text": "Pour the garlic butter over the potatoes, and bake them more, until the garlic turns golden.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Snack",
+    "Dinner",
+    "Potatoes"
+  ],
+  "time": 80,
+  "title": "Hasselback potatoes",
+  "tools": [
+    "oven",
+    "baking tray"
+  ],
+  "yields": {
+    "amount": 1,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/8u49sXgzTdamRAEZWiDC",
+      "handle": "8u49sXgzTdamRAEZWiDC",
+      "width": 5356,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "PreheatOven",
+      "value": "240C",
+      "overnight": false,
+      "covered": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

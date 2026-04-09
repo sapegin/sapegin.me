@@ -1,0 +1,159 @@
+{
+  "createdAt": "2021-08-22T08:44:31.033Z",
+  "cuisines": [
+    "Klatzlandian"
+  ],
+  "description": "We use this dressing for most of our salads. It is super quick to make, requires only one fresh ingredient – lime – and stays alive for two weeks in the fridge.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "olive oil",
+            "minAmount": 180,
+            "maxAmount": 180,
+            "unit": "ml",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "Dijon",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "honey",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "clove",
+            "comment": "pressed",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "Keep in a fridge for up to two weeks.  Shake before using again.",
+    "If the olive oil became solid in the fridge, let it warm to room temperature or quickly warm up in a microwave."
+  ],
+  "overnight": false,
+  "slug": "golden-salad-dressing",
+  "source": "This recipe is based on a recipe from Kathryne Taylor's book \"Love Real Food\".",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Combine olive oil, lime juice, mustard, honey, and pressed garlic, then whisk to blend. Add more olive oil to achieve desired consistency (liquid but not too watery).",
+          "pause": false
+        },
+        {
+          "text": "Season with salt and pepper to taste.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dressing",
+    "Foundation"
+  ],
+  "time": 5,
+  "title": "Golden salad dressing",
+  "tools": [],
+  "yields": {
+    "amount": 200,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/AIlafyD8SfKDlYTiWX1T",
+      "handle": "AIlafyD8SfKDlYTiWX1T",
+      "width": 4836,
+      "height": 3869
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

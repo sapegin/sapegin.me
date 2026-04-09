@@ -1,0 +1,52 @@
+---
+import '../styles/index.css';
+import type { ComponentType } from 'react';
+import Metatags from '../components/Metatags.astro';
+import { SITE_TITLE } from '../constants';
+
+export interface Props<P> {
+	url?: string;
+	title?: string;
+	pageTitle?: string;
+	description?: string;
+	hygraphImageHandle?: string;
+	component?: ComponentType<P>;
+	props?: Omit<P, 'title' | 'url'>;
+}
+
+const { component: Page } = Astro.props;
+
+function getTitle<P>({
+	title,
+	pageTitle,
+}: Pick<Props<P>, 'title' | 'pageTitle'>) {
+	if (pageTitle) {
+		return pageTitle;
+	}
+
+	if (title) {
+		return `${title} by ${SITE_TITLE}`;
+	}
+
+	return SITE_TITLE;
+}
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>{getTitle(Astro.props)}</title>
+		<Metatags {...Astro.props} />
+	</head>
+	<body>
+		{
+			Page ? (
+				<Page {...Astro.props.props} {...Astro.props}>
+					<slot />
+				</Page>
+			) : (
+				<slot />
+			)
+		}
+	</body>
+</html>

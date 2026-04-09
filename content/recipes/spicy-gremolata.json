@@ -1,0 +1,190 @@
+{
+  "createdAt": "2022-08-09T14:38:42.053Z",
+  "cuisines": [
+    "Italian",
+    "Klatzlandian"
+  ],
+  "description": "Traditional gremolata has only greens, lemon, and garlic. This version adds jalapeños (or any other spicy chili you have at home) and whole-grain mustard for extra spiciness and goodness.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "jalapeño",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parsley",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "bunch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "dill",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "bunch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "scallion",
+            "minAmount": 2,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "whole-grain",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "zest and juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "gremolada"
+  ],
+  "notes": [],
+  "overnight": false,
+  "slug": "spicy-gremolata",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the ingredients. **Jalapeño:** dice into small dice. **Greens:** finely chop.",
+          "pause": false
+        },
+        {
+          "text": "In a small bowl, add jalapeño, greens, and mustard, press the garlic, zest and juice the lime. Mix thoroughly.",
+          "pause": false
+        },
+        {
+          "text": "Season with salt and pepper.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dressing",
+    "Sauce",
+    "Spicy",
+    "Foundation"
+  ],
+  "time": 10,
+  "title": "Spicy gremolata",
+  "tools": [],
+  "yields": {
+    "amount": 100,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/CfpvagPUSNCEYjKvlGO0",
+      "handle": "CfpvagPUSNCEYjKvlGO0",
+      "width": 4586,
+      "height": 3486
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "smashed-new-potatoes",
+      "title": "Smashed new potatoes with spicy gremolata"
+    }
+  ],
+  "seasons": [],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

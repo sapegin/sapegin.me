@@ -1,0 +1,53 @@
+---
+import kebabCase from 'lodash/kebabCase';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { RecipesPage } from '../../templates/RecipesPage';
+import { recipeEntryToRecipe } from '../../util/recipeEntryToRecipe';
+import type { Recipe } from '../../types/Recipe';
+import { ALL_FLAGS, type FlagName } from '../../types/Flags';
+
+export const TITLES: Record<FlagName, string> = {
+	favorite: 'Our favorite recipes',
+	vegan: 'Vegan recipes',
+	vegetarian: 'Vegetarian recipes',
+	dairyFree: 'Dairy free recipes',
+	noAddedSugar: 'Recipes without refined sugar',
+	glutenFree: 'Gluten free recipes',
+	lowGluten: 'Low gluten recipes',
+};
+
+type Props = {
+	slug: string;
+	flag: FlagName;
+	recipes: Recipe[];
+};
+
+export async function getStaticPaths() {
+	const entries = await getCollection('recipes');
+	return ALL_FLAGS.map((flag) => {
+		const slug = kebabCase(flag);
+		return {
+			params: { slug },
+			props: {
+				slug,
+				flag,
+				recipes: entries
+					.filter((x) => x.data[flag])
+					.map((x) => recipeEntryToRecipe(x)),
+			},
+		};
+	});
+}
+
+const { slug, flag, recipes } = Astro.props;
+---
+
+<Layout
+	url={`/flags/${slug}/`}
+	title={TITLES[flag]}
+	component={RecipesPage}
+	props={{
+		recipes,
+	}}
+/>

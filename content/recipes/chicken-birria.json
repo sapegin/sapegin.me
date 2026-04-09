@@ -1,0 +1,213 @@
+{
+  "createdAt": "2023-03-30T17:27:50.642Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Birria is a typical dish of Guadalajara, Mexico (the city where Margarita was born). The original recipe calls for lamb or beef for the meat, however, this variation is Margarita’s mom's recipe and has chicken instead. It is delicious, easy to cook, and best of all, healthy in many ways.\n\nAccompany this dish with warm tortillas when eating and enjoy!",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "chicken",
+            "modifier": "full",
+            "kind": 2,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato",
+            "modifier": "big",
+            "minAmount": 4,
+            "maxAmount": 5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "clove",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cinnamon",
+            "modifier": "small stick",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "oregano",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "Add some fresh diced onion for serving to enhance the flavor.",
+    "Choose pieces of chicken with skin when cooking to make the broth richer."
+  ],
+  "overnight": false,
+  "slug": "chicken-birria",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Rinse the chicken in cold water, and butcher it: separate legs, wings, breasts, etc.",
+          "pause": false
+        },
+        {
+          "text": "Cook the chicken in lightly salted water (enough to cover all the pieces of chicken), until tender.",
+          "pause": false
+        },
+        {
+          "text": "Cut the root ends of the tomatoes.",
+          "pause": false
+        },
+        {
+          "text": "In a different pot, cook the tomatoes in chicken broth with <Ingredient name=\"clove\"  /> and <Ingredient name=\"cinnamon\"  />, until the tomatoes are tender.",
+          "pause": false
+        },
+        {
+          "text": "While the tomatoes are cooking, peel the garlic.",
+          "pause": false
+        },
+        {
+          "text": "Let the tomatoes cool down.",
+          "pause": false
+        },
+        {
+          "text": "Transfer the tomatoes with cloves, a bit of cinnamon, and a bit of broth to a blender. Add one clove of garlic, freshly ground black pepper, and oregano. Mix until they form a smooth paste.",
+          "pause": false
+        },
+        {
+          "text": "Add the tomato paste to the chicken, add more salt if needed, and bring to a boil.",
+          "pause": false
+        },
+        {
+          "text": "Cook for a few minutes.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Warming",
+    "Dinner",
+    "Spicy",
+    "Celebration",
+    "Crowd"
+  ],
+  "time": 180,
+  "title": "Chicken birria",
+  "tools": [
+    "two medium-sized pots",
+    "blender"
+  ],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/pZ8Sc4PSTEKjyTY3FsVt",
+      "handle": "pZ8Sc4PSTEKjyTY3FsVt",
+      "width": 5488,
+      "height": 4107
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

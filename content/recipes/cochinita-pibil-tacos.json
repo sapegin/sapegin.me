@@ -1,0 +1,177 @@
+{
+  "createdAt": "2023-03-30T17:42:57.477Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Cochinita pibil is a traditional dish from the Yucatán Peninsula, renowned for its deep, smoky flavors and ancient cooking method. Traditionally, this dish is prepared by marinating pork in achiote and citrus, then wrapping it in maguey leaves and slow-cooking it underground for hours, resulting in a tender, flavorful meat. This recipe is for cooking at home in the oven.\n\nThis is our favorite taco, perfect for weekends and gatherings. The marinade and slow-cooking process make even cheaper cuts of pork tender and rich in flavor.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "cochinita pibil",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              1,
+              2,
+              3,
+              4,
+              11,
+              12
+            ],
+            "subrecipeSlug": "cochinita-pibil"
+          }
+        ],
+        [
+          {
+            "name": "pickled onions",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "pickled-onions"
+          }
+        ],
+        [
+          {
+            "name": "frijoles refritos",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "frijoles-refritos"
+          }
+        ],
+        [
+          {
+            "name": "salsa roja tatemada",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "subrecipeSlug": "charred-red-sauce"
+          }
+        ],
+        [
+          {
+            "name": "tortilla",
+            "modifier": "corn",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "avocado",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              1,
+              2,
+              3,
+              4,
+              11,
+              12
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    ""
+  ],
+  "overnight": false,
+  "slug": "cochinita-pibil-tacos",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Warm up the tortillas: heat a non-sticking or cast iron skillet on medium-high until hot (don’t add oil). Warm the tortillas one by one: for about 30 seconds on one side, then for about one minute on the other side, then flip again and cook a bit more, until crispy but still slightly flexible (they shouldn’t be too soft because the meat is very juicy, and they may break).",
+          "pause": false
+        },
+        {
+          "text": "Serve all the ingredients — tortillas, avocado, cochinita pibil, pickled onions, frijoles refritos, and salsa roja tatemada — separately, so everyone could assemble the taco of their dreams (this also prevents tortillas to become soaked and break).",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Celebration",
+    "Crowd",
+    "Dinner",
+    "Spicy",
+    "Tacos"
+  ],
+  "time": 400,
+  "title": "Cochinita pibil tacos",
+  "tools": [],
+  "yields": {
+    "amount": 30,
+    "unit": "taco"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/FFMPv75SRJGJJYcCQXTp",
+      "handle": "FFMPv75SRJGJJYcCQXTp",
+      "width": 5096,
+      "height": 4000
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "charred-red-sauce",
+      "title": "Salsa roja tatemada"
+    },
+    {
+      "slug": "frijoles-refritos",
+      "title": "Frijoles refritos"
+    },
+    {
+      "slug": "pickled-onions",
+      "title": "Pickled onions"
+    },
+    {
+      "slug": "cochinita-pibil",
+      "title": "Cochinita pibil"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    3,
+    4
+  ],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

@@ -1,0 +1,441 @@
+{
+  "createdAt": "2022-03-20T08:56:28.950Z",
+  "cuisines": [
+    "Korean",
+    "Klatzlandian"
+  ],
+  "description": "Our bibimbap recipe is a bit different that the traditional Korean bibimbap. We put a lot more vegetables, and we also rarely cook them separately — too much trouble. And if you’re supposed to mix everything (_bibimbap_ means “mixed rice”) — what’s the point?\n\nThis is a big diversion from the traditional bibimbap: the traditional bibimbap is drier with a distinct taste of each ingredient, our version is juicy, with a more blended taste and full of vegetables.\n\nYou could use any fillings you like or available. These are the ones that are easy to get and cook, but still taste great.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the meat",
+      "ingredients": [
+        [
+          {
+            "name": "beef",
+            "modifier": "ground",
+            "minAmount": 150,
+            "maxAmount": 150,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pork",
+            "modifier": "ground",
+            "minAmount": 150,
+            "maxAmount": 150,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "modifier": "red",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "kimchi paste",
+            "kind": 4,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "kimchi-paste"
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "minAmount": 9,
+            "maxAmount": 9,
+            "unit": "teaspoon",
+            "comment": "hot",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "soy sauce",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the fillings",
+      "ingredients": [
+        [
+          {
+            "name": "carrot",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "zucchini",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8
+            ]
+          }
+        ],
+        [
+          {
+            "name": "bell pepper",
+            "modifier": "green",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bean",
+            "modifier": "green",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "handful",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pea",
+            "modifier": "sugar",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "handful",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cucumber",
+            "modifier": "spicy quick-pickled",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "name": "cucumber",
+            "modifier": "normal pickled",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "kimchi",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "kimchi"
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For serving",
+      "ingredients": [
+        [
+          {
+            "name": "rice",
+            "modifier": "cooked",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "portion",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "soy sauce",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "sesame seeds",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "bibimbap",
+  "steps": [
+    {
+      "name": "To make the meat",
+      "steps": [
+        {
+          "text": "Prepare the vegetables.<br> **Onion:** peel, halve and cut into thin slices.<br>**Garlic:** peel, cut into very thin slices.",
+          "pause": false
+        },
+        {
+          "text": "Dilute the kimchi paste in hot water (the amount of kimchi paste depends on the desired level of spiciness).",
+          "pause": false
+        },
+        {
+          "text": "In a skillet on medium heat, sauté the onion for about 5-10 minutes with olive oil.",
+          "pause": false
+        },
+        {
+          "text": "Add the garlic, and cook for 3-5 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the meat to the skillet, increase the heat, and cook until there are no pink spots in the meat, stirring continuously and breaking bigger clumps using a wooden spatula.",
+          "pause": false
+        },
+        {
+          "text": "Pour the diluted kimchi paste into the skillet, sprinkle soy sauce over, reduce the heat, and cook for another 5-10 minutes.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To make the fillings",
+      "steps": [
+        {
+          "text": "Prepare the vegetables. **Carrot:** peel and cut into thick matchsticks. **Zucchini:** cut it into 1/4 cm half-moons. **Green beans:** trim ends, and halve. **Sugar peas:** nothing. **Bell pepper:** remove the root, and cut into 1/4 cm strips.",
+          "pause": false
+        },
+        {
+          "text": "In a large skillet, fry with a bit of olive oil until softened and browned a bit. Add vegetables one kind at a time, starting with the hard ones. (Green beans, carrots, zucchini, sugar peas, etc.)",
+          "pause": false
+        },
+        {
+          "text": "Season with a bit of salt, and thoroughly stir.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To serve",
+      "steps": [
+        {
+          "text": "Fry the eggs sunny side up.",
+          "pause": false
+        },
+        {
+          "text": "Slice pickled cucumbers diagonally (to make large, thin ovals).",
+          "pause": false
+        },
+        {
+          "text": "Coarsely chop the kimchi.",
+          "pause": false
+        },
+        {
+          "text": "Put the rice on the bottom of a large, deep plate. Layer the meat on top of the rice with all its juice. Put all the fillings over the meat: vegetables, pickled cucumbers, kimchi. Place the fried egg in the middle. Sprinkle with freshly ground sesame seeds.",
+          "pause": false
+        },
+        {
+          "text": "Serve. Mix everything before eating.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Lunch",
+    "Spicy"
+  ],
+  "time": 60,
+  "title": "Bibimbap",
+  "tools": [
+    "500 ml container with a tight-fitting lid"
+  ],
+  "yields": {
+    "amount": 3,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/D4DLl2qMQDuLucUieAvE",
+      "handle": "D4DLl2qMQDuLucUieAvE",
+      "width": 4439,
+      "height": 3934
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "kimchi",
+      "title": "Kimchi"
+    },
+    {
+      "slug": "spicy-quick-pickled-cucumbers",
+      "title": "Spicy quick-pickled cucumbers"
+    },
+    {
+      "slug": "kimchi-paste",
+      "title": "Kimchi paste"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    6,
+    7,
+    8
+  ],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "5-10 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [
+    "**Kimchi could be non-vegan:** if not labeled as vegan, it may contain fish sauce.",
+    "**Soy sauce** is likely not gluten-free and contains wheat."
+  ],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

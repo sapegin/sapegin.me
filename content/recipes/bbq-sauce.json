@@ -1,0 +1,241 @@
+{
+  "createdAt": "2022-03-20T10:38:30.084Z",
+  "cuisines": [
+    "UnitedStates"
+  ],
+  "description": "This is a work-in-progress attempt to find a good sauce for burgers without the need to buy a ready-made BBQ sauce.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "bell pepper",
+            "modifier": "red",
+            "minAmount": 0.25,
+            "maxAmount": 0.25,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 4,
+            "maxAmount": 4,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato paste",
+            "minAmount": 9,
+            "maxAmount": 9,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "mustard",
+            "modifier": "Dijon",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "paprika powder",
+            "modifier": "smoked",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "modifier": "ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "You could use leftovers when you cook chicken-vegetable-noodles soup instead of blended tomatoes and tomato paste."
+  ],
+  "overnight": false,
+  "slug": "bbq-sauce",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the vegetables. **Onion:** cut into small dice. **Chili:** halve lengthwise, remove the seeds and thinly slice. **Tomatoes:** roughly chop. **Bell pepper:** remove the seeds and roughly chop. **Garlic:** chop into small pieces.",
+          "pause": false
+        },
+        {
+          "text": "In a medium saucepan, sauté on medium heat 1/2 of the diced onions and chili until transparent, for about 5 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add tomatoes, bell pepper, and garlic, and cook on low heat for about 20 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"tomato paste\"  />, and <Ingredient name=\"mustard\"  />.",
+          "pause": false
+        },
+        {
+          "text": "Season with smoked paprika powder, black pepper, cumin, and salt.",
+          "pause": false
+        },
+        {
+          "text": "Mix everything into a paste using a blender.",
+          "pause": false
+        },
+        {
+          "text": "Add raw onions, and mix using a spoon.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Sauce",
+    "Dip",
+    "Foundation"
+  ],
+  "time": 30,
+  "title": "BBQ sauce",
+  "tools": [
+    "blender"
+  ],
+  "yields": {
+    "amount": 200,
+    "unit": "ml"
+  },
+  "images": [],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "20 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

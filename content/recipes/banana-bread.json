@@ -1,0 +1,262 @@
+{
+  "createdAt": "2021-08-04T06:49:07.730Z",
+  "cuisines": [
+    "UnitedStates",
+    "Klatzlandian"
+  ],
+  "description": "Banana bread was the first Artemʼs baking experience, and itʼs a great choice for an aspiring baker: easy to bake, doesnʼt require many ingredients besides overripe bananas and whatever nuts and dried fruits you have at home. Itʼs a great addition to any outdoor activity — whether itʼs a picnic with your family, a hike with friends, or a solo photography outing (donʼt forget a thermos with coffee!). Of course, it tastes great at home too!",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "butter",
+            "minAmount": 120,
+            "maxAmount": 120,
+            "unit": "g",
+            "comment": "at room temperature",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "all-purpose flour",
+            "minAmount": 200,
+            "maxAmount": 200,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "baking powder",
+            "minAmount": 10,
+            "maxAmount": 10,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cinnamon",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 40,
+            "maxAmount": 40,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "banana",
+            "modifier": "overripe",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "fruit",
+            "modifier": "lots nuts and dried",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "For nuts, I like to use pecans, almonds, dried apricots, dried cranberries, and dried rhubarb. Experiment and find what you like."
+  ],
+  "overnight": false,
+  "slug": "banana-bread",
+  "source": "This recipe is inspired by the [Banana banana bread](https://www.allrecipes.com/recipe/20144/banana-banana-bread/) recipe.",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Preheat oven to 180C.",
+          "pause": false
+        },
+        {
+          "text": "Butter the baking form.",
+          "pause": false
+        },
+        {
+          "text": "In a medium bowl, combine <Ingredient name=\"all-purpose flour\"  />, <Ingredient name=\"baking powder\"  />,  <Ingredient name=\"cinnamon\"  />, and <Ingredient name=\"salt\"  />, using a whisk.",
+          "pause": false
+        },
+        {
+          "text": "In a mixer bowl, mix butter and <Ingredient name=\"coconut sugar\"  />, using a mixer with a whisk attachment.",
+          "pause": false
+        },
+        {
+          "text": "In a separate small bowl, break <Ingredient name=\"egg\"  />.",
+          "pause": false
+        },
+        {
+          "text": "Incorporate eggs one by one into the butter and sugar mixture using a mixer.",
+          "pause": false
+        },
+        {
+          "text": "While eggs are mixed, in yet another medium bowl, puree bananas using a masher or fork.",
+          "pause": false
+        },
+        {
+          "text": "Incorporate bananas into the mixture, using a silicone spatula.",
+          "pause": false
+        },
+        {
+          "text": "Add nuts and dried fruits to the mixture.",
+          "pause": false
+        },
+        {
+          "text": "Add the dry ingredients to the wet mixture. Stir using a silicone spatula just enough to wet the flour.",
+          "pause": false
+        },
+        {
+          "text": "Pour the batter into the baking form.",
+          "pause": false
+        },
+        {
+          "text": "Bake for 60-80 minutes, until a toothpick comes out dry.",
+          "pause": false
+        },
+        {
+          "text": "Let the bread cool down, and remove it from the baking form.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Baking",
+    "Dessert",
+    "SweetBread",
+    "Picnic"
+  ],
+  "time": 100,
+  "title": "Banana bread",
+  "tools": [
+    "mixer",
+    "oven",
+    "21×10 cm baking form"
+  ],
+  "yields": {
+    "amount": 1,
+    "unit": "loaf"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/bwVpWst0Smu3AYL1BXHp",
+      "handle": "bwVpWst0Smu3AYL1BXHp",
+      "width": 3697,
+      "height": 2622
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "WarmToRoomTemp",
+      "subtype": "butter",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "180C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "60-80 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Rest",
+      "value": "",
+      "overnight": false,
+      "covered": false
+    }
+  ],
+  "tips": [
+    "Use a wooden toothpick to check the cake for readiness: insert it into the cake in several places, if the toothpick is dry, the cake is ready. If the top of the cake is getting to brown, cover it with tinfoil."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

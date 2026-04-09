@@ -1,0 +1,222 @@
+{
+  "createdAt": "2024-01-23T16:07:07.528Z",
+  "cuisines": [
+    "Lebanese"
+  ],
+  "description": "This salad was inspired by a lentil salad we tried in a Lebanese restaurant we stumbled upon in Paris (this is our favorite way of finding great places to eat!). Back in Berlin, we recreated it using a photo and our imagination. You may ask how lentil salad became a _pea salad_? Artem took peas instead of lentils from the pantry by mistake but the result was so good, we decided to keep using peas.\n\nThis salad is great for a hot summer party or a picnic. Easy to transport and stays fresh in a sealed container for a few days.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "pea",
+            "modifier": "dry",
+            "minAmount": 150,
+            "maxAmount": 150,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "bell pepper",
+            "modifier": "green",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bell pepper",
+            "modifier": "red",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 0.5,
+            "maxAmount": 0.5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "scallion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "parsley",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "bunch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "lime",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "pea-salad",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Rinse the peas in cold water, and cook in water until tender (but not too soft).",
+          "pause": false
+        },
+        {
+          "text": "While the peas are cooking, prepare the vegetables. **Tomatoes, bell peppers:** cut into medium dice. **Onion:** peel, deroot, and cut into medium dice. **Chile:** cut lengthwise, remove seeds, and thinly slice. **Scallion:** thinly slice both green and white parts. **Parsley:** coarsely chop.",
+          "pause": false
+        },
+        {
+          "text": "Whisk together lime juice, olive oil, and salt until they form an emulsion.",
+          "pause": false
+        },
+        {
+          "text": "Combine peas, all the vegetables, and the dressing. Thoroughly mix.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Salad",
+    "Picnic"
+  ],
+  "title": "Pea salad",
+  "tools": [],
+  "yields": {
+    "amount": 4,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/dxY1ViITsilMiUcBfXj3",
+      "handle": "dxY1ViITsilMiUcBfXj3",
+      "width": 5076,
+      "height": 3577
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

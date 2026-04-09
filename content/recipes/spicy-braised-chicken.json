@@ -1,0 +1,336 @@
+{
+  "createdAt": "2024-12-11T16:39:36.678Z",
+  "cuisines": [
+    "Klatzlandian",
+    "Korean"
+  ],
+  "description": "Inspired by the bold and spicy flavors of Korean cuisine, this braised chicken recipe has become a staple in our home. Traditionally, Korean braised chicken (*dakbokkeumtang*) is simmered in a flavorful sauce made with gochugaru (Korean chili flakes), soy sauce, garlic, and sometimes oyster sauce for added depth. We’ve adapted the recipe to use ingredients we normally have in our pantry, like dried Mexican chiles — chiles de árbol and guajillo — while still keeping the Korean vibe by using soy sauce and oyster sauce.\n\nThis recipe produces tender, flavorful chicken with bright and spicy sauce and lots of vegetables. It’s also a great way to use a whole chicken in a single dish.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "potato",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "carrot",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "jalapeño",
+            "modifier": "fresh",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chicken",
+            "modifier": "whole",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 2,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile de árbol",
+            "modifier": "dry",
+            "minAmount": 5,
+            "maxAmount": 5,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "modifier": "dry guajillo",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "soy sauce",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "oyster sauce",
+            "minAmount": 1.5,
+            "maxAmount": 1.5,
+            "unit": "teaspoon",
+            "kind": 3,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "maple syrup",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "coconut sugar",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "teaspoon",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "water",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "ml",
+            "comment": "hot",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "dakbokkeumtang"
+  ],
+  "notes": [],
+  "overnight": false,
+  "slug": "spicy-braised-chicken",
+  "source": "This recipe is inspired by the Netflix’s Korean fried chicken rhapsody show and the spicy braised chicken recipe from Aaron Huh’s book “Simply Korean: Easy recipes for Korean favorites that anyone can make”.",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the vegetables.<br>\n**Potatoes and carrots:** peel, and cut into large chunks. **Tomatoes:** remove cores, and cut into medium dice. **Onion:** peel, halve, and cut into 1/2 cm slices. **Jalapeño:** halve lengthwise, remove the seeds, and thinly slice.<br>\n**Garlic:** peel.",
+          "pause": false
+        },
+        {
+          "text": "Rinse the chicken in cold water. Cut it into pieces: wings, drumsticks, thighs, then split the breast into several smaller parts.",
+          "pause": false
+        },
+        {
+          "text": "Cover the bottom of the Dutch oven with olive oil, and heat it on medium-high heat.",
+          "pause": false
+        },
+        {
+          "text": "Brown the chicken on all sides.",
+          "pause": false
+        },
+        {
+          "text": "While the chicken is browning, prepare the seasoning paste.",
+          "pause": false
+        },
+        {
+          "text": "Mix in a blender garlic, <Ingredient name=\"chile de árbol\"  />, <Ingredient name=\"chile\" modifier=\"guajillo\" />, <Ingredient name=\"soy sauce\"  />, <Ingredient name=\"oyster sauce\"  />, <Ingredient name=\"maple syrup\"  /> or 2 tablespoons of coconut sugar, and 1/2 cup of water.",
+          "pause": false
+        },
+        {
+          "text": "Pour the seasoning paste into the Dutch oven, add salt, and cook covered on medium-low heat for about 20 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add potatoes, carrots, tomatoes, onions, jalapeño, hot water (it should almost cover the food), increase the heat to medium-high, and bring to a boil.",
+          "pause": false
+        },
+        {
+          "text": "Reduce the heat to medium, and simmer covered, stirring occasionally, for about 15 minutes, until all the vegetables are ready.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Spicy",
+    "braising",
+    "Lunch",
+    "Dinner",
+    "Crowd"
+  ],
+  "time": 120,
+  "title": "Spicy braised chicken",
+  "tools": [
+    "Dutch oven",
+    "Blender"
+  ],
+  "yields": {
+    "amount": 10,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/cm4k485qj7h3706ujuwwjh6pi",
+      "handle": "cm4k485qj7h3706ujuwwjh6pi",
+      "width": 3024,
+      "height": 2419
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [
+    {
+      "type": "Cook",
+      "subtype": "cook",
+      "value": "20 minutes",
+      "covered": true,
+      "overnight": false
+    },
+    {
+      "type": "Cook",
+      "subtype": "simmer",
+      "value": "15 minutes",
+      "covered": true,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [
+    "**Soy sauce** is likely not gluten-free and contains wheat."
+  ],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

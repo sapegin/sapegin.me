@@ -1,0 +1,26 @@
+@view-transition {
+	navigation: auto;
+}
+
+body {
+	min-height: 100vh;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: --spacing(1);
+		background-color: var(--color-accent);
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+}

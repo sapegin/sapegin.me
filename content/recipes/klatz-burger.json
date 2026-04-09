@@ -1,0 +1,297 @@
+{
+  "createdAt": "2024-02-24T14:52:16.260Z",
+  "cuisines": [
+    "UnitedStates"
+  ],
+  "description": "This burger recipe is how we love to make burgers at home — simple, flavorful, and mildly unconventional. Instead of the traditional 100% beef patty, we use a 50/50 mix of ground beef and pork for a juicier, richer flavor. While the core ingredients stay the same, we often swap out toppings based on what’s in the fridge, keeping the recipe flexible and fun. To top it all off, we use one of our favorite family salsas —  [first world salsa verde](/recipes/salsa-verde-de/), [salsa roja tatemada](/recipes/charred-red-sauce/), but feel free to use your favorite sauce.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "burger bun",
+            "modifier": "brioche",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "beef",
+            "modifier": "ground",
+            "minAmount": 50,
+            "maxAmount": 50,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pork",
+            "modifier": "ground",
+            "minAmount": 50,
+            "maxAmount": 50,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bell pepper",
+            "minAmount": 0.25,
+            "maxAmount": 0.25,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "tomato",
+            "minAmount": 0.25,
+            "maxAmount": 0.25,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "cheese",
+            "modifier": "cheddar",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "slice",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cucumber",
+            "modifier": "pickled",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "name": "jalapeño",
+            "modifier": "pickled",
+            "comment": "or both",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "first world salsa verde",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "salsa-verde-de"
+          },
+          {
+            "name": "salsa roja tatemada",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "subrecipeSlug": "charred-red-sauce"
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "comment": "for toasting buns",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "Don’t put sauce on the bread, it’ll make it wet — put it between other layers.",
+    "You can cook the sauce up to several days in advance, and store it in the fridge."
+  ],
+  "overnight": false,
+  "slug": "klatz-burger",
+  "source": "",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "**Prepare your preferred sauce:** [first world salsa verde](/recipes/salsa-verde-de/), [salsa roja tatemada](/recipes/charred-red-sauce/), or another of your choice.",
+          "pause": false
+        },
+        {
+          "text": "Heat two skillets on medium heat.",
+          "pause": false
+        },
+        {
+          "text": "Prepare the vegetables.<br>\n**Bell pepper:** remove the stem and seeds, cut the top and the bottom, cut the middle part into 3-4 squares (one bell pepper is enough for 5-6 burgers).<br>\n**Tomato:** slice thinly.",
+          "pause": false
+        },
+        {
+          "text": "On the first skillet, increase the heat to medium-high, add a bit of olive oil, and **cook the bell peppers**, until softened a bit, and slightly blistered on both sides.",
+          "pause": false
+        },
+        {
+          "text": "On the second skillet, add a bit of olive oil, and **fry the eggs**: crack each egg into the hot oil, sprinkle with salt, and cover the skillet. Fry covered until all the whites are fully set.",
+          "pause": false
+        },
+        {
+          "text": "While the eggs and bell peppers are cooking, **form the burger patties**: mix the ground meat just enough to combine, divide into 100 g portions, roll into balls, and gently press into round patties. (Avoid mixing and pressing too much, as it'll make the patties harder when they are cooked.)",
+          "pause": false
+        },
+        {
+          "text": "On the skillet you used for the bell pepper, **fry the patties**: lower the heat to medium, add more oil if needed, place patties on the skillet, gently press down with a spatula and hold for about 10 seconds, and cook for about 5 minutes; turn and cook for 2 minutes, then put two slices of cheese on top of each patty, cover the skillet, and cook for about 5 minutes more until the internal temperature of the meat is 60C (for medium-well).",
+          "pause": false
+        },
+        {
+          "text": "While the patties are cooking, on the other skillet, **toast the buns**: melt a tablespoon of butter, and toast the cut sides until golden brown.",
+          "pause": false
+        },
+        {
+          "text": "Finally, **assemble the burgers**: lower bun, bell peppers, pickled cucumbers and/or jalapeños, patty, tomatoes, sauce, fried egg, upper bun.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "sandwich",
+    "fastFood"
+  ],
+  "time": 40,
+  "title": "Klatz burger",
+  "tools": [
+    "two medium-sized skillets (one with lid)"
+  ],
+  "yields": {
+    "amount": 1,
+    "unit": "burger"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/z21RXb8vSvaHJYWkmxmW",
+      "handle": "z21RXb8vSvaHJYWkmxmW",
+      "width": 6204,
+      "height": 4136
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "charred-red-sauce",
+      "title": "Salsa roja tatemada"
+    },
+    {
+      "slug": "salsa-verde-de",
+      "title": "First world salsa verde"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

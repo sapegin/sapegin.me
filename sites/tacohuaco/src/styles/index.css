@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@source '../../../../shared/';
+
+@import '../../../../shared/packages/tamia/index.css';
+@import '../../../../shared/packages/tamia/components/prose.css';
+@import '../../../../shared/packages/tamia/components/link.css';
+@import '../../../../shared/packages/tamia/components/quoted-link.css';
+
+@import './theme.css';
+@import './global.css';
+@import './fonts.css';
+@import './components/typography.css';
+@import './components/button.css';
+@import './components/frame.css';

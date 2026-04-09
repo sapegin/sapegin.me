@@ -1,0 +1,195 @@
+{
+  "createdAt": "2023-03-30T17:52:32.366Z",
+  "cuisines": [
+    "UnitedStates",
+    "Klatzlandian"
+  ],
+  "description": "This is the third iteration of our family granola recipe, improved upon the [Cranberry granola](https://tacohuaco.co/recipes/granola/) and [Not-so-sweet date granola](https://tacohuaco.co/recipes/date-granola/). It has a lot of nuts and dried fruits, not just dates, still not too sweet, and is more crispy than ever.\n\nWe eat it every morning with yogurt, bananas, and fresh berries (grapes in winter and strawberries or blueberries in summer, or whatever looks good and not too expensive).",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "coconut oil",
+            "minAmount": 60,
+            "maxAmount": 60,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "maple syrup",
+            "minAmount": 30,
+            "maxAmount": 30,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "modifier": "fine",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "oat",
+            "minAmount": 300,
+            "maxAmount": 300,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "fruit",
+            "modifier": "nuts and dried",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "muesli"
+  ],
+  "notes": [
+    "You can make this granola with your favorite nuts and dried fruits. Our favorites are almonds, pecans, Brazilian nuts, dates, and dark dried apricots.",
+    "Store the granola in an airtight container at room temperature for up to two weeks."
+  ],
+  "overnight": false,
+  "slug": "morning-crunch-granola",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Preheat oven to 160C. Line a baking sheet with parchment paper.",
+          "pause": false
+        },
+        {
+          "text": "In a small saucepan, put <Ingredient name=\"coconut oil\"  />, <Ingredient name=\"maple syrup\"  />, <Ingredient name=\"salt\"  />.",
+          "pause": false
+        },
+        {
+          "text": "Place on medium heat, and stir until the coconut oil is melted.",
+          "pause": false
+        },
+        {
+          "text": "In a large bowl, combine <Ingredient name=\"oat\"  />, and the coconut oil mixture. Mix well, until every oat is lightly coated.",
+          "pause": false
+        },
+        {
+          "text": "Coarsely chop the nuts, and add them to the oats. Mix again.",
+          "pause": false
+        },
+        {
+          "text": "Evenly distribute the granola on the baking sheet using a silicone spatula or a large spoon.",
+          "pause": false
+        },
+        {
+          "text": "Bake for 10 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Stir, and bake for another 10-15 minutes, until light-golden and a bit crispy but not dark.",
+          "pause": false
+        },
+        {
+          "text": "Let the granola cool completely.",
+          "pause": false
+        },
+        {
+          "text": "Cut the dried fruits into small pieces, and mix them with the granola.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Breakfast"
+  ],
+  "time": 30,
+  "title": "Morning crunch granola",
+  "tools": [
+    "oven",
+    "baking tray"
+  ],
+  "yields": {
+    "amount": 500,
+    "unit": "g"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/ebpmJzETMWeB6P2euWQe",
+      "handle": "ebpmJzETMWeB6P2euWQe",
+      "width": 6240,
+      "height": 4160
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "chocolate-granola-bars",
+      "title": "Chocolate granola bars"
+    }
+  ],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "PreheatOven",
+      "value": "160C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "10 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "10-15 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

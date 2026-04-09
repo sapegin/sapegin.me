@@ -1,0 +1,105 @@
+---
+import intersection from 'lodash/intersection';
+import sortBy from 'lodash/sortBy';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { RecipePage } from '../../templates/RecipePage';
+import { recipeEntryToRecipe } from '../../util/recipeEntryToRecipe';
+import type { Recipe, RecipeFragment } from '../../types/Recipe';
+import { RecipeBody } from '../../components/RecipeBody';
+
+type Entry = CollectionEntry<'recipes'>;
+type Props = Entry;
+
+export async function getStaticPaths() {
+	const entries = await getCollection('recipes');
+	return entries.map((post) => ({
+		params: { slug: post.data.slug },
+		props: post,
+	}));
+}
+
+function filterGenericCuisines(cuisines: Recipe['cuisines']) {
+	return cuisines.filter((x) => x !== 'Klatzlandian');
+}
+
+function getMadeWithRecipes(
+	allRecipes: RecipeFragment[],
+	recipes: Pick<Recipe, 'slug'>[]
+) {
+	return allRecipes.filter((recipe) =>
+		recipes.find((x) => x.slug === recipe.slug)
+	);
+}
+
+function getRelatedRecipes(
+	allRecipes: RecipeFragment[],
+	{ slug, cuisines, tags }: Pick<Recipe, 'slug' | 'cuisines' | 'tags'>
+): RecipeFragment[] {
+	const filteredRecipes = allRecipes.filter((recipe) => {
+		// Don't show the same recipe
+		if (recipe.slug === slug) {
+			return false;
+		}
+		// Show foundation recipes and all other recipes separately
+		if (
+			tags.includes('Foundation')
+				? !recipe.tags.includes('Foundation')
+				: recipe.tags.includes('Foundation')
+		) {
+			return false;
+		}
+		return true;
+	});
+
+	// Filter out Klatzlandian recipes
+	const filteredCuisines = filterGenericCuisines(cuisines);
+
+	// Calculate weights
+	const weightedRecipes: [RecipeFragment, number][] = filteredRecipes.map(
+		(recipe) => {
+			const tagsWeight = intersection(recipe.tags, tags).length * 10;
+			const cuisineWeight = intersection(
+				filterGenericCuisines(recipe.cuisines),
+				filteredCuisines
+			).length;
+			return [recipe, tagsWeight + cuisineWeight];
+		}
+	);
+
+	// Sort by weight
+	const sortedRecipes = sortBy(weightedRecipes, (x) => -x[1]);
+
+	// Discard recipes with 0 weight and return 6 top recipes
+	return sortedRecipes
+		.filter(([, weight]) => weight > 0)
+		.map(([recipe]) => recipe)
+		.slice(0, 6);
+}
+
+const entry = Astro.props;
+const recipe = recipeEntryToRecipe(entry);
+const url = `/recipes/${recipe.slug}/`;
+
+const entries = await getCollection('recipes');
+const allRecipes = entries.map((x) => recipeEntryToRecipe(x));
+const madeWithRecipes = getMadeWithRecipes(allRecipes, recipe.recipes);
+const relatedRecipes = getRelatedRecipes(allRecipes, recipe);
+---
+
+<Layout
+	url={url}
+	title={recipe.title}
+	pageTitle={`${recipe.title} recipe by Tacohuaco`}
+	description={recipe.description}
+	hygraphImageHandle={recipe.images?.[0]?.handle}
+>
+	<RecipePage
+		url={url}
+		madeWithRecipes={madeWithRecipes}
+		relatedRecipes={relatedRecipes}
+		{...recipe}
+	>
+		<RecipeBody {...recipe} client:visible />
+	</RecipePage>
+</Layout>

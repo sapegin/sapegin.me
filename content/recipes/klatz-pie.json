@@ -1,0 +1,424 @@
+{
+  "createdAt": "2023-04-17T16:16:15.261Z",
+  "cuisines": [
+    "Klatzlandian",
+    "English",
+    "Korean"
+  ],
+  "description": "This recipe was inspired by shepherd’s pie and bibimbap. The filling is quite similar to our [faux bibimbap recipe](/recipes/faux-bibimbap/), and covered with a thick layer of creamy mashed potatoes with a golden crust.",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "For the mashed potatoes",
+      "ingredients": [
+        [
+          {
+            "name": "potato",
+            "modifier": "floury",
+            "minAmount": 1000,
+            "maxAmount": 1000,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "bay leaf",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "minAmount": 12,
+            "maxAmount": 12,
+            "unit": "teaspoon",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "milk",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "cup",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "paprika powder",
+            "modifier": "smoked",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "black pepper",
+            "modifier": "freshly ground",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the filling",
+      "ingredients": [
+        [
+          {
+            "name": "onion",
+            "modifier": "red",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "chile",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "carrot",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "zucchini",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              6,
+              7,
+              8
+            ]
+          }
+        ],
+        [
+          {
+            "name": "bean",
+            "modifier": "green",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "handful",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pea",
+            "modifier": "sugar",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "handful",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "kimchi paste",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "teaspoon",
+            "kind": 4,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "kimchi-paste"
+          }
+        ],
+        [
+          {
+            "name": "beef",
+            "modifier": "ground",
+            "minAmount": 200,
+            "maxAmount": 200,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "pork",
+            "modifier": "ground",
+            "minAmount": 200,
+            "maxAmount": 200,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "soy sauce",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    },
+    {
+      "name": "For the pie",
+      "ingredients": []
+    }
+  ],
+  "keywords": [
+    "shepherd’s pie",
+    "cottage pie"
+  ],
+  "notes": [],
+  "overnight": false,
+  "slug": "klatz-pie",
+  "steps": [
+    {
+      "name": "To cook the mashed potatoes",
+      "steps": [
+        {
+          "text": "Peel the potatoes, cut them into large chunks of similar size, and cook in water with <Ingredient name=\"bay leaf\"  /> and salt, until tender.",
+          "pause": false
+        },
+        {
+          "text": "Keep about 1 cup of potato cooking liquid, and discard the remaining cooking liquid.",
+          "pause": false
+        },
+        {
+          "text": "Mash the potatoes using a potato ricer or masher, add <Ingredient name=\"egg\"  />, a few tablespoons of butter, a splash of milk, and salt. Keep adding more cooking liquid and milk and stirring until the potatoes are creamy.",
+          "pause": false
+        },
+        {
+          "text": "Add more salt if needed.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the filling",
+      "steps": [
+        {
+          "text": "Turn on the oven to 220C (so it's hot enough by the time we're ready to bake the pie).",
+          "pause": false
+        },
+        {
+          "text": "While the potatoes are cooking, prepare the vegetables. **Onion:** peel, halve and cut into thin slices. **Garlic:** peel and cut into 1/2 cm pieces. **Chiles:** halve, remove the seeds, and thinly slice. **Carrots:** peel (if needed), halve, and cut into 1/2 cm slices. **Zucchini:** halve, and cut into 1/4 cm half-moons. **Green beans:** cut the ends, and cut into 3-4 cm pieces. **Sugar pees:** halve.",
+          "pause": false
+        },
+        {
+          "text": "Dilute <Ingredient name=\"kimchi paste\"  /> in 1/4 cup of water.",
+          "pause": false
+        },
+        {
+          "text": "On a medium-sized skillet sat on medium heat with olive oil, sauté onions, garlic, and chili, until the onion is transparent, for a few minutes.",
+          "pause": false
+        },
+        {
+          "text": "On a second, larger oven-safe skillet sat on medium-high heat with a bit of olive oil, start frying carrots, until they start to soften, for about 5 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the ground meat to the small skillet, stir, and keep cooking until there are no pink spots in the meat.",
+          "pause": false
+        },
+        {
+          "text": "Add the zucchini, and green beans to the large skillet, and cook for another 5 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the sugar peas to the large skillet, and cook for a few more minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add the diluted kimchi paste and a splash of soy sauce to the meat, reduce the heat to low, and cook for about 5 minutes. Remove the skillet from heat.",
+          "pause": false
+        },
+        {
+          "text": "Add the meat to the large skillet, thoroughly mix everything, and add more salt if needed.",
+          "pause": false
+        }
+      ]
+    },
+    {
+      "name": "To cook the pie",
+      "steps": [
+        {
+          "text": "Put the mashed potatoes on top of the filling in the large skillet in an even layer.",
+          "pause": false
+        },
+        {
+          "text": "Bake the pie uncovered for about 40 minutes in the oven, until golden.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Celebration",
+    "Crowd",
+    "Dinner",
+    "DutchOven",
+    "Potatoes",
+    "Warming"
+  ],
+  "time": 180,
+  "title": "Klatz pie",
+  "tools": [
+    "large oven-safe skillet or dutch oven"
+  ],
+  "yields": {
+    "amount": 6,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/zOOWzMYXTfOETaKvszKF",
+      "handle": "zOOWzMYXTfOETaKvszKF",
+      "width": 4837,
+      "height": 3922
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "kimchi-paste",
+      "title": "Kimchi paste"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    6,
+    7,
+    8
+  ],
+  "chart": [
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "40 minutes",
+      "covered": false,
+      "overnight": false
+    }
+  ],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [
+    "**Soy sauce** is likely not gluten-free and contains wheat."
+  ],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

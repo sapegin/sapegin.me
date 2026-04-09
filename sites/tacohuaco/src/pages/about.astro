@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { AboutPage } from '../templates/AboutPage';
+import { Content } from '../data/about.md';
+---
+
+<Layout
+	url="/about/"
+	pageTitle="About Tacohuaco"
+	description="We've started Tacohuaco as a better way of keeping notes about foodses we cook, and it evolves together with our cooking needs…"
+	component={AboutPage}
+>
+	<Content />
+</Layout>

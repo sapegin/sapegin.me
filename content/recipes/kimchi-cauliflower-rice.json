@@ -1,0 +1,251 @@
+{
+  "createdAt": "2022-09-06T12:54:11.855Z",
+  "cuisines": [
+    "Korean",
+    "Klatzlandian"
+  ],
+  "description": "We love [kimchi](https://tacohuaco.co/recipes/kimchi/) and we love [kimchi fried rice](https://tacohuaco.co/recipes/kimchi-fried-rice/), but we don’t cook rice very often, so here’s a quicker-to-make, easier and healthier version of the kimchi fried rice with the cauliflower instead of real rice. Different kind of crunch but equally satisfying.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "cauliflower",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "head",
+            "comment": "not too large",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              1,
+              2,
+              3,
+              10,
+              11,
+              12
+            ]
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "garlic",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "clove",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "kimchi",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "unit": "cup",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [],
+            "subrecipeSlug": "kimchi"
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 6,
+            "maxAmount": 6,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "unit": "teaspoon",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "olive oil",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "nori",
+            "comment": "for serving",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "sesame seeds",
+            "modifier": "toasted",
+            "comment": "for serving",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "If you have any kind of meat leftovers, feel free to add them — it'll make the dish even better."
+  ],
+  "overnight": false,
+  "slug": "kimchi-cauliflower-rice",
+  "source": "This recipe is inspired by Roi Choi’s The Chef Show, and based on [this kimchi fried cauliflower rice recipe](https://nomnompaleo.com/2017091220170912kimchi-fried-cauliflower-rice).",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Prepare the ingredients. **Cauliflower:** remove the leaves, chop into tiny pieces using a food processor, or grate on a large side of a grater. **Onion:** peel, halve, and cut into 1/2 cm slices. **Garlic:** peel, and roughly chop. **Kimchi:** roughly chop.",
+          "pause": false
+        },
+        {
+          "text": "Whisk the eggs with a bit of salt. Work with 3-4 eggs at a time depending on the size of your skillet, we're not making an omelet here — the layer of eggs should be very thin, almost like a crêpe.",
+          "pause": false
+        },
+        {
+          "text": "Heat a skillet over low heat, and add a bit of olive oil.",
+          "pause": false
+        },
+        {
+          "text": "Pour the whisked eggs in the middle of the skillet, tilt the skillet and turn it around so the eggs form a thin even layer. Cook the eggs for 1-2 minutes until they firm on the bottom but don’t start browning yet, gently flip the eggs using a large spatula, and cook on the other side for couple more minutes. Transfer the cooked egg to a plate.",
+          "pause": false
+        },
+        {
+          "text": "Add more olive oil to the, now empty, skillet, increase the heat to medium, then add the onions, and the garlic, and cook until the onions are transparent, for a few minutes. Add a bit of salt in the middle.",
+          "pause": false
+        },
+        {
+          "text": "Add the kimchi to the skillet, increase the heat to medium-high, and stir-fry until the kimchi starts to brown for about 5 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Add butter, and keep stirring until the butter melts.",
+          "pause": false
+        },
+        {
+          "text": "Add the cauliflower, and kimchi juice to the skillet and mix thoroughly.",
+          "pause": false
+        },
+        {
+          "text": "Reduce the heat to low, and cook for 3-5 minutes, until the cauliflower heats and softens just a bit but not yet mushy — we want to keep that crunch!",
+          "pause": false
+        },
+        {
+          "text": "While the cauliflower is cooking, prepare the garnish. Cooked eggs: slice into thin strips. Nori: also slice into thin strips.",
+          "pause": false
+        },
+        {
+          "text": "Add more salt if needed, and serve topped with egg strips, nori, and freshly ground sesame seeds.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Spicy",
+    "Lunch"
+  ],
+  "time": 40,
+  "title": "Kimchi cauliflower rice",
+  "tools": [
+    "food processor or grater"
+  ],
+  "yields": {
+    "amount": 4,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/UCwQYVd7SR9hBYosW1Cw",
+      "handle": "UCwQYVd7SR9hBYosW1Cw",
+      "width": 4843,
+      "height": 3793
+    }
+  ],
+  "subrecipes": [
+    {
+      "slug": "kimchi",
+      "title": "Kimchi"
+    }
+  ],
+  "recipes": [],
+  "seasons": [
+    1,
+    2,
+    3,
+    10,
+    11,
+    12
+  ],
+  "chart": [],
+  "tips": [
+    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
+  ],
+  "warnings": [
+    "**Kimchi could be non-vegan:** if not labeled as vegan, it may contain fish sauce."
+  ],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}

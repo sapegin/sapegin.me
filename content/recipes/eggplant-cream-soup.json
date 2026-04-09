@@ -1,0 +1,137 @@
+{
+  "createdAt": "2021-08-17T06:15:16.898Z",
+  "cuisines": [
+    "Klatzlandian"
+  ],
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "For serving",
+      "ingredients": [
+        [
+          {
+            "name": "olive",
+            "modifier": "canned",
+            "minAmount": "some",
+            "maxAmount": "some",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "scallion",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "straw",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "eggplant-cream-soup",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Preheat oven to 200C.",
+          "pause": false
+        },
+        {
+          "text": "Slice an onion in halves. Put all the vegetables unpeeled into a baking form, pour a bit of olive oil on top, add salt and black pepper.",
+          "pause": false
+        },
+        {
+          "text": "Bake for 20-30 minutes, until vegetables are soft when you stab them with a knife or a fork.",
+          "pause": false
+        },
+        {
+          "text": "When the vegetables cooled down a bit, take them out of the baking form (don’t wash the baking form, we'll need it later). Peel the onion, the eggplants, and the pepper. Roughly chop them into big chunks and puree using a blender or a food processor until you have a smooth creamy paste.",
+          "pause": false
+        },
+        {
+          "text": "Pour 400-500 g of hot chicken stock into the baking form from the vegetables, add a teaspoon of curry powder. Mix until the powder has diluted.",
+          "pause": false
+        },
+        {
+          "text": "Pour the vegetable puree and the broth into a small pan. Add two bay leaves. Add a teaspoon of ground cumin. Stir, and cook on low heat for 10 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Grate a bit of Parmigiano-Reggiano over the soup and stir.",
+          "pause": false
+        },
+        {
+          "text": "Serve with thinly chopped olives and green onion.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Lunch",
+    "Soup",
+    "CreamSoup"
+  ],
+  "title": "Eggplant cream soup",
+  "tools": [
+    "blender or food processor",
+    "oven"
+  ],
+  "yields": {
+    "amount": 2,
+    "unit": "portion"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/m0mTNwV2RDCnsNnzixMJ",
+      "handle": "m0mTNwV2RDCnsNnzixMJ",
+      "width": 2913,
+      "height": 2913
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [],
+  "chart": [
+    {
+      "type": "PreheatOven",
+      "value": "200C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "20-30 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Rest",
+      "value": "10 minutes",
+      "overnight": false,
+      "covered": false
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

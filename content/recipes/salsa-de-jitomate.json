@@ -1,0 +1,175 @@
+{
+  "createdAt": "2024-08-06T13:46:22.875Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "This salsa is typically used for serving [tacos dorados](/recipes/tacos-dorados/) or tostadas, but is very versatile. It's usually not spicy, but you can add one or two chiles or combine it with another salsa, such as [salsa de chile de árbol](/recipes/salsa-de-chile-de-arbol/).",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "tomato",
+            "minAmount": 3,
+            "maxAmount": 4,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        [
+          {
+            "name": "small cinnamon stick",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "clove",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "oregano",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [],
+  "overnight": false,
+  "slug": "salsa-de-jitomate",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "In a saucepan sat on medium-high heat, cook the tomatoes with cinnamon and cloves in water (the water should cover around half of the height of the tomatoes) until the tomatoes start to soften.",
+          "pause": false
+        },
+        {
+          "text": "While the tomatoes are cooking, peel the onion, halve it and thinly slice.",
+          "pause": false
+        },
+        {
+          "text": "Let the tomatoes cool down a bit.",
+          "pause": false
+        },
+        {
+          "text": "Blend the tomatoes in a blender with a bit of cinnamon (discard the rest), cloves, a pinch of salt, and a bit of cooking water.",
+          "pause": false
+        },
+        {
+          "text": "Add more cooking water and salt if needed to reach the desired thickness.",
+          "pause": false
+        },
+        {
+          "text": "Add the onions to the salsa.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Salsa",
+    "Dip",
+    "Foundation",
+    "Sauce"
+  ],
+  "time": 30,
+  "title": "Salsa de jitomate",
+  "titleEnglish": "Tomato sauce",
+  "tools": [
+    "blender or mixer"
+  ],
+  "yields": {
+    "amount": 500,
+    "unit": "ml"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/ZQ0SFWdSoaY8MYecyPlS",
+      "handle": "ZQ0SFWdSoaY8MYecyPlS",
+      "width": 5149,
+      "height": 3971
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "tacos-dorados",
+      "title": "Tacos dorados"
+    }
+  ],
+  "seasons": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "chart": [],
+  "tips": [],
+  "warnings": [],
+  "vegan": true,
+  "vegetarian": true,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

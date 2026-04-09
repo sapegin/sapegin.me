@@ -1,0 +1,237 @@
+{
+  "createdAt": "2023-03-30T17:36:02.503Z",
+  "cuisines": [
+    "Mexican"
+  ],
+  "description": "Cochinita pibil is a legendary Mexican dish, known for being full of flavors and traditions, and typically is cooked underground using maguey leaves. The version here is a very simplified way of cooking it at home, which basically only calls for some supervision during the preparation. It is perfect for those days when one is working at home, since after marinating the meat overnight, you only need to cook it in the oven for some hours. \n\nTry to cook it and serve it in different presentations and enjoy this legendary dish! For example, try our favorite [Cochinita pibil tacos](/recipes/cochinita-pibil-tacos/).\n\n",
+  "favorite": true,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "pork",
+            "minAmount": 500,
+            "maxAmount": 500,
+            "unit": "g",
+            "kind": 4,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "achiote",
+            "minAmount": 25,
+            "maxAmount": 25,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "orange",
+            "minAmount": 2,
+            "maxAmount": 3,
+            "comment": "juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              1,
+              2,
+              3,
+              4,
+              11,
+              12
+            ]
+          }
+        ],
+        [
+          {
+            "name": "dried oregano",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "pinch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "cumin seeds",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "pinch",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "peppercorn",
+            "modifier": "black",
+            "minAmount": 5,
+            "maxAmount": 6,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "onion",
+            "minAmount": 1,
+            "maxAmount": 1,
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [
+    "puerco pibil",
+    "cochinita con achiote"
+  ],
+  "notes": [
+    "The best pig to make cochinita is the one that's not so lean and has a bit of marbling: neck, back, upper leg."
+  ],
+  "overnight": true,
+  "slug": "cochinita-pibil",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "In a large bowl, dilute the achiote in orange juice.",
+          "pause": false
+        },
+        {
+          "text": "Add <Ingredient name=\"dried oregano\"  />, <Ingredient name=\"cumin seeds\"  />, <Ingredient name=\"peppercorn\" modifier=\"black\" />, and salt to the bowl.",
+          "pause": false
+        },
+        {
+          "text": "Peel the onion, halve it and cut it into 1/2 cm slices, and add to the bowl.",
+          "pause": false
+        },
+        {
+          "text": "Mix everything thoroughly, add more salt if needed.",
+          "pause": false
+        },
+        {
+          "text": "Rinse the meat, and put it into the juice, pour some juice and onions on top of the meat to cover it completely with the marinade.",
+          "pause": false
+        },
+        {
+          "text": "Refrigerate covered for at least 4 hours, or better overnight.",
+          "pause": true
+        },
+        {
+          "text": "Preheat oven to 120C.",
+          "pause": false
+        },
+        {
+          "text": "Braise the meat in the marinade in a Dutch oven covered (or a baking form covered with foil), for at least 2 hours or until the meat is very soft, and you can easily tear it apart with a fork.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "DutchOven",
+    "Spicy",
+    "braising"
+  ],
+  "time": 240,
+  "title": "Cochinita pibil",
+  "tools": [
+    "oven",
+    "Dutch oven (or medium-size baking form)"
+  ],
+  "yields": {
+    "amount": 600,
+    "unit": "g"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/050aPaIMSLi9hPHFY4Jx",
+      "handle": "050aPaIMSLi9hPHFY4Jx",
+      "width": 5727,
+      "height": 4000
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [
+    {
+      "slug": "cochinita-pibil-tacos",
+      "title": "Cochinita pibil tacos"
+    }
+  ],
+  "seasons": [
+    1,
+    2,
+    3,
+    4,
+    11,
+    12
+  ],
+  "chart": [
+    {
+      "type": "Refrigerate",
+      "value": "4 hours",
+      "overnight": true,
+      "covered": true
+    },
+    {
+      "type": "PreheatOven",
+      "value": "120C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "braise",
+      "value": "2 hours",
+      "covered": true,
+      "overnight": false
+    }
+  ],
+  "tips": [],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": false,
+  "glutenFree": true,
+  "lowGluten": false,
+  "dairyFree": true,
+  "noAddedSugar": true
+}

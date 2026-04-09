@@ -1,0 +1,273 @@
+{
+  "createdAt": "2021-08-17T07:17:51.846Z",
+  "cuisines": [
+    "Klatzlandian"
+  ],
+  "description": "Easy and quick to make with whatever citruses you may have (not just grapefruits). A great option if your friends suddenly invited you over, or for a picnic with coffee — easy to transport too.",
+  "favorite": false,
+  "ingredients": [
+    {
+      "name": "",
+      "ingredients": [
+        [
+          {
+            "name": "all-purpose flour",
+            "minAmount": 330,
+            "maxAmount": 330,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": true,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "baking powder",
+            "minAmount": 12,
+            "maxAmount": 12,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "salt",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "butter",
+            "minAmount": 175,
+            "maxAmount": 175,
+            "unit": "g",
+            "comment": "room temperature",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "grapefruit",
+            "minAmount": 2,
+            "maxAmount": 2,
+            "comment": "zest and juice",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": [
+              12
+            ]
+          }
+        ],
+        [
+          {
+            "name": "coconut sugar",
+            "minAmount": 50,
+            "maxAmount": 50,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "date sugar",
+            "minAmount": 50,
+            "maxAmount": 50,
+            "unit": "g",
+            "kind": 0,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "egg",
+            "minAmount": 3,
+            "maxAmount": 3,
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": false,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ],
+        [
+          {
+            "name": "milk",
+            "minAmount": 75,
+            "maxAmount": 75,
+            "unit": "ml",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          },
+          {
+            "name": "yogurt",
+            "minAmount": 90,
+            "maxAmount": 90,
+            "unit": "ml",
+            "kind": 1,
+            "hasGluten": false,
+            "hasDairy": true,
+            "hasSugar": false,
+            "seasons": []
+          }
+        ]
+      ]
+    }
+  ],
+  "keywords": [],
+  "notes": [
+    "The more zest you add, the more flavor the bread will have. And don't forget to use only the most outer colorful part of the citrus skin.",
+    "This recipe works well with other citruses:",
+    "* 4–5 limes;",
+    "* 3 oranges, 1 lime, cinnamon."
+  ],
+  "overnight": false,
+  "slug": "grapefruit-bread",
+  "source": "This recipe is based on [a recipe from Harper’s Bazaar](https://harpersbazaar.com.ua/beauty/diets/gotovim-vmeste-s-harpers-bazaar-rozoviy-greypfrutoviy-keks/).",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "text": "Preheat oven to 180C.",
+          "pause": false
+        },
+        {
+          "text": "Grease the baking form with butter.",
+          "pause": false
+        },
+        {
+          "text": "In a medium bowl, combine <Ingredient name=\"all-purpose flour\"  />, <Ingredient name=\"baking powder\"  />, and <Ingredient name=\"salt\"  />.",
+          "pause": false
+        },
+        {
+          "text": "In a big mixing bowl, combine <Ingredient name=\"butter\"  />, <Ingredient name=\"coconut sugar\"  />, and <Ingredient name=\"date sugar\"  /> using a mixer.",
+          "pause": false
+        },
+        {
+          "text": "Zest grapefruits into the butter-sugar mix.",
+          "pause": false
+        },
+        {
+          "text": "Mix in <Ingredient name=\"egg\"  /> into the butter-sugar mix one by one using a mixer.",
+          "pause": false
+        },
+        {
+          "text": "Add dry ingredients, grapefruit juice (keep about 1/2 grapefruit for the next steps), and milk – little by little of each  – into the wet ingredients mixture, and carefully mix using a silicone spatula.",
+          "pause": false
+        },
+        {
+          "text": "Pour the batter into the baking form.",
+          "pause": false
+        },
+        {
+          "text": "Bake for 50-60 minutes.",
+          "pause": false
+        },
+        {
+          "text": "Once the bread is ready, pour the rest of the grapefruit juice over the bread.",
+          "pause": false
+        },
+        {
+          "text": "Let the bread cool down for 10 minutes and remove it from the baking form.",
+          "pause": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Dessert",
+    "Baking",
+    "SweetBread",
+    "Picnic"
+  ],
+  "time": 80,
+  "title": "Grapefruit bread",
+  "tools": [
+    "mixer",
+    "oven",
+    "21×10 cm baking form"
+  ],
+  "yields": {
+    "amount": 1,
+    "unit": "loaf"
+  },
+  "images": [
+    {
+      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/075U52hmRcGaDZwYtNpg",
+      "handle": "075U52hmRcGaDZwYtNpg",
+      "width": 3710,
+      "height": 3024
+    }
+  ],
+  "subrecipes": [],
+  "recipes": [],
+  "seasons": [
+    12
+  ],
+  "chart": [
+    {
+      "type": "WarmToRoomTemp",
+      "subtype": "butter",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "PreheatOven",
+      "value": "180C",
+      "overnight": false,
+      "covered": false
+    },
+    {
+      "type": "CookInOven",
+      "subtype": "bake",
+      "value": "50-60 minutes",
+      "covered": false,
+      "overnight": false
+    },
+    {
+      "type": "Rest",
+      "value": "10 minutes",
+      "overnight": false,
+      "covered": false
+    }
+  ],
+  "tips": [
+    "Use a wooden toothpick to check the cake for readiness: insert it into the cake in several places, if the toothpick is dry, the cake is ready. If the top of the cake is getting to brown, cover it with tinfoil."
+  ],
+  "warnings": [],
+  "vegan": false,
+  "vegetarian": true,
+  "glutenFree": false,
+  "lowGluten": false,
+  "dairyFree": false,
+  "noAddedSugar": true
+}
