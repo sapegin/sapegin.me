@@ -2,7 +2,6 @@ import { useCombobox } from 'downshift';
 import { matchSorter } from 'match-sorter';
 import { type SubmitEventHandler, useSyncExternalStore } from 'react';
 import type { AutocompleteItem } from '../hooks/useSearch';
-import { Input } from './Input';
 
 const MAX_ITEMS_TO_SHOW = 12;
 
@@ -87,10 +86,13 @@ export function SearchForm({ items, value, onChange }: Props) {
 				Search recipes
 			</label>
 			<div className="relative">
-				<Input
+				<input
 					className="
-       h-auto! p-3! text-lg! transition-all duration-(--duration-hover)
-       ease-hover
+       w-full appearance-none rounded-none border-2 border-text bg-background
+       p-3 font-ui text-lg font-bold text-text transition-all
+       duration-(--duration-hover) ease-hover
+       focus:border-accent focus:shadow-input focus:outline-0
+       disabled:opacity-25
        [&::-webkit-search-cancel-button]:hidden
        [&::-webkit-search-decoration]:hidden
      "

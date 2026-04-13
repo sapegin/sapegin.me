@@ -7,7 +7,7 @@ interface Props {
 export function Footer({ extraFooter }: Props) {
 	return (
 		<footer className="mt-auto flex flex-col gap-2">
-			<p className="font-ui text-xs/normal">
+			<p className="typo-small-ui">
 				©{' '}
 				<a className="link" href="https://drtaco.net/">
 					Dr.&nbsp;Margarita Diaz Cortes
@@ -19,7 +19,7 @@ export function Footer({ extraFooter }: Props) {
 				{', '}
 				{new Date().getFullYear()}
 			</p>
-			<p className="font-ui text-xs/normal">
+			<p className="typo-small-ui">
 				Made with The&nbsp;Secret Ingredient™ in&nbsp;miserable Berlin
 				&amp;&nbsp;sunny Valencia
 				{' • '}Follow&nbsp;us on&nbsp;
@@ -39,9 +39,7 @@ export function Footer({ extraFooter }: Props) {
 					RSS
 				</a>
 			</p>
-			{extraFooter ? (
-				<p className="font-ui text-xs/normal">{extraFooter}</p>
-			) : null}
+			{extraFooter ? <p className="typo-small-ui">{extraFooter}</p> : null}
 		</footer>
 	);
 }

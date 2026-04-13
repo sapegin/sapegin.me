@@ -1,7 +1,6 @@
 import { Group } from '@shared/packages/tamia/components/Group';
 import type { ReactNode } from 'react';
 import { Markdown } from '../components/Markdown';
-import { TextContent } from '../components/TextContent';
 import { type CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -19,12 +18,12 @@ export function CoffeeRecipePage({
 	return (
 		<PageWithTitle url={url} title={`${recipe.name} coffee recipe`}>
 			<div className="flex flex-col gap-8">
-				<TextContent variant="intro">
+				<p className="prose typo-intro">
 					<Group>
 						<>Brew awesome coffee in {recipe.brewer}.</>
 						{description && <Markdown text={description} />}
 					</Group>
-				</TextContent>
+				</p>
 				{children}
 			</div>
 		</PageWithTitle>

@@ -1,5 +1,4 @@
 import { Icon } from './Icon';
-import { Tooltip, TooltipTrigger } from './Tooltip';
 
 interface Props {
 	time: string;
@@ -9,7 +8,7 @@ interface Props {
 
 const MoonIcon = () => (
 	<span className="align-[0.15ex] text-moon">
-		<Icon icon="moon" width="1em" height="1em" />
+		<Icon icon="moon" className="size-3" />
 	</span>
 );
 
@@ -19,17 +18,13 @@ export function RecipeTimes({ time, overnight, size = 'medium' }: Props) {
 			<p className="typo-small-ui">
 				{time}
 				{overnight && (
-					<>
-						{' '}
-						<Tooltip value="Requires preparation the day before">
-							{({ tooltipNode }) => (
-								<TooltipTrigger>
-									{tooltipNode}
-									<MoonIcon />
-								</TooltipTrigger>
-							)}
-						</Tooltip>
-					</>
+					<span
+						title="Requires preparation the day before"
+						className="ml-1 inline-block"
+					>
+						<span className="sr-only">Requires preparation the day before</span>
+						<MoonIcon />
+					</span>
 				)}
 			</p>
 		);

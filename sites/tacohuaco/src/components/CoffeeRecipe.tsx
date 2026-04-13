@@ -12,7 +12,7 @@ import {
 } from '../util/cafe/types';
 import { CoffeeRecipeMeta } from './CoffeeRecipeMeta';
 import { RecipeScale } from './RecipeScale';
-import { TextTypo } from './TextTypo';
+import { Typo } from './Typo';
 
 interface Props {
 	recipe: CoffeeRecipeType;
@@ -90,44 +90,52 @@ export function CoffeeRecipe({ recipe }: Props) {
 				</CoffeeRecipeMeta>
 				<ol className="flex max-w-140 flex-col gap-2">
 					<li className="flex flex-col gap-2">
-						<TextTypo className="typo-body">
+						<p className="typo-body">
 							{recipe.temperature === 100 ? (
 								<>Boil water.</>
 							) : (
 								<>
 									Heat water to{' '}
-									<TextTypo as="b">{`${recipe.temperature}C`}</TextTypo>.
+									<b>
+										<Typo>{`${recipe.temperature}C`}</Typo>
+									</b>
+									.
 								</>
 							)}
-						</TextTypo>
+						</p>
 						{recipe.temperature < 100 && (
-							<TextTypo className="typo-body">
-								(If your kettle doesn&apos;t have a temperature setting, let the
-								water cool down for 30 seconds before brewing coffee.)
-							</TextTypo>
+							<p className="typo-body">
+								<Typo>
+									(If your kettle doesn’t have a temperature setting, let the
+									water cool down for 30 seconds before brewing coffee.)
+								</Typo>
+							</p>
 						)}
 					</li>
 					<li className="flex flex-col gap-2">
-						<TextTypo className="typo-body">
+						<p className="typo-body">
 							Grind <b>{g} g</b> of coffee ({recipe.grind}).
-						</TextTypo>
-						<TextTypo className="typo-body">
-							(It&apos;s roughly {beansToTbsp(g)} tablespoons of coffee beans or{' '}
-							{groundToTbsp(g)} tablespoons of ground coffee.)
-						</TextTypo>
+						</p>
+						<p className="typo-body">
+							<Typo>
+								(It’s roughly {beansToTbsp(g)} tablespoons of coffee beans or{' '}
+								{groundToTbsp(g)} tablespoons of ground coffee.)
+							</Typo>
+						</p>
 					</li>
 					{steps.map((step, i) => (
+						// eslint-disable-next-line @eslint-react/no-array-index-key
 						<li key={i}>
-							<TextTypo className="typo-body">
+							<p className="typo-body">
 								<Group>
 									{getStepText(step, recipe, currentAmount)}
 									{getWaitText(step)}
 								</Group>
-							</TextTypo>
+							</p>
 						</li>
 					))}
 					<li>
-						<TextTypo className="typo-body">Enjoy your coffee! ☕️</TextTypo>
+						<p className="typo-body">Enjoy your coffee! ☕️</p>
 					</li>
 				</ol>
 			</div>

@@ -1,5 +1,4 @@
 import { CoffeeRecipeCard } from '../components/CoffeeRecipeCard';
-import { TextTypo } from '../components/TextTypo';
 import { type CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
 import { PageWithTitle } from './PageWithTitle';
 
@@ -42,9 +41,9 @@ export function CoffeeRecipesPage({ url, title, coffeeRecipes }: Props) {
 			}
 		>
 			<div className="flex flex-col gap-8">
-				<TextTypo className="typo-intro">
+				<p className="typo-intro">
 					How we make coffee at home and while traveling.
-				</TextTypo>
+				</p>
 				{coffeeRecipes.map((recipe) => (
 					<CoffeeRecipeCard key={recipe.name} recipe={recipe} />
 				))}

@@ -12,7 +12,7 @@ export function CoffeeRecipeCard({ recipe: { name, slug } }: Props) {
 			className="link transition-colors duration-(--duration-hover) ease-hover"
 		>
 			<span className="flex flex-row items-center gap-3">
-				<Icon icon={slug} width={30} height={30} />
+				<Icon icon={slug} className="size-8" />
 				<span className="font-heading text-xl/heading text-inherit">
 					{name}
 				</span>

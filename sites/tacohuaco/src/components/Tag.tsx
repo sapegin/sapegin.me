@@ -7,11 +7,9 @@ export function Tag({
 	return (
 		<a
 			className="
-     inline-block rounded-normal border-0 bg-light px-2 pt-[0.1ex] font-ui
-     text-sm/normal whitespace-nowrap text-secondary no-underline
+     inline-block rounded-normal bg-light px-2 pt-[0.1ex] font-ui text-sm/normal
+     text-nowrap text-secondary no-underline focus-outline
      hover:cursor-pointer hover:text-accent
-     focus-visible:outline-[3px] focus-visible:outline-offset-2
-     focus-visible:outline-accent
    "
 			{...props}
 		>

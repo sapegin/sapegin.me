@@ -11,8 +11,8 @@ export function SearchResults({ searchQuery, searchResults }: Props) {
 		<RecipeListSection title="Search results" recipes={searchResults} />
 	) : (
 		<p className="font-body text-base/normal text-text">
-			We couldn't find any food matching &ldquo;{searchQuery}&rdquo;.
-			<br /> (Maybe you'll find what you're looking for at{' '}
+			We couldn’t find any food matching &ldquo;{searchQuery}&rdquo;.
+			<br /> (Maybe you’ll find what you’re looking for at{' '}
 			<a className="link" href="/recipes/">
 				the recipes page
 			</a>
