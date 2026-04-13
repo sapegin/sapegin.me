@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { TextContent } from '../components/TextContent';
 import { PageWithTitle } from './PageWithTitle';
 
 interface Props {
@@ -17,7 +16,7 @@ export function AboutPage({ url, children }: Props) {
 				</>
 			}
 		>
-			<TextContent>{children}</TextContent>
+			<div className="prose">{children}</div>
 		</PageWithTitle>
 	);
 }

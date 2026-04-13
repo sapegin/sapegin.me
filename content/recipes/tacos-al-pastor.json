@@ -2,7 +2,13 @@
   "slug": "tacos-al-pastor",
   "createdAt": "2024-11-10T00:00:00.000Z",
   "title": "Tacos al pastor",
-  "tags": ["crowd", "dinners", "holidays", "mexican-cuisine", "tacos"],
+  "tags": [
+    "crowd",
+    "dinners",
+    "holidays",
+    "mexican-cuisine",
+    "tacos"
+  ],
   "description": "Tacos al pastor, one of Mexico's most beloved street foods, is known for its vibrant flavors and aromatic spices. These tacos originated from Lebanese immigrants who brought shawarma to Mexico in the early 20th century. Over time, Mexicans adapted the dish, swapping lamb for pork and adding pineapple for a touch of sweetness. Traditionally, _tacos al pastor_ are cooked on a _trompo_ — a vertical rotisserie where marinated pork is stacked and roasted in front of an open flame until perfectly tender and caramelized. Our recipe is made for cooking at home, on a skillet.\n\nFor Margarita, this recipe seemed very daunting until she tried to cook it for the first time. We hope you’ll enjoy making these tacos at home and sharing them with friends and family. Don’t forget to put some spicy salsita on your taco!",
   "imageUrl": "/images/recipes/tacos-al-pastor.avif",
   "thumbnailUrl": "/images/recipes/tacos-al-pastor_thumb.avif",

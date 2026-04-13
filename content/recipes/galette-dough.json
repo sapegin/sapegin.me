@@ -2,7 +2,12 @@
   "slug": "galette-dough",
   "createdAt": "2022-09-08T00:00:00.000Z",
   "title": "Galette dough",
-  "tags": ["baking", "desserts", "foundation-recipes", "french-cuisine"],
+  "tags": [
+    "baking",
+    "desserts",
+    "foundation-recipes",
+    "french-cuisine"
+  ],
   "description": "It took us many attempts to master the galette dough — the keys are keeping the butter very cold, not letting it melt, and rolling the dough very-very thin. As the result, we have an incredible crunchy and crumbly crust.",
   "imageUrl": "/images/recipes/galette-dough.avif",
   "thumbnailUrl": "/images/recipes/galette-dough_thumb.avif",

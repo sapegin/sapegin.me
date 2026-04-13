@@ -2,7 +2,12 @@
   "slug": "feta-olive-salad",
   "createdAt": "2024-01-23T00:00:00.000Z",
   "title": "Feta olive salad",
-  "tags": ["mediterranean-cuisine", "picnics", "quick-recipes", "salads"],
+  "tags": [
+    "mediterranean-cuisine",
+    "picnics",
+    "quick-recipes",
+    "salads"
+  ],
   "description": "This super simple salad works great with [roasted chicken and potatoes](/recipes/air-fried-chicken-wings/)…",
   "imageUrl": "/images/recipes/feta-olive-salad.avif",
   "thumbnailUrl": "/images/recipes/feta-olive-salad_thumb.avif",

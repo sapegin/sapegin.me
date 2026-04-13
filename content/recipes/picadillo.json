@@ -2,16 +2,23 @@
   "slug": "picadillo",
   "createdAt": "2022-09-12T00:00:00.000Z",
   "title": "Picadillo",
-  "tags": ["foundation-recipes", "mexican-cuisine"],
+  "tags": [
+    "foundation-recipes",
+    "mexican-cuisine"
+  ],
   "description": "Picadillo is a Mexican dish that, depending on the region, could look different. It’s not a fancy recipe but it’s a very cost-efficient one since you could double the final amount by adding more vegetables without sacrificing so much flavor along the way.\n\nThis one here is also called _dried picadillo_ since it’s not served as a stew, and is mostly used as a filling for tacos, burritos, sopes, and gorditas, among many other things; or even just served with some refried beans on the side.",
   "imageUrl": "/images/recipes/picadillo.avif",
   "thumbnailUrl": "/images/recipes/picadillo_thumb.avif",
   "ingredients": "- 1 onion\n- 2 cloves garlic\n- 1 fresh chile\n- 1 carrot\n- 200 g ground pork\n- 200 g ground beef\n- 50 g peas\n  *fresh or frozen*\n- ground cumin seeds\n- salt\n- olive oil",
   "steps": "1. Prepare the vegetables. **Onion, chile, garlic, and carrot:** peel, and cut into small dice.\n2. In a large skillet set on medium fire with a generous amount of olive oil, sauté the onion and the garlic, until the onion is transparent.\n3. Add the chile and stir for a couple of minutes.\n4. Add the carrots, and cook for about 5 minutes.\n5. Add the ground meat. Season with salt, and ground cumin. Cook stirring occasionally until there are no pink spots on the meat.\n6. Add the peas, and cook stirring occasionally until the peas are warm.\n7. Add more salt if needed.",
-  "keywords": ["dried picadillo"],
+  "keywords": [
+    "dried picadillo"
+  ],
   "notes": "If you find fresh Serrano chiles, they are the best option for this picadillo. You can also replace the fresh chile with chile flakes, or mix a fresh chile with flakes to reach the level of spiciness you like.\n\nIf you want to increase the amount, try to add a couple of new potatoes together with carrots.",
   "overnight": false,
   "time": "30 minutes",
   "yields": "500 g",
-  "usedBy": ["burritos"]
+  "usedBy": [
+    "burritos"
+  ]
 }

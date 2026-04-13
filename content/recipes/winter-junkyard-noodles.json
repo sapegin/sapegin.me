@@ -2,7 +2,11 @@
   "slug": "winter-junkyard-noodles",
   "createdAt": "2026-01-08T00:00:00.000Z",
   "title": "Winter junkyard noodles",
-  "tags": ["korean-cuisine", "lunches", "noodles"],
+  "tags": [
+    "korean-cuisine",
+    "lunches",
+    "noodles"
+  ],
   "description": "This is a great recipe to quickly satisfy your noodle cravings and warm you up in winter, have a quick lunch on a working day, or pay respect to His Noodliness. Also, it reminds Artem of his first job in a computer lab as a student, where a cup of instant Asian noodles was a common, though far less healthy and enjoyable, lunch option.",
   "imageUrl": "/images/recipes/winter-junkyard-noodles.avif",
   "thumbnailUrl": "/images/recipes/winter-junkyard-noodles_thumb.avif",

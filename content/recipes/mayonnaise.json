@@ -21,5 +21,7 @@
   "tools": "- immersion blender",
   "yields": "100 ml",
   "source": "This recipe is based on J. Kenji Lopez-Alt’s book “The Food Lab: Better Home Cooking Through Science”",
-  "usedBy": ["olivier-salad"]
+  "usedBy": [
+    "olivier-salad"
+  ]
 }

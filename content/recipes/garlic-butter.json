@@ -2,7 +2,10 @@
   "slug": "garlic-butter",
   "createdAt": "2022-03-19T00:00:00.000Z",
   "title": "Garlic butter",
-  "tags": ["foundation-recipes", "french-cuisine"],
+  "tags": [
+    "foundation-recipes",
+    "french-cuisine"
+  ],
   "description": "This garlic butter is the perfect filling for garlic bread. You could also use it to bake potatoes (add more salt) or just as regular butter for sandwiches.",
   "imageUrl": "/images/recipes/garlic-butter.avif",
   "thumbnailUrl": "/images/recipes/garlic-butter_thumb.avif",
@@ -14,5 +17,7 @@
   "time": "10 minutes",
   "yields": "150 g",
   "source": "This recipe is based on a [garlic bread recipe](https://www.youtube.com/watch?v=FkV_fU5GoXM) by Joshua Weissman.",
-  "usedBy": ["garlic-bread"]
+  "usedBy": [
+    "garlic-bread"
+  ]
 }

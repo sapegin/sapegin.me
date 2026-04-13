@@ -2,7 +2,12 @@
   "slug": "gluten-free-pizza-dough",
   "createdAt": "2022-01-02T00:00:00.000Z",
   "title": "Gluten-free pizza dough",
-  "tags": ["baking", "dough", "foundation-recipes", "italian-cuisine"],
+  "tags": [
+    "baking",
+    "dough",
+    "foundation-recipes",
+    "italian-cuisine"
+  ],
   "description": "The pizza made with this dough looks and tastes like a regular wheat-flour pizza: crispy and crunchy and tasty and awesome. Try it with our pizza sauce.",
   "imageUrl": "/images/recipes/gluten-free-pizza-dough.avif",
   "thumbnailUrl": "/images/recipes/gluten-free-pizza-dough_thumb.avif",

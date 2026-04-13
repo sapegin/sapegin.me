@@ -16,11 +16,16 @@
   "thumbnailUrl": "/images/recipes/first-world-salsa-verde_thumb.avif",
   "ingredients": "- 2 green bell peppers\n- 2 fresh jalapeños\n- 1 onion\n- 2-3 cloves of garlic\n- salt",
   "steps": "1. Prepare the vegetables. **Onion:** peel and halve. **Garlic:** peel.\n2. Char (blister) all the vegetables without adding any oil on a skillet sat on medium heat, until they softened a bit. Don’t worry if they look burned, this will add an amazing flavor to our salsa!\n3. Remove the skillet from heat, and let the vegetables cool down a bit.\n4. When the vegetables are cold enough to touch them, remove the roots and seeds of the bell peppers, and cut the roots of the jalapeños.\n5. Purée the vegetables with a pinch of salt using a blender or a food processor until you have a smooth paste (but not too smooth, some texture is nice to have here).\n6. Add more salt if needed.",
-  "keywords": ["green sauce"],
+  "keywords": [
+    "green sauce"
+  ],
   "notes": "This salsa will keep in a sealed container in the fridge for one or two weeks.",
   "overnight": false,
   "time": "40 minutes",
   "tools": "- blender or food processor",
   "yields": "200 ml",
-  "usedBy": ["burgers", "tacos-al-pastor"]
+  "usedBy": [
+    "burgers",
+    "tacos-al-pastor"
+  ]
 }

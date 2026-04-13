@@ -2,7 +2,12 @@
   "slug": "zapekanka",
   "createdAt": "2021-08-31T00:00:00.000Z",
   "title": "Cottage cheesecake (zapekanka)",
-  "tags": ["baking", "breakfasts", "desserts", "russian-cuisine"],
+  "tags": [
+    "baking",
+    "breakfasts",
+    "desserts",
+    "russian-cuisine"
+  ],
   "description": "Zapekanka (запеканка) is a Russian village cheesecake made of cottage cheese (tvorog, творог) and smetana (сметана). It's less sweet and smooth than the New York cheesecake and makes a great breakfast (if you cook it the evening before) topped with some marmalade and fresh berries. (And don't forget to brew a cup of café de olla!)",
   "imageUrl": "/images/recipes/zapekanka.avif",
   "thumbnailUrl": "/images/recipes/zapekanka_thumb.avif",

@@ -2,7 +2,13 @@
   "slug": "tacos-dorados",
   "createdAt": "2024-02-24T00:00:00.000Z",
   "title": "Tacos dorados",
-  "tags": ["crowd", "lunches", "mexican-cuisine", "one-pot", "tacos"],
+  "tags": [
+    "crowd",
+    "lunches",
+    "mexican-cuisine",
+    "one-pot",
+    "tacos"
+  ],
   "description": "This is a perfect recipe for an air fryer and a busy week or a big gathering. You suffer once rolling dozens of tacos (or ask your friends to help!), but then you can warm them up quickly in an air fryer (for 5-6 minutes at 200C) or a skillet.\n\nTacos dorados are a humble Mexican street food that doesn't get the worldwide recognition it deserves. It usually comes as a side for pozole or tortas ahogadas, but they can be a dish on its own to feed a huge crowd, very practical to share at the table.\n\nHere we present only potatoes and cheese filling, but they can be done with variety of different filling, such as frijoles refritos, chicken, meat, picadillo, fresh cheese (tvorog), or just vegetables.",
   "imageUrl": "/images/recipes/tacos-dorados.avif",
   "thumbnailUrl": "/images/recipes/tacos-dorados_thumb.avif",

@@ -2,7 +2,6 @@ import { type ReactNode } from 'react';
 import { Markdown } from '../components/Markdown';
 import { RecipeList } from '../components/RecipeList';
 import { RecipeMeta } from '../components/RecipeMeta';
-import { TextContent } from '../components/TextContent';
 import type { Recipe, RecipeFragment } from '../types/Recipe';
 import { Page } from './Page';
 
@@ -39,9 +38,9 @@ export function RecipePage(props: Props) {
 						<RecipeMeta {...props} />
 					</div>
 					{description && (
-						<TextContent variant="intro">
+						<div className="prose typo-intro">
 							<Markdown text={description} forceBlock />
-						</TextContent>
+						</div>
 					)}
 					{keywords.length > 0 && (
 						<span className="sr-only">Keywords: {keywords.join(', ')}</span>

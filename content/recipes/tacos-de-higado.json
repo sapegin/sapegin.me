@@ -2,7 +2,12 @@
   "slug": "tacos-de-higado",
   "createdAt": "2024-12-24T00:00:00.000Z",
   "title": "Tacos de hígado",
-  "tags": ["lunches", "mexican-cuisine", "spicy", "tacos"],
+  "tags": [
+    "lunches",
+    "mexican-cuisine",
+    "spicy",
+    "tacos"
+  ],
   "description": "Liver is one of those ingredients that divides opinions: some avoid it entirely, while others embrace it as a secret culinary delight. Growing up more than 10000 kilometers apart, we both grew up eating beef liver cooked by our grandmas in various traditional dishes.\n\nThese liver tacos are budget-friendly, quick to prepare (especially if you already have salsa on hand), require just a few ingredients, and result in tender, flavorful meat paired with your favorite salsa (we recommend salsa roja tatemada).",
   "imageUrl": "/images/recipes/tacos-de-higado.avif",
   "thumbnailUrl": "/images/recipes/tacos-de-higado_thumb.avif",

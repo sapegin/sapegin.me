@@ -2,17 +2,29 @@
   "slug": "salsa-de-frijol",
   "createdAt": "2022-09-12T00:00:00.000Z",
   "title": "Salsa de frijol",
-  "tags": ["dips", "foundation-recipes", "mexican-cuisine", "salsas", "sauces"],
+  "tags": [
+    "dips",
+    "foundation-recipes",
+    "mexican-cuisine",
+    "salsas",
+    "sauces"
+  ],
   "description": "Beans are one of the staples of Mexican cuisine, and a must to have in every Mexican household. There are many ways of cooking beans, and they are so versatile — they could match many dishes and ingredients.\n\nThe version presented here is one of the simplest, and which Margarita’s grandma would be proud of because it’s efficient and quick. More liquid would make it a sauce, less liquid would make it a paste.\n\nIf you have only tried canned beans before, thinking they were good, this easy recipe may change your opinion!",
   "imageUrl": "/images/recipes/salsa-de-frijol.avif",
   "thumbnailUrl": "/images/recipes/salsa-de-frijol_thumb.avif",
   "ingredients": "- 200 g beans\n- salt",
   "steps": "1. Soak the beans overnight.\n2. Cook the beans in lightly salted water on medium heat until tender.\n3. Cool down the beans in their cooking liquid.\n4. Pour most of the bean liquid into a bowl or a pot.\n5. Using an immersion blender, mix the beans until they form a paste. Add as much bean liquid as needed to achieve a creamy consistency. (Add more if you want to make a sauce, and less if you want to make a paste.)\n6. Add more salt if needed.",
-  "keywords": ["bean sauce"],
+  "keywords": [
+    "bean sauce"
+  ],
   "notes": "There are many types of beans on the market (white, peruanos, pintos, red, black, etc.) — try the ones you could get your hands on, and choose your favorites.",
   "overnight": true,
   "time": "60 minutes",
   "tools": "- blender",
   "yields": "300 g",
-  "usedBy": ["burritos", "donerritos", "huevos-rancheros-en-sombrero"]
+  "usedBy": [
+    "burritos",
+    "donerritos",
+    "huevos-rancheros-en-sombrero"
+  ]
 }

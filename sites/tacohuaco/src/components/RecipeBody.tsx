@@ -1,6 +1,5 @@
 import type { Recipe } from '../types/Recipe';
 import { Markdown } from './Markdown';
-import { TextContent } from './TextContent';
 
 export function RecipeBody({
 	ingredients,
@@ -26,7 +25,7 @@ export function RecipeBody({
 					)}
 				</header>
 				<div className="recipe-ingredients">
-					<Markdown text={ingredients} forceBlock />
+					<Markdown text={ingredients} />
 				</div>
 				{tools && (
 					<div className="flex flex-col gap-4">
@@ -48,14 +47,14 @@ export function RecipeBody({
 					<div className="flex flex-col gap-4">
 						<h2 className="heading-2">Notes</h2>
 						{notes && (
-							<TextContent>
-								<Markdown text={notes} forceBlock />
-							</TextContent>
+							<div className="prose">
+								<Markdown text={notes} />
+							</div>
 						)}
 						{source && (
-							<TextContent variant="small">
-								<Markdown text={source} forceBlock />
-							</TextContent>
+							<p className="prose typo-small">
+								<Markdown text={source} forceInline />
+							</p>
 						)}
 					</div>
 				)}

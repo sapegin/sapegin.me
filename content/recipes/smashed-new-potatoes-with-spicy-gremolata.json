@@ -2,7 +2,12 @@
   "slug": "smashed-new-potatoes-with-spicy-gremolata",
   "createdAt": "2022-08-09T00:00:00.000Z",
   "title": "Smashed new potatoes with spicy gremolata",
-  "tags": ["italian-cuisine", "potatoes", "snacks", "spicy"],
+  "tags": [
+    "italian-cuisine",
+    "potatoes",
+    "snacks",
+    "spicy"
+  ],
   "description": "We love potatoes, and this recipe works well when we could find small new potatoes on the farmers' market and want something fancy.",
   "imageUrl": "/images/recipes/smashed-new-potatoes-with-spicy-gremolata.avif",
   "thumbnailUrl": "/images/recipes/smashed-new-potatoes-with-spicy-gremolata_thumb.avif",

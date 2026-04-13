@@ -2,7 +2,13 @@
   "slug": "spicy-quick-pickled-cucumbers",
   "createdAt": "2022-05-23T00:00:00.000Z",
   "title": "Spicy quick-pickled cucumbers",
-  "tags": ["korean-cuisine", "pickling", "picnics", "snacks", "spicy"],
+  "tags": [
+    "korean-cuisine",
+    "pickling",
+    "picnics",
+    "snacks",
+    "spicy"
+  ],
   "description": "This is our new favorite recipe for quick pickled cucumbers, it requires a bit of cooking but doesn't need any alcohol and doesn't taste like it.",
   "imageUrl": "/images/recipes/spicy-quick-pickled-cucumbers.avif",
   "thumbnailUrl": "/images/recipes/spicy-quick-pickled-cucumbers_thumb.avif",
@@ -15,5 +21,8 @@
   "tools": "- 500 ml container with a tight-fitting lid",
   "yields": "500 g",
   "source": "This recipe is based on Roy Choi’s recipe from MasterClass.",
-  "usedBy": ["bibimbap", "kimchi-lava-soup"]
+  "usedBy": [
+    "bibimbap",
+    "kimchi-lava-soup"
+  ]
 }

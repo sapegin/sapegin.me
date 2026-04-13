@@ -2,7 +2,11 @@
   "slug": "bibimbap",
   "createdAt": "2022-03-20T00:00:00.000Z",
   "title": "Bibimbap",
-  "tags": ["korean-cuisine", "lunches", "spicy"],
+  "tags": [
+    "korean-cuisine",
+    "lunches",
+    "spicy"
+  ],
   "description": "Our bibimbap recipe is a bit different that the traditional Korean bibimbap. We put a lot more vegetables, and we also rarely cook them separately — too much trouble. And if you’re supposed to mix everything (_bibimbap_ means “mixed rice”) — what’s the point?\n\nThis is a big diversion from the traditional bibimbap: the traditional bibimbap is drier with a distinct taste of each ingredient, our version is juicy, with a more blended taste and full of vegetables.\n\nYou could use any fillings you like or available. These are the ones that are easy to get and cook, but still taste great.",
   "imageUrl": "/images/recipes/bibimbap.avif",
   "thumbnailUrl": "/images/recipes/bibimbap_thumb.avif",

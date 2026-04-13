@@ -2,7 +2,13 @@
   "slug": "kimchi-fried-rice",
   "createdAt": "2022-08-23T00:00:00.000Z",
   "title": "Kimchi fried rice",
-  "tags": ["korean-cuisine", "leftovers", "lunches", "rice", "spicy"],
+  "tags": [
+    "korean-cuisine",
+    "leftovers",
+    "lunches",
+    "rice",
+    "spicy"
+  ],
   "description": "Got some leftover rice from the Indian food takeaway yesterday? With just a few more ingredients, and a bit of time, you could make this spicy (if you add a lot of kimchi) dish with a nice blend of crunchy rice and juicy vegetables.",
   "imageUrl": "/images/recipes/kimchi-fried-rice.avif",
   "thumbnailUrl": "/images/recipes/kimchi-fried-rice_thumb.avif",

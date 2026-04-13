@@ -2,7 +2,13 @@
   "slug": "travelers-pasta",
   "createdAt": "2022-08-23T00:00:00.000Z",
   "title": "Traveler’s pasta",
-  "tags": ["dinners", "italian-cuisine", "lunches", "noodles", "travel"],
+  "tags": [
+    "dinners",
+    "italian-cuisine",
+    "lunches",
+    "noodles",
+    "travel"
+  ],
   "description": "We don't cook pasta often but almost every time we travel, we cook a variation of this pasta with a lot of vegetables in a hotel or aribnb kitchen. It doesn't require many tools, doesn't leave too many leftover ingredients, could be cooked with whatever vegetables you find in a farmers' market or a supermarket, and with any pasta, you like and could get your hands on. And while cooking in a hotel or airbnb is usually extremely frustrating, it's a great pleasure to eat your own dinner after a full day of exploring a new (or not new, which is equally good) city.",
   "imageUrl": "/images/recipes/travelers-pasta.avif",
   "thumbnailUrl": "/images/recipes/travelers-pasta_thumb.avif",

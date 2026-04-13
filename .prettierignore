@@ -2,3 +2,4 @@ sites/*/.astro/
 sites/*/dist/
 sites/*/public/counter/count.min.js
 content/photos/
+content/recipes/

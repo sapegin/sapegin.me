@@ -2,7 +2,10 @@
   "slug": "air-fried-chicken-wings",
   "createdAt": "2024-02-19T00:00:00.000Z",
   "title": "Air-fried chicken wings with potatoes",
-  "tags": ["dinners", "potatoes"],
+  "tags": [
+    "dinners",
+    "potatoes"
+  ],
   "description": "This is one of our favorite air fryer recipes. Apart from marinating the chicken overnight, it doesn’t take a lot of time to prepare, and you could start eating while the second and third batches are still cooking. This is a perfect Monday dinner recipe (we usually buy a full chicken on Saturday, so we have marinated legs and wings ready to be fried on Monday).",
   "imageUrl": "/images/recipes/air-fried-chicken-wings.avif",
   "thumbnailUrl": "/images/recipes/air-fried-chicken-wings_thumb.avif",

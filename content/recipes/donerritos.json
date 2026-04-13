@@ -2,13 +2,19 @@
   "slug": "donerritos",
   "createdAt": "2022-09-06T00:00:00.000Z",
   "title": "Dönerritos",
-  "tags": ["lunches", "mexican-cuisine"],
+  "tags": [
+    "lunches",
+    "mexican-cuisine"
+  ],
   "description": "In Berlin, you could buy a döner on every corner. Unfortunately, there are just a few places that sell edible ones, and even there the quality is inconsistent. This is our homemade take on a slightly Mexicanized döner — _dönerrito_, a mix of a döner and a burrito.",
   "imageUrl": "/images/recipes/donerritos.avif",
   "thumbnailUrl": "/images/recipes/donerritos_thumb.avif",
   "ingredients": "- 1 chicken breast\n- 1/2 zucchini\n- 1/2 bell pepper\n- 1/2 carrot\n- 1 lime\n  *juice*\n- 2 large wheat tortillas\n- [Frijoles refritos](/recipes/frijoles-refritos/) or [Salsa de frijol](/recipes/salsa-de-frijol/)\n- [Salsa roja tatemada](/recipes/salsa-roja-tatemada/)\n- 2 sprigs of parsley\n- salt\n- freshly ground black pepper\n- olive oil",
   "steps": "1. Wash and dry the chicken. Slice it into a few pieces, if it’s too thick. Season with salt and black pepper on each side.\n2. Prepare the vegetables. **Zucchini:** trim the ends, and cut into 1/2 cm disks. **Bell pepper:** remove the seeds, and cut into 3-5 cm chunks. **Carrot:** peel if needed, trim the ends, and cut into thin 5-7 cm strips.\n3. Fry the chicken on a skillet with a generous amount of olive oil on medium-high heat until each side is brown and crispy and the internal temperature is about 68C. Transfer the chicken to a plate.\n4. While the chicken is cooking, grill the vegetables on a second skillet with a bit of olive oil on medium-high heat, until softened and charred a bit on each side. Transfer the vegetables to a plate, squeeze lime over them, and sprinkle with salt.\n5. Warm up the tortillas on a large dry skillet, and slice the chicken.\n6. Assemble the dönerritos: spread the frijole sauce in the middle-low section of the tortillas, place the chicken pieces and vegetables on top of the frijol sauce, spread the salsa roja tatemada on top of the chicken and vegetables, and top everything with parsley. Now roll the tortilla: flip the lower part over the filling, flip the sides, and tightly roll from the bottom.\n7. Repeat for the remaining tortillas.\n8. Briefly toast the dönerritos on a skillet on both sides.",
-  "keywords": ["döner", "burrito"],
+  "keywords": [
+    "döner",
+    "burrito"
+  ],
   "overnight": false,
   "time": "30 minutes",
   "yields": "2 portions",

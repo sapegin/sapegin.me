@@ -2,7 +2,11 @@
   "slug": "cobbler",
   "createdAt": "2024-06-30T00:00:00.000Z",
   "title": "Blueberry cobbler",
-  "tags": ["american-cuisine", "baking", "desserts"],
+  "tags": [
+    "american-cuisine",
+    "baking",
+    "desserts"
+  ],
   "description": "This is perfect summer desert. It’s easy and quick to make, and fresh berries are its main ingredient. It can also be a good option for travel because it doesn’t need many ingredients or tools. It’s the best if you cook in the evening and eat for breakfast the next morning, with some café de olla.",
   "imageUrl": "/images/recipes/cobbler.avif",
   "thumbnailUrl": "/images/recipes/cobbler_thumb.avif",

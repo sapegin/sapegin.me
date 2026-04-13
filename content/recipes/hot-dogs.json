@@ -2,7 +2,10 @@
   "slug": "hot-dogs",
   "createdAt": "2024-01-23T00:00:00.000Z",
   "title": "Klatz hot dogs",
-  "tags": ["american-cuisine", "quick-recipes"],
+  "tags": [
+    "american-cuisine",
+    "quick-recipes"
+  ],
   "description": "The tradition of eating hot dogs in our family started in winter 2023 when our friend Junisa stayed with us to help us move to a new apartment. One evening we were too tired and lazy to cook something more complex, so we decided to make hot dogs…",
   "imageUrl": "/images/recipes/hot-dogs.avif",
   "thumbnailUrl": "/images/recipes/hot-dogs_thumb.avif",

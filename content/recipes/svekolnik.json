@@ -2,13 +2,20 @@
   "slug": "svekolnik",
   "createdAt": "2022-08-02T00:00:00.000Z",
   "title": "Svekolnik (cold borscht)",
-  "tags": ["cold", "lunches", "russian-cuisine", "soups"],
+  "tags": [
+    "cold",
+    "lunches",
+    "russian-cuisine",
+    "soups"
+  ],
   "description": "Svekolnik (or cold borscht) is a soup Artem’s grandma makes every summer in her dacha (summer house). This is not the same recipe but works great on hot summer days. It even feels almost like lemonade with the cold sweetness of beets and the gentle tickling of radishes.",
   "imageUrl": "/images/recipes/svekolnik.avif",
   "thumbnailUrl": "/images/recipes/svekolnik_thumb.avif",
   "ingredients": "### For the beet broth\n- 1 kg beetroots\n- 30 g horseradish or 30 g ginger\n- 1 lime\n  *juice*\n- coconut sugar\n- salt\n\n### For the borscht\n\n- 4–6 young beetroots\n  *with stems*\n- 2–3 cucumbers\n- 1–2 radishes\n- 3 teaspoons vinegar\n- 2–3 scallions\n- 2–3 bunches dill\n- 6 eggs\n  *hard-boiled*\n- olive oil\n- smetana or crème fraîche\n  *for serving*",
   "steps": "### To cook the beet broth\n\n1. Peel the beets and shred them in a food processor or grate on a grater.\n2. Cook in 3 liters of water for about 45 minutes, once the water is boiling.\n3. While the beets are cooking, thinly slice the horseradish or ginger.\n4. Add the ginger to the cooking beets, and cook the beets for 15 minutes more.\n5. Let the beet broth cool completely.\n6. Filter the beet broth using a sieve.\n7. Season with salt, sugar, and lime juice.\n\n### To cook the borscht\n\n1. Preheat oven to 200C.\n2. Distribute unpeeled young beats on the baking sheet, and drizzle them with olive oil and salt.\n3. Roast beets until tender (so you could easily insert a knife or a fork).\n4. While the beets are roasting, cut the beet stems into 1 cm slices.\n5. Cool down the roasted beets, and peel them.\n6. In a medium saucepan, add beet stems and about 100 ml of water and 3 teaspoon vinegar. Cook the beet stems for about 10 minutes, until tender.\n7. Discard the water of beet stems, and cool the stems down.\n8. Cut the roasted beets, cucumbers, and radishes into 1 cm cubes.\n9. Slice the spring onions, and thinly chop the dill.\n10. Combine beet stems, roasted beets, cucumbers, radishes, spring onions, and dill.\n11. Add the beet broth, and thoroughly mix everything.\n12. Cook the eggs in water, for 9 minutes after the water starts to boil. Remove the eggs from the water and transfer them to a bowl with cold water to cool them down and make peeling easier.\n13. Serve the soup with a tablespoon of smetana (or crème fraîche) and a halved hardboiled egg.",
-  "keywords": ["Свекольник"],
+  "keywords": [
+    "Свекольник"
+  ],
   "overnight": false,
   "time": "180 minutes",
   "tools": "- oven\n- baking tray",

@@ -2,7 +2,12 @@
   "slug": "roasted-pumpkin-soup",
   "createdAt": "2021-08-04T00:00:00.000Z",
   "title": "Roasted pumpkin soup",
-  "tags": ["cream-soups", "lunches", "soups", "warming"],
+  "tags": [
+    "cream-soups",
+    "lunches",
+    "soups",
+    "warming"
+  ],
   "description": "Cozy and warm, especially spiced with some chile flakes. The best choice for lunch in autumn (and when pumpkins are conveniently in season), when the weather is gray and grumpy and raining. It takes some time to prepare (mainly to roast the pumpkins and scoop out all the flesh) but it’s definitely worth it!",
   "imageUrl": "/images/recipes/roasted-pumpkin-soup.avif",
   "thumbnailUrl": "/images/recipes/roasted-pumpkin-soup_thumb.avif",

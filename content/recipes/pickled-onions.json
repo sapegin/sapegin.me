@@ -2,7 +2,10 @@
   "slug": "pickled-onions",
   "createdAt": "2022-05-23T00:00:00.000Z",
   "title": "Pickled onions",
-  "tags": ["mexican-cuisine", "pickling"],
+  "tags": [
+    "mexican-cuisine",
+    "pickling"
+  ],
   "description": "Red pickled onions are a classic garnishing for Mexican moles, [cochinita](/recipes/cochinita-pibil-tacos/), and [pastor](/recipes/tacos-al-pastor/) tacos, but do not hesitate to add them to any dish you like. They make a great combination for seafood specialties too!",
   "imageUrl": "/images/recipes/pickled-onions.avif",
   "thumbnailUrl": "/images/recipes/pickled-onions_thumb.avif",
@@ -14,5 +17,8 @@
   "time": "10 minutes",
   "tools": "- 500 ml container with a tight-fitting lid",
   "yields": "100 g",
-  "usedBy": ["cochinita-pibil-tacos", "tacos-al-pastor"]
+  "usedBy": [
+    "cochinita-pibil-tacos",
+    "tacos-al-pastor"
+  ]
 }

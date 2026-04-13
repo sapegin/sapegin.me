@@ -2,7 +2,11 @@
   "slug": "kimchi-cauliflower-rice",
   "createdAt": "2022-09-06T00:00:00.000Z",
   "title": "Kimchi cauliflower rice",
-  "tags": ["korean-cuisine", "lunches", "spicy"],
+  "tags": [
+    "korean-cuisine",
+    "lunches",
+    "spicy"
+  ],
   "description": "We love kimchi, and we love kimchi fried rice, but we don’t cook rice very often, so here’s a quicker-to-make, easier and healthier version of the kimchi fried rice with the cauliflower instead of real rice. Different kind of crunch but equally satisfying.",
   "imageUrl": "/images/recipes/kimchi-cauliflower-rice.avif",
   "thumbnailUrl": "/images/recipes/kimchi-cauliflower-rice_thumb.avif",

@@ -2,7 +2,11 @@
   "slug": "pea-salad",
   "createdAt": "2024-01-23T00:00:00.000Z",
   "title": "Pea salad",
-  "tags": ["lebanese-cuisine", "picnics", "salads"],
+  "tags": [
+    "lebanese-cuisine",
+    "picnics",
+    "salads"
+  ],
   "description": "This salad was inspired by a lentil salad we tried in a Lebanese restaurant we stumbled upon in Paris (this is our favorite way of finding great places to eat!). Back in Berlin, we recreated it using a photo and our imagination. You may ask how lentil salad became a _pea salad_? Artem took peas instead of lentils from the pantry by mistake but the result was so good, we decided to keep using peas.\n\nThis salad is great for a hot summer party or a picnic. Easy to transport and stays fresh in a sealed container for a few days.",
   "imageUrl": "/images/recipes/pea-salad.avif",
   "thumbnailUrl": "/images/recipes/pea-salad_thumb.avif",

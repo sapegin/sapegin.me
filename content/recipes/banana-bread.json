@@ -2,7 +2,13 @@
   "slug": "banana-bread",
   "createdAt": "2021-08-04T00:00:00.000Z",
   "title": "Banana bread",
-  "tags": ["american-cuisine", "baking", "desserts", "picnics", "sweet-bread"],
+  "tags": [
+    "american-cuisine",
+    "baking",
+    "desserts",
+    "picnics",
+    "sweet-bread"
+  ],
   "description": "Banana bread was the first Artemʼs baking experience, and itʼs a great choice for an aspiring baker: easy to bake, doesnʼt require many ingredients besides overripe bananas and whatever nuts and dried fruits you have at home. Itʼs a great addition to any outdoor activity — whether itʼs a picnic with your family, a hike with friends, or a solo photography outing (donʼt forget a thermos with coffee!). Of course, it tastes great at home too!",
   "imageUrl": "/images/recipes/banana-bread.avif",
   "thumbnailUrl": "/images/recipes/banana-bread_thumb.avif",

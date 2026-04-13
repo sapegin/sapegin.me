@@ -2,7 +2,12 @@
   "slug": "caprese-salad",
   "createdAt": "2021-08-24T00:00:00.000Z",
   "title": "Caprese salad",
-  "tags": ["cold", "italian-cuisine", "salads", "summer"],
+  "tags": [
+    "cold",
+    "italian-cuisine",
+    "salads",
+    "summer"
+  ],
   "description": "This salad is ridiculously quick to make and is the best way to use big ass Valencian tomatoes when they’re in season. One tomato is usually enough to make two plates like this — they’re that huge. It’s fresh, juicy, and full of summer flavors.",
   "imageUrl": "/images/recipes/caprese-salad.avif",
   "thumbnailUrl": "/images/recipes/caprese-salad_thumb.avif",

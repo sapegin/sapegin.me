@@ -2,7 +2,11 @@
   "slug": "kimchi-paste",
   "createdAt": "2022-07-13T00:00:00.000Z",
   "title": "Kimchi paste",
-  "tags": ["foundation-recipes", "korean-cuisine", "spicy"],
+  "tags": [
+    "foundation-recipes",
+    "korean-cuisine",
+    "spicy"
+  ],
   "description": "This magic paste could be used not only to make kimchi but also to roast vegetables (try potatoes!), meat, chicken, or in soups.",
   "imageUrl": "/images/recipes/kimchi-paste.avif",
   "thumbnailUrl": "/images/recipes/kimchi-paste_thumb.avif",
@@ -15,5 +19,9 @@
   "tools": "- blender",
   "yields": "600 ml",
   "source": "This recipe is based on Roy Choi’s recipe from MasterClass.",
-  "usedBy": ["bibimbap", "kimchi-lava-soup", "kimchi"]
+  "usedBy": [
+    "bibimbap",
+    "kimchi-lava-soup",
+    "kimchi"
+  ]
 }

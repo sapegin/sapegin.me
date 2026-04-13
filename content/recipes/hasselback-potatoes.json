@@ -2,7 +2,12 @@
   "slug": "hasselback-potatoes",
   "createdAt": "2022-08-09T00:00:00.000Z",
   "title": "Hasselback potatoes",
-  "tags": ["dinners", "potatoes", "snacks", "swedish-cuisine"],
+  "tags": [
+    "dinners",
+    "potatoes",
+    "snacks",
+    "swedish-cuisine"
+  ],
   "description": "Crispy, buttery, garlicky, and very pretty potatoes. Take some time to cut the potatoes, and probably you will not want to make enough of them to have a full meal. A great addition to any celebration feast, they are like gold — small and precious.",
   "imageUrl": "/images/recipes/hasselback-potatoes.avif",
   "thumbnailUrl": "/images/recipes/hasselback-potatoes_thumb.avif",

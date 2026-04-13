@@ -2,17 +2,27 @@
   "slug": "cochinita-pibil",
   "createdAt": "2023-03-30T00:00:00.000Z",
   "title": "Cochinita pibil",
-  "tags": ["braising", "dutch-oven", "mexican-cuisine", "spicy"],
+  "tags": [
+    "braising",
+    "dutch-oven",
+    "mexican-cuisine",
+    "spicy"
+  ],
   "description": "Cochinita pibil is a legendary Mexican dish, known for being full of flavors and traditions, and typically is cooked underground using maguey leaves. The version here is a very simplified way of cooking it at home, which basically only calls for some supervision during the preparation. It is perfect for those days when one is working at home, since after marinating the meat overnight, you only need to cook it in the oven for some hours.\n\nTry to cook it and serve it in different presentations and enjoy this legendary dish! For example, try our favorite cochinita pibil tacos.",
   "imageUrl": "/images/recipes/cochinita-pibil.avif",
   "thumbnailUrl": "/images/recipes/cochinita-pibil_thumb.avif",
   "ingredients": "- 500 g pork\n- 25 g achiote\n- 2–3 oranges\n  *juice*\n- 2 pinches dried oregano\n- 2 pinches cumin seeds\n- 5–6 black peppercorns\n- 1 onion\n- salt",
   "steps": "1. In a large bowl, dilute the achiote in orange juice.\n2. Add 2 pinch dried oregano, 2 pinch cumin seeds, 5-6 black peppercorn, and salt to the bowl.\n3. Peel the onion, halve it and cut it into 1/2 cm slices, and add to the bowl.\n4. Mix everything thoroughly, add more salt if needed.\n5. Rinse the meat, and put it into the juice, pour some juice and onions on top of the meat to cover it completely with the marinade.\n6. Refrigerate covered for at least 4 hours, or better overnight.\n7. Preheat oven to 120C.\n8. Braise the meat in the marinade in a Dutch oven covered (or a baking form covered with foil), for at least 2 hours or until the meat is very soft, and you can easily tear it apart with a fork.",
-  "keywords": ["puerco pibil", "cochinita con achiote"],
+  "keywords": [
+    "puerco pibil",
+    "cochinita con achiote"
+  ],
   "notes": "The best pig to make cochinita is the one that’s not so lean and has a bit of marbling: neck, back, upper leg.",
   "overnight": true,
   "time": "240 minutes",
   "tools": "- oven\n- Dutch oven (or medium-size baking form)",
   "yields": "600 g",
-  "usedBy": ["cochinita-pibil-tacos"]
+  "usedBy": [
+    "cochinita-pibil-tacos"
+  ]
 }

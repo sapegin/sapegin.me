@@ -2,7 +2,11 @@
   "slug": "carrot-bread",
   "createdAt": "2021-07-13T00:00:00.000Z",
   "title": "Carrot bread",
-  "tags": ["baking", "desserts", "sweet-bread"],
+  "tags": [
+    "baking",
+    "desserts",
+    "sweet-bread"
+  ],
   "imageUrl": "/images/recipes/carrot-bread.avif",
   "thumbnailUrl": "/images/recipes/carrot-bread_thumb.avif",
   "ingredients": "- 270 g all-purpose flour\n- 6 g ground cinnamon\n- 3 g ground nutmeg\n- 7 g baking powder\n- 100 g sugar\n- 100 g brown sugar\n- 200 g sunflower oil\n- 3 eggs\n- 220 g carrots\n  *about 3 medium ones*",

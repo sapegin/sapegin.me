@@ -2,7 +2,11 @@
   "slug": "tzatziki",
   "createdAt": "2021-09-08T00:00:00.000Z",
   "title": "Tzatziki",
-  "tags": ["dips", "greek-cuisine", "sauces"],
+  "tags": [
+    "dips",
+    "greek-cuisine",
+    "sauces"
+  ],
   "imageUrl": "/images/recipes/tzatziki.avif",
   "thumbnailUrl": "/images/recipes/tzatziki_thumb.avif",
   "ingredients": "- 1 cucumber\n- 1 clove garlic\n- 1 lime\n  *juice*\n- 3 sprigs dill\n- 150 g yogurt",

@@ -2,13 +2,23 @@
   "slug": "pastel-tres-leches",
   "createdAt": "2023-06-06T00:00:00.000Z",
   "title": "Pastel tres leches",
-  "tags": ["baking", "cakes", "desserts", "holidays", "mexican-cuisine"],
+  "tags": [
+    "baking",
+    "cakes",
+    "desserts",
+    "holidays",
+    "mexican-cuisine"
+  ],
   "description": "Indulge in the irresistible flavors of Mexico with this tres leches cake, a delightful treat to cool you down on a hot summer day.\n\nThe tres leches cake holds a special place in Margarita's heart, as she eagerly craves its moist goodness every summer since she was a kid in Mexico. What makes her especially happy is the chocolate variation, a rare gem in the world of tres leches cakes. Her mom is also a huge fan of this cake.\n\nSurprisingly, Margarita used to believe that tres leches cake was difficult to make. However, she discovered that it was far more approachable than she initially thought.\n\nSo, gather your ingredients, don your apron, and let's create magic in the kitchen with this delectable Mexican delight.",
   "imageUrl": "/images/recipes/pastel-tres-leches.avif",
   "thumbnailUrl": "/images/recipes/pastel-tres-leches_thumb.avif",
   "ingredients": "### For the sponge cake\n- 6 eggs\n- 90 g coconut sugar\n- 160 g all-purpose flour\n- butter\n  *room temperature, for greasing*\n### For the tres leches\n- 1 can evaporated milk\n- 1 can condensed milk\n- 250 g milk\n- 1 vanilla pod\n### For assembling the cake\n- 500 g whipping cream\n  *cold*\n- 30 g coconut sugar\n- 30 g cocoa powder\n- fresh strawberries\n- fresh blueberries\n- pecans",
   "steps": "### To cook the sponge cake\n1. Preheat oven to 180C.\n2. Separate the yolks of 6 egg from the whites, place the whites in the mixer bowl, and save the yolks (we’ll need them later).\n3. Beat the egg whites using the mixer’s whisk attachment on high speed until they reach snow point.\n4. Add **half** of 30 g coconut sugar and beat just until the sugar is incorporated.\n5. Take another mixer bowl (or, if you don’t have it, empty this one into a medium-sized bowl, and save the bitten eggs for later).\n6. In the mixer bowl, put the egg yolks and the rest of the sugar, beat the yolks until they look pale, almost white, and fluffy.\n7. Add the beaten yolks to the whites, and use a silicon spatula to incorporate the whites and yolks gently in an enveloping way.\n8. Add **half** of 160 g all-purpose flour and continue mixing in an enveloping way, allowing as much air as possible to be incorporated into the mixture. Repeat with the rest of the flour.\n9. Grease the baking form, and pour the mixture into it.\n10. Bake the sponge cake for 22-25 minutes.\n\n### To cook the tres leches\n1. While the sponge cake is baking, place the three milks (evaporated milk, condensed milk, and 250 g milk) in a blender, slice the vanilla pod lengthwise, scrape the content of each half of the pod using a knife, and put it in the blender. Blend until the milks form a homogeneous mixture. Stash in the refrigerator.\n2. When the sponge cake is ready, unmold the bread on a cooling rack, and allow it to cool down for about 15 minutes.\n3. Once the sponge cake is not so hot, cut it horizontally into two equal layers, and place each layer onto a deep dish. Using a fork, make holes in the top (hard) layer of the bread for better absorption.\n4. Divide the mixture of tres leches in two and pour over each sponge cake evenly.\n5. Refrigerate until the tres leches mix is fully absorbed, or overnight.\n\n### To assemble the cake\n1. Make sure that the whipping cream is very cold. Ideally, chill the mixer bowl in the fridge before whipping.\n2. Pour 500 g whipping cream; cold into the bowl of your mixer and using the whisk attachment beat on high speed until soft peaks form.\n3. Add 30 g coconut sugar and continue beating until incorporated, you will see how firmer peaks form.\n4. Add 30 g cocoa powder and beat a bit more until incorporated.\n5. Cut the berries, and coarsely chop the pecans.\n6. Take the sponge cakes out of the refrigerator.\n7. Empty a little less than half of the whipped cream into the center of the bottom sponge cake and spread it until the bread is well covered. Be generous with the amount of cream you use here, it must be at least 1.5 cm thick. Put a layer of berries on top of the cream, and press them gently into the cream.\n8. Carefully place the other sponge cake on top of the first one.\n9. Empty the rest of the whipping cream over the cake and using a spatula distribute the cream over the entire surface. Feel free to cover the sides if you have enough cream.\n10. Sprinkle chopped pecans, and decorate with strawberries and blueberries.\n11. Serve cold.",
-  "keywords": ["pastel de tres leches", "sponge cake", "three milks cake"],
+  "keywords": [
+    "pastel de tres leches",
+    "sponge cake",
+    "three milks cake"
+  ],
   "notes": "Feel free to use any berries that are in season (or sold with a discount).\n\nTry other flavors for the whipped cream instead of cocoa: vanilla, coconut, berries, nuts…",
   "overnight": true,
   "time": "140 minutes",

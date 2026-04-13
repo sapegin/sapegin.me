@@ -2,13 +2,18 @@
   "slug": "granola",
   "createdAt": "2023-03-30T00:00:00.000Z",
   "title": "Morning crunch granola",
-  "tags": ["american-cuisine", "breakfasts"],
+  "tags": [
+    "american-cuisine",
+    "breakfasts"
+  ],
   "description": "This is the third iteration of our family granola recipe. It has a lot of nuts and dried fruits, not just dates, still not too sweet, and is more crispy than ever.\n\nWe eat it every morning with yogurt, bananas, and fresh berries (grapes in winter and strawberries or blueberries in summer, or whatever looks good and not too expensive).",
   "imageUrl": "/images/recipes/granola.avif",
   "thumbnailUrl": "/images/recipes/granola_thumb.avif",
   "ingredients": "- 60 g coconut oil\n- 30 g maple syrup\n- 3 g fine salt\n- 300 g oats\n- nuts and dried fruits",
   "steps": "1. Preheat oven to 160C. Line a baking sheet with parchment paper.\n2. In a small saucepan, put 60 g coconut oil, 30 g maple syrup, 3 g fine salt.\n3. Place on medium heat, and stir until the coconut oil is melted.\n4. In a large bowl, combine 300 g oats, and the coconut oil mixture. Mix well, until every oat is lightly coated.\n5. Coarsely chop the nuts, and add them to the oats. Mix again.\n6. Evenly distribute the granola on the baking sheet using a silicone spatula or a large spoon.\n7. Bake for 10 minutes.\n8. Stir, and bake for another 10-15 minutes, until light-golden and a bit crispy but not dark.\n9. Let the granola cool completely.\n10. Cut the dried fruits into small pieces, and mix them with the granola.",
-  "keywords": ["muesli"],
+  "keywords": [
+    "muesli"
+  ],
   "notes": "You can make this granola with your favorite nuts and dried fruits. Our favorites are almonds, pecans, Brazilian nuts, dates, and dark dried apricots.\n\nStore the granola in an airtight container at room temperature for up to two weeks.",
   "overnight": false,
   "time": "30 minutes",

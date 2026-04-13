@@ -2,7 +2,13 @@
   "slug": "chicken-pho",
   "createdAt": "2024-02-18T00:00:00.000Z",
   "title": "Chicken pho",
-  "tags": ["lunches", "noodles", "soups", "vietnamese-cuisine", "warming"],
+  "tags": [
+    "lunches",
+    "noodles",
+    "soups",
+    "vietnamese-cuisine",
+    "warming"
+  ],
   "description": "We love all kinds of soups, and pho is one of our favorites when visiting a Vietnamese restaurant. This recipe tries to recreate the pho vibe without being too complex. What makes it different from a regular chicken soup with noodles is charred ginger and onions, a whole bunch of toasted spices, and fish and soy sauces instead of salt.",
   "imageUrl": "/images/recipes/chicken-pho.avif",
   "thumbnailUrl": "/images/recipes/chicken-pho_thumb.avif",

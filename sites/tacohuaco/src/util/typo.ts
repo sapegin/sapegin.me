@@ -25,8 +25,10 @@ const fractions = (text: string) =>
 		.replaceAll('1/4', '¼')
 		.replaceAll('3/4', '¾');
 
-export const typo = (text: MaybeText) =>
-	richtypo(
+export const typo = (text: MaybeText) => {
+	// HACK: Rich typo has a bug where it damages nested lists
+	const preparedText = (text ?? '').replaceAll(/^ {3,}[*-] /gm, '⛪︎ ');
+	return richtypo(
 		[
 			...rules,
 			degreeSigns,
@@ -36,5 +38,6 @@ export const typo = (text: MaybeText) =>
 			apostrophes,
 			fractions,
 		],
-		text ?? ''
-	);
+		preparedText
+	).replaceAll('⛪︎', '    -');
+};

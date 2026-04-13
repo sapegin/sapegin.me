@@ -2,12 +2,14 @@
   "slug": "vinaigrette-dressing",
   "createdAt": "2021-08-10T00:00:00.000Z",
   "title": "Vinaigrette dressing",
-  "tags": ["dressing", "russian-cuisine"],
+  "tags": [
+    "dressing",
+    "russian-cuisine"
+  ],
   "ingredients": "- 6 teaspoons vinegar\n- 1/2 lemon\n  *juice*\n- 1 teaspoon honey\n- 1 teaspoon Dijon mustard\n- 70 ml olive oil\n- salt\n- freshly ground black pepper",
   "steps": "1. Mix 6 teaspoon vinegar and lemon juice in a bowl.\n2. Add 1 teaspoon honey and 1 teaspoon Dijon mustard to the bowl and mix well.\n3. Slowly pour 70 ml olive oil while whisking continuously to create an emulsion.\n4. Season with and black pepper as your ~~goat~~ gut mandates.",
   "keywords": [],
   "overnight": false,
-  "yields": "1 portion",
   "source": "This recipe is based on Vlad Piskunov’s book “Russian cuisine: the best of last 500 years”.",
   "usedBy": []
 }

@@ -2,7 +2,12 @@
   "slug": "grapefruit-bread",
   "createdAt": "2021-08-17T00:00:00.000Z",
   "title": "Grapefruit bread",
-  "tags": ["baking", "desserts", "picnics", "sweet-bread"],
+  "tags": [
+    "baking",
+    "desserts",
+    "picnics",
+    "sweet-bread"
+  ],
   "description": "Easy and quick to make with whatever citruses you may have (not just grapefruits). A great option if your friends suddenly invited you over, or for a picnic with coffee — easy to transport too.",
   "imageUrl": "/images/recipes/grapefruit-bread.avif",
   "thumbnailUrl": "/images/recipes/grapefruit-bread_thumb.avif",

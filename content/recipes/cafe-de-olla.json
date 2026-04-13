@@ -2,13 +2,20 @@
   "slug": "cafe-de-olla",
   "createdAt": "2021-08-29T00:00:00.000Z",
   "title": "Café de olla",
-  "tags": ["breakfasts", "brunches", "drinks", "mexican-cuisine"],
+  "tags": [
+    "breakfasts",
+    "brunches",
+    "drinks",
+    "mexican-cuisine"
+  ],
   "description": "We usually drink this coffee on the weekends for breakfast, since we both have good memories when we drink it. It reminds Margarita of her childhood, of the first time she drank coffee in Mexico, of countless breakfasts with her family and friends, chitchatting for hours. It reminds Artem of his dad in Russia, and the smell of his kitchen when he prepares it in a cezve.\n\nAnd now it creates new memories of both of us: reading in the kitchen, making plans for the day (mostly cooking plans), talking about everything and nothing.",
   "imageUrl": "/images/recipes/cafe-de-olla.avif",
   "thumbnailUrl": "/images/recipes/cafe-de-olla_thumb.avif",
   "ingredients": "- 750 ml water\n- 1 tablespoon honey\n- 1/2 stick Mexican cinnamon\n- 4 cloves\n- 30 g coffee\n  *finely ground*",
   "steps": "1. Put water, honey, cinnamon, and clove into a pot.\n2. Stir everything, and bring the pot to boil, so honey dissolves.\n3. While the water is boiling, grind the coffee.\n4. Remove the pot from the heat.\n5. Add coffee, stir, and left covered for 5 minutes.\n6. Filter using a metal sieve and serve.",
-  "keywords": ["coffee"],
+  "keywords": [
+    "coffee"
+  ],
   "notes": "For coffee, we like more neutral ones, like from Ethiopia, Guatemala, or Peru. But you could use Mexican coffee too.\n\nThe grind is a bit coarser than for espresso (3 on Fellow Opus, 11 on Baratza Encore).\n\nIf you don't have Mexican cinnamon, Ceylon cinnamon would also work.",
   "overnight": false,
   "time": "10 minutes",

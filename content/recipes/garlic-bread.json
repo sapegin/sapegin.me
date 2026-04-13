@@ -2,7 +2,11 @@
   "slug": "garlic-bread",
   "createdAt": "2022-03-22T00:00:00.000Z",
   "title": "Garlic bread",
-  "tags": ["bread", "breakfasts", "italian-cuisine"],
+  "tags": [
+    "bread",
+    "breakfasts",
+    "italian-cuisine"
+  ],
   "description": "This is a perfect Sunday breakfast recipe — the smell and the taste of just baked garlic bread are amazing. You could do it with any kind of bread, we like to make it with our own easy bread, baked the evening before.",
   "imageUrl": "/images/recipes/garlic-bread.avif",
   "thumbnailUrl": "/images/recipes/garlic-bread_thumb.avif",

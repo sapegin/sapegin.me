@@ -2,7 +2,13 @@
   "slug": "frijoles-refritos",
   "createdAt": "2023-03-30T00:00:00.000Z",
   "title": "Frijoles refritos",
-  "tags": ["dips", "foundation-recipes", "mexican-cuisine", "sauces", "spicy"],
+  "tags": [
+    "dips",
+    "foundation-recipes",
+    "mexican-cuisine",
+    "sauces",
+    "spicy"
+  ],
   "description": "Frijoles are probably a staple of Mexican society (the same way the baguette is a staple of French society and the toilet paper — of German)! They are used as a side dish in many (like really many) Mexican dishes, they can also be used as a main course in some other presentations. The frijoles refritos (refried beans) is one of our favorites because you can use it as a topping for your tacos, lonches, quesadillas and so on, as a dip with totopos (tortilla chips) or as a side in a (spicy) dish to complement it.",
   "imageUrl": "/images/recipes/frijoles-refritos.avif",
   "thumbnailUrl": "/images/recipes/frijoles-refritos_thumb.avif",

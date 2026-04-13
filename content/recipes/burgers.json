@@ -2,7 +2,11 @@
   "slug": "burgers",
   "createdAt": "2024-02-24T00:00:00.000Z",
   "title": "Klatz burgers",
-  "tags": ["american-cuisine", "fast-food", "sandwiches"],
+  "tags": [
+    "american-cuisine",
+    "fast-food",
+    "sandwiches"
+  ],
   "description": "This burger recipe is how we love to make burgers at home — simple, flavorful, and mildly unconventional. Instead of the traditional 100% beef patty, we use a 50/50 mix of ground beef and pork for a juicier, richer flavor. While the core ingredients stay the same, we often swap out toppings based on what’s in the fridge, keeping the recipe flexible and fun. To top it all off, we use one of our favorite family salsas —  [First world salsa verde](/recipes/first-world-salsa-verde/), [Salsa roja tatemada](/recipes/salsa-roja-tatemada/), but feel free to use your favorite sauce.",
   "imageUrl": "/images/recipes/burgers.avif",
   "thumbnailUrl": "/images/recipes/burgers_thumb.avif",

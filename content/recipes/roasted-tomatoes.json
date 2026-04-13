@@ -2,7 +2,10 @@
   "slug": "roasted-tomatoes",
   "createdAt": "2021-09-08T00:00:00.000Z",
   "title": "Roasted tomatoes",
-  "tags": ["italian-cuisine", "snacks"],
+  "tags": [
+    "italian-cuisine",
+    "snacks"
+  ],
   "imageUrl": "/images/recipes/roasted-tomatoes.avif",
   "thumbnailUrl": "/images/recipes/roasted-tomatoes_thumb.avif",
   "ingredients": "- 500 g tomatoes\n- 4 cloves garlic\n- 1 sprig fresh rosemary\n- olive oil\n- salt\n- freshly ground black pepper",

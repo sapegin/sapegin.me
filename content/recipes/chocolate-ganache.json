@@ -2,7 +2,11 @@
   "slug": "chocolate-ganache",
   "createdAt": "2022-01-17T00:00:00.000Z",
   "title": "Chocolate ganache",
-  "tags": ["foundation-recipes", "french-cuisine", "icings"],
+  "tags": [
+    "foundation-recipes",
+    "french-cuisine",
+    "icings"
+  ],
   "description": "This low-sugar chocolate coverture works well for covering your cake, as well as for inner layers.\n\nTry different versions by adjusting the amount of chocolate (if you want a harder and thicker version) or the amount of cream (for a softer and milder version).",
   "imageUrl": "/images/recipes/chocolate-ganache.avif",
   "thumbnailUrl": "/images/recipes/chocolate-ganache_thumb.avif",
@@ -14,5 +18,8 @@
   "time": "20 minutes",
   "tools": "- pot (at least 1-liter capacity)\n- metal bowl or glass heat resistant bowl same diameter as the pot",
   "yields": "1 layer",
-  "usedBy": ["chocolate-granola-bars", "triple-layer-chocolate-cake"]
+  "usedBy": [
+    "chocolate-granola-bars",
+    "triple-layer-chocolate-cake"
+  ]
 }

@@ -2,7 +2,11 @@
   "slug": "vinaigrette-salad",
   "createdAt": "2021-07-11T00:00:00.000Z",
   "title": "Vinaigrette salad",
-  "tags": ["cold", "russian-cuisine", "salads"],
+  "tags": [
+    "cold",
+    "russian-cuisine",
+    "salads"
+  ],
   "description": "Popular, fancy and easy Russian salad to delight young and elders! (Villagers, hipsters, and vegans adequate ;—)\n\nIt can be employed as main or side dish, and served over tostadas or eat just alone (and in the darkness)!",
   "imageUrl": "/images/recipes/vinaigrette-salad.avif",
   "thumbnailUrl": "/images/recipes/vinaigrette-salad_thumb.avif",

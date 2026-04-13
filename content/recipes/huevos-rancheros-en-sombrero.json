@@ -2,13 +2,20 @@
   "slug": "huevos-rancheros-en-sombrero",
   "createdAt": "2022-10-04T00:00:00.000Z",
   "title": "Huevos rancheros en sombrero",
-  "tags": ["breakfasts", "brunches", "mexican-cuisine", "spicy"],
+  "tags": [
+    "breakfasts",
+    "brunches",
+    "mexican-cuisine",
+    "spicy"
+  ],
   "description": "Huevos rancheros en sombrero, now that’s a bloody good Mexican breakfast dish if you ask us! It’s a hearty and flavorful combination of a fried egg, slightly toasted tortilla, [beans](/recipes/frijoles-refritos/), guacamole, and [our very special family spicy sauce](/recipes/salsa-roja-tatemada/) (but you can also use cheese, salsa, or whatever you have at the back of your fridge). The dish gets its name, which means “rancher’s eggs with hat,” from the sombrero-shaped fried egg that is placed on top of the tortilla. Trust us, the savory egg, beans, and toppings all come together to create a bloody satisfying and flavorful breakfast that will please any appetite. Don’t miss out on this one, folks.",
   "imageUrl": "/images/recipes/huevos-rancheros-en-sombrero.avif",
   "thumbnailUrl": "/images/recipes/huevos-rancheros-en-sombrero_thumb.avif",
   "ingredients": "- [Salsa roja tatemada](/recipes/salsa-roja-tatemada/)\n- [Frijoles refritos](/recipes/frijoles-refritos/) or [Salsa de frijol](/recipes/salsa-de-frijol/)\n- [Guacamole](/recipes/guacamole/)\n- 1 corn tortilla\n- 1 egg\n- olive oil\n- salt",
   "steps": "1. Warm a skillet on medium heat with a bit of olive oil.\n2. Crack an egg on one half of a skillet, and put a tortilla on the other half.\n3. Sprinkle a bit of salt over the egg.\n4. Flip the tortilla after about one minute, then flip it again after about 30 seconds.\n5. Spread the beans on top of the tortilla, place an egg on top of the beans, and cook until the tortilla is a bit crispy on the bottom.\n6. Serve topped with salsa roja tatemada and guacamole.",
-  "keywords": ["fried egg"],
+  "keywords": [
+    "fried egg"
+  ],
   "notes": "If you don’t have time or are too lazy to make guacamole, a few slices of avocado work as well.\n\nIf you by any chance have fresh nopales (or even pickled ones), add a few slices on the side — this will elevate the experience to a whole new level of Mexicannes.",
   "overnight": false,
   "time": "20 minutes",

@@ -2,7 +2,12 @@
   "slug": "kimchi-lava-soup",
   "createdAt": "2022-10-26T00:00:00.000Z",
   "title": "Kimchi lava soup",
-  "tags": ["air-fryer", "lunches", "soups", "spicy"],
+  "tags": [
+    "air-fryer",
+    "lunches",
+    "soups",
+    "spicy"
+  ],
   "description": "Spicy, warming, bright, quick, and easy to cook if you already have kimchi, spicy quick-pickled cucumbers, and some chicken broth in the fridge. Eating this soup is like eating lava!",
   "imageUrl": "/images/recipes/kimchi-lava-soup.avif",
   "thumbnailUrl": "/images/recipes/kimchi-lava-soup_thumb.avif",

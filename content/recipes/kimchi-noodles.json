@@ -2,7 +2,12 @@
   "slug": "kimchi-noodles",
   "createdAt": "2021-08-04T00:00:00.000Z",
   "title": "Kimchi noodles",
-  "tags": ["korean-cuisine", "lunches", "noodles", "spicy"],
+  "tags": [
+    "korean-cuisine",
+    "lunches",
+    "noodles",
+    "spicy"
+  ],
   "description": "This is an easy-to-cook recipe with relatively few ingredients. [Homemade kimchi](/recipes/kimchi/) makes it a great lunch with lots of flavor and a bit of spice (or a lot — depending on how much kimchi you add!).",
   "imageUrl": "/images/recipes/kimchi-noodles.avif",
   "thumbnailUrl": "/images/recipes/kimchi-noodles_thumb.avif",

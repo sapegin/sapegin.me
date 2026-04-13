@@ -2,7 +2,13 @@
   "slug": "salsa-de-jitomate",
   "createdAt": "2024-08-06T00:00:00.000Z",
   "title": "Salsa de jitomate",
-  "tags": ["dips", "foundation-recipes", "mexican-cuisine", "salsas", "sauces"],
+  "tags": [
+    "dips",
+    "foundation-recipes",
+    "mexican-cuisine",
+    "salsas",
+    "sauces"
+  ],
   "description": "This salsa is typically used for serving tacos dorados or tostadas, but is very versatile. It's usually not spicy, but you can add one or two chiles or combine it with another salsa, such as salsa de chile de árbol.",
   "imageUrl": "/images/recipes/salsa-de-jitomate.avif",
   "thumbnailUrl": "/images/recipes/salsa-de-jitomate_thumb.avif",
@@ -13,5 +19,7 @@
   "time": "30 minutes",
   "tools": "- blender or mixer",
   "yields": "500 ml",
-  "usedBy": ["tacos-dorados"]
+  "usedBy": [
+    "tacos-dorados"
+  ]
 }

@@ -71,14 +71,14 @@
 		font-weight: var(--font-weight-ui);
 		font-family: var(--font-ui);
 	}
-	& ul {
+	& ol ul {
 		display: flex;
 		flex-direction: column;
 		gap: --spacing(1.5);
 		list-style: none;
 		padding: 0;
-		margin-left: 1.6rem;
 		margin-top: --spacing(1);
-		margin-bottom: --spacing(4);
+		margin-left: 0;
+		margin-bottom: 0;
 	}
 }

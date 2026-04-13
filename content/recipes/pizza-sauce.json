@@ -2,7 +2,11 @@
   "slug": "pizza-sauce",
   "createdAt": "2022-01-02T00:00:00.000Z",
   "title": "Pizza sauce",
-  "tags": ["foundation-recipes", "italian-cuisine", "sauces"],
+  "tags": [
+    "foundation-recipes",
+    "italian-cuisine",
+    "sauces"
+  ],
   "description": "Very simple and universal pizza sauce. Works great with our gluten-free pizza dough.",
   "imageUrl": "/images/recipes/pizza-sauce.avif",
   "thumbnailUrl": "/images/recipes/pizza-sauce_thumb.avif",

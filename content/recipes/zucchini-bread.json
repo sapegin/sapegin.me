@@ -2,7 +2,11 @@
   "slug": "zucchini-bread",
   "createdAt": "2021-08-17T00:00:00.000Z",
   "title": "Zucchini bread",
-  "tags": ["baking", "bread", "breakfasts"],
+  "tags": [
+    "baking",
+    "bread",
+    "breakfasts"
+  ],
   "imageUrl": "/images/recipes/zucchini-bread.avif",
   "thumbnailUrl": "/images/recipes/zucchini-bread_thumb.avif",
   "ingredients": "- 270 g spelt flour\n- 3 g nutmeg\n- 3 g salt\n- 10 g baking powder\n- 1 zucchini\n- a bit of ginger\n- 200 g olive oil\n- 3 eggs\n- sunflower and sesame seeds",

@@ -8,12 +8,20 @@ interface Props {
 	text: string;
 	overrides?: MarkdownToJSX.Options['overrides'];
 	forceBlock?: boolean;
+	forceInline?: boolean;
 }
 
-export function Markdown({ text, overrides = {}, forceBlock = false }: Props) {
+export function Markdown({
+	text,
+	overrides = {},
+	forceBlock = false,
+	forceInline = false,
+}: Props) {
 	const textTypo = typo(text);
+	console.log(text);
+	console.log(textTypo);
 	return (
-		<MarkdownToJsx options={{ overrides, forceBlock }}>
+		<MarkdownToJsx options={{ overrides, forceBlock, forceInline }}>
 			{textTypo}
 		</MarkdownToJsx>
 	);

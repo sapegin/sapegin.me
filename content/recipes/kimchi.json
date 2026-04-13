@@ -2,7 +2,13 @@
   "slug": "kimchi",
   "createdAt": "2022-07-13T00:00:00.000Z",
   "title": "Kimchi",
-  "tags": ["korean-cuisine", "pickling", "picnics", "snacks", "spicy"],
+  "tags": [
+    "korean-cuisine",
+    "pickling",
+    "picnics",
+    "snacks",
+    "spicy"
+  ],
   "description": "We always loved kimchi (and all the spicy food in general) but since we watched [Roy Choi's course on MasterClass](https://www.masterclass.com/classes/roy-choi-teaches-intuitive-cooking) and tried to make kimchi ourselves, it's opened a whole new world of flavors and possibilities. Now we always have homemade kimchi in our fridge.",
   "imageUrl": "/images/recipes/kimchi.avif",
   "thumbnailUrl": "/images/recipes/kimchi_thumb.avif",
@@ -15,5 +21,8 @@
   "tools": "- gloves\n- apron\n- blender",
   "yields": "500 g",
   "source": "This recipe is based on Roy Choi’s recipe from MasterClass.",
-  "usedBy": ["bibimbap", "kimchi-fried-rice"]
+  "usedBy": [
+    "bibimbap",
+    "kimchi-fried-rice"
+  ]
 }

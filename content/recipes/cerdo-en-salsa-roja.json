@@ -2,7 +2,12 @@
   "slug": "cerdo-en-salsa-roja",
   "createdAt": "2024-01-29T00:00:00.000Z",
   "title": "Cerdo en salsa roja",
-  "tags": ["dutch-oven", "lunches", "mexican-cuisine", "spicy"],
+  "tags": [
+    "dutch-oven",
+    "lunches",
+    "mexican-cuisine",
+    "spicy"
+  ],
   "description": "This is one of Artem’s favorite Mexican recipes, and it can be very very very spicy — if you add a lot of chiles. It takes a bit of time to cook but doesn’t take a lot of attention, and you could cook a lot of it at once and then eat it for several days.\n\nIt makes an amazing lunch with beans ([refried](/recipes/frijoles-refritos/)) or just boiled) and warmed-up tortillas.",
   "imageUrl": "/images/recipes/cerdo-en-salsa-roja.avif",
   "thumbnailUrl": "/images/recipes/cerdo-en-salsa-roja_thumb.avif",

@@ -2,7 +2,11 @@
   "slug": "guacamole",
   "createdAt": "2022-03-19T00:00:00.000Z",
   "title": "Guacamole",
-  "tags": ["dips", "foundation-recipes", "mexican-cuisine"],
+  "tags": [
+    "dips",
+    "foundation-recipes",
+    "mexican-cuisine"
+  ],
   "imageUrl": "/images/recipes/guacamole.avif",
   "thumbnailUrl": "/images/recipes/guacamole_thumb.avif",
   "ingredients": "- 2 avocados\n- 1 tomato\n- 1/2 onion\n- 1 chile\n- 2 limes\n- 3 sprigs parsley",
@@ -11,5 +15,7 @@
   "overnight": false,
   "time": "10 minutes",
   "yields": "100 ml",
-  "usedBy": ["huevos-rancheros-en-sombrero"]
+  "usedBy": [
+    "huevos-rancheros-en-sombrero"
+  ]
 }

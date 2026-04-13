@@ -2,7 +2,10 @@
   "slug": "easy-bread",
   "createdAt": "2022-03-19T00:00:00.000Z",
   "title": "Easy bread",
-  "tags": ["baking", "bread"],
+  "tags": [
+    "baking",
+    "bread"
+  ],
   "description": "This bread recipe is so simple and the result is so good you could do it every day: five minutes of mixing ingredients and the rest is waiting. In the end, you'll have a pretty loaf of bread with a nice golden crust.",
   "imageUrl": "/images/recipes/easy-bread.avif",
   "thumbnailUrl": "/images/recipes/easy-bread_thumb.avif",

@@ -14,9 +14,13 @@
   "thumbnailUrl": "/images/recipes/spicy-gremolata_thumb.avif",
   "ingredients": "- 1 jalapeño\n- 1 bunch parsley or 1 bunch dill\n- 2–3 scallions\n- 3 teaspoons whole-grain mustard\n- 1 clove garlic\n- 1 lime\n  *zest and juice*\n- salt\n- freshly ground black pepper",
   "steps": "1. Prepare the ingredients. **Jalapeño:** dice into small dice. **Greens:** finely chop.\n2. In a small bowl, add jalapeño, greens, and mustard, press the garlic, zest and juice the lime. Mix thoroughly.\n3. Season with salt and pepper.",
-  "keywords": ["gremolada"],
+  "keywords": [
+    "gremolada"
+  ],
   "overnight": false,
   "time": "10 minutes",
   "yields": "100 ml",
-  "usedBy": ["smashed-new-potatoes-with-spicy-gremolata"]
+  "usedBy": [
+    "smashed-new-potatoes-with-spicy-gremolata"
+  ]
 }

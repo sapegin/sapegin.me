@@ -2,7 +2,13 @@
   "slug": "spanish-peasant-potatoes",
   "createdAt": "2024-06-30T00:00:00.000Z",
   "title": "Spanish peasant potatoes",
-  "tags": ["dinners", "dutch-oven", "one-pot", "potatoes", "spanish-cuisine"],
+  "tags": [
+    "dinners",
+    "dutch-oven",
+    "one-pot",
+    "potatoes",
+    "spanish-cuisine"
+  ],
   "description": "Yet another way of cooking potatoes: moderately spicy, and rich in flavors of bell peppers.",
   "imageUrl": "/images/recipes/spanish-peasant-potatoes.avif",
   "thumbnailUrl": "/images/recipes/spanish-peasant-potatoes_thumb.avif",

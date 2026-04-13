@@ -2,7 +2,10 @@
   "slug": "charred-iceberg",
   "createdAt": "2021-08-24T00:00:00.000Z",
   "title": "Charred iceberg",
-  "tags": ["charring", "leftovers"],
+  "tags": [
+    "charring",
+    "leftovers"
+  ],
   "description": "If you have a retired iceberg salad at the back of your fridge that's too old for an actual salad, in 10 minutes you could make a nice snack. Works great with [Salsa roja tatemada](/recipes/salsa-roja-tatemada/), but could be served with any other sauce you have: [Pesto](/recipes/pesto/), or even a [salad dressing](/recipes/golden-salad-dressing/).",
   "imageUrl": "/images/recipes/charred-iceberg.avif",
   "thumbnailUrl": "/images/recipes/charred-iceberg_thumb.avif",

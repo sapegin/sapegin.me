@@ -2,7 +2,12 @@
   "slug": "pesto",
   "createdAt": "2021-08-24T00:00:00.000Z",
   "title": "Pesto",
-  "tags": ["dips", "foundation-recipes", "italian-cuisine", "sauces"],
+  "tags": [
+    "dips",
+    "foundation-recipes",
+    "italian-cuisine",
+    "sauces"
+  ],
   "imageUrl": "/images/recipes/pesto.avif",
   "thumbnailUrl": "/images/recipes/pesto_thumb.avif",
   "ingredients": "- 1 bunch basil\n- 1/4 bunch parsley\n- 1 clove garlic\n- 3 teaspoons sunflower seeds\n  *roasted*\n- 20 g Parmesan cheese\n- 50 g olive oil\n- salt\n- freshly ground black pepper",

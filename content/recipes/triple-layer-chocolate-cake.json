@@ -2,7 +2,11 @@
   "slug": "triple-layer-chocolate-cake",
   "createdAt": "2022-01-17T00:00:00.000Z",
   "title": "Triple layer chocolate cake",
-  "tags": ["baking", "cakes", "desserts"],
+  "tags": [
+    "baking",
+    "cakes",
+    "desserts"
+  ],
   "description": "This is a great low sugar, low gluten cake to enjoy every time one craves cake! It is also easy to do and has a very short baking time.",
   "imageUrl": "/images/recipes/triple-layer-chocolate-cake.avif",
   "thumbnailUrl": "/images/recipes/triple-layer-chocolate-cake_thumb.avif",
