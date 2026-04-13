@@ -2,7 +2,7 @@ import { Icon } from './Icon';
 import { Tooltip, TooltipTrigger } from './Tooltip';
 
 interface Props {
-	time: number;
+	time: string;
 	overnight?: boolean;
 	size?: 'medium' | 'small';
 }
@@ -16,8 +16,8 @@ const MoonIcon = () => (
 export function RecipeTimes({ time, overnight, size = 'medium' }: Props) {
 	if (size === 'small') {
 		return (
-			<p className="font-ui text-xs/normal">
-				{time} m
+			<p className="typo-small-ui">
+				{time}
 				{overnight && (
 					<>
 						{' '}
@@ -36,8 +36,8 @@ export function RecipeTimes({ time, overnight, size = 'medium' }: Props) {
 	}
 
 	return (
-		<p className="font-ui text-xs/normal">
-			{time} min
+		<p className="typo-small-ui">
+			{time}
 			{overnight && (
 				<>
 					, requires preparation the day before <MoonIcon />

@@ -1,0 +1,18 @@
+{
+  "slug": "burgers",
+  "createdAt": "2024-02-24T00:00:00.000Z",
+  "title": "Klatz burgers",
+  "tags": ["american-cuisine", "fast-food", "sandwiches"],
+  "description": "This burger recipe is how we love to make burgers at home — simple, flavorful, and mildly unconventional. Instead of the traditional 100% beef patty, we use a 50/50 mix of ground beef and pork for a juicier, richer flavor. While the core ingredients stay the same, we often swap out toppings based on what’s in the fridge, keeping the recipe flexible and fun. To top it all off, we use one of our favorite family salsas —  [First world salsa verde](/recipes/first-world-salsa-verde/), [Salsa roja tatemada](/recipes/salsa-roja-tatemada/), but feel free to use your favorite sauce.",
+  "imageUrl": "/images/recipes/burgers.avif",
+  "thumbnailUrl": "/images/recipes/burgers_thumb.avif",
+  "ingredients": "- 3 brioche burger buns\n- 150 g ground beef\n- 150 g ground pork\n- 1 bell pepper\n- 1 tomato\n- 6 slice Cheddar cheese\n- 3 eggs\n- pickled cucumbers, pickled jalapeño, or both\n- [First world salsa verde](/recipes/first-world-salsa-verde/) or [Salsa roja tatemada](/recipes/salsa-roja-tatemada/)\n- olive oil\n- butter\n  *for toasting buns*\n- salt",
+  "steps": "1. **Prepare your preferred sauce:** [First world salsa verde](/recipes/first-world-salsa-verde/), [Salsa roja tatemada](/recipes/salsa-roja-tatemada/), or another of your choice.\n2. Heat two skillets on medium heat.\n3. Prepare the vegetables.\n   - **Bell pepper:** remove the stem and seeds, cut the top and the bottom, cut the middle part into 3-4 squares (one bell pepper is enough for 5-6 burgers).\n   - **Tomato:** slice thinly.\n4. On the first skillet, increase the heat to medium-high, add a bit of olive oil, and **cook the bell peppers**, until softened a bit, and slightly blistered on both sides.\n5. On the second skillet, add a bit of olive oil, and **fry the eggs**: crack each egg into the hot oil, sprinkle with salt, and cover the skillet. Fry covered until all the whites are fully set.\n6. While the eggs and bell peppers are cooking, **form the burger patties**: mix the ground meat just enough to combine, divide into 100 g portions, roll into balls, and gently press into round patties. (Avoid mixing and pressing too much, as it'll make the patties harder when they are cooked.)\n7. On the skillet you used for the bell pepper, **fry the patties**: lower the heat to medium, add more oil if needed, place patties on the skillet, gently press down with a spatula and hold for about 10 seconds, and cook for about 5 minutes; turn and cook for 2 minutes, then put two slices of cheese on top of each patty, cover the skillet, and cook for about 5 minutes more until the internal temperature of the meat is 60C (for medium-well).\n8. While the patties are cooking, on the other skillet, **toast the buns**: melt a tablespoon of butter, and toast the cut sides until golden brown.\n9. Finally, **assemble the burgers**: lower bun, bell peppers, pickled cucumbers and/or jalapeños, patty, tomatoes, sauce, fried egg, upper bun.",
+  "keywords": [],
+  "notes": "Don’t put sauce on the bread, it’ll make it wet — put it between other layers.\n\nYou can cook the sauce up to several days in advance, and store it in the fridge.",
+  "overnight": false,
+  "time": "40 minutes",
+  "tools": "- two medium-sized skillets (one with lid)",
+  "yields": "3 burgers",
+  "usedBy": []
+}

@@ -41,20 +41,17 @@ export function Logo() {
 		<a
 			href="/"
 			className="
-     mx-auto -mt-6 -mb-0.5 quoted-link
+     group mx-auto rounded-normal focus-outline
      md:mx-0
    "
 		>
-			<span className="flex flex-row items-center gap-3 pt-3">
-				<span className="-mt-2.5 pb-3">
-					<Taco height={34} {...getTacoProps()} />
-				</span>
+			<span className="-mt-2 -mr-2 flex items-center gap-1">
+				<Taco height={34} {...getTacoProps()} />
 				<span
 					className="
-       mb-2 rounded-none border-0 border-solid border-accent bg-background
-       font-ui text-base/heading font-bold tracking-menu text-accent uppercase
-       no-underline transition-all duration-(--duration-hover) ease-hover
-       group-hover:border-b-2
+       mt-2 p-2 typo-menu font-bold text-accent no-underline transition-all
+       duration-(--duration-hover) ease-hover
+       group-hover:bg-accent group-hover:text-background
      "
 				>
 					Tacohuaco

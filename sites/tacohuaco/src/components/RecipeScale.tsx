@@ -5,10 +5,12 @@ interface Props {
 
 export function RecipeScale({ onLess, onMore }: Props) {
 	return (
-		<div className="
-    flex min-w-0 flex-row items-center gap-3
-    md:gap-2
-  ">
+		<div
+			className="
+     flex min-w-0 flex-row items-center gap-3
+     md:gap-2
+   "
+		>
 			<button
 				onClick={onLess}
 				aria-label="Less"

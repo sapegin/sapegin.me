@@ -1,0 +1,84 @@
+@utility recipe-ingredients {
+	& h3 {
+		margin-bottom: --spacing(4);
+		font-family: var(--font-heading);
+		font-weight: var(--font-weight-heading);
+		line-height: var(--leading-heading);
+		font-size: var(--text-lg);
+	}
+
+	& ul {
+		display: flex;
+		flex-direction: column;
+		gap: --spacing(4);
+		margin-bottom: --spacing(8);
+		padding: 0;
+		list-style: none;
+	}
+	& ul:last-child {
+		margin-bottom: 0;
+	}
+	& li {
+		font-family: var(--font-body);
+	}
+	& li > em:last-child {
+		/* Render comments on a separate line */
+		display: block;
+	}
+}
+
+@utility recipe-steps {
+	& h3 {
+		margin-bottom: --spacing(4);
+		font-family: var(--font-heading);
+		font-weight: var(--font-weight-heading);
+		line-height: var(--leading-heading);
+		font-size: var(--text-lg);
+	}
+
+	& ol {
+		display: flex;
+		flex-direction: column;
+		gap: --spacing(4);
+		margin-bottom: --spacing(8);
+		padding: 0;
+		list-style: none;
+		counter-reset: step;
+	}
+	& ol:last-child {
+		margin-bottom: 0;
+	}
+	& ol > li {
+		counter-increment: step;
+		padding-left: 1.6rem;
+		position: relative;
+	}
+	& ol > li::before {
+		content: counter(step);
+		position: absolute;
+		left: 0.15em;
+		top: 0.25em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.1rem;
+		height: 1.1rem;
+		flex-shrink: 0;
+		border-radius: var(--radius-full);
+		background-color: var(--color-accent);
+		color: var(--color-background);
+		font-size: var(--text-xs);
+		font-weight: var(--font-weight-ui);
+		font-family: var(--font-ui);
+	}
+	& ul {
+		display: flex;
+		flex-direction: column;
+		gap: --spacing(1.5);
+		list-style: none;
+		padding: 0;
+		margin-left: 1.6rem;
+		margin-top: --spacing(1);
+		margin-bottom: --spacing(4);
+	}
+}

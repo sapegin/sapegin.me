@@ -1,5 +1,5 @@
+import { Group } from '@shared/packages/tamia/components/Group';
 import type { ReactNode } from 'react';
-import Group from 'react-group';
 import { Markdown } from '../components/Markdown';
 import { TextContent } from '../components/TextContent';
 import { type CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
@@ -10,7 +10,12 @@ type Props = CoffeeRecipeType & {
 	children: ReactNode;
 };
 
-export function CoffeeRecipePage({ url, description, children, ...recipe }: Props) {
+export function CoffeeRecipePage({
+	url,
+	description,
+	children,
+	...recipe
+}: Props) {
 	return (
 		<PageWithTitle url={url} title={`${recipe.name} coffee recipe`}>
 			<div className="flex flex-col gap-8">

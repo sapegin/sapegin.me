@@ -8,10 +8,7 @@ interface Props {
 
 export function Frame({ children, aspectRatio, className }: Props) {
 	return (
-		<div
-			className={className}
-			style={{ aspectRatio }}
-		>
+		<div className={className} style={{ aspectRatio }}>
 			{children}
 		</div>
 	);

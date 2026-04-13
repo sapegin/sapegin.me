@@ -1,164 +1,18 @@
 {
-  "createdAt": "2022-05-23T07:43:41.156Z",
-  "cuisines": [
-    "Mexican"
-  ],
-  "description": "Red pickled onions are a classic garnishing for Mexican moles, [cochinita](/recipes/cochinita-pibil-tacos/), and [pastor](/recipes/tacos-al-pastor/) tacos, but do not hesitate to add them to any dish you like. They make a great combination for seafood specialties too!",
-  "favorite": true,
-  "ingredients": [
-    {
-      "name": "",
-      "ingredients": [
-        [
-          {
-            "name": "onion",
-            "modifier": "red",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "chile",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "lime",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "comment": "juice",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "vinegar",
-            "minAmount": 1,
-            "maxAmount": 3,
-            "unit": "teaspoon",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "salt",
-            "modifier": "kosher",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ]
-      ]
-    }
-  ],
-  "keywords": [],
-  "notes": [
-    "Try using different types of chilies when preparing the onions, the original Mexican recipe calls for habaneros, but they can be too spicy for some people and also sometimes too expensive.",
-    "If you can prepare the onions 4 to 5 hours ahead of serving them, it will enhance their flavors.",
-    "If you use white or yellow onions, try adding extra lime juice to reach the right level of acidity."
-  ],
-  "overnight": false,
   "slug": "pickled-onions",
-  "steps": [
-    {
-      "name": "",
-      "steps": [
-        {
-          "text": "Halve the onion and cut it into 1/4 cm slices.",
-          "pause": false
-        },
-        {
-          "text": "Quarter the chili lengthwise and cut it into very thin slices.",
-          "pause": false
-        },
-        {
-          "text": "Put the onions and the chili into a bowl.",
-          "pause": false
-        },
-        {
-          "text": "Juice the lime, and add <Ingredient name=\"vinegar\"  /> into the bowl, and mix again.",
-          "pause": false
-        },
-        {
-          "text": "Add salt, thoroughly mix, and add more salt if needed.",
-          "pause": false
-        },
-        {
-          "text": "Leave the container to pickle on the counter for at least 30 minutes (the more, the better).",
-          "pause": false
-        }
-      ]
-    }
-  ],
-  "tags": [
-    "Pickling"
-  ],
-  "time": 10,
+  "createdAt": "2022-05-23T00:00:00.000Z",
   "title": "Pickled onions",
-  "tools": [
-    "500 ml container with a tight-fitting lid"
-  ],
-  "yields": {
-    "amount": 100,
-    "unit": "g"
-  },
-  "images": [
-    {
-      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/Xf5RYsAlQpaymBg122JX",
-      "handle": "Xf5RYsAlQpaymBg122JX",
-      "width": 5630,
-      "height": 4014
-    }
-  ],
-  "subrecipes": [],
-  "recipes": [
-    {
-      "slug": "cochinita-pibil-tacos",
-      "title": "Cochinita pibil tacos"
-    },
-    {
-      "slug": "tacos-al-pastor",
-      "title": "Tacos al pastor"
-    }
-  ],
-  "seasons": [],
-  "chart": [
-    {
-      "type": "Rest",
-      "value": "30 minutes",
-      "overnight": false,
-      "covered": false
-    }
-  ],
-  "tips": [],
-  "warnings": [],
-  "vegan": true,
-  "vegetarian": true,
-  "glutenFree": true,
-  "lowGluten": false,
-  "dairyFree": true,
-  "noAddedSugar": true
+  "tags": ["mexican-cuisine", "pickling"],
+  "description": "Red pickled onions are a classic garnishing for Mexican moles, [cochinita](/recipes/cochinita-pibil-tacos/), and [pastor](/recipes/tacos-al-pastor/) tacos, but do not hesitate to add them to any dish you like. They make a great combination for seafood specialties too!",
+  "imageUrl": "/images/recipes/pickled-onions.avif",
+  "thumbnailUrl": "/images/recipes/pickled-onions_thumb.avif",
+  "ingredients": "- 1-2 red onions\n- 1 chile\n- 1 lime\n  *juice*\n- 1-3 teaspoons vinegar\n- salt",
+  "steps": "1. Halve the onion and cut it into 1/4 cm slices.\n2. Halve the chile lengthwise and cut it into very thin slices.\n3. Put the onions and the chile into a bowl.\n4. Juice the lime, and add 1-3 teaspoon vinegar into the bowl, and mix again.\n5. Add salt, thoroughly mix, and add more salt if needed.\n6. Leave the container to pickle on the counter for at least 30 minutes (the more, the better).",
+  "keywords": [],
+  "notes": "Try using different types of chiles when preparing the onions, the original Mexican recipe calls for habaneros, but they can be too spicy for some people and also sometimes too expensive.\n\nIf you can prepare the onions 4 to 5 hours ahead of serving them, it will enhance their flavors.\n\nIf you use white or yellow onions, try adding extra lime juice to reach the right level of acidity.",
+  "overnight": false,
+  "time": "10 minutes",
+  "tools": "- 500 ml container with a tight-fitting lid",
+  "yields": "100 g",
+  "usedBy": ["cochinita-pibil-tacos", "tacos-al-pastor"]
 }

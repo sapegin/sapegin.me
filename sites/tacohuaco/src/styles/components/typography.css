@@ -4,7 +4,7 @@
 @utility heading-1 {
 	color: var(--color-text);
 	font-family: var(--font-heading);
-	font-weight: var(--font-weight-heading);
+	font-weight: var(--font-weight-normal);
 	line-height: var(--leading-heading);
 	font-size: var(--text-2xl);
 }
@@ -13,11 +13,14 @@
  * Heading level 2.
  */
 @utility heading-2 {
-	color: var(--color-text);
+	color: var(--color-secondary);
 	font-family: var(--font-heading);
 	font-weight: var(--font-weight-heading);
 	line-height: var(--leading-heading);
 	font-size: var(--text-xl);
+	text-transform: uppercase;
+	letter-spacing: var(--tracking-uppercase);
+	text-shadow: var(--shadow-heading);
 }
 
 /**
@@ -53,6 +56,14 @@
 	color: var(--color-text);
 }
 
+@utility typo-small-ui {
+	font-family: var(--font-ui);
+	font-size: var(--text-xs);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--leading-normal);
+	color: var(--color-text);
+}
+
 /**
  * Typography: large text.
  */
@@ -82,9 +93,7 @@
 @utility typo-menu {
 	font-family: var(--font-ui);
 	font-size: var(--text-ui);
-	font-weight: var(--font-weight-bold);
-	line-height: var(--leading-normal);
-	letter-spacing: var(--tracking-menu);
+	line-height: 1;
+	letter-spacing: var(--tracking-uppercase);
 	text-transform: uppercase;
-	color: var(--color-text);
 }

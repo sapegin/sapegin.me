@@ -1,161 +1,18 @@
 {
-  "createdAt": "2022-03-19T08:19:40.801Z",
-  "cuisines": [
-    "French"
-  ],
-  "description": "This garlic butter is the perfect filling for garlic bread. You could also use it to bake potatoes (add more salt) or just as regular butter for sandwiches.",
-  "favorite": false,
-  "ingredients": [
-    {
-      "name": "",
-      "ingredients": [
-        [
-          {
-            "name": "butter",
-            "minAmount": 125,
-            "maxAmount": 125,
-            "unit": "g",
-            "comment": "room temperature",
-            "kind": 1,
-            "hasGluten": false,
-            "hasDairy": true,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "garlic",
-            "minAmount": 4,
-            "maxAmount": 5,
-            "unit": "clove",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "parsley",
-            "minAmount": 4,
-            "maxAmount": 5,
-            "unit": "sprig",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "cheese",
-            "modifier": "table spoons Parmigiano Reggiano",
-            "minAmount": 3,
-            "maxAmount": 4,
-            "kind": 1,
-            "hasGluten": false,
-            "hasDairy": true,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "black pepper",
-            "modifier": "freshly ground",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ]
-      ]
-    }
-  ],
-  "keywords": [],
-  "notes": [
-    "You could keep the garlic butter in the fridge in a sealed container for at least one week."
-  ],
-  "overnight": false,
   "slug": "garlic-butter",
-  "source": "Based on a [garlic bread recipe](https://www.youtube.com/watch?v=FkV_fU5GoXM) by Joshua Weissman.",
-  "steps": [
-    {
-      "name": "",
-      "steps": [
-        {
-          "text": "Finely chop parsley.",
-          "pause": false
-        },
-        {
-          "text": "Put butter and parsley into a medium-sized bowl.",
-          "pause": false
-        },
-        {
-          "text": "Press the garlic into the bowl.",
-          "pause": false
-        },
-        {
-          "text": "Grate Parmigiano Reggiano into the bowl.",
-          "pause": false
-        },
-        {
-          "text": "Season with black pepper.",
-          "pause": false
-        },
-        {
-          "text": "Thoroughly mix all the ingredients.",
-          "pause": false
-        }
-      ]
-    }
-  ],
-  "tags": [
-    "Foundation"
-  ],
-  "time": 10,
+  "createdAt": "2022-03-19T00:00:00.000Z",
   "title": "Garlic butter",
-  "tools": [],
-  "yields": {
-    "amount": 150,
-    "unit": "g"
-  },
-  "images": [
-    {
-      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/Y0ZLyVuRfWw8wigDyyGg",
-      "handle": "Y0ZLyVuRfWw8wigDyyGg",
-      "width": 4115,
-      "height": 3632
-    }
-  ],
-  "subrecipes": [],
-  "recipes": [
-    {
-      "slug": "garlic-bread",
-      "title": "Garlic bread"
-    }
-  ],
-  "seasons": [],
-  "chart": [
-    {
-      "type": "WarmToRoomTemp",
-      "subtype": "butter",
-      "overnight": false,
-      "covered": false
-    }
-  ],
-  "tips": [
-    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
-  ],
-  "warnings": [],
-  "vegan": false,
-  "vegetarian": true,
-  "glutenFree": true,
-  "lowGluten": false,
-  "dairyFree": false,
-  "noAddedSugar": true
+  "tags": ["foundation-recipes", "french-cuisine"],
+  "description": "This garlic butter is the perfect filling for garlic bread. You could also use it to bake potatoes (add more salt) or just as regular butter for sandwiches.",
+  "imageUrl": "/images/recipes/garlic-butter.avif",
+  "thumbnailUrl": "/images/recipes/garlic-butter_thumb.avif",
+  "ingredients": "- 125 g butter\n  *room temperature*\n- 4-5 cloves garlic\n- 4-5 sprigs parsley\n- 3-4 tablespoons Parmesan cheese\n- freshly ground black pepper",
+  "steps": "1. Finely chop parsley.\n2. Put butter and parsley into a medium-sized bowl.\n3. Press the garlic into the bowl.\n4. Grate parmesan into the bowl.\n5. Season with black pepper.\n6. Thoroughly mix all the ingredients.",
+  "keywords": [],
+  "notes": "You could keep the garlic butter in the fridge in a sealed container for at least one week.",
+  "overnight": false,
+  "time": "10 minutes",
+  "yields": "150 g",
+  "source": "This recipe is based on a [garlic bread recipe](https://www.youtube.com/watch?v=FkV_fU5GoXM) by Joshua Weissman.",
+  "usedBy": ["garlic-bread"]
 }

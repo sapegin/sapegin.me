@@ -1,0 +1,31 @@
+{
+  "slug": "salsa-roja-tatemada",
+  "createdAt": "2021-07-06T00:00:00.000Z",
+  "title": "Salsa roja tatemada",
+  "tags": [
+    "charring",
+    "foundation-recipes",
+    "mexican-cuisine",
+    "salsas",
+    "sauces",
+    "spicy"
+  ],
+  "description": "A classic Mexican must-have as a complement to any main dish.",
+  "imageUrl": "/images/recipes/salsa-roja-tatemada.avif",
+  "thumbnailUrl": "/images/recipes/salsa-roja-tatemada_thumb.avif",
+  "ingredients": "- 2 tomato\n- 2 mildly spicy chile\n- 1 onion\n- 3-4 clove garlic\n- chile flakes\n  *optional*\n- salt",
+  "steps": "1. Prepare the vegetables. **Tomatoes:** If they are small and juicy, leave them whole; otherwise halve. **Chiles:** leave as is. **Onion:** peel and halve. **Garlic:** peel.\n2. Char all the vegetables without adding any oil on a skillet, until they softened a bit. Don't worry if they look burned, this will add an amazing flavor to our sauce!\n3. Transfer the vegetables onto a plate, and let them cool down a bit.\n4. When the vegetables are cold enough to touch them, roughly cut them, and remove the roots of the tomatoes and chiles.\n5. Purée the vegetables using an immersion blender or a food processor until you have a smooth paste (but not too smooth, some texture is nice to have here).\n6. Add some chile flakes if not spicy enough, and season with salt to your taste.",
+  "keywords": [],
+  "notes": "Get a Molcajete and make your sauce as a true Mexican señora if you want to go real! ;-)\n\nWe usually make this sauce with dried jalapeños or whatever fresh spicy chile we have.",
+  "overnight": false,
+  "time": "30 minutes",
+  "tools": "- blender or food processor",
+  "yields": "200 ml",
+  "usedBy": [
+    "burgers",
+    "cochinita-pibil-tacos",
+    "donerritos",
+    "huevos-rancheros-en-sombrero",
+    "tacos-de-higado"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "cottage-pie",
+  "createdAt": "2023-04-17T00:00:00.000Z",
+  "title": "Cottage pie",
+  "tags": [
+    "crowd",
+    "dinners",
+    "dutch-oven",
+    "english-cuisine",
+    "holidays",
+    "potatoes",
+    "warming"
+  ],
+  "description": "A Cottage pie is a classic British comfort dish: minced meat cooked with vegetables and topped with mashed potatoes, then baked until golden. It originated in the late 18th–19th century as an economical way to use leftover roasted meat in rural households (“cottages”).\n\nThis version stays close to the tradition—ground beef with onions and vegetables under a layer of creamy mashed potatoes—but adds a slightly broader vegetable base (zucchini, fresh chile) and a more aromatic seasoning (cumin and rosemary). These additions make the filling a bit lighter and more fragrant than strictly traditional recipes, which typically rely on carrots, peas, and herbs like thyme or Worcestershire sauce.",
+  "imageUrl": "/images/recipes/cottage-pie.avif",
+  "thumbnailUrl": "/images/recipes/cottage-pie_thumb.avif",
+  "ingredients": "### For the mashed potatoes\n- 2 kg floury potatoes\n- 2 bay leaves\n- 12 teaspoons butter\n- 1 egg\n- 1 cup milk\n- salt\n- freshly ground black pepper\n### For the filling\n- 400 g ground beef\n- 1/2 zucchini\n- 1 carrot\n- 1 onion\n- 4 cloves of garlic\n- 1 fresh chile\n- 2 tomatoes\n- frozen peas\n- 1 bullion cube\n- dry rosemary\n- ground cumin seeds\n- salt",
+  "steps": "### To cook the mashed potatoes\n1. Peel the potatoes, cut them into 4 cm cubes, and cook in water with 2 bay leaf and salt, until tender.\n2. Keep about 1 cup of potato cooking liquid, and discard the remaining cooking liquid.\n3. Wile potatoes are still hot, mash them using a potato ricer or masher, add 1 egg, a few tablespoons of butter, a splash of milk, and salt. Keep adding more cooking liquid, milk, or butter and stirring until the potatoes are creamy. (Use a food processor or a mixer to cut the grains even more.)\n4. Add more salt if needed.\n### To cook the filling\n1. While the potatoes are cooking, prepare the vegetables:\n\t- **Onion:** peel, halve and cut into small dice. **Garlic:** peel and thinly slice. **Chile:** halve lengthwise, remove the seeds, and thinly slice.\n\t- **Carrot:** peel (if needed), and cut into small dice. **Zucchini:** cut into small dice.\n\t- **Tomatoes:** cut into small dice.\n2. On a large skillet sat on medium-low heat with olive oil, sauté onions, garlic, and chile, until the onion is transparent, for a few minutes.\n3. Add the ground meat to the skillet, increase the heat to medium-hight, stir, and keep cooking until there are no pink spots in the meat.\n4. Lower the heat to medium, add the carrots and zucchini, and cook for a few more minutes.\n5. Add the peas, tomatoes, a bullion cube, 1 pinch dry rosemary, 1 pinch ground cumin seeds, and cook for a few more minutes.\n6. Add more salt if needed.\n### To cook the pie\n1. Turn on the oven to 220C.\n2. Put the filling on the bottom of a baking form.\n3. Spread the mashed potatoes on top of the filling.\n4. Make long grooves with a fork on top of the pototoes to increase the browning surface.\n5. Bake the pie uncovered for about 40 minutes on the top shelf of the oven, until golden.",
+  "keywords": ["Shepherd’s pie"],
+  "notes": "If made with lamb instead of beef, the dish would be called *Shepherd’s pie* rather than Cottage pie.",
+  "overnight": false,
+  "time": "180 minutes",
+  "tools": "- large ceramic baking form",
+  "yields": "6 portions",
+  "usedBy": []
+}

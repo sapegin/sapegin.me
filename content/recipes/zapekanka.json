@@ -1,0 +1,19 @@
+{
+  "slug": "zapekanka",
+  "createdAt": "2021-08-31T00:00:00.000Z",
+  "title": "Cottage cheesecake (zapekanka)",
+  "tags": ["baking", "breakfasts", "desserts", "russian-cuisine"],
+  "description": "Zapekanka (запеканка) is a Russian village cheesecake made of cottage cheese (tvorog, творог) and smetana (сметана). It's less sweet and smooth than the New York cheesecake and makes a great breakfast (if you cook it the evening before) topped with some marmalade and fresh berries. (And don't forget to brew a cup of café de olla!)",
+  "imageUrl": "/images/recipes/zapekanka.avif",
+  "thumbnailUrl": "/images/recipes/zapekanka_thumb.avif",
+  "ingredients": "### For the base\n\n- 550 g cottage cheese (tvorog)\n- 2 eggs\n- 35 g honey\n- 15 g corn starch\n- 5 g vanilla extract\n- 1 lime\n  *zest*\n- 100 g smetana\n- butter\n  *room temperature, for greasing*\n\n### For the topping\n\n- 300 g smetana\n- 1 egg\n- 15 g honey\n- 5 g vanilla extract\n- 1 lime\n  *juice*",
+  "steps": "### To cook the base\n\n1. Preheat oven to 170C.\n2. Mix cottage cheese (tvorog) using a food processor or push it through a sieve to smoothen the grains.\n3. In a big mixing bowl, combine 1 egg and 15 g honey until you have fluffy light beige mass, using a mixer.\n4. Add the cottage cheese of step 2, 15 g corn starch, 5 g vanilla extract, and zest of 1 lime; juice, then mix using a silicone spatula.\n5. Add 300 g smetana and mix again.\n6. Put baking paper onto the bottom of the baking form and butter its sides.\n7. Pour the mixture into the baking form.\n8. Bake 10-20 minutes.\n\n### To finish zapekanka\n\n1. While the base is baking, prepare the topping. Mix 300 g smetana, 1 egg, 15 g honey, 5 g vanilla extract, and juice of 1 lime; juice using a mixer.\n2. Pour the topping on top of the base, and bake for 30-40 minutes more.\n3. Cool down the cake in a turned-off oven and then refrigerate for about 1 hour.",
+  "keywords": [],
+  "notes": "You could buy both cottage cheese (tvorog) and smetana in any Russian store.\n\nYou could replace honey and vanilla extract in the base with 35 g of date syrup.",
+  "overnight": false,
+  "time": "70 minutes",
+  "tools": "- mixer\n- oven\n- 16-18 cm baking form\n- food processor (optional)",
+  "yields": "4 portions",
+  "source": "This recipe is based on a recipe from [Viktoria Melnik’s](https://www.instagram.com/vicky_bakery/) book “Food as it is”.",
+  "usedBy": []
+}

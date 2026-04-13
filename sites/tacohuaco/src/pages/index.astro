@@ -1,39 +1,20 @@
 ---
 import { getCollection } from 'astro:content';
 import countBy from 'lodash/countBy';
-import intersection from 'lodash/intersection';
 import orderBy from 'lodash/orderBy';
 import Layout from '../layouts/Layout.astro';
 import { MainPage } from '../templates/MainPage';
 import type { Recipe } from '../types/Recipe';
-import { recipeEntryToRecipe } from '../util/recipeEntryToRecipe';
 
-const MEAL_TAGS = ['Lunch', 'Dinner', 'Breakfast', 'Brunch'];
+const MEAL_TAGS = ['lunches', 'dinners', 'breakfasts', 'brunches'];
 
 const entries = await getCollection('recipes');
-const allRecipes = entries.map((x) => recipeEntryToRecipe(x));
+const allRecipes = entries.map((x) => x.data as Recipe);
 
 const NEW_RECIPES_TO_SHOW = 6;
 
 function getNewRecipes(recipes: Recipe[]): Recipe[] {
 	return orderBy(recipes, (x) => -x.createdAt).slice(0, NEW_RECIPES_TO_SHOW);
-}
-
-// Recipes under 30 minutes
-function getQuickRecipes(recipes: Recipe[]) {
-	return orderBy(
-		recipes
-			.filter((x) => (x.time ?? Infinity) <= 30)
-			.filter((x) => intersection(x.tags, MEAL_TAGS).length > 0),
-		(x) => x.time
-	);
-}
-
-function getCuisines(recipes: Recipe[]) {
-	const allCuisines = recipes
-		.flatMap((x) => x.cuisines)
-		.filter((x) => x !== 'Klatzlandian');
-	return orderBy(Object.entries(countBy(allCuisines)), (x) => -x[1]);
 }
 
 function getMeals(recipes: Recipe[]) {
@@ -43,10 +24,20 @@ function getMeals(recipes: Recipe[]) {
 	return orderBy(Object.entries(countBy(allTags)), (x) => -x[1]);
 }
 
+function getCuisines(recipes: Recipe[]) {
+	const allTags = recipes
+		.flatMap((x) => x.tags)
+		.filter((x) => x.endsWith('-cuisine'));
+	return orderBy(Object.entries(countBy(allTags)), (x) => -x[1]);
+}
+
 function getTags(recipes: Recipe[]) {
 	const allTags = recipes
 		.flatMap((x) => x.tags)
-		.filter((x) => MEAL_TAGS.includes(x) === false);
+		.filter(
+			// Skip tags that are rendered separately
+			(x) => MEAL_TAGS.includes(x) === false && x.endsWith('-cuisine') === false
+		);
 	return orderBy(Object.entries(countBy(allTags)), (x) => -x[1]);
 }
 ---
@@ -57,9 +48,8 @@ function getTags(recipes: Recipe[]) {
 	component={MainPage}
 	props={{
 		newRecipes: getNewRecipes(allRecipes),
-		quickRecipes: getQuickRecipes(allRecipes),
-		cuisines: getCuisines(allRecipes),
 		meals: getMeals(allRecipes),
+		cuisines: getCuisines(allRecipes),
 		tags: getTags(allRecipes),
 	}}
 />

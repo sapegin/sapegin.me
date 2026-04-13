@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import type { AnchorHTMLAttributes } from 'react';
+import type { ComponentProps } from 'react';
 
-type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
+type Props = ComponentProps<'a'> & {
 	isCurrent?: boolean;
 };
 
@@ -10,24 +10,17 @@ export function MenuLink({ isCurrent, className, children, ...props }: Props) {
 		<a
 			className={clsx(
 				`
-      m-[calc(0.25rem+2px)] rounded-none border-0 border-solid border-accent
-      bg-background p-2 font-ui text-base/heading font-normal tracking-menu
-      text-accent uppercase no-underline transition-all
+      p-2 typo-menu text-accent no-underline transition-all
       duration-(--duration-hover) ease-hover
+      hover:bg-accent hover:text-background
     `,
 				isCurrent
 					? `
-       my-0 border-2 font-bold shadow-menu
-       hover:bg-accent hover:text-background
+       border-2 border-accent font-bold shadow-menu
        focus-visible:bg-accent focus-visible:text-background
        focus-visible:outline-0
      `
-					: `
-       hover:cursor-pointer hover:border-b-2
-       focus-visible:rounded-[0.15em] focus-visible:border-0
-       focus-visible:outline-[3px] focus-visible:outline-offset-0
-       focus-visible:outline-accent
-     `,
+					: `rounded-normal focus-outline`,
 				className
 			)}
 			{...props}

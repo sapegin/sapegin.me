@@ -1,16 +1,5 @@
 import richtypo from 'richtypo';
-import rules, {
-	abbrs,
-	dashesBasic,
-	definitions,
-	ellipses,
-	numberOrdinals,
-	numberUnits,
-	orphans,
-	prepositions,
-	quotes,
-	shortWords,
-} from 'richtypo/rules/en';
+import rules, { definitions, numberOrdinals } from 'richtypo/rules/en';
 
 const { thinspace } = definitions;
 
@@ -28,6 +17,14 @@ const dimensions = (text: string) =>
 const apostrophes = (text: string) =>
 	text.replaceAll(/([a-z])'([a-z])/g, '$1’$2');
 
+const fractions = (text: string) =>
+	text
+		.replaceAll('1/2', '½')
+		.replaceAll('1/3', '⅓')
+		.replaceAll('2/3', '⅔')
+		.replaceAll('1/4', '¼')
+		.replaceAll('3/4', '¾');
+
 export const typo = (text: MaybeText) =>
 	richtypo(
 		[
@@ -37,29 +34,7 @@ export const typo = (text: MaybeText) =>
 			dimensions,
 			numberOrdinals,
 			apostrophes,
-		],
-		text ?? ''
-	);
-
-export const typoLite = (text: MaybeText) =>
-	richtypo(
-		[
-			// Common rules
-			shortWords,
-			prepositions,
-			orphans,
-			abbrs,
-			dashesBasic,
-			ellipses,
-			numberUnits,
-			// English rules
-			quotes,
-			// Custom rules
-			degreeSigns,
-			dimensions,
-			numberRanges,
-			numberOrdinals,
-			apostrophes,
+			fractions,
 		],
 		text ?? ''
 	);

@@ -1,5 +1,4 @@
-import clsx from 'clsx';
-import Group from 'react-group';
+import { Group } from '@shared/packages/tamia/components/Group';
 import { useCoffeeScale } from '../hooks/useCoffeeScale';
 import {
 	GRAMS_IN_TABLESPOON_COFFEE_BEANS,
@@ -70,27 +69,6 @@ const getWaitText = (step: Step) =>
 		</>
 	) : null;
 
-const stepCls = (pause: boolean) =>
-	clsx(
-		'relative mb-4 list-none pl-[1.1rem] [counter-increment:steps-counter]',
-		`
-    before:absolute before:top-[0.25em] before:-left-2 before:size-6
-    before:rounded-full before:text-center before:font-ui before:text-xs
-    before:font-bold before:text-background
-    before:content-[counter(steps-counter)]
-  `,
-		pause
-			? `
-     not-last:mb-12
-     before:bg-moon
-     not-last:after:absolute not-last:after:right-4 not-last:after:-bottom-10
-     not-last:after:left-0 not-last:after:text-center not-last:after:text-lg
-     not-last:after:tracking-[0.75em] not-last:after:text-secondary
-     not-last:after:content-["···"]
-   `
-			: 'before:bg-accent'
-	);
-
 export function CoffeeRecipe({ recipe }: Props) {
 	const { isScalingEnabled, currentAmount, handleLess, handleMore } =
 		useCoffeeScale(recipe);
@@ -104,34 +82,32 @@ export function CoffeeRecipe({ recipe }: Props) {
 	const g = getCoffeeInGrams(recipe.ratio, currentAmount);
 	return (
 		<div className="flex flex-col gap-4">
-			<div className="flex flex-col gap-8">
+			<div className="recipe-steps flex flex-col gap-8">
 				<CoffeeRecipeMeta coffeeAmount={g} waterAmount={currentAmount}>
 					{isScalingEnabled && (
 						<RecipeScale onLess={handleLess} onMore={handleMore} />
 					)}
 				</CoffeeRecipeMeta>
-				<ol className="ml-[0.35rem] flex max-w-140 flex-col gap-2">
-					<li className={stepCls(false)}>
-						<div className="flex flex-col gap-2">
-							<TextTypo className="typo-body">
-								{recipe.temperature === 100 ? (
-									<>Boil water.</>
-								) : (
-									<>
-										Heat water to{' '}
-										<TextTypo as="b">{`${recipe.temperature}C`}</TextTypo>.
-									</>
-								)}
-							</TextTypo>
-							{recipe.temperature < 100 && (
-								<TextTypo className="typo-body">
-									(If your kettle doesn&apos;t have a temperature setting, let
-									the water cool down for 30 seconds before brewing coffee.)
-								</TextTypo>
+				<ol className="flex max-w-140 flex-col gap-2">
+					<li className="flex flex-col gap-2">
+						<TextTypo className="typo-body">
+							{recipe.temperature === 100 ? (
+								<>Boil water.</>
+							) : (
+								<>
+									Heat water to{' '}
+									<TextTypo as="b">{`${recipe.temperature}C`}</TextTypo>.
+								</>
 							)}
-						</div>
+						</TextTypo>
+						{recipe.temperature < 100 && (
+							<TextTypo className="typo-body">
+								(If your kettle doesn&apos;t have a temperature setting, let the
+								water cool down for 30 seconds before brewing coffee.)
+							</TextTypo>
+						)}
 					</li>
-					<li className={stepCls(false)}>
+					<li className="flex flex-col gap-2">
 						<TextTypo className="typo-body">
 							Grind <b>{g} g</b> of coffee ({recipe.grind}).
 						</TextTypo>
@@ -141,7 +117,7 @@ export function CoffeeRecipe({ recipe }: Props) {
 						</TextTypo>
 					</li>
 					{steps.map((step, i) => (
-						<li key={i} className={stepCls((step.time ?? 0) > 30)}>
+						<li key={i}>
 							<TextTypo className="typo-body">
 								<Group>
 									{getStepText(step, recipe, currentAmount)}
@@ -150,7 +126,7 @@ export function CoffeeRecipe({ recipe }: Props) {
 							</TextTypo>
 						</li>
 					))}
-					<li className={stepCls(false)}>
+					<li>
 						<TextTypo className="typo-body">Enjoy your coffee! ☕️</TextTypo>
 					</li>
 				</ol>

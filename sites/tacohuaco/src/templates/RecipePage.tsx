@@ -1,5 +1,4 @@
 import { type ReactNode } from 'react';
-import { HygraphImage } from '../components/HygraphImage';
 import { Markdown } from '../components/Markdown';
 import { RecipeList } from '../components/RecipeList';
 import { RecipeMeta } from '../components/RecipeMeta';
@@ -15,7 +14,17 @@ type Props = Recipe & {
 };
 
 export function RecipePage(props: Props) {
-	const { url, images, keywords, title, titleEnglish, description, madeWithRecipes, relatedRecipes, children } = props;
+	const {
+		url,
+		imageUrl,
+		keywords,
+		title,
+		titleEnglish,
+		description,
+		madeWithRecipes,
+		relatedRecipes,
+		children,
+	} = props;
 	return (
 		<Page url={url}>
 			<main className="flex flex-col gap-16">
@@ -23,7 +32,9 @@ export function RecipePage(props: Props) {
 					<div className="flex flex-col gap-4">
 						<div className="flex flex-col gap-1">
 							<h1 className="heading-1">{title}</h1>
-							{titleEnglish && <p className="font-body text-text italic">{titleEnglish}</p>}
+							{titleEnglish && (
+								<p className="font-body text-text italic">{titleEnglish}</p>
+							)}
 						</div>
 						<RecipeMeta {...props} />
 					</div>
@@ -32,17 +43,10 @@ export function RecipePage(props: Props) {
 							<Markdown text={description} forceBlock />
 						</TextContent>
 					)}
-					{keywords.length > 0 && <span className="sr-only">Keywords: {keywords.join(', ')}</span>}
-					{images.length > 0 && (
-						<HygraphImage
-							handle={images[0].handle}
-							alt=""
-							width={1026}
-							height={1026}
-							intrinsicWidth={images[0].width}
-							intrinsicHeight={images[0].height}
-						/>
+					{keywords.length > 0 && (
+						<span className="sr-only">Keywords: {keywords.join(', ')}</span>
 					)}
+					{imageUrl && <img src={imageUrl} alt="" />}
 					{children}
 					{madeWithRecipes.length > 0 && (
 						<div className="flex flex-col gap-4">
@@ -53,7 +57,9 @@ export function RecipePage(props: Props) {
 				</div>
 				{relatedRecipes.length > 0 && (
 					<div className="flex flex-col gap-4">
-						<h2 className="heading-2">More recipes like {title.toLowerCase()}</h2>
+						<h2 className="heading-2">
+							More recipes like {title.toLowerCase()}
+						</h2>
 						<RecipeList recipes={relatedRecipes} />
 					</div>
 				)}

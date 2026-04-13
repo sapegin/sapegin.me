@@ -21,7 +21,7 @@ export function TagsLinks({ tags }: Props) {
 						className="block w-fit quoted-link"
 					>
 						<span className="flex flex-row gap-2">
-							<u>{formatTagName(tag)}</u>
+							<u>{formatTagName(tag.replace('-cuisine', ''))}</u>
 							<span className="text-secondary">{count}</span>
 						</span>
 					</a>

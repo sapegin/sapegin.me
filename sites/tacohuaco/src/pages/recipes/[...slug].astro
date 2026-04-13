@@ -1,15 +1,11 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 import intersection from 'lodash/intersection';
 import sortBy from 'lodash/sortBy';
 import { RecipeBody } from '../../components/RecipeBody';
 import Layout from '../../layouts/Layout.astro';
 import { RecipePage } from '../../templates/RecipePage';
 import type { Recipe, RecipeFragment } from '../../types/Recipe';
-import { recipeEntryToRecipe } from '../../util/recipeEntryToRecipe';
-
-type Entry = CollectionEntry<'recipes'>;
-type Props = Entry;
 
 export async function getStaticPaths() {
 	const entries = await getCollection('recipes');
@@ -19,22 +15,15 @@ export async function getStaticPaths() {
 	}));
 }
 
-function filterGenericCuisines(cuisines: Recipe['cuisines']) {
-	return cuisines.filter((x) => x !== 'Klatzlandian');
-}
-
-function getMadeWithRecipes(
-	allRecipes: RecipeFragment[],
-	recipes: Pick<Recipe, 'slug'>[]
-) {
+function getMadeWithRecipes(allRecipes: RecipeFragment[], slugs: string[]) {
 	return allRecipes.filter((recipe) =>
-		recipes.find((x) => x.slug === recipe.slug)
+		slugs.find((slug) => slug === recipe.slug)
 	);
 }
 
 function getRelatedRecipes(
 	allRecipes: RecipeFragment[],
-	{ slug, cuisines, tags }: Pick<Recipe, 'slug' | 'cuisines' | 'tags'>
+	{ slug, tags }: Pick<Recipe, 'slug' | 'tags'>
 ): RecipeFragment[] {
 	const filteredRecipes = allRecipes.filter((recipe) => {
 		// Don't show the same recipe
@@ -43,34 +32,24 @@ function getRelatedRecipes(
 		}
 		// Show foundation recipes and all other recipes separately
 		if (
-			tags.includes('Foundation')
-				? recipe.tags.includes('Foundation') === false
-				: recipe.tags.includes('Foundation')
+			tags.includes('foundation')
+				? recipe.tags.includes('foundation') === false
+				: recipe.tags.includes('foundation')
 		) {
 			return false;
 		}
 		return true;
 	});
 
-	// Filter out Klatzlandian recipes
-	const filteredCuisines = filterGenericCuisines(cuisines);
-
-	// Calculate weights
 	const weightedRecipes: [RecipeFragment, number][] = filteredRecipes.map(
 		(recipe) => {
 			const tagsWeight = intersection(recipe.tags, tags).length * 10;
-			const cuisineWeight = intersection(
-				filterGenericCuisines(recipe.cuisines),
-				filteredCuisines
-			).length;
-			return [recipe, tagsWeight + cuisineWeight];
+			return [recipe, tagsWeight];
 		}
 	);
 
-	// Sort by weight
 	const sortedRecipes = sortBy(weightedRecipes, (x) => -x[1]);
 
-	// Discard recipes with 0 weight and return 6 top recipes
 	return sortedRecipes
 		.filter(([, weight]) => weight > 0)
 		.map(([recipe]) => recipe)
@@ -78,12 +57,12 @@ function getRelatedRecipes(
 }
 
 const entry = Astro.props;
-const recipe = recipeEntryToRecipe(entry);
+const recipe = entry.data as Recipe;
 const url = `/recipes/${recipe.slug}/`;
 
 const entries = await getCollection('recipes');
-const allRecipes = entries.map((x) => recipeEntryToRecipe(x));
-const madeWithRecipes = getMadeWithRecipes(allRecipes, recipe.recipes);
+const allRecipes = entries.map((x) => x.data as RecipeFragment);
+const madeWithRecipes = getMadeWithRecipes(allRecipes, recipe.usedBy);
 const relatedRecipes = getRelatedRecipes(allRecipes, recipe);
 ---
 
@@ -92,7 +71,7 @@ const relatedRecipes = getRelatedRecipes(allRecipes, recipe);
 	title={recipe.title}
 	pageTitle={`${recipe.title} recipe by Tacohuaco`}
 	description={recipe.description}
-	hygraphImageHandle={recipe.images?.[0]?.handle}
+	image={recipe.thumbnailUrl}
 >
 	<RecipePage
 		url={url}
@@ -100,6 +79,6 @@ const relatedRecipes = getRelatedRecipes(allRecipes, recipe);
 		relatedRecipes={relatedRecipes}
 		{...recipe}
 	>
-		<RecipeBody {...recipe} client:visible />
+		<RecipeBody {...recipe} />
 	</RecipePage>
 </Layout>

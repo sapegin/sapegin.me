@@ -1,8 +1,7 @@
 import { useCombobox } from 'downshift';
 import { matchSorter } from 'match-sorter';
-import { type SubmitEventHandler, useEffect, useState } from 'react';
+import { type SubmitEventHandler, useSyncExternalStore } from 'react';
 import type { AutocompleteItem } from '../hooks/useSearch';
-import { HygraphImage } from './HygraphImage';
 import { Input } from './Input';
 
 const MAX_ITEMS_TO_SHOW = 12;
@@ -44,13 +43,11 @@ function ItemContainer({
 }
 
 export function SearchForm({ items, value, onChange }: Props) {
-	const [isEnabled, setIsEnabled] = useState(false);
-	const isBrowser = Boolean(
-		typeof window !== 'undefined' && window.document.createElement
+	const isEnabled = useSyncExternalStore(
+		() => () => {},
+		() => true,
+		() => false
 	);
-	useEffect(() => {
-		setIsEnabled(isBrowser);
-	}, [isBrowser]);
 	const itemsToShow = getItemsToShow(items, value);
 	const {
 		getLabelProps,
@@ -114,16 +111,12 @@ export function SearchForm({ items, value, onChange }: Props) {
 							const hl = highlightedIndex === index;
 							const ip = getItemProps({ item, index });
 							if (item.type === 'recipe' && item.recipe) {
-								const hasImg = item.recipe.images.length > 0;
 								return (
 									<ItemContainer key={item.value} isHighlighted={hl} {...ip}>
-										{hasImg && (
+										{item.recipe.thumbnailUrl && (
 											<div className="size-9 shrink-0 bg-light">
-												<HygraphImage
-													handle={item.recipe.images[0].handle}
-													width={36}
-													height={36}
-													quality={30}
+												<img
+													src={item.recipe.thumbnailUrl}
 													alt=""
 													loading="lazy"
 													className="size-full object-cover"

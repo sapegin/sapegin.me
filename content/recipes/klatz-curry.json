@@ -1,263 +1,28 @@
 {
-  "createdAt": "2023-10-03T16:26:04.675Z",
-  "cuisines": [
-    "Klatzlandian",
-    "Vietnamese"
-  ],
-  "description": "This stew was inspired by the “golden poularde” dish from Umami in Berlin but significantly simplified for easy cooking at home. It has the main ingredients of the original dish: chicken, pumpkins, potatoes, carrots, and coconut milk curry. The main difference is the chicken: instead of crispy breaded chicken we use shredded boiled chicken breast because we usually buy a whole chicken and cook the body in water for soups and we have the cooked meat ready, we dropped the sweet potatoes because we’re not fans, and we dropped the salad and the rice because it’s too much trouble to make them on a regular work day. This is a perfect autumn recipe!",
-  "favorite": true,
-  "ingredients": [
-    {
-      "name": "",
-      "ingredients": [
-        [
-          {
-            "name": "chicken breast",
-            "modifier": "whole",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "comment": "boiled",
-            "kind": 2,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "onion",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "chile",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "potato",
-            "modifier": "large",
-            "minAmount": 4,
-            "maxAmount": 4,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "carrot",
-            "minAmount": 3,
-            "maxAmount": 3,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "pumpkin",
-            "modifier": "small",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": [
-              9,
-              10,
-              11,
-              12
-            ]
-          }
-        ],
-        [
-          {
-            "name": "coconut milk",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "unit": "can",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "cinnamon",
-            "modifier": "ground",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "unit": "teaspoon",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "curry powder",
-            "minAmount": 0.5,
-            "maxAmount": 0.5,
-            "unit": "teaspoon",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "nutmeg",
-            "modifier": "ground",
-            "minAmount": 0.5,
-            "maxAmount": 0.5,
-            "unit": "teaspoon",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "salt",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "olive oil",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ]
-      ]
-    }
-  ],
-  "keywords": [],
-  "notes": [
-    "Feel free to serve it with rice if you want to bother cooking it — won’t harm."
-  ],
-  "overnight": false,
   "slug": "klatz-curry",
-  "steps": [
-    {
-      "name": "",
-      "steps": [
-        {
-          "text": "Prepare the vegetables. **Onion:** peel, halve, and cut it into 1/2 cm slices. **Chili:** halve, remove the seeds, and thinly slice. **Potatoes and carrots:** peel if needed, and cut into large chunks. **Pumpkin:** peel, remove the seeds, and cut into medium-large chunks.",
-          "pause": false
-        },
-        {
-          "text": "Cover the bottom of a dutch oven with olive oil, and start warming it on medium heat.",
-          "pause": false
-        },
-        {
-          "text": "Sauté onion and chili in the dutch oven with a bit of salt, for 2–3 minutes, until transparent.",
-          "pause": false
-        },
-        {
-          "text": "Add all the vegetables, increase the heat to medium-high, and cook until the vegetables soften a bit.",
-          "pause": false
-        },
-        {
-          "text": "While the vegetables are cooking, shred the chicken.",
-          "pause": false
-        },
-        {
-          "text": "Add the chicken, and coconut milk, add <Ingredient name=\"cinnamon\" modifier=\"ground\" />, <Ingredient name=\"curry powder\"  />, <Ingredient name=\"nutmeg\" modifier=\"ground\" />; and stir thoroughly.",
-          "pause": false
-        },
-        {
-          "text": "Add enough boiled water to cover about 2/3 of the height of the vegetables.",
-          "pause": false
-        },
-        {
-          "text": "Cook covered until the vegetables are very soft.",
-          "pause": false
-        },
-        {
-          "text": "Add more salt if necessary.",
-          "pause": false
-        }
-      ]
-    }
-  ],
-  "tags": [
-    "Warming",
-    "Crowd",
-    "Dinner",
-    "DutchOven",
-    "Lunch",
-    "OnePot",
-    "Stew"
-  ],
-  "time": 40,
+  "createdAt": "2023-10-03T00:00:00.000Z",
   "title": "Klatz curry",
-  "tools": [
-    "dutch oven or medium-sized pot"
+  "tags": [
+    "air-fryer",
+    "crowd",
+    "dinners",
+    "dutch-oven",
+    "lunches",
+    "stews",
+    "vietnamese-cuisine",
+    "warming",
+    "braising",
+    "one-pot"
   ],
-  "yields": {
-    "amount": 6,
-    "unit": "portion"
-  },
-  "images": [
-    {
-      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/kievMTL0QBqSRRDICXYg",
-      "handle": "kievMTL0QBqSRRDICXYg",
-      "width": 4950,
-      "height": 4160
-    }
-  ],
-  "subrecipes": [],
-  "recipes": [],
-  "seasons": [
-    9,
-    10,
-    11,
-    12
-  ],
-  "chart": [],
-  "tips": [],
-  "warnings": [],
-  "vegan": false,
-  "vegetarian": false,
-  "glutenFree": true,
-  "lowGluten": false,
-  "dairyFree": true,
-  "noAddedSugar": true
+  "description": "This stew was inspired by the “golden poularde” dish from Umami in Berlin but significantly simplified for easy cooking at home. It has the main ingredients of the original dish: chicken, pumpkins, potatoes, carrots, rice, and coconut milk curry. The main difference is the chicken: instead of crispy breaded chicken breast we use braised chicken legs so it can be cooked in a single pot, we dropped the sweet potatoes because we’re not fans, and we dropped the salad because it’s too much trouble to make them on a regular work day. This is a perfect autumn recipe!",
+  "imageUrl": "/images/recipes/klatz-curry.avif",
+  "thumbnailUrl": "/images/recipes/klatz-curry_thumb.avif",
+  "ingredients": "- 4 chicken legs\n- 1 kg potatoes\n- 4 carrots\n- 1 butternut squash\n- 1 onion\n- 1 fresh chile\n- 4 cloves garlic\n- 3 slices fresh ginger\n- 1 can coconut milk\n- 2 whole cardamom pods\n- 1 teaspoon curry powder\n- salt \n- olive oil\n- cooked rice",
+  "steps": "1. Prepare the vegetables:\n  - **Onion:** peel, halve, and cut it into 1/2 cm slices. **Garlic**: smash, peel, and roughly chop. **Chile:** halve, remove the seeds, and thinly slice. **Ginger:** peel and slice into 1/4 cm slices.\n  - **Potatoes and carrots:** peel if needed, and cut into large chunks. **Pumpkin:** peel, remove the seeds, and cut into medium-large chunks.\n2. Rinse the chicken in cold water. Separate the thighs from drumsticks.\n3. Cover the bottom of the Dutch oven with olive oil, and heat it on medium-high heat.\n4. Place the chicken skin side down in the Dutch oven, sprinkle with salt, and cook until the skin is brown and crispy, for 10–15 minutes.\n5. Flip the chicken, add onion, garlic, chile, and ginger. Cook for 2–3 minutes, until the onion is transparent.\n6. Add the coconut milk, add 2 whole cardamom pods, 1 teaspoon curry powder, stir thoroughly, and cook covered for 20 minutes.\n7. Add the rest of the vegetables, add enough boiling water to cover about 2/3 of the height of the vegetables, and cook covered until the vegetables are very soft.\n8. Add more salt if necessary.\n9. Serve with a portion of rice on the side.",
+  "keywords": [],
+  "overnight": false,
+  "time": "120 minutes",
+  "tools": "- Dutch oven or medium-sized pot",
+  "yields": "8 portions",
+  "usedBy": []
 }

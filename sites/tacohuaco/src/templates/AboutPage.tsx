@@ -9,7 +9,14 @@ interface Props {
 
 export function AboutPage({ url, children }: Props) {
 	return (
-		<PageWithTitle url={url} title={<>About Tacohuaco <span aria-hidden="true">🌮</span></>}>
+		<PageWithTitle
+			url={url}
+			title={
+				<>
+					About Tacohuaco <span aria-hidden="true">🌮</span>
+				</>
+			}
+		>
 			<TextContent>{children}</TextContent>
 		</PageWithTitle>
 	);

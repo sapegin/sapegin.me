@@ -1,0 +1,26 @@
+{
+  "slug": "potato-hash",
+  "createdAt": "2022-10-04T00:00:00.000Z",
+  "title": "Potato hash",
+  "tags": [
+    "american-cuisine",
+    "breakfasts",
+    "brunches",
+    "potatoes",
+    "spicy",
+    "warming",
+    "eggs"
+  ],
+  "description": "This recipe takes quite a lot of time to prepare, and works best for cold rainy Sundays, when you don’t want to go out anyway but will appreciate a nice filling and warming brunch to give you enough strength to survive another day on this hostile planet.",
+  "imageUrl": "/images/recipes/potato-hash.avif",
+  "thumbnailUrl": "/images/recipes/potato-hash_thumb.avif",
+  "ingredients": "- 400 g potatoes\n- bacon or chorizo\n- 1 onion\n- 3 cloves garlic\n- 1 fresh chile\n- 1 bell pepper\n- 3 eggs\n- olive oil\n- salt\n- freshly ground black pepper",
+  "steps": "1. Cut the potatoes into 2 cm cubes, mix with a bit of salt and olive oil.\n2. Bake the potatoes in air fryer at ~200C for 12–18 minutes until lightly golden (shake halfway through).\n3. While potatoes are cooking, cut bacon or chorizo into 1/2 cm cubes.\n4. Prepare the vegetables:\n\t- **Onion:** peel, and cut into thin slices. **Garlic:** peel, and roughly chop. **Chile:** halve lengthwise, remove the seeds, and thinly slice.\n\t- **Bell pepper:** cut into 1x3 cm strips.\n5. Warm up a large skillet on medium-high heat, and fry bacon or chorizo until it starts to crisp, stirring occasionally.\n6. Reduce the heat to medium, add a bit of olive oil (if the bacon or chorizo haven’t released enough), then add the onions, and garlic. Sauté until the onions are transparent.\n7. Add bell peppers, and cook for a few minutes.\n\t1. Add the baked potatoes, mix everything, and cook for a few minutes.\n8. Push everything to the sides of the skillet to expose the skillet’s bottom, and break the eggs into the holes, season the eggs with salt and black pepper, and cook until the whites set.",
+  "keywords": [],
+  "notes": "Feel free to skip meat or even most ingredients except potatoes and eggs — it will still be amazing.",
+  "overnight": false,
+  "time": "90 minutes",
+  "tools": "- air fryer",
+  "yields": "3 portions",
+  "usedBy": []
+}

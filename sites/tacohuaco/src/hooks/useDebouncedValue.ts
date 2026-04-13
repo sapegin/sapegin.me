@@ -1,4 +1,4 @@
-import { useEffect, useReducer,useRef } from 'react';
+import { useEffect, useReducer, useRef } from 'react';
 
 /**
  * Debounces the provided value in render

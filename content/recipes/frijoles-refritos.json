@@ -1,164 +1,23 @@
 {
-  "createdAt": "2023-03-30T17:30:57.686Z",
-  "cuisines": [
-    "Mexican"
-  ],
-  "description": "Frijoles are probably a staple of Mexican society (the same way the baguette is a staple of French society and the toilet paper — of German)! They are used as a side dish in many (like really many) Mexican dishes, they can also be used as a main course in some other presentations. The frijoles refritos (refried beans) is one of our favorites because you can use it as a topping for your tacos, lonches, quesadillas and so on, as a dip with totopos (tortilla chips) or as a side in a (spicy) dish to complement it.",
-  "favorite": false,
-  "ingredients": [
-    {
-      "name": "",
-      "ingredients": [
-        [
-          {
-            "name": "bean",
-            "minAmount": 200,
-            "maxAmount": 200,
-            "unit": "g",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "chile",
-            "modifier": "serrano",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "salt",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "olive oil",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ]
-      ]
-    }
-  ],
-  "keywords": [
-    ""
-  ],
-  "notes": [
-    "The use of chili to prepare frijoles refritos is optional, it was the way of Margarita’s grandma. "
-  ],
-  "overnight": true,
   "slug": "frijoles-refritos",
-  "steps": [
-    {
-      "name": "",
-      "steps": [
-        {
-          "text": "Soak the beans overnight.",
-          "pause": true
-        },
-        {
-          "text": "Cook the beans in lightly salted water on medium heat until tender.",
-          "pause": false
-        },
-        {
-          "text": "Cool down the beans in their cooking liquid.",
-          "pause": false
-        },
-        {
-          "text": "Cook the chili on a skillet with a bit of olive oil on medium heat, until blistered on all sides.",
-          "pause": false
-        },
-        {
-          "text": "Add the beans to the skillet with a bit of their cooking liquid (keep about 1 cup separately), cover, and bring to a boil.",
-          "pause": false
-        },
-        {
-          "text": "Smash the beans and the chili using a masher until there are very few whole beans left.",
-          "pause": false
-        },
-        {
-          "text": "Reduce or add more liquid to achieve the desired consistency.",
-          "pause": false
-        }
-      ]
-    }
-  ],
-  "tags": [
-    "Sauce",
-    "Dip",
-    "Foundation",
-    "Spicy"
-  ],
-  "time": 90,
+  "createdAt": "2023-03-30T00:00:00.000Z",
   "title": "Frijoles refritos",
-  "titleEnglish": "Refried beans",
-  "tools": [
-    "potato masher"
-  ],
-  "yields": {
-    "amount": 300,
-    "unit": "g"
-  },
-  "images": [
-    {
-      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/2XALuR90RueAINorMWt1",
-      "handle": "2XALuR90RueAINorMWt1",
-      "width": 4909,
-      "height": 4099
-    }
-  ],
-  "subrecipes": [],
-  "recipes": [
-    {
-      "slug": "cochinita-pibil-tacos",
-      "title": "Cochinita pibil tacos"
-    },
-    {
-      "slug": "burritos",
-      "title": "Burritos"
-    },
-    {
-      "slug": "donerritos",
-      "title": "Dönerritos"
-    },
-    {
-      "slug": "huevos-rancheros-en-sombrero",
-      "title": "Huevos rancheros en sombrero"
-    }
-  ],
-  "seasons": [],
-  "chart": [
-    {
-      "type": "Soak",
-      "value": "",
-      "overnight": true,
-      "covered": false
-    }
-  ],
-  "tips": [],
-  "warnings": [],
-  "vegan": true,
-  "vegetarian": true,
-  "glutenFree": true,
-  "lowGluten": false,
-  "dairyFree": true,
-  "noAddedSugar": true
+  "tags": ["dips", "foundation-recipes", "mexican-cuisine", "sauces", "spicy"],
+  "description": "Frijoles are probably a staple of Mexican society (the same way the baguette is a staple of French society and the toilet paper — of German)! They are used as a side dish in many (like really many) Mexican dishes, they can also be used as a main course in some other presentations. The frijoles refritos (refried beans) is one of our favorites because you can use it as a topping for your tacos, lonches, quesadillas and so on, as a dip with totopos (tortilla chips) or as a side in a (spicy) dish to complement it.",
+  "imageUrl": "/images/recipes/frijoles-refritos.avif",
+  "thumbnailUrl": "/images/recipes/frijoles-refritos_thumb.avif",
+  "ingredients": "- 200 g bean\n- 1 serrano chile\n- salt\n- olive oil",
+  "steps": "1. Soak the beans overnight.\n2. Cook the beans in lightly salted water on medium heat until tender.\n3. Cool down the beans in their cooking liquid.\n4. Cook the chile on a skillet with a bit of olive oil on medium heat, until blistered on all sides.\n5. Add the beans to the skillet with a bit of their cooking liquid (keep about 1 cup separately), cover, and bring to a boil.\n6. Smash the beans and the chile using a masher until there are very few whole beans left.\n7. Reduce or add more liquid to achieve the desired consistency.",
+  "keywords": [],
+  "notes": "The use of chile to prepare frijoles refritos is optional, it was the way of Margarita’s grandma.",
+  "overnight": true,
+  "time": "90 minutes",
+  "tools": "- potato masher",
+  "yields": "300 g",
+  "usedBy": [
+    "burritos",
+    "cochinita-pibil-tacos",
+    "donerritos",
+    "huevos-rancheros-en-sombrero"
+  ]
 }

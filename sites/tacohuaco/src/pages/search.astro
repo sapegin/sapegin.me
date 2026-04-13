@@ -3,13 +3,12 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { PageWithTitle } from '../templates/PageWithTitle';
 import { SearchPage } from '../templates/SearchPage';
+import type { RecipeFragment } from '../types/Recipe';
 
 const entries = await getCollection('recipes');
-const recipes = entries.map(({ data }) => ({
+const recipes: RecipeFragment[] = entries.map(({ data }) => ({
 	createdAt: data.createdAt,
-	cuisines: data.cuisines,
-	images: data.images,
-	ingredients: data.ingredients,
+	thumbnailUrl: data.thumbnailUrl,
 	keywords: data.keywords,
 	overnight: data.overnight,
 	slug: data.slug,

@@ -1,0 +1,16 @@
+{
+  "slug": "caprese-salad",
+  "createdAt": "2021-08-24T00:00:00.000Z",
+  "title": "Caprese salad",
+  "tags": ["cold", "italian-cuisine", "salads", "summer"],
+  "description": "This salad is ridiculously quick to make and is the best way to use big ass Valencian tomatoes when they’re in season. One tomato is usually enough to make two plates like this — they’re that huge. It’s fresh, juicy, and full of summer flavors.",
+  "imageUrl": "/images/recipes/caprese-salad.avif",
+  "thumbnailUrl": "/images/recipes/caprese-salad_thumb.avif",
+  "ingredients": "- 1-2 big meaty tomatoes\n- 250 g fresh Mozzarella cheese\n- olive oil\n- salt\n- coriander seeds\n- cumin seeds\n- freshly ground black pepper",
+  "steps": "1. Slice the tomatoes into 1/2 cm slices, and arrange them on a big plate.\n2. Sprinkle salt over tomatoes.\n3. Slice the Mozzarella into the same amount of slices as you have tomato slices (if you can), and put it on top of the tomatoes.\n4. Sprinkle with olive oil and freshly ground coriander seeds, cumin seeds, and black pepper.",
+  "keywords": [],
+  "overnight": false,
+  "time": "15 minutes",
+  "yields": "2 portions",
+  "usedBy": []
+}

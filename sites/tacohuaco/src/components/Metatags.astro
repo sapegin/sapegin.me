@@ -6,7 +6,6 @@ import {
 	SITE_TITLE,
 	SITE_URL,
 } from '../constants';
-import { getHygraphImageUrl } from '../util/getHygraphImageUrl';
 
 const TACO_SVG =
 	'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌮</text></svg>';
@@ -15,14 +14,14 @@ export type Props = {
 	title?: string;
 	url?: string;
 	description?: string;
-	hygraphImageHandle?: string;
+	image?: string;
 };
 
 const {
 	title = '',
 	url = '/',
 	description = SITE_DESCRIPTION,
-	hygraphImageHandle,
+	image,
 } = Astro.props;
 
 const descriptionText = removeMarkdown(description);
@@ -30,14 +29,7 @@ const descriptionText = removeMarkdown(description);
 const isArticle = url.startsWith('/recipes/');
 const canonicalUrl = `${SITE_URL}${url}`;
 
-const imageUrl = hygraphImageHandle
-	? getHygraphImageUrl(hygraphImageHandle, {
-			width: 1200,
-			height: 1200,
-			quality: 50,
-			webP: false,
-		})
-	: undefined;
+const imageUrl = image ? `${SITE_URL}${image}` : undefined;
 ---
 
 <meta charset="utf-8" />

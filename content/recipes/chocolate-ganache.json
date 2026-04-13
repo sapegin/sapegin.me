@@ -1,174 +1,18 @@
 {
-  "createdAt": "2022-01-17T13:30:19.293Z",
-  "cuisines": [
-    "French",
-    "Klatzlandian"
-  ],
-  "description": "This low-sugar chocolate coverture works well for covering your cake, as well as for inner layers. \n\nTry different versions by adjusting the amount of chocolate (if you want a harder and thicker version) or the amount of cream (for a softer and milder version). \n",
-  "favorite": false,
-  "ingredients": [
-    {
-      "name": "",
-      "ingredients": [
-        [
-          {
-            "name": "water",
-            "minAmount": 500,
-            "maxAmount": 500,
-            "unit": "ml",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "whipping cream",
-            "minAmount": 150,
-            "maxAmount": 150,
-            "unit": "g",
-            "kind": 1,
-            "hasGluten": false,
-            "hasDairy": true,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "chocolate",
-            "modifier": "dark",
-            "minAmount": 50,
-            "maxAmount": 50,
-            "unit": "g",
-            "comment": "80-85% cacao",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "chocolate",
-            "modifier": "mild",
-            "minAmount": 50,
-            "maxAmount": 50,
-            "unit": "g",
-            "comment": "50-70% cacao",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "butter",
-            "minAmount": 1,
-            "maxAmount": 1,
-            "unit": "teaspoon",
-            "comment": "optional",
-            "kind": 1,
-            "hasGluten": false,
-            "hasDairy": true,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ]
-      ]
-    }
-  ],
-  "keywords": [],
-  "notes": [
-    "If you want a sweeter version use only chocolate with 60% to 70% cacao content.",
-    "If during the process the chocolate gets its fat split, let it cool down completely, put it in the freezer for 5-10 min, afterward take it out and mix it very well using a spatula, then rewarm it again with steam until homogeneous.",
-    "For a softer and more liquid result (i.e. to use the ganache for filling) add more whipping cream.",
-    ""
-  ],
-  "overnight": false,
   "slug": "chocolate-ganache",
-  "steps": [
-    {
-      "name": "",
-      "steps": [
-        {
-          "text": "Fill a small pot with water, and put it on the stove on medium heat.",
-          "pause": false
-        },
-        {
-          "text": "Place the bowl on top of the pot, taking care that it doesn't touch the water — the idea is to warm up the bowl only with steam heat.",
-          "pause": false
-        },
-        {
-          "text": "Put 100 g of the whipping cream into the bowl, and wait until it gets warm (3-5 min).",
-          "pause": false
-        },
-        {
-          "text": "Lower the temperature and add the chocolate in pieces to the bowl, starting with 30 g of each, and mix using covering movements with the spatula until the chocolate is melted. **Important: make sure that the mixture doesn't get too hot or the fat of the chocolate will split. If you notice that it's getting too hot, then remove the bowl from the heat and wait until it cools down. You can also add a bit of cold whipping cream to cool down the mixture.**",
-          "pause": false
-        },
-        {
-          "text": "Add more chocolate and cream to achieve your desired balance of sweetness and strongness — try the mixture until you like the flavor. Keep stirring with the spatula to integrate the chocolate into the mixture.",
-          "pause": false
-        },
-        {
-          "text": "Remove the bowl from the heat and cool it down on a wet surface or in a larger bowl with cold water touching the surface of the bowl with chocolate mixture.",
-          "pause": false
-        },
-        {
-          "text": "To reach a brighter version of the chocolate add the teaspoon of butter in the final stage and mix it well.",
-          "pause": false
-        }
-      ]
-    }
-  ],
-  "tags": [
-    "Foundation",
-    "Icing"
-  ],
-  "time": 20,
+  "createdAt": "2022-01-17T00:00:00.000Z",
   "title": "Chocolate ganache",
-  "tools": [
-    "pot (at least 1-liter capacity)",
-    "metal bowl or glass heat resistant bowl same diameter as the pot",
-    "silicon spatula"
-  ],
-  "yields": {
-    "amount": 1,
-    "unit": "layer"
-  },
-  "images": [
-    {
-      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/lxWOKivxQr20fstrwz0u",
-      "handle": "lxWOKivxQr20fstrwz0u",
-      "width": 2173,
-      "height": 1449
-    }
-  ],
-  "subrecipes": [],
-  "recipes": [
-    {
-      "slug": "triple-layer-chocolate-cake",
-      "title": "Triple layer chocolate cake"
-    },
-    {
-      "slug": "chocolate-granola-bars",
-      "title": "Chocolate granola bars"
-    }
-  ],
-  "seasons": [],
-  "chart": [],
-  "tips": [],
-  "warnings": [],
-  "vegan": false,
-  "vegetarian": true,
-  "glutenFree": true,
-  "lowGluten": false,
-  "dairyFree": false,
-  "noAddedSugar": true
+  "tags": ["foundation-recipes", "french-cuisine", "icings"],
+  "description": "This low-sugar chocolate coverture works well for covering your cake, as well as for inner layers.\n\nTry different versions by adjusting the amount of chocolate (if you want a harder and thicker version) or the amount of cream (for a softer and milder version).",
+  "imageUrl": "/images/recipes/chocolate-ganache.avif",
+  "thumbnailUrl": "/images/recipes/chocolate-ganache_thumb.avif",
+  "ingredients": "- 500 ml water\n- 150 g whipping cream\n  *cold*\n- 50 g dark chocolate\n  *80-85% cacao*\n- 50 g mild chocolate\n  *50-70% cacao*\n- 1 teaspoon butter\n  *optional*",
+  "steps": "1. Fill a small pot with water, and put it on the stove on medium heat.\n2. Place the bowl on top of the pot, taking care that it doesn't touch the water — the idea is to warm up the bowl only with steam heat.\n3. Put 100 g of the whipping cream into the bowl, and wait until it gets warm (3-5 min).\n4. Lower the temperature and add the chocolate in pieces to the bowl, starting with 30 g of each, and mix using covering movements with the spatula until the chocolate is melted. **Important: make sure that the mixture doesn't get too hot or the fat of the chocolate will split. If you notice that it's getting too hot, then remove the bowl from the heat and wait until it cools down. You can also add a bit of cold whipping cream to cool down the mixture.**\n5. Add more chocolate and cream to achieve your desired balance of sweetness and strongness — try the mixture until you like the flavor. Keep stirring with the spatula to integrate the chocolate into the mixture.\n6. Remove the bowl from the heat and cool it down on a wet surface or in a larger bowl with cold water touching the surface of the bowl with chocolate mixture.\n7. To reach a brighter version of the chocolate add the teaspoon of butter in the final stage and mix it well.",
+  "keywords": [],
+  "notes": "If you want a sweeter version use only chocolate with 60% to 70% cacao content.\n\nIf during the process the chocolate gets its fat split, let it cool down completely, put it in the freezer for 5-10 min, afterward take it out and mix it very well using a spatula, then rewarm it again with steam until homogeneous.\n\nFor a softer and more liquid result (i.e. to use the ganache for filling) add more whipping cream.",
+  "overnight": false,
+  "time": "20 minutes",
+  "tools": "- pot (at least 1-liter capacity)\n- metal bowl or glass heat resistant bowl same diameter as the pot",
+  "yields": "1 layer",
+  "usedBy": ["chocolate-granola-bars", "triple-layer-chocolate-cake"]
 }

@@ -1,146 +1,24 @@
 {
-  "createdAt": "2022-09-20T14:57:46.233Z",
-  "cuisines": [
-    "Mexican"
-  ],
-  "description": "This sauce is one of Margarita’s favorites because it reminds her of her grandma’s way of eating always spicy.\n\nIt’s very simple to cook, lives forever in the fridge, and has the power to enhance the taste of almost any dish. \n\nJust be careful of the amount you add when eating — the level of spiciness is true Mexican!",
-  "favorite": false,
-  "ingredients": [
-    {
-      "name": "",
-      "ingredients": [
-        [
-          {
-            "name": "chile de árbol",
-            "minAmount": 8,
-            "maxAmount": 10,
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "garlic",
-            "minAmount": 2,
-            "maxAmount": 3,
-            "unit": "clove",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ],
-        [
-          {
-            "name": "salt",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ]
-      ]
-    }
-  ],
-  "keywords": [],
-  "notes": [
-    "If you don't have time to soak the chiles, cook them in water for 10-15 minutes, and let them rest for about 30 minutes.",
-    "To make the sauce spicier, add 2-3 morita chilies or 1-2 teaspoons of vinegar. "
-  ],
-  "overnight": false,
   "slug": "salsa-de-chile-de-arbol",
-  "steps": [
-    {
-      "name": "",
-      "steps": [
-        {
-          "text": "Remove the roots of the chiles.",
-          "pause": false
-        },
-        {
-          "text": "Soak the chiles in water (add just enough water to cover the chiles) for 2-3 hours.",
-          "pause": true
-        },
-        {
-          "text": "Peel the garlic.",
-          "pause": false
-        },
-        {
-          "text": "Put into a blender the chiles, garlic, salt, and about half of the chile water. Mix until all the ingredients are incorporated.",
-          "pause": false
-        },
-        {
-          "text": "Add more chile water if the sauce is too thick.",
-          "pause": false
-        },
-        {
-          "text": "Add more salt if needed.",
-          "pause": false
-        },
-        {
-          "text": "Optionally, pass the sauce through a strainer to remove the seeds and larger pieces of chiles.",
-          "pause": false
-        }
-      ]
-    }
-  ],
-  "tags": [
-    "Sauce",
-    "Spicy",
-    "Foundation",
-    "Salsa"
-  ],
-  "time": 10,
+  "createdAt": "2022-09-20T00:00:00.000Z",
   "title": "Salsa de chile de árbol",
-  "titleEnglish": "Chile de árbol sauce",
-  "tools": [
-    "blender"
+  "tags": [
+    "foundation-recipes",
+    "mexican-cuisine",
+    "salsas",
+    "sauces",
+    "spicy"
   ],
-  "yields": {
-    "amount": 200,
-    "unit": "ml"
-  },
-  "images": [
-    {
-      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/Y2N0pQcuT86a0mhgoABc",
-      "handle": "Y2N0pQcuT86a0mhgoABc",
-      "width": 6107,
-      "height": 3962
-    }
-  ],
-  "subrecipes": [],
-  "recipes": [
-    {
-      "slug": "pozole",
-      "title": "Pozole"
-    },
-    {
-      "slug": "tacos-dorados",
-      "title": "Tacos dorados"
-    }
-  ],
-  "seasons": [],
-  "chart": [
-    {
-      "type": "Soak",
-      "value": "2-3 hours",
-      "overnight": false,
-      "covered": true
-    }
-  ],
-  "tips": [
-    "The easiest way to peel garlic is to smash it: put a clove of garlic on a cutting board, put your chef’s knife on top of it so the blade side lays on the clove, and hit the side of the knife with your hand. Now you could peel the clove."
-  ],
-  "warnings": [],
-  "vegan": true,
-  "vegetarian": true,
-  "glutenFree": true,
-  "lowGluten": false,
-  "dairyFree": true,
-  "noAddedSugar": true
+  "description": "This sauce is one of Margarita’s favorites because it reminds her of her grandma’s way of eating always spicy.\n\nIt’s very simple to cook, lives forever in the fridge, and has the power to enhance the taste of almost any dish.\n\nJust be careful of the amount you add when eating — the level of spiciness is true Mexican!",
+  "imageUrl": "/images/recipes/salsa-de-chile-de-arbol.avif",
+  "thumbnailUrl": "/images/recipes/salsa-de-chile-de-arbol_thumb.avif",
+  "ingredients": "- 8-10 chiles de árbol\n- 2-3 cloves garlic\n- salt",
+  "steps": "1. Remove the roots of the chiles.\n2. Soak the chiles in water (add just enough water to cover the chiles) for 2-3 hours.\n3. Peel the garlic.\n4. Put into a blender the chiles, garlic, salt, and about half of the chile water. Mix until all the ingredients are incorporated.\n5. Add more chile water if the sauce is too thick.\n6. Add more salt if needed.\n7. Optionally, pass the sauce through a strainer to remove the seeds and larger pieces of chiles.",
+  "keywords": [],
+  "notes": "If you don’t have time to soak the chiles, cook them in water for 10-15 minutes, and let them rest for about 30 minutes.\n\nTo make the sauce spicier, add 2-3 morita chiles or 1-2 teaspoons of vinegar.",
+  "overnight": false,
+  "time": "10 minutes",
+  "tools": "- blender",
+  "yields": "200 ml",
+  "usedBy": ["pozole", "tacos-dorados"]
 }

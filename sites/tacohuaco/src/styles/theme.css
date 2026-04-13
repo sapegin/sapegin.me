@@ -20,17 +20,17 @@
 
 	/* Text sizes */
 	--text-root: 1.125em;
-	--text-lg: 1.3rem;
-	--text-xl: 1.7rem;
+	--text-lg: 1.1rem;
+	--text-xl: 1.3rem;
 	--text-2xl: 2.1rem;
 	--text-article: 1.1rem;
-	--text-ui: 1.1rem;
-	--text-heading-1: var(--text-2xl);
-	--text-heading-2: var(--text-xl);
-	--text-heading-3: var(--text-lg);
+
+	/* Font weights */
+	--font-weight-heading: 700;
+	--font-weight-ui: 700;
 
 	/* Letter spacings */
-	--tracking-menu: 0.15ex;
+	--tracking-uppercase: 0.15ex;
 
 	/* Spacing */
 	--spacing-list-margin: 1.2rem;
@@ -41,8 +41,8 @@
 
 	/* Shadows */
 	--shadow-popover: 0 6px 20px -2px hsla(0, 0%, 0%, 0.2);
-	--shadow-menu: 5px 5px 0 -2px var(--color-background),
-		5px 5px 0 var(--color-accent);
+	--shadow-menu:
+		5px 5px 0 -2px var(--color-background), 5px 5px 0 var(--color-accent);
 	--shadow-input: 5px 5px 0 var(--color-accent);
 	--shadow-heading: 2px 2px 0 var(--color-light);
 
@@ -51,6 +51,9 @@
 
 	/* Durations */
 	--duration-expand: 300ms;
+
+	/* Spacing */
+	--spacing-text-max-width: 52rem;
 }
 
 /**

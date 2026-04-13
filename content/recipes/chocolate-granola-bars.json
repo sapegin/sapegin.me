@@ -1,150 +1,17 @@
 {
-  "createdAt": "2022-08-24T09:16:14.188Z",
-  "cuisines": [
-    "Klatzlandian"
-  ],
-  "description": "This is a perfect sweet snack for a train journey, based on our favorite [Morning crunch granola](/recipes/morning-crunch-granola/). You’ll probably get all messy, so don’t forget to take a spoon or a fork, but it’s well worth it. The taste is amazing, and not too sweet. Keep an eye on it — it’s so much better than the bag of chips or a store-bought chocolate bar your neighbors may have, so they may try to steal the bars from you.",
-  "favorite": false,
-  "ingredients": [
-    {
-      "name": "",
-      "ingredients": [
-        [
-          {
-            "name": "chocolate ganache",
-            "kind": 1,
-            "hasGluten": false,
-            "hasDairy": true,
-            "hasSugar": false,
-            "seasons": [],
-            "subrecipeSlug": "chocolate-ganache"
-          }
-        ],
-        [
-          {
-            "name": "morning crunch granola",
-            "minAmount": 100,
-            "maxAmount": 100,
-            "unit": "g",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": [],
-            "subrecipeSlug": "morning-crunch-granola"
-          }
-        ],
-        [
-          {
-            "name": "dried pineapple",
-            "kind": 0,
-            "hasGluten": false,
-            "hasDairy": false,
-            "hasSugar": false,
-            "seasons": []
-          }
-        ]
-      ]
-    }
-  ],
-  "keywords": [
-    "muesli bars"
-  ],
-  "notes": [],
-  "overnight": false,
   "slug": "chocolate-granola-bars",
-  "steps": [
-    {
-      "name": "",
-      "steps": [
-        {
-          "text": "Cook the chocolate ganache, but add more chocolate and less cream to make it harder.",
-          "pause": false
-        },
-        {
-          "text": "Line a baking form with baking paper.",
-          "pause": false
-        },
-        {
-          "text": "Cut the dried pineapples into 1/2 cm pieces.",
-          "pause": false
-        },
-        {
-          "text": "Pour 3/4 of the chocolate ganache into the baking form.",
-          "pause": false
-        },
-        {
-          "text": "Sprinkle the granola over the chocolate ganache.",
-          "pause": false
-        },
-        {
-          "text": "Sprinkle the dried pineapples over the granola.",
-          "pause": false
-        },
-        {
-          "text": "Sprinkle the rest of the chocolate ganache over the granola and dried fruits.",
-          "pause": false
-        },
-        {
-          "text": "Refrigerate for at least 30 minutes.",
-          "pause": false
-        },
-        {
-          "text": "Remove from the baking form, and cut into equal pieces.",
-          "pause": false
-        }
-      ]
-    }
-  ],
-  "tags": [
-    "Picnic",
-    "Snack",
-    "Travel"
-  ],
-  "time": 30,
+  "createdAt": "2022-08-24T00:00:00.000Z",
   "title": "Chocolate granola bars",
-  "tools": [
-    "baking form",
-    "baking paper"
-  ],
-  "yields": {
-    "amount": 12,
-    "unit": "portion"
-  },
-  "images": [
-    {
-      "url": "https://eu-central-1.graphassets.com/Aeh74QOS5TIWHefSmr6nTz/PHjfmLxETcKgON888rKi",
-      "handle": "PHjfmLxETcKgON888rKi",
-      "width": 4032,
-      "height": 3024
-    }
-  ],
-  "subrecipes": [
-    {
-      "slug": "chocolate-ganache",
-      "title": "Chocolate ganache"
-    },
-    {
-      "slug": "morning-crunch-granola",
-      "title": "Morning crunch granola"
-    }
-  ],
-  "recipes": [],
-  "seasons": [],
-  "chart": [
-    {
-      "type": "Refrigerate",
-      "value": "30 minutes",
-      "overnight": false,
-      "covered": false
-    }
-  ],
-  "tips": [],
-  "warnings": [],
-  "vegan": false,
-  "vegetarian": true,
-  "glutenFree": true,
-  "lowGluten": false,
-  "dairyFree": false,
-  "noAddedSugar": true
+  "tags": ["picnics", "snacks", "travel"],
+  "description": "This is a perfect sweet snack for a train journey, based on our favorite granola. You’ll probably get all messy, so don’t forget to take a spoon or a fork, but it’s well worth it. The taste is amazing, and not too sweet. Keep an eye on it — it’s so much better than the bag of chips or a store-bought chocolate bar your neighbors may have, so they may try to steal the bars from you.",
+  "imageUrl": "/images/recipes/chocolate-granola-bars.avif",
+  "thumbnailUrl": "/images/recipes/chocolate-granola-bars_thumb.avif",
+  "ingredients": "- [Chocolate ganache](/recipes/chocolate-ganache/)\n- 100 g granola\n- dried pineapples",
+  "steps": "1. Cook the chocolate ganache, but add more chocolate and less cream to make it harder.\n2. Line a baking form with baking paper.\n3. Cut the dried pineapples into 1/2 cm pieces.\n4. Pour 3/4 of the chocolate ganache into the baking form.\n5. Sprinkle the granola over the chocolate ganache.\n6. Sprinkle the dried pineapples over the granola.\n7. Sprinkle the rest of the chocolate ganache over the granola and dried fruits.\n8. Refrigerate for at least 30 minutes.\n9. Remove from the baking form, and cut into equal pieces.",
+  "keywords": ["muesli bars"],
+  "overnight": false,
+  "time": "30 minutes",
+  "tools": "- baking form\n- baking paper",
+  "yields": "12 portions",
+  "usedBy": []
 }

@@ -1,7 +1,9 @@
 import { sentenceCase } from 'change-case';
 
 const EXCEPTIONS: Record<string, string> = {
-	NewYear: 'New Year',
+	'new-year': 'New Year',
+	'middle-eastern': 'Middle Eastern',
+	'middle-eastern-cuisine': 'Middle Eastern cuisine',
 };
 
 export function formatTagName(tag: string) {

@@ -28,6 +28,7 @@
     "posttest": "npm run format",
     "sync:sapegin": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts",
     "sync:morning": "node --experimental-strip-types scripts/sync-photos.ts",
+    "sync:tacohuaco": "node --experimental-strip-types scripts/tacohuaco/sync.ts",
     "sync": "npm run sync:sapegin && npm run sync:morning",
     "prepare": "husky"
   },
@@ -68,7 +69,6 @@
     "parse-ms": "4.0.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-group": "4.0.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.14.3",
     "remove-markdown": "0.6.3",
