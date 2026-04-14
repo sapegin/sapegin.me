@@ -12,7 +12,6 @@ import sharp from 'sharp';
 import { toKebabCase } from '../../shared/util/toKebabCase';
 import type { RecipeRaw } from '../../sites/tacohuaco/src/types/Recipe';
 
-// TODO: Only update files/images that are newer in the Vault
 // TODO: Delete removed from Vault recipes
 
 const VAULT_DIR = path.join(os.homedir(), 'murder', '🌮 Food');
@@ -35,6 +34,18 @@ interface NoteFrontmatter {
 	time?: string;
 	titleEnglish?: string;
 	yields?: string;
+}
+
+/**
+ * Returns true if srcPath is newer than destPath, or destPath doesn't exist.
+ */
+function isNewer(srcPath: string, destPath: string): boolean {
+	if (fs.existsSync(destPath) === false) {
+		return true;
+	}
+	const srcMtime = fs.statSync(srcPath).mtimeMs;
+	const destMtime = fs.statSync(destPath).mtimeMs;
+	return srcMtime > destMtime;
 }
 
 function toSlug(name: string) {
@@ -134,14 +145,20 @@ async function copyImages(markdown: string, slug: string) {
 			const destPath = path.join(IMAGES_OUTPUT_DIR, `${slug}.avif`);
 			const destThumbPath = path.join(IMAGES_OUTPUT_DIR, `${slug}_thumb.avif`);
 
-			// Copy the original large image (it already has the right size and format
-			// thanks to obsidian-update script)
-			fs.copyFileSync(srcPath, destPath);
+			if (isNewer(srcPath, destPath)) {
+				// Copy the original large image (it already has the right size and format
+				// thanks to obsidian-update script)
+				fs.copyFileSync(srcPath, destPath);
 
-			// Create a thumbnail
-			const originalImage = Buffer.from(fs.readFileSync(srcPath));
-			const pipeline = sharp(originalImage).resize({ width: THUMBNAIL_WIDTH });
-			await pipeline.avif({ quality: THUMBNAIL_QUALITY }).toFile(destThumbPath);
+				// Create a thumbnail
+				const originalImage = Buffer.from(fs.readFileSync(srcPath));
+				const pipeline = sharp(originalImage).resize({
+					width: THUMBNAIL_WIDTH,
+				});
+				await pipeline
+					.avif({ quality: THUMBNAIL_QUALITY })
+					.toFile(destThumbPath);
+			}
 
 			return {
 				imageUrl: `/images/recipes/${slug}.avif`,
@@ -218,6 +235,11 @@ for (const filePath of publishedRecipes) {
 
 	if (title === '') {
 		console.warn(`⚠️  o H1 title found in ${baseName}, skipping`);
+		continue;
+	}
+
+	const outputPath = path.join(OUTPUT_DIR, `${slug}.json`);
+	if (isNewer(filePath, outputPath) === false) {
 		continue;
 	}
 
