@@ -1,6 +1,6 @@
 ---
+import { toKebabCase } from '@shared/util/toKebabCase';
 import { getCollection } from 'astro:content';
-import kebabCase from 'lodash/kebabCase';
 import uniq from 'lodash/uniq';
 import Layout from '../../layouts/Layout.astro';
 import { RecipesPage } from '../../templates/RecipesPage';
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 	const entries = await getCollection('recipes');
 	const tags = uniq(entries.flatMap((x) => x.data.tags));
 	return tags.map((tag) => {
-		const slug = kebabCase(tag);
+		const slug = toKebabCase(tag);
 		return {
 			params: { slug },
 			props: {

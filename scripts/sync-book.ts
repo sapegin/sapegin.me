@@ -10,6 +10,7 @@ import path from 'node:path';
 import GithubSlugger from 'github-slugger';
 import matter from 'gray-matter';
 import _ from 'lodash';
+import { toKebabCase } from '../shared/util/toKebabCase.ts';
 import { upperFirst } from '../shared/util/upperFirst.ts';
 import { SITE_URL } from '../sites/sapegin.me/src/constants.ts';
 
@@ -345,7 +346,7 @@ for (const chapterFile of chapters) {
 	console.log(`[BOOK] 👉 ${chapterFile}`);
 
 	const filename = path.basename(chapterFile, '.md');
-	const slug = _.kebabCase(filename.replace(/^[\d]+_/, ''));
+	const slug = toKebabCase(filename.replace(/^[\d]+_/, ''));
 	const chapterContentsRaw = read(chapterFile);
 	const title = getTitle(stripIds(chapterContentsRaw));
 	const description = getDescription(chapterContentsRaw);

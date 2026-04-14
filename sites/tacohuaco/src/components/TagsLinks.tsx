@@ -1,4 +1,4 @@
-import { kebabCase } from 'change-case';
+import { toKebabCase } from '@shared/util/toKebabCase';
 import { formatTagName } from '../util/formatTagName';
 
 interface Props {
@@ -17,7 +17,7 @@ export function TagsLinks({ tags }: Props) {
 			{tags.map(([tag, count]) => (
 				<li key={tag} className="mb-3">
 					<a
-						href={`/tags/${kebabCase(tag)}/`}
+						href={`/tags/${toKebabCase(tag)}/`}
 						className="block w-fit quoted-link"
 					>
 						<span className="flex flex-row gap-2">

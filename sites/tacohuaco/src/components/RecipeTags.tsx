@@ -1,4 +1,4 @@
-import { kebabCase } from 'change-case';
+import { toKebabCase } from '@shared/util/toKebabCase';
 import { type ReactNode } from 'react';
 import { formatTagName } from '../util/formatTagName';
 import { Tag } from './Tag';
@@ -13,7 +13,7 @@ export function RecipeTags({ tags = [], children }: Props) {
 		<div className="flex flex-row flex-wrap gap-3">
 			{children}
 			{tags.map((tag) => (
-				<Tag key={tag} href={`/tags/${kebabCase(tag)}/`}>
+				<Tag key={tag} href={`/tags/${toKebabCase(tag)}/`}>
 					{formatTagName(tag)}
 				</Tag>
 			))}

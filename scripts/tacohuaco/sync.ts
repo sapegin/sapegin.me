@@ -9,6 +9,7 @@ import os from 'node:os';
 import path from 'node:path';
 import matter from 'gray-matter';
 import sharp from 'sharp';
+import { toKebabCase } from '../../shared/util/toKebabCase';
 import type { RecipeRaw } from '../../sites/tacohuaco/src/types/Recipe';
 
 // TODO: Only update files/images that are newer in the Vault
@@ -43,12 +44,7 @@ function toSlug(name: string) {
 	const asciiName = name.normalize('NFKD').replaceAll(/[\u0300-\u036f]/g, '');
 
 	// Convert the normalized name to kebab-case
-	return asciiName
-		.trim()
-		.toLowerCase()
-		.replaceAll(/['’]+/g, '')
-		.replaceAll(/[^a-z0-9]+/g, '-')
-		.replaceAll(/^-+|-+$/g, '');
+	return toKebabCase(asciiName);
 }
 
 function getSlug(frontmatter: NoteFrontmatter, baseName: string) {

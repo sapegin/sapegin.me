@@ -1,4 +1,4 @@
-import { sentenceCase } from 'change-case';
+import { toSentenceCase } from '@shared/util/toSentenceCase';
 
 const EXCEPTIONS: Record<string, string> = {
 	'new-year': 'New Year',
@@ -7,5 +7,5 @@ const EXCEPTIONS: Record<string, string> = {
 };
 
 export function formatTagName(tag: string) {
-	return EXCEPTIONS[tag] ?? sentenceCase(tag);
+	return EXCEPTIONS[tag] ?? toSentenceCase(tag);
 }
