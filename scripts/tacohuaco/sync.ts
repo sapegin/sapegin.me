@@ -12,8 +12,6 @@ import sharp from 'sharp';
 import { toKebabCase } from '../../shared/util/toKebabCase';
 import type { RecipeRaw } from '../../sites/tacohuaco/src/types/Recipe';
 
-// TODO: Delete removed from Vault recipes
-
 const VAULT_DIR = path.join(os.homedir(), 'murder', '🌮 Food');
 const ATTACHMENTS_DIR = path.join(os.homedir(), 'murder', 'attachments');
 const IMAGES_OUTPUT_DIR = 'sites/tacohuaco/public/images/recipes';
@@ -314,5 +312,32 @@ for (const filePath of publishedRecipes) {
 	count++;
 }
 
+// Delete recipes removed from the Vault
+const publishedSlugs = new Set(slugMap.values());
+const existingJsonFiles = fs
+	.readdirSync(OUTPUT_DIR)
+	.filter((f) => f.endsWith('.json'));
+
+let deleted = 0;
+for (const jsonFile of existingJsonFiles) {
+	const slug = path.parse(jsonFile).name;
+	if (publishedSlugs.has(slug) === false) {
+		const jsonPath = path.join(OUTPUT_DIR, jsonFile);
+		const imagePath = path.join(IMAGES_OUTPUT_DIR, `${slug}.avif`);
+		const thumbPath = path.join(IMAGES_OUTPUT_DIR, `${slug}_thumb.avif`);
+
+		fs.unlinkSync(jsonPath);
+		if (fs.existsSync(imagePath)) {
+			fs.unlinkSync(imagePath);
+		}
+		if (fs.existsSync(thumbPath)) {
+			fs.unlinkSync(thumbPath);
+		}
+
+		console.log(`🗑️  Deleted ${slug}`);
+		deleted++;
+	}
+}
+
 console.log();
-console.log(`${count} recipes synced`);
+console.log(`${count} recipes synced, ${deleted} deleted`);
