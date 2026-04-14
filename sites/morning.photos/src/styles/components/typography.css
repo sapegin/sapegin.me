@@ -49,7 +49,7 @@
 	font-family: var(--font-body);
 	font-size: var(--text-sm);
 	font-weight: var(--font-weight-normal);
-	line-height: var(--leading-snug);
+	line-height: var(--leading-normal);
 	color: var(--color-text);
 }
 

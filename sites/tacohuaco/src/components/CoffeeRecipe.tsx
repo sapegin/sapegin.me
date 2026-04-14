@@ -11,7 +11,6 @@ import {
 	type Step,
 } from '../util/cafe/types';
 import { CoffeeRecipeMeta } from './CoffeeRecipeMeta';
-import { RecipeScale } from './RecipeScale';
 import { Typo } from './Typo';
 
 interface Props {
@@ -85,7 +84,14 @@ export function CoffeeRecipe({ recipe }: Props) {
 			<div className="recipe-steps flex flex-col gap-8">
 				<CoffeeRecipeMeta coffeeAmount={g} waterAmount={currentAmount}>
 					{isScalingEnabled && (
-						<RecipeScale onLess={handleLess} onMore={handleMore} />
+						<div className="flex min-w-0 flex-row items-center gap-2">
+							<button onClick={handleLess} className="button">
+								Less
+							</button>
+							<button onClick={handleMore} className="button">
+								More
+							</button>
+						</div>
 					)}
 				</CoffeeRecipeMeta>
 				<ol className="flex max-w-140 flex-col gap-2">

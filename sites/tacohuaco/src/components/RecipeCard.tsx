@@ -29,7 +29,7 @@ export function RecipeCard({
 							)}
 						</span>
 					</span>
-					<u className="font-heading text-xl text-inherit">{title}</u>
+					<u className="typo-large">{title}</u>
 				</span>
 			</a>
 			{time ? (

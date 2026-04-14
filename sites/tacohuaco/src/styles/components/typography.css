@@ -65,15 +65,14 @@
 }
 
 /**
- * // TODO: Not used but we have a few custom large texts
- * Typography: large text.
+ * Typography: large text for card heading and such.
  */
 @utility typo-large {
-	font-family: var(--font-body);
-	font-size: var(--text-lg);
+	font-family: var(--font-heading);
+	font-size: var(--text-xl);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--leading-heading);
-	color: var(--color-text);
+	color: inherit;
 }
 
 /**

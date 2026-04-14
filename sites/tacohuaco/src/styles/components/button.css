@@ -2,12 +2,11 @@
  * Base button.
  */
 @utility button {
-	position: relative;
 	display: inline-block;
 	padding: --spacing(2) --spacing(4);
 	font-size: var(--text-ui);
 	font-family: var(--font-ui);
-	line-height: 1rem;
+	line-height: 1;
 	color: var(--color-text);
 	background-color: var(--color-background);
 	border-width: 1px;
