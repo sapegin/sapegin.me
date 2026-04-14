@@ -28,7 +28,7 @@
     "posttest": "npm run format",
     "sync:sapegin": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts",
     "sync:morning": "node --experimental-strip-types scripts/sync-photos.ts",
-    "sync:tacohuaco": "node --experimental-strip-types scripts/tacohuaco/sync.ts",
+    "sync:tacohuaco": "node --experimental-strip-types scripts/sync-recipes.ts",
     "sync": "npm run sync:sapegin && npm run sync:morning",
     "prepare": "husky"
   },
