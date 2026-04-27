@@ -18,8 +18,6 @@ export function Markdown({
 	forceInline = false,
 }: Props) {
 	const textTypo = typo(text);
-	console.log(text);
-	console.log(textTypo);
 	return (
 		<MarkdownToJsx options={{ overrides, forceBlock, forceInline }}>
 			{textTypo}

@@ -68,7 +68,7 @@
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.14.3",
     "remove-markdown": "0.6.3",
-    "richtypo": "^7.0.1",
+    "richtypo": "^8.0.0",
     "sanitize-html": "^2.17.2",
     "shiki": "^4.0.2",
     "strip-json-comments": "^5.0.3",

@@ -69,14 +69,6 @@ function readRecipeFile(filePath: string) {
 	return { frontmatter, content, baseName: name, slug };
 }
 
-/**
- * Normalize list markers: replace `*` with `-`, as richtypo seems to have some
- * issues with the former.
- */
-function normalizeListMarkers(text: string): string {
-	return text.replaceAll(/^(\s*)\* /gm, '$1- ');
-}
-
 function parseSections(content: string): Map<string, string> {
 	const sections = new Map<string, string>();
 	const parts = content.split(/^## /m);
@@ -207,7 +199,7 @@ const usageMap = new Map<string, string[]>();
 for (const filePath of publishedRecipes) {
 	const { content, slug } = readRecipeFile(filePath);
 
-	const sections = parseSections(normalizeListMarkers(content));
+	const sections = parseSections(content);
 	const ingredientsMarkdown = sections.get('Ingredients');
 	if (ingredientsMarkdown === undefined) {
 		continue;
@@ -243,7 +235,7 @@ for (const filePath of publishedRecipes) {
 
 	console.log('👉', title);
 
-	const sections = parseSections(normalizeListMarkers(content));
+	const sections = parseSections(content);
 
 	// Date: frontmatter or file birthtime
 	let dateString: string;
