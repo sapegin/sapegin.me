@@ -224,7 +224,7 @@ for (const filePath of publishedRecipes) {
 	const title = extractTitle(content);
 
 	if (title === '') {
-		console.warn(`⚠️  o H1 title found in ${baseName}, skipping`);
+		console.warn(`⚠️ No H1 title found in ${baseName}, skipping`);
 		continue;
 	}
 
