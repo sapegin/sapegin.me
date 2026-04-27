@@ -9,7 +9,7 @@ import os from 'node:os';
 import path from 'node:path';
 import matter from 'gray-matter';
 import sharp from 'sharp';
-import { toKebabCase } from '../shared/util/toKebabCase';
+import { toKebabCase } from '../shared/util/toKebabCase.ts';
 import type { RecipeRaw } from '../sites/tacohuaco/src/types/Recipe';
 
 const VAULT_DIR = path.join(os.homedir(), 'murder', '🌮 Food');
