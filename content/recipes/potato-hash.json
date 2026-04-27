@@ -6,10 +6,10 @@
     "american-cuisine",
     "breakfasts",
     "brunches",
+    "eggs",
     "potatoes",
     "spicy",
-    "warming",
-    "eggs"
+    "warming"
   ],
   "description": "This recipe takes quite a lot of time to prepare, and works best for cold rainy Sundays, when you don’t want to go out anyway but will appreciate a nice filling and warming brunch to give you enough strength to survive another day on this hostile planet.",
   "imageUrl": "/images/recipes/potato-hash.avif",

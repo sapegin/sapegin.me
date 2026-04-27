@@ -11,15 +11,14 @@
   "imageUrl": "/images/recipes/hummus.avif",
   "thumbnailUrl": "/images/recipes/hummus_thumb.avif",
   "ingredients": "- 100 g dry chickpeas\n- 1 clove garlic\n- 30 g tahini paste\n- 1 lime\n  *zest and juice*\n- 30-50 g olive oil\n- salt\n- freshly-ground black pepper",
-  "steps": "1. Soak the chickpeas in water overnight.\n2. Cook the chickpeas in water and a generous amount of salt on medium heat until tender.\n3. While the chickpeas are cooking, peel and roughly chop the garlic.\n4. When the chickpeas are cooked, discard the water.\n5. In a food processor or a mixer, put the chickpeas, tahini paste, zest and juice the lime, and olive oil (start with half of the amount).\n6. Mix until you have a uniform paste.\n7. Add more lime juice or olive oil if the hummus is too dry. Season with salt and black pepper.",
+  "steps": "1. Soak the chickpeas in water overnight.\n2. Discard the soaking water, and cook the chickpeas in fresh water and a generous amount of salt. Bring to a boil, then reduce the heat to medium-low and cook until very tender, for 40-60 minutes.\n3. While the chickpeas are cooking, peel and roughly chop the garlic.\n4. When the chickpeas are cooked, discard the water.\n5. In a food processor or a mixer, put the chickpeas, tahini paste, zest and juice of a lime, and olive oil (start with half of the amount).\n6. Mix until you have a uniform paste.\n7. Add more lime juice or olive oil if the hummus is too dry. Season with salt and black pepper.",
   "keywords": [
     "Humus",
     "Houmous"
   ],
   "notes": "The amounts of ingredients are average and depend on the quality of ingredients, and the age of the chickpeas. You need to taste the hummus and adjust the amounts every time.",
   "overnight": true,
-  "time": "80 minutes",
+  "time": "1.5 hours",
   "tools": "- blender or food processor",
-  "yields": "1 portion",
   "usedBy": []
 }

@@ -3,24 +3,26 @@
   "createdAt": "2021-11-01T00:00:00.000Z",
   "title": "Merchant’s buckwheat",
   "tags": [
-    "air-fryer",
     "crowd",
     "dinners",
     "dutch-oven",
     "lunches",
+    "one-pot",
     "russian-cuisine",
-    "warming"
+    "buckwheat"
   ],
-  "description": "Buckwheat is very common in Russia. Funny thing is that Artem never liked buckwheat until he left Russia, and now it's one of our most favorite recipes.",
+  "description": "Buckwheat is a staple grain in Russian cuisine, used for centuries in everyday cooking. This dish, known as merchant-style buckwheat, comes from the 18–19th century urban merchant class, where simple buckwheat porridge was enriched with meat, fat, and aromatics to create a more substantial, festive meal.\n\nFunny thing is that Artem never liked buckwheat until he left Russia, and now it’s one of our most favorite recipes.",
   "imageUrl": "/images/recipes/merchants-buckwheat.avif",
   "thumbnailUrl": "/images/recipes/merchants-buckwheat_thumb.avif",
-  "ingredients": "- 400 g pork\n- 200 g roasted buckwheat\n- 1 onion\n- 3 cloves garlic\n- 2 carrots\n- 1 chile\n- olive oil\n- 500 ml boiling water\n- bay leaves\n- black peppercorn\n- freshly ground black pepper\n- salt",
-  "steps": "1. Rinse the meat in cold water, dry using paper towels, season with salt, and refrigerate in a sealed container (or wrapped in a film) overnight.\n2. Rinse the buckwheat, and put it into a bowl, add salt, add water to cover the buckwheat to soften it before cooking.\n3. Prepare the vegetables. **Onion:** cut into small dice. **Carrot:** cut into 1/2 cm half-moons. **Garlic:** cut into thin slices. **Chile:** halve, remove the seeds, and thinly slice.\n4. Cut the meat into 2 cm cubes.\n5. Sauté onion, garlic, and chile on a large frying pan with olive oil and a bit of salt, on medium heat, for 2-3 minutes, until transparent.\n6. Add carrots and cook for 3 more minutes.\n7. Add the meat, and cook until the meat is white on all sides.\n8. Add 100 ml boiling water, add 3 bay leaves and a few peppercorns, wait until it boils, reduce the heat, and cook covered for about 30 minutes, until the meat is soft.\n9. Add the buckwheat (without water).\n10. Add more boiling water, so it’s about 1 cm over the buckwheat. Cook for 10-15 minutes more.\n11. Season with ground black pepper and more salt if needed.",
-  "keywords": [],
-  "notes": "If you don’t have time to season the meat overnight you could refrigerate it for a few hours. The recipe still works well without seasoning the meat in advance, however, the meat will be harder.",
+  "ingredients": "- 500 g pork\n- 200 g roasted buckwheat\n- 1 large onion\n- 4 cloves garlic\n- 1 fresh chile\n- 2 carrots\n- olive oil\n- 1 l boiling water\n- bay leaves\n- black peppercorn\n- salt",
+  "steps": "1. Rinse the meat in cold water, dry using paper towels, season with salt, and refrigerate in a sealed container (or wrapped in a film) overnight.\n2. Rinse the buckwheat, and put it into a bowl, add salt, add water to cover the buckwheat to soften it before cooking.\n3. Prepare the vegetables. \n\t1. **Onion:** peel, halve, and cut into 1/2 slices. **Garlic:** peel, smash, and roughly chop. **Chile:** halve, remove the seeds, and thinly slice.\n\t2. **Carrot:** cut into 1/2 cm half-moons or quarter-moons (depending on the size of the carrots).\n4. Cut the meat into 2 cm cubes.\n5. Sauté onion, garlic, and chile on a large frying pan with olive oil and a bit of salt, on medium heat, for 2-3 minutes, until transparent.\n6. Add carrots and cook for 3 more minutes.\n7. Add the meat, and cook until the meat is white on all sides.\n8. Add 200–300 ml boiling water, add 3 bay leaves and a few peppercorns, wait until it boils, reduce the heat, and cook covered for about 30 minutes, *until the meat is soft*.\n9. Add the buckwheat (without water).\n10. Add more boiling water, so it’s about 1 cm over the buckwheat. Cook for 10-15 minutes more.\n11. Add more salt if needed.",
+  "keywords": [
+    "Гречка по-купечески"
+  ],
+  "notes": "If you don’t have time to season the meat overnight you could refrigerate it for a few hours. The recipe still works well without seasoning the meat in advance, however, the meat will be harder.\n\nThis recipe also works well with beef instead of pork — and you don’t need to brine it in advance.",
   "overnight": true,
   "time": "110 minutes",
-  "tools": "- dutch over or medium-sized pot",
+  "tools": "- Dutch oven or medium-sized pot with lid",
   "yields": "6 portions",
   "usedBy": []
 }
