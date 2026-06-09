@@ -26,7 +26,7 @@
     "format": "prettier --log-level warn --write \"**/*.{js,cjs,mjs,ts,tsx,astro,css,json,md}\"",
     "test": "npm run check:sapegin && npm run check:morning && npm run check:tacohuaco && npm run lint:js && npm run lint:text",
     "posttest": "npm run format",
-    "sync:sapegin": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts",
+    "sync:sapegin": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts; node --experimental-strip-types scripts/sync-blog.ts",
     "sync:morning": "node --experimental-strip-types scripts/sync-photos.ts",
     "sync:tacohuaco": "node --experimental-strip-types scripts/sync-recipes.ts",
     "sync": "npm run sync:sapegin && npm run sync:morning",

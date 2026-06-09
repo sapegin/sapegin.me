@@ -7,8 +7,16 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import matter from 'gray-matter';
 import sharp from 'sharp';
+import {
+	extractTitle,
+	formatPublishedDate,
+	getAllWikilinks,
+	isNewer,
+	readNoteFile,
+	resolveWikilinks,
+	WIKILINK_REGEXP,
+} from '../shared/sync/obsidian.ts';
 import { toKebabCase } from '../shared/util/toKebabCase.ts';
 import type { RecipeRaw } from '../sites/tacohuaco/src/types/Recipe';
 
@@ -22,7 +30,7 @@ const THUMBNAIL_QUALITY = 60;
 
 interface NoteFrontmatter {
 	aliases?: string[];
-	date?: string;
+	published?: string | Date;
 	keywords?: string[];
 	refs?: string[];
 	slug?: string;
@@ -34,16 +42,8 @@ interface NoteFrontmatter {
 	yields?: string;
 }
 
-/**
- * Returns true if srcPath is newer than destPath, or destPath doesn't exist.
- */
-function isNewer(srcPath: string, destPath: string): boolean {
-	if (fs.existsSync(destPath) === false) {
-		return true;
-	}
-	const srcMtime = fs.statSync(srcPath).mtimeMs;
-	const destMtime = fs.statSync(destPath).mtimeMs;
-	return srcMtime > destMtime;
+function toUrl(slug: string) {
+	return `/recipes/${slug}/`;
 }
 
 function toSlug(name: string) {
@@ -61,12 +61,7 @@ function getSlug(frontmatter: NoteFrontmatter, baseName: string) {
 }
 
 function readRecipeFile(filePath: string) {
-	const markdown = fs.readFileSync(filePath, 'utf8');
-	const { data, content } = matter(markdown);
-	const frontmatter = data as NoteFrontmatter;
-	const { name } = path.parse(filePath);
-	const slug = getSlug(frontmatter, name);
-	return { frontmatter, content, baseName: name, slug };
+	return readNoteFile<NoteFrontmatter>(filePath, getSlug);
 }
 
 function parseSections(content: string): Map<string, string> {
@@ -90,41 +85,9 @@ function parseSections(content: string): Map<string, string> {
 	return sections;
 }
 
-function extractTitle(content: string): string {
-	const match = content.match(/^# (.+)$/m);
-	return match ? match[1].trim() : '';
-}
-
-// Matches wikilinks: [[target]] or [[target|label]]
-const WIKILINK_REGEXP = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/;
-
 function extractImage(content: string): { filename: string } | undefined {
 	const match = content.match(new RegExp(`!${WIKILINK_REGEXP.source}`));
 	return match ? { filename: match[1] } : undefined;
-}
-
-function resolveWikilinks(text: string, slugMap: Map<string, string>): string {
-	return text.replaceAll(
-		new RegExp(WIKILINK_REGEXP.source, 'g'),
-		(_match, target: string, label?: string) => {
-			const slug = slugMap.get(target);
-			if (slug) {
-				return `[${label ?? target}](/recipes/${slug}/)`;
-			}
-			return label ?? target;
-		}
-	);
-}
-
-function getAllWikilinks(markdown: string): string[] {
-	const matches = markdown.matchAll(new RegExp(WIKILINK_REGEXP.source, 'g'));
-
-	const titles = [];
-	for (const match of matches) {
-		titles.push(match[1]);
-	}
-
-	return titles;
 }
 
 async function copyImages(markdown: string, slug: string) {
@@ -238,13 +201,9 @@ for (const filePath of publishedRecipes) {
 	const sections = parseSections(content);
 
 	// Date: frontmatter or file birthtime
-	let dateString: string;
-	if (frontmatter.date) {
-		dateString = frontmatter.date;
-	} else {
-		const stat = fs.statSync(filePath);
-		dateString = stat.birthtime.toISOString();
-	}
+	const dateString = frontmatter.published
+		? formatPublishedDate(frontmatter.published)
+		: fs.statSync(filePath).birthtime.toISOString();
 
 	// Sections
 	const ingredientsMarkdown = sections.get('Ingredients') ?? '';
@@ -255,10 +214,10 @@ for (const filePath of publishedRecipes) {
 	const sourceMarkdown = sections.get('Source') ?? undefined;
 
 	// Resolve wikilinks in ingredients and steps
-	const ingredients = resolveWikilinks(ingredientsMarkdown, slugMap);
-	const steps = resolveWikilinks(stepsMarkdown, slugMap);
+	const ingredients = resolveWikilinks(ingredientsMarkdown, slugMap, toUrl);
+	const steps = resolveWikilinks(stepsMarkdown, slugMap, toUrl);
 	const description = descriptionMarkdown
-		? resolveWikilinks(descriptionMarkdown, slugMap)
+		? resolveWikilinks(descriptionMarkdown, slugMap, toUrl)
 		: undefined;
 
 	// Image handling

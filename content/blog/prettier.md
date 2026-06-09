@@ -8,8 +8,6 @@ tags:
   - prettier
 ---
 
-# Why robots should format our code for us
-
 I used to think that a personal code style is a good thing for a programmer. It shows you as a mature developer who knows what good code should look like.
 
 My college professors told me that they knew when some of my classmates used my code in their work because of a different code style. Now I think it was because my code was at least somehow formatted and everyone else’s was just a mess.
