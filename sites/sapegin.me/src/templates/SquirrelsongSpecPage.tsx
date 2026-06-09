@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef } from 'react';
 import { PageWithTitle } from './PageWithTitle';
 
 export interface ColorSpec {
@@ -87,7 +87,7 @@ function ColorCell({
 }) {
 	return (
 		<p
-			className="flex flex-col gap-2 rounded-button p-2 font-mono"
+			className="rounded-button flex flex-col gap-2 p-2 font-mono"
 			style={{ backgroundColor: hex, color: textColor }}
 		>
 			<strong className="text-sm">{name}</strong>
@@ -147,16 +147,16 @@ function MiniSwatch({ name, hexColor }: { name: string; hexColor: string }) {
 	return (
 		<div className="flex items-center gap-2">
 			<div
-				className="size-[1.8rem] rounded-button"
+				className="rounded-button size-[1.8rem]"
 				style={{
 					backgroundColor: hexColor,
 				}}
 			/>
 			<div>
-				<div className="max-w-32 truncate font-mono text-xs text-text">
+				<div className="text-text max-w-32 truncate font-mono text-xs">
 					{name}
 				</div>
-				<div className="font-mono text-xs text-secondary">{hexColor}</div>
+				<div className="text-secondary font-mono text-xs">{hexColor}</div>
 			</div>
 		</div>
 	);
@@ -220,7 +220,7 @@ function ColorsTable({
 function UiSample({ palette }: { palette: Palette }) {
 	return (
 		<div
-			className="flex flex-col gap-4 rounded-button bg-(--text-background) p-2"
+			className="rounded-button flex flex-col gap-4 bg-(--text-background) p-2"
 			style={
 				{
 					'--text-background': getColorValue(palette.textBackground),
@@ -300,16 +300,11 @@ function UiSample({ palette }: { palette: Palette }) {
 			<div className="h-px bg-(--border-color)" />
 			<div className="text-(--disabled-foreground)">disabledForeground</div>
 			<div
-				className="
-      cursor-pointer text-(--link-foreground)
-      hover:text-(--link-hover-foreground)
-    "
+				className="cursor-pointer text-(--link-foreground) hover:text-(--link-hover-foreground)"
 			>
 				linkForeground
 			</div>
-			<div
-				className="-mx-2 bg-(--active-background) px-2 text-(--active-foreground)"
-			>
+			<div className="-mx-2 bg-(--active-background) px-2 text-(--active-foreground)">
 				activeForeground/activeBackground
 			</div>
 			<div className="-mx-2 bg-(--hover-background) px-2 text-(--text-foreground)">
@@ -319,82 +314,55 @@ function UiSample({ palette }: { palette: Palette }) {
 				matchForeground/matchBackground
 			</div>
 			<div
-				className="
-      -mx-2 bg-(--secondary-match-background) px-2 text-(--match-foreground)
-    "
+				className="-mx-2 bg-(--secondary-match-background) px-2 text-(--match-foreground)"
 			>
 				secondaryMatchBackground
 			</div>
-			<div
-				className="-mx-2 bg-(--selection-background) px-2 text-(--text-foreground)"
-			>
+			<div className="-mx-2 bg-(--selection-background) px-2 text-(--text-foreground)">
 				selectionBackground
 			</div>
 			<div
-				className="
-      -mx-2 bg-(--secondary-sel-background) px-2 text-(--text-foreground)
-    "
+				className="-mx-2 bg-(--secondary-sel-background) px-2 text-(--text-foreground)"
 			>
 				secondarySelectionBackground
 			</div>
 			<div
-				className="
-      -mx-2 bg-(--line-highlight-background) px-2 text-(--text-foreground)
-    "
+				className="-mx-2 bg-(--line-highlight-background) px-2 text-(--text-foreground)"
 			>
 				lineHighlightBackground
 			</div>
 			<div
-				className="
-      border border-solid border-(--info-border) bg-(--info-background) px-2
-      text-(--info-foreground)
-    "
+				className="border border-solid border-(--info-border) bg-(--info-background) px-2 text-(--info-foreground)"
 			>
 				infoForeground/infoBackground/infoBorder
 			</div>
 			<div
-				className="
-      border border-solid border-(--success-border) bg-(--success-background)
-      px-2 text-(--success-foreground)
-    "
+				className="border border-solid border-(--success-border) bg-(--success-background) px-2 text-(--success-foreground)"
 			>
 				successForeground/successBackground/successBorder
 			</div>
 			<div
-				className="
-      border border-solid border-(--warning-border) bg-(--warning-background)
-      px-2 text-(--warning-foreground)
-    "
+				className="border border-solid border-(--warning-border) bg-(--warning-background) px-2 text-(--warning-foreground)"
 			>
 				warningForeground/warningBackground/warningBorder
 			</div>
 			<div
-				className="
-      border border-solid border-(--error-border) bg-(--error-background) px-2
-      text-(--error-foreground)
-    "
+				className="border border-solid border-(--error-border) bg-(--error-background) px-2 text-(--error-foreground)"
 			>
 				errorForeground/errorBackground/errorBorder
 			</div>
 			<div
-				className="
-      border border-solid border-(--active-border) px-2 text-(--text-foreground)
-    "
+				className="border border-solid border-(--active-border) px-2 text-(--text-foreground)"
 			>
 				activeBorder
 			</div>
 			<div
-				className="
-      border border-solid border-(--focus-border) px-2 text-(--text-foreground)
-    "
+				className="border border-solid border-(--focus-border) px-2 text-(--text-foreground)"
 			>
 				focusBorder
 			</div>
 			<div
-				className="
-      flex flex-col gap-4 overflow-hidden rounded-button border border-solid
-      border-(--light-border) bg-(--ui-background) p-2
-    "
+				className="rounded-button flex flex-col gap-4 overflow-hidden border border-solid border-(--light-border) bg-(--ui-background) p-2"
 			>
 				<div className="text-(--title-foreground)">titleForeground</div>
 				<div className="text-(--text-foreground)">textForeground</div>
@@ -402,35 +370,22 @@ function UiSample({ palette }: { palette: Palette }) {
 					secondaryTextForeground
 				</div>
 				<div
-					className="
-       cursor-pointer rounded-button bg-(--button-background) px-2 py-1
-       text-(--button-foreground)
-       hover:bg-(--button-hover-background)
-     "
+					className="rounded-button cursor-pointer bg-(--button-background) px-2 py-1 text-(--button-foreground) hover:bg-(--button-hover-background)"
 				>
 					button
 				</div>
 				<div
-					className="
-       cursor-pointer rounded-button bg-(--secondary-button-background) px-2
-       py-1 text-(--secondary-button-foreground)
-       hover:bg-(--secondary-button-hover-background)
-     "
+					className="rounded-button cursor-pointer bg-(--secondary-button-background) px-2 py-1 text-(--secondary-button-foreground) hover:bg-(--secondary-button-hover-background)"
 				>
 					secondaryButton
 				</div>
 				<div
-					className="
-       rounded-button bg-(--disabled-button-background) px-2 py-1
-       text-(--disabled-foreground)
-     "
+					className="rounded-button bg-(--disabled-button-background) px-2 py-1 text-(--disabled-foreground)"
 				>
 					disabledButton
 				</div>
 				<div
-					className="
-       -m-2 flex justify-center gap-2 bg-(--secondary-ui-background) text-lg
-     "
+					className="-m-2 flex justify-center gap-2 bg-(--secondary-ui-background) text-lg"
 				>
 					<div className="text-(--icon-color)" title="icon">
 						★

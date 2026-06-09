@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import {
 	ME_BLUESKY_HANDLE,
 	ME_BLUESKY_URL,
@@ -12,10 +12,10 @@ interface Props {
 	github: string;
 }
 
-export function Feedback({ children = <>Write me at</>, github }: Props) {
+export function Feedback({ children, github }: Props) {
 	return (
 		<p className="typo-intro">
-			{children}{' '}
+			{children ?? <>Write me at</>}{' '}
 			<a className="link" href="mailto:artem@sapegin.me">
 				artem@sapegin.me
 			</a>

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { imageSize } from 'image-size';
-import type { Html, Image, Root } from 'mdast';
+import { type Html, type Image, type Root } from 'mdast';
 import { visit } from 'unist-util-visit';
 
 /*

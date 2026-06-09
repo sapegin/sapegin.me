@@ -1,5 +1,5 @@
 import { PostList } from '../components/PostList';
-import type { Post } from '../types/Post';
+import { type Post } from '../types/Post';
 import { PageWithTitle } from './PageWithTitle';
 
 interface Props {

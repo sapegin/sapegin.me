@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { Page, type PageProps } from './Page';
 
 type Props = PageProps & {

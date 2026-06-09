@@ -16,7 +16,7 @@ export function Typo({ children }: TypoProps) {
 			if (result.includes('<')) {
 				// Use dangerouslySetInnerHTML when the result contains HTML
 				// (for example, <nobr>
-				// eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
+				// oxlint-disable-next-line react/no-danger
 				return <span dangerouslySetInnerHTML={{ __html: result }} />;
 			} else {
 				return result;

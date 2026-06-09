@@ -8,7 +8,7 @@ import os from 'node:os';
 import path from 'node:path';
 import ExifReader from 'exifreader';
 import sharp from 'sharp';
-import type { Photo } from '../sites/morning.photos/src/types/Photo';
+import { type Photo } from '../sites/morning.photos/src/types/Photo';
 
 const PHOTO_DIR = path.join(
 	os.homedir(),

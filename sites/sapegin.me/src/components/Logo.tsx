@@ -1,15 +1,10 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 export const LOGO_WIDTH = '400px';
 
 const Span = ({ children }: { children: ReactNode }) => (
 	<span
-		className="
-    inline-block bg-text px-2 pt-0.5 font-ui text-ui leading-[0.8]
-    tracking-[0.05ex] text-background uppercase no-underline transition-all
-    duration-(--duration-hover) ease-hover
-    group-hover:bg-accent
-  "
+		className="bg-text font-ui text-ui text-background ease-hover group-hover:bg-accent inline-block px-2 pt-0.5 leading-[0.8] tracking-[0.05ex] uppercase no-underline transition-all duration-(--duration-hover)"
 	>
 		{children}
 	</span>
@@ -17,7 +12,7 @@ const Span = ({ children }: { children: ReactNode }) => (
 
 export function Logo() {
 	return (
-		<a href="/" className="group inline-flex link flex-col">
+		<a href="/" className="group link inline-flex flex-col">
 			<span>
 				<Span>Artem</Span>
 			</span>

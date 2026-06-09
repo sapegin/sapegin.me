@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 interface Props {
 	coffeeAmount: number;
@@ -18,14 +18,14 @@ export function CoffeeRecipeMeta({
 					<span className="font-ui text-2xl tabular-nums">
 						{coffeeAmount}&thinsp;g
 					</span>
-					<span className="-mt-2 font-ui text-sm/snug">coffee</span>
+					<span className="font-ui -mt-2 text-sm/snug">coffee</span>
 				</span>
-				<span className="h-6 w-0.5 bg-secondary" />
+				<span className="bg-secondary h-6 w-0.5" />
 				<span className="flex flex-col items-center">
 					<span className="font-ui text-2xl tabular-nums">
 						{waterAmount}&thinsp;g
 					</span>
-					<span className="-mt-2 font-ui text-sm/snug">water</span>
+					<span className="font-ui -mt-2 text-sm/snug">water</span>
 				</span>
 			</span>
 			<div className="-mt-4">{children}</div>

@@ -6,7 +6,6 @@
     "jsxImportSource": "react",
     "strictNullChecks": true,
     "verbatimModuleSyntax": true,
-    "baseUrl": ".",
     "paths": {
       "@shared/*": ["../../shared/*"],
       "@tamia/*": ["../../shared/packages/tamia/*"]

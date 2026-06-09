@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import type { Post } from '../types/Post';
+import { type Post } from '../types/Post';
 
 const MAX_RELATED = 5;
 

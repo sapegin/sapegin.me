@@ -1,6 +1,8 @@
-import type { Html, Root, Text } from 'mdast';
+import { type Html, type Root, type Text } from 'mdast';
 import { visit } from 'unist-util-visit';
 import typo from '../util/typo';
+
+// TODO: Looks like mdast is deprecated and should be replaced with something
 
 /*
  * Enhance typography.

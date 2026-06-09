@@ -4,8 +4,8 @@ import { LinkWithIcon } from '../components/LinkWithIcon';
 import { PostList } from '../components/PostList';
 import { ResourceList } from '../components/ResourceList';
 import { ME_BLUESKY_URL, ME_GITHUB_URL, ME_MASTODON_URL } from '../constants';
-import type { Post } from '../types/Post';
-import type { Resource } from '../types/Resource';
+import { type Post } from '../types/Post';
+import { type Resource } from '../types/Resource';
 import { Page } from './Page';
 
 interface Props {
@@ -139,10 +139,7 @@ function Photography() {
 						loading="lazy"
 					/>
 					<div
-						className="
-        hidden
-        md:block
-      "
+						className="hidden md:block"
 					>
 						<img
 							src="/images/photos-3.avif"
@@ -181,10 +178,7 @@ function Coffee() {
 			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
 					<div
-						className="
-        hidden
-        md:block
-      "
+						className="hidden md:block"
 					>
 						<img
 							src="/images/coffee-1.avif"
@@ -245,10 +239,7 @@ function Cooking() {
 						/>
 					</a>
 					<div
-						className="
-        hidden
-        md:block
-      "
+						className="hidden md:block"
 					>
 						<a className="link" href="https://tacohuaco.co/recipes/svekolnik/">
 							<img
@@ -303,10 +294,7 @@ function Me() {
 						loading="lazy"
 					/>
 					<div
-						className="
-        hidden
-        md:block
-      "
+						className="hidden md:block"
 					>
 						<img
 							src="/images/me-2.avif"

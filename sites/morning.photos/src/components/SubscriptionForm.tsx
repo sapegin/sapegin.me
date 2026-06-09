@@ -9,6 +9,7 @@ export function SubscriptionForm() {
 			width="100%"
 			height="320"
 			loading="lazy"
+			sandbox=""
 		/>
 	);
 }

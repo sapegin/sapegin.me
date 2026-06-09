@@ -1,7 +1,7 @@
 import { SearchForm } from '../components/SearchForm';
 import { SearchResults } from '../components/SearchResults';
 import { useSearch } from '../hooks/useSearch';
-import type { RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 
 interface Props {
 	recipes: RecipeFragment[];
@@ -17,7 +17,7 @@ export function SearchPage({ recipes }: Props) {
 			</header>
 			<main className="flex flex-col gap-8">
 				{searchQuery === '' ? (
-					<p className="font-body text-base/normal text-text">
+					<p className="font-body text-text text-base/normal">
 						Try searching for recipe names (<em>pozole</em>,{' '}
 						<em>tres leches</em>), cuisines (<em>Mexican</em>, <em>Russian</em>
 						), kinds of dishes (<em>lunch</em>, <em>soup</em>)…

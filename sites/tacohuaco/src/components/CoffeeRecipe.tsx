@@ -85,10 +85,10 @@ export function CoffeeRecipe({ recipe }: Props) {
 				<CoffeeRecipeMeta coffeeAmount={g} waterAmount={currentAmount}>
 					{isScalingEnabled && (
 						<div className="flex min-w-0 flex-row items-center gap-2">
-							<button onClick={handleLess} className="button">
+							<button type="button" onClick={handleLess} className="button">
 								Less
 							</button>
-							<button onClick={handleMore} className="button">
+							<button type="button" onClick={handleMore} className="button">
 								More
 							</button>
 						</div>

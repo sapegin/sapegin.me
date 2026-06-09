@@ -1,5 +1,5 @@
 import { Typo } from '@shared/components/Typo';
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 interface Props {
 	children: ReactNode;
@@ -8,16 +8,10 @@ interface Props {
 export function About({ children }: Props) {
 	return (
 		<section
-			className="
-     flex flex-col gap-8
-     md:flex-row
-   "
+			className="flex flex-col gap-8 md:flex-row"
 		>
 			<div
-				className="
-      mx-auto shrink-0
-      md:mx-0
-    "
+				className="mx-auto shrink-0 md:mx-0"
 			>
 				<img
 					src="/images/artem-sapegin.avif"

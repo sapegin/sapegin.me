@@ -13,7 +13,7 @@ interface Props {
 
 export function Markdown({
 	text,
-	overrides = {},
+	overrides,
 	forceBlock = false,
 	forceInline = false,
 }: Props) {

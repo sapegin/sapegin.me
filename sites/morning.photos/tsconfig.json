@@ -6,7 +6,6 @@
     "strictNullChecks": true,
     "verbatimModuleSyntax": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
     "paths": {
       "@shared/*": ["../../shared/*"],
       "@tamia/*": ["../../shared/packages/tamia/*"]

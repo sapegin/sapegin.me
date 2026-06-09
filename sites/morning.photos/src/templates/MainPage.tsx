@@ -1,8 +1,8 @@
 import { Markdown } from '@shared/components/Markdown';
 import { Support } from '../components/Support';
 import { Thumbnail } from '../components/Thumbnail';
-import type { Photo } from '../types/Photo';
-import type { Resource } from '../types/Resource';
+import { type Photo } from '../types/Photo';
+import { type Resource } from '../types/Resource';
 import { Page } from './Page';
 
 interface Props {
@@ -45,7 +45,7 @@ function Photos({ photos }: Pick<Props, 'photos'>) {
 		<section className="flex flex-col gap-4">
 			{photo1 && (
 				<div className="expander">
-					<a className="block link" href={`/photos/#${photo1.name}`}>
+					<a className="link block" href={`/photos/#${photo1.name}`}>
 						<Thumbnail
 							photo={photo1}
 							size="full"
@@ -57,21 +57,16 @@ function Photos({ photos }: Pick<Props, 'photos'>) {
 			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
 					{photo2 && (
-						<a className="block link" href={`/photos/#${photo2.name}`}>
-							<div className="aspect-65/90 frame">
+						<a className="link block" href={`/photos/#${photo2.name}`}>
+							<div className="frame aspect-65/90">
 								<Thumbnail photo={photo2} alt="Dawn in Berlin, Germany" />
 							</div>
 						</a>
 					)}
-					<div
-						className="
-        hidden
-        md:block
-      "
-					>
+					<div className="hidden md:block">
 						{photo3 && (
-							<a className="block link" href={`/photos/#${photo3.name}`}>
-								<div className="aspect-65/90 frame">
+							<a className="link block" href={`/photos/#${photo3.name}`}>
+								<div className="frame aspect-65/90">
 									<Thumbnail
 										photo={photo3}
 										alt="Snowstorm in Berlin, Germany"
@@ -81,8 +76,8 @@ function Photos({ photos }: Pick<Props, 'photos'>) {
 						)}
 					</div>
 					{photo4 && (
-						<a className="block link" href={`/photos/#${photo4.name}`}>
-							<div className="aspect-65/90 frame">
+						<a className="link block" href={`/photos/#${photo4.name}`}>
+							<div className="frame aspect-65/90">
 								<Thumbnail photo={photo4} alt="Sunrise in Rome, Italy" />
 							</div>
 						</a>
@@ -103,7 +98,7 @@ function Photos2({ photos }: Pick<Props, 'photos'>) {
 			<Me />
 			{photo4 && (
 				<div className="expander">
-					<a className="block link" href={`/photos/#${photo4.name}`}>
+					<a className="link block" href={`/photos/#${photo4.name}`}>
 						<Thumbnail
 							photo={photo4}
 							size="full"
@@ -115,8 +110,8 @@ function Photos2({ photos }: Pick<Props, 'photos'>) {
 			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
 					{photo1 && (
-						<a className="block link" href={`/series/gol/#${photo1.name}`}>
-							<div className="aspect-65/90 frame">
+						<a className="link block" href={`/series/gol/#${photo1.name}`}>
+							<div className="frame aspect-65/90">
 								<Thumbnail
 									photo={photo1}
 									alt="View from the top floor of Pressehaus, Berlin, Germany"
@@ -124,15 +119,10 @@ function Photos2({ photos }: Pick<Props, 'photos'>) {
 							</div>
 						</a>
 					)}
-					<div
-						className="
-        hidden
-        md:block
-      "
-					>
+					<div className="hidden md:block">
 						{photo2 && (
-							<a className="block link" href={`/series/moire/#${photo2.name}`}>
-								<div className="aspect-65/90 frame">
+							<a className="link block" href={`/series/moire/#${photo2.name}`}>
+								<div className="frame aspect-65/90">
 									<Thumbnail
 										photo={photo2}
 										alt="Peeled advertisement posters, Berlin, Germany"
@@ -142,8 +132,8 @@ function Photos2({ photos }: Pick<Props, 'photos'>) {
 						)}
 					</div>
 					{photo3 && (
-						<a className="block link" href={`/series/sfop/#${photo3.name}`}>
-							<div className="aspect-65/90 frame">
+						<a className="link block" href={`/series/sfop/#${photo3.name}`}>
+							<div className="frame aspect-65/90">
 								<Thumbnail
 									photo={photo3}
 									alt="Birds chasing an airplane, Berlin, Germany"
@@ -162,19 +152,16 @@ function Me() {
 		<div className="expander">
 			<div className="grid-auto-narrow grid gap-4">
 				<img
+					// oxlint-disable-next-line tailwindcss/no-hardcoded-colors
 					className="image bg-[#69716e]"
 					src="/images/about/me-1.avif"
 					alt="Artem Sapegin is making photos with a toy camera"
 					width={700}
 					height={700}
 				/>
-				<div
-					className="
-       hidden
-       md:block
-     "
-				>
+				<div className="hidden md:block">
 					<img
+						// oxlint-disable-next-line tailwindcss/no-hardcoded-colors
 						className="image bg-[#978b7f]"
 						src="/images/about/me-2.avif"
 						alt="Artem Sapegin is making photos with a phone"
@@ -183,6 +170,7 @@ function Me() {
 					/>
 				</div>
 				<img
+					// oxlint-disable-next-line tailwindcss/no-hardcoded-colors
 					className="image bg-[#615c45]"
 					src="/images/about/me-3.avif"
 					alt="Artem Sapegin is making photos in a forest"
@@ -201,12 +189,7 @@ export function MainPage({ url, title, text, photos, links }: Props) {
 				<h1 className="sr-only">{title}</h1>
 				<Photos photos={photos} />
 				<div className="flex flex-col gap-8">
-					<div
-						className="
-        grid grid-cols-1 gap-x-8
-        md:grid-cols-[2fr_1fr]
-      "
-					>
+					<div className="grid grid-cols-1 gap-x-8 md:grid-cols-[2fr_1fr]">
 						<div className="prose">
 							<Markdown text={text} />
 						</div>

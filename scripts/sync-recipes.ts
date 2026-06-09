@@ -18,7 +18,7 @@ import {
 	WIKILINK_REGEXP,
 } from '../shared/sync/obsidian.ts';
 import { toKebabCase } from '../shared/util/toKebabCase.ts';
-import type { RecipeRaw } from '../sites/tacohuaco/src/types/Recipe';
+import { type RecipeRaw } from '../sites/tacohuaco/src/types/Recipe';
 
 const VAULT_DIR = path.join(os.homedir(), 'murder', '🌮 Food');
 const ATTACHMENTS_DIR = path.join(os.homedir(), 'murder', 'attachments');
@@ -28,7 +28,7 @@ const OUTPUT_DIR = 'content/recipes';
 const THUMBNAIL_WIDTH = 960;
 const THUMBNAIL_QUALITY = 60;
 
-interface NoteFrontmatter {
+interface NoteFrontmatter extends Record<string, unknown> {
 	aliases?: string[];
 	published?: string | Date;
 	keywords?: string[];
@@ -50,7 +50,7 @@ function toSlug(name: string) {
 	// `normalize('NFKD')` splits accented letters into their base letter plus a
 	// combining accent mark, so removing the combining marks turns "Café" into
 	// "Cafe" before we slugify it
-	const asciiName = name.normalize('NFKD').replaceAll(/[\u0300-\u036f]/g, '');
+	const asciiName = name.normalize('NFKD').replaceAll(/[\u0300-\u036F]/g, '');
 
 	// Convert the normalized name to kebab-case
 	return toKebabCase(asciiName);

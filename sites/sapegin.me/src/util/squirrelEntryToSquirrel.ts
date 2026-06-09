@@ -1,5 +1,5 @@
-import type { CollectionEntry } from 'astro:content';
-import type { Squirrel } from '../types/Squirrel';
+import { type CollectionEntry } from 'astro:content';
+import { type Squirrel } from '../types/Squirrel';
 
 type Entry = CollectionEntry<'squirrels'>;
 

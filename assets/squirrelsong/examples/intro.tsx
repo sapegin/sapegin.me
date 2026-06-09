@@ -1,18 +1,12 @@
-type Props = {
-  answer: string;
-};
+interface Props {
+	answer: string;
+}
 
-function Squirrelsong({
-  answer,
-}: Props) {
-  return (
-    <Stack gap="medium">
-      <Heading level={1}>
-        What did the squirrel say?
-      </Heading>
-      <Text variant="intro">
-        {answer}
-      </Text>
-    </Stack>
-  );
+function Squirrelsong({ answer }: Props) {
+	return (
+		<Stack gap="medium">
+			<Heading level={1}>What did the squirrel say?</Heading>
+			<Text variant="intro">{answer}</Text>
+		</Stack>
+	);
 }

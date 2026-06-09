@@ -1,10 +1,10 @@
 import { Typo } from '@shared/components/Typo';
 import { Group } from '@tamia/components/Group';
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { BuyMeCoffee } from '../components/BuyMeCoffee';
 import { InlineList, InlineListItem } from '../components/InlineList';
 import { MurderOfCrows } from '../components/MurderOfCrows';
-import type { Squirrel } from '../types/Squirrel';
+import { type Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
 
 type Props = Squirrel & {
@@ -30,7 +30,9 @@ export function SquirrelPage({ url, title, id, squirrels, children }: Props) {
 			<div className="flex flex-col gap-16">
 				<div className="flex flex-col gap-8">
 					<h1 className="max-w-text-max-width heading-1">{title}</h1>
-					<div className="post-content prose">{children}</div>
+					<div className="prose">
+						<div className="post-content">{children}</div>
+					</div>
 					<div className="flex flex-col gap-1">
 						<p className="typo-body">
 							<Typo>

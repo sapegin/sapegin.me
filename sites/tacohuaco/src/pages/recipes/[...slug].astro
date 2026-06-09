@@ -5,7 +5,7 @@ import sortBy from 'lodash/sortBy';
 import { RecipeBody } from '../../components/RecipeBody';
 import Layout from '../../layouts/Layout.astro';
 import { RecipePage } from '../../templates/RecipePage';
-import type { Recipe, RecipeFragment } from '../../types/Recipe';
+import  { type Recipe, type RecipeFragment } from '../../types/Recipe';
 
 export async function getStaticPaths() {
 	const entries = await getCollection('recipes');

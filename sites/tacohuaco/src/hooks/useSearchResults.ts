@@ -1,7 +1,7 @@
 import deburr from 'lodash/deburr';
-import type { Index } from 'lunr';
+import { type Index } from 'lunr';
 import { useMemo } from 'react';
-import type { RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 
 export function useSearchResults(
 	rawIndex: Index,

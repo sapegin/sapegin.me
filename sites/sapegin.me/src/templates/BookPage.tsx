@@ -1,14 +1,14 @@
 import { Markdown } from '@shared/components/Markdown';
 import { Typo } from '@shared/components/Typo';
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { campaigns } from '../campaigns';
 import { About } from '../components/About';
 import { BookCover } from '../components/BookCover';
 import { FeatureList, FeatureListItem } from '../components/FeatureList';
 import { Feedback } from '../components/Feedback';
 import { MurderOfCrows } from '../components/MurderOfCrows';
-import type { Chapter } from '../types/Chapter';
+import { type Chapter } from '../types/Chapter';
 import { Page } from './Page';
 
 const {
@@ -87,7 +87,12 @@ const faq: FaqItem[] = [
 				Yes, I’m planning to keep the book as a living snapshot of my
 				programming knowledge, and also update the example with the latest
 				JavaScript features. Subscribe to{' '}
-				<a className="link" href="https://sapegin.substack.com" target="_blank">
+				<a
+					className="link"
+					href="https://sapegin.substack.com"
+					target="_blank"
+					rel="noreferrer"
+				>
 					my newsletter
 				</a>{' '}
 				to know about major updates.
@@ -177,10 +182,7 @@ function TheButton() {
 function ChapterList({ chapters }: { chapters: Chapter[] }) {
 	return (
 		<ul
-			className="
-     grid grid-cols-1 gap-8
-     md:grid-cols-2
-   "
+			className="grid grid-cols-1 gap-8 md:grid-cols-2"
 		>
 			{chapters.map((chapter) => (
 				<li
@@ -201,10 +203,7 @@ function ChapterList({ chapters }: { chapters: Chapter[] }) {
 					</p>
 					{chapter.sections.length > 0 ? (
 						<div
-							className="
-         grid grid-cols-1 gap-x-8 gap-y-2
-         md:grid-cols-2
-       "
+							className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2"
 						>
 							{chapter.sections.map((section) => (
 								<p key={section} className="typo-small">
@@ -234,11 +233,7 @@ function PatternList({
 }) {
 	return (
 		<ul
-			className="
-     grid grid-cols-1 gap-4
-     md:grid-cols-2
-     lg:grid-cols-3
-   "
+			className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
 		>
 			{patterns.map((pattern) => (
 				<li key={pattern} className="flex flex-col gap-1">
@@ -267,7 +262,7 @@ function Testimonial({
 	return (
 		<blockquote className="flex flex-col gap-1">
 			<div>
-				<p className="border-2 border-solid p-4 typo-body">
+				<p className="typo-body border-2 border-solid p-4">
 					<Typo>{quote}</Typo>
 				</p>
 				<svg
@@ -323,7 +318,7 @@ export function Spread({
 				width={width}
 				height={height}
 				alt={alt}
-				className="m-0 image"
+				className="image m-0"
 				loading="lazy"
 			/>
 		</div>
@@ -333,10 +328,7 @@ export function Spread({
 function Features() {
 	return (
 		<div
-			className="
-     grid grid-cols-1 gap-8
-     md:grid-cols-[2fr_1fr]
-   "
+			className="grid grid-cols-1 gap-8 md:grid-cols-[2fr_1fr]"
 		>
 			<div>
 				<Spread image="spread.png" />
@@ -369,10 +361,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 					</p>
 				</div>
 				<section
-					className="
-       flex flex-col gap-8
-       md:flex-row
-     "
+					className="flex flex-col gap-8 md:flex-row"
 				>
 					<div className="flex flex-col gap-8">
 						<h2 className="sr-only">About the book</h2>
@@ -424,10 +413,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 						</div>
 					</div>
 					<div
-						className="
-        -order-1 mx-auto shrink-0
-        md:order-0 md:mx-0
-      "
+						className="-order-1 mx-auto shrink-0 md:order-0 md:mx-0"
 					>
 						<BookCover
 							image="washing-your-code-large"
@@ -470,10 +456,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 				<section className="flex flex-col gap-4">
 					<h2 className="heading-2">What readers are saying?</h2>
 					<div
-						className="
-        grid grid-cols-1 gap-8
-        md:grid-cols-2
-      "
+						className="grid grid-cols-1 gap-8 md:grid-cols-2"
 					>
 						{testimonials.map((testimonial) => (
 							<Testimonial key={testimonial.author} {...testimonial} />

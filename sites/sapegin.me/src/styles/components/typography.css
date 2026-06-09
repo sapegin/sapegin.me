@@ -37,8 +37,6 @@
 @utility typo-body {
 	font-family: var(--font-body);
 	font-size: var(--text-base);
-	font-weight: var(--font-weight-normal);
-	line-height: var(--leading-normal);
 	color: var(--color-text);
 }
 
@@ -48,8 +46,6 @@
 @utility typo-small {
 	font-family: var(--font-body);
 	font-size: var(--text-sm);
-	font-weight: var(--font-weight-normal);
-	line-height: var(--leading-normal);
 	color: var(--color-text);
 }
 

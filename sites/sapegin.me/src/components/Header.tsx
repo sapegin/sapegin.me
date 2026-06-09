@@ -11,19 +11,13 @@ export function Header({ url }: Props) {
 		<header className="antialiased">
 			<a
 				href="#content"
-				className="
-      absolute -top-full bg-text p-4 text-background no-underline
-      focus:top-0 focus:outline-0
-    "
+				className="bg-text text-background absolute -top-full p-4 no-underline focus:top-0 focus:outline-0"
 			>
 				Skip to content
 			</a>
 			<Banner />
 			<div
-				className="
-      mx-auto mb-4 text-center
-      md:-mb-[2.6rem] md:w-[400px]
-    "
+				className="mx-auto mb-4 text-center md:mb-[-2.6rem] md:w-100"
 			>
 				<Logo />
 			</div>

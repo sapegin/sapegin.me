@@ -1,7 +1,7 @@
 import { useCombobox } from 'downshift';
 import { matchSorter } from 'match-sorter';
 import { type SubmitEventHandler, useSyncExternalStore } from 'react';
-import type { AutocompleteItem } from '../hooks/useSearch';
+import { type AutocompleteItem } from '../hooks/useSearch';
 
 const MAX_ITEMS_TO_SHOW = 12;
 
@@ -31,11 +31,7 @@ function ItemContainer({
 }: { isHighlighted: boolean } & React.HTMLAttributes<HTMLDivElement>) {
 	return (
 		<div
-			className={`
-     flex cursor-pointer items-center gap-3 px-3 py-1 font-ui text-base
-     font-bold
-     ${isHighlighted ? `bg-accent text-background` : `bg-transparent`}
-   `}
+			className={`font-ui flex cursor-pointer items-center gap-3 px-3 py-1 text-base font-bold ${isHighlighted ? `bg-accent text-background` : `bg-transparent`} `}
 			{...props}
 		/>
 	);
@@ -69,7 +65,7 @@ export function SearchForm({ items, value, onChange }: Props) {
 				return;
 			}
 			if (selectedItem.type === 'recipe' && selectedItem.recipe) {
-				window.location.href = `${window.location.origin}/recipes/${selectedItem.recipe.slug}/`;
+				globalThis.location.href = `${globalThis.location.origin}/recipes/${selectedItem.recipe.slug}/`;
 				return;
 			}
 			onChange(selectedItem.value);
@@ -80,66 +76,58 @@ export function SearchForm({ items, value, onChange }: Props) {
 		e.preventDefault();
 	};
 	return (
-		<form role="search" onSubmit={handleSubmit}>
-			{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-			<label className="sr-only" {...getLabelProps()}>
-				Search recipes
-			</label>
-			<div className="relative">
-				<input
-					className="
-       w-full appearance-none rounded-none border-2 border-text bg-background
-       p-3 font-ui text-lg font-bold text-text transition-all
-       duration-(--duration-hover) ease-hover
-       focus:border-accent focus:shadow-input focus:outline-0
-       disabled:opacity-25
-       [&::-webkit-search-cancel-button]:hidden
-       [&::-webkit-search-decoration]:hidden
-     "
-					disabled={isEnabled === false}
-					{...getInputProps({ type: 'search', placeholder: 'Search recipes' })}
-				/>
-				<div
-					{...getMenuProps()}
-					className="
-       absolute inset-x-0 z-50 mt-3 rounded-none border-2 border-accent
-       bg-background p-2 shadow-popover transition-all duration-150 ease-fade
-       will-change-[opacity]
-       empty:opacity-0
-     "
-				>
-					{isOpen &&
-						itemsToShow.map((item, index) => {
-							const hl = highlightedIndex === index;
-							const ip = getItemProps({ item, index });
-							if (item.type === 'recipe' && item.recipe) {
+		<search>
+			<form onSubmit={handleSubmit}>
+				{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+				<label className="sr-only" {...getLabelProps()}>
+					Search recipes
+				</label>
+				<div className="relative">
+					<input
+						className="border-text bg-background font-ui text-text ease-hover focus:border-accent focus:shadow-input w-full appearance-none rounded-none border-2 p-3 text-lg font-bold transition-all duration-(--duration-hover) focus:outline-0 disabled:opacity-25 [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+						disabled={isEnabled === false}
+						{...getInputProps({
+							type: 'search',
+							placeholder: 'Search recipes',
+						})}
+					/>
+					<div
+						{...getMenuProps()}
+						className="border-accent bg-background shadow-popover ease-fade absolute inset-x-0 z-50 mt-3 rounded-none border-2 p-2 transition-all duration-150 will-change-[opacity] empty:opacity-0"
+					>
+						{isOpen &&
+							itemsToShow.map((item, index) => {
+								const hl = highlightedIndex === index;
+								const ip = getItemProps({ item, index });
+								if (item.type === 'recipe' && item.recipe) {
+									return (
+										<ItemContainer key={item.value} isHighlighted={hl} {...ip}>
+											{item.recipe.thumbnailUrl && (
+												<div className="bg-light size-9 shrink-0">
+													<img
+														src={item.recipe.thumbnailUrl}
+														alt=""
+														loading="lazy"
+														className="size-full object-cover"
+													/>
+												</div>
+											)}
+											<div className="flex flex-col">
+												<span>{item.recipe.title}</span>
+												<span className="-mt-2 text-xs">Open recipe</span>
+											</div>
+										</ItemContainer>
+									);
+								}
 								return (
 									<ItemContainer key={item.value} isHighlighted={hl} {...ip}>
-										{item.recipe.thumbnailUrl && (
-											<div className="size-9 shrink-0 bg-light">
-												<img
-													src={item.recipe.thumbnailUrl}
-													alt=""
-													loading="lazy"
-													className="size-full object-cover"
-												/>
-											</div>
-										)}
-										<div className="flex flex-col">
-											<span>{item.recipe.title}</span>
-											<span className="-mt-2 text-xs">Open recipe</span>
-										</div>
+										{item.value}
 									</ItemContainer>
 								);
-							}
-							return (
-								<ItemContainer key={item.value} isHighlighted={hl} {...ip}>
-									{item.value}
-								</ItemContainer>
-							);
-						})}
+							})}
+					</div>
 				</div>
-			</div>
-		</form>
+			</form>
+		</search>
 	);
 }

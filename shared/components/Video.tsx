@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef } from 'react';
 
 /**
  * Responsive video embed.
@@ -11,6 +11,7 @@ export function Video(props: ComponentPropsWithoutRef<'iframe'>) {
 			allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowFullScreen
 			className="aspect-video w-full border-0"
+			sandbox=""
 		/>
 	);
 }

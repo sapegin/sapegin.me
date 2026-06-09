@@ -1,4 +1,4 @@
-import type { RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 import { RecipeTags } from './RecipeTags';
 import { RecipeTimes } from './RecipeTimes';
 

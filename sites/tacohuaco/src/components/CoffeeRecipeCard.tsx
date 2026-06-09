@@ -1,4 +1,4 @@
-import type { CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
+import { type CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
 import { Icon } from './Icon';
 
 interface Props {

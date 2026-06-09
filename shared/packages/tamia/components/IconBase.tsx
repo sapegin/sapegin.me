@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { type ComponentPropsWithoutRef, type ReactNode } from 'react';
 
 export interface IconBaseProps extends Omit<
 	ComponentPropsWithoutRef<'svg'>,
@@ -17,9 +17,9 @@ export interface IconBaseProps extends Omit<
  * Base for SVG icons.
  *
  * @example
- * <IconBase viewBox={{ width: 128, height: 128 }} width={24} height={24}>
- *   <path d="..." />
- * </IconBase>
+ * 	<IconBase viewBox={{ width: 128, height: 128 }} width={24} height={24}>
+ * 		<path d="..." />
+ * 	</IconBase>;
  */
 export function IconBase({
 	viewBox,

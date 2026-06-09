@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { MainPage } from '../templates/MainPage';
-import type { Resource } from '../types/Resource';
+import  { type Resource } from '../types/Resource';
 
 const entries = await getCollection('photos');
 

@@ -1,5 +1,5 @@
 import { ME_BLUESKY_URL, ME_GITHUB_URL, ME_MASTODON_URL } from '../constants';
-import type { Post } from '../types/Post';
+import { type Post } from '../types/Post';
 import { FormattedDate } from './FormattedDate';
 import { InlineList, InlineListItem } from './InlineList';
 

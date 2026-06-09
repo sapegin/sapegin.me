@@ -1,6 +1,6 @@
 import { RecipeListSection } from '../components/RecipeListSection';
 import { TagsLinks } from '../components/TagsLinks';
-import type { Recipe } from '../types/Recipe';
+import { type Recipe } from '../types/Recipe';
 import { Page } from './Page';
 
 interface Props {

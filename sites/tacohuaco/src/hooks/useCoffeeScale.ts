@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import type { CoffeeRecipe } from '../util/cafe/types';
+import { type CoffeeRecipe } from '../util/cafe/types';
 
 function getPrevAmount(amount: number) {
 	if (amount === 50) {
@@ -14,7 +14,7 @@ function getNextAmount(amount: number) {
 }
 
 export function useCoffeeScale({ defaultAmount }: CoffeeRecipe) {
-	const isScalingEnabled = typeof window !== 'undefined';
+	const isScalingEnabled = typeof globalThis !== 'undefined';
 
 	const [currentAmount, setCurrentAmount] = useState(defaultAmount);
 

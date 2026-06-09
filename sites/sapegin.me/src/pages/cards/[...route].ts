@@ -1,6 +1,6 @@
 import { OGImageRoute } from 'astro-og-canvas';
 import { SITE_AUTHOR } from '../../constants';
-import type { Post } from '../../types/Post';
+import { type Post } from '../../types/Post';
 
 type RgbColor = [number, number, number];
 

@@ -1,4 +1,4 @@
-import type { Resource } from '../types/Resource';
+import { type Resource } from '../types/Resource';
 import { Badge } from './Badge';
 
 interface Props {

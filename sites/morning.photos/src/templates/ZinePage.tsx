@@ -1,7 +1,7 @@
 import { Markdown } from '@shared/components/Markdown';
 import { Typo } from '@shared/components/Typo';
 import { Video } from '@shared/components/Video';
-import type { CollectionEntry } from 'astro:content';
+import { type CollectionEntry } from 'astro:content';
 import { BookCover } from '../components/BookCover';
 import { Support } from '../components/Support';
 import { PageWithTitle } from './PageWithTitle';
@@ -31,10 +31,7 @@ export function ZinePage({ url, title, issues }: Props) {
 						<article key={id} className="flex flex-col gap-4">
 							<h2 className="heading-2">{issue.title}</h2>
 							<div
-								className="
-          flex flex-col gap-8
-          md:flex-row
-        "
+								className="flex flex-col gap-8 md:flex-row"
 							>
 								<div className="flex flex-col gap-4">
 									<div className="prose">
@@ -50,7 +47,7 @@ export function ZinePage({ url, title, issues }: Props) {
 										>
 											Buy now!
 											<span
-												className="px-2 align-middle typo-body text-xs text-inherit"
+												className="typo-body px-2 align-middle text-xs text-inherit"
 												aria-hidden="true"
 											>
 												■
@@ -65,10 +62,7 @@ export function ZinePage({ url, title, issues }: Props) {
 									</div>
 								</div>
 								<div
-									className="
-           -order-1 mx-auto
-           md:order-0 md:mx-0
-         "
+									className="-order-1 mx-auto md:order-0 md:mx-0"
 								>
 									<BookCover
 										title={issue.title}

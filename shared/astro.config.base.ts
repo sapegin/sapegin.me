@@ -2,7 +2,7 @@ import path from 'node:path';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import type { RehypePlugins, RemarkPlugins } from 'astro';
+import { type RehypePlugins, type RemarkPlugins } from 'astro';
 import { defineConfig as astroDefineConfig } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from './rehype/rehypeSlug.js';

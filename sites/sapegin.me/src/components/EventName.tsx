@@ -1,6 +1,6 @@
 import { Group } from '@tamia/components/Group';
-import type { ReactNode } from 'react';
-import type { TalkType } from '../types/Gig';
+import { type ReactNode } from 'react';
+import { type TalkType } from '../types/Gig';
 
 const ICONS = {
 	talk: {
@@ -28,7 +28,7 @@ interface Props {
 	children: ReactNode;
 }
 
-export function EventName({ type = 'talk', children }: Props) {
+export function EventName({ type, children }: Props) {
 	const { icon, alt, label, suffix } = ICONS[type];
 	return (
 		<Group>

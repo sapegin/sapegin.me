@@ -1,4 +1,4 @@
-import type { Photo } from '../types/Photo';
+import { type Photo } from '../types/Photo';
 
 export type PhotoSize = 'full' | 'thumbnail';
 

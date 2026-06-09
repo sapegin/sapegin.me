@@ -1,4 +1,4 @@
-import type { RehypePlugins } from 'astro';
+import { type RehypePlugins } from 'astro';
 import rehypePrettyCode from 'rehype-pretty-code';
 import { defineConfig, getBaseConfig } from '../../shared/astro.config.base.js';
 import { SITE_HOST } from './src/constants.ts';

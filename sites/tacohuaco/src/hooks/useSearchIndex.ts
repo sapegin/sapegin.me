@@ -1,7 +1,7 @@
 import deburr from 'lodash/deburr';
 import lunr from 'lunr';
 import { useMemo } from 'react';
-import type { RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 import { formatTagName } from '../util/formatTagName';
 
 export function useSearchIndex(recipes: readonly RecipeFragment[]) {

@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react';
-import type { RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 import { RecipeList } from './RecipeList';
 
 interface Props {

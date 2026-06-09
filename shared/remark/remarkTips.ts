@@ -1,4 +1,4 @@
-import type { Paragraph, Root, Strong } from 'mdast';
+import { type Paragraph, type Root, type Strong } from 'mdast';
 import { visit } from 'unist-util-visit';
 
 const addClassNameToNode = (node: Paragraph | Strong, cls: string) => {

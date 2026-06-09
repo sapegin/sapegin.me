@@ -1,5 +1,5 @@
 import { Group } from '@tamia/components/Group';
-import type { Gig } from '../types/Gig';
+import { type Gig } from '../types/Gig';
 import { EventName } from './EventName';
 
 interface Props {
@@ -11,7 +11,7 @@ export function EventList({ items }: Props) {
 		<div className="flex flex-col gap-4">
 			{items.map((item) => (
 				<div key={item.date}>
-					<h3 className="mb-2 heading-3">
+					<h3 className="heading-3 mb-2">
 						<a className="link" href={item.url}>
 							{item.name}
 						</a>

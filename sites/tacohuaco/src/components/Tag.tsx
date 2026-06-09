@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes } from 'react';
+import { type AnchorHTMLAttributes } from 'react';
 
 export function Tag({
 	children,
@@ -6,11 +6,7 @@ export function Tag({
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
 	return (
 		<a
-			className="
-     inline-block rounded-normal bg-light px-2 pt-[0.1ex] font-ui text-sm/normal
-     text-nowrap text-secondary no-underline focus-outline
-     hover:cursor-pointer hover:text-accent
-   "
+			className="rounded-normal bg-light font-ui text-secondary focus-outline hover:text-accent inline-block px-2 pt-[0.1ex] text-sm/normal text-nowrap no-underline hover:cursor-pointer"
 			{...props}
 		>
 			{children}

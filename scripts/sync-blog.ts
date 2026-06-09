@@ -28,9 +28,9 @@ const OUTPUT_DIR = 'content/blog';
 const IMAGES_DIR = path.join('sites/sapegin.me/public/images/blog');
 
 const EMOJI_SEQUENCE_REGEXP =
-	/\p{Extended_Pictographic}(?:\p{Emoji_Modifier}|\ufe0f|\u200d\p{Extended_Pictographic})*/gu;
+	/\p{Extended_Pictographic}(?:\p{Emoji_Modifier}|\uFE0F|\u200D\p{Extended_Pictographic})*/gu;
 
-interface BlogFrontmatter {
+interface BlogFrontmatter extends Record<string, unknown> {
 	description?: string;
 	published?: string | Date;
 	slug?: string;

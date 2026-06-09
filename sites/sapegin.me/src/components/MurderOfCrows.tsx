@@ -21,8 +21,9 @@ export function IconCrow() {
 export function MurderOfCrows() {
 	return (
 		<div
+			// oxlint-disable-next-line jsx-a11y/prefer-tag-over-role
 			role="separator"
-			className="mx-auto w-1/2 border-b border-light pr-6 text-right"
+			className="border-light mx-auto w-1/2 border-b pr-6 text-right"
 		>
 			<IconCrow />
 		</div>

@@ -1,4 +1,4 @@
-import type { APIRoute, GetStaticPaths } from 'astro';
+import { type APIRoute, type GetStaticPaths } from 'astro';
 import { getCollection, getEntry } from 'astro:content';
 import { SITE_URL } from '../../constants';
 

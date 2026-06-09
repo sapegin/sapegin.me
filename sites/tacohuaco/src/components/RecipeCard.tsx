@@ -1,4 +1,4 @@
-import type { RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 import { RecipeTimes } from './RecipeTimes';
 
 export function RecipeCard({
@@ -13,12 +13,9 @@ export function RecipeCard({
 			<a href={`/recipes/${slug}/`} className="quoted-link">
 				<span className="flex flex-col gap-2">
 					<span
-						className="
-        md:transition-shadow md:duration-(--duration-hover) md:ease-hover
-        md:hover:shadow-input
-      "
+						className="md:ease-hover md:hover:shadow-input md:transition-shadow md:duration-(--duration-hover)"
 					>
-						<span className="block aspect-9/6 bg-light">
+						<span className="bg-light block aspect-9/6">
 							{thumbnailUrl && (
 								<img
 									src={thumbnailUrl}

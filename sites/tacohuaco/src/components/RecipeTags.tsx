@@ -4,11 +4,11 @@ import { formatTagName } from '../util/formatTagName';
 import { Tag } from './Tag';
 
 interface Props {
-	tags?: readonly string[];
+	tags: readonly string[];
 	children?: ReactNode;
 }
 
-export function RecipeTags({ tags = [], children }: Props) {
+export function RecipeTags({ tags, children }: Props) {
 	return (
 		<div className="flex flex-row flex-wrap gap-3">
 			{children}

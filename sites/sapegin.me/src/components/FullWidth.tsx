@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 interface Props {
 	children: ReactNode;
@@ -10,7 +10,7 @@ interface Props {
 export function FullWidth({ children }: Props) {
 	return (
 		<div className="ml-[calc(50%-50vw)] w-screen">
-			<div className="mx-auto max-w-[1200px]">{children}</div>
+			<div className="mx-auto max-w-300">{children}</div>
 		</div>
 	);
 }

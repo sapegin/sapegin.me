@@ -2,7 +2,7 @@ import { useCallback, useMemo } from 'react';
 import { useDebouncedValue } from '../hooks/useDebouncedValue';
 import { useSearchIndex } from '../hooks/useSearchIndex';
 import { useSearchResults } from '../hooks/useSearchResults';
-import type { RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 import { formatTagName } from '../util/formatTagName';
 import { useUrlState } from './useUrlState';
 
@@ -72,7 +72,7 @@ export function useSearch(recipes: RecipeFragment[]) {
 			value: searchQuery,
 			onChange: (value?: string) => setSearchQuery(value ?? ''),
 		};
-	}, [autocompleteItems, searchQuery]);
+	}, [autocompleteItems, searchQuery, setSearchQuery]);
 
 	return {
 		getSearchFieldProps,

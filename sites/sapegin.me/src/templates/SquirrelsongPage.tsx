@@ -7,7 +7,7 @@ import { CodeSpreadSupreme } from '../components/CodeSpreadSupreme';
 import { Feedback } from '../components/Feedback';
 import { MurderOfCrows } from '../components/MurderOfCrows';
 import { SquirrelsongLogo } from '../components/SquirrelsongLogo';
-import type { Squirrel } from '../types/Squirrel';
+import { type Squirrel } from '../types/Squirrel';
 import { Page } from './Page';
 
 interface Props {
@@ -223,11 +223,7 @@ function Installation({ squirrels }: Pick<Props, 'squirrels'>) {
 				</p>
 			</div>
 			<div
-				className="
-      grid grid-cols-1 gap-4
-      md:grid-cols-2
-      lg:grid-cols-3
-    "
+				className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
 			>
 				{squirrels.map((app) => (
 					<InstallationLink key={app.url} {...app} />

@@ -1,4 +1,4 @@
-import type { Photo } from '../types/Photo';
+import { type Photo } from '../types/Photo';
 import { getPhotoUrl } from '../util/getPhotoUrl';
 
 /**
@@ -16,10 +16,7 @@ export function Photograph({ photo, id }: { photo: Photo; id?: string }) {
 			height={photo.height}
 			alt={photo.title}
 			loading="lazy"
-			className="
-     size-auto max-h-[min(900px,100vh)] max-w-full
-     md:max-h-[min(900px,calc(100vh-2rem))]
-   "
+			className="size-auto max-h-[min(900px,100vh)] max-w-full md:max-h-[min(900px,calc(100vh-2rem))]"
 			style={{
 				backgroundColor: photo.color,
 			}}

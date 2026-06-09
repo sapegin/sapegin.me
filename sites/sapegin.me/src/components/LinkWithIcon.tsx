@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef } from 'react';
 import { Icon, type IconName } from './Icon';
 
 type Props = ComponentPropsWithoutRef<'a'> & {

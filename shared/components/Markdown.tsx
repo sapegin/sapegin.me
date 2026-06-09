@@ -10,7 +10,7 @@ interface Props {
 /**
  * Renders Markdown with enhanced typography.
  */
-export function Markdown({ text, overrides = {}, forceBlock = false }: Props) {
+export function Markdown({ text, overrides, forceBlock = false }: Props) {
 	const textTypo = typo(text);
 	return (
 		<MarkdownToJsx options={{ overrides, forceBlock }}>

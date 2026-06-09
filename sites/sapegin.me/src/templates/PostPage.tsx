@@ -1,11 +1,11 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { BookPostFooter } from '../components/BookPostFooter';
 import { BookPostHeader } from '../components/BookPostHeader';
 import { MurderOfCrows } from '../components/MurderOfCrows';
 import { PostMeta } from '../components/PostMeta';
 import { RelatedPosts } from '../components/RelatedPosts';
 import { Subscription } from '../components/Subscription';
-import type { Post } from '../types/Post';
+import { type Post } from '../types/Post';
 import { Page } from './Page';
 
 type Props = Post & {

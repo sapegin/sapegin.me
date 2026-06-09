@@ -4,18 +4,18 @@ import { getCollection } from 'astro:content';
 import uniq from 'lodash/uniq';
 import Layout from '../../layouts/Layout.astro';
 import { RecipesPage } from '../../templates/RecipesPage';
-import type { Recipe } from '../../types/Recipe';
+import  { type Recipe } from '../../types/Recipe';
 import { formatTagName } from '../../util/formatTagName';
 
 const TAGS_TO_TITLES: Record<string, string> = {
 	'new-year': 'New Yearʼs eve recipes',
 };
 
-type Props = {
+interface Props {
 	slug: string;
 	tag: string;
 	recipes: Recipe[];
-};
+}
 
 export async function getStaticPaths() {
 	const entries = await getCollection('recipes');

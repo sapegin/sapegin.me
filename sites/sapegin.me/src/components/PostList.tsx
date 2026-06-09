@@ -1,4 +1,4 @@
-import type { Resource } from '../types/Resource';
+import { type Resource } from '../types/Resource';
 import { FormattedDate } from './FormattedDate';
 import { InlineSeparator } from './InlineSeparator';
 
@@ -20,10 +20,7 @@ export function PostList({
 			{posts.map((post, index) => (
 				<li key={post.url ?? post.title} className="typo-body">
 					<span
-						className="
-        flex flex-col flex-wrap gap-x-2
-        md:flex-row md:items-center
-      "
+						className="flex flex-col flex-wrap gap-x-2 md:flex-row md:items-center"
 					>
 						<span>
 							{startIndex !== undefined && (
@@ -43,10 +40,7 @@ export function PostList({
 						{showDates && post.date && (
 							<>
 								<span
-									className="
-           hidden
-           md:flex
-         "
+									className="hidden md:flex"
 								>
 									<InlineSeparator />
 								</span>

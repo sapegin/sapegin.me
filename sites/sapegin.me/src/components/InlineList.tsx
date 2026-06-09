@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef } from 'react';
 
 export function InlineList({
 	className,
@@ -15,12 +15,7 @@ export function InlineListItem({
 	return (
 		<span
 			className={clsx(
-				`
-      mb-1 typo-small italic
-      not-last:after:mx-2 not-last:after:mb-[0.1rem] not-last:after:inline-block
-      not-last:after:h-[0.3rem] not-last:after:w-[0.3rem]
-      not-last:after:bg-border not-last:after:content-[""]
-    `,
+				`typo-small not-last:after:bg-border mb-1 italic not-last:after:mx-2 not-last:after:mb-[0.1rem] not-last:after:inline-block not-last:after:size-[0.3rem] not-last:after:content-[""]`,
 				className
 			)}
 			{...props}

@@ -1,5 +1,5 @@
 import { RecipeList } from '../components/RecipeList';
-import type { Recipe } from '../types/Recipe';
+import { type Recipe } from '../types/Recipe';
 import { PageWithTitle } from './PageWithTitle';
 
 interface Props {
