@@ -13,13 +13,7 @@ const ITEMS = [
 
 export function Menu({ current }: Props) {
 	return (
-		<ul
-			className="
-     grid grid-cols-[repeat(auto-fit,minmax(8rem,1fr))] gap-x-0 gap-y-4
-     text-center
-     lg:flex lg:gap-x-4
-   "
-		>
+		<ul className="grid grid-cols-[repeat(auto-fit,minmax(8rem,1fr))] gap-x-0 gap-y-4 text-center lg:flex lg:gap-x-4">
 			{ITEMS.map(({ title, href }) => (
 				<li key={href}>
 					<MenuLink href={href} isCurrent={current.startsWith(href)}>

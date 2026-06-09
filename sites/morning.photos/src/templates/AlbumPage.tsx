@@ -32,33 +32,19 @@ export function AlbumPage({ url, title, description, photos }: Props) {
 
 	return (
 		<PageWithTitle url={url} title={title}>
-			<div
-				className="
-      flex flex-col gap-8
-      md:gap-16
-    "
-			>
+			<div className="flex flex-col gap-8 md:gap-16">
 				{description && (
 					<div className="prose">
 						<Markdown text={description} forceBlock />
 					</div>
 				)}
 				<FullWidth>
-					<div
-						className="
-        flex flex-col gap-16
-        md:gap-32
-      "
-					>
+					<div className="flex flex-col gap-16 md:gap-32">
 						{sortedPhotos.map((pair) => (
 							<div
 								key={pair[0].name}
 								id={pair[0].name}
-								className="
-          grid grid-cols-1 items-center justify-items-center gap-x-4 gap-y-16
-          md:m-4 md:h-[min(900px,calc(100vh-2rem))]
-          md:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
-        "
+								className="grid grid-cols-1 items-center justify-items-center gap-x-4 gap-y-16 md:m-4 md:h-[min(900px,calc(100vh-2rem))] md:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]"
 							>
 								{pair.map((photo, index) => (
 									<Photograph

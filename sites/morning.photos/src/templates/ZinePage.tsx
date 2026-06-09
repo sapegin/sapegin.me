@@ -30,9 +30,7 @@ export function ZinePage({ url, title, issues }: Props) {
 					return (
 						<article key={id} className="flex flex-col gap-4">
 							<h2 className="heading-2">{issue.title}</h2>
-							<div
-								className="flex flex-col gap-8 md:flex-row"
-							>
+							<div className="flex flex-col gap-8 md:flex-row">
 								<div className="flex flex-col gap-4">
 									<div className="prose">
 										<Markdown text={issue.description} forceBlock />
@@ -61,9 +59,7 @@ export function ZinePage({ url, title, issues }: Props) {
 										<Video src={issue.video} />
 									</div>
 								</div>
-								<div
-									className="-order-1 mx-auto md:order-0 md:mx-0"
-								>
+								<div className="-order-1 mx-auto md:order-0 md:mx-0">
 									<BookCover
 										title={issue.title}
 										image={issue.cover}

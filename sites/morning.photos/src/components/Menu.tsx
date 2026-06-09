@@ -39,12 +39,7 @@ function isCurrent(href: string, current: string) {
 export function Menu({ current }: Props) {
 	return (
 		<nav aria-label="Main">
-			<ul
-				className="
-      flex flex-wrap content-center items-center gap-x-4
-      md:gap-y-4
-    "
-			>
+			<ul className="flex flex-wrap content-center items-center gap-x-4 md:gap-y-4">
 				{ITEMS.map(({ title, href }) => (
 					<li className="typo-menu" key={href}>
 						<a

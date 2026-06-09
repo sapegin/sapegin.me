@@ -7,7 +7,7 @@ interface Props {
 }
 
 const MoonIcon = () => (
-	<span className="align-[0.15ex] text-moon">
+	<span className="text-moon align-[0.15ex]">
 		<Icon icon="moon" className="size-3" />
 	</span>
 );

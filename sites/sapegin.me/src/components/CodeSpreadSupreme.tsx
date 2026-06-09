@@ -26,13 +26,7 @@ const ORDER: [light: string, dark: string][] = [
 
 export function CodeSpreadSupreme({ codes, names }: Props) {
 	return (
-		<div
-			className="
-     grid grid-cols-1 gap-x-8 gap-y-4
-     md:grid-cols-2
-     lg:grid-cols-3
-   "
-		>
+		<div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
 			{names.flatMap((name, i) => [
 				<div key={`light-${name}`} className={ORDER[i][0]}>
 					<Code code={codes.light[name]} />

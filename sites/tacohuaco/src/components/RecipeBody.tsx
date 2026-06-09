@@ -10,9 +10,7 @@ export function RecipeBody({
 	yields,
 }: Recipe) {
 	return (
-		<div
-			className="grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_2.8fr] lg:grid-cols-[1fr_3fr]"
-		>
+		<div className="grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_2.8fr] lg:grid-cols-[1fr_3fr]">
 			<section className="flex flex-col gap-8">
 				<header className="flex flex-col gap-4">
 					<h2 className="heading-2">Ingredients</h2>

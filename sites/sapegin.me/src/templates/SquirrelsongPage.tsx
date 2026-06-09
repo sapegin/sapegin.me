@@ -222,9 +222,7 @@ function Installation({ squirrels }: Pick<Props, 'squirrels'>) {
 					Themes for {squirrels.length} apps and growing.
 				</p>
 			</div>
-			<div
-				className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-			>
+			<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 				{squirrels.map((app) => (
 					<InstallationLink key={app.url} {...app} />
 				))}

@@ -181,9 +181,7 @@ function TheButton() {
 
 function ChapterList({ chapters }: { chapters: Chapter[] }) {
 	return (
-		<ul
-			className="grid grid-cols-1 gap-8 md:grid-cols-2"
-		>
+		<ul className="grid grid-cols-1 gap-8 md:grid-cols-2">
 			{chapters.map((chapter) => (
 				<li
 					key={chapter.url ?? chapter.title}
@@ -202,9 +200,7 @@ function ChapterList({ chapters }: { chapters: Chapter[] }) {
 						)}
 					</p>
 					{chapter.sections.length > 0 ? (
-						<div
-							className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2"
-						>
+						<div className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2">
 							{chapter.sections.map((section) => (
 								<p key={section} className="typo-small">
 									{section}
@@ -232,9 +228,7 @@ function PatternList({
 	strikethrough?: boolean;
 }) {
 	return (
-		<ul
-			className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-		>
+		<ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 			{patterns.map((pattern) => (
 				<li key={pattern} className="flex flex-col gap-1">
 					<p
@@ -327,9 +321,7 @@ export function Spread({
 
 function Features() {
 	return (
-		<div
-			className="grid grid-cols-1 gap-8 md:grid-cols-[2fr_1fr]"
-		>
+		<div className="grid grid-cols-1 gap-8 md:grid-cols-[2fr_1fr]">
 			<div>
 				<Spread image="spread.png" />
 			</div>
@@ -360,9 +352,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 						A book on clean code for frontend developers
 					</p>
 				</div>
-				<section
-					className="flex flex-col gap-8 md:flex-row"
-				>
+				<section className="flex flex-col gap-8 md:flex-row">
 					<div className="flex flex-col gap-8">
 						<h2 className="sr-only">About the book</h2>
 						<div className="flex flex-col gap-4">
@@ -412,9 +402,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 							</p>
 						</div>
 					</div>
-					<div
-						className="-order-1 mx-auto shrink-0 md:order-0 md:mx-0"
-					>
+					<div className="-order-1 mx-auto shrink-0 md:order-0 md:mx-0">
 						<BookCover
 							image="washing-your-code-large"
 							title="Washing your code"
@@ -455,9 +443,7 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 				</section>
 				<section className="flex flex-col gap-4">
 					<h2 className="heading-2">What readers are saying?</h2>
-					<div
-						className="grid grid-cols-1 gap-8 md:grid-cols-2"
-					>
+					<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 						{testimonials.map((testimonial) => (
 							<Testimonial key={testimonial.author} {...testimonial} />
 						))}

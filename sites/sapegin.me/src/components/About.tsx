@@ -7,12 +7,8 @@ interface Props {
 
 export function About({ children }: Props) {
 	return (
-		<section
-			className="flex flex-col gap-8 md:flex-row"
-		>
-			<div
-				className="mx-auto shrink-0 md:mx-0"
-			>
+		<section className="flex flex-col gap-8 md:flex-row">
+			<div className="mx-auto shrink-0 md:mx-0">
 				<img
 					src="/images/artem-sapegin.avif"
 					alt="Artem Sapegin"

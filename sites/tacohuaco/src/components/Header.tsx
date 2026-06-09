@@ -7,12 +7,7 @@ interface Props {
 
 export function Header({ url }: Props) {
 	return (
-		<header
-			className="
-     flex flex-col justify-between gap-8
-     lg:flex-row
-   "
-		>
+		<header className="flex flex-col justify-between gap-8 lg:flex-row">
 			<Logo />
 			<Menu current={url} />
 		</header>

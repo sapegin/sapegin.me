@@ -19,9 +19,7 @@ export function PostList({
 		<ul className="flex flex-col gap-2">
 			{posts.map((post, index) => (
 				<li key={post.url ?? post.title} className="typo-body">
-					<span
-						className="flex flex-col flex-wrap gap-x-2 md:flex-row md:items-center"
-					>
+					<span className="flex flex-col flex-wrap gap-x-2 md:flex-row md:items-center">
 						<span>
 							{startIndex !== undefined && (
 								<span className="typo-small">{startIndex - index}. </span>
@@ -39,9 +37,7 @@ export function PostList({
 						)}
 						{showDates && post.date && (
 							<>
-								<span
-									className="hidden md:flex"
-								>
+								<span className="hidden md:flex">
 									<InlineSeparator />
 								</span>
 								<time className="typo-small" dateTime={post.date.toISOString()}>

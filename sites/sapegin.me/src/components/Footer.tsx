@@ -1,7 +1,7 @@
 export function Footer() {
 	return (
 		<footer>
-			<p className="mb-1 typo-small">
+			<p className="typo-small mb-1">
 				© Artem Sapegin, 1999—{new Date().getFullYear()}
 			</p>
 			<p className="typo-small">

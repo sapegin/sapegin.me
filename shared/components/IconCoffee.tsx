@@ -26,17 +26,11 @@ export function IconCoffee({
 				<linearGradient id="gradient" x1="0" x2="0" y1="1">
 					<stop
 						offset="0%"
-						className="
-        [stop-color:#766c90]
-        dark:[stop-color:#9d9dc7]
-      "
+						className="[stop-color:#766c90] dark:[stop-color:#9d9dc7]"
 					/>
 					<stop
 						offset="100%"
-						className="
-        [stop-color:#aa608e]
-        dark:[stop-color:#c288b5]
-      "
+						className="[stop-color:#aa608e] dark:[stop-color:#c288b5]"
 					/>
 				</linearGradient>
 			)}

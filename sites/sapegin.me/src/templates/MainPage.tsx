@@ -138,9 +138,7 @@ function Photography() {
 						className="image"
 						loading="lazy"
 					/>
-					<div
-						className="hidden md:block"
-					>
+					<div className="hidden md:block">
 						<img
 							src="/images/photos-3.avif"
 							alt="Foggy Berliner Dom, Germany"
@@ -177,9 +175,7 @@ function Coffee() {
 			<h2 className="heading-2">I drink lots of coffee</h2>
 			<div className="expander">
 				<div className="grid-auto-narrow grid gap-4">
-					<div
-						className="hidden md:block"
-					>
+					<div className="hidden md:block">
 						<img
 							src="/images/coffee-1.avif"
 							alt="Coffee"
@@ -238,9 +234,7 @@ function Cooking() {
 							loading="lazy"
 						/>
 					</a>
-					<div
-						className="hidden md:block"
-					>
+					<div className="hidden md:block">
 						<a className="link" href="https://tacohuaco.co/recipes/svekolnik/">
 							<img
 								src="/images/food-2.avif"
@@ -293,9 +287,7 @@ function Me() {
 						className="image"
 						loading="lazy"
 					/>
-					<div
-						className="hidden md:block"
-					>
+					<div className="hidden md:block">
 						<img
 							src="/images/me-2.avif"
 							alt="Artem Sapegin is drinking coffee"

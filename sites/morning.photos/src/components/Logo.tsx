@@ -5,13 +5,7 @@ export function Logo() {
 		<div className="typo-menu">
 			<a
 				href="/"
-				className="
-      inline-block bg-linear-to-b from-gradient-1 to-gradient-2 bg-clip-text
-      font-bold text-primary no-underline focus-outline transition-all
-      duration-(--duration-hover) ease-hover
-      [-webkit-text-fill-color:transparent]
-      hover:from-accent hover:to-primary hover:underline
-    "
+				className="from-gradient-1 to-gradient-2 text-primary focus-outline ease-hover hover:from-accent hover:to-primary inline-block bg-linear-to-b bg-clip-text font-bold no-underline transition-all duration-(--duration-hover) [-webkit-text-fill-color:transparent] hover:underline"
 			>
 				Morning.photos
 			</a>

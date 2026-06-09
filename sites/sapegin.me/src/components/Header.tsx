@@ -16,9 +16,7 @@ export function Header({ url }: Props) {
 				Skip to content
 			</a>
 			<Banner />
-			<div
-				className="mx-auto mb-4 text-center md:mb-[-2.6rem] md:w-100"
-			>
+			<div className="mx-auto mb-4 text-center md:mb-[-2.6rem] md:w-100">
 				<Logo />
 			</div>
 			<Menu current={url} />

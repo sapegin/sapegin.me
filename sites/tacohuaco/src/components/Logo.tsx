@@ -38,22 +38,10 @@ const getTacoProps = (): ComponentProps<typeof Taco> => {
 
 export function Logo() {
 	return (
-		<a
-			href="/"
-			className="
-     group mx-auto rounded-normal focus-outline
-     md:mx-0
-   "
-		>
+		<a href="/" className="group rounded-normal focus-outline mx-auto md:mx-0">
 			<span className="-mt-2 -mr-2 flex items-center gap-1">
 				<Taco height={34} {...getTacoProps()} />
-				<span
-					className="
-       mt-2 p-2 typo-menu font-bold text-accent no-underline transition-all
-       duration-(--duration-hover) ease-hover
-       group-hover:bg-accent group-hover:text-background
-     "
-				>
+				<span className="typo-menu text-accent ease-hover group-hover:bg-accent group-hover:text-background mt-2 p-2 font-bold no-underline transition-all duration-(--duration-hover)">
 					Tacohuaco
 				</span>
 			</span>

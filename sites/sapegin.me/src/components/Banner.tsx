@@ -8,20 +8,10 @@ export function Banner() {
 	}
 
 	return (
-		<aside
-			className="
-     -mt-4 mb-2 ml-[calc(50%-50vw)] w-screen bg-accent px-4 py-2 text-center
-   "
-		>
+		<aside className="bg-accent -mt-4 mb-2 ml-[calc(50%-50vw)] w-screen px-4 py-2 text-center">
 			<a
 				href="/book/"
-				className="
-      text-background
-      hover:no-underline
-      focus-visible:rounded-normal focus-visible:outline-2
-      focus-visible:outline-offset-(--border-width-focus-offset)
-      focus-visible:outline-current
-    "
+				className="text-background focus-visible:rounded-normal hover:no-underline focus-visible:outline-2 focus-visible:outline-offset-(--border-width-focus-offset) focus-visible:outline-current"
 			>
 				{banner}
 			</a>

@@ -1,11 +1,11 @@
 :root {
-  --primary: #af9fc7;
+	--primary: #af9fc7;
 }
 button {
-  color: var(--primary);
-  border: 1px solid;
-  padding-inline: 1rem;
+	color: var(--primary);
+	border: 1px solid;
+	padding-inline: 1rem;
 }
 button:hover {
-  font-weight: bold;
+	font-weight: bold;
 }

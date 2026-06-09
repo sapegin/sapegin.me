@@ -19,9 +19,7 @@ export function AlbumsPage({ url, title, albums }: Props) {
 	return (
 		<PageWithTitle url={url} title={title}>
 			<FullWidth>
-				<div
-					className="grid-auto-wide grid gap-8 md:gap-y-16"
-				>
+				<div className="grid-auto-wide grid gap-8 md:gap-y-16">
 					{albums.map((album) => (
 						<a key={album.url} href={album.url} className="quoted-link mb-8">
 							{album.cover && (
@@ -29,9 +27,7 @@ export function AlbumsPage({ url, title, albums }: Props) {
 									<Thumbnail photo={album.cover} />
 								</div>
 							)}
-							<h2
-								className="heading-3 mx-2 mt-2 md:mx-0"
-							>
+							<h2 className="heading-3 mx-2 mt-2 md:mx-0">
 								<u>{album.title}</u>
 							</h2>
 						</a>

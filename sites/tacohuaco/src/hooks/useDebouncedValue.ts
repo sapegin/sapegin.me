@@ -1,8 +1,8 @@
 import { useEffect, useReducer, useRef } from 'react';
 
 /**
- * Debounces the provided value in render
- * Based on https://github.com/amannn/react-hooks/tree/main/packages/use-debounced
+ * Debounces the provided value in render.pm Based on
+ * https://github.com/amannn/react-hooks/tree/main/packages/use-debounced
  */
 export function useDebouncedValue<T>(value: T, delay = 300) {
 	const [, forceUpdate] = useReducer(() => ({}), {});

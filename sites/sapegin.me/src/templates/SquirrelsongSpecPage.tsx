@@ -299,9 +299,7 @@ function UiSample({ palette }: { palette: Palette }) {
 			</div>
 			<div className="h-px bg-(--border-color)" />
 			<div className="text-(--disabled-foreground)">disabledForeground</div>
-			<div
-				className="cursor-pointer text-(--link-foreground) hover:text-(--link-hover-foreground)"
-			>
+			<div className="cursor-pointer text-(--link-foreground) hover:text-(--link-hover-foreground)">
 				linkForeground
 			</div>
 			<div className="-mx-2 bg-(--active-background) px-2 text-(--active-foreground)">
@@ -313,80 +311,52 @@ function UiSample({ palette }: { palette: Palette }) {
 			<div className="-mx-2 bg-(--match-background) px-2 text-(--match-foreground)">
 				matchForeground/matchBackground
 			</div>
-			<div
-				className="-mx-2 bg-(--secondary-match-background) px-2 text-(--match-foreground)"
-			>
+			<div className="-mx-2 bg-(--secondary-match-background) px-2 text-(--match-foreground)">
 				secondaryMatchBackground
 			</div>
 			<div className="-mx-2 bg-(--selection-background) px-2 text-(--text-foreground)">
 				selectionBackground
 			</div>
-			<div
-				className="-mx-2 bg-(--secondary-sel-background) px-2 text-(--text-foreground)"
-			>
+			<div className="-mx-2 bg-(--secondary-sel-background) px-2 text-(--text-foreground)">
 				secondarySelectionBackground
 			</div>
-			<div
-				className="-mx-2 bg-(--line-highlight-background) px-2 text-(--text-foreground)"
-			>
+			<div className="-mx-2 bg-(--line-highlight-background) px-2 text-(--text-foreground)">
 				lineHighlightBackground
 			</div>
-			<div
-				className="border border-solid border-(--info-border) bg-(--info-background) px-2 text-(--info-foreground)"
-			>
+			<div className="border border-solid border-(--info-border) bg-(--info-background) px-2 text-(--info-foreground)">
 				infoForeground/infoBackground/infoBorder
 			</div>
-			<div
-				className="border border-solid border-(--success-border) bg-(--success-background) px-2 text-(--success-foreground)"
-			>
+			<div className="border border-solid border-(--success-border) bg-(--success-background) px-2 text-(--success-foreground)">
 				successForeground/successBackground/successBorder
 			</div>
-			<div
-				className="border border-solid border-(--warning-border) bg-(--warning-background) px-2 text-(--warning-foreground)"
-			>
+			<div className="border border-solid border-(--warning-border) bg-(--warning-background) px-2 text-(--warning-foreground)">
 				warningForeground/warningBackground/warningBorder
 			</div>
-			<div
-				className="border border-solid border-(--error-border) bg-(--error-background) px-2 text-(--error-foreground)"
-			>
+			<div className="border border-solid border-(--error-border) bg-(--error-background) px-2 text-(--error-foreground)">
 				errorForeground/errorBackground/errorBorder
 			</div>
-			<div
-				className="border border-solid border-(--active-border) px-2 text-(--text-foreground)"
-			>
+			<div className="border border-solid border-(--active-border) px-2 text-(--text-foreground)">
 				activeBorder
 			</div>
-			<div
-				className="border border-solid border-(--focus-border) px-2 text-(--text-foreground)"
-			>
+			<div className="border border-solid border-(--focus-border) px-2 text-(--text-foreground)">
 				focusBorder
 			</div>
-			<div
-				className="rounded-button flex flex-col gap-4 overflow-hidden border border-solid border-(--light-border) bg-(--ui-background) p-2"
-			>
+			<div className="rounded-button flex flex-col gap-4 overflow-hidden border border-solid border-(--light-border) bg-(--ui-background) p-2">
 				<div className="text-(--title-foreground)">titleForeground</div>
 				<div className="text-(--text-foreground)">textForeground</div>
 				<div className="text-(--secondary-text-foreground)">
 					secondaryTextForeground
 				</div>
-				<div
-					className="rounded-button cursor-pointer bg-(--button-background) px-2 py-1 text-(--button-foreground) hover:bg-(--button-hover-background)"
-				>
+				<div className="rounded-button cursor-pointer bg-(--button-background) px-2 py-1 text-(--button-foreground) hover:bg-(--button-hover-background)">
 					button
 				</div>
-				<div
-					className="rounded-button cursor-pointer bg-(--secondary-button-background) px-2 py-1 text-(--secondary-button-foreground) hover:bg-(--secondary-button-hover-background)"
-				>
+				<div className="rounded-button cursor-pointer bg-(--secondary-button-background) px-2 py-1 text-(--secondary-button-foreground) hover:bg-(--secondary-button-hover-background)">
 					secondaryButton
 				</div>
-				<div
-					className="rounded-button bg-(--disabled-button-background) px-2 py-1 text-(--disabled-foreground)"
-				>
+				<div className="rounded-button bg-(--disabled-button-background) px-2 py-1 text-(--disabled-foreground)">
 					disabledButton
 				</div>
-				<div
-					className="-m-2 flex justify-center gap-2 bg-(--secondary-ui-background) text-lg"
-				>
+				<div className="-m-2 flex justify-center gap-2 bg-(--secondary-ui-background) text-lg">
 					<div className="text-(--icon-color)" title="icon">
 						★
 					</div>

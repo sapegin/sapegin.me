@@ -48,10 +48,7 @@ export function Menu({ current }: Props) {
 	return (
 		<nav aria-label="Main">
 			<ul
-				className="
-      flex flex-wrap justify-center gap-x-4
-      md:grid md:justify-normal md:justify-items-center md:gap-y-4
-    "
+				className="flex flex-wrap justify-center gap-x-4 md:grid md:justify-normal md:justify-items-center md:gap-y-4"
 				style={{
 					gridTemplateColumns: `repeat(${HALF}, min-content) auto repeat(${HALF}, min-content)`,
 				}}
@@ -59,13 +56,7 @@ export function Menu({ current }: Props) {
 				{ITEMS.map(({ title, href }, index) => (
 					<Fragment key={href}>
 						{index === HALF && (
-							<li
-								aria-hidden="true"
-								className="
-          hidden
-          md:block
-        "
-							/>
+							<li aria-hidden="true" className="hidden md:block" />
 						)}
 						<li className="typo-menu">
 							<a
@@ -73,7 +64,7 @@ export function Menu({ current }: Props) {
 								className={clsx(
 									'link text-nowrap no-underline',
 									isCurrent(href, current) &&
-										`text-shadow-[2px_2px] text-shadow-primary/30`
+										`text-shadow-primary/30 text-shadow-[2px_2px]`
 								)}
 							>
 								{title}

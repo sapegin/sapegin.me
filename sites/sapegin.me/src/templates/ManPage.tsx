@@ -18,12 +18,7 @@ export function ManPage({ url }: Props) {
 				</p>
 				<div className="flex flex-col gap-4">
 					<h2 className="heading-2">Overview</h2>
-					<div
-						className="
-        flex flex-col gap-8
-        md:flex-row
-      "
-					>
+					<div className="flex flex-col gap-8 md:flex-row">
 						<ul className="flex flex-col gap-2">
 							<li className="typo-body">
 								<Typo>
@@ -78,12 +73,7 @@ export function ManPage({ url }: Props) {
 								</Typo>
 							</li>
 						</ul>
-						<div
-							className="
-         -order-1 mx-auto
-         md:order-0 md:mx-0
-       "
-						>
+						<div className="-order-1 mx-auto md:order-0 md:mx-0">
 							<div className="expander">
 								<img
 									src="/images/me-4.jpg"
