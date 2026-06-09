@@ -72,7 +72,7 @@ I’ve seen Immer before and the API looks pretty nice. Examples in the talk sho
 
 React context can be useful in some cases, like showing third-party ads in your app. The new API looks easier to use than the old one, and more explicit.
 
-> “Get Rich Quick With React Context” lightning talk at \#ReactFinland by @wiekatz didn't tell how good job opportunities you have when doing React <span aria-hidden="true">😅</span> But how to insert ads. Also other use cases like localizations. — [@walokra](https://twitter.com/walokra/status/989059779254538240)
+> “Get Rich Quick With React Context” lightning talk at \#ReactFinland by @wiekatz didn’t tell how good job opportunities you have when doing React <span aria-hidden="true">😅</span> But how to insert ads. Also other use cases like localizations. — [@walokra](https://twitter.com/walokra/status/989059779254538240)
 
 ### <span aria-hidden="true">⚡️</span> There’s always a better way to handle localization by [Eemeli Aro](https://twitter.com/Eemeli_Aro)
 
@@ -200,7 +200,7 @@ _(It wasn’t as easy as I thought.)_
 
 [Slides](https://speakerdeck.com/ryyppy/making-unreasonable-states-impossible)
 
-> Getting deeper into \#ReasonML and \#ReasonReact with @ryyppy's talk of Making Unreasonable States Impossible at \#ReactFinland by live coding tic-tac-toe. Learning by doing <span aria-hidden="true">👌</span> Exhaustive pattern matching forces edge-cases to be handled. — [@walokra](https://twitter.com/walokra/status/989422170634899458)
+> Getting deeper into \#ReasonML and \#ReasonReact with @ryyppy’s talk of Making Unreasonable States Impossible at \#ReactFinland by live coding tic-tac-toe. Learning by doing <span aria-hidden="true">👌</span> Exhaustive pattern matching forces edge-cases to be handled. — [@walokra](https://twitter.com/walokra/status/989422170634899458)
 
 ### Reactive State Machines and Statecharts by [David Khourshid](https://twitter.com/DavidKPiano)
 
