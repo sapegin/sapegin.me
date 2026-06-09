@@ -1,6 +1,5 @@
 ---
 title: 'Finding the most often changed files with git effort from git-extras'
-description: ''
 date: 2020-08-12
 tags:
   - git

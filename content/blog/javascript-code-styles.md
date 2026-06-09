@@ -1,11 +1,10 @@
 ---
 title: 'Which JavaScript code style is the most popular'
 date: 2017-01-30
-medium: what-javascript-code-style-is-the-most-popular-5a3f5bec1f6f
 tags:
   - tools
   - javascript
-  - code style
+  - code-style
 ---
 
 There are two big holy war questions about code style in JavaScript: tabs vs. spaces and semicolons vs. no semicolons. Of course there are more, like where to put a comma in a multiline array declaration, but these two are causing the most casualties.
@@ -14,20 +13,20 @@ I was wondering if it’s worth our time. Can we all just adopt the most popular
 
 ## Tabs or spaces?
 
-![2 spaces (74% on npm, 61% in the survey); 4 spaces (19% on npm, 20% in the survey); tab (7% on npm, 18% in the survey)](/images/javascript-indent.svg)
+![2 spaces (74% on npm, 61% in the survey); 4 spaces (19% on npm, 20% in the survey); tab (7% on npm, 18% in the survey)](/images/blog/javascript-indent.svg)
 
 - Two-space indentation is a clear winner, especially for open source projects.
 - Some developers don’t really know what they use. Here’s my favorite answer: “I just press tab and the editor formats it to something else I don’t even know”.
 
 ## Semicolons or no semicolons?
 
-![Semicolons (86% on npm, 76% in the survey); no semicolons (14% on npm, 24% in the survey)](/images/javascript-semi.svg)
+![Semicolons (86% on npm, 76% in the survey); no semicolons (14% on npm, 24% in the survey)](/images/blog/javascript-semi.svg)
 
 - Majority of developers write JavaScript with semicolons.
 
 ## Linter presets
 
-![No preset (62% on npm, 29% in the survey); AirBnb (1% on npm, 36% in the survey); ESLint (8% on npm, 0% in the survey); Standard (7% on npm, 24% in the survey)](/images/javascript-presets.svg)
+![No preset (62% on npm, 29% in the survey); AirBnb (1% on npm, 36% in the survey); ESLint (8% on npm, 0% in the survey); Standard (7% on npm, 24% in the survey)](/images/blog/javascript-presets.svg)
 
 npm results:
 
@@ -46,7 +45,7 @@ Survey results:
 
 ## Linters
 
-![No linter (29% on npm, 7% in the survey); ESLint (48% on npm, 80% in the survey); JSCS (5% on npm, 3% in the survey); JSHint (15% on npm, 9% in the survey)](/images/javascript-linters.svg)
+![No linter (29% on npm, 7% in the survey); ESLint (48% on npm, 80% in the survey); JSCS (5% on npm, 3% in the survey); JSHint (15% on npm, 9% in the survey)](/images/blog/javascript-linters.svg)
 
 npm results:
 

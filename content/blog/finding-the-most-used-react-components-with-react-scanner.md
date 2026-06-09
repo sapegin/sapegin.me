@@ -1,11 +1,10 @@
 ---
 title: 'Finding the most used React components with react-scanner'
-description: ''
 date: 2020-08-12
 tags:
   - react
   - javascript
-  - design systems
+  - design-systems
   - tools
 ---
 

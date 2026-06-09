@@ -1,6 +1,5 @@
 ---
 title: 'Generating TypeScript React components from SVG icons using SVGR'
-description: ''
 date: 2020-09-09
 tags:
   - react

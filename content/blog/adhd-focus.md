@@ -14,7 +14,7 @@ I could never stay focused on one thing for a long time, my mind is always squir
 
 In this article, I share a few things that help me to complete my tasks. Mostly they minimize distractions in different ways, and the amount of things I need to keep in my memory. Some are specific to my job as a software engineer but most are fairly generic. I’m only familiar with the Apple ecosystem, so if you have suggestions for Windows, Linux, or Android, please let me know. Even if you don’t have ADHD, you could find something useful for yourself.
 
-![My workplace](/images/workplace-2024.webp)
+![My workplace](/images/blog/workplace-2024.webp)
 
 ## Disable notifications everywhere
 
@@ -30,7 +30,7 @@ My general rule for notifications is: better to have too few than too many. If I
 
 I think multiple-screen setups aren’t worth it: they require too much space on the desk and too much meta work — moving windows between screens and so on. They also tend to have too much information visible at the same time.
 
-![The Matrix, 1999](/images/focus-matrix-monitors.webp 'Screenshot from The Matrix, 1999')
+![The Matrix, 1999](/images/blog/focus-matrix-monitors.webp)
 
 I have used a single 27” screen for the past decade or so, and for me, it’s the perfect size.
 
@@ -55,7 +55,7 @@ When I’m not wearing headphones, we often listen to sets by [My Analog Journal
 
 I don’t like to see stuff unrelated to what I’m doing, especially things that change often or with animation, like icons in the dock or the menu bar, so I try to hide as many of them as possible.
 
-![Splitting screen into two windows](/images/focus-split-screen.webp)
+![Splitting screen into two windows](/images/blog/focus-split-screen.webp)
 
 ### Maximize app windows
 
@@ -109,11 +109,11 @@ I try to keep my phone in my desk drawer, or at least on the side of my desk ups
 
 ## Work on an iPad
 
-[Using an iPad](https://sapegin.me/blog/writing-on-ipad/) (with an external keyboard) for certain tasks, like writing an article, works very well for me — somehow it feels like a single-task device and it’s easier to focus.
+[Using an iPad](/blog/writing-on-ipad/) (with an external keyboard) for certain tasks, like writing an article, works very well for me — somehow it feels like a single-task device and it’s easier to focus.
 
 **Tip:** Most tech writing I do in Markdown, in the [iA Writer](https://ia.net/writer).
 
-![Writing on an iPad](/images/ipad-nuphy-air60-keyboard.jpg)
+![Writing on an iPad](/images/blog/ipad-nuphy-air60-keyboard.jpg)
 
 **Tip:** I often go to a café to write, and it helps me a lot to focus on writing. As much as I loathe noise and distractions, the café noise and presence of other people (known as _body doubling_, see below) help me to focus on writing. Unless, of course, I can hear and understand what people are talking about — in this case, I must hear the gossip.
 
@@ -133,7 +133,7 @@ I use several tools to keep notes and tasks:
 
 When I suddenly fall into a flow state (rarely but happens) I don’t want to be distracted by new messages in Slack or Telegram. To help me with that I use [Quitter](https://marco.org/apps) to close all such apps after a certain time.
 
-![Quitter](/images/focus-quitter.png)
+![Quitter](/images/blog/focus-quitter.png)
 
 ## Improve meeting notifications
 
@@ -141,7 +141,7 @@ I was always struggling with meeting notifications. For some reason, all calenda
 
 [Dato](https://sindresorhus.com/dato) is a calendar app that gives me quick access to my calendar from the menu bar. My favorite feature is that it shows upcoming calls in the menu bar. And there’s a global shortcut to open this link in your default browser.
 
-![Dato menu bar](/images/focus-dato.png)
+![Dato menu bar](/images/blog/focus-dato.png)
 
 ## Make a list
 
@@ -154,7 +154,7 @@ I mainly use two kinds of lists:
 - **Daily todo cards**, similar to [Analog](https://ugmonk.com/en-de/pages/analog).
 - **Project todos** in Bear or Notion.
 
-![Todo](/images/focus-todo.webp)
+![Todo](/images/blog/focus-todo.webp)
 
 I’m still figuring out what works best for me, and will probably write another article if I ever find a working solution.
 
@@ -168,7 +168,7 @@ However, I feel more productive when my fiancée is working next to me. We’re 
 
 **Tip:** This is called [body doubling](https://lifehacker.com/use-body-doubling-to-increase-your-productivity-1849021265), and if you live alone, you could try to have a video call with a friend, or even watch someone working on YouTube.
 
-![Our home office](/images/offline-home-office.webp)
+![Our home office](/images/blog/offline-home-office.webp)
 
 ## Work with an AI assistant
 
@@ -178,7 +178,7 @@ Recently I started using [ChatGPT](https://chat.openai.com/) to generate the ini
 
 I also use [GitHub Copilot’s](https://github.com/features/copilot) inline chat, and I like that it’s unobtrusive, and knows enough context, so the queries could be very short.
 
-![GitHub Copilot’s chat](/images/focus-github-copilot-chat.png)
+![GitHub Copilot’s chat](/images/blog/focus-github-copilot-chat.png)
 
 I’ve also tried Copilot’s autocomplete and found it infuriatingly annoying and distracting.
 
@@ -186,15 +186,15 @@ Usually, AI could give you a draft you could improve on, or help with the coding
 
 Think of it as a slightly smarter Stack Overflow or an assistant who can google something for you or write some code but doesn’t understand whether it’s a good solution or not, or whether it’ll work at all.
 
-![ChatGPT with some coding question](/images/focus-chatgpt.png)
+![ChatGPT with some coding question](/images/blog/focus-chatgpt.png)
 
 **Tip:** I usually use ChatGPT via [QuickGPT app](https://sindresorhus.com/quickgpt).
 
 ## Choose a non-distracting color scheme for your editor
 
-I’ve created my own color scheme that gives me enough contrast to distinguish different things in the code but not overly bright to make my eyes bleed. I called it [Squirrelsong](https://sapegin.me/squirrelsong/), because why not?
+I’ve created my own color scheme that gives me enough contrast to distinguish different things in the code but not overly bright to make my eyes bleed. I called it [Squirrelsong](/squirrelsong/), because why not?
 
-![Squirrelsong Light theme](/images/focus-squirrelsong.webp)
+![Squirrelsong Light theme](/images/blog/focus-squirrelsong.webp)
 
 **Tip:** To make the coding experience even better, I use [MonoLisa](https://www.monolisa.dev) font in all my code editors and a terminal.
 
@@ -202,7 +202,7 @@ I’ve created my own color scheme that gives me enough contrast to distinguish 
 
 Minimizing distractions and knowing what to do next helps a lot in staying focused and productive. If you’ve got any tips to stay productive, I’ll be delighted to learn about them on [Mastodon](https://mastodon.cloud/@sapegin) or [Bluesky](https://bsky.app/profile/sapegin.bsky.social).
 
-You may be also curious to read [my personal user manual](https://sapegin.me/man/).
+You may be also curious to read [my personal user manual](/man/).
 
 ---
 

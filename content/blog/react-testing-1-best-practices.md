@@ -43,7 +43,7 @@ _Automated tests make it possible to catch bugs before you commit them to the re
 
 **The testing pyramid**, introduced by [Mike Cohn](http://www.mountaingoatsoftware.com/), is probably the most popular approach to software testing:
 
-![UI < Service < Unit](/images/testing-pyramid.svg)
+![UI < Service < Unit](/images/blog/testing-pyramid.svg)
 
 It says that UI tests are the slowest and the most expensive to write, and unit tests are the fastest and the cheapest to write, so we should write many unit tests and few UI tests.
 
@@ -55,7 +55,7 @@ _So maybe frontend needs a different approach to testing?_
 
 **The testing trophy**, [introduced by Kent C. Dodds](https://kentcdodds.com/blog/write-tests) is getting popular for the frontend tests:
 
-![End-to-end < Integration > Unit < Static](/images/testing-trophy.svg)
+![End-to-end < Integration > Unit < Static](/images/blog/testing-trophy.svg)
 
 It says that we should spend more time writing integration tests than any other kind of tests.
 

@@ -1,6 +1,5 @@
 ---
 title: 'Renaming TypeScript interfaces with ts-morph'
-description: ''
 date: 2020-08-06
 tags:
   - typescript

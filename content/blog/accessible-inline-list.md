@@ -8,7 +8,7 @@ tags:
   - accessibility
 ---
 
-I had a list like this on [my site](https://sapegin.me/) for a long time:
+I had a list like this on [my site](/) for a long time:
 
 <p style="text-align:center">Pizza · Döner · Kaffee</p>
 
@@ -26,12 +26,7 @@ li + li::before {
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="iamsapegin" data-slug-hash="ZgYprX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZgYprX">
-  <span>See the Pen <a href="https://codepen.io/iamsapegin/pen/ZgYprX/">
-  ZgYprX</a> by Artem Sapegin (<a href="https://codepen.io/iamsapegin">@iamsapegin</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+[Demo on CodePen](https://codepen.io/iamsapegin/pen/ZgYprX)
 
 **Pros.** Simple.
 
@@ -49,12 +44,7 @@ A naïve solution to accessibility problems could be moving bullets to the marku
 </ul>
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="iamsapegin" data-slug-hash="RXNGqb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RXNGqb">
-  <span>See the Pen <a href="https://codepen.io/iamsapegin/pen/RXNGqb/">
-  RXNGqb</a> by Artem Sapegin (<a href="https://codepen.io/iamsapegin">@iamsapegin</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+[Demo on CodePen](https://codepen.io/iamsapegin/pen/RXNGqb)
 
 **Pros.** works fine in screen readers.
 
@@ -86,12 +76,7 @@ li + li::before {
 
 I’ve added `display: flex` to the `ul` to make it independent from possible whitespace in HTML.
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="iamsapegin" data-slug-hash="wVBzZo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="wVBzZo">
-  <span>See the Pen <a href="https://codepen.io/iamsapegin/pen/wVBzZo/">
-  wVBzZo</a> by Artem Sapegin (<a href="https://codepen.io/iamsapegin">@iamsapegin</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+[Demo on CodePen](https://codepen.io/iamsapegin/pen/wVBzZo)
 
 **Pros.** works fine in screen readers, clean markup.
 

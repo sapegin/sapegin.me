@@ -1,6 +1,5 @@
 ---
 title: 'Finding unused and missing npm dependencies with depcheck'
-description: ''
 date: 2020-09-29
 tags:
   - javascript

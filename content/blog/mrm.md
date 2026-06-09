@@ -1,10 +1,9 @@
 ---
 title: 'Automating open source project configuration with Mrm'
 date: 2017-12-03
-medium: automating-open-source-project-configuration-with-mrm-7f67fd55a9b0
 tags:
   - tools
-  - open source
+  - open-source
   - javascript
 ---
 
@@ -16,7 +15,7 @@ We use many tools, like linters, test runners and continuous integration, to mak
 
 The only thing that many times was preventing me from extracting some generic function to a separate package is a need to copy and modify a dozen of config files — all that `.somethingrc`s — just to publish a 50-line function.
 
-![Typical open source project on GitHub: lots of configuration files for just a single file with the source code](/images/typical-oss.png)
+![Typical open source project on GitHub: lots of configuration files for just a single file with the source code](/images/blog/typical-oss.png)
 
 These support files are usually only _slightly different_ in all your projects. For example, a `.gitignore` file has `node_modules` and editor artifacts that you want to share between all your projects, but some projects have extra lines there that you don’t want in other projects. We need a way to keep in sync the common parts but allow per-project customizations.
 
@@ -53,11 +52,11 @@ For example, the [Jest task](https://github.com/sapegin/mrm-tasks/tree/master/pa
 - tries to get rid of Mocha and AVA configs and dependencies;
 - suggests to us `jest-codemods` if projects used other test frameworks.
 
-![Running Mrm Jest task in terminal](/images/mrm-jest.webp)
+![Running Mrm Jest task in terminal](/images/blog/mrm-jest.webp)
 
 Or the [gitignore task](https://github.com/sapegin/mrm-tasks/tree/master/packages/mrm-task-gitignore) that will add new lines to the `.gitignore` file but won’t remove per-project customizations:
 
-![New lines in the .gitignore file after running Mrm Gitignore task](/images/mrm-gitignore.png)
+![New lines in the .gitignore file after running Mrm Gitignore task](/images/blog/mrm-gitignore.png)
 
 ## Installation and usage
 

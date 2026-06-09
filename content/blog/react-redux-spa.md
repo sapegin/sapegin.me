@@ -1,7 +1,6 @@
 ---
 title: 'React single page applications resources'
 date: 2016-01-14
-medium: react-and-redux-single-page-applications-resources-22cd859b0c1d
 tags:
   - javascript
   - react
@@ -23,8 +22,8 @@ Thanks to [Babel](http://babeljs.io/) we can write in ECMAScript 2015.
 
 - [Learn ES2015](http://babeljs.io/learn-es2015/).
 - [An intro to using npm and ECMAScript 2015 modules for frontend development](http://wesbos.com/javascript-modules/) by Wes Bos.
-- <span aria-hidden="true" title="Book">📖</span> [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read/) by Nicholas C. Zakas.
-- <span aria-hidden="true" title="Book">📖</span> [Exploring JavaScript](http://exploringjs.com/es6/) by Dr. Axel Rauschmayer.
+- <span aria-hidden="true">📖</span> [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read/) by Nicholas C. Zakas.
+- <span aria-hidden="true">📖</span> [Exploring JavaScript](http://exploringjs.com/es6/) by Dr. Axel Rauschmayer.
 
 <!-- textlint-enable -->
 
@@ -40,9 +39,9 @@ Our view layer is [React](https://reactjs.org/).
 - [Presentational and container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) by Dan Abramov.
 - [React tips and best practices](http://aeflash.com/2015-02/react-tips-and-best-practices.html) by Alexander Early.
 - [Removing user interface complexity, or why React is awesome](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome) by James Long.
-- [Structuring React and Redux applications](/blog/react-structure).
+- [Structuring React and Redux applications](/blog/react-structure/).
 - [React cheat sheet](https://reactcheatsheet.com/).
-- <span aria-hidden="true" title="Book">📖</span> [SurviveJS: React](https://survivejs.com/react/introduction/) by Juho Vepsäläinen.
+- <span aria-hidden="true">📖</span> [SurviveJS: React](https://survivejs.com/react/introduction/) by Juho Vepsäläinen.
 
 ## Redux
 
@@ -52,9 +51,9 @@ Our view layer is [React](https://reactjs.org/).
 - [Redux best practices](https://medium.com/lexical-labs-engineering/redux-best-practices-64d59775802e) by Will Becker.
 - [Single State Tree + Flux](http://merrickchristensen.com/articles/single-state-tree.html) by Merrick Christensen.
 - [Querying a Redux store](https://medium.com/@adamrackis/querying-a-redux-store-37db8c7f3b0f) by Adam Rackis.
-- <span aria-hidden="true" title="Course">🖥</span> [Getting started with Redux](https://egghead.io/courses/getting-started-with-redux) by Dan Abramov.
-- <span aria-hidden="true" title="Course">🖥</span> [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) by Dan Abramov.
-- <span aria-hidden="true" title="Video">📺</span> [Live React: Hot Reloading with Time Travel](https://youtu.be/xsSnOQynTHs) by Dan Abramov, ReactEurope 2015.
+- <span aria-hidden="true">🖥</span> [Getting started with Redux](https://egghead.io/courses/getting-started-with-redux) by Dan Abramov.
+- <span aria-hidden="true">🖥</span> [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) by Dan Abramov.
+- <span aria-hidden="true">📺</span> [Live React: Hot Reloading with Time Travel](https://youtu.be/xsSnOQynTHs) by Dan Abramov, ReactEurope 2015.
 - [Redux documentation](http://redux.js.org/).
 
 Redux was inspired by the original Facebook’s [Flux architecture](https://facebook.github.io/flux/):
@@ -70,7 +69,7 @@ Redux requires that all the data in the store should be immutable. [Immutable.js
 
 - [The React way: Flux architecture with Immutable.js](https://blog.risingstack.com/the-react-js-way-flux-architecture-with-immutable-js/) by Péter Márton.
 - [Immutable data structures and JavaScript](http://jlongster.com/Using-Immutable-Data-Structures-in-JavaScript) by James Long.
-- <span aria-hidden="true" title="Video">📺</span> [Immutable data and React](https://youtu.be/I7IdS-PbEgI) by Lee Byron, React Conf 2015.
+- <span aria-hidden="true">📺</span> [Immutable data and React](https://youtu.be/I7IdS-PbEgI) by Lee Byron, React Conf 2015.
 
 _After using Immutable for a while, I feel that it makes more problems than it solves. Consider using [seamless-immutable](https://github.com/rtfeldman/seamless-immutable)._
 
@@ -79,7 +78,7 @@ _After using Immutable for a while, I feel that it makes more problems than it s
 CSS modules are like [BEM](http://getbem.com/) but they provide real class names uniqueness. And you don’t need to write long class names manually. We use CSS modules with [Sass](http://sass-lang.com/) and [Autoprefixer](https://github.com/postcss/autoprefixer).
 
 - [CSS Modules: welcome to the future](https://glenmaddern.com/articles/css-modules) by Glen Maddern.
-- <span aria-hidden="true" title="Video">📺</span> [Interoperable CSS](https://youtu.be/aIyhhHTmsXE) by Glen Maddern, CSSconf EU 2015.
+- <span aria-hidden="true">📺</span> [Interoperable CSS](https://youtu.be/aIyhhHTmsXE) by Glen Maddern, CSSconf EU 2015.
 
 _Consider using CSS in JS library, like [JSS](http://cssinjs.org/) or [styled-components](https://www.styled-components.com/)._
 
@@ -87,7 +86,7 @@ _Consider using CSS in JS library, like [JSS](http://cssinjs.org/) or [styled-co
 
 [Webpack](https://webpack.js.org/) allows us to use ES6/JSX syntax (including ECMAScript 2015 modules), import modules from npm and use hot reloading to debug frontend code. To simplify webpack configuration and share it between projects we use [webpack-blocks](https://github.com/andywer/webpack-blocks).
 
-- 📖 [SurviveJS: webpack](https://survivejs.com/webpack/introduction/) by Juho Vepsäläinen.
+- <span aria-hidden="true">📖</span> [SurviveJS: webpack](https://survivejs.com/webpack/introduction/) by Juho Vepsäläinen.
 
 _Consider using [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap your app._
 
@@ -96,7 +95,7 @@ _Consider using [Create React App](https://github.com/facebookincubator/create-r
 To test React components we use [Jest](https://facebook.github.io/jest/) (a test runner) and [Enzyme](http://airbnb.io/enzyme/) (a testing utility for React).
 
 - [Approaches to testing React components — an overview](http://reactkungfu.com/2015/07/approaches-to-testing-react-components-an-overview/) by Marcin Grzywaczewski.
-- [Testing React components with Jest and Enzyme](/blog/react-jest).
+- [Testing React components with Jest and Enzyme](/blog/react-jest/).
 - [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet).
 
 ## Other useful libraries

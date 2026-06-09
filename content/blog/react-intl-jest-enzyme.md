@@ -1,7 +1,6 @@
 ---
 title: 'Testing React Intl components with Jest and Enzyme'
 date: 2017-11-17
-medium: testing-react-intl-components-with-jest-and-enzyme-f9d43d9c923e
 tags:
   - tools
   - javascript
@@ -96,4 +95,4 @@ test('pink pony', () => {
 });
 ```
 
-P. S. You may also enjoy my more generic article on [testing React components with Jest and Enzyme](/blog/react-jest) and [Jest cheat sheet](https://github.com/sapegin/jest-cheat-sheet).
+P. S. You may also enjoy my more generic article on [testing React components with Jest and Enzyme](/blog/react-jest/) and [Jest cheat sheet](https://github.com/sapegin/jest-cheat-sheet).

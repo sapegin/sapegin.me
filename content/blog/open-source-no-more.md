@@ -3,8 +3,8 @@ title: 'Why I quit open source'
 description: 'Four main reasons I stopped maintaining most of my open source projects after ten years of contributing regularly.'
 date: 2023-09-13
 tags:
-  - open source
-  - mental health
+  - open-source
+  - mental-health
   - burnout
   - projects
   - hobbies

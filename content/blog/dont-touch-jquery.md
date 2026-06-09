@@ -1,7 +1,6 @@
 ---
 title: 'Don’t touch jQuery'
 date: 2016-02-12
-medium: don-t-touch-jquery-12c928c79f19
 tags:
   - javascript
   - thoughts

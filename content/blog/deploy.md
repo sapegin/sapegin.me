@@ -163,4 +163,4 @@ git push
 shipit
 ```
 
-![Shipit](/images/mac__shipit.png)
+![Shipit](/images/blog/mac__shipit.png)

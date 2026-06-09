@@ -11,7 +11,7 @@ tags:
 
 [A conference](https://react-finland.fi/) was held on April 24—26 in Helsinki, Finland. I was there with a workshop on [design systems for React developers](https://react-finland.fi/workshops/#design-systems-for-react-developers) and a talk. [Check out my notes](/blog/react-finland-2018/) on the last year.
 
-![Sunset in Helsinki](/images/react-finland-2019.webp)
+![Sunset in Helsinki](/images/blog/react-finland-2019.webp)
 
 ## The conference
 
@@ -31,8 +31,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - When filing issues, remember: you are asking for free help on something you are being paid for.
 - Guard your heart and live a balanced life.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">First <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a> talk by <a href="https://twitter.com/mweststrate?ref_src=twsrc%5Etfw">@mweststrate</a>. <a href="https://t.co/iVpcvD0tlm">pic.twitter.com/iVpcvD0tlm</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121298853641191424?ref_src=twsrc%5Etfw">April 25, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> First \#ReactFinland talk by @mweststrate. — [@iamsapegin](https://twitter.com/iamsapegin/status/1121298853641191424)
 
 ### Append-only development with React: An intro to Behavioral programming by [Luca Matteis](https://twitter.com/lmatteis)
 
@@ -54,8 +53,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - Collect stats on state changes and optimize flows.
 - [XState](https://xstate.js.org/docs/).
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Clippy in <a href="https://twitter.com/DavidKPiano?ref_src=twsrc%5Etfw">@DavidKPiano</a> talk at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a>. <a href="https://t.co/qh1OTKCfPt">pic.twitter.com/qh1OTKCfPt</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121314491965366272?ref_src=twsrc%5Etfw">April 25, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> Clippy in @DavidKPiano talk at \#ReactFinland.— [@iamsapegin](https://twitter.com/iamsapegin/status/1121314491965366272)
 
 ### A Common Design Language. Let Designers and Developers talk to each other by [Andrey Okonetchnikov](https://twitter.com/okonetchnikov)
 
@@ -68,8 +66,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - Common language: UI primitives.
 - [component-driven.dev](https://www.component-driven.dev): component-driven design & development for the modern web.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">That guy again! <a href="https://twitter.com/okonetchnikov?ref_src=twsrc%5Etfw">@okonetchnikov</a> at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a>. <a href="https://t.co/7UwpGzXaPu">pic.twitter.com/7UwpGzXaPu</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121331678771806210?ref_src=twsrc%5Etfw">April 25, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> That guy again! @okonetchnikov at \#ReactFinland. — [@iamsapegin](https://twitter.com/iamsapegin/status/1121331678771806210)
 
 ### A practical guide to building your design system infrastructure by [Varya Stepanova](https://twitter.com/varya_en)
 
@@ -85,8 +82,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - Welcome contributions: edit on GitHub button, list of contributors.
 - Blogging with WordPress as a backend and Gatsby.
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/varya_en?ref_src=twsrc%5Etfw">@varya_en</a> is using <a href="https://twitter.com/styleguidist?ref_src=twsrc%5Etfw">@styleguidist</a> to generate documentation for plain CSS/HTML components with <a href="https://twitter.com/styleguidist?ref_src=twsrc%5Etfw">@styleguidist</a>. <a href="https://t.co/kvhosfxqSl">pic.twitter.com/kvhosfxqSl</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121337236715388928?ref_src=twsrc%5Etfw">April 25, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> @varya_en is using @styleguidist to generate documentation for plain CSS/HTML components with @styleguidist. — [@iamsapegin](https://twitter.com/iamsapegin/status/1121337236715388928)
 
 ### ~~12~~ 8 Tips for More Accessible React Apps by [Manuel Matuzovic](https://twitter.com/mmatuzo)
 
@@ -101,8 +97,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 7. Announce page changes: on single page applications screen readers should read the page title on navigation. Check out [Reach Router](https://reach.tech/router).
 8. Test your React code automatically: use [React-Axe](https://github.com/dequelabs/react-axe) and [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y).
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Automating heading levels, <a href="https://twitter.com/mmatuzo?ref_src=twsrc%5Etfw">@mmatuzo</a> at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a>. <a href="https://t.co/EZtGeEiXyW">pic.twitter.com/EZtGeEiXyW</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121371724765892613?ref_src=twsrc%5Etfw">April 25, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> Automating heading levels, @mmatuzo at \#ReactFinland. — [@iamsapegin](https://twitter.com/iamsapegin/status/1121371724765892613)
 
 ### Delightful UI animations by understanding the brain by [Bruno Lourenço](https://twitter.com/brunnolou)
 
@@ -112,8 +107,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - [React Morph](https://github.com/brunnolou/react-morph): morphing UI transitions.
 - Creates a clone of an element and uses [FLIP technique](https://aerotwist.com/blog/flip-your-animations/) to do the morphing animation.
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">I’m definitely going to try react-morph, it looks incredible! <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a> <a href="https://t.co/3Qgu3csw8o">pic.twitter.com/3Qgu3csw8o</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121413088274784258?ref_src=twsrc%5Etfw">April 25, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> I’m definitely going to try react-morph, it looks incredible! \#ReactFinland — [@iamsapegin](https://twitter.com/iamsapegin/status/1121413088274784258)
 
 ### Custom CSS is the path to inconsistent UI by [Artem Sapegin](https://twitter.com/iamsapegin)
 
@@ -128,8 +122,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - [Box, Flex](https://rebassjs.org/grid/) and [Grid (Stack)](https://github.com/sapegin/stack-styled) components to define whitespace and layouts.
 - Use [styled-system](https://styled-system.com/) to create such components: works with any CSS in JS library.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“CSS is too expressive” — <a href="https://twitter.com/iamsapegin?ref_src=twsrc%5Etfw">@iamsapegin</a> <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a> <a href="https://t.co/N5u8qI9Gaj">pic.twitter.com/N5u8qI9Gaj</a></p>&mdash; James Stone (@JAMESSTONEco) <a href="https://twitter.com/JAMESSTONEco/status/1121691073988812800?ref_src=twsrc%5Etfw">April 26, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> “CSS is too expressive” — @iamsapegin \#ReactFinland — [@JAMESSTONEco](https://twitter.com/JAMESSTONEco/status/1121691073988812800)
 
 ### Creating layouts that last by [Artem Zakharchenko](https://twitter.com/kettanaito)
 
@@ -142,8 +135,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - [Responsive props](https://redd.gitbook.io/atomic-layout/fundamentals/responsive-props).
 - Render areas using [a render prop](https://redd.gitbook.io/atomic-layout/general/getting-started/workflow#render-areas).
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">More layouts, more spacing by <a href="https://twitter.com/kettanaito?ref_src=twsrc%5Etfw">@kettanaito</a> at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a>. <a href="https://t.co/I4GLeV3tpt">pic.twitter.com/I4GLeV3tpt</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121696029060026368?ref_src=twsrc%5Etfw">April 26, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> More layouts, more spacing by @kettanaito at \#ReactFinland. — [@iamsapegin](https://twitter.com/iamsapegin/status/1121696029060026368)
 
 ### Scalable (Design) Systems with TypeScript by [Tejas Kumar](https://twitter.com/TejasKumar_)
 
@@ -153,8 +145,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - Uses [React Styleguidist](https://react-styleguidist.js.org/) and TypeScript for their design system.
 - Hacked Styleguidist to use TypeScript and Monaco editor in component examples.
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">TypeScript editor with autocomplete in <a href="https://twitter.com/styleguidist?ref_src=twsrc%5Etfw">@styleguidist</a> by <a href="https://twitter.com/TejasKumar_?ref_src=twsrc%5Etfw">@TejasKumar_</a> at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a> — super cool! <a href="https://t.co/mycWMeqrxU">pic.twitter.com/mycWMeqrxU</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121729457595850752?ref_src=twsrc%5Etfw">April 26, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> TypeScript editor with autocomplete in @styleguidist by @TejasKumar\_ at \#ReactFinland — super cool! — [@iamsapegin](https://twitter.com/iamsapegin/status/1121729457595850752)
 
 ### Building resilient frontend architecture by [Monica Lent](https://twitter.com/monicalent)
 
@@ -174,8 +165,7 @@ Three constraints you can use today for more resilient frontend architecture:
 2. Be conservative about code reuse: avoid coupling code that diverges over time.
 3. Enforce your boundaries: don’t let people depend on your code (with [dependency-cruiser](https://github.com/sverweij/dependency-cruiser)).
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Monica’s <a href="https://twitter.com/monicalent?ref_src=twsrc%5Etfw">@monicalent</a> talk was my favorite at <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a> — really resonates with me 🤓 <a href="https://t.co/2NwSZ41BFC">pic.twitter.com/2NwSZ41BFC</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121780167720960000?ref_src=twsrc%5Etfw">April 26, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> Monica’s @monicalent talk was my favorite at \#ReactFinland — really resonates with me <span aria-hidden="true">🤓</span> — [@iamsapegin](https://twitter.com/iamsapegin/status/1121780167720960000)
 
 ### “Intuitive” Tooling by [Carolyn Stransky](https://twitter.com/carolstran)
 
@@ -189,8 +179,7 @@ Three constraints you can use today for more resilient frontend architecture:
 - Ban words like “easy” from your vocabulary.
 - Just because you understand something doesn’t mean that someone else will too.
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Flexbox is hard to learn — definitely agree with <a href="https://twitter.com/carolstran?ref_src=twsrc%5Etfw">@carolstran</a> <a href="https://twitter.com/hashtag/ReactFinland?src=hash&amp;ref_src=twsrc%5Etfw">#ReactFinland</a>. <a href="https://t.co/TLExVyWvJC">pic.twitter.com/TLExVyWvJC</a></p>&mdash; Artem Sapegin ☕ (@iamsapegin) <a href="https://twitter.com/iamsapegin/status/1121781711312949248?ref_src=twsrc%5Etfw">April 26, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> Flexbox is hard to learn — definitely agree with @carolstran \#ReactFinland. — [@iamsapegin](https://twitter.com/iamsapegin/status/1121781711312949248)
 
 ## Links
 

@@ -1,13 +1,12 @@
 ---
 title: 'How to use CSS Modules with TypeScript and webpack'
 date: 2017-05-11
-medium: css-modules-with-typescript-and-webpack-6b221ebe5f10
 tags:
   - tools
   - typescript
   - javascript
   - css
-  - css modules
+  - css-modules
   - webpack
 ---
 
@@ -94,4 +93,4 @@ import * as s from './Button.css';
 
 Type check and autocomplete will work as expected:
 
-![CSS Modules class names autocomplete in the editor](/images/typescript-css-modules.png)
+![CSS Modules class names autocomplete in the editor](/images/blog/typescript-css-modules.png)

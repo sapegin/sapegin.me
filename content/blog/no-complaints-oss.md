@@ -1,12 +1,11 @@
 ---
 title: 'No complaints policy in open source'
 date: 2018-01-27
-medium: no-complaints-policy-b5a537b86aec
 tags:
-  - open source
+  - open-source
   - thoughts
   - grumbles
-  - mental health
+  - mental-health
 ---
 
 I love the open source community, especially the React ecosystem. Most of the folks there are supernice and helping each other. But sometimes something goes wrong.

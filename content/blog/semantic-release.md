@@ -1,16 +1,15 @@
 ---
 title: 'Automate npm releases with semantic-release and human-written change logs'
 date: 2016-11-10
-medium: automate-npm-releases-with-semantic-release-and-human-written-change-logs-2adb1dce487
 tags:
   - tools
-  - open source
+  - open-source
   - projects
 ---
 
 Making new releases is one of the most boring and tedious tasks in open source.
 
-There are many tools that try to automate publishing and one of the most interesting is [semantic-release](https://github.com/semantic-release/semantic-release). I was avoiding it for a long time because it makes publishing fully automated with changelogs generated from commit messages, and that I thought that [changelogs must be written by humans](/blog/changelog).
+There are many tools that try to automate publishing and one of the most interesting is [semantic-release](https://github.com/semantic-release/semantic-release). I was avoiding it for a long time because it makes publishing fully automated with changelogs generated from commit messages, and that I thought that [changelogs must be written by humans](/blog/changelog/).
 
 But actually it’s very flexible and I was able to customize it to do exactly what I want:
 
@@ -54,7 +53,7 @@ semantic-release-cli setup
 
 Enter your npm and GitHub credentials. Choose “Create no `.travis.yml`” if you already have one, otherwise it will be overwritten.
 
-![Setting up semantic-release in terminal](/images/semantic-release.png)
+![Setting up semantic-release in terminal](/images/blog/semantic-release.png)
 
 Add these lines to your `travis.yml`:
 
@@ -101,7 +100,7 @@ Which is fine and means two things: semantic-release will not make a release unt
 
 By default semantic-release uses [Angular conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#) which I don’t like aesthetically. So I use [a slightly modified convention](https://github.com/tamiadev/semantic-release-tamia/blob/master/Convention.md):
 
-![Git commits following a convention](/images/commits.png)
+![Git commits following a convention](/images/blog/commits.png)
 
 Each commit message consists of:
 
@@ -126,7 +125,7 @@ Then run `sr-changelog commit`. It will make a commit without changes (`git comm
 
 Now you need to `git push` your changes and make some coffee.
 
-![GitHub release notes](/images/github-release.png)
+![GitHub release notes](/images/blog/github-release.png)
 
 ## Caveats
 
@@ -145,6 +144,6 @@ git commit -m "Fix: Proper commit message" --allow-empty
 - [My commit message conventions](https://github.com/tamiadev/semantic-release-tamia/blob/master/Convention.md)
 - [Angular commit message conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
 - [How to Write an Open Source JavaScript Library Egghead course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-automating-releases-with-semantic-release)
-- [Why you need to write changelogs yourself](/blog/changelog)
+- [Why you need to write changelogs yourself](/blog/changelog/)
 - [Keep a CHANGELOG: Don’t let your friends dump Git logs into changelogs](http://keepachangelog.com/)
 - [Semantic Versioning](http://semver.org/)

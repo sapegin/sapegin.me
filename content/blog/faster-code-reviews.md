@@ -2,8 +2,8 @@
 title: 'How to get your code reviewed faster'
 date: 2019-03-22
 tags:
-  - code reviews
-  - soft skills
+  - code-reviews
+  - soft-skills
   - work
 ---
 

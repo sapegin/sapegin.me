@@ -1,6 +1,5 @@
 ---
 title: 'Ensuring React Testing Library best practices with ESLint'
-description: ''
 date: 2020-08-11
 tags:
   - react

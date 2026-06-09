@@ -3,8 +3,8 @@ title: 'Healthier way to open source your code'
 description: 'Open source is about sharing your code. Anything else is optional. Don’t want to spend time answering issues and reviewing pull requests? It’s totally up to you!'
 date: 2023-09-26
 tags:
-  - open source
-  - mental health
+  - open-source
+  - mental-health
   - burnout
   - projects
   - hobbies
@@ -85,17 +85,17 @@ _R’amen,<br/>Artem_
 
 I add it [as an announcement](https://github.com/sapegin/mrm/discussions/298) in the project’s [Discussions on GitHub](https://docs.github.com/en/discussions/quickstart). Then I pin it and lock the thread.
 
-![Project status announcement](/images/healthy-open-source-project-status.png)
+![Project status announcement](/images/blog/healthy-open-source-project-status.png)
 
 ### 2. Convert all open issues to discussions
 
 Firstly, I [create a new Discussions category](https://docs.github.com/en/discussions/managing-discussions-for-your-community/managing-categories-for-discussions) on GitHub — “Bugs”, so I can move all bug reports there.
 
-![Creating a new Discussions category on GitHub](/images/healthy-open-source-new-discussions-category.png)
+![Creating a new Discussions category on GitHub](/images/blog/healthy-open-source-new-discussions-category.png)
 
 Then, I label all open issues, so I can [convert all issues labeled with a certain label](https://docs.github.com/en/discussions/managing-discussions-for-your-community/managing-discussions#converting-issues-based-on-labels) to discussions of a certain category.
 
-![Converting issues to discussions on GitHub](/images/healthy-open-source-convert-issues.png)
+![Converting issues to discussions on GitHub](/images/blog/healthy-open-source-convert-issues.png)
 
 ### 3. Block the creation of new issues
 
@@ -122,17 +122,17 @@ In this issue template, `blank_issues_enabled` option does the magic of blocking
 
 **Sad note:** Unfortunately, [`blank_issues_enabled` options isn’t fully enforced](https://github.com/orgs/community/discussions/4951), and I already got a few issues from folks who think they are better than others...
 
-![Creating new issue with a template on GitHub](/images/healthy-open-source-new-issue.png)
+![Creating new issue with a template on GitHub](/images/blog/healthy-open-source-new-issue.png)
 
 ### 4. Unsubscribe from all notifications
 
 The last thing I do is ignoring all notifications in the project, even when someone is explicitly mentioning you. Unfortunately, this is the only way to save ourselves from all kinds of toxicity and bullying in the issues.
 
-![One of these comments…](/images/healthy-open-source-one-of-these-comments.webp)
+![One of these comments…](/images/blog/healthy-open-source-one-of-these-comments.webp)
 
 Instead of the default “Participating and @mentions”, choose “Ignore”:
 
-![Ignoring repository notifications on GitHub](/images/healthy-open-source-igonre-notifications.png)
+![Ignoring repository notifications on GitHub](/images/blog/healthy-open-source-igonre-notifications.png)
 
 ## Conclusion
 

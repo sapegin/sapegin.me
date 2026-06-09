@@ -71,7 +71,7 @@ This will install all the dependencies and generate the config files. We’ll ne
 - whether to generate GitHub Actions to run the tests on CI (we won’t cover this here);
 - whether we want to install the browsers (it’s a good idea; we’ll need them anyway).
 
-![Playwright installation wizard](/images/playwright-wizard.webp)
+![Playwright installation wizard](/images/blog/playwright-wizard.webp)
 
 Then add two scripts to our [package.json](https://github.com/sapegin/playwright-article-2024/blob/master/package.json) file:
 
@@ -273,13 +273,13 @@ Here, we’re visiting the homepage of our app running on the development server
 
 Start Playwright in the UI mode by running `npm run test:e2e`. From here, either run a single test or all tests. We can press an eye icon next to a single test or a group to automatically rerun them on every change in the code of the test.
 
-![Running a test in Playwright](/images/playwright-test.webp)
+![Running a test in Playwright](/images/blog/playwright-test.webp)
 
 When I write tests, I usually _watch_ a single test (meaning Playwright reruns it for me on every change), otherwise it’s too slow and too hard to see what’s wrong if there are any issues.
 
 Run `npm run test:e2e:ci` to run all tests in the headless mode, meaning we won’t see the browser window:
 
-![Running Playwright in the terminal](/images/playwright-headless.png)
+![Running Playwright in the terminal](/images/blog/playwright-headless.png)
 
 ### Querying DOM elements for tests
 
@@ -647,11 +647,11 @@ Click any operation in the log first, and then do one of the following:
 
 **To debug a locator the DOM**, click the [Pick locator](https://playwright.dev/docs/test-ui-mode#pick-locator) button, and hover over an element we want to target. We can use the _Locator_ tab below to edit it and see if it still matches the element we need.
 
-![Using browser developer tools in Playwright](/images/playwright-debug-locator.webp)
+![Using browser developer tools in Playwright](/images/blog/playwright-debug-locator.webp)
 
 **To inspect the DOM**, click the [Open snapshot in a new tab](https://playwright.dev/docs/test-ui-mode#pop-out-and-inspect-the-dom) button and use the browser developer tools the way we’d normally do.
 
-![Using browser developer tools in Playwright](/images/playwright-inspect.png)
+![Using browser developer tools in Playwright](/images/blog/playwright-inspect.png)
 
 I also often focus on a single test with `test.only()`, and watch a single file by toggling the eye button in the Playwright UI to make reruns faster and avoid seeing too many errors while I debug why tests are failing.
 

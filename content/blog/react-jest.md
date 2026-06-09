@@ -1,7 +1,6 @@
 ---
 title: 'Testing React components with Jest and Enzyme'
 date: 2016-12-06
-medium: testing-react-components-with-jest-and-enzyme-41d592c174f
 tags:
   - javascript
   - jest

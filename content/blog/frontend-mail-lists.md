@@ -1,9 +1,8 @@
 ---
 title: 'Frontend development mail lists'
 date: 2016-03-23
-medium: development-mail-lists-bc55cf894b1e
 tags:
-  - educati
+  - education
 ---
 
 I like mail lists. Someone is working hard so you have to choose one or two best articles out of just 20 instead of 100.

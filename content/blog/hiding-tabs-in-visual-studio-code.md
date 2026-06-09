@@ -1,6 +1,5 @@
 ---
 title: 'Hiding tabs completely in Visual Studio Code'
-description: ''
 date: 2023-08-30
 tags:
   - tools

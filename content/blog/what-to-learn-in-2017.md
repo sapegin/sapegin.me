@@ -1,7 +1,6 @@
 ---
 title: 'What to learn in 2017 if you’re a frontend developer'
 date: 2016-12-27
-medium: what-to-learn-in-2017-if-youre-a-frontend-developer-b6cfef46effd
 tags:
   - education
   - javascript

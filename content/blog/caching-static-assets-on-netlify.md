@@ -1,6 +1,5 @@
 ---
 title: 'Caching static assets on Netlify'
-description: ''
 date: 2020-08-13
 tags:
   - netlify

@@ -1,5 +1,5 @@
 ---
-title: JavaScript and Stylus conditional compilation (debug mode) in Grunt
+title: 'JavaScript and Stylus conditional compilation (debug mode) in Grunt'
 date: 2014-04-17
 tags:
   - tools

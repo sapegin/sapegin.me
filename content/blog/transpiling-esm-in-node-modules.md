@@ -1,6 +1,5 @@
 ---
 title: 'Transpiling ESM files inside node_modules'
-description: ''
 date: 2022-04-19
 tags:
   - javascript

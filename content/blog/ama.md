@@ -1,7 +1,6 @@
 ---
 title: 'Ask Me Anything is the new way of blogging'
 date: 2016-11-23
-medium: ask-me-anything-is-a-new-way-of-blogging-2653220e32db
 tags:
   - thoughts
   - blog

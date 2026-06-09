@@ -142,7 +142,7 @@ We’re also using the [screen](https://testing-library.com/docs/queries/about/#
 
 Run `npm test` (or `npm t`) to run all tests. We should see something like this:
 
-![Running Jest and React Testing Library tests in the terminal](/images/jest-react-testing-library.png)
+![Running Jest and React Testing Library tests in the terminal](/images/blog/jest-react-testing-library.png)
 
 Run `npm run test:watch` to run Jest in watch mode: Jest will run only tests that are related to files changed since the last commit, and Jest will rerun these tests any time we change the code. This is how I usually run Jest. Watch mode is fast enough even on large projects, where running all tests takes many minutes.
 

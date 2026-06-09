@@ -1,7 +1,6 @@
 ---
 title: 'Structuring React and Redux applications'
 date: 2016-06-17
-medium: structuring-react-and-redux-applications-255361d24f84
 tags:
   - javascript
   - react

@@ -4,15 +4,15 @@ description: 'I started my first open source project in 2012 but 10 years later 
 date: 2023-05-26
 tags:
   - life
-  - open source
-  - mental health
+  - open-source
+  - mental-health
   - hobbies
   - grumbles
 ---
 
 I started [my first open source project](https://github.com/sapegin/richtypo.js) in 2012 to share my work with the community, to learn, and as a way to organize and document reusable pieces of code for my personal projects. Since then I’ve created [a few relatively popular projects](https://github.com/sapegin) and published [85 npm packages](https://www.npmjs.com/~sapegin).
 
-![My leather projects](/images/leathercraft.jpg)
+![My leather projects](/images/blog/leathercraft.jpg)
 
 However, the hostility of the open source community made me stop contributing and even looking at issues and pull requests of most of my projects. I also lost interest in writing code as a hobby over the years.
 

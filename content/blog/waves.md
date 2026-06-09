@@ -1,10 +1,10 @@
 ---
-description: Often when I have something to get done, I can’t get myself started for a few days. Even if the week before I was very productive.
 title: 'Going wavy'
+description: 'Often when I have something to get done, I can’t get myself started for a few days. Even if the week before I was very productive.'
 date: 2014-11-27
 tags:
   - thoughts
-  - mental health
+  - mental-health
   - productivity
 ---
 
@@ -16,4 +16,4 @@ When you do different things: pet projects, open source, freelance and non-progr
 
 Good example of this is GitHub profile: you can see a rise, a drop and the beginning of a new rise:
 
-![My GitHub contributions](/images/github_profile.png)
+![My GitHub contributions](/images/blog/github_profile.png)

@@ -1,6 +1,5 @@
 ---
 title: 'Using React useReducer hook with TypeScript'
-description: ''
 date: 2020-08-25
 tags:
   - react

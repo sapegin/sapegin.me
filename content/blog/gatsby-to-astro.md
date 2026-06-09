@@ -15,7 +15,7 @@ Recently, I redesigned and rebuilt [my site and blog](/) from [Gatsby](https://w
 - **Merge my homepage and my blog.** The homepage is essentially a single-page site, and it doesn’t make sense to maintain it separately from the blog.
 - **Better represent the current me.** The old homepage was focused on my open source projects, which [aren’t an important part of my life](/blog/going-offline/) anymore.
 
-![My homepage, version 2023](/images/sapeginme-2023.webp)
+![My homepage, version 2023](/images/blog/sapeginme-2023.webp)
 
 I had, however, a few technical requirements:
 

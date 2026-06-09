@@ -2,12 +2,12 @@
 title: 'A rebel’s guide to pull requests, commits, and code reviews'
 date: 2022-05-30
 tags:
-  - code reviews
-  - pull requests
+  - code-reviews
+  - pull-requests
   - commits
   - git
   - github
-  - soft skills
+  - soft-skills
   - work
 ---
 
@@ -23,7 +23,7 @@ Some folks prefer to check the changes in a pull request as a whole, some prefer
 
 This approach is called [atomic commits](https://www.codewithjason.com/atomic-commits/), meaning a bigger change is split into multiple smaller independentish changes, and each is represented as a separate commit with a meaningful description of a change.
 
-![Atomic commits](/images/atomic-commits.png)
+![Atomic commits](/images/blog/atomic-commits.png)
 
 (An illustration from [Frederick Vanbrabant’s article](https://www.frederickvanbrabant.com/posts/atomic-commits).)
 
@@ -39,13 +39,13 @@ Also, atomic commits will likely require rewriting commit history and force-push
 
 I only use atomic commits after the first code review iteration, so reviewers could better see what was changed since the last review. And still, if the changes are minor, I’d group them into a single commit.
 
-![New commits after code review](/images/post-code-review-commits.png)
+![New commits after code review](/images/blog/post-code-review-commits.png)
 
 And if the pull request is too big to review, or contains unrelated changes like refactoring or bugfixes, we should split it into several pull requests.
 
 **Tip:** To avoid reviewing the same code on each iteration, mark files as reviewed on GitHub, and they will stay collapsed until the author changes anything inside them.
 
-![Code review iteration on GitHub](/images/github-rereview.png)
+![Code review iteration on GitHub](/images/blog/github-rereview.png)
 
 ## Squash-merge pull requests
 
@@ -60,7 +60,7 @@ This has several benefits:
 
 **Tip:** Allow only squash merging on GitHub, and disable other merge types. Also, disable force pushing to prevent various problems, like overwriting someone else’s work.
 
-![Squash and merge pull request on GitHub](/images/squash-and-merge.png)
+![Squash and merge pull request on GitHub](/images/blog/squash-and-merge.png)
 
 It’s easier and safer to treat pull requests as atomic changes, meaning we merge a pull request as a single commit (a single item in the project history), and we revert a pull request completely if something goes wrong.
 
@@ -70,7 +70,7 @@ Rebasing a feature branch with the recent changes in the main branch is such a b
 
 Merging the main branch into a feature branch is significantly faster, easier, and less error-prone. Squashing commits while merging a pull request keeps the project history clean, so we’ll only see these merge commits on the pull request page.
 
-![Squash and merge pull request on GitHub](/images/atomic-pull-requests.png)
+![Squash and merge pull request on GitHub](/images/blog/atomic-pull-requests.png)
 
 **Tip:** I have a [Git alias `git mmm`](https://github.com/sapegin/dotfiles/blob/a051afa17b618e7929aabafefdbb7e676513a72a/tilde/.gitconfig#L37-L38) (“merge master motherfucker”) that fetched the fresh main branch and merges it into my current working branch. I also use [git-friendly](https://github.com/git-friendly/git-friendly) scripts for pulling, pushing and working with branches and stashes.
 

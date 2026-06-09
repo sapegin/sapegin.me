@@ -1,6 +1,5 @@
 ---
 title: 'Detecting accessibility issues on CI with cypress-axe'
-description: ''
 date: 2020-10-06
 tags:
   - testing
@@ -134,4 +133,4 @@ describe('Our awesome site', () => {
 });
 ```
 
-**Hint:** `cy.findByRole` and `cy.findByTestId` are from [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro), read more about it in [my article on Cypress](https://sapegin.me/blog/react-testing-4-cypress/).
+**Hint:** `cy.findByRole` and `cy.findByTestId` are from [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro), read more about it in [my article on Cypress](/blog/react-testing-4-cypress/).

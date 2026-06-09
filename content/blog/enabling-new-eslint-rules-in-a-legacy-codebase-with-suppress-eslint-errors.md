@@ -1,6 +1,5 @@
 ---
 title: 'Enabling new ESLint rules in a legacy codebase with suppress-eslint-errors'
-description: ''
 date: 2020-08-20
 tags:
   - javascript

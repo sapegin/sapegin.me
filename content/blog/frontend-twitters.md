@@ -1,7 +1,6 @@
 ---
 title: 'Whom to follow on Twitter if you’re a frontend developer'
 date: 2016-12-02
-medium: who-to-follow-on-twitter-i
 tags:
   - education
   - internet

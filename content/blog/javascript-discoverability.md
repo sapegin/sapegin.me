@@ -1,7 +1,6 @@
 ---
 title: 'On discoverability of JavaScript packages'
 date: 2016-03-14
-medium: javascript-packages-fatigue-md-c6be26f016b1
 tags:
   - javascript
   - thoughts

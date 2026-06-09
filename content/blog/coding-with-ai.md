@@ -29,7 +29,7 @@ AI is great for bootstrapping or trying something new – when you’ve never do
 
 It can also be more efficient to ask AI a semi-generic question, then write your own code – rather than letting it go berserk in your codebase. It’s similar to googling solutions and copypasting code snippets from Stack Overflow.
 
-I don’t really like the rhythm of working with an AI agent (such as Cursor or GitHub Copilot). It often feels slow and gets in my way, especially when making large-scale changes. It’s hard for me to [stay focused on a task](https://sapegin.me/blog/adhd-focus/) if I have to wait longer than a few seconds. My brain also works better with code than with text instructions.
+I don’t really like the rhythm of working with an AI agent (such as Cursor or GitHub Copilot). It often feels slow and gets in my way, especially when making large-scale changes. It’s hard for me to [stay focused on a task](/blog/adhd-focus/) if I have to wait longer than a few seconds. My brain also works better with code than with text instructions.
 
 The overall overhead of using AI for writing code is very high for me: prompting, waiting for results, reviewing generated code, asking for adjustments, and so on, and so forth… A highly customized environment with shortcuts is often more efficient for everyday tasks.
 

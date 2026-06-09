@@ -9,7 +9,7 @@ tags:
   - grumbles
 ---
 
-When Jest [announced snapshot tests](https://jestjs.io/blog/2016/07/27/jest-14) in 2016, I was [very excited](/blog/react-jest). It felt like a perfect solution for testing React components. Since then I’ve written fewer and fewer snapshot tests. In this article I’ll try to explain why.
+When Jest [announced snapshot tests](https://jestjs.io/blog/2016/07/27/jest-14) in 2016, I was [very excited](/blog/react-jest/). It felt like a perfect solution for testing React components. Since then I’ve written fewer and fewer snapshot tests. In this article I’ll try to explain why.
 
 I’ll talk mostly about testing React components, because that’s where I’ve used or have seen snapshots the most, but the same can be applied to testing other things.
 
@@ -25,7 +25,7 @@ That’s a problem: you don’t know if your code is correct yet and, unless you
 
 It’s often hard to see what changed by looking at the snapshot failure diff: did the snapshot fail because of your intended changes or because you’ve introduced a bug?
 
-![Big unreadable snapshot diff](/images/monster-snapshot.png)
+![Big unreadable snapshot diff](/images/blog/monster-snapshot.png)
 
 ### We tend to update snapshots without thinking
 
@@ -49,7 +49,7 @@ Snapshots don’t verify that the component _looks_ the same as before and don�
 
 Snapshots only verify that the component renders (meaning its HTML, not how it looks in the browser) the same thing, which is rarely important knowledge.
 
-![“You can delete the test that is failing”](/images/remove-snapshot.jpg)
+![“You can delete the test that is failing”](/images/blog/remove-snapshot.jpg)
 
 **Tip:** Visual snapshots are a way to verify that your component _looks_ the same as before. There are many tool, like [Percy](https://percy.io/), [Chromatic](https://www.chromaticqa.com/) or [Shutter](https://shutter.sh/), to do that.
 

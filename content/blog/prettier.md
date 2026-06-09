@@ -1,13 +1,14 @@
 ---
 title: 'Why robots should format our code for us'
 date: 2017-10-08
-medium: why-robots-should-format-our-code-159fd06d17f7
 tags:
   - tools
   - javascript
-  - code style
+  - code-style
   - prettier
 ---
+
+# Why robots should format our code for us
 
 I used to think that a personal code style is a good thing for a programmer. It shows you as a mature developer who knows what good code should look like.
 
@@ -92,7 +93,7 @@ I thought it improves readability but actually it just makes codebase inconsiste
 
 ## What JavaScript developers do
 
-Unfortunately JavaScript has no official code style but there are a few [popular code styles](/blog/javascript-code-styles), like Airbnb or Standard, that you could use to make you code look familiar to other developers.
+Unfortunately JavaScript has no official code style but there are a few [popular code styles](/blog/javascript-code-styles/), like Airbnb or Standard, that you could use to make you code look familiar to other developers.
 
 You could use ESLint to enforce code style and even autoformat code in some cases. But it won’t make your codebase 100% consistent. For example ESLint with Airbnb config would normalize only my first example and allow inconsistency in the other two.
 
@@ -132,6 +133,6 @@ Prettier has been already adopted by [some popular projects](https://github.com/
 
 At first I had a lot of “Ugh, that’s ugly” moments with Prettier. But when I think that I’d have to, for example, manually reformat JSX code from a single-line to multi-line when I add another prop and it doesn’t fit on one line — I realize that it’s totally worth it.
 
-![Prettier formatting in action](https://d3vv6lp55qjaqc.cloudfront.net/items/0m1G3V2G3r0t1Z3A0Q3D/Screen%20Recording%202017-06-25%20at%2012.45%20PM.gif)
+![Prettier formatting in action](/images/blog/prettier.gif)
 
 Read how to [set up Prettier](https://survivejs.com/maintenance/code-quality/code-formatting/) in your project.

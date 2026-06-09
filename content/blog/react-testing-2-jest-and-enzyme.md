@@ -122,7 +122,7 @@ Here we’re rendering a paragraph of text using the Enzyme’s [mount()](https:
 
 Run `npm test` (or `npm t`) to run all tests. You’ll see something like this:
 
-![Running Jest and Enzyme tests in the terminal](/images/jest-enzyme.png)
+![Running Jest and Enzyme tests in the terminal](/images/blog/jest-enzyme.png)
 
 Run `npm run test:watch` to run Jest in watch mode: Jest will run only tests that are related to files changed since the last commit, and Jest will rerun these test any time you change the code. This is how I usually run Jest. Watch mode is fast enough even in large projects, where running all tests takes many minutes.
 

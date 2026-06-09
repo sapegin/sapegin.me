@@ -1,14 +1,13 @@
 ---
 title: 'Add the fucking change log'
 date: 2016-09-19
-medium: add-the-fucking-change-log-3d82d758d8b0
 tags:
   - tools
 ---
 
 Every time I upgrade my project’s dependencies using [npm-upgrade](https://github.com/th0r/npm-upgrade) and it cannot find a changelog I create an issue titled “Add changelog”. Most of them were ignored, sometimes maintainers answer something that means “fuck off”, very rarely they listen.
 
-![Running npm-upgrade in terminal](/images/npm-upgrade.png)
+![Running npm-upgrade in terminal](/images/blog/npm-upgrade.png)
 
 A good changelog answers these questions for the project’s user:
 

@@ -1,12 +1,11 @@
 ---
 title: 'A few notes about web developer’s interviews'
 date: 2015-09-01
-medium: a-few-notes-about-web-developer-s-interviews-6ddc9f500152
 tags:
   - thoughts
   - work
   - education
-  - soft skills
+  - soft-skills
 ---
 
 Some unorganized tips from current me to last year’s me when I started to look for a job in Europe (I’m from Russia).

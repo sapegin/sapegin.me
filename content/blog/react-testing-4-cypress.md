@@ -125,7 +125,7 @@ The options are:
 
 Now, run `npm run cypress` to create all the necessary files and some example tests that we can run by pressing “Run all specs” button:
 
-![Cypress app with a list of tests](/images/cypress-ui.webp)
+![Cypress app with a list of tests](/images/blog/cypress-ui.webp)
 
 Before we start writing tests, we need to do one more thing — set up Cypress Testing Library. Open [cypress/support/index.js](https://github.com/sapegin/cypress-article-2020/blob/master/cypress/support/index.js), and add the following:
 
@@ -230,13 +230,13 @@ Here, we’re visiting the homepage of our app running in the development server
 
 Run the development server, `npm start`, and then Cypress, `npm run cypress`, or run both with `npm run test:e2e`. From here run a single test or all tests, Cypress will rerun tests on every change in the code of the test.
 
-![Running a test in Cypress](/images/cypress-test.webp)
+![Running a test in Cypress](/images/blog/cypress-test.webp)
 
 When I write tests, I usually run a single test, otherwise it’s too slow and too hard to see what’s wrong if there are any issues.
 
 Run `npm run test:e2e:ci` to run all tests in headless mode, meaning we won’t see the browser window:
 
-![Running Cypress in the terminal](/images/cypress-headless.png)
+![Running Cypress in the terminal](/images/blog/cypress-headless.png)
 
 ### Querying DOM elements for tests
 
@@ -334,7 +334,7 @@ With Cypress we generally don’t have to care if the actions are synchronous or
 
 Also, note calls to the Cypress’ [log()](https://docs.cypress.io/api/commands/log.html) method: this is more useful than writing comments because these messages are visible in the command log:
 
-![Cypress test log](/images/cypress-log.png)
+![Cypress test log](/images/blog/cypress-log.png)
 
 ### Testing forms
 
@@ -575,7 +575,7 @@ Cypress docs have a thorough [debugging guide](https://docs.cypress.io/guides/gu
 
 However, it’s usually enough to inspect the DOM for a particular step of the test after running the tests. Click any operation in the log to _pin_ it, and the resulting DOM will appear in the main area, where we could use the browser developer tools to inspect any element on the page.
 
-![Using Chrome developer tools in Cypress](/images/cypress-inspect.webp)
+![Using Chrome developer tools in Cypress](/images/blog/cypress-inspect.webp)
 
 I also often focus a particular test with `it.only()` to make rerun faster and avoid seeing too many errors while I debug why tests are failing.
 
