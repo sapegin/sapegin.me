@@ -47,7 +47,6 @@ npm run build:morning
 
 ```bash
 npm run lint:js          # ESLint
-npm run lint:text        # Textlint
 npm test                 # Astro check → lint → prettier format
 ```
 
