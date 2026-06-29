@@ -20,7 +20,7 @@ import {
 import { toKebabCase } from '../shared/util/toKebabCase.ts';
 import { type RecipeRaw } from '../sites/tacohuaco/src/types/Recipe';
 
-const VAULT_DIR = path.join(os.homedir(), 'murder', '🌮 Food');
+const VAULT_DIR = path.join(os.homedir(), 'murder', 'Food');
 const ATTACHMENTS_DIR = path.join(os.homedir(), 'murder', 'attachments');
 const IMAGES_OUTPUT_DIR = 'sites/tacohuaco/public/images/recipes';
 const OUTPUT_DIR = 'content/recipes';

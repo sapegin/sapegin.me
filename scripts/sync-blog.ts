@@ -22,7 +22,7 @@ import {
 	stripTitle,
 } from '../shared/sync/obsidian.ts';
 
-const VAULT_DIR = path.join(os.homedir(), 'murder', '🌐 Blog');
+const VAULT_DIR = path.join(os.homedir(), 'murder', 'Blog');
 const ATTACHMENTS_DIR = path.join(os.homedir(), 'murder', 'attachments');
 const OUTPUT_DIR = 'content/blog';
 const IMAGES_DIR = path.join('sites/sapegin.me/public/images/blog');
