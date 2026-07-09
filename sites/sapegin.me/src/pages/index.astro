@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import _ from 'lodash';
 import Layout from '../layouts/Layout.astro';
 import { MainPage } from '../templates/MainPage';
-import  { type Resource } from '../types/Resource';
+import { type Resource } from '../types/Resource';
 import { blogEntryToPost } from '../util/blogEntryToPost';
 
 const NUM_RECENT_POSTS = 7;
@@ -101,15 +101,16 @@ const projects: Resource[] = [
 		badges: ['VSCode extension'],
 	},
 	{
+		title: 'Raccoon Toolbox',
+		description:
+			'Collection of developer utilities built with React and Tauri.',
+		url: 'https://github.com/sapegin/raccoon-toolbox/',
+		badges: ['Web app', 'Mac app'],
+	},
+	{
 		title: 'Named CSS colors',
 		description: 'All named CSS colors on one page',
 		url: 'https://sapegin.github.io/csscolors/',
-		badges: ['Web'],
-	},
-	{
-		title: 'Coffee timer',
-		description: 'Pour-over coffee recipe and timer',
-		url: 'https://coffee.morning.photos',
 		badges: ['Web'],
 	},
 	{
@@ -125,12 +126,6 @@ const projects: Resource[] = [
 		badges: ['Open source'],
 	},
 	{
-		title: 'React Group',
-		description: 'Render React children with a separator',
-		url: 'https://github.com/sapegin/react-group',
-		badges: ['Open source'],
-	},
-	{
 		title: 'Richtypo',
 		description: 'Typography enhancer for Node.js',
 		url: 'https://github.com/sapegin/richtypo.js',
@@ -139,13 +134,7 @@ const projects: Resource[] = [
 	{
 		title: 'Textlint rules',
 		description: 'Check and fix your tech writing with Textlint',
-		url: 'https://www.npmjs.com/search?q=maintainer%3Asapegin%20keywords%3Atextlint',
-		badges: ['Open source'],
-	},
-	{
-		title: 'git-friendly',
-		description: 'Scripts for a better Git workflow (maintainer)',
-		url: 'https://github.com/jamiew/git-friendly',
+		url: 'https://github.com/sapegin/raccoon-textlint/',
 		badges: ['Open source'],
 	},
 ];
