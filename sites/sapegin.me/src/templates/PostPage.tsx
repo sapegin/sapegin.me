@@ -33,7 +33,9 @@ export function PostPage({
 						</p>
 					)}
 					{source && <BookPostHeader />}
-					<div className="post-content prose">{children}</div>
+					<div className="prose">
+						<div className="post-content">{children}</div>
+					</div>
 					{source && <BookPostFooter />}
 					<footer>
 						<PostMeta url={url} date={date} />
