@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { PageWithTitle } from '../templates/PageWithTitle';
 import { SearchPage } from '../templates/SearchPage';
-import  { type RecipeFragment } from '../types/Recipe';
+import { type RecipeFragment } from '../types/Recipe';
 
 const entries = await getCollection('recipes');
 const recipes: RecipeFragment[] = entries.map(({ data }) => ({
