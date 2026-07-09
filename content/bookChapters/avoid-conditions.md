@@ -107,7 +107,7 @@ const hasProducts =
 
 First, the `Array.isArray()` method returns `false` for any _falsy_ value, so there’s no need to check this separately. Second, in most cases, we can use the _optional chaining operator_ instead of an explicit array check.
 
-**Info:** A _falsy value_ is a value that is considered `false` during type conversion to a boolean, and includes `false`, `null`, `undefined`, `0`, `''`, and [a few others](https://developer.mozilla.org/en-US/docs/Glossary/Falsy).
+> [!info] A _falsy value_ is a value that is considered `false` during type conversion to a boolean, and includes `false`, `null`, `undefined`, `0`, `''`, and [a few others](https://developer.mozilla.org/en-US/docs/Glossary/Falsy).
 
 ```js
 const products = ['taco'];
@@ -115,11 +115,11 @@ const hasProducts = products?.length > 0;
 // → true
 ```
 
-**Info:** The _optional chaining operator_ (`?.`) was introduced in ECMAScript 2020 and allows us to access methods or properties of an object only when they exist, so we don’t need to wrap the code in an `if` condition.
+> [!info] The _optional chaining operator_ (`?.`) was introduced in ECMAScript 2020 and allows us to access methods or properties of an object only when they exist, so we don’t need to wrap the code in an `if` condition.
 
 The only case when this code might break is if `products` is a string, as strings also have the `length` property.
 
-**Tip:** I consider a variable that can be either `undefined` (or `null`) or an `array` an antipattern in most cases. I would track the source of this value, make sure that it’s always an array, and use an empty array instead of `undefined`. This way we can skip a lot of conditions and simplify types: we can just use `products.length > 0`, and not worry that `products` may not have the `length` property.
+> [!tip] I consider a variable that can be either `undefined` (or `null`) or an `array` an antipattern in most cases. I would track the source of this value, make sure that it’s always an array, and use an empty array instead of `undefined`. This way we can skip a lot of conditions and simplify types: we can just use `products.length > 0`, and not worry that `products` may not have the `length` property.
 
 Here’s a more complex but great (and real!) example of unnecessary conditions:
 
@@ -215,7 +215,7 @@ function getRandomJoke(onDone, onError) {
 
 In the code above, the `onError` parameter is optional, and we check if it exists before calling it. The problem here is that we need to remember to wrap each call to an optional callback with a condition. It increases complexity and cognitive load and makes the code harder to read.
 
-**Info:** The _cognitive load_ is the mental effort required to understand the code. Artem Zakirullin wrote a [great article on cognitive load in programming](https://github.com/zakirullin/cognitive-load).
+> [!info] The _cognitive load_ is the mental effort required to understand the code. Artem Zakirullin wrote a [great article on cognitive load in programming](https://github.com/zakirullin/cognitive-load).
 
 One way to simplify the code here is by using the _optional chaining_ operator:
 
@@ -333,7 +333,7 @@ function getProductsDropdownItems(productsMaybe) {
 
 We still have a condition, but the overall code structure is simpler.
 
-**Info:** The _nullish coalescing operator_ (`??`) was introduced in ECMAScript 2020 and gives us a better alternative to the _logical or operator_ (`||`) because it only checks for _nullish_ values (`undefined` or `null`), not for _falsy_ values (which would also include, often undesirable, `false`, `''`, and `0`).
+> [!info] The _nullish coalescing operator_ (`??`) was introduced in ECMAScript 2020 and gives us a better alternative to the _logical or operator_ (`||`) because it only checks for _nullish_ values (`undefined` or `null`), not for _falsy_ values (which would also include, often undesirable, `false`, `''`, and `0`).
 
 In all these examples, we’re removing a separate branch that deals with the absence of data by _normalizing the input_ — converting it to an array — as early as possible and then running a generic algorithm on the normalized data.
 
@@ -459,7 +459,7 @@ function addUser(user) {
 
 The main code of this function is on the fourth level of nesting. We need to scroll all the way to the end of the function to see the `else` parts of each condition, which makes it easy to edit the wrong block because the conditions and their `else` blocks are so far apart. The `else` blocks are also in reversed order, which makes the code even more confusing.
 
-**Info:** Deeply nested conditions are also known as the [arrow antipattern](http://wiki.c2.com/?ArrowAntiPattern), or _dangerously deep nesting_, or _if/else hell_.
+> [!info] Deeply nested conditions are also known as the [arrow antipattern](http://wiki.c2.com/?ArrowAntiPattern), or _dangerously deep nesting_, or _if/else hell_.
 
 _Early returns_, or _guard clauses_, are a great way to avoid nested conditions and make the code easier to understand:
 
@@ -542,7 +542,7 @@ This function is still long, but it’s much easier to follow because its struct
 
 Now, we have at most one level of nesting inside the function, and the main return value is at the very end without nesting. We’ve added two guard clauses to exit the function early when there’s no data to process.
 
-**Info:** One of the [Zen of Python’s](https://peps.python.org/pep-0020/) principles is _flat is better than nested_, which is exactly what we did with this refactoring. I also call it _code flattening_.
+> [!info] One of the [Zen of Python’s](https://peps.python.org/pep-0020/) principles is _flat is better than nested_, which is exactly what we did with this refactoring. I also call it _code flattening_.
 
 I’m not so sure what the code inside the second condition does, but it looks like it’s wrapping a single value in an array, as we did earlier in this chapter.
 
@@ -550,7 +550,7 @@ _And no, I have no idea what `tmpBottle` means or why it was needed._
 
 The next step here could be improving the `getOrderIds()` function’s API. It can return three different things: `undefined`, a single value, or an array. We have to deal with each separately, so we have two conditions at the beginning of the function, and we’re reassigning the `idsArrayObj` variable.
 
-**Info:** We talk about reassignments in the next chapter, Avoid reassigning variables.
+> [!info] We talk about reassignments in the next chapter, Avoid reassigning variables.
 
 By making the `getOrderIds()` function always return an array and making sure that the code inside the `// Skipped 70 lines of code building the array…` works with an empty array, we could remove both conditions:
 
@@ -575,7 +575,7 @@ Now, that’s a big improvement over the initial version. I’ve also renamed th
 
 The next step would be out of the scope of this chapter: the code inside the `// Skipped 70 lines of code building the array…` mutates the `fullRecords`. I usually try to avoid mutation, especially for variables with such a long lifespan.
 
-**Info:** We talk about naming in the Naming is hard chapter, and about mutation in the Avoid mutation chapter.
+> [!info] We talk about naming in the Naming is hard chapter, and about mutation in the Avoid mutation chapter.
 
 Consider another example:
 
@@ -627,7 +627,7 @@ function Container({
 
 In the code above, the default, happy path isn’t intertwined with the exceptional cases. The default case is at the very bottom of the component, and all exceptions are in front, as guard clauses.
 
-**Tip:** We discuss a better way of managing loading and error states in the Make impossible states impossible section.
+> [!tip] We discuss a better way of managing loading and error states in the Make impossible states impossible section.
 
 ## Tables and maps
 
@@ -924,9 +924,9 @@ function validate(values, validations) {
 
 Once again, we’ve separated the “what” from the “how”: we have a readable and maintainable list of validations (“what”), a collection of reusable validation functions, and a generic `validate()` function to validate form values (“how”) that we can reuse to validate other forms.
 
-**Info:** We talk about the separation of “what” and “how” in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
+> [!info] We talk about the separation of “what” and “how” in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
 
-**Tip:** Using a third-party library, like [Zod](https://zod.dev/), [Yup](https://github.com/jquense/yup), or [Joi](https://github.com/hapijs/joi) will make code even shorter and save us from needing to write validation functions ourselves.
+> [!tip] Using a third-party library, like [Zod](https://zod.dev/), [Yup](https://github.com/jquense/yup), or [Joi](https://github.com/hapijs/joi) will make code even shorter and save us from needing to write validation functions ourselves.
 
 You may feel that I have too many similar examples in this book, and you’re right. However, I think such code is so common, and the readability and maintainability benefits of replacing conditions with tables are so huge that it’s worth repeating.
 
@@ -979,7 +979,7 @@ const getDateFormat = format => {
 
 The improved version is shorter, and, more importantly, now it’s easy to see all date formats: now the difference is much easier to spot.
 
-**Info:** There’s a proposal to add [pattern matching](https://github.com/tc39/proposal-pattern-matching) to JavaScript, which may give us another option: more flexible than tables but still readable.
+> [!info] There’s a proposal to add [pattern matching](https://github.com/tc39/proposal-pattern-matching) to JavaScript, which may give us another option: more flexible than tables but still readable.
 
 ## Negative conditions
 
@@ -1013,7 +1013,7 @@ if (enabled) {
 
 One notable exception is early returns, which we discussed earlier in this chapter. While negative conditions are harder to read, the overall benefit of structuring functions with early returns outweighs this drawback.
 
-**Tip:** The [unicorn/no-negated-condition](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-negated-condition.md) linter rule automatically converts negative conditions to positive ones.
+> [!tip] The [unicorn/no-negated-condition](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-negated-condition.md) linter rule automatically converts negative conditions to positive ones.
 
 ## Repeated conditions
 
@@ -1144,7 +1144,11 @@ _Ideally, we should check whether we can implement caching the same way for all 
 
 It may seem like I prefer small or even very small functions, but that’s not the case. The main reason for extracting code into separate functions here is that it violates the _single responsibility principle_. The original function had too many responsibilities: getting special offers, generating cache keys, reading data from the cache, and storing data in the cache, each with two branches for our two brands.
 
-**Info:** The single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) states that any module, class, or method should have only one reason to change, or, in other words, we should keep the code that changes for the same reason together.<br><br>Imagine a pizzeria where a pizzaiolo is responsible only for cooking pizzas, and a cashier is responsible only for charging customers. In other words, we don’t murder people, and they don’t plaster the walls.<br><br>We talk more about this topic in the [Divide and conquer, or merge and relax chapter.
+> [!info] The single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) states that any module, class, or method should have only one reason to change, or, in other words, we should keep the code that changes for the same reason together.
+>
+> Imagine a pizzeria where a pizzaiolo is responsible only for cooking pizzas, and a cashier is responsible only for charging customers. In other words, we don’t murder people, and they don’t plaster the walls.
+>
+> We talk more about this topic in the [Divide and conquer, or merge and relax chapter.
 
 Let’s have a look at one more example:
 
@@ -1242,7 +1246,7 @@ function getStarRating(percentage) {
 
 It’s harder to understand than the initial implementation, but it requires significantly fewer test cases, and we’ve separated the design and the code. The icons will likely change, but the algorithm probably won’t.
 
-**Info:** This approach is known as [separation of logic and presentation](https://martinfowler.com/eaaDev/SeparatedPresentation.html).
+> [!info] This approach is known as [separation of logic and presentation](https://martinfowler.com/eaaDev/SeparatedPresentation.html).
 
 ## Nested ternaries
 
@@ -1310,7 +1314,7 @@ function Products({ products, isError, isLoading }) {
 
 But maybe it’s intentional and gives us a clear sign that we should rewrite this code.
 
-**Info:** We talk about code formatting and Prettier in the Autoformat your code chapter.
+> [!info] We talk about code formatting and Prettier in the Autoformat your code chapter.
 
 In this example, we render one of four UI states:
 
@@ -1347,7 +1351,7 @@ function Products({ products, isError, isLoading }) {
 
 I think it’s much easier to follow now: all special cases are at the top of the function, and the happy path is at the end.
 
-**Info:** We’ll come back to this example later in the Make impossible states impossible section of the _Other techniques_ chapter.
+> [!info] We’ll come back to this example later in the Make impossible states impossible section of the _Other techniques_ chapter.
 
 ## Complex conditions
 
@@ -1418,7 +1422,7 @@ function mapTips(allTips, ingredients, tags) {
 
 The code is noticeably longer, but it’s less dense and doesn’t try to do everything at once. We start by saving ingredient names to make it easier to compare later. Then, inside the `filter()` callback function, we check whether the tip’s ingredient matches any of the recipe’s ingredients (but only if the tip specifies the ingredient), and finally we check whether all tip’s tags are present in the recipe’s tags.
 
-**Info:** The Naming is hard chapter has a few more examples of extracting complex conditions.
+> [!info] The Naming is hard chapter has a few more examples of extracting complex conditions.
 
 ---
 

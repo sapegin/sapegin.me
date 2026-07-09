@@ -45,11 +45,11 @@ I like different styles of music, depending on what I’m doing:
 - **For reading** — [something quiet](https://music.apple.com/de/playlist/ambient-night/pl.u-KVXBDYWCLrrEerg?l=en-GB), like ambient.
 - **For cooking** — something in my own language, so I can sing along.
 
-**Note:** I prefer music without lyrics because they distract me, especially if I understand the language. However, death metal, with its growling, is an exception — the singing is so incomprehensible, that it essentially becomes music.
+> [!note] I prefer music without lyrics because they distract me, especially if I understand the language. However, death metal, with its growling, is an exception — the singing is so incomprehensible, that it essentially becomes music.
 
 When I’m not wearing headphones, we often listen to sets by [My Analog Journal](https://www.youtube.com/@MyAnalogJournal) and [Chris Luno](https://youtube.com/@chrisluno), [our favorite playlist](https://music.apple.com/de/playlist/good-vibes-only/pl.u-2aoqXKzfG66mb65?l=en-GB), or start a station on Apple Music based on one of the songs from Pink Floyd, The Cure, or something similar.
 
-**Tip:** Noise-cancelling headphones allow quieter music in noisier environments, or even no music at all — they may reduce sounds to a comfortable level.
+> [!tip] Noise-cancelling headphones allow quieter music in noisier environments, or even no music at all — they may reduce sounds to a comfortable level.
 
 ## Minimize distractions on the screen
 
@@ -63,13 +63,13 @@ I always maximize app windows. Or, more often, I put two windows side-by-side.
 
 My typical setup is a code editor on the left half of the screen, and the browser or terminal on the right half of the screen.
 
-**Tip:** I use [Rectangle](https://rectangleapp.com) app to set up keyboard shortcuts to resize windows (I only have three shortcuts there: left/right half of the screen and full screen).
+> [!tip] I use [Rectangle](https://rectangleapp.com) app to set up keyboard shortcuts to resize windows (I only have three shortcuts there: left/right half of the screen and full screen).
 
 ### Disable tabs in your code editor
 
 My code editor setup is very minimalistic. I disable tabs and all toolbars, so they don’t distract me. Sometimes I have the file tree open, and that’s pretty much all I see.
 
-**Tip:** [Hiding tabs in Visual Studio Code](/blog/hiding-tabs-in-visual-studio-code/) used to be tricky but now there’s an option to do that. WebStorm always had an option to hide tabs.
+> [!tip] [Hiding tabs in Visual Studio Code](/blog/hiding-tabs-in-visual-studio-code/) used to be tricky but now there’s an option to do that. WebStorm always had an option to hide tabs.
 
 ### Hide icons on the menu bar
 
@@ -87,7 +87,7 @@ I’m not sure you could actually disable the dock on a Mac but hiding it and [i
 
 Ads on web pages are very distracting, especially animated ones, and I can’t imagine myself using the internet without an ad block again.
 
-**Tip:** I use [Adblock Plus](https://adblockplus.org/) on desktop, and [AdGuard](https://adguard.com/) on iPhone and iPad.
+> [!tip] I use [Adblock Plus](https://adblockplus.org/) on desktop, and [AdGuard](https://adguard.com/) on iPhone and iPad.
 
 ## Use Pomodoro technique
 
@@ -97,25 +97,25 @@ During a pomodoro, you’re supposed to focus on a single task (ideally, the one
 
 And it kinda works, though I don’t use it very often, and I can’t imagine working for two hours with only three 5-minute breaks. So feel free to experiment with longer breaks and shorter work intervals (or the opposite if that’s your thing). It’s also useful when you need to report time spent on certain tasks.
 
-**Tip:** I used to use the [Tadam](https://www.tadamapp.com) app as a Pomodoro timer but recently I switched to [a mechanical timer](https://www.timetimer.com/collections/all-1/products/time-timer-mod-home-edition).
+> [!tip] I used to use the [Tadam](https://www.tadamapp.com) app as a Pomodoro timer but recently I switched to [a mechanical timer](https://www.timetimer.com/collections/all-1/products/time-timer-mod-home-edition).
 
-**Tip:** Timeboxing tasks, meaning working on something only for, let’s say, 10 or 20 minutes, is a good way of making progress on things you don’t want to do.
+> [!tip] Timeboxing tasks, meaning working on something only for, let’s say, 10 or 20 minutes, is a good way of making progress on things you don’t want to do.
 
 ## Keep your phone in a drawer
 
 I try to keep my phone in my desk drawer, or at least on the side of my desk upside down, so I don’t see the notifications.
 
-**Tip:** For the same reason I tend to keep my phone on the kitchen counter in the evening, and never bring it to the bedroom.
+> [!tip] For the same reason I tend to keep my phone on the kitchen counter in the evening, and never bring it to the bedroom.
 
 ## Work on an iPad
 
 [Using an iPad](/blog/writing-on-ipad/) (with an external keyboard) for certain tasks, like writing an article, works very well for me — somehow it feels like a single-task device and it’s easier to focus.
 
-**Tip:** Most tech writing I do in Markdown, in the [iA Writer](https://ia.net/writer).
+> [!tip] Most tech writing I do in Markdown, in the [iA Writer](https://ia.net/writer).
 
 ![Writing on an iPad](/images/blog/ipad-nuphy-air60-keyboard.jpg)
 
-**Tip:** I often go to a café to write, and it helps me a lot to focus on writing. As much as I loathe noise and distractions, the café noise and presence of other people (known as _body doubling_, see below) help me to focus on writing. Unless, of course, I can hear and understand what people are talking about — in this case, I must hear the gossip.
+> [!tip] I often go to a café to write, and it helps me a lot to focus on writing. As much as I loathe noise and distractions, the café noise and presence of other people (known as _body doubling_, see below) help me to focus on writing. Unless, of course, I can hear and understand what people are talking about — in this case, I must hear the gossip.
 
 ## Unload your brain
 
@@ -166,7 +166,7 @@ At home, I have very few distractions, and I can organize my workspace in a way 
 
 However, I feel more productive when my fiancée is working next to me. We’re not working for the same employer but it kinda sets the right mood for me: we’re working here. When it’s just me, it’s harder to focus on work and not be distracted by something else.
 
-**Tip:** This is called [body doubling](https://lifehacker.com/use-body-doubling-to-increase-your-productivity-1849021265), and if you live alone, you could try to have a video call with a friend, or even watch someone working on YouTube.
+> [!tip] This is called [body doubling](https://lifehacker.com/use-body-doubling-to-increase-your-productivity-1849021265), and if you live alone, you could try to have a video call with a friend, or even watch someone working on YouTube.
 
 ![Our home office](/images/blog/offline-home-office.webp)
 
@@ -188,7 +188,7 @@ Think of it as a slightly smarter Stack Overflow or an assistant who can google 
 
 ![ChatGPT with some coding question](/images/blog/focus-chatgpt.png)
 
-**Tip:** I usually use ChatGPT via [QuickGPT app](https://sindresorhus.com/quickgpt).
+> [!tip] I usually use ChatGPT via [QuickGPT app](https://sindresorhus.com/quickgpt).
 
 ## Choose a non-distracting color scheme for your editor
 
@@ -196,7 +196,7 @@ I’ve created my own color scheme that gives me enough contrast to distinguish 
 
 ![Squirrelsong Light theme](/images/blog/focus-squirrelsong.webp)
 
-**Tip:** To make the coding experience even better, I use [MonoLisa](https://www.monolisa.dev) font in all my code editors and a terminal.
+> [!tip] To make the coding experience even better, I use [MonoLisa](https://www.monolisa.dev) font in all my code editors and a terminal.
 
 ## Conclusion
 

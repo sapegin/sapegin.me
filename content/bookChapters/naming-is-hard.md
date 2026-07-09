@@ -242,7 +242,7 @@ $(`#${bookID}_retry`).attr('disabled', hasData);
 
 Now, it’s much easier to read.
 
-**Info:** We talk about names like `data` later in this chapter.
+> [!info] We talk about names like `data` later in this chapter.
 
 ## The larger the scope, the longer the name
 
@@ -282,7 +282,7 @@ for (let i = 0; i < keys.length; i += 1) {
 }
 ```
 
-**Info:** I used longer names for index variables, like `somethingIdx`, for a very long time. Surely, it’s way more readable than `i`, but, luckily, most modern languages allow us to iterate over things without coding artisan loops and without the need for an index variable. We talk more about this in the Avoid loops chapter.
+> [!info] I used longer names for index variables, like `somethingIdx`, for a very long time. Surely, it’s way more readable than `i`, but, luckily, most modern languages allow us to iterate over things without coding artisan loops and without the need for an index variable. We talk more about this in the Avoid loops chapter.
 
 However, in nested loops, it’s difficult to understand which index belongs to which array:
 
@@ -380,7 +380,7 @@ The extreme cases would be:
 
 Usually, the shorter the scope, the better. However, extreme scope shortening has the same issues as splitting code into many teeny-tiny functions: it’s easy to overdo it and hurt readability.
 
-**Info:** We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
 
 I found that _reducing the lifespan of variables_ works as well and doesn’t produce lots of tiny functions. The idea here is to reduce the number of lines between the variable declaration and the line where the variable is accessed for the last time. A variable’s _scope_ might be a whole 200-line function, but if the lifespan of a particular variable is three lines, then we only need to look at these three lines to understand how this variable is used.
 
@@ -413,9 +413,9 @@ function getRelatedPosts(
 
 In the code above, the lifespan of the `sorted` variable is only two lines. This kind of sequential processing is a common use case for this technique.
 
-**Tip:** Double-click on a variable name to select all its appearances in the code. This helps to quickly see the variable’s lifespan.
+> [!tip] Double-click on a variable name to select all its appearances in the code. This helps to quickly see the variable’s lifespan.
 
-**Info:** See a larger example in the Avoid Pascal-style variables section in the _Avoid reassigning variables_ chapter.
+> [!info] See a larger example in the Avoid Pascal-style variables section in the _Avoid reassigning variables_ chapter.
 
 ## Making magic numbers less magic
 
@@ -669,7 +669,7 @@ enum Size {
 }
 ```
 
-**Tip:** Usually, enum names are singular nouns in PascalCase, like `Month`, `Color`, `OrderStatus`, or `ProductType`.
+> [!tip] Usually, enum names are singular nouns in PascalCase, like `Month`, `Color`, `OrderStatus`, or `ProductType`.
 
 Which is essentially the same as an object, but we can also use it as a type:
 
@@ -727,7 +727,7 @@ I like to use the following prefixes for function names:
 - `to`: converts the data to a certain type (examples: `toString`, `hexToRgb`, `urlToSlug`).
 - `on` and `handle` for event handlers (examples: `onClick`, `handleSubmit`).
 
-**Info:** Verb prefixes are also called _actions_ in the A/HC/LC pattern. See more in the Use the A/HC/LC pattern section later in this chapter.
+> [!info] Verb prefixes are also called _actions_ in the A/HC/LC pattern. See more in the Use the A/HC/LC pattern section later in this chapter.
 
 And the following prefixes for boolean variables or functions that return a boolean value:
 
@@ -735,7 +735,7 @@ And the following prefixes for boolean variables or functions that return a bool
 
 These conventions make code easier to read and distinguish functions that return values from those with side effects.
 
-**Tip:** Don’t combine `get` with other prefixes: I often see names like `getIsCompaniesFilterDisabled` or `getShouldShowPasswordHint`, which should be just `isCompaniesFilterDisabled` or `shouldShowPasswordHint`, or even better `isCompaniesFilterEnabled`. On the other hand, `setIsVisible` is perfectly fine when paired with `isVisible`.
+> [!tip] Don’t combine `get` with other prefixes: I often see names like `getIsCompaniesFilterDisabled` or `getShouldShowPasswordHint`, which should be just `isCompaniesFilterDisabled` or `shouldShowPasswordHint`, or even better `isCompaniesFilterEnabled`. On the other hand, `setIsVisible` is perfectly fine when paired with `isVisible`.
 
 I also make an exception for React components, where I prefer to skip the `is` prefix, similar to HTML properties like `<button disabled>`:
 
@@ -796,7 +796,7 @@ interface Coordinates {
 
 I would generally avoid repeating information in the name that’s already accessible in its type, class name, or namespace.
 
-**Info:** We talk more about conventions in the Code style chapter.
+> [!info] We talk more about conventions in the Code style chapter.
 
 ## Next and previous values
 
@@ -860,7 +860,7 @@ const getUTCDateTime = datetime =>
 
 Now, it’s much easier to understand the code.
 
-**Info:** Underscores (`_`) as separators for numbers were introduced in ECMAScript 2021 and make long numbers easier to read: `60_000` instead of `60000`.
+> [!info] Underscores (`_`) as separators for numbers were introduced in ECMAScript 2021 and make long numbers easier to read: `60_000` instead of `60000`.
 
 Types often make incorrect names more noticeable:
 
@@ -1112,7 +1112,7 @@ Let’s see how it works on several examples:
 | `handleUpdateResponse` |  | `handle` | `update` | `response` |
 | `shouldShowFooter` | `should` | `show` | `footer` |  |
 
-**Info:** Read more about the [A/HC/LC pattern](https://github.com/kettanaito/naming-cheatsheet?tab=readme-ov-file#ahclc-pattern) in Artem Zakharchenko’s Naming cheat sheet.
+> [!info] Read more about the [A/HC/LC pattern](https://github.com/kettanaito/naming-cheatsheet?tab=readme-ov-file#ahclc-pattern) in Artem Zakharchenko’s Naming cheat sheet.
 
 ## Use common terms
 
@@ -1124,9 +1124,9 @@ It’s a good idea to use well-known and widely adopted terms for programming an
 
 Using different words for the same concept is confusing. A person reading the code may think that since the words are different, these things aren’t the same and will try to find the difference between the two. It will also make the code less _greppable_, meaning it will be harder to find all uses of the same thing.
 
-**Info:** We talk more about greppability in the Write greppable code section of the _Other techniques_ chapter.
+> [!info] We talk more about greppability in the Write greppable code section of the _Other techniques_ chapter.
 
-**Tip:** Having a project dictionary, or even a linter, might be a good idea to avoid using different words for the same things. [CSpell](https://cspell.org) allows us to create a project dictionary and ban certain words that shouldn’t be used. I use a similar approach for writing this book: I use the [Textlint terminology plugin](https://github.com/sapegin/textlint-rule-terminology) to make sure I use the terms consistently and spell them correctly in my writing.
+> [!tip] Having a project dictionary, or even a linter, might be a good idea to avoid using different words for the same things. [CSpell](https://cspell.org) allows us to create a project dictionary and ban certain words that shouldn’t be used. I use a similar approach for writing this book: I use the [Textlint terminology plugin](https://github.com/sapegin/textlint-rule-terminology) to make sure I use the terms consistently and spell them correctly in my writing.
 
 ## Prefer US English
 
@@ -1148,7 +1148,7 @@ Some common words that are spelled differently:
 | math       | maths      |
 | optimize   | optimise   |
 
-**Tip:** [CSpell](https://cspell.org) allows us to choose between US and UK English and will highlight inconsistencies in code and comments, though some words are present in both dictionaries.
+> [!tip] [CSpell](https://cspell.org) allows us to choose between US and UK English and will highlight inconsistencies in code and comments, though some words are present in both dictionaries.
 
 ## Use common opposite pairs
 
@@ -1176,13 +1176,13 @@ Some of these common pairs are:
 | start     | stop      |
 | target    | source    |
 
-**Tip:** There’s a certain debate on where to use _remove_ and where _delete_. I’m not so picky about this and recommend sticking to the add/remove and create/delete pairs where it makes sense. Otherwise, I’m okay with either. The difference isn’t as clear as some like to think: for example, on the Unix command line we _remove_ files using the `rm` command, but on Windows we _delete_ them using the `del` command.
+> [!tip] There’s a certain debate on where to use _remove_ and where _delete_. I’m not so picky about this and recommend sticking to the add/remove and create/delete pairs where it makes sense. Otherwise, I’m okay with either. The difference isn’t as clear as some like to think: for example, on the Unix command line we _remove_ files using the `rm` command, but on Windows we _delete_ them using the `del` command.
 
 ## Check the spelling of your names
 
 Typos in names and comments are very common. They don’t cause bugs _most of the time_, but could still reduce readability a bit, and code with many “typoses” looks sloppy. Typos also make the code less greppable. So having a spell checker in the code editor is a good idea.
 
-**Info:** We talk more about spell checking in the Spell checking section of the _Learn your code editor_ chapter, and about code greppability in the Write greppable code section of the _Other techniques_ chapter.
+> [!info] We talk more about spell checking in the Spell checking section of the _Learn your code editor_ chapter, and about code greppability in the Write greppable code section of the _Other techniques_ chapter.
 
 ## Use established naming conventions
 
@@ -1196,7 +1196,7 @@ The most popular naming conventions are:
 - snake_case;
 - SCREAMING_SNAKE_CASE.
 
-**Tip:** There are also lowercase, UPPERCASE, and SpoNGEcAsE, but I wouldn’t recommend them because these conventions make it hard to distinguish separate words.
+> [!tip] There are also lowercase, UPPERCASE, and SpoNGEcAsE, but I wouldn’t recommend them because these conventions make it hard to distinguish separate words.
 
 Most JavaScript and TypeScript style guides suggest the following:
 
@@ -1204,7 +1204,7 @@ Most JavaScript and TypeScript style guides suggest the following:
 - PascalCase for class names, types, and components;
 - SCREAMING_SNAKE_CASE for constants.
 
-**Tip:** One of the benefits of naming conventions that use an underscore (`_`) or nothing to glue words together over conventions that use a dash (`-`) is that we can select a full name using a double-click, or Alt+Shift+Left, or Alt+Shift+Right hotkeys (these hotkeys expand the selection to the word boundary).
+> [!tip] One of the benefits of naming conventions that use an underscore (`_`) or nothing to glue words together over conventions that use a dash (`-`) is that we can select a full name using a double-click, or Alt+Shift+Left, or Alt+Shift+Right hotkeys (these hotkeys expand the selection to the word boundary).
 
 The code that doesn’t follow the established naming conventions for a particular language looks awkward for developers who are used to these conventions. For example, here’s a JavaScript snippet that uses snake_case names:
 

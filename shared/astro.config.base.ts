@@ -1,16 +1,19 @@
 import path from 'node:path';
+import {
+	type RehypePlugins,
+	type RemarkPlugins,
+	unified,
+} from '@astrojs/markdown-remark';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { type RehypePlugins, type RemarkPlugins } from 'astro';
-import { defineConfig as astroDefineConfig } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from './rehype/rehypeSlug.js';
+import remarkCallouts from './remark/remarkCallouts.js';
 import remarkImages from './remark/remarkImages.js';
 import remarkRichtypo from './remark/remarkRichtypo.js';
-import remarkTips from './remark/remarkTips.js';
 
-export { astroDefineConfig as defineConfig };
+export { defineConfig } from 'astro/config';
 
 export function getBaseConfig({
 	siteHost,
@@ -30,30 +33,32 @@ export function getBaseConfig({
 		integrations: [react(), sitemap()],
 		markdown: {
 			syntaxHighlight: false as const,
-			rehypePlugins: [
-				rehypeSlug,
-				[
-					rehypeAutolinkHeadings,
-					{
-						content: {
-							type: 'text',
-							value: '#',
+			processor: unified({
+				rehypePlugins: [
+					rehypeSlug,
+					[
+						rehypeAutolinkHeadings,
+						{
+							content: {
+								type: 'text',
+								value: '#',
+							},
+							headingProperties: { class: 'heading' },
+							properties: {
+								ariaHidden: 'true',
+								class: 'heading__anchor',
+								tabIndex: '-1',
+							},
 						},
-						headingProperties: { class: 'heading' },
-						properties: {
-							ariaHidden: 'true',
-							class: 'heading__anchor',
-							tabIndex: '-1',
-						},
-					},
-				],
-				...rehypePlugins,
-			] satisfies RehypePlugins,
-			remarkPlugins: [
-				remarkTips,
-				[remarkImages, { publicDir }],
-				remarkRichtypo,
-			] satisfies RemarkPlugins,
+					],
+					...rehypePlugins,
+				] satisfies RehypePlugins,
+				remarkPlugins: [
+					remarkCallouts,
+					[remarkImages, { publicDir }],
+					remarkRichtypo,
+				] satisfies RemarkPlugins,
+			}),
 		},
 		vite: {
 			plugins: [tailwindcss()],

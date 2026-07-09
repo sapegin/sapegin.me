@@ -15,7 +15,7 @@ Unused dependencies in the project increases installation time, and every time w
 npx depcheck . --specials=babel,bin,eslint,husky,jest,lint-staged,prettier,webpack
 ```
 
-**Note:** The `--specials` option defines [additional dependency checkers](https://github.com/depcheck/depcheck#special), like ESLint or webpack configuration files.
+> [!note] The `--specials` option defines [additional dependency checkers](https://github.com/depcheck/depcheck#special), like ESLint or webpack configuration files.
 
 We should see something like this:
 

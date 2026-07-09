@@ -100,7 +100,7 @@ And two scripts to run Create React App development server and Cypress together:
 - `npm run test:e2e` to run dev server and Cypress ready for local development;
 - `npm run test:e2e:ci` to run dev server and all Cypress tests in headless Chrome, ideal for CI.
 
-**Tip:** For projects using Yarn, change the start-server-and-test commands like so:
+> [!tip] For projects using Yarn, change the start-server-and-test commands like so:
 
 ```diff
 -    "test:e2e": "start-server-and-test start 3000 cypress",
@@ -169,7 +169,7 @@ export const handlers = [
 ];
 ```
 
-**Note:** To mock GraphQL requests instead of REST, we could use the [GraphQL](https://mswjs.io/docs/getting-started/mocks/graphql-api) namespace.
+> [!note] To mock GraphQL requests instead of REST, we could use the [GraphQL](https://mswjs.io/docs/getting-started/mocks/graphql-api) namespace.
 
 Here, we’re intercepting GET requests to `https://httpbin.org/anything` with any parameters and returning a JSON object with OK status.
 
@@ -179,7 +179,7 @@ Now we need to [generate the Service Worker script](https://mswjs.io/docs/gettin
 npx msw init public/
 ```
 
-**Note:** The public directory [may be different](https://mswjs.io/docs/getting-started/integrate/browser#where-is-my-public-directory) for projects not using Create React App.
+> [!note] The public directory [may be different](https://mswjs.io/docs/getting-started/integrate/browser#where-is-my-public-directory) for projects not using Create React App.
 
 Create another JavaScript module that will register our Service Worker with our mocks, [src/mocks/browser.js](https://github.com/sapegin/cypress-article-2020/blob/master/src/mocks/browser.js):
 

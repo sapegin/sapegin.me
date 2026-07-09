@@ -37,9 +37,9 @@ Some problems with mutation:
 
 _Immutability_, or _immutable data structures_, means that to change a value, we have to create a new array or object. This approach would solve this problem.. Unfortunately, JavaScript doesn’t support immutability natively, and all solutions are more like code crutches than actual solutions. However, just _avoiding_ mutation in our code makes it easier to understand.
 
-**Tip:** Don’t forget that even if we can’t reassign variables defined with the `const` keyword, we can still mutate them.
+> [!tip] Don’t forget that even if we can’t reassign variables defined with the `const` keyword, we can still mutate them.
 
-**Info:** We talked about reassignments in the previous chapter, [Avoid reassigning variables](/blog/avoid-reassigning-variables/).
+> [!info] We talked about reassignments in the previous chapter, [Avoid reassigning variables](/blog/avoid-reassigning-variables/).
 
 ## Avoid mutating operations
 
@@ -89,7 +89,7 @@ In the code above, we create an object with three fields, one of which, `setting
 
 I prefer to see the whole object shape in a single place, instead of having to read the whole function to find all possible object shape variations. Usually, it doesn’t matter whether a property has an `undefined` value or doesn’t exist at all. I haven’t seen any cases where it mattered for a good reason. Even better is to use an empty array or object instead of `undefined` because it often simplifies the code and reduces the number of conditions.
 
-**Info:** We talk about avoiding conditions in the [Avoid conditions](/blog/avoid-conditions/) chapter.
+> [!info] We talk about avoiding conditions in the [Avoid conditions](/blog/avoid-conditions/) chapter.
 
 We also have a special error case here that returns an entirely different object with a single `error` property. However, it’s really a special case because none of the properties of the two objects overlap, and it doesn’t make sense to merge them. If anything, separating these two objects highlights that the error case is a special case.
 
@@ -175,7 +175,7 @@ expect(console.log.mock.calls).toEqual([
 
 In the code above, we add a new element to the `dogs` array using the `push()` method, which mutates the original array. That’s why both `console.log()` calls print the same list: both variables, `dogs` and `sameDogs`, reference the same array.
 
-**Info:** Use [Does it mutate](https://doesitmutate.xyz/) to quickly check whether an array method is mutating or not.
+> [!info] Use [Does it mutate](https://doesitmutate.xyz/) to quickly check whether an array method is mutating or not.
 
 Consider this function that prints the last element of a given array:
 
@@ -222,7 +222,7 @@ expect(console.log.mock.calls).toEqual([
 
 Note that the original `dogs` array is now missing an element. This is likely not what we expect when calling a function named `printLastElement()`. That’s the danger of accidental mutation.
 
-**Info:** When a function changes something outside its scope, this is called a _side effect_. Accidental side effects, like in the `printLastElement()` function, can lead to extremely hard-to-trace issues.
+> [!info] When a function changes something outside its scope, this is called a _side effect_. Accidental side effects, like in the `printLastElement()` function, can lead to extremely hard-to-trace issues.
 
 We can fix this issue by accessing the last array element without mutating the original array:
 
@@ -369,7 +369,7 @@ expect(c1.textContent).toEqual('Luncheon|Dinner')
 expect(items).toEqual(['Dinner', 'Luncheon'])
 -->
 
-**Info:** The [toSorted()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted) method is included in ECMAScript 2023 and supported by all major browsers, as well as Node.js 20.
+> [!info] The [toSorted()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted) method is included in ECMAScript 2023 and supported by all major browsers, as well as Node.js 20.
 
 Other mutating array methods to watch out for include:
 
@@ -383,7 +383,7 @@ Other mutating array methods to watch out for include:
 - [splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 - [unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
-**Info:** Thanks to the [Change Array by copy](https://github.com/tc39/proposal-change-array-by-copy) proposal, JavaScript now has immutable alternatives to several of the methods mentioned above: `toReversed()`, `toSorted()`, `toSpliced()`, and `with()`. The proposal is included in ECMAScript 2023.
+> [!info] Thanks to the [Change Array by copy](https://github.com/tc39/proposal-change-array-by-copy) proposal, JavaScript now has immutable alternatives to several of the methods mentioned above: `toReversed()`, `toSorted()`, `toSpliced()`, and `with()`. The proposal is included in ECMAScript 2023.
 
 ## Avoid mutation of function parameters
 
@@ -638,7 +638,7 @@ const tacos = counts.sort((a, b) => a - b).map(n => `${n} tacos`);
 
 This example gives the impression that we just create a new `tacos` array with the sorted list, without changing the original `counts` array. Unexpectedly, the `sort()` method returns a sorted array _and_ mutates the original array at the same time. This kind of code is hazardous and can lead to hard-to-find bugs. Many developers don’t realize that the `sort()` method mutates because the code _seems_ to work fine.
 
-**Tip:** Another surprising thing about the `sort()` method is that, by default, it sorts elements by converting them to strings first. For example, `[6, 3, 11]` will be sorted as `[11, 3, 6]`, unless we provide a custom comparison function, as in the example above. This is a poor design and it severely violates [the principle of least astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) (principle of least surprise), which states that a system should behave in a way that most users expect, and therefore not surprise them.
+> [!tip] Another surprising thing about the `sort()` method is that, by default, it sorts elements by converting them to strings first. For example, `[6, 3, 11]` will be sorted as `[11, 3, 6]`, unless we provide a custom comparison function, as in the example above. This is a poor design and it severely violates [the principle of least astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) (principle of least surprise), which states that a system should behave in a way that most users expect, and therefore not surprise them.
 
 It’s better to make the mutation explicit:
 
@@ -716,9 +716,9 @@ const next = { ...prev, pizza: 42 };
 
 This does the same thing, but it’s less verbose, and we don’t need to remember `Object.assign()`’s quirks.
 
-**Info:** The [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) method was introduced in ECMAScript 2015. Before that, we didn’t even try to avoid mutation — it was too painful.
+> [!info] The [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) method was introduced in ECMAScript 2015. Before that, we didn’t even try to avoid mutation — it was too painful.
 
-**Info:** Redux has a great [page on immutable update patterns](https://redux.js.org/usage/structuring-reducers/immutable-update-patterns): it describes patterns for updating arrays and objects without mutation, and it’s useful even if we don’t use Redux.
+> [!info] Redux has a great [page on immutable update patterns](https://redux.js.org/usage/structuring-reducers/immutable-update-patterns): it describes patterns for updating arrays and objects without mutation, and it’s useful even if we don’t use Redux.
 
 And still, the spread syntax quickly gets incredibly verbose:
 
@@ -768,15 +768,15 @@ While we wait for JavaScript to get native immutability, there are two ways we c
 - prevent mutation;
 - simplify object updates.
 
-**Info:** The [JavaScript records & tuples proposal](https://github.com/tc39/proposal-record-tuple) that introduces deeply immutable object-like (`Record`s) and array-like (`Tuple`s) structures is now in Stage 2.
+> [!info] The [JavaScript records & tuples proposal](https://github.com/tc39/proposal-record-tuple) that introduces deeply immutable object-like (`Record`s) and array-like (`Tuple`s) structures is now in Stage 2.
 
 **Preventing mutation** is a good idea because it’s so easy to miss mutations during code reviews, and then spend countless hours debugging obscure bugs.
 
 One way to prevent mutation is to use a linter. ESLint has several plugins that try to do just that.
 
-**Tip:** The [eslint-plugin-better-mutation](https://github.com/sloops77/eslint-plugin-better-mutation) plugin disallows any mutation, except for local variables in functions. This is a great idea because it prevents bugs caused by the mutation of shared objects but allows us to use mutation locally. Unfortunately, it breaks even in simple cases, such as a mutation inside the `forEach()` method’s callback function.
+> [!tip] The [eslint-plugin-better-mutation](https://github.com/sloops77/eslint-plugin-better-mutation) plugin disallows any mutation, except for local variables in functions. This is a great idea because it prevents bugs caused by the mutation of shared objects but allows us to use mutation locally. Unfortunately, it breaks even in simple cases, such as a mutation inside the `forEach()` method’s callback function.
 
-**Info:** We talk about ESLint and linting in general in the Lint your code chapter.
+> [!info] We talk about ESLint and linting in general in the Lint your code chapter.
 
 Another way to prevent mutation is to mark all objects and arrays as read-only in TypeScript.
 
@@ -815,7 +815,7 @@ expect(result).toEqual([1, 2, 3])
 
 Note that both the `readonly` modifier and the `Readonly` utility type are shallow, so we need to add them to all nested objects as well.
 
-**Tip:** The [eslint-plugin-functional](https://github.com/eslint-functional/eslint-plugin-functional) plugin has the rule to require read-only types everywhere, which may be more convenient than remembering to do that ourselves.
+> [!tip] The [eslint-plugin-functional](https://github.com/eslint-functional/eslint-plugin-functional) plugin has the rule to require read-only types everywhere, which may be more convenient than remembering to do that ourselves.
 
 I think adding `readonly` modifiers is a good idea because there’s no runtime cost, though it makes type definitions more verbose. However, I’d prefer [an option in TypeScript](https://github.com/microsoft/TypeScript/issues/32758) to make all types read-only by default, with a way to opt out.
 
@@ -851,7 +851,7 @@ const map2 = produce(map1, draft => {
 
 <!-- expect(map2).toEqual({ food: 'pizza', drink: 'vodka' }) -->
 
-**Tip:** Immer freezes the resulting object using `Object.freeze()` in the development environment to prevent accidental mutation.
+> [!tip] Immer freezes the resulting object using `Object.freeze()` in the development environment to prevent accidental mutation.
 
 ## Sometimes mutation isn’t a villain
 

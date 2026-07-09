@@ -161,7 +161,7 @@ The options we’ve changed are:
 - `use.baseURL` is the URL of our development server to avoid writing it in every test;
 - `webServer` block describes how to a run development server; we also want to reuse an already-running server unless we’re in the CI environment.
 
-**Tip:** Read more about all [Playwright config options in the docs](https://playwright.dev/docs/test-configuration).
+> [!tip] Read more about all [Playwright config options in the docs](https://playwright.dev/docs/test-configuration).
 
 ### Setting up Mock Service Worker
 
@@ -197,7 +197,7 @@ export const handlers = [
 ];
 ```
 
-**Note:** To mock GraphQL requests instead of REST, use the [GraphQL](https://mswjs.io/docs/network-behavior/graphql) namespace.
+> [!note] To mock GraphQL requests instead of REST, use the [GraphQL](https://mswjs.io/docs/network-behavior/graphql) namespace.
 
 Here, we’re intercepting GET requests to `https://httpbin.org/anything` with any parameters and returning a JSON object with an OK (200) status.
 
@@ -209,7 +209,7 @@ npx msw init ./public --save
 
 The `--save` flag will save the public directory path to `package.json` so we can update the worker script later by running just `msw init`.
 
-**Note:** The public directory [may be different](https://mswjs.io/docs/integrations/browser#where-is-my-public-directory) for projects not using Create React App.
+> [!note] The public directory [may be different](https://mswjs.io/docs/integrations/browser#where-is-my-public-directory) for projects not using Create React App.
 
 Then, create another JavaScript module that will register our Service Worker with our mocks, [src/mocks/browser.js](https://github.com/sapegin/playwright-article-2024/blob/master/src/mocks/browser.js):
 
@@ -301,7 +301,7 @@ To summarize:
 - Prefer to query elements by their visible (for example, button label) or accessible name (for example, image alt).
 - Use test IDs as the last resort. They clutter the markup with props we only need in tests. Test IDs are also something that users of our app don’t see: if we remove a label from a button, a test with test ID will still pass.
 
-**Note:** I often hear this complaint about using labels to query elements: they break when the app copy is updated. I consider this a feature: I’ve seen more than once that a button label change on one screen broke some other screen where this change was undesired.
+> [!note] I often hear this complaint about using labels to query elements: they break when the app copy is updated. I consider this a feature: I’ve seen more than once that a button label change on one screen broke some other screen where this change was undesired.
 
 Playwright has methods for all good queries, which are called [locators](https://playwright.dev/docs/locators):
 
@@ -331,7 +331,7 @@ Or query it by its text content:
 page.getByText('cook pizza');
 ```
 
-**Note:** Text locators are partial and case-insensitive by default, which makes them more resilient to small tweaks and changes in the content. For an exact match, use the `exact` option: `page.getByText('Cook pizza!', {exact: true})`.
+> [!note] Text locators are partial and case-insensitive by default, which makes them more resilient to small tweaks and changes in the content. For an exact match, use the `exact` option: `page.getByText('Cook pizza!', {exact: true})`.
 
 Or, the best method is to query it by its ARIA role and label:
 

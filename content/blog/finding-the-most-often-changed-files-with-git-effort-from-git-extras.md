@@ -14,7 +14,7 @@ tags:
 brew install git-extras
 ```
 
-**Note:** If you’re not on macOS, check [the installation instructions](https://github.com/tj/git-extras/blob/master/Installation.md).
+> [!note] If you’re not on macOS, check [the installation instructions](https://github.com/tj/git-extras/blob/master/Installation.md).
 
 2. Run the command in your repository or in its subfolder:
 

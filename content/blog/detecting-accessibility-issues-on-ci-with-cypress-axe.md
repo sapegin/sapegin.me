@@ -133,4 +133,4 @@ describe('Our awesome site', () => {
 });
 ```
 
-**Hint:** `cy.findByRole` and `cy.findByTestId` are from [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro), read more about it in [my article on Cypress](/blog/react-testing-4-cypress/).
+> [!hint] `cy.findByRole` and `cy.findByTestId` are from [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro), read more about it in [my article on Cypress](/blog/react-testing-4-cypress/).

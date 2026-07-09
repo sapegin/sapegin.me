@@ -15,7 +15,7 @@ I happened to have a somewhat controversial approach to pull requests. This appr
 
 I’ve written before on [getting code reviewed faster](/blog/faster-code-reviews/) and have published a [frontend pull request checklist](https://github.com/sapegin/frontend-pull-request-checklist) — check them out!
 
-**Story time:** I once broke a deployment tool by adding an emoji into a commit message, and I still consider this a tiny victory in my programming career. Funnily, my colleagues split into two camps after this incident. The first camp was saying that I’m an idiot to use emojis in commit messages, and the second — that it shouldn’t be so easy to break the tool.
+> [!story] I once broke a deployment tool by adding an emoji into a commit message, and I still consider this a tiny victory in my programming career. Funnily, my colleagues split into two camps after this incident. The first camp was saying that I’m an idiot to use emojis in commit messages, and the second — that it shouldn’t be so easy to break the tool.
 
 ## Don’t bother with atomic commits
 
@@ -43,7 +43,7 @@ I only use atomic commits after the first code review iteration, so reviewers co
 
 And if the pull request is too big to review, or contains unrelated changes like refactoring or bugfixes, we should split it into several pull requests.
 
-**Tip:** To avoid reviewing the same code on each iteration, mark files as reviewed on GitHub, and they will stay collapsed until the author changes anything inside them.
+> [!tip] To avoid reviewing the same code on each iteration, mark files as reviewed on GitHub, and they will stay collapsed until the author changes anything inside them.
 
 ![Code review iteration on GitHub](/images/blog/github-rereview.png)
 
@@ -58,7 +58,7 @@ This has several benefits:
 - **Easier debugging:** each commit corresponds to a pull request, so once we find where the bug was introduced, we know which pull request is responsible for it.
 - **Easier reverts:** we revert a complete feature, so the author could fix it, retest, and submit it as a new pull request. Reverting a whole pull request brings the project back to a previous known working state, reverting atomic commits will have unpredictable consequences, and likely break something.
 
-**Tip:** Allow only squash merging on GitHub, and disable other merge types. Also, disable force pushing to prevent various problems, like overwriting someone else’s work.
+> [!tip] Allow only squash merging on GitHub, and disable other merge types. Also, disable force pushing to prevent various problems, like overwriting someone else’s work.
 
 ![Squash and merge pull request on GitHub](/images/blog/squash-and-merge.png)
 
@@ -72,7 +72,7 @@ Merging the main branch into a feature branch is significantly faster, easier, a
 
 ![Squash and merge pull request on GitHub](/images/blog/atomic-pull-requests.png)
 
-**Tip:** I have a [Git alias `git mmm`](https://github.com/sapegin/dotfiles/blob/a051afa17b618e7929aabafefdbb7e676513a72a/tilde/.gitconfig#L37-L38) (“merge master motherfucker”) that fetched the fresh main branch and merges it into my current working branch. I also use [git-friendly](https://github.com/git-friendly/git-friendly) scripts for pulling, pushing and working with branches and stashes.
+> [!tip] I have a [Git alias `git mmm`](https://github.com/sapegin/dotfiles/blob/a051afa17b618e7929aabafefdbb7e676513a72a/tilde/.gitconfig#L37-L38) (“merge master motherfucker”) that fetched the fresh main branch and merges it into my current working branch. I also use [git-friendly](https://github.com/git-friendly/git-friendly) scripts for pulling, pushing and working with branches and stashes.
 
 ### Conclusion
 

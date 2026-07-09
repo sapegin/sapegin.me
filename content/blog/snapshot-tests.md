@@ -51,7 +51,7 @@ Snapshots only verify that the component renders (meaning its HTML, not how it l
 
 ![“You can delete the test that is failing”](/images/blog/remove-snapshot.jpg)
 
-**Tip:** Visual snapshots are a way to verify that your component _looks_ the same as before. There are many tool, like [Percy](https://percy.io/), [Chromatic](https://www.chromaticqa.com/) or [Shutter](https://shutter.sh/), to do that.
+> [!tip] Visual snapshots are a way to verify that your component _looks_ the same as before. There are many tool, like [Percy](https://percy.io/), [Chromatic](https://www.chromaticqa.com/) or [Shutter](https://shutter.sh/), to do that.
 
 ## What to use instead of snapshots
 
@@ -83,7 +83,7 @@ test('show success message after submission', () => {
 
 The test intention is now clear: we click the submit button and instead of a form we see a success message. This test won’t fail because of primitive components or third-party dependencies updates. This test won’t fail because of the layout changes that don’t affect the behavior.
 
-**Tip:** I’m using the [Teact Testing Library](https://kentcdodds.com/blog/effective-snapshot-testing/) by Kent C. Dodds in this example. Read [my article on React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/).
+> [!tip] I’m using the [Teact Testing Library](https://kentcdodds.com/blog/effective-snapshot-testing/) by Kent C. Dodds in this example. Read [my article on React Testing Library](/blog/react-testing-3-jest-and-react-testing-library/).
 
 ## When to use snapshots
 
@@ -159,7 +159,7 @@ exports[`<Animal /> should render null`] = `<strong>dog</strong>`;
 exports[`<Animal /> should render an animal name`] = `null`;
 ```
 
-**Tip:** [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) have two rules, [prefer-inline-snapshots](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md) and [no-large-snapshots](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-large-snapshots.md), that may help you keep your snapshots healthy.
+> [!tip] [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) have two rules, [prefer-inline-snapshots](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md) and [no-large-snapshots](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-large-snapshots.md), that may help you keep your snapshots healthy.
 
 ## Snapshot don’ts
 

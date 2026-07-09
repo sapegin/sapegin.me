@@ -57,7 +57,7 @@ const Meals = (
 );
 ```
 
-**Note:** The short syntax may not be supported by [the tools you’re using](https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html#support-for-fragment-syntax).
+> [!note] The short syntax may not be supported by [the tools you’re using](https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html#support-for-fragment-syntax).
 
 ## Returning strings and numbers from components
 

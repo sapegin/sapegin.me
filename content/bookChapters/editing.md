@@ -8,7 +8,7 @@ Knowing how to use our code editor efficiently makes code writing and editing fa
 
 In this chapter, we mostly talk about [Visual Studio Code](https://code.visualstudio.com), as it’s my main code editor. However, most of these things can be applied to other editors and IDEs. We also briefly discuss some other tools, but mostly we talk about code editing and navigation.
 
-**Warning:** In this chapter, I mention my custom hotkeys (see the _Hotkeys_ section), check out the [default Code key bindings](https://code.visualstudio.com/docs/getstarted/keybindings).
+> [!warning] In this chapter, I mention my custom hotkeys (see the _Hotkeys_ section), check out the [default Code key bindings](https://code.visualstudio.com/docs/getstarted/keybindings).
 
 ## Make it your own
 
@@ -30,11 +30,11 @@ Here are some things to consider:
 
 5. Add plugins for languages and frameworks you use, add more plugins for extra features.
 
-**Tip:** [MonoLisa](https://www.monolisa.dev) is a paid font, but there are good free alternatives. [Coding Fonts](https://coding-fonts.netlify.app/fonts/anonymous-pro/?theme=light) is a nice page to compare many programming fonts and choose the one you like.
+> [!tip] [MonoLisa](https://www.monolisa.dev) is a paid font, but there are good free alternatives. [Coding Fonts](https://coding-fonts.netlify.app/fonts/anonymous-pro/?theme=light) is a nice page to compare many programming fonts and choose the one you like.
 
 ![My Visual Studio Code setup](https://sapegin.me/images/blog/book/vscode.png)
 
-**Info:** Here’s my [Visual Studio Code config](https://github.com/sapegin/dotfiles/blob/master/vscode/User/settings.json).
+> [!info] Here’s my [Visual Studio Code config](https://github.com/sapegin/dotfiles/blob/master/vscode/User/settings.json).
 
 ## File navigation
 
@@ -52,7 +52,7 @@ Additionally, I use code search all the time to find a particular place in the c
 
 Some developers only use the keyboard to move the cursor through the code. While this sounds cool, I’ve never learned how to do it. Overall, my approach is very minimalist: I heavily rely on just a few tools, and I’m not afraid to use a trackpad to move the cursor around, which works better for me than trying to remember complex hotkeys.
 
-**Tip:** Don’t feel bad if you can’t learn a certain tool. I’ve struggled with many tools, such as Git and Flexbox, even after using them for a decade.
+> [!tip] Don’t feel bad if you can’t learn a certain tool. I’ve struggled with many tools, such as Git and Flexbox, even after using them for a decade.
 
 Besides the basic navigation (home, end, jumping over one word, and so on), I regularly use these hotkeys:
 
@@ -79,7 +79,7 @@ Here are some of the chord hotkeys I use:
 - Cmd+K Cmd+T: run a **t**ask;
 - Cmd+K Cmd+W: re**w**rap a comment (using the Rewrap extension).
 
-**Info:** Here are my [keybinding for Visual Studio Code](https://github.com/sapegin/dotfiles/blob/master/vscode/User/keybindings.json)
+> [!info] Here are my [keybinding for Visual Studio Code](https://github.com/sapegin/dotfiles/blob/master/vscode/User/keybindings.json)
 
 ## Autosave
 
@@ -89,7 +89,7 @@ One thing I’ve struggled with for a long time is that autoformatting on autosa
 
 I solved this by disabling autoformatting on save and running autoformat and save on Cmd+S. I also disabled autosave of files with syntax errors, so the page in the browser doesn’t lose its state, such as scroll position or form data.
 
-**Info:** I explain this solution in more detail and with config file examples [on my blog](https://sapegin.me/blog/vscode-autosave/).
+> [!info] I explain this solution in more detail and with config file examples [on my blog](https://sapegin.me/blog/vscode-autosave/).
 
 ## Multiple cursors
 
@@ -148,13 +148,13 @@ Visual Studio Code can run either the project’s npm scripts or custom tasks de
 
 Tasks usually call npm scripts with additional settings, such as whether to display a terminal panel when the task runs or show errors in the Problems panel. However, the format for defining tasks, especially problem detection patterns, is quite convoluted and confusing, and I haven’t mastered it yet.
 
-**Info:** Check out the official [tasks docs](https://code.visualstudio.com/docs/editor/tasks).
+> [!info] Check out the official [tasks docs](https://code.visualstudio.com/docs/editor/tasks).
 
 ![Problem panel in Visual Studio Code](https://sapegin.me/images/blog/book/vscode-tasks-problems.png)
 
 We can also define global tasks that work on all projects in the global `tasks.json` file. I use it to open the project folder or current file in Finder, Nimble Commander, and WezTerm.
 
-**Info:** Here’s my [Visual Studio Code tasks config](https://github.com/sapegin/dotfiles/blob/master/vscode/User/tasks.json)
+> [!info] Here’s my [Visual Studio Code tasks config](https://github.com/sapegin/dotfiles/blob/master/vscode/User/tasks.json)
 
 ## Terminal
 
@@ -172,7 +172,7 @@ I usually use the integrated terminal to work with npm, switch and create Git br
 
 I set up a hotkey (Cmd+T) to open the terminal panel and switch between terminal tabs (tasks, such as a development server, also appear as terminal tabs); and another hotkey (Cmd+N) to open new terminal tabs. Escape closes the panel.
 
-**Info:** [WezTerm](https://wezfurlong.org/wezterm/) is my favorite terminal app when I need something more than the integrated terminal.
+> [!info] [WezTerm](https://wezfurlong.org/wezterm/) is my favorite terminal app when I need something more than the integrated terminal.
 
 ## Source control
 
@@ -205,7 +205,7 @@ I like [git-friendly](https://github.com/git-friendly/git-friendly) because it p
 
 I prefer GUI for reviewing changes and resolving conflicts. Visual Studio Code is good for both because it shows the diff the same way we edit code, allowing us to do small last-minute tweaks in the diff view, such as fixing typos or removing debug code.
 
-**Info:** I wrote a couple articles on my Git workflow: [on pull requests, commits, and code reviews](https://sapegin.me/blog/rebels-guide-to-pull-requests-commits-code-reviews/), and [on getting good code reviews](https://sapegin.me/blog/faster-code-reviews/).
+> [!info] I wrote a couple articles on my Git workflow: [on pull requests, commits, and code reviews](https://sapegin.me/blog/rebels-guide-to-pull-requests-commits-code-reviews/), and [on getting good code reviews](https://sapegin.me/blog/faster-code-reviews/).
 
 ## Documentation
 
@@ -215,7 +215,7 @@ I easily forget things, and having quick access to documentation is very importa
 
 Sometimes, I also use [Dash extension](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-dash) for Visual Studio Code, which opens documentation for the symbol under the cursor in Dash with a hotkey.
 
-**Info:** [Velocity](https://velocity.silverlakesoftware.com) and [Zeal](https://zealdocs.org) are Windows alternatives to Dash.
+> [!info] [Velocity](https://velocity.silverlakesoftware.com) and [Zeal](https://zealdocs.org) are Windows alternatives to Dash.
 
 ## Spell checking
 
@@ -232,9 +232,9 @@ I use two extensions to check spelling in Visual Studio Code:
 
 These two extensions complement each other, finding all kinds of typos and misspellings.
 
-**Tip:** WebStorm comes with a good spell checker out of the box, so you don’t need to install any extensions.
+> [!tip] WebStorm comes with a good spell checker out of the box, so you don’t need to install any extensions.
 
-**Info:** We talk more about greppability (the quality that makes code findable) in the Write greppable code section of the _Other techniques_ chapter.
+> [!info] We talk more about greppability (the quality that makes code findable) in the Write greppable code section of the _Other techniques_ chapter.
 
 ## Automated refactoring
 
@@ -301,7 +301,7 @@ Here are some other tools I use regularly:
 - [Optimage](https://optimage.app): image optimizer.
 - [Polypane](https://polypane.app): browser for testing responsive design.
 
-**Info:** You may also find [my dotfiles](https://github.com/sapegin/dotfiles) useful: I keep there config files for various tools, shell and Git aliases, scripts, and so on.
+> [!info] You may also find [my dotfiles](https://github.com/sapegin/dotfiles) useful: I keep there config files for various tools, shell and Git aliases, scripts, and so on.
 
 ---
 

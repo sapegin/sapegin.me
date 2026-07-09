@@ -9,7 +9,7 @@ tags:
 
 _I always disable tabs in code editors because they distract me._
 
-**Update:** Looks like there’s finally a built-in way of disabling tabs:
+> [!update] Looks like there’s finally a built-in way of disabling tabs:
 
 ```json
 {

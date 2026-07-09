@@ -47,7 +47,7 @@ For a consumer, it doesn’t matter that the `Stack` has completely different im
 
 [Using primitive components](https://www.component-driven.dev/) instead of custom styles is my favorite way of making user interfaces in the past few years, and it works well for cross-platform interfaces most of the time. It gives us the cleanest possible markup and design system constraints (limits our choice of spacing, fonts, sizes, colors, and so on to the ones that are supported by the design system).
 
-**Note:** I only have experience with [styled-system](https://styled-system.com/), which doesn’t support React Native by default and wasn’t updated in two years. There might be a better solution now, and I’d like to know about it!
+> [!note] I only have experience with [styled-system](https://styled-system.com/), which doesn’t support React Native by default and wasn’t updated in two years. There might be a better solution now, and I’d like to know about it!
 
 I’ve implemented [a very primitive React Native support](https://gist.github.com/sapegin/991704a876057393efe3a3f74d4c8c47) by keeping only the first value (for the narrowest screen) of responsive props. So code like this:
 
@@ -140,7 +140,7 @@ const Container = ({ children }) => (
 
 It’s slightly more verbose but the code is split at a lower level and only once, we don’t need to code-split each component and duplicate the code.
 
-**Idea:** Now I think a better way would be encapsulating a mapping inside primitive components and a custom styled-component factory, so we could keep writing `as="form"` or `styled.form`, and it will be transparently converted to the correct elements for React Native. I haven’t tried it yet but I think this idea is worth exploring.
+> [!idea] Now I think a better way would be encapsulating a mapping inside primitive components and a custom styled-component factory, so we could keep writing `as="form"` or `styled.form`, and it will be transparently converted to the correct elements for React Native. I haven’t tried it yet but I think this idea is worth exploring.
 
 ### Code splitting
 

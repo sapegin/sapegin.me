@@ -119,9 +119,9 @@ for (let i = 0; i < characters.length; i++) {
 
 <!-- expect(kebabCharacters).toEqual(["bilbo-baggins", "gandalf", "gollum"]) -->
 
-**Info:** The [`kebabCase()` method](https://lodash.com/docs#kebabCase) is from the Lodash library. We’ll use Lodash methods occasionally in this book, and we’ll always use the `_` namespace.
+> [!info] The [`kebabCase()` method](https://lodash.com/docs#kebabCase) is from the Lodash library. We’ll use Lodash methods occasionally in this book, and we’ll always use the `_` namespace.
 
-**Info:** The _kebab-case_ is a popular naming convention where lowercase words are separated with a dash, for example, `chuck-norris`, or `bilbo-baggins`. It’s called kebab-case because it looks like several kebabs on a skewer. Other common conventions include _camelCase_, _PascalCase_, _snake_case_, and _SCREAMING_SNAKE_CASE_. I spell each name using the convention itself to make remembering them easier.
+> [!info] The _kebab-case_ is a popular naming convention where lowercase words are separated with a dash, for example, `chuck-norris`, or `bilbo-baggins`. It’s called kebab-case because it looks like several kebabs on a skewer. Other common conventions include _camelCase_, _PascalCase_, _snake_case_, and _SCREAMING_SNAKE_CASE_. I spell each name using the convention itself to make remembering them easier.
 
 Now, let’s use the `map()` array method instead of a `for` loop:
 
@@ -176,7 +176,7 @@ Second, it may mysteriously break when the callback function adds another parame
 
 Lastly, explicitly passing the value inside the `map()` callback function makes the code slightly more readable.
 
-**Tip:** The [unicorn/no-array-callback-reference](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-callback-reference.md) linter rule prevents passing the callback function directly to array methods.
+> [!tip] The [unicorn/no-array-callback-reference](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-callback-reference.md) linter rule prevents passing the callback function directly to array methods.
 
 Let’s look at another example: finding an element in an array. First, using a `for` loop:
 
@@ -289,7 +289,7 @@ expect(hasDiscount({gandalf: {ages: [{customerCards: ['DISCOUNT']}]}})).toBe(tru
 
 This code is checking whether any customer has a customer card (and therefore a discount) in any age group, but by reading the code, it’s totally impossible to understand what’s going on. Nested loops with meaningless names are one of the main reasons for this.
 
-**Info:** We talk about naming in the [Naming is hard](/blog/naming/) chapter.
+> [!info] We talk about naming in the [Naming is hard](/blog/naming/) chapter.
 
 Let’s simplify it:
 
@@ -329,7 +329,7 @@ Traditional loops don’t help us understand what the code is doing until we rea
 
 When we use array methods, we separate the “what” (our data) from the “how” (how to loop over it and what to do on each iteration), and the “how to loop over” isn’t obscures “what to do on each iteration”. In traditional loops, everything is mixed together, and we need to spend extra time writing and reading loop mechanics, which are abstracted away by array methods with meaningful names.
 
-**Info:** We talk about the separation of “what” and “how” in the [Separate “what” and “how”](/blog/divide/#separate-what-and-how) section of the _Divide and conquer, or merge and relax_ chapter.
+> [!info] We talk about the separation of “what” and “how” in the [Separate “what” and “how”](/blog/divide/#separate-what-and-how) section of the _Divide and conquer, or merge and relax_ chapter.
 
 When all simple cases are covered by array methods, every time we see a traditional loop, we know that something unusual is going on. And that’s good: fewer chances we’ll miss a bug during code review because we can be extra vigilant every time we see a traditional loop.
 
@@ -448,7 +448,7 @@ const totalPrice = cart
 
 Now, the purpose of each step is clearer. The sum calculation is easier to recognize here than in the original code.
 
-**Tip:** I often see something that I call _the reduce rabbit hole_ during interviews and code reviews: a developer starts writing code with the `reduce()` method, and then digs a deep complexity pit by adding more and more things to the `reduce()`, instead of stopping and rewriting it to something simpler. TkDodo has [a great article](https://tkdodo.eu/blog/why-i-dont-like-reduce) on the pitfalls of `reduce()`.
+> [!tip] I often see something that I call _the reduce rabbit hole_ during interviews and code reviews: a developer starts writing code with the `reduce()` method, and then digs a deep complexity pit by adding more and more things to the `reduce()`, instead of stopping and rewriting it to something simpler. TkDodo has [a great article](https://tkdodo.eu/blog/why-i-dont-like-reduce) on the pitfalls of `reduce()`.
 
 ## Dealing with side effects
 
@@ -482,7 +482,7 @@ A `for…of` loop would be even better:
 - it has clear semantics of iteration over all array elements since we can’t manipulate the number of iterations, like in a regular `for` loop (we can abort the loop with a `break`, though);
 - the syntax is a bit cleaner because we don’t need to create a callback function.
 
-**Tip:** The `for…of` loop was introduced in ECMAScript 2015, and is now my favorite way of array iteration. It completely replaced the `forEach()` method for me.
+> [!tip] The `for…of` loop was introduced in ECMAScript 2015, and is now my favorite way of array iteration. It completely replaced the `forEach()` method for me.
 
 Let’s rewrite our example using a `for…of` loop:
 
@@ -505,7 +505,7 @@ The main benefits of `for…of` loops over the `forEach()` method are:
 - ability to exit early using `break` or `return`;
 - correct type narrowing in TypeScript (which doesn’t work properly when using a callback function in `forEach()`).
 
-**Tip:** The [unicorn/no-array-for-each](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-for-each.md) and [unicorn/no-for-loop](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-for-loop.md) linter rules automatically replace `forEach()` methods and `for` loops with `for…of` loops.
+> [!tip] The [unicorn/no-array-for-each](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-for-each.md) and [unicorn/no-for-loop](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-for-loop.md) linter rules automatically replace `forEach()` methods and `for` loops with `for…of` loops.
 
 ## Iterating over objects
 
@@ -791,7 +791,7 @@ I’d be happy to accept either the original, with the `for…of` loop, or the l
 
 _Though, `tableData` is a terrible variable name._
 
-**Info:** We talk about naming in the [Naming is hard](/blog/naming/) chapter.
+> [!info] We talk about naming in the [Naming is hard](/blog/naming/) chapter.
 
 ## But aren’t array methods slow?
 

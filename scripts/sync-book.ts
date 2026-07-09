@@ -109,23 +109,62 @@ const stripInternalLinks = (contents: string) =>
 		return title;
 	});
 
+// Convert Leanpub asides into Obsidian-style callouts:
+//
+//   I> First paragraph.
+//   I>
+//   I> Second paragraph.
+//   ->
+//   > [!info]
+//   > First paragraph.
+//   >
+//   > Second paragraph.
 const updateTips = (contents: string) => {
-	const keysMask = Object.keys(TIPS).join('');
-	return (
-		contents
-			// Replace paragraph breaks inside tips with double <br>
-			.replaceAll(
-				new RegExp(String.raw`\s*([${keysMask}])>\s*([${keysMask}])>\s*`, 'gm'),
-				'<br><br>'
-			)
-			// Replace the first tip marker in a block with a text marker (**Info:**)
-			.replaceAll(
-				new RegExp(String.raw`\n([${keysMask}])> `, 'gm'),
-				(_match, marker: keyof typeof TIPS) => {
-					return `\n**${TIPS[marker]}:** `;
-				}
-			)
+	const markerRegExp = new RegExp(
+		String.raw`^([${Object.keys(TIPS).join('')}])>\s?(.*)$`
 	);
+	const lines = contents.split('\n');
+	const result: string[] = [];
+	let index = 0;
+
+	while (index < lines.length) {
+		const match = markerRegExp.exec(lines[index]);
+		if (match === null) {
+			result.push(lines[index]);
+			index++;
+			continue;
+		}
+
+		const marker = match[1] as keyof typeof TIPS;
+		const type = TIPS[marker].toLowerCase();
+
+		// Collect all consecutive lines with the same marker (one aside block)
+		const bodyLines: string[] = [];
+		while (index < lines.length) {
+			const lineMatch = markerRegExp.exec(lines[index]);
+			if (lineMatch === null || lineMatch[1] !== marker) {
+				break;
+			}
+
+			bodyLines.push(lineMatch[2].trimEnd());
+			index++;
+		}
+
+		// Drop leading and trailing empty lines (Leanpub paragraph separators)
+		while (bodyLines.at(0) === '') {
+			bodyLines.shift();
+		}
+		while (bodyLines.at(-1) === '') {
+			bodyLines.pop();
+		}
+
+		result.push(`> [!${type}]`);
+		for (const bodyLine of bodyLines) {
+			result.push(bodyLine === '' ? '>' : `> ${bodyLine}`);
+		}
+	}
+
+	return result.join('\n');
 };
 
 // images/ → /images/blog/book/

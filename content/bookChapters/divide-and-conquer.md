@@ -10,7 +10,7 @@ Knowing how to organize code into modules or functions, and when the right time 
 
 We, developers, hate to do the same work twice. DRY is a mantra for many. However, when we have two or three pieces of code that kind of do the same thing, it may be still too early to introduce an abstraction, no matter how tempting it may feel.
 
-**Info:** The [Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (DRY) principle demands that “every piece of knowledge must have a single, unambiguous, authoritative representation within a system”, which is often interpreted as _any code duplication is strictly verboten_.
+> [!info] The [Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (DRY) principle demands that “every piece of knowledge must have a single, unambiguous, authoritative representation within a system”, which is often interpreted as _any code duplication is strictly verboten_.
 
 Live with the pain of code duplication for a while; maybe it’s not so bad in the end, and the code is actually not exactly the same. Some level of code duplication is healthy and allows us to iterate and evolve code faster without the fear of breaking something.
 
@@ -20,13 +20,13 @@ Managing shared code in large projects with many developers and teams is difficu
 
 Imagine Team A is adding a comment form to their page: a name, a message, and a submit button. Then, Team B needs a feedback form, so they find Team A’s component and try to reuse it. Then, Team A also wants an email field, but they don’t know that Team B uses their component, so they add a required email field and break the feature for Team B users. Then, Team B needs a phone number field, but they know that Team A is using the component without it, so they add an option to show a phone number field. A year later, the two teams hate each other for breaking each other’s code, and the component is full of conditions and is impossible to maintain. Both teams would save a lot of time and have healthier relationships with each other if they maintained separate components composed of lower-level shared components, like an input field or a button.
 
-**Tip:** It might be a good idea to forbid other teams from using our code unless it’s designed and marked as shared. The [Dependency cruiser](https://github.com/sverweij/dependency-cruiser) is a tool that could help set up such rules.
+> [!tip] It might be a good idea to forbid other teams from using our code unless it’s designed and marked as shared. The [Dependency cruiser](https://github.com/sverweij/dependency-cruiser) is a tool that could help set up such rules.
 
 Sometimes, we have to roll back an abstraction. When we start adding conditions and options, we should ask ourselves: is it still a variation of the same thing or a new thing that should be separated? Adding too many conditions and parameters to a module can make the API hard to use and the code hard to maintain and test.
 
 Duplication is cheaper and healthier than the wrong abstraction.
 
-**Info:** See Sandi Metz’s article [The Wrong Abstraction](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction) for a great explanation.
+> [!info] See Sandi Metz’s article [The Wrong Abstraction](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction) for a great explanation.
 
 The higher the level of the code, the longer we should wait before we abstract it. Low-level utility abstractions are much more obvious and stable than business logic.
 
@@ -38,7 +38,7 @@ _Code length_ is often [used as a metric](https://softwareengineering.stackexcha
 
 Splitting a linear algorithm, even a long one, into several functions and then calling them one after another rarely makes the code more readable. Jumping between functions (and even more so — files) is harder than scrolling, and if we have to look into each function’s implementation to understand the code, then the abstraction wasn’t the right one.
 
-**Info:** Egon Elbre wrote a nice article on [psychology of code readability](https://egonelbre.com/psychology-of-code-readability/).
+> [!info] Egon Elbre wrote a nice article on [psychology of code readability](https://egonelbre.com/psychology-of-code-readability/).
 
 Here’s an example, adapted from the [Google Testing Blog](https://testing.googleblog.com/2023/09/use-abstraction-to-improve-function.html):
 
@@ -195,7 +195,7 @@ There are many ways to cook a pizza, just as there are many ways to code a probl
 
 Naming can also be a problem too when all the extracted functions are parts of the same algorithm. We need to invent names that are clearer than the code and shorter than comments — not an easy task.
 
-**Info:** We talk about commenting code in the Avoid comments chapter, and about naming in the Naming is hard chapter.
+> [!info] We talk about commenting code in the Avoid comments chapter, and about naming in the Naming is hard chapter.
 
 You probably won’t find many small functions in my code. In my experience, the most useful reasons to split code are _change frequency_ and _change reason_.
 
@@ -278,7 +278,7 @@ The same applies to functions that are intended to be used only together with a 
 
 Another benefit is that when we delete a module, we automatically delete its dependencies. Code in shared modules often stays in the codebase forever because it’s hard to know if it’s still used (though TypeScript makes this easier).
 
-**Info:** Such modules are sometimes called _deep modules_: a relatively large modules that encapsulate complex problems but has a simple APIs. The opposite of deep modules are _shallow modules_: many small modules that need to interact with each other.
+> [!info] Such modules are sometimes called _deep modules_: a relatively large modules that encapsulate complex problems but has a simple APIs. The opposite of deep modules are _shallow modules_: many small modules that need to interact with each other.
 
 If we often have to change several modules or functions at the same time, it might be better to merge them into a single module or function. This approach is sometimes called _colocation_.
 
@@ -303,13 +303,13 @@ Here’s how the file tree changes with colocation:
 | `src/actionCreators/feature.js` |                               |
 | `src/reducers/feature.js`       |                               |
 
-**Info:** To learn more about colocation, read [Kent C. Dodds’s article](https://kentcdodds.com/blog/colocation).
+> [!info] To learn more about colocation, read [Kent C. Dodds’s article](https://kentcdodds.com/blog/colocation).
 
 A common complaint about colocation is that it makes components too large. In such cases, it’s better to extract some parts into their own components, along with the markup, styles, and logic.
 
 The idea of colocation also conflicts with _separation of concerns_ — an outdated idea that led web developers to keep HTML, CSS, and JavaScript in separate files (and often in separate parts of the file tree) for too long, forcing us edit three files at the same time to make even the most basic changes to web pages.
 
-**Info:** The _change reason_ is also known as the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), which states that “every module, class, or function should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.”
+> [!info] The _change reason_ is also known as the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), which states that “every module, class, or function should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.”
 
 ## Sweep that ugly code under the rug
 
@@ -506,7 +506,7 @@ Each validation function and the function that runs validations are pretty gener
 
 Now, we can add validation for any form by describing which fields need which validations and which error to show when a certain check fails.
 
-**Info:** See the Avoid conditions chapter for the complete code and a more detailed explanation of this example.
+> [!info] See the Avoid conditions chapter for the complete code and a more detailed explanation of this example.
 
 I call this process _separation of “what” and “how”_:
 
@@ -573,7 +573,7 @@ I don’t really see any advantages to default exports, but they have several is
 - **Poor refactoring:** renaming a module with a default export often leaves existing imports unchanged. This doesn’t happen with named exports, where all imports are updated after renaming a function.
 - **Inconsistency:** default-exported modules can be imported using any name, which reduces the consistency and greppability of the codebase. Named exports can also be imported using a different name using the `as` keyword to avoid naming conflicts, but it’s more explicit and is rarely done by accident.
 
-**Info:** We talk more about greppability in the Write greppable code section of the _Other techniques_ chapter.
+> [!info] We talk more about greppability in the Write greppable code section of the _Other techniques_ chapter.
 
 Unfortunately, some third-party APIs, such as `React.lazy()` require default exports, but for all other cases, I stick to named exports.
 
@@ -609,7 +609,7 @@ However, barrel files have several issues:
 - **Circular imports:** importing from a barrel file can cause a circular import when both modules are imported from the same barrel files (for example, the `Button` component imports the `Box` component).
 - **Developer experience:** navigation to function definition navigates to the barrel file instead of the function’s source code; and autoimport can be confused whether to import from a barrel file instead of a source file.
 
-**Info:** TkDodo explains [the drawbacks of barrel files in great detail](https://tkdodo.eu/blog/please-stop-using-barrel-files).
+> [!info] TkDodo explains [the drawbacks of barrel files in great detail](https://tkdodo.eu/blog/please-stop-using-barrel-files).
 
 The benefits of barrel files are too minor to justify their use, so I recommend avoiding them.
 
@@ -790,7 +790,7 @@ test.each([
 
 Now, we’ve gathered all the test inputs with their expected results in one place, making it easier to add new test cases.
 
-**Info:** Check out my [Jest](https://github.com/sapegin/jest-cheat-sheet) and [Vitest](https://github.com/sapegin/vitest-cheat-sheet) cheat sheets.
+> [!info] Check out my [Jest](https://github.com/sapegin/jest-cheat-sheet) and [Vitest](https://github.com/sapegin/vitest-cheat-sheet) cheat sheets.
 
 ---
 

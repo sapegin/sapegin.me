@@ -11,7 +11,7 @@ Developers and code reviewers have seemingly conflicting goals: developers want 
 
 By following these recommendations you could reduce the number of code review iterations and ship better code faster.
 
-**Tip:** [Frontend pull request checklist](https://github.com/sapegin/frontend-pull-request-checklist) contains more concrete items to prepare your pull request, I recommend linking it from your pull request template.
+> [!tip] [Frontend pull request checklist](https://github.com/sapegin/frontend-pull-request-checklist) contains more concrete items to prepare your pull request, I recommend linking it from your pull request template.
 
 ## Before you start
 
@@ -41,7 +41,7 @@ These kinds of changes and comments will help everyone who’s going to read the
 
 It helps a lot to see what the code in the diff is actually doing. Explain why the code is needed, what issue it’s trying to fix. Mention related tickets, add screenshots or even GIFs for all your changes.
 
-**Tip:** [Kap](https://getkap.co/) is a nice free app to record GIFs on macOS.
+> [!tip] [Kap](https://getkap.co/) is a nice free app to record GIFs on macOS.
 
 ## Ask questions
 

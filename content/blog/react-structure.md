@@ -101,14 +101,10 @@ export function doSomethingCool(what) {
 function cookiesReducer(state, action) {
   switch (action.type) {
     case DO_SOMETHING_COOL: {
-      return {
-        /*_*/
-      };
+      return {/*_*/};
     }
     default: {
-      return {
-        /*_*/
-      };
+      return {/*_*/};
     }
   }
 }

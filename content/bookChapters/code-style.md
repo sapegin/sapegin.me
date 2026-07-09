@@ -67,7 +67,7 @@ const dogs = [
 ];
 ```
 
-**Info:** Nik Graf wrote [a great article on the benefits of dangling commas](https://medium.com/@nikgraf/why-you-should-enforce-dangling-commas-for-multiline-statements-d034c98e36f8).
+> [!info] Nik Graf wrote [a great article on the benefits of dangling commas](https://medium.com/@nikgraf/why-you-should-enforce-dangling-commas-for-multiline-statements-d034c98e36f8).
 
 If I had to choose the most annoying code style, it would be writing condition or loop bodies without braces:
 
@@ -95,7 +95,7 @@ function getIngredientNames(recipeDetails) {
 
 I’m 102% sure I’d miss the `return` statement here when reading this code for the first time.
 
-**Tip:** My color theme, [Squirrelsong](https://sapegin.me/squirrelsong/), shows `!` and other operators in bold to make them more noticeable.
+> [!tip] My color theme, [Squirrelsong](https://sapegin.me/squirrelsong/), shows `!` and other operators in bold to make them more noticeable.
 
 Compare it with:
 
@@ -121,7 +121,7 @@ pizza && pizza();
 
 Shorter isn’t always better _(though, I’m fine with `pizza?.()` sometimes)_.
 
-**Tip:** Use `curly` ESLint rule to make sure all conditions have braces: see the Lint your code chapter.
+> [!tip] Use `curly` ESLint rule to make sure all conditions have braces: see the Lint your code chapter.
 
 The only exception is `else if`:
 
@@ -143,7 +143,7 @@ function printStatus(text, type) {
 
 JavaScript doesn’t have the `elseif` operator like some other languages. However, we can “make” one by skipping braces on the `else` branch. It doesn’t reduce the readability because all the code is still inside braces, but this way we have all branches at the same nesting level, creating a _parallel structure_: all branches look like they belong to the same condition.
 
-**Info:** We talk more about parallel coding in the Don’t make me think chapter.
+> [!info] We talk more about parallel coding in the Don’t make me think chapter.
 
 ## Obsolete code styles
 
@@ -220,7 +220,7 @@ const readline = require('readline');
 
 This will not only make it slightly more readable but also make it easier to add, remove, or move variable declarations.
 
-**Info:** We talk about code formatting in the Autoformat your code chapter.
+> [!info] We talk about code formatting in the Autoformat your code chapter.
 
 ## Condition expansion
 
@@ -297,7 +297,7 @@ if (puppies.length === 0) {
 
 Now, the conditions look significantly different, and there’s no way to misinterpret them.
 
-**Tip:** The [unicorn/explicit-length-check](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/explicit-length-check.md) linter rule requires and autofixes explicit length checks.
+> [!tip] The [unicorn/explicit-length-check](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/explicit-length-check.md) linter rule requires and autofixes explicit length checks.
 
 I’m starting to think that using `!` in conditions is [generally an antipattern](https://x.com/Jack_Franklin/status/1189477268764188672). Instead of:
 
@@ -415,7 +415,7 @@ It’s easier to follow conditions, notice `return` statements in functions, and
 
 _I’m a shortliner._
 
-**Info:** We talk more about separating data and data-managing code in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
+> [!info] We talk more about separating data and data-managing code in the Separate “what” and “how” section of the _Divide and conquer, or merge and relax_ chapter.
 
 Another issue with the longliner’s approach is that Prettier, with a default print length of 80 characters, will likely make the code ugly and unreadable:
 
@@ -541,7 +541,7 @@ function getWordRange(pattern) {
 }
 ```
 
-**Info:** Art and design have the concept of [negative space](https://en.wikipedia.org/wiki/Negative_space), which is space between the subjects of an image (known as positive space). In an artwork, negative space is as important as the subject itself. In many artworks, there’s a lot more negative space than positive space. Code also has negative space, which helps us quickly identify particular elements, such as functions, conditions, or loops. This includes the use of whitespace, indentation, and braces.
+> [!info] Art and design have the concept of [negative space](https://en.wikipedia.org/wiki/Negative_space), which is space between the subjects of an image (known as positive space). In an artwork, negative space is as important as the subject itself. In many artworks, there’s a lot more negative space than positive space. Code also has negative space, which helps us quickly identify particular elements, such as functions, conditions, or loops. This includes the use of whitespace, indentation, and braces.
 
 _Parentheses_ highlight individual _phrases_, and improve readability on the smallest level, for example, in conditions:
 
@@ -556,7 +556,7 @@ if (
 
 Similarly to prose, we can make our code easier to scan — to find a particular place we need, and easier to understand each function; once we fond the right one. I much prefer this approach to splitting code into many small functions.
 
-**Info:** We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
 
 ## A case for custom formatting
 
@@ -587,7 +587,7 @@ const SEASONS = {
 };
 ```
 
-**Info:** We talk about code autoformatting in the Autoformat your code chapter.
+> [!info] We talk about code autoformatting in the Autoformat your code chapter.
 
 ## To semicolon or not
 
@@ -637,7 +637,7 @@ Whether to use tabs or spaces to indent code is one of the oldest programming ar
 
 However, tooling has improved significantly in recent years, so it no longer matters, as long as we have a linter or autoformatter to handle it automatically. With modern code editors, there’s no difference in developer experience, and most of the time, I don’t even know whether a project uses spaces or tabs.
 
-**Info:** We talk about linters in the Lint your code chapter and about code formatters in Autoformat your code chapter.
+> [!info] We talk about linters in the Lint your code chapter and about code formatters in Autoformat your code chapter.
 
 ## The rest doesn’t matter
 
@@ -710,7 +710,7 @@ Some programmers become defensive or even angry when promoting their preferred c
 
 My rule of thumb here is: _automate or forget_. For example, [Prettier](https://prettier.io/) formats code with almost zero config, which saves an enormous amount of time writing code, reading someone else’s code, or discussing code style in a team.
 
-**Info:** We talk about Prettier and code formatting in the Autoformat your code chapter.
+> [!info] We talk about Prettier and code formatting in the Autoformat your code chapter.
 
 Be vigilant when you adapt [a popular code style](https://sapegin.me/blog/javascript-code-styles/): many are too opinionated and want us to write code in a very specific way, even when it doesn’t improve the readability or maintainability of the code or reduce the number of bugs.
 

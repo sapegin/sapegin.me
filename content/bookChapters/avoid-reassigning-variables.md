@@ -34,11 +34,11 @@ const pizzaTopping = 'salami';
 
 This pizza will always have salami on it!
 
-**Info:** The `const` and `let` keywords are relatively new in JavaScript and were introduced in ECMAScript 2015. Before that, JavaScript only had the `var` keyword, which is no longer recommended. The main difference is that `const` and `let` are block-scoped (meaning, the variable is accessible inside a single block, such as an `if` condition or a `for` loop), while `var` is function-scoped (meaning, the variable is accessible anywhere within in a function). Additionally, we can now choose whether to allow reassignments or not, depending on which keyword we use to declare a variable.
+> [!info] The `const` and `let` keywords are relatively new in JavaScript and were introduced in ECMAScript 2015. Before that, JavaScript only had the `var` keyword, which is no longer recommended. The main difference is that `const` and `let` are block-scoped (meaning, the variable is accessible inside a single block, such as an `if` condition or a `for` loop), while `var` is function-scoped (meaning, the variable is accessible anywhere within in a function). Additionally, we can now choose whether to allow reassignments or not, depending on which keyword we use to declare a variable.
 
 Most of the time, we can write code without reassignments, making it easier to reason about.
 
-**Info:** Arrays and objects can also be _mutated_, even if they are defined using the `const` keyword. We talk about mutation in the next chapter, Avoid mutation.
+> [!info] Arrays and objects can also be _mutated_, even if they are defined using the `const` keyword. We talk about mutation in the next chapter, Avoid mutation.
 
 ## Don’t reuse variables
 
@@ -56,7 +56,9 @@ In the code above, the `category` variable can contain: a category ID (a number 
 
 On top of that, a new value is reassigned to a function parameter, which is known as _function parameter shadowing_. I think it’s no different from regular reassignment since it only affects the value inside the function, so I’ll treat it the same way.
 
-**Info:** [Variable shadowing](https://en.wikipedia.org/wiki/Variable_shadowing) happens when we define a variable with the same name that already exists in a larger scope. For example, we define a `text` variable inside a function, but there’s already a module-level `text` variable. Shadowing makes it hard to know which variable we’re working with at any given moment.<br><br>Function parameter shadowing is similar, but happens when we reassign a function parameter.
+> [!info] [Variable shadowing](https://en.wikipedia.org/wiki/Variable_shadowing) happens when we define a variable with the same name that already exists in a larger scope. For example, we define a `text` variable inside a function, but there’s already a module-level `text` variable. Shadowing makes it hard to know which variable we’re working with at any given moment.
+>
+> Function parameter shadowing is similar, but happens when we reassign a function parameter.
 
 Such cases are the easiest to fix: we need to use separate variables for each value:
 
@@ -81,7 +83,7 @@ function getProductsOnSale(categoryId: string): Product[] {
 }
 ```
 
-**Info:** _Variable lifespan_ is the number of lines of code between the variable declaration and the last line where this variable is accessed. The longer the lifespan, the harder it is to follow a variable and know which value it has at any given moment.
+> [!info] _Variable lifespan_ is the number of lines of code between the variable declaration and the last line where this variable is accessed. The longer the lifespan, the harder it is to follow a variable and know which value it has at any given moment.
 
 This approach makes it significantly easier to reason about the code.
 
@@ -136,7 +138,7 @@ const validateVideo = video => {
 
 This code validates a video file upload by checking that it has all required data in the correct formats. I’ve shortened the comments a bit because the original code had lines longer than 200 characters. On a very big screen, it looks like a pretty table; otherwise, it’s an unreadable mess. Any autoformatting tool, like Prettier, will also turn this code into an unreadable mess. Such formatting handcraft was common in the old days, before autoformatting tools became mainstream. Now, it’s a waste of time.
 
-**Info:** We talk about code formatting and Prettier in the Autoformat your code chapter.
+> [!info] We talk about code formatting and Prettier in the Autoformat your code chapter.
 
 Anyway, this code appends an error message to the `errors` string variable for every failed validation, but now it’s hard to see this because the message formatting code is intertwined with the validation code. To add another validation, we have to understand and copy the formatting code. To print errors as an HTML list instead of plain text, we have to change each line of this function.
 
@@ -186,7 +188,7 @@ function printVideoErrors(video) {
 
 We’ve separated the validations, the validation logic, and the formatting. Flies separately, kebabs separately, as we say in Russia. Each piece of code now has a single responsibility and a single reason to change. The validations are now defined declaratively and read like a list, not mixed with conditions and string concatenation. We’ve also changed negative conditions (_is invalid?_) to positive ones (_is valid?_). All this improves the readability and maintainability of the code: it’s easier to see all validations and add new ones because we don’t need to know the implementation details of running validations or formatting.
 
-**Info:** We talk more about negative and positive names in the Naming is hard chapter.
+> [!info] We talk more about negative and positive names in the Naming is hard chapter.
 
 On top of that, now it’s clear that the original code had a bug: there was no space between error messages.
 
@@ -236,7 +238,7 @@ const VIDEO_VALIDATIONS = [
 
 Now, all the code we need to touch to add, remove, or change validations is contained in the `VIDEO_VALIDATIONS` array. Keep the code, that’s likely to be changed at the same time, in the same place.
 
-**Info:** We talk about keeping code that changes at the same time, at the same place in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk about keeping code that changes at the same time, at the same place in the Divide and conquer, or merge and relax chapter.
 
 ## Building complex objects
 
@@ -352,7 +354,7 @@ We shortened the `isFreeDelivery` variable lifespan from 100 lines to just 10. N
 
 Another change here is that the `isFreeDelivery` variable is now boolean, which makes the code more idiomatic. We convert it to a number (a backend requirement) when we submit the order to the server. This is similar to the normalization of variables we talked about in the previous chapter; the only difference is that in the previous chapter we normalized the incoming variable, while here we normalize the outgoing one. The structure of the raw data and the requirements of the backend shouldn’t make us write confusing and non-idiomatic code.
 
-**Tip:** Don’t confuse the Pascal-style with PascalCase though, this naming convention is still in use. We talk more about naming conventions in the Naming is hard chapter.
+> [!tip] Don’t confuse the Pascal-style with PascalCase though, this naming convention is still in use. We talk more about naming conventions in the Naming is hard chapter.
 
 ## Avoid temporary variables for function return values
 
@@ -378,7 +380,7 @@ function areEventsValid(events) {
 }
 ```
 
-**Info:** We talk a lot more about array methods in the Avoid loops chapter.
+> [!info] We talk a lot more about array methods in the Avoid loops chapter.
 
 We removed a temporary variable, avoided reassignments, and made the condition positive (_is valid?_) instead of negative (_is invalid?_). Positive conditions are generally easier to understand.
 
@@ -474,7 +476,7 @@ However, we should avoid splitting code into many small functions: doing so sign
 
 For this particular code, I’d prefer to use a table instead of a function.
 
-**Info:** We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter, and about tables and maps in the Tables and maps section of the _Avoid conditions_ chapter.
+> [!info] We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter, and about tables and maps in the Tables and maps section of the _Avoid conditions_ chapter.
 
 ## Indeterminate loops
 
@@ -539,7 +541,7 @@ function setupHideTimeout() {
 
 Now, we rely on type inference: TypeScript knows that the `setTimeout()` function returns a `NodeJS.Timeout`, so it can safely assume that `hideTimeout` should use the same type. Additionally, by restructuring the code, we removed the second condition: now we return a _no operation_ function when there’s no need for a timer. This makes the code less cluttered and easier to follow.
 
-**Info:** A _no operation_ or _noop_ function is a function that does nothing. It allows us to write unconditional code that expects a function: if we don’t want any action, we pass a no operation function instead. This makes the code more straightforward. Noop functions are a common pattern in JavaScript, and arrow function syntax gives them a compact and distinctive look: `() => {}`.
+> [!info] A _no operation_ or _noop_ function is a function that does nothing. It allows us to write unconditional code that expects a function: if we don’t want any action, we pass a no operation function instead. This makes the code more straightforward. Noop functions are a common pattern in JavaScript, and arrow function syntax gives them a compact and distinctive look: `() => {}`.
 
 We already discussed another example of how reassignments make TypeScript code awkward in the _Don’t reuse variables_ section.
 
@@ -555,7 +557,7 @@ Both conventions reduce the cognitive load a bit and make the code easier to und
 
 Unfortunately, JavaScript has no true constants, and _mutation_ is still possible even when we define a variable using the `const` keyword.
 
-**Info:** We talk about mutation in the next chapter, Avoid mutation.
+> [!info] We talk about mutation in the next chapter, Avoid mutation.
 
 ---
 

@@ -66,7 +66,7 @@ Such tests could be a good accessibility _smoke test_ that makes sure we’re no
 
 Read more about [setting up and using cypress-axe](/blog/detecting-accessibility-issues-on-ci-with-cypress-axe/).
 
-**Tip:** For automated accessibility testing of separate components, [jest-axe](https://github.com/nickcolley/jest-axe) could be a good option.
+> [!tip] For automated accessibility testing of separate components, [jest-axe](https://github.com/nickcolley/jest-axe) could be a good option.
 
 ## Axe browser extension
 
@@ -106,7 +106,7 @@ For all other cases, use [Contrast app](https://usecontrast.com/), and pick any 
 
 ![Contrast app shows the contrast ratio of two colors](/images/blog/accessibility-contrast.webp)
 
-**Bonus:** [Contrast ratio](https://contrast-ratio.com/) web app by Lea Verou is another option when you want to [share a link](https://contrast-ratio.com/#%23fa6b6b-on-white) with the check results.
+> [!bonus] [Contrast ratio](https://contrast-ratio.com/) web app by Lea Verou is another option when you want to [share a link](https://contrast-ratio.com/#%23fa6b6b-on-white) with the check results.
 
 ## Spectrum Chrome extension
 
@@ -116,7 +116,7 @@ Spectrum browser extension allows us to check how folks with different types of 
 
 **Update May 2024:** Looks like Spectrum extension is no longer available. [Colorblindly](https://chromewebstore.google.com/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg) seems to be a good replacement.
 
-**Bonus:** Chrome DevTools can emulate some of these vision deficiencies. Press Escape, enable the Rendering tab from the three-dot menu button and scroll to the Emulate vision deficiencies section.
+> [!bonus] Chrome DevTools can emulate some of these vision deficiencies. Press Escape, enable the Rendering tab from the three-dot menu button and scroll to the Emulate vision deficiencies section.
 
 ## Tab key
 
@@ -133,11 +133,11 @@ Along with the Tab key, it’s worth checking that other keys work as expected: 
 
 We should be able to complete all important actions in our site or app without touching a mouse, trackpad, or touchscreen. At any time, we should know which element is in focus.
 
-**Tip:** I often use a live expression on `document.activeElement` in Chrome DevTools to see which element is in focus (“Create live expression” button in the Console tab’s toolbar). It helps to find elements without a visible focus state, or invisible elements that can be focused.
+> [!tip] I often use a live expression on `document.activeElement` in Chrome DevTools to see which element is in focus (“Create live expression” button in the Console tab’s toolbar). It helps to find elements without a visible focus state, or invisible elements that can be focused.
 
 ![Using Chrome DevTools live expression to check which element is in focus](/images/blog/accessibility-live-expression.png)
 
-**Bonus:** [No Mouse Days](https://github.com/marcysutton/no-mouse-days) npm package by Marcy Sutton disables the mouse cursor to encourage better keyboard support in a site or app.
+> [!bonus] [No Mouse Days](https://github.com/marcysutton/no-mouse-days) npm package by Marcy Sutton disables the mouse cursor to encourage better keyboard support in a site or app.
 
 ## Zoom
 
@@ -145,7 +145,7 @@ By zooming in our site or app, we can check how it handles, well, zooming. Try t
 
 ![A page on 200% zoom still looks good](/images/blog/accessibility-zoom.webp)
 
-**Tip:** Using `rem`s for all sizes in CSS, including media query breakpoints, is usually enough to avoid problems with zooming.
+> [!tip] Using `rem`s for all sizes in CSS, including media query breakpoints, is usually enough to avoid problems with zooming.
 
 ## Screen reader
 
@@ -159,9 +159,9 @@ Testing with a screen reader is in many ways similar to testing with a keyboard.
 
 On macOS, we already have VoiceOver. On Windows, there are built-in Narrator, free [NVDA](https://www.nvaccess.org/), or paid [JAWS](https://www.freedomscientific.com/products/software/jaws/). There’s also [ChromeVox](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn/related) that we can install as a Chrome extension.
 
-**Tip:** To get started with VoiceOver, check out [this article](https://bocoup.com/blog/getting-started-with-voiceover-accessibility) and [keep this cheat sheet](https://interactiveaccessibility.com/education/training/downloads/VoiceOver-CommandReference.pdf).
+> [!tip] To get started with VoiceOver, check out [this article](https://bocoup.com/blog/getting-started-with-voiceover-accessibility) and [keep this cheat sheet](https://interactiveaccessibility.com/education/training/downloads/VoiceOver-CommandReference.pdf).
 
-**Bonus:** Use the Accessibility tab in Chrome DevTools to check how assisting technologies see a particular element:
+> [!bonus] Use the Accessibility tab in Chrome DevTools to check how assisting technologies see a particular element:
 
 ![Chrome DevTools Accessibility tab](/images/blog/accessibility-devtools.png)
 
@@ -179,9 +179,9 @@ A few more things that are worth testing:
 
 - **Hover alternatives** for keyboard and touchscreens: hover shouldn’t be the only way to reveal some content or an interactive element. A common example is a menu that appears on hover on an item in a long list. [A tooltip](https://inclusive-components.design/tooltips-toggletips/) is another example. We could show these elements when the container is in focus for keyboard users, and always show them on touchscreens.
 
-**Tip:** Use CSS [`any-hover`](https://www.w3.org/TR/mediaqueries-4/#any-input) interaction media feature query to test hover support on the device - though beware of making [incorrect assumptions](https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/).
+> [!tip] Use CSS [`any-hover`](https://www.w3.org/TR/mediaqueries-4/#any-input) interaction media feature query to test hover support on the device - though beware of making [incorrect assumptions](https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/).
 
-**Tip:** We could use Cypress and cypress-axe [to test the accessibility of our site or app in the dark mode](https://www.cypress.io/blog/2019/12/13/test-your-web-app-in-dark-mode/).
+> [!tip] We could use Cypress and cypress-axe [to test the accessibility of our site or app in the dark mode](https://www.cypress.io/blog/2019/12/13/test-your-web-app-in-dark-mode/).
 
 ## Resources
 
@@ -201,6 +201,7 @@ A few more things that are worth testing:
 - [16 things to improve your website accessibility (checklist)](https://websitesetup.org/web-accessibility-checklist/) by Bruce Lawson
 - [The business case for digital accessibility](https://www.w3.org/WAI/business-case/)
 - [Getting Started with VoiceOver & Accessibility](https://bocoup.com/blog/getting-started-with-voiceover-accessibility) by Sue Lockwood
+
 <!-- textlint-enable -->
 
 ## Conclusion

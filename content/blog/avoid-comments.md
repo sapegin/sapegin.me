@@ -177,7 +177,7 @@ On the other hand, the `isDirectory()` and `ensureFile()` are good examples of m
 
 Overall, I don’t think that splitting a function into many small functions just because it’s “long” makes the code more readable. Often, it has the opposite effect because it hides important details inside other functions, making it harder to modify the code.
 
-**Info:** We talk about code splitting in more detail in the [Divide and conquer, or merge and relax](/blog/divide/) chapter.
+> [!info] We talk about code splitting in more detail in the [Divide and conquer, or merge and relax](/blog/divide/) chapter.
 
 Another common use for comments is complex conditions:
 
@@ -349,7 +349,7 @@ In the code above, we separated levels of abstraction, so the implementation det
 
 However, I wouldn’t go further and extract each clause into its own function unless they are reused.
 
-**Info:** We talk more about conditions in the [Avoid conditions](/blog/avoid-conditions/) chapter.
+> [!info] We talk more about conditions in the [Avoid conditions](/blog/avoid-conditions/) chapter.
 
 ## Good comments
 
@@ -408,7 +408,7 @@ const {container: c1} = RTL.render(<Test />);
 expect(c1.textContent).toEqual('')
 -->
 
-**Info:** You may encounter various styles of hack comments: `HACK`, `XXX`, `@hack`, and so on, though I prefer `HACK`.
+> [!info] You may encounter various styles of hack comments: `HACK`, `XXX`, `@hack`, and so on, though I prefer `HACK`.
 
 ## Todo comments
 
@@ -420,7 +420,7 @@ I like _todo comments_, and I add plenty of them when writing code. Todo comment
 
 **Temporary comments** help us focus on the essentials when we write code by writing down everything we want to do or try later. Such comments are an essential part of my coding process, and I remove most of them before submitting my code for review.
 
-**Info:** You may encounter various styles of todo comments: `TODO`, `FIXME`, `UNDONE`, `@todo`, `@fixme`, and so on. I prefer `TODO`.
+> [!info] You may encounter various styles of todo comments: `TODO`, `FIXME`, `UNDONE`, `@todo`, `@fixme`, and so on. I prefer `TODO`.
 
 Comments for **planned improvements** are useful when we know that we need to do something:
 
@@ -494,7 +494,7 @@ expect(getEnvironment('www.example.com')).toBe('PROD')
 expect(getEnvironment('localhost')).toBe('DEV')
 -->
 
-**Tip:** Maybe we should start using `DREAM` comments for such cases…
+> [!tip] Maybe we should start using `DREAM` comments for such cases…
 
 However, there’s a type of todo comments I don’t recommend — comments with an expiration date:
 
@@ -513,7 +513,7 @@ There are other conditions in the `unicorn/expiring-todo-comments` rule that mig
 
 This is a better use case because it will fail only when someone updates React, and fixing such todos should probably be part of the upgrade.
 
-**Tip:** I made a Visual Studio Code extension to highlight todo and hack comments: [Todo Tomorrow](https://marketplace.visualstudio.com/items?itemName=sapegin.todo-tomorrow).
+> [!tip] I made a Visual Studio Code extension to highlight todo and hack comments: [Todo Tomorrow](https://marketplace.visualstudio.com/items?itemName=sapegin.todo-tomorrow).
 
 ## Comments that reduce confusion
 
@@ -644,7 +644,7 @@ function AuthenticatedOnly({ children }) {
 
 Such comments help to understand how to use a function or a component, highlight the necessary context, and the correct way to pass parameters.
 
-**Tip:** When we use the JSDoc `@example` tag, Visual Studio Code shows a syntax-highlighted example when we hover on the function name anywhere in the code.
+> [!tip] When we use the JSDoc `@example` tag, Visual Studio Code shows a syntax-highlighted example when we hover on the function name anywhere in the code.
 
 ![Usage example tooltip in Visual Studio Code](/images/blog/book/jsdoc-example.png)
 

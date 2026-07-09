@@ -10,7 +10,7 @@ The issue with conventions is that they are just words, and the only way to enfo
 
 That’s where the _linters_ come in. Linters check the code to make sure it follows the team’s code style or to prevent common bugs. Sometimes, linters fix the code automatically; other times, they just slap our hands with a keyboard when we try to commit our code, or later, during the continuous integration (CI) run.
 
-**Info:** We talk about code style in the Code style chapter.
+> [!info] We talk about code style in the Code style chapter.
 
 Like any tool, linters can make our lives easier, keeping our codebases more consistent and free of bugs. But if abused, with too many rigid or unnecessary rules, they can fill our lives with pain.
 
@@ -187,15 +187,15 @@ However, we do want to use `console.log()` to display results to the user, but `
 console.log(files.length === 1 ? 'file' : 'files');
 ```
 
-**Tip:** Developing command-line tools is a rare case where disabling `console.log()` for the entire file might be a good idea — we’ll likely have way too many of these logs, and disabling linter for each would clutter the code and reduce readability.
+> [!tip] Developing command-line tools is a rare case where disabling `console.log()` for the entire file might be a good idea — we’ll likely have way too many of these logs, and disabling linter for each would clutter the code and reduce readability.
 
-**Tip:** The [unicorn/no-abusive-eslint-disable](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-abusive-eslint-disable.md) linter rule requires specifying rules in `eslint-disable` comments.
+> [!tip] The [unicorn/no-abusive-eslint-disable](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-abusive-eslint-disable.md) linter rule requires specifying rules in `eslint-disable` comments.
 
 # Disable style rules
 
 In the past, we used linters not only to find bugs in the code but also to establish a consistent code style. Now, code formatters do this job better, and there’s little need to keep style rules in our linter configs.
 
-**Info:** We’ll cover a few exceptions later in this chapter. We talk more about code style in the Code style chapter, and about code formatting in the Autoformat your code chapter.
+> [!info] We’ll cover a few exceptions later in this chapter. We talk more about code style in the Code style chapter, and about code formatting in the Autoformat your code chapter.
 
 # Don’t overpolice the code
 
@@ -247,7 +247,7 @@ function somethingToSomethingElse(something) {
 
 I prefer the latter, and I call this pattern _parallel coding_. However, both are perfectly fine, and I’d never ask anyone to use one of these patterns instead of the other.
 
-**Info:** We talk more about parallel coding in the Don’t make me think chapter.
+> [!info] We talk more about parallel coding in the Don’t make me think chapter.
 
 # [id-length](https://eslint.org/docs/latest/rules/id-length)
 
@@ -262,7 +262,7 @@ for (let i = 0; i < array.length; i++) {
 }
 ```
 
-**Info:** We talk about naming in the Naming is hard chapter.
+> [!info] We talk about naming in the Naming is hard chapter.
 
 # [max-classes-per-file](https://eslint.org/docs/latest/rules/max-classes-per-file)
 
@@ -270,7 +270,7 @@ This rule limits the number of JavaScript classes in a file. With the default op
 
 This is an artificial requirement. Splitting code into modules is a skill that can’t be reduced to a linter rule. Often, keeping tiny utility classes, functions, or components at the top of the module that uses them makes the code easier to navigate and maintain.
 
-**Info:** We talk about splitting code into modules in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk about splitting code into modules in the Divide and conquer, or merge and relax chapter.
 
 There are other similar rules that try to artificially limit the number of React components, lines of code, statements, and so on and so forth. The only useful rule of this kind is `max-params` (see below).
 
@@ -321,7 +321,7 @@ This rule disallows todo and fixme comments. This is how the documentation descr
 
 This statement is utterly disconnected from reality: in real projects, it’s often impractical or impossible to fix all issues before code hits production, and disallowing such comments leads to lower quality of the comments, not higher quality of the code.
 
-**Info:** We talk more about comments, and todo comments in particular, in the Avoid comments chapter.
+> [!info] We talk more about comments, and todo comments in particular, in the Avoid comments chapter.
 
 # [one-var](https://eslint.org/docs/latest/rules/one-var) and [vars-on-top](https://eslint.org/docs/latest/rules/vars-on-top)
 
@@ -343,7 +343,7 @@ function find(array, query) {
 
 I call this _Pascal style_, and it makes the code harder to read.
 
-**Info:** We talk about it in the Avoid Pascal-style variables section of the _Avoid reassigning variables_ chapter.
+> [!info] We talk about it in the Avoid Pascal-style variables section of the _Avoid reassigning variables_ chapter.
 
 # [sort-vars](https://eslint.org/docs/latest/rules/sort-vars), [sort-keys](https://eslint.org/docs/latest/rules/sort-keys), and others
 
@@ -385,7 +385,7 @@ Now, we have position and layout first, then fonts, and finally colors. It’s n
 
 The issue with semantic sorting and grouping is that different people might have different ideas of what belongs together, and it can be challenging to implement. For example, sorting CSS properties consistently requires having a list of all possible properties.
 
-**Tip:** [CSScomb](https://github.com/csscomb/csscomb.js) and [stylelint-semantic-groups](https://github.com/theKashey/stylelint-semantic-groups) sort CSS properties using semantic groups.
+> [!tip] [CSScomb](https://github.com/csscomb/csscomb.js) and [stylelint-semantic-groups](https://github.com/theKashey/stylelint-semantic-groups) sort CSS properties using semantic groups.
 
 Probably, the only exception where alphabetic sorting combined with logical grouping makes sense is `import`s (see `sort-imports` below).
 
@@ -421,7 +421,7 @@ function isItCake(a, b, c) {
 
 I’m not a huge fan of teeny-tiny functions in general, especially when the linter is the one demanding them, and I think having an arbitrary limit isn’t helping anyone.
 
-**Info:** We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
 
 ## Useful rules when used correctly
 
@@ -431,7 +431,7 @@ This rule requires us to use type-safe equality operators `===` and `!==` instea
 
 For example, `3 == '3'` is okay and expected but `[1] == true` is not (though `[0] == false`, which is inconsistent with how conditions work, where `[]`, `[0]`, and `[1]` are all truthy, meaning `if ([0])` would take the `if` branch, not the `else` branch).
 
-**Info:** A _truthy value_ is a value that is considered `true` during type conversion to a boolean and includes `true`, non-zero numbers (including negative numbers), non-empty strings, arrays, and objects (even empty ones), and [a few others](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+> [!info] A _truthy value_ is a value that is considered `true` during type conversion to a boolean and includes `true`, non-zero numbers (including negative numbers), non-empty strings, arrays, and objects (even empty ones), and [a few others](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
 
 One common use case for `==` is comparison to `null`:
 
@@ -492,7 +492,7 @@ errorMessages.forEach(message => {
 });
 ```
 
-**Info:** See the Avoid loops chapter for many more examples of using array methods.
+> [!info] See the Avoid loops chapter for many more examples of using array methods.
 
 This rule is not autofixable and isn’t included in the recommended config.
 
@@ -512,7 +512,7 @@ if (errors.length > 0) {
 }
 ```
 
-**Info:** See a more detailed explanation and additional examples in the Code style chapter.
+> [!info] See a more detailed explanation and additional examples in the Code style chapter.
 
 This rule is autofixable but isn’t included in the recommended config.
 
@@ -541,7 +541,7 @@ resizeImage(filepath, {
 
 Now, everything is clear, and we can make any of the parameters optional.
 
-**Info:** To learn more about the problem this rule solves, see the Name function parameters section of the _Naming is hard_ chapter.
+> [!info] To learn more about the problem this rule solves, see the Name function parameters section of the _Naming is hard_ chapter.
 
 This rule is not autofixable and isn’t included in the recommended config. The default configuration allows a maximum of three function parameters — the same number I’d use myself.
 
@@ -551,7 +551,7 @@ This rule requires ordering `import` statements in a specific way: by type, alph
 
 Automatic imports often make code messy. Enabling this rule as a warning with autofixing on a pre-commit or pre-push hook keeps imports tidy. However, without autofixing, this rule does more harm than good.
 
-**Tip:** Visual Studio Code and WebStorm allows hiding the block of import statements by default and expand it only when needed.
+> [!tip] Visual Studio Code and WebStorm allows hiding the block of import statements by default and expand it only when needed.
 
 This rule is partially autofixable but isn’t included in the recommended config.
 
@@ -631,13 +631,13 @@ My approach would be as follows:
 8. Enable rules one by one as they are fixed.
 9. Reenable the recommended config, and remove manually enabled rules that are no longer needed.
 
-**Info:** Fixing all linting issues in a file while making changes to it is a good application of the campsite rule. We talk about it more in the Become a code scout section of the _Other techniques_ chapter.
+> [!info] Fixing all linting issues in a file while making changes to it is a good application of the campsite rule. We talk about it more in the Become a code scout section of the _Other techniques_ chapter.
 
 Having multiple configs can also help: for example, add a separate, less strict config for integration tests.
 
-**Tip:** Organize a _lint day_ with your team, where everyone spends a full day fixing as many linting issues as possible.
+> [!tip] Organize a _lint day_ with your team, where everyone spends a full day fixing as many linting issues as possible.
 
-**Tip:** Another approach is to disable all violations of a specific linter rule with using a comment until we fix them. We can add such comments using `suppress-eslint-errors` too. [Learn more about this method](https://sapegin.me/blog/enabling-new-eslint-rules-in-a-legacy-codebase-with-suppress-eslint-errors/) on my blog.
+> [!tip] Another approach is to disable all violations of a specific linter rule with using a comment until we fix them. We can add such comments using `suppress-eslint-errors` too. [Learn more about this method](https://sapegin.me/blog/enabling-new-eslint-rules-in-a-legacy-codebase-with-suppress-eslint-errors/) on my blog.
 
 ## The ideal linting setup
 
@@ -654,7 +654,7 @@ Let’s start with the project configuration:
 3. Add a few extra rules that make sense for your team.
 4. Add ESLint with autofix to a Git pre-commit or pre-push hook using [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/lint-staged/lint-staged) to make sure that all the code in the repository is linted.
 
-**Tip:** I don’t like to have linters on a pre-commit hook because they don’t allow committing unfinished code to a branch, either as a backup or to share it with someone. Running linters on the pre-push hook instead is a good compromise. We can also skip the hooks with the `--no-verify` option of the `git commit` command.
+> [!tip] I don’t like to have linters on a pre-commit hook because they don’t allow committing unfinished code to a branch, either as a backup or to share it with someone. Running linters on the pre-push hook instead is a good compromise. We can also skip the hooks with the `--no-verify` option of the `git commit` command.
 
 Our ESLint config could look like this:
 
@@ -695,7 +695,7 @@ export default [
 ];
 ```
 
-**Tip:** Here’s [my shared ESLint config](https://github.com/sapegin/eslint-config-tamia) that I use on all my projects (including this book).
+> [!tip] Here’s [my shared ESLint config](https://github.com/sapegin/eslint-config-tamia) that I use on all my projects (including this book).
 
 Now, let’s configure the editor. Here’s how I do it in Visual Studio Code:
 
@@ -735,7 +735,7 @@ Linters exist for almost any programming or markup language. Besides ESLint, I h
 - [Stylelint](https://stylelint.io): a linter for CSS that also supports CSS preprocessors and styled-components.
 - [Textlint](https://textlint.github.io): a linter for Markdown and plain text. I use it extensively to check this book and [my blog](https://sapegin.me/blog/).
 
-**Tip:** I created [several plugins for Textlint](https://www.npmjs.com/search?q=maintainer%3Asapegin%20keywords%3Atextlint) to ensure consistent terminology, avoid buzzwords and clichés, and so on.
+> [!tip] I created [several plugins for Textlint](https://www.npmjs.com/search?q=maintainer%3Asapegin%20keywords%3Atextlint) to ensure consistent terminology, avoid buzzwords and clichés, and so on.
 
 ---
 

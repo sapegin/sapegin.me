@@ -10,7 +10,7 @@ Some folks confuse _brevity_ with _clarity_. Short code (brevity) isn’t always
 
 There are many ways to express the same idea in code, and some are easier to understand than others. We should always aim to reduce the cognitive load of the next developer who reads our code. Every time we stumble on something that isn’t immediately obvious, we waste our brain’s resources.
 
-**Info:** I “stole” the name of this chapter from [Steve Krug’s book on web usability](https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515/) with the same name.
+> [!info] I “stole” the name of this chapter from [Steve Krug’s book on web usability](https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515/) with the same name.
 
 ## Dark patterns of JavaScript
 
@@ -230,7 +230,7 @@ It’s difficult to immediately spot any differences between these two lines of 
 
 While I’m generally skeptical about extreme code DRYing, this is a good case for it.
 
-**Info:** We talk more about the Don’t repeat yourself principle in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk more about the Don’t repeat yourself principle in the Divide and conquer, or merge and relax chapter.
 
 ```js
 const testId = columnName
@@ -490,7 +490,7 @@ function RecipeName({ name, subrecipe }) {
 
 Now, both return values are at the same indentation level, making them easier to compare. This pattern works when none of the condition branches are handling errors, in which case an early return would be a better approach.
 
-**Info:** We talk about early returns in the Avoid conditions chapter.
+> [!info] We talk about early returns in the Avoid conditions chapter.
 
 Here’s another example:
 

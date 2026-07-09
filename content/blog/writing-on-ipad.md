@@ -29,7 +29,7 @@ In addition, since I started using a mechanical keyboard on my desk, I wanted a 
 
 The overall experience of working on an iPad with a hardware keyboard is nice though. Many shortcuts work the same way as on the desktop (like Cmd+Tab to switch between apps, Caps lock to switch input language, and so on).
 
-**Storytime:** I’ve used ergonomic keyboards throughout most of my career as a software engineer (probably for about 15 years or so), with the Microsoft Ergonomic Keyboard 4000 being my favorite — a great 50€ keyboard. I never liked the idea of a mechanical keyboard — I thought I wouldn’t like the noise they make and the pressure one needs to apply to type. However, I was disappointed by the poor quality of the newer and significantly more expensive Microsoft Sculpt and Surface keyboards. So when one of them died just one year after I bought it, I decided to try a mechanical keyboard. I ended up buying a split [Mistel Barocco](https://mistelkeyboard.com/products/bd20945a731491407807e80d48c5d790), which quickly converted me to a mechanical keyboard fan. The split design turned out to be equally, if not more, comfortable than a traditional ergonomic keyboard.
+> [!story] I’ve used ergonomic keyboards throughout most of my career as a software engineer (probably for about 15 years or so), with the Microsoft Ergonomic Keyboard 4000 being my favorite — a great 50€ keyboard. I never liked the idea of a mechanical keyboard — I thought I wouldn’t like the noise they make and the pressure one needs to apply to type. However, I was disappointed by the poor quality of the newer and significantly more expensive Microsoft Sculpt and Surface keyboards. So when one of them died just one year after I bought it, I decided to try a mechanical keyboard. I ended up buying a split [Mistel Barocco](https://mistelkeyboard.com/products/bd20945a731491407807e80d48c5d790), which quickly converted me to a mechanical keyboard fan. The split design turned out to be equally, if not more, comfortable than a traditional ergonomic keyboard.
 
 **Verdict**: Apple Magic Keyboard is a decent choice for travel — very small and light (240 g). However, the typing experience isn’t great.
 
@@ -46,13 +46,13 @@ However, there are a few issues:
 
 ![Mistel Barocco vs YMDK Air40](/images/blog/ipad-ymdk-air40-keyboard.jpg)
 
-**Tip:** The orange/black keycaps are [from Amazon](https://www.amazon.de/-/en/gp/product/B09ZY6C2JS/).
+> [!tip] The orange/black keycaps are [from Amazon](https://www.amazon.de/-/en/gp/product/B09ZY6C2JS/).
 
-**Tip:** One thing I do on all my keyboards, is placing the space key upside-down: it makes the bottom edge less sharp when you press it with your thumb.
+> [!tip] One thing I do on all my keyboards, is placing the space key upside-down: it makes the bottom edge less sharp when you press it with your thumb.
 
-**Note:** All my mechanical keyboards have brown switches, either Cherry or Gateron. I like the subtle resistance (in comparison to linear reds) and relative quietness (in comparison to clicky blues).
+> [!note] All my mechanical keyboards have brown switches, either Cherry or Gateron. I like the subtle resistance (in comparison to linear reds) and relative quietness (in comparison to clicky blues).
 
-**Note:** I haven’t done a lot of mods for my keyboards, except adding layers of foam and coins to my split keyboard, because separate halves are too light and move a lot on a desk. The YMDK keyboard already came with foam.
+> [!note] I haven’t done a lot of mods for my keyboards, except adding layers of foam and coins to my split keyboard, because separate halves are too light and move a lot on a desk. The YMDK keyboard already came with foam.
 
 In the end, it just suddenly died after a few months of infrequent use…
 
@@ -68,7 +68,7 @@ There’s a lot to like about this keyboard:
 - Magic arrow keys — a group of modifier keys, at the bottom right corner, that work as arrow keys when you quickly tap them instead of holding them.
 - The sound is almost as good as on YMDK Air40 (the aluminum case helps the latter a lot though).
 
-**Tip:** I also set up the Escape key to be magic: to act as `~` (or `ё`) when tapped quickly, and as Escape when pressed for a longer time, which gives me a complete Russian layout on the base layer with all the letters on their standard places.
+> [!tip] I also set up the Escape key to be magic: to act as `~` (or `ё`) when tapped quickly, and as Escape when pressed for a longer time, which gives me a complete Russian layout on the base layer with all the letters on their standard places.
 
 ![Anne Pro 2 keyboard on iPad](/images/blog/ipad-anne-pro-2-keyboard.jpg)
 
@@ -100,13 +100,13 @@ Some things could have been better though:
 
 The newer version, [Air60 V2](https://nuphy.com/collections/keyboards/products/air60-v2), possibly fixes some of the issues.
 
-**Tip:** I always switch Control and Command on my keyboards because I prefer the Windows-like experience of Ctrl+C/Ctrl+V and other shortcuts.
+> [!tip] I always switch Control and Command on my keyboards because I prefer the Windows-like experience of Ctrl+C/Ctrl+V and other shortcuts.
 
 The main difference with Anne Pro 2 is that NuPhy Air60 is a low-profile keyboard, meaning it’s much more compact. It’s still heavier and larger than the Apple Magic Keyboard but I could certainly take it with me when I go to a café to do some writing. I even traveled with it on a plane.
 
 ![NuPhy Air60](/images/blog/ipad-nuphy-air60-keyboard.webp)
 
-**Tip:** I also got a [COAST Twilight](https://nuphy.com/collections/keycaps/products/twilight-nsa-dye-sub-pbt-keycaps) keycaps set, and mixed it with the default keycaps to make the keyboard look a bit more interesting.
+> [!tip] I also got a [COAST Twilight](https://nuphy.com/collections/keycaps/products/twilight-nsa-dye-sub-pbt-keycaps) keycaps set, and mixed it with the default keycaps to make the keyboard look a bit more interesting.
 
 The leather case, [NuFolio V2](https://nuphy.com/collections/accessories/products/nufolio-v3-for-air60-v2), is also quite nice and gives the keyboard good protection in a bag.
 
@@ -120,7 +120,7 @@ You could also use the case as a stand for an iPad, and that turned out to be no
 
 **Verdict**: NuPhy Air60 is my choice of portable keyboard for an iPad. It’s not as good as Anne Pro 2 but it’s significantly lighter and smaller.
 
-## Finding ~the best~ an okay case for iPad
+## Finding ~~the best~~ an okay case for iPad
 
 I don’t like the traditional triangular design of [Apple’s](https://www.apple.com/shop/product/MQDV3ZM/A/smart-folio-for-ipad-pro-11-inch-4th-generation-marine-blue) and most third-party cases, because it makes the bottom surface too small, which makes it unstable when use try to put an iPad on your lap.
 
@@ -158,7 +158,7 @@ I also use a few other apps for more specialized writing (all support Markdown):
 - [Notion](https://www.notion.so/) for shared projects;
 - [Day One](https://dayoneapp.com/) for journaling.
 
-**Tip:** Check out [my color schemes](/squirrelsong/) for Visual Studio Code and Bear to have a monochrome Markdown highlighting similar to iA Writer.
+> [!tip] Check out [my color schemes](/squirrelsong/) for Visual Studio Code and Bear to have a monochrome Markdown highlighting similar to iA Writer.
 
 Also, the last three apps work on iPad, Mac, and iPhone, so I can read and edit my documents on various devices.
 

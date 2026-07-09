@@ -217,7 +217,7 @@ We’ve created a basic _finite-state machine_.
 
 ![State machine diagram](https://sapegin.me/images/blog/book/tweets-state-machine.svg)
 
-**Info:** State machines can have many useful features, like events that handle transitions between states, guards that define which transitions are allowed, and side effects. Here’s a good introduction to [state machines in React](https://mastery.games/post/state-machines-in-react/).
+> [!info] State machines can have many useful features, like events that handle transitions between states, guards that define which transitions are allowed, and side effects. Here’s a good introduction to [state machines in React](https://mastery.games/post/state-machines-in-react/).
 
 Reducers and state machines are even more powerful with TypeScript, allowing us to define more precise types for each status. For example, we can define that the `tweets` array only exists in the `Ready` status:
 
@@ -322,7 +322,7 @@ export function Tweets() {
 
 It’s about the same amount of code as the plain JavaScript implementation, but it’s much more bulletproof. We also got rid of the enums and simplified the code, since TypeScript can check if the status and action types are correct. This method even helped me find several bugs in my initial JavaScript implementation of this example.
 
-**Info:** The pattern we used for `State` and `Action` types is called _discriminated unions_, read more about it in [Alejandro Dustet’s article](https://thoughtbot.com/blog/the-case-for-discriminated-union-types-with-typescript).
+> [!info] The pattern we used for `State` and `Action` types is called _discriminated unions_, read more about it in [Alejandro Dustet’s article](https://thoughtbot.com/blog/the-case-for-discriminated-union-types-with-typescript).
 
 UI components can have similar issues caused by multiple conflicting styles. Consider a button component that supports primary and secondary styles. We can change the style using component props: `<Button primary>` or `<Button secondary>`.
 
@@ -340,7 +340,7 @@ It’s called _premature abstraction_, [premature generalization](https://www.co
 
 Focus on finding the simplest solution for the current requirements. This makes it easier to review and test now and to adapt to new requirements in the future.
 
-**Info:** This approach is often called [Yagni](https://martinfowler.com/bliki/Yagni.html) (You aren’t gonna need it) or [KISS](https://en.wikipedia.org/wiki/KISS_principle) (Keep it simple, stupid!).
+> [!info] This approach is often called [Yagni](https://martinfowler.com/bliki/Yagni.html) (You aren’t gonna need it) or [KISS](https://en.wikipedia.org/wiki/KISS_principle) (Keep it simple, stupid!).
 
 Write code that’s easy to delete. Isolate different features from each other, isolate UI from business logic. Make the UI easy to change and move around.
 
@@ -362,13 +362,13 @@ Avoid rewriting everything at once, and instead, look for signs: an area of code
 
 Having a good test suite makes any refactoring safer, especially when the tests focus on the integration of higher-level modules rather than low-level implementation details.
 
-**Info:** We talk a bit about testing in the Write testable code section later in this chapter.
+> [!info] We talk a bit about testing in the Write testable code section later in this chapter.
 
 The opposite of the campsite rule is [the broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory), which states that an environment with visible signs of crime or disorder, such as an unfixed broken window, encourages further crime and disorder. And “fixing” these minor issues creates an environment that prevents more serious crimes.
 
 Same in programming. Minor “crimes” could include leaving linting warnings unfixed, leaving debug code, unused or commented-out code, or writing sloppy and cluttered code. This creates an environment where nobody cares because one more linting warning won’t make code, that already has 1473 warnings, significantly worse. It feels different when we introduce a new linting warning into a project that has none.
 
-**Info:** We talk about linting in the Lint your code chapter.
+> [!info] We talk about linting in the Lint your code chapter.
 
 It’s also worth mentioning David Allen’s [2-minute rule](https://www.skillpacks.com/2-minute-rule/), which states that if an action takes less than two minutes, it should be done when it’s defined.
 
@@ -409,7 +409,7 @@ function OrderIdSection() {
 
 It took me some time to notice that the only difference between the two branches is the `rightContent` and `onPress` props. This isn’t obvious because shared props are repeated, so I had to compare each line to be sure that they are exactly the same.
 
-**Tip:** I like to select a part of the code to check whether it’s the same as another part nearby. If my editor highlights both parts, they are exactly the same.
+> [!tip] I like to select a part of the code to check whether it’s the same as another part nearby. If my editor highlights both parts, they are exactly the same.
 
 We can make it 100% clear by changing the code a bit:
 
@@ -446,7 +446,7 @@ Now, there’s no question about which props are different and which are the sam
 
 I’m a big fan of parallel code, and, even though the original code was already parallel, thanks to the two branches of a ternary operator, it’s now easier to see the differences between branches that were previously buried in duplicate code.
 
-**Info:** We talk more about parallel coding in Don’t make me think chapter.
+> [!info] We talk more about parallel coding in Don’t make me think chapter.
 
 Some people [even believe](https://www.reddit.com/r/programming/comments/2tjoc8/the_boy_scout_rule_of_coding/?rdt=48062) that we shouldn’t touch what’s working and refactoring has no business value for the product, but I fiercely disagree. Our job is not only do what we’re told to do by the business people, but also to keep the software easy to change, so we can quickly react to new business requirements. This is only possible if we care about maintainability, and don’t let the tech debt pile up.
 
@@ -456,7 +456,7 @@ Generally, I prefer _integration or end-to-end tests_ over unit tests for testin
 
 _Unit tests_ require more care because they are closely tied to the code they test, so most code changes would require updating the tests. Moving or renaming functions would require moving tests or updating imports. However, unit tests are better for testing utility functions, where it could be hard to test all edge cases by testing the whole app. Unit tests are also much faster than end-to-end tests, and we can run them in watch mode to receive an immediate feedback for every code change.
 
-**Info:** I wrote a big series of articles on the [best practices of frontend testing](https://sapegin.me/blog/react-testing-1-best-practices/).
+> [!info] I wrote a big series of articles on the [best practices of frontend testing](https://sapegin.me/blog/react-testing-1-best-practices/).
 
 Here are the qualities that make a function testable:
 
@@ -467,7 +467,7 @@ Here are the qualities that make a function testable:
 
 In summary, it’s easier to test small, pure functions. I don’t always follow these principles because I write unit tests only when I need to test some complex logic. In such cases, these principles simplify testing and make tests more resilient to future code changes.
 
-**Info:** A _pure function_ is a function that always returns the same value when given the same arguments (meaning it doesn’t depend on any non-deterministic value like dates or random numbers, any non-constant value outside the function, or the function’s internal state) and has no side effects (meaning it doesn’t change any external variables, update the database, send network requests, and so on).
+> [!info] A _pure function_ is a function that always returns the same value when given the same arguments (meaning it doesn’t depend on any non-deterministic value like dates or random numbers, any non-constant value outside the function, or the function’s internal state) and has no side effects (meaning it doesn’t change any external variables, update the database, send network requests, and so on).
 
 Let’s look at an example:
 
@@ -638,7 +638,7 @@ However, it often improves the readability of longer test cases.
 
 Often, we need to find a particular spot in the code. For example, by looking at a particular element of the app’s UI or searching for all code related to a certain term. Similar to writing testable code, we can write _greppable_ code — code that is easy to grep or find.
 
-**Info:** The name comes from the `grep` Unix command that finds a substring in a file.
+> [!info] The name comes from the `grep` Unix command that finds a substring in a file.
 
 Consider this example:
 
@@ -744,7 +744,7 @@ Here are a few tips to improve _code greppability_:
 
 TypeScript is especially helpful here: for example, we can find all places where a certain function or a constant is used, even if it’s imported under a different name. However, for many other cases, it’s still important to keep identifiers greppable: filenames, translation keys, CSS class names, and so on.
 
-**Info:** This idea is also known as _the grep test_ and is greatly described in [Jamie Wong’s article with the same title](https://jamie-wong.com/2013/07/12/grep-test/).
+> [!info] This idea is also known as _the grep test_ and is greatly described in [Jamie Wong’s article with the same title](https://jamie-wong.com/2013/07/12/grep-test/).
 
 ## Avoid not invented here syndrome
 
@@ -859,7 +859,7 @@ Some things we need to keep in mind when using third-party libraries:
 - **Upgrade and maintenance:** we need to update dependencies regularly, and sometimes new versions have breaking changes. Some updates require days or months of work to coordinate and complete.
 - **Security risks:** popular npm packages can be compromised, or popular frameworks can become targets of cyberattacks, and we may end up with a vulnerability in our app.
 
-**Tip:** Use [Bundlephobia](https://bundlephobia.com/) to check the size of any npm package.
+> [!tip] Use [Bundlephobia](https://bundlephobia.com/) to check the size of any npm package.
 
 Another problem is when a library isn’t doing exactly what we want. In this case, we have several options:
 
@@ -925,7 +925,7 @@ There would be a lot less debate about third-party libraries, especially microli
 
 Code isn’t black and white: nothing is always bad (except global variables) or always good (except autoformatting). We’re not working on an assembly line; we should understand why we write each line of code.
 
-**Info:** Steve McConnell has [a good article on an organizational side of cargo cult programming](https://stevemcconnell.com/articles/cargo-cult-software-engineering/).
+> [!info] Steve McConnell has [a good article on an organizational side of cargo cult programming](https://stevemcconnell.com/articles/cargo-cult-software-engineering/).
 
 Let’s talk about some examples of cargo cult programming in the following sections.
 
@@ -933,31 +933,31 @@ Let’s talk about some examples of cargo cult programming in the following sect
 
 Googling “how long should be my functions” reveals all kinds of random numbers, such as [one or two screenfuls](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#functions) on an 80×24 characters terminal, [half-a-dozen lines](https://martinfowler.com/bliki/FunctionLength.html), 10 lines, 20 lines, 60 lines, and so on and so forth.
 
-**Info:** We talk about measuring code dimensions in the Lint your code chapter.
+> [!info] We talk about measuring code dimensions in the Lint your code chapter.
 
 Some programmers brag that all their functions are only one or two lines long. Some programmers say that you must create a new function every time you want to write a comment or add an empty line.
 
 I think it’s the wrong problem to solve, and the size itself is rarely a problem. However, long functions often hide real issues, such as multiple responsibilities or deep nesting.
 
-**Info:** We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk about splitting code into functions in the Divide and conquer, or merge and relax chapter.
 
 # Always comment your code
 
 Programmers who believe that they must comment each (or at least most) line of their code are having a dangerous lifestyle, and not much better than those who _never_ write any comments.
 
-**Info:** We talk about commenting code in the Avoid comments chapter.
+> [!info] We talk about commenting code in the Avoid comments chapter.
 
 # Always use constants for magic numbers
 
 Using constants instead of magic numbers is a great practice, but not all numbers are magic. Often, programmers make code less readable by following this principle without thinking and converting all literal values, numbers, and strings, into constants.
 
-**Info:** We talk more about constants and magic numbers in the Naming is hard chapter.
+> [!info] We talk more about constants and magic numbers in the Naming is hard chapter.
 
 # Never repeat yourself
 
 Don’t repeat yourself (DRY) principle is probably the most overrated idea in software development. Some programmers take it to an extreme, treating any code duplication as a cardinal sin.
 
-**Info:** We talk about the DRY principle and organizing code in the Divide and conquer, or merge and relax chapter.
+> [!info] We talk about the DRY principle and organizing code in the Divide and conquer, or merge and relax chapter.
 
 # Always use only one return statement in a function
 
@@ -965,13 +965,13 @@ There’s this idea that functions should have only one `return` statement. I’
 
 However, as it often happens, we upgraded the technology, but kept using rules and best practices of the old tech.
 
-**Info:** We talk about early returns, an alternative to single return, in the Early returns section of the _Avoid conditions_ chapter.
+> [!info] We talk about early returns, an alternative to single return, in the Early returns section of the _Avoid conditions_ chapter.
 
 # 100% code coverage
 
 Managers often demand a certain number of lines of code covered by automated tests: it could be anywhere from 70% to even 100%. This value is called _code coverage_.
 
-**Info:** I used to use _code coverage_ and _test coverage_ interchangeably. However, they are different terms: code coverage measures the proportion of lines of code executed during a test run, while test coverage measures how well tests cover the functionality requirements.
+> [!info] I used to use _code coverage_ and _test coverage_ interchangeably. However, they are different terms: code coverage measures the proportion of lines of code executed during a test run, while test coverage measures how well tests cover the functionality requirements.
 
 Automated tests are essential for any serious project; however, testing every line of code isn’t practical or useful. After reaching maybe 70%, increasing code coverage gets harder and harder, it’s often impossible to go higher than a certain number by writing meaningful tests. Test quality is getting worse, and developers waste lots of time writing and fixing tests…
 
@@ -985,13 +985,13 @@ test('renders the landing page', () => {
 
 This test alone can give us 60-70% code coverage without a single assertion or actually testing any functionality, because code coverage measures the number of lines _executed_ from tests but doesn’t measure the quality of the tests.
 
-**Tip:** This test case isn’t entirely pointless and is better than no tests at all. At least it makes sure that the page renders without exceptions. Artem Zakharchenko [wrote a great article](https://www.epicweb.dev/implicit-assertions) about such tests that are called _implicit assertions_.
+> [!tip] This test case isn’t entirely pointless and is better than no tests at all. At least it makes sure that the page renders without exceptions. Artem Zakharchenko [wrote a great article](https://www.epicweb.dev/implicit-assertions) about such tests that are called _implicit assertions_.
 
 Usually, if an organization uses a certain metric to measure performance, employees will optimize their work to increase this metric, often at the expense of the quality of their work.
 
 Additionally, not all types of tests are equally useful for every project. For example, for frontend, integration tests are usually more useful than unit tests, so requiring high unit code coverage would be unproductive.
 
-**Info:** I have a big series of articles on my blog on [frontend testing best practices](https://sapegin.me/blog/react-testing-1-best-practices/).
+> [!info] I have a big series of articles on my blog on [frontend testing best practices](https://sapegin.me/blog/react-testing-1-best-practices/).
 
 # Never say never
 
@@ -1011,7 +1011,7 @@ function thereBeBugs(something) {
 
 I usually add a different emoji at the beginning, making it easier to differentiate logs in the browser console.
 
-**Tip:** I created a Visual Studio Code extension to add such `console.log`s using a hotkey: [Emoji Console Log](https://marketplace.visualstudio.com/items?itemName=sapegin.emoji-console-log).
+> [!tip] I created a Visual Studio Code extension to add such `console.log`s using a hotkey: [Emoji Console Log](https://marketplace.visualstudio.com/items?itemName=sapegin.emoji-console-log).
 
 I always thought of console-logging as a lazy way of debugging, frowned upon by old-school programmers. However, Brian Kernighan and Rob Pike recommend the same approach in their book, _The Practice of Programming_, published in 1999:
 

@@ -40,9 +40,9 @@ Here we’re:
 - only adding comments for a single ESLint rule;
 - changing files only inside the `src` folder.
 
-**Note:** I had to set `NODE_ENV` because it’s required by Create React App Babel config, you may not need to do it.
+> [!note] I had to set `NODE_ENV` because it’s required by Create React App Babel config, you may not need to do it.
 
-**Note:** I had to temporarily disable the jsx-a11y plugin in my ESLint config because it was breaking `suppress-eslint-errors`.
+> [!note] I had to temporarily disable the jsx-a11y plugin in my ESLint config because it was breaking `suppress-eslint-errors`.
 
 After running this command you should see changes like this:
 

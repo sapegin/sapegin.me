@@ -6,7 +6,7 @@ source: washing-code/130_Formatting
 
 Developers used to waste days arguing about where to put spaces in the code. It doesn’t matter that much, but everyone has an opinion about it. Luckily, these arguments are mostly in the past, thanks to automatic code formatting.
 
-**Info:** We talk about code style in the Code style chapter.
+> [!info] We talk about code style in the Code style chapter.
 
 _This is how I was writing code in the past:_ carefully crafting each line of code, making sure the code is perfectly formatted and all lines are aligned.
 
@@ -43,7 +43,7 @@ In this chapter, we mostly talk about [Prettier](https://prettier.io), a code fo
 
 The main difference between code formatters like Prettier and linters like ESLint is that code formatters _reprint_ the code using their formatting rules, while linters only validate certain, usually very basic, formatting rules. Even with autofixing, the results of using linters to format code are inconsistent and require a lot more configuration and manual tweaking.
 
-**Info:** We talk about linting in the Lint your code chapter.
+> [!info] We talk about linting in the Lint your code chapter.
 
 ## Code formatting best practices
 
@@ -80,13 +80,13 @@ Eventually, I changed my mind for several reasons:
 - Autoformatting works best with shorter lines. If we let it run wild and produce lines that are 100 characters or longer, the code readability gets significantly worse.
 - It’s easier to switch between projects. Many projects already use 80 characters as a guideline, and since it’s a default in Prettier, even more will stick to the same value.
 
-**Info:** We talk about how code structure affects line length in the Christmas trees against kebabs section of the _Code style_ chapter.
+> [!info] We talk about how code structure affects line length in the Christmas trees against kebabs section of the _Code style_ chapter.
 
 ![Coding on 27-inch screen](https://sapegin.me/images/blog/book/27inches.jpg)
 
 Overall, shorter lines are more inclusive and flexible: they allow programmers to use different devices and work well for various workflows.
 
-**Info:** The line length in Prettier isn’t a hard limit: Prettier will try to fit the code within the limit, but sometimes it will still print longer lines.
+> [!info] The line length in Prettier isn’t a hard limit: Prettier will try to fit the code within the limit, but sometimes it will still print longer lines.
 
 # Keep an eye on comments
 
@@ -96,11 +96,11 @@ Personally, I’d prefer if Prettier wrapped at least long lines of prose in com
 
 [The ideal line length](https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/) for comfortable reading is 45 to 75 characters. Limiting comments to 45 characters is impractical, but going over 80 characters makes comments too hard to read. So, I recommend avoiding very long lines of comments.
 
-**Tip:** Enabling word wrapping in an editor helps with the readability of long lines of comments, unless you maximize the editor window.
+> [!tip] Enabling word wrapping in an editor helps with the readability of long lines of comments, unless you maximize the editor window.
 
 ![Very long comments](https://sapegin.me/images/blog/book/looooong-comment.png)
 
-**Tip:** I use the [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap) extension for Visual Studio Code to format comments.
+> [!tip] I use the [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap) extension for Visual Studio Code to format comments.
 
 # Run a formatter as a stand-alone tool
 
@@ -125,13 +125,13 @@ export default {
 };
 ```
 
-**Tip:** I enable autofixing and formatting only on explicit saving with Cmd+S in my editor, not with autosave. Often, I need to look up something in the docs or google halfway through writing a line of code, and autoformat messes up incomplete code too much. I describe this setup in more detail in the Learn your code editor chapter.
+> [!tip] I enable autofixing and formatting only on explicit saving with Cmd+S in my editor, not with autosave. Often, I need to look up something in the docs or google halfway through writing a line of code, and autoformat messes up incomplete code too much. I describe this setup in more detail in the Learn your code editor chapter.
 
 ## Not just for JavaScript
 
 By default, Prettier supports not only JavaScript and TypeScript but also CSS, HTML, JSON, Markdown, and many other languages [with plugins](https://prettier.io/docs/en/plugins). I always enable autoformatting for all these files.
 
-**Tip:** Use [the `--ignore-unknown` flag](https://prettier.io/docs/en/cli#--ignore-unknown) to run Prettier on all supported files.
+> [!tip] Use [the `--ignore-unknown` flag](https://prettier.io/docs/en/cli#--ignore-unknown) to run Prettier on all supported files.
 
 ---
 

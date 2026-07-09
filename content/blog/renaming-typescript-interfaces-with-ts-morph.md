@@ -66,7 +66,7 @@ npm install --save-dev ts-morph
 ts-node --compiler-options '{"module": "commonjs"}' src/remove-prefixes.ts
 ```
 
-**Note:** We need to override compiler options here because our project is using webpack and ECMAScript modules aren’t transpiled, which is required for Node.js.
+> [!note] We need to override compiler options here because our project is using webpack and ECMAScript modules aren’t transpiled, which is required for Node.js.
 
 ## Caveats
 

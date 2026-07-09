@@ -23,7 +23,7 @@ For me, it’s often faster and easier to use old-school methods, such as search
 
 On the other hand, AI is good at writing small generic code snippets (the kind you might copypaste from Stack Overflow), generating throwaway code (prototypes, proofs of concepts, or even [complete apps for fun](https://simonwillison.net/2025/Mar/19/vibe-coding/) or [personal tools](https://temochka.com/blog/posts/2025/08/03/elephant-in-the-room.html)), creating tests and types, fixing linting errors, generating fake test data, brainstorming ideas, rubberducking, writing letters and emails, proofreading, working with Git, searching code, and even [fixing bugs from a screenshot report](https://ampcode.com/how-i-use-amp).
 
-**Tip:** AI can even make screenshots on its own or debug pages in a browser, using the [Playwright MCP](https://github.com/microsoft/playwright-mcp).
+> [!tip] AI can even make screenshots on its own or debug pages in a browser, using the [Playwright MCP](https://github.com/microsoft/playwright-mcp).
 
 AI is great for bootstrapping or trying something new – when you’ve never done it before and have no idea how it works. Instead of googling and weeding through articles for hours, it’s often more efficient to ask AI to build it, and then have it explain or adjust things.
 
@@ -43,7 +43,7 @@ Even on good days, I have a very limited number of [spoons](https://neurodiverge
 
 Copypasting existing code, either from the same project or from one of my other projects, is often much faster than asking AI to write it. The quality is usually higher as well, and it requires less fixing.
 
-**Idea:** I suppose, you could copypaste code from another project or point AI to a GitHub repository and ask it to adapt the code.
+> [!idea] I suppose, you could copypaste code from another project or point AI to a GitHub repository and ask it to adapt the code.
 
 It’s frustrating to use AI to run code, execute tests, or handle basic project tasks. It’s cumbersome and much less efficient than using IDE shortcuts and tools such as npm scripts (either running them directly from terminal or using IDE). It could have been a good tool to discover the right commands in a particular project, but AI isn’t reliable for that – it changes its mind all the time: one day it runs a dev server using an existing npm script, the next day it tries to run it manually; and generally it ignores commands in the docs.
 
@@ -51,7 +51,7 @@ Overall, I treat AI code assistant as a _junior developer on amphetamines_: it c
 
 I’m starting to use AI agents as assistants rather than autonomous coders. I now ask the agent to outline a solution before writing any code. This makes it easier to spot issues in logic, which would be more time-consuming to catch while reviewing the code. This approach is often called [spec-driven development](https://github.com/andreskull/spec-driven-ai-coding).
 
-**Tip:** I’m experimenting with a [simplified spec-driven approach](https://github.com/sapegin/two-step-ai-coding-modes/) inspired by [Kiro](https://kiro.dev/), where I use two custom agent modes: one to design the feature and give me an implementation outline for approval, and the other to write the code for it.
+> [!tip] I’m experimenting with a [simplified spec-driven approach](https://github.com/sapegin/two-step-ai-coding-modes/) inspired by [Kiro](https://kiro.dev/), where I use two custom agent modes: one to design the feature and give me an implementation outline for approval, and the other to write the code for it.
 
 Another area I’ve started exploring is AI-powered code reviews in the editor, before opening a pull request. It can be a good first check to avoid wasting colleagues’ time on obvious issues, such as a stray debug `console.log()` left in the code.
 
@@ -61,7 +61,7 @@ It’s true that AI sometimes lets us ship code very quickly. However, understan
 
 Often, AI cannot identify the root cause of an issue and falls into a loop of “Now I can see the issue!” and making random changes until it gets tired. It may even replace correct tests to generic ones that don’t really test anything but still pass with broken code.
 
-**Story time:** Once, I thought I had a bug, and AI was happy to “fix” it by throwing a spaghetti net of duplicate code on top of the existing code, instead of telling me that the code was correct.
+> [!story] Once, I thought I had a bug, and AI was happy to “fix” it by throwing a spaghetti net of duplicate code on top of the existing code, instead of telling me that the code was correct.
 
 So far, my favorite workflow is writing most of the code manually, and using inline chat in GitHub Copilot for small precise changes, such as writing a complex loop, helper function, remembering tricky syntax, or adding types. It limits edits to the exact spot under the cursor, so you don’t have to explain where you want the changes. I can’t stand AI tab autocomplete, and immediately disable it, as I find it incredibly distracting.
 
@@ -75,7 +75,7 @@ Overall, AI can speed up my work in many cases, though often making it less fun.
 
 I hope the hype will calm down a bit and that AI providers will start talking to each other to minimize the configuration mess they’ve created. Each tool expects its own [onboarding docs](https://www.fuzzycomputer.com/posts/onboarding), and if you switch between several tools on the same project (or your colleagues use different tools), you end up with a bunch of similar files, such as `.cursor/rules/something.md` or `.github/instructions/something.instructions.md`.
 
-**Info:** Looks like this is finally changing with the new [AGENTS.md](https://agents.md/) format that is already supported by several popular AI tools.
+> [!info] Looks like this is finally changing with the new [AGENTS.md](https://agents.md/) format that is already supported by several popular AI tools.
 
 [Writing good prompts](https://ryanperry.io/post/cost-of-poor-prompting) is an important skill, but it requires a lot of upfront planning – something I was never good at. My approach to most things in life (programming, photography, climbing, and so on) is somewhere between reactive and YOLO.
 
@@ -87,7 +87,7 @@ Today AI is very good at writing low-level, generic code, especially at answerin
 
 What I want an AI assistant to be is like [Poe in Altered Carbon](https://altered-carbon.fandom.com/wiki/Poe). A tool that can actually solve problems on its own and can anticipate my needs. And, very importantly, doesn’t say “you’re absolutely right” when I’m absolutely not. Ideally, one that read [my book](/book/) and knows how I like to write code.
 
-**Tip:** I’ve been [experimenting with the latter a bit](https://github.com/sapegin/washingcode-book/pull/35) via Cursor User Rules, but it doesn’t seem to make a lot of difference.
+> [!tip] I’ve been [experimenting with the latter a bit](https://github.com/sapegin/washingcode-book/pull/35) via Cursor User Rules, but it doesn’t seem to make a lot of difference.
 
 ---
 
