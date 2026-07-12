@@ -1,4 +1,4 @@
-import { IconBase } from '@tamia/components/IconBase';
+import { IconBase } from 'tamia/dist/components/IconBase.js';
 
 interface IconInfo {
 	path?: string;
@@ -65,8 +65,7 @@ export function Icon({ icon, size = DEFAULT_SIZE }: Props) {
 				width: baseSize ?? BASE_SIZE,
 				height: baseSize ?? BASE_SIZE,
 			}}
-			width={size}
-			height={size}
+			style={{ width: size, height: size }}
 		>
 			{path && <path d={path} />}
 			{children}

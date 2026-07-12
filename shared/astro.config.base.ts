@@ -65,7 +65,6 @@ export function getBaseConfig({
 			resolve: {
 				alias: {
 					'@shared': path.join(rootDir, 'shared'),
-					'@tamia': path.join(rootDir, 'shared', 'packages', 'tamia'),
 				},
 			},
 		},

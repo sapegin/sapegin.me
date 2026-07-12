@@ -7,8 +7,7 @@
     "strictNullChecks": true,
     "verbatimModuleSyntax": true,
     "paths": {
-      "@shared/*": ["../../shared/*"],
-      "@tamia/*": ["../../shared/packages/tamia/*"]
+      "@shared/*": ["../../shared/*"]
     }
   },
   "include": ["src/", "../../shared/", ".astro/"]

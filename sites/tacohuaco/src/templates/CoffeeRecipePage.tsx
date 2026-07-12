@@ -1,5 +1,5 @@
-import { Group } from '@shared/packages/tamia/components/Group';
 import { type ReactNode } from 'react';
+import { Group } from 'tamia/dist/components/Group.js';
 import { Markdown } from '../components/Markdown';
 import { type CoffeeRecipe as CoffeeRecipeType } from '../util/cafe/types';
 import { PageWithTitle } from './PageWithTitle';

@@ -140,7 +140,7 @@ Replace with:
 ## 5.2 Theme entry
 
 ```
-/packages/tamia/theme.css
+tamia/dist/theme.css
 ```
 
 ```css
@@ -185,7 +185,7 @@ Replace with:
 ## 5.5 Usage
 
 ```css
-@import '../../shared/packages/tamia/theme.css';
+@import 'tamia/dist/theme.css';
 ```
 
 ---
@@ -203,7 +203,7 @@ Replace with:
 
 ```css
 @import 'tailwindcss';
-@import '../../shared/packages/tamia/theme.css';
+@import 'tamia/dist/theme.css';
 ```
 
 - Import in layout:

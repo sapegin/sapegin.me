@@ -2,10 +2,10 @@
 
 @source '../../../../shared/';
 
-@import '../../../../shared/packages/tamia/index.css';
-@import '../../../../shared/packages/tamia/components/prose.css';
-@import '../../../../shared/packages/tamia/components/link.css';
-@import '../../../../shared/packages/tamia/components/quoted-link.css';
+@import 'tamia/dist/index.css';
+@import 'tamia/dist/components/prose.css';
+@import 'tamia/dist/components/link.css';
+@import 'tamia/dist/components/quoted-link.css';
 @import '../../../../shared/styles/components/book.css';
 
 @import './theme.css';

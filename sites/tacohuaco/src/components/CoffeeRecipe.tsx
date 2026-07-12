@@ -1,4 +1,4 @@
-import { Group } from '@shared/packages/tamia/components/Group';
+import { Group } from 'tamia/dist/components/Group.js';
 import { useCoffeeScale } from '../hooks/useCoffeeScale';
 import {
 	GRAMS_IN_TABLESPOON_COFFEE_BEANS,

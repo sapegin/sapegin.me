@@ -1,4 +1,4 @@
-import { IconBase } from '@tamia/components/IconBase';
+import { IconBase } from 'tamia/dist/components/IconBase.js';
 
 interface IconInfo {
 	size?: number;

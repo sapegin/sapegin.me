@@ -64,7 +64,7 @@
     "shiki": "^4.0.2",
     "strip-json-comments": "^5.0.3",
     "tailwindcss": "4.2.2",
-    "tamia": "^7.2.1",
+    "tamia": "8.0.0",
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {

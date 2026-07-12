@@ -1,12 +1,14 @@
+import clsx from 'clsx';
 import {
 	IconBase,
 	type IconBaseProps,
-} from '../packages/tamia/components/IconBase';
+} from 'tamia/dist/components/IconBase.js';
 
 const SIZE = 36;
 
 export function IconCoffee({
 	variant = 'default',
+	className,
 	...props
 }: Omit<IconBaseProps, 'fill' | 'height' | 'viewBox' | 'width' | 'children'> & {
 	variant?: 'default' | 'hola';
@@ -18,8 +20,7 @@ export function IconCoffee({
 				width: SIZE,
 				height: SIZE,
 			}}
-			width={SIZE}
-			height={SIZE}
+			className={clsx('size-9', className)}
 			fill="url(#gradient) currentColor"
 		>
 			{variant === 'hola' && (
