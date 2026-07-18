@@ -30,13 +30,14 @@ export function Subscription({ list = 'default' }: Props) {
 					)}
 				</Typo>
 			</p>
+			{/* Substack’s embed needs JavaScript; sandbox would block it. */}
+			{/* oxlint-disable-next-line react/iframe-missing-sandbox */}
 			<iframe
 				title="Newsletter form"
 				src={iframeUrl}
 				width="100%"
 				height="320"
 				loading="lazy"
-				sandbox=""
 			/>
 		</aside>
 	);
