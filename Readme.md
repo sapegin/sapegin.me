@@ -50,6 +50,18 @@ npm run lint:js          # ESLint
 npm test                 # Astro check → lint → prettier format
 ```
 
+### Netlify
+
+Three separate Netlify sites point at this repo (base directory: repo root). Do not run `npm run sync` in deploys — blog, photo, and recipe sync need local paths. Configure each site in the Netlify UI:
+
+| Site | Build command | Publish directory |
+| --- | --- | --- |
+| sapegin.me | `npm run sync:squirrelsong && npm run build:sapegin` | `sites/sapegin.me/dist` |
+| morning.photos | `npm run build:morning` | `sites/morning.photos/dist` |
+| tacohuaco.co | `npm run build:tacohuaco` | `sites/tacohuaco/dist` |
+
+Run `npm run sync:blog`, `npm run sync:morning`, or `npm run sync:tacohuaco` locally, then commit the generated content.
+
 ## Sponsoring
 
 Writing articles takes a lot of time and lots of coffee, buy me one more cup to keep it going.

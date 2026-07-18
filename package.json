@@ -23,10 +23,13 @@
     "format": "oxfmt && prettier --write \"sites/**/*.astro\"",
     "test": "npm run check:sapegin && npm run check:morning && npm run check:tacohuaco && npm run lint:js",
     "posttest": "npm run format",
-    "sync:sapegin": "node --experimental-strip-types scripts/sync-book.ts; node --experimental-strip-types scripts/sync-squirrelsong.ts; node --experimental-strip-types scripts/sync-blog.ts",
+    "sync:book": "node --experimental-strip-types scripts/sync-book.ts",
+    "sync:squirrelsong": "node --experimental-strip-types scripts/sync-squirrelsong.ts",
+    "sync:blog": "node --experimental-strip-types scripts/sync-blog.ts",
+    "sync:sapegin": "npm run sync:book && npm run sync:squirrelsong",
     "sync:morning": "node --experimental-strip-types scripts/sync-photos.ts",
     "sync:tacohuaco": "node --experimental-strip-types scripts/sync-recipes.ts",
-    "sync": "npm run sync:sapegin && npm run sync:morning",
+    "sync": "npm run sync:sapegin && npm run sync:blog && npm run sync:morning",
     "prepare": "husky"
   },
   "dependencies": {
