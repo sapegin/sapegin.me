@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev:sapegin": "astro dev --root ./sites/sapegin.me",
-    "dev:sapegin:sqrlsng": "SQRLSNG_DIR=../squirrelsong astro dev --root ./sites/sapegin.me",
     "dev:morning": "astro dev --root ./sites/morning.photos",
     "dev:tacohuaco": "astro dev --root ./sites/tacohuaco",
     "build:sapegin": "astro build --root ./sites/sapegin.me",
