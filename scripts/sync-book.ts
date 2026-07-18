@@ -60,8 +60,7 @@ const getFrontmatter = (contents: string) =>
 const getPostTitle = (post: Post) =>
 	upperFirst(post.title.replace('Washing your code: ', ''));
 
-const getSlug = (file: string) =>
-	file.replace(/^src\/content\/blog\//, '').replace(/\.md$/, '');
+const getSlug = (file: string) => path.basename(file, '.md');
 
 const getUrl = (file: string) => `/blog/${getSlug(file)}/`;
 

@@ -1144,11 +1144,11 @@ _Ideally, we should check whether we can implement caching the same way for all 
 
 It may seem like I prefer small or even very small functions, but that’s not the case. The main reason for extracting code into separate functions here is that it violates the _single responsibility principle_. The original function had too many responsibilities: getting special offers, generating cache keys, reading data from the cache, and storing data in the cache, each with two branches for our two brands.
 
-> [!info] The single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) states that any module, class, or method should have only one reason to change, or, in other words, we should keep the code that changes for the same reason together.
+> [!info] The [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) states that any module, class, or method should have only one reason to change, or, in other words, we should keep the code that changes for the same reason together.
 >
 > Imagine a pizzeria where a pizzaiolo is responsible only for cooking pizzas, and a cashier is responsible only for charging customers. In other words, we don’t murder people, and they don’t plaster the walls.
 >
-> We talk more about this topic in the [Divide and conquer, or merge and relax chapter.
+> We talk more about this topic in the Divide and conquer, or merge and relax chapter.
 
 Let’s have a look at one more example:
 
