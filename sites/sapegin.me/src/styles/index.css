@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@source '../../../../shared/';
+
 @import 'tamia/dist/index.css';
 @import 'tamia/dist/components/prose.css';
 @import 'tamia/dist/components/link.css';

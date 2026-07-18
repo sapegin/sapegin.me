@@ -20,7 +20,7 @@ export function IconCoffee({
 				width: SIZE,
 				height: SIZE,
 			}}
-			className={clsx('size-9', className)}
+			className={clsx('size-9 shrink-0', className)}
 			fill="url(#gradient) currentColor"
 		>
 			{variant === 'hola' && (
