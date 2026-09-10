@@ -2,9 +2,9 @@
 title: 'Automate npm releases with semantic-release and human-written change logs'
 date: 2016-11-10
 tags:
-  - tools
   - open-source
   - projects
+  - tools
 ---
 
 Making new releases is one of the most boring and tedious tasks in open source.

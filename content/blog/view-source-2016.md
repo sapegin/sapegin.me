@@ -2,9 +2,9 @@
 title: 'View Source 2016'
 date: 2016-09-16
 tags:
-  - events
-  - education
   - conferences
+  - education
+  - events
 ---
 
 [View Source](https://viewsourceconf.org/berlin-2016/) is a conference organised by Mozilla, was held on September 12–14 in Berlin, Germany, for the first time in Europe.

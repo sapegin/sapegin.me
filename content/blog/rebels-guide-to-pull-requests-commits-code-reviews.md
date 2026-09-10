@@ -3,10 +3,10 @@ title: 'A rebel’s guide to pull requests, commits, and code reviews'
 date: 2022-05-30
 tags:
   - code-reviews
-  - pull-requests
   - commits
   - git
   - github
+  - pull-requests
   - soft-skills
   - work
 ---

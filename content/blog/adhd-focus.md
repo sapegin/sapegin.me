@@ -3,11 +3,11 @@ title: 'How I stay (more) focused with ADHD'
 description: 'I could never stay focused on one thing for a long time. These tips help me stay focused and productive.'
 date: 2024-02-22
 tags:
-  - tools
-  - howiwork
   - adhd
   - apps
   - hardware
+  - howiwork
+  - tools
 ---
 
 I could never stay focused on one thing for a long time, my mind is always squirreling around. Often, I try to read an article — a few minutes later I realize that I’ve switched to another app or a browser tab in the middle of a paragraph. Also, I’m sensitive to noise and loud sounds, and I feel overwhelmed after a few hours of working in the open space environment of a typical office. Being diagnosed with ADHD at the age of 39 explained these things and many others.

@@ -2,9 +2,9 @@
 title: 'My new CSS Workflow: Stylus, Autoprefixer, CSSO and Grunt'
 date: 2013-11-08
 tags:
-  - tools
   - css
   - stylus
+  - tools
 ---
 
 I used to use [Nib](http://tj.github.io/nib/) to manage CSS vendor prefixes in [Stylus](http://learnboost.github.io/stylus/). But it has a big problem: it adds a lot of superfluous prefixes for everything.

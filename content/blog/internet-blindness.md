@@ -2,8 +2,8 @@
 title: 'How not to go blind on the internet'
 date: 2014-07-16
 tags:
-  - internet
   - grumbles
+  - internet
 ---
 
 You often visit someone’s blog and see this:

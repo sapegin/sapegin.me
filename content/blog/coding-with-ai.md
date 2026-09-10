@@ -3,12 +3,12 @@ title: 'Thoughts on using AI for software development'
 description: 'My somewhat random and disorganized thoughts and experiences on using AI for software development.'
 date: 2025-08-20
 tags:
-  - tools
-  - howiwork
   - adhd
-  - apps
   - ai
+  - apps
+  - howiwork
   - neurodiversity
+  - tools
 ---
 
 _In this article, I share my somewhat random and disorganized thoughts and experiences on using AI for software development._

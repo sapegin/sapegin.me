@@ -3,11 +3,11 @@ title: 'Why I quit open source'
 description: 'Four main reasons I stopped maintaining most of my open source projects after ten years of contributing regularly.'
 date: 2023-09-13
 tags:
-  - open-source
-  - mental-health
   - burnout
-  - projects
   - hobbies
+  - mental-health
+  - open-source
+  - projects
 ---
 
 GitHub published a curious [article on avoiding burnout](https://opensource.guide/maintaining-balance-for-open-source-maintainers/) for open source maintainers. It’s an important topic that should be discussed more widely, and I appreciate that GitHub published it.

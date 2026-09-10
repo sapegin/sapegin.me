@@ -2,10 +2,10 @@
 title: 'Don’t touch jQuery'
 date: 2016-02-12
 tags:
-  - javascript
-  - thoughts
   - grumbles
+  - javascript
   - jquery
+  - thoughts
 ---
 
 Most of 2015 frontend developers spent arguing about the best Flux implementation and whether we need jQuery or not.

@@ -2,8 +2,8 @@
 title: 'Importance of the developer experience in the modern frontend'
 date: 2015-11-21
 tags:
-  - thoughts
   - open-source
+  - thoughts
 ---
 
 In the past frontend developer could spend years mastering the same set of tools. Now we don’t have this luxury. We have to adapt to constantly changing ecosystem. We’ve replaced Grunt with Gulp, JSHint with ESLint, Bower with npm and everything with React.

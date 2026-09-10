@@ -2,9 +2,9 @@
 title: 'Automating open source project configuration with Mrm'
 date: 2017-12-03
 tags:
-  - tools
-  - open-source
   - javascript
+  - open-source
+  - tools
 ---
 
 _[Watch my talk](https://www.youtube.com/watch?v=5tHfAf4bRcM) with the same name at React Open Source meetup._

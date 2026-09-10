@@ -2,8 +2,8 @@
 title: 'Making frameworks, bootstraps and other developer’s friends'
 date: 2013-04-18
 tags:
-  - tools
   - thoughts
+  - tools
 ---
 
 Long time ago I started every new project like this: copied the most similar project, renamed it, removed all superfluous stuff…

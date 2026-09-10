@@ -3,11 +3,11 @@ title: 'Going offline'
 description: 'The Coronavirus allowed me to reflect on what’s important to me, and to see my life from a different point of view regarding work, open source, hobbies, and social networks over the past two years.'
 date: 2022-05-04
 tags:
-  - life
-  - open-source
   - hobbies
-  - work
+  - life
   - mental-health
+  - open-source
+  - work
 ---
 
 I don’t know whether I should blame the Coronavirus for the changes in my life and the way I see work, open source, hobbies, and social networks over the past two years, or I’m just getting old. In any case, the Coronavirus allowed me to reflect on what’s important to me, and to see my life from a different point of view.

@@ -2,11 +2,11 @@
 title: 'React Finland 2019'
 date: 2019-05-02
 tags:
+  - conferences
   - education
   - events
-  - conferences
-  - react
   - javascript
+  - react
 ---
 
 [A conference](https://react-finland.fi/) was held on April 24—26 in Helsinki, Finland. I was there with a workshop on [design systems for React developers](https://react-finland.fi/workshops/#design-systems-for-react-developers) and a talk. [Check out my notes](/blog/react-finland-2018/) on the last year.
@@ -145,7 +145,7 @@ React Finland is one of my favorite conferences. It was my second time and both 
 - Uses [React Styleguidist](https://react-styleguidist.js.org/) and TypeScript for their design system.
 - Hacked Styleguidist to use TypeScript and Monaco editor in component examples.
 
-> TypeScript editor with autocomplete in @styleguidist by @TejasKumar\_ at \#ReactFinland — super cool! — [@iamsapegin](https://twitter.com/iamsapegin/status/1121729457595850752)
+> TypeScript editor with autocomplete in @styleguidist by @TejasKumar_ at \#ReactFinland — super cool! — [@iamsapegin](https://twitter.com/iamsapegin/status/1121729457595850752)
 
 ### Building resilient frontend architecture by [Monica Lent](https://twitter.com/monicalent)
 

@@ -4,11 +4,11 @@ description: 'I struggle writing on my desk, so I wanted to find a great mechani
 date: 2024-02-12
 tags:
   - apps
-  - tools
   - hardware
-  - software
-  - writing
   - hobbies
+  - software
+  - tools
+  - writing
 ---
 
 I like to write: [blog articles](/blog/), journals, and even [books](/book/). However, I struggle writing at home, especially at my desk.

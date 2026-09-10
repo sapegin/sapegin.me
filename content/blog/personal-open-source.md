@@ -2,10 +2,10 @@
 title: 'Why I open source my personal code'
 date: 2016-11-23
 tags:
-  - tools
-  - thoughts
   - open-source
   - projects
+  - thoughts
+  - tools
 ---
 
 I store most of my personal code [on GitHub](https://github.com/sapegin?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=), accessible to anyone. I have a lot of reasons to do it and couldn’t find any reason not to do it.

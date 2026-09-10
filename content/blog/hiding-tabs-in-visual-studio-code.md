@@ -2,9 +2,9 @@
 title: 'Hiding tabs completely in Visual Studio Code'
 date: 2023-08-30
 tags:
+  - ide
   - tools
   - vscode
-  - ide
 ---
 
 _I always disable tabs in code editors because they distract me._

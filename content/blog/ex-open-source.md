@@ -3,11 +3,11 @@ title: 'Healing my open source addiction'
 description: 'I started my first open source project in 2012 but 10 years later I quit it almost entirely because of its hostile culture. Recently, I found a hobby that gives me everything I liked about open source but without any of its downsides.'
 date: 2023-05-26
 tags:
-  - life
-  - open-source
-  - mental-health
-  - hobbies
   - grumbles
+  - hobbies
+  - life
+  - mental-health
+  - open-source
 ---
 
 I started [my first open source project](https://github.com/sapegin/richtypo.js) in 2012 to share my work with the community, to learn, and as a way to organize and document reusable pieces of code for my personal projects. Since then I’ve created [a few relatively popular projects](https://github.com/sapegin) and published [85 npm packages](https://www.npmjs.com/~sapegin).

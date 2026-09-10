@@ -2,10 +2,10 @@
 title: 'React single page applications resources'
 date: 2016-01-14
 tags:
+  - education
   - javascript
   - react
   - redux
-  - education
 ---
 
 _October 2017: added more links and possible alternatives._

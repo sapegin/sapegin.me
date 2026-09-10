@@ -2,10 +2,10 @@
 title: 'React Finland 2018'
 date: 2018-05-18
 tags:
-  - javascript
+  - conferences
   - education
   - events
-  - conferences
+  - javascript
   - react
 ---
 

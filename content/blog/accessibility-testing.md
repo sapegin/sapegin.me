@@ -3,12 +3,12 @@ title: 'The most useful accessibility testing tools and techniques'
 description: 'Shipping accessible features is as important for a frontend developer as shipping features without bugs, learn about tools and techniques that will help you achieve that.'
 date: 2020-10-07
 tags:
-  - tools
   - accessibility
-  - testing
-  - cypress
   - axe
+  - cypress
   - linting
+  - testing
+  - tools
 ---
 
 Shipping accessible features is as essential for a frontend developer as shipping features without bugs. Here is a list of tools I regularly use to make sure everything I do is accessible for folks with different abilities, whether they are blind or holding a sandwich in their hand. I’ll start with tools that will give us immediate feedback when we’re writing code, and continue with tools that we have to run ourselves or guide us on how to test things manually. This article will be useful not only for developers but also for designers, project managers, and other team members — many of the tools could be used directly in the browser and don’t require any technical knowledge.

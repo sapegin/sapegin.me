@@ -2,10 +2,10 @@
 title: 'React Amsterdam 2016'
 date: 2016-04-20
 tags:
-  - javascript
+  - conferences
   - education
   - events
-  - conferences
+  - javascript
   - react
 ---
 

@@ -2,8 +2,8 @@
 title: 'My frontend methodology: OPOR (One Page of Rules), or BEM for small sites'
 date: 2013-05-06
 tags:
-  - html
   - css
+  - html
   - projects
 ---
 
