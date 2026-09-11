@@ -6,18 +6,24 @@ interface Props {
 	className?: string;
 	/** Render first paragraph as typo-intro. */
 	intro?: boolean;
+	/**
+	 * Use article-sized text, like blog posts. Default is body text for page
+	 * sections.
+	 */
+	article?: boolean;
 }
 
-export function BlockProse({ children, className, intro }: Props) {
+export function BlockProse({ children, className, intro, article }: Props) {
 	return (
 		<div
 			className={clsx(
 				'prose',
-				intro && '[&_.post-content>p:first-child]:typo-intro',
+				article ? 'post-content' : 'block-content',
+				intro && '[&>p:first-of-type]:typo-intro',
 				className
 			)}
 		>
-			<div className="post-content">{children}</div>
+			{children}
 		</div>
 	);
 }

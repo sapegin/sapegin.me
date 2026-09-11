@@ -13,7 +13,13 @@ interface Props {
 export function Markdown({ text, overrides, forceBlock = false }: Props) {
 	const textTypo = typo(text);
 	return (
-		<MarkdownToJsx options={{ overrides, forceBlock }}>
+		<MarkdownToJsx
+			options={{
+				overrides,
+				forceBlock,
+				wrapper: forceBlock ? null : undefined,
+			}}
+		>
 			{textTypo}
 		</MarkdownToJsx>
 	);
