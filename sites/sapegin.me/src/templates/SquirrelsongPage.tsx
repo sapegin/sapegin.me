@@ -17,6 +17,8 @@ interface Props {
 		light: Record<string, string>;
 		dark: Record<string, string>;
 	};
+	aboutAuthorBio: string;
+	aboutAuthorExtra: string;
 }
 
 function Hero() {
@@ -231,7 +233,13 @@ function Installation({ squirrels }: Pick<Props, 'squirrels'>) {
 	);
 }
 
-export function SquirrelsongPage({ url, squirrels, codes }: Props) {
+export function SquirrelsongPage({
+	url,
+	squirrels,
+	codes,
+	aboutAuthorBio,
+	aboutAuthorExtra,
+}: Props) {
 	return (
 		<Page url={url}>
 			<div className="flex flex-col gap-16">
@@ -244,11 +252,7 @@ export function SquirrelsongPage({ url, squirrels, codes }: Props) {
 				</div>
 				<Features codes={codes} />
 				<Installation squirrels={squirrels} />
-				<About>
-					I created the first version of this theme in 2016, and since then use
-					it every day at work and for personal projects. Seven years later, I
-					rebuilt it almost from scratch and improved many things.
-				</About>
+				<About bio={aboutAuthorBio} extra={aboutAuthorExtra} />
 				<div className="flex flex-col gap-4">
 					<h2 className="heading-2">Have a question?</h2>
 					<Feedback github="squirrelsong" />

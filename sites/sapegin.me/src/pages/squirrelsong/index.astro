@@ -4,7 +4,13 @@ import path from 'node:path';
 import Layout from '../../layouts/Layout.astro';
 import { SquirrelsongPage } from '../../templates/SquirrelsongPage';
 import { getAllSquirrels } from '../../util/getAllSquirrels';
+import { getBlockBody } from '../../util/getBlockBody';
 import { type CodeLang, highlightCode } from '../../util/highlightCode';
+
+const [aboutAuthorBio, aboutAuthorExtra] = await Promise.all([
+	getBlockBody('about-author'),
+	getBlockBody('about-author-squirrelsong'),
+]);
 
 const squirrels = await getAllSquirrels();
 
@@ -81,5 +87,5 @@ for (const { name, lang, code } of examples) {
 	pageTitle="Squirrelsong: light & dark themes for web developers by Artem Sapegin"
 	description="Low-contrast light and dark themes for web developers: low-contrast color schemes with great readability and non-distracting UI themes for many apps."
 	component={SquirrelsongPage}
-	props={{ squirrels, codes }}
+	props={{ squirrels, codes, aboutAuthorBio, aboutAuthorExtra }}
 />

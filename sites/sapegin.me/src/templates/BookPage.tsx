@@ -1,9 +1,9 @@
 import { Markdown } from '@shared/components/Markdown';
 import { Typo } from '@shared/components/Typo';
 import clsx from 'clsx';
-import { type ReactNode } from 'react';
 import { campaigns } from '../campaigns';
 import { About } from '../components/About';
+import { BlockProse } from '../components/BlockProse';
 import { BookCover } from '../components/BookCover';
 import { FeatureList, FeatureListItem } from '../components/FeatureList';
 import { Feedback } from '../components/Feedback';
@@ -24,6 +24,10 @@ interface Props {
 	chapters: Chapter[];
 	patterns: string[];
 	antipatterns: string[];
+	intro: string;
+	faq: string;
+	aboutAuthorBio: string;
+	aboutAuthorExtra: string;
 }
 
 interface TestimonialItem {
@@ -54,110 +58,6 @@ const testimonials: TestimonialItem[] = [
 		author: 'Alexei Crecotun',
 		role: 'Senior Frontend Developer',
 		image: 'readers-alexei.jpg',
-	},
-];
-
-interface FaqItem {
-	question: string;
-	answer: ReactNode;
-}
-
-const faq: FaqItem[] = [
-	{
-		question: 'Can I read a sample for free?',
-		answer: (
-			<>
-				Of course! Many chapters are{' '}
-				<a className="link" href="#toc">
-					available to read online
-				</a>
-				.
-			</>
-		),
-	},
-	{
-		question: 'Is the book complete?',
-		answer:
-			'Yes! After five years of working on the book, it’s finally complete.',
-	},
-	{
-		question: 'Will the book be updated over time?',
-		answer: (
-			<>
-				Yes, I’m planning to keep the book as a living snapshot of my
-				programming knowledge, and also update the example with the latest
-				JavaScript features. Subscribe to{' '}
-				<a
-					className="link"
-					href="https://sapegin.substack.com"
-					target="_blank"
-					rel="noreferrer"
-				>
-					my newsletter
-				</a>{' '}
-				to know about major updates.
-			</>
-		),
-	},
-	{
-		question: 'Do I need to know JavaScript?',
-		answer:
-			'Not necessarily, though it will certainly help. However, even if you’re working with other languages, you could still find the book useful.',
-	},
-	{
-		question: 'Is the book available on paper?',
-		answer:
-			'Not yet, but I’m planning to publish the dead tree version as soon I finish writing the book.',
-	},
-	{
-		question: 'Do you have a money-back guarantee policy?',
-		answer: (
-			<>
-				Yes, I offer 30-day money back. Write me at{' '}
-				<a className="link" href="mailto:artem@sapegin.me">
-					artem@sapegin.me
-				</a>{' '}
-				if you’re unhappy with the book.
-			</>
-		),
-	},
-	{
-		question:
-			'I bought a book on LeanPub, can I get beautiful custom PDF and EPUB files?',
-		answer: (
-			<>
-				Absolutely, write me at{' '}
-				<a className="link" href="mailto:artem@sapegin.me">
-					artem@sapegin.me
-				</a>
-				.
-			</>
-		),
-	},
-	{
-		question: 'Can I buy multiple copies for my team at a reduced price?',
-		answer: (
-			<>
-				Of course, write me at{' '}
-				<a className="link" href="mailto:artem@sapegin.me">
-					artem@sapegin.me
-				</a>
-				.
-			</>
-		),
-	},
-	{
-		question: 'Do you offer purchasing power parity or student discounts?',
-		answer: (
-			<>
-				Gumroad offers purchasing power parity, for a student discount, write me
-				at{' '}
-				<a className="link" href="mailto:artem@sapegin.me">
-					artem@sapegin.me
-				</a>
-				.
-			</>
-		),
 	},
 ];
 
@@ -341,7 +241,16 @@ function Features() {
 	);
 }
 
-export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
+export function BookPage({
+	url,
+	chapters,
+	patterns,
+	antipatterns,
+	intro,
+	faq,
+	aboutAuthorBio,
+	aboutAuthorExtra,
+}: Props) {
 	return (
 		<Page url={url}>
 			<div className="flex flex-col gap-16">
@@ -355,34 +264,9 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 				<section className="flex flex-col gap-8 md:flex-row">
 					<div className="flex flex-col gap-8">
 						<h2 className="sr-only">About the book</h2>
-						<div className="flex flex-col gap-4">
-							<p className="typo-intro">
-								<Typo>
-									We read code much more often than we write it — often to make
-									a one-line change you have to read and understand hundreds of
-									lines of code scattered among dozens of files. That’s why code
-									readability is so important.
-								</Typo>
-							</p>
-							<p className="typo-body">
-								<Typo>
-									On dozens of examples, based on production code, I’ll show you
-									how to make your code more readable and maintainable, and how
-									to avoid hard-to-track bugs. I’ll show you code smells and
-									antipatterns I often see during code reviews (and I review
-									lots of code every day!) and will walk you through the
-									refactoring process to make your code better.
-								</Typo>
-							</p>
-							<p className="typo-body">
-								<Typo>
-									These techniques and patterns help me every day to write code
-									that my colleagues will have no problems working with. All
-									book’s examples are written in JavaScript with a bit of
-									TypeScript, React, CSS, and HTML.
-								</Typo>
-							</p>
-						</div>
+						<BlockProse intro>
+							<Markdown text={intro} forceBlock />
+						</BlockProse>
 						<div className="flex flex-col gap-2">
 							<div>
 								<TheButton />
@@ -451,30 +335,14 @@ export function BookPage({ url, chapters, patterns, antipatterns }: Props) {
 				</section>
 				<section className="flex flex-col gap-4">
 					<h2 className="heading-2">Frequently asked questions</h2>
-					<div className="flex flex-col gap-4">
-						{faq.map(({ question, answer }) => (
-							<article key={question}>
-								<h3 className="typo-body font-bold">
-									<Typo>{question}</Typo>
-								</h3>
-								<p className="typo-body">
-									<Typo>{answer}</Typo>
-								</p>
-							</article>
-						))}
-					</div>
+					<BlockProse>
+						<Markdown text={faq} forceBlock />
+					</BlockProse>
 				</section>
 				<div className="mx-auto">
 					<TheButton />
 				</div>
-				<About>
-					I’ve been{' '}
-					<a className="link" href="/blog/">
-						blogging
-					</a>{' '}
-					about frontend development for almost as many years. My favorite
-					topics are component-driven development, testing, and accessibility.
-				</About>
+				<About bio={aboutAuthorBio} extra={aboutAuthorExtra} />
 				<section className="flex flex-col gap-4">
 					<h2 className="heading-2">Have a question?</h2>
 					<Feedback github="washingcode-book" />

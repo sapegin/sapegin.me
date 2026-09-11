@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react';
+import { BlockProse } from '../components/BlockProse';
 import { Page } from './Page';
 
 interface Props {
@@ -11,9 +12,7 @@ export function ManPage({ url, children }: Props) {
 		<Page url={url}>
 			<div className="flex flex-col gap-8">
 				<h1 className="heading-1">Artem’s personal user manual</h1>
-				<div className="prose">
-					<div className="post-content">{children}</div>
-				</div>
+				<BlockProse intro>{children}</BlockProse>
 			</div>
 		</Page>
 	);

@@ -2,6 +2,14 @@
 import info from '../../data/book.json';
 import Layout from '../../layouts/Layout.astro';
 import { BookPage } from '../../templates/BookPage';
+import { getBlockBody } from '../../util/getBlockBody';
+
+const [intro, faq, aboutAuthorBio, aboutAuthorExtra] = await Promise.all([
+	getBlockBody('book-intro'),
+	getBlockBody('book-faq'),
+	getBlockBody('about-author'),
+	getBlockBody('about-author-book'),
+]);
 ---
 
 <Layout
@@ -11,5 +19,5 @@ import { BookPage } from '../../templates/BookPage';
 	description="Learn how to make your code more readable and maintainable, and how to avoid hard-to-track bugs."
 	image="/images/covers/washing-your-code-large.avif"
 	component={BookPage}
-	props={info}
+	props={{ ...info, intro, faq, aboutAuthorBio, aboutAuthorExtra }}
 />
