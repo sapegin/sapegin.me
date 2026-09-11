@@ -1,6 +1,15 @@
 ---
+import { getEntry, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { ManPage } from '../templates/ManPage';
+
+const entry = await getEntry('blocks', 'man');
+
+if (entry === undefined) {
+	throw new Error('Man block not found. Run npm run sync:blog');
+}
+
+const { Content } = await render(entry);
 ---
 
 <Layout
@@ -9,4 +18,6 @@ import { ManPage } from '../templates/ManPage';
 	pageTitle="Artem Sapegin’s personal user manual"
 	description="This page aims to help my colleagues understand me better and to make our relationships easier and more productive"
 	component={ManPage}
-/>
+>
+	<Content />
+</Layout>

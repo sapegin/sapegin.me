@@ -3,11 +3,11 @@ title: 'Healthier way to open source your code'
 description: 'Open source is about sharing your code. Anything else is optional. Don’t want to spend time answering issues and reviewing pull requests? It’s totally up to you!'
 date: 2023-09-26
 tags:
-  - open-source
-  - mental-health
   - burnout
-  - projects
   - hobbies
+  - mental-health
+  - open-source
+  - projects
 ---
 
 Open source was about sharing the code with fellow developers, learning new skills, and having fun. Somehow, it became for many a threat to their mental health, and an unpaid job. Multi-million corporations take advantage of thousands of developers working for free around the globe. And on top of this, we have a generation of developers who demand that open source maintainers fix their issues for free.

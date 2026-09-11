@@ -29,6 +29,23 @@ export function stripTitle(content: string): string {
 	return content.replace(/^\s*# .+\n\n?/, '');
 }
 
+/** Drop private notes after the first horizontal rule (`---` or `***`). */
+export function stripPrivateNotes(content: string): string {
+	const lines = content.split('\n');
+	const publicLines: string[] = [];
+
+	for (const line of lines) {
+		const trimmed = line.trim();
+		if (trimmed === '---' || trimmed === '***') {
+			break;
+		}
+
+		publicLines.push(line);
+	}
+
+	return publicLines.join('\n').trim();
+}
+
 export function getAllWikilinks(markdown: string): string[] {
 	const matches = markdown.matchAll(new RegExp(WIKILINK_REGEXP.source, 'g'));
 	return [...matches].map((match) => match[1]);

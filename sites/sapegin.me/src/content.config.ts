@@ -28,6 +28,11 @@ const bookChapters = defineCollection({
 	}),
 });
 
+// Markdown blocks embedded into site pages
+const blocks = defineCollection({
+	loader: glob({ pattern: '*.md', base: '../../content/blocks' }),
+});
+
 // Squirrelsong themes
 const squirrels = defineCollection({
 	loader: glob({ pattern: '*.md', base: '../../content/squirrels' }),
@@ -47,5 +52,6 @@ const squirrels = defineCollection({
 export const collections = {
 	blog,
 	bookChapters,
+	blocks,
 	squirrels,
 };

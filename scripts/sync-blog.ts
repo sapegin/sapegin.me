@@ -19,12 +19,15 @@ import {
 	parsePublishedDate,
 	readNoteFile,
 	resolveWikilinks,
+	stripPrivateNotes,
 	stripTitle,
 } from '../shared/sync/obsidian.ts';
 
 const VAULT_DIR = path.join(os.homedir(), 'murder', 'Blog');
-const ATTACHMENTS_DIR = path.join(os.homedir(), 'murder', 'attachments');
+const BLOCKS_VAULT_DIR = path.join(VAULT_DIR, 'blocks');
+const ATTACHMENTS_DIR = path.join(os.homedir(), 'murder', 'zz-attachments');
 const OUTPUT_DIR = 'content/blog';
+const BLOCKS_OUTPUT_DIR = 'content/blocks';
 const IMAGES_DIR = path.join('sites/sapegin.me/public/images/blog');
 
 const EMOJI_SEQUENCE_REGEXP =
@@ -36,6 +39,10 @@ interface BlogFrontmatter extends Record<string, unknown> {
 	slug?: string;
 	status?: string;
 	tags?: string[];
+}
+
+interface BlockFrontmatter extends Record<string, unknown> {
+	slug?: string;
 }
 
 function getImagePublicPath(filename: string) {
@@ -116,18 +123,24 @@ function wrapEmojisInAriaHidden(content: string) {
 		.join('\n');
 }
 
-function transformBody(content: string, slugMap: Map<string, string>) {
-	const withoutTitle = stripTitle(content);
-
+function transformMarkdown(content: string, slugMap: Map<string, string>) {
 	return wrapEmojisInAriaHidden(
 		rewriteSiteUrls(
 			resolveWikilinks(
-				resolveImageEmbeds(withoutTitle),
+				resolveImageEmbeds(content),
 				slugMap,
 				(slug) => `/blog/${slug}/`
 			)
 		)
 	);
+}
+
+function transformBody(content: string, slugMap: Map<string, string>) {
+	return transformMarkdown(stripTitle(content), slugMap);
+}
+
+function transformBlockBody(content: string, slugMap: Map<string, string>) {
+	return transformMarkdown(stripPrivateNotes(content), slugMap);
 }
 
 function isWashingcodeFile(filePath: string) {
@@ -238,8 +251,81 @@ for (const filename of existingFiles) {
 console.log();
 console.log(`${synced} posts synced, ${deleted} deleted`);
 
+fs.mkdirSync(BLOCKS_OUTPUT_DIR, { recursive: true });
+
+let blocksSynced = 0;
+
+if (fs.existsSync(BLOCKS_VAULT_DIR)) {
+	console.log();
+	console.log('Syncing blocks…\n');
+
+	const blockFiles = fs
+		.readdirSync(BLOCKS_VAULT_DIR)
+		.filter((filename) => filename.endsWith('.md'));
+
+	const blockSlugs = new Set<string>();
+
+	for (const filename of blockFiles) {
+		const filePath = path.join(BLOCKS_VAULT_DIR, filename);
+		const { content, slug } = readNoteFile<BlockFrontmatter>(
+			filePath,
+			(noteFrontmatter) => {
+				if (typeof noteFrontmatter.slug !== 'string') {
+					throw new TypeError(`Missing slug in ${filename}`);
+				}
+
+				return noteFrontmatter.slug;
+			}
+		);
+
+		blockSlugs.add(slug);
+
+		const outputPath = path.join(BLOCKS_OUTPUT_DIR, `${slug}.md`);
+		if (isNewer(filePath, outputPath) === false) {
+			continue;
+		}
+
+		console.log('🧱', slug);
+
+		const body = transformBlockBody(content, slugMap);
+		fs.writeFileSync(outputPath, `${body.trim()}\n`);
+		console.log(`  ↪ ${outputPath}`);
+		blocksSynced++;
+	}
+
+	const existingBlocks = fs
+		.readdirSync(BLOCKS_OUTPUT_DIR)
+		.filter((filename) => filename.endsWith('.md'));
+
+	let blocksDeleted = 0;
+
+	for (const filename of existingBlocks) {
+		const slug = path.parse(filename).name;
+
+		if (blockSlugs.has(slug)) {
+			continue;
+		}
+
+		fs.unlinkSync(path.join(BLOCKS_OUTPUT_DIR, filename));
+		console.log(`🗑️  Deleted block ${slug}`);
+		blocksDeleted++;
+	}
+
+	console.log();
+	console.log(`${blocksSynced} blocks synced, ${blocksDeleted} deleted`);
+}
+
+const prettierBin = path.join(
+	process.cwd(),
+	'node_modules',
+	'.bin',
+	'prettier'
+);
+
 console.log();
 console.log('Formatting…');
-execSync(`prettier --log-level warn --write "${OUTPUT_DIR}/**/*.md"`);
+execSync(
+	`"${prettierBin}" --log-level warn --write "${OUTPUT_DIR}/**/*.md" "${BLOCKS_OUTPUT_DIR}/**/*.md"`
+);
 
 console.log('Done 🦜');
