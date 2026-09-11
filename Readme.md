@@ -52,7 +52,7 @@ npm test                 # Astro check → lint → prettier format
 
 ### Netlify
 
-Three separate Netlify sites point at this repo (base directory: repo root). Do not run `npm run sync` in deploys — blog, photo, and recipe sync need local paths. Configure each site in the Netlify UI:
+Three separate Netlify sites point at this repo (base directory: repo root). Do not run content sync in deploys — Obsidian and photo sync need local paths. Configure each site in the Netlify UI:
 
 | Site | Build command | Publish directory |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Three separate Netlify sites point at this repo (base directory: repo root). Do 
 | morning.photos | `npm run build:morning` | `sites/morning.photos/dist` |
 | tacohuaco.co | `npm run build:tacohuaco` | `sites/tacohuaco/dist` |
 
-Run `npm run sync:blog`, `npm run sync:morning`, or `npm run sync:tacohuaco` locally, then commit the generated content.
+Run `obsidian-publish sapegin`, `obsidian-publish tacohuaco`, or `photos-publish` from dotfiles locally, then commit the generated content. Book and Squirrelsong sync: `npm run sync:book`, `npm run sync:squirrelsong`, or `npm run sync:sapegin`.
 
 ## Sponsoring
 

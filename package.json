@@ -25,11 +25,7 @@
     "posttest": "npm run format",
     "sync:book": "node --experimental-strip-types scripts/sync-book.ts",
     "sync:squirrelsong": "node --experimental-strip-types scripts/sync-squirrelsong.ts",
-    "sync:blog": "node --experimental-strip-types scripts/sync-blog.ts",
     "sync:sapegin": "npm run sync:book && npm run sync:squirrelsong",
-    "sync:morning": "node --experimental-strip-types scripts/sync-photos.ts",
-    "sync:tacohuaco": "node --experimental-strip-types scripts/sync-recipes.ts",
-    "sync": "npm run sync:sapegin && npm run sync:blog && npm run sync:morning",
     "prepare": "husky"
   },
   "dependencies": {
@@ -76,7 +72,6 @@
     "@types/node": "24.10.1",
     "@types/remove-markdown": "0.3.4",
     "@types/sanitize-html": "^2.16.1",
-    "exifreader": "4.38.0",
     "husky": "^9.1.7",
     "nano-staged": "1.0.2",
     "oxfmt": "0.58",
@@ -106,7 +101,6 @@
   "packageManager": "npm@11.11.0",
   "allowScripts": {
     "esbuild@0.27.7": true,
-    "exifreader@4.38.0": true,
     "fsevents@2.3.3": true,
     "fsevents@1.2.13": true,
     "sharp@0.34.4": true

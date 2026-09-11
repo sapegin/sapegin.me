@@ -6,7 +6,7 @@ import { ManPage } from '../templates/ManPage';
 const entry = await getEntry('blocks', 'man');
 
 if (entry === undefined) {
-	throw new Error('Man block not found. Run npm run sync:blog');
+	throw new Error('Man block not found.');
 }
 
 const { Content } = await render(entry);
