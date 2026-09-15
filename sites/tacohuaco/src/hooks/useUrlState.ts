@@ -13,7 +13,7 @@ interface UseUrlStateInterface<T> {
 
 type UseUrlStateReturnInterface<S> = [S, Dispatch<SetStateAction<S>>];
 
-const isBrowser = () => typeof globalThis !== 'undefined';
+const isBrowser = () => 'window' in globalThis;
 
 /**
  * Sync the state value with a given query parameter
