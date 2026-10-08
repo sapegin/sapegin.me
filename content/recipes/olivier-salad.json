@@ -1,26 +1,30 @@
 {
   "slug": "olivier-salad",
-  "createdAt": "2022-01-02T00:00:00.000Z",
+  "createdAt": "2022-01-02",
   "title": "Olivier salad with chicken",
   "tags": [
+    "autumn",
     "christmas",
     "cold",
     "holidays",
     "new-year",
     "russian-cuisine",
-    "salads"
+    "salads",
+    "spring",
+    "summer",
+    "winter"
   ],
-  "description": "Olivier salad is known as Russian salad outside of Russia. It is an essential part of the Russian New Year’s Eve feast. This recipe is using chicken (feel free to skip it for a vegetarian variation) instead of beef, which would be more common, and [homemade mayonnaise](/recipes/mayonnaise/) that gives it a very nice light olive flavor, in comparison to most store-bought mayonnaise with its unpleasant fattiness.",
+  "description": "Olivier salad is known as Russian salad outside Russia. It is an essential part of the Russian New Year’s Eve feast. This recipe uses chicken (feel free to skip it for a vegetarian variation). It is dressed with [homemade mayonnaise](/recipes/mayonnaise/), which adds a lighter, more delicate flavor compared to most store-bought versions.",
   "imageUrl": "/images/recipes/olivier-salad.avif",
   "thumbnailUrl": "/images/recipes/olivier-salad_thumb.avif",
   "ingredients": "- 300 g chicken\n  *1 breast or 2 legs*\n- 2 potatoes\n- 1 carrot\n- 2 fermented cucumbers\n- 2 eggs\n  *hard-boiled*\n- 100 g peas\n  *frozen or fresh*\n- 3 bay leaves\n- [Mayonnaise](/recipes/mayonnaise/)\n- salt",
-  "steps": "1. Rinse the chicken in cold water, put it into a medium-sized pot, add 3 bay leaf, a bit of salt, and cover with water. Cook for about 30 minutes after the water is boiling on medium heat, until the chicken is tender.\n2. Cool down the chicken in the broth, and then take it out (this will make the taste more intense).\n3. While the chicken is cooking, put the potatoes and the carrot into another medium-sized pot (both unpeeled), add salt and cook on medium heat until tender.\n4. When the vegetables are ready, remove them from water, cool down, and peel. (The carrots may be ready earlier than the potatoes, remove them from the water and keep cooking the carrot until it’s ready.)\n5. Cook the eggs in water, for 9 minutes after the water starts to boil. Remove the eggs from the water and run cold water over them to cool them down and make peeling easier.\n6. Defrost the peas, if frozen: put them into a colander and pour about 2 liters of boiling water over them.\n7. Cut the meat, eggs, and all the vegetables into 1/2 cm cubes.\n8. Transfer the meat, eggs, and all the vegetables into a large bowl, and add peas.\n9. Add mayonnaise and thoroughly mix everything.",
+  "steps": "1. Rinse the chicken in cold water, place it into a medium pot, add 3 bay leaves, a bit of salt, and cover with water. Bring to a boil, then cook over medium heat for about 30 minutes until tender.\n2. Let the chicken cool until it can be handled, then remove from the broth.\n3. While the chicken is cooking, peel the potatoes and the carrot, cut them into 2–3 large chunks, and place them in a medium pot. Add salt, cover with water, bring to a boil, then cook over medium-low heat until tender (the carrots may finish earlier than the potatoes). Remove the vegetables and let them cool completely, keeping the cooking water in the pot.\n4. Bring the reserved vegetable water back to a boil and cook the eggs for 9 minutes after it starts boiling. Transfer to cold water to cool and make peeling easier.\n5. If using frozen peas, place them in a colander and pour boiling water over them. Drain well.\n6. Cut the meat, eggs, and all vegetables into 1/2 cm cubes.\n7. Transfer everything into a large bowl and add the peas.\n8. Add mayonnaise and mix thoroughly.",
   "keywords": [
     "Оливье",
     "Russian salad"
   ],
   "overnight": false,
-  "time": "90 minutes",
+  "time": "90 min",
   "yields": "6 portions",
   "usedBy": []
 }

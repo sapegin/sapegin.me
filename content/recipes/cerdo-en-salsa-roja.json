@@ -1,12 +1,16 @@
 {
   "slug": "cerdo-en-salsa-roja",
-  "createdAt": "2024-01-29T00:00:00.000Z",
+  "createdAt": "2024-01-29",
   "title": "Cerdo en salsa roja",
+  "titleEnglish": "Pork in spicy red sauce",
   "tags": [
+    "autumn",
     "dutch-oven",
     "lunches",
     "mexican-cuisine",
-    "spicy"
+    "spicy",
+    "spring",
+    "winter"
   ],
   "description": "This is one of Artem’s favorite Mexican recipes, and it can be very very very spicy — if you add a lot of chiles. It takes a bit of time to cook but doesn’t take a lot of attention, and you could cook a lot of it at once and then eat it for several days.\n\nIt makes an amazing lunch with beans ([refried](/recipes/frijoles-refritos/)) or just boiled) and warmed-up tortillas.",
   "imageUrl": "/images/recipes/cerdo-en-salsa-roja.avif",
@@ -15,8 +19,8 @@
   "steps": "### To cook the meat\n\n1. Rinse the meat in cold water, and cut into 3 cm cubes.\n2. Cook the meat in salty water (1/2 of the height of meat, not more) covered for about 10 min (until it starts to boil).\n3. Reduce the heat to medium, uncover, stir, and cook uncovered for about 30 minutes, until the water evaporates.\n4. While the meat is cooking, prepare the salsa (see below).\n5. Add a bit of olive oil (unless the meat has a lot of fat already).\n6. Increase the heat a bit and brown the meat.\n7. Add the salsa and just enough water to cover the meat.\n8. Bring to a boil, then reduce the heat to low, and cook covered until the meat is tender, for about 40 minutes more.\n\n### To cook the salsa\n\n1. Prepare the ingredients. **Tomatoes:** halve, and remove the roots. **Chiles:** remove the roots and stems. **Garlic:** peel.\n2. In a blender, mix tomatoes, chiles, and garlic with about 3/4 cup of water. (Don’t add salt at this step, since the meat is already salted.)",
   "keywords": [],
   "overnight": false,
-  "time": "120 minutes",
-  "tools": "- Dutch over or a medium-sized pot\n- blender",
+  "time": "120 min",
+  "tools": "* Dutch over or a medium-sized pot\n* blender",
   "yields": "6 portions",
   "usedBy": []
 }

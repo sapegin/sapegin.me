@@ -1,22 +1,26 @@
 {
   "slug": "kimchi-cauliflower-rice",
-  "createdAt": "2022-09-06T00:00:00.000Z",
+  "createdAt": "2022-09-06",
   "title": "Kimchi cauliflower rice",
   "tags": [
+    "autumn",
     "korean-cuisine",
     "lunches",
-    "spicy"
+    "spicy",
+    "spring",
+    "summer",
+    "winter"
   ],
-  "description": "We love kimchi, and we love kimchi fried rice, but we don’t cook rice very often, so here’s a quicker-to-make, easier and healthier version of the kimchi fried rice with the cauliflower instead of real rice. Different kind of crunch but equally satisfying.",
+  "description": "We love [Kimchi](/recipes/kimchi/), and we love [Kimchi fried rice](/recipes/kimchi-fried-rice/), but we don’t cook rice very often, so here’s a quicker-to-make, easier and healthier version of the kimchi fried rice with the cauliflower instead of real rice. Different kind of crunch but equally satisfying.",
   "imageUrl": "/images/recipes/kimchi-cauliflower-rice.avif",
   "thumbnailUrl": "/images/recipes/kimchi-cauliflower-rice_thumb.avif",
-  "ingredients": "- 1 head cauliflower\n  *not too large*\n- 1 onion\n- 2 cloves garlic\n- 1 cup kimchi\n- 6 eggs\n- 3 teaspoons butter\n- salt\n- olive oil\n- nori\n  *for serving*\n- toasted sesame seeds\n  *for serving*",
-  "steps": "1. Prepare the ingredients. **Cauliflower:** remove the leaves, chop into tiny pieces using a food processor, or grate on a large side of a grater. **Onion:** peel, halve, and cut into 1/2 cm slices. **Garlic:** peel, and roughly chop. **Kimchi:** roughly chop.\n2. Whisk the eggs with a bit of salt. Work with 3-4 eggs at a time depending on the size of your skillet, we're not making an omelet here — the layer of eggs should be very thin, almost like a crêpe.\n3. Heat a skillet over low heat, and add a bit of olive oil.\n4. Pour the whisked eggs in the middle of the skillet, tilt the skillet and turn it around so the eggs form a thin even layer. Cook the eggs for 1-2 minutes until they firm on the bottom but don’t start browning yet, gently flip the eggs using a large spatula, and cook on the other side for couple more minutes. Transfer the cooked egg to a plate.\n5. Add more olive oil to the, now empty, skillet, increase the heat to medium, then add the onions, and the garlic, and cook until the onions are transparent, for a few minutes. Add a bit of salt in the middle.\n6. Add the kimchi to the skillet, increase the heat to medium-high, and stir-fry until the kimchi starts to brown for about 5 minutes.\n7. Add butter, and keep stirring until the butter melts.\n8. Add the cauliflower, and kimchi juice to the skillet and mix thoroughly.\n9. Reduce the heat to low, and cook for 3-5 minutes, until the cauliflower heats and softens just a bit but not yet mushy — we want to keep that crunch!\n10. While the cauliflower is cooking, prepare the garnish. Cooked eggs: slice into thin strips. Nori: also slice into thin strips.\n11. Add more salt if needed, and serve topped with egg strips, nori, and freshly ground sesame seeds.",
+  "ingredients": "- 1 head cauliflower\n  *not too large*\n- 1 onion\n- 2 cloves garlic\n- 1 cup [Kimchi](/recipes/kimchi/)\n- 6 eggs\n- 3 teaspoons butter\n- salt\n- olive oil\n- nori\n  *for serving*\n- toasted sesame seeds\n  *for serving*",
+  "steps": "1. Prepare the ingredients. **Cauliflower:** remove the leaves, chop into tiny pieces using a food processor, or grate on a large side of a grater. **Onion:** peel, halve, and cut into 1/2 cm slices. **Garlic:** peel, and roughly chop. **Kimchi:** roughly chop.\n2. Whisk the eggs with a bit of salt. Work with 3-4 eggs at a time depending on the size of your skillet, we’re not making an omelet here — the layer of eggs should be very thin, almost like a crêpe.\n3. Heat a skillet over low heat, and add a bit of olive oil.\n4. Pour the whisked eggs in the middle of the skillet, tilt the skillet and turn it around so the eggs form a thin even layer. Cook the eggs for 1-2 minutes until they firm on the bottom but don’t start browning yet, gently flip the eggs using a large spatula, and cook on the other side for couple more minutes. Transfer the cooked egg to a plate.\n5. Add more olive oil to the, now empty, skillet, increase the heat to medium, then add the onions, and the garlic, and cook until the onions are transparent, for a few minutes. Add a bit of salt in the middle.\n6. Add the kimchi to the skillet, increase the heat to medium-high, and stir-fry until the kimchi starts to brown for about 5 minutes.\n7. Add butter, and keep stirring until the butter melts.\n8. Add the cauliflower, and kimchi juice to the skillet and mix thoroughly.\n9. Reduce the heat to low, and cook for 3-5 minutes, until the cauliflower heats and softens just a bit but not yet mushy — we want to keep that crunch!\n10. While the cauliflower is cooking, prepare the garnish. Cooked eggs: slice into thin strips. Nori: also slice into thin strips.\n11. Add more salt if needed, and serve topped with egg strips, nori, and freshly ground sesame seeds.",
   "keywords": [],
   "notes": "If you have any kind of meat leftovers, feel free to add them — it’ll make the dish even better.",
   "overnight": false,
-  "time": "40 minutes",
-  "tools": "- food processor or grater",
+  "time": "40 min",
+  "tools": "* food processor or grater",
   "yields": "4 portions",
   "source": "This recipe is inspired by Roi Choi’s The Chef Show, and based on [this kimchi fried cauliflower rice recipe](https://nomnompaleo.com/2017091220170912kimchi-fried-cauliflower-rice).",
   "usedBy": []

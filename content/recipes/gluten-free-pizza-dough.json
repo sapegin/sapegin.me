@@ -1,23 +1,27 @@
 {
   "slug": "gluten-free-pizza-dough",
-  "createdAt": "2022-01-02T00:00:00.000Z",
+  "createdAt": "2022-01-02",
   "title": "Gluten-free pizza dough",
   "tags": [
+    "autumn",
     "baking",
     "dough",
     "foundation-recipes",
-    "italian-cuisine"
+    "italian-cuisine",
+    "spring",
+    "summer",
+    "winter"
   ],
-  "description": "The pizza made with this dough looks and tastes like a regular wheat-flour pizza: crispy and crunchy and tasty and awesome. Try it with our pizza sauce.",
+  "description": "The pizza made with this dough looks and tastes like a regular wheat-flour pizza: crispy and crunchy and tasty and awesome. Try it with our [Pizza sauce](/recipes/pizza-sauce/).",
   "imageUrl": "/images/recipes/gluten-free-pizza-dough.avif",
   "thumbnailUrl": "/images/recipes/gluten-free-pizza-dough_thumb.avif",
   "ingredients": "- 60 g buckwheat flour\n- 65 g teff flour\n- 200 g corn starch\n- 7 g instant yeast\n- 3 g salt\n- 40 g olive oil\n- 180 g water\n  *55C*\n- 1 egg",
-  "steps": "1. Preheat oven to 180C.\n2. In a big mixing bowl, mix flours, starch, and yeast using a whisk.\n3. Add salt, mix again to combine all dry ingredients.\n4. Add olive oil, 80 g warm water, and an egg. Mix until a sticky batter forms using a mixer with a paddle attachment on medium-high speed for about five minutes.\n5. Cover the bowl with the dough and leave it in a warm place (for example on top of the stove with turned on oven) for about 45 minutes or until the dough grows for about 150%.\n6. Place a sheet of baking paper on a table, sprinkle the paper and your hands with flour, and transfer the dough to the paper. If the dough is too wet and sticky, add more flour to it.\n7. Roll the dough on the paper and make a thin rectangle of it of the size of your baking tray.\n8. Transfer the paper onto the baking tray.\n9. Add the sauce and all the toppings (depending on the pizza you’re cooking).\n10. Bake for about 25 minutes.",
+  "steps": "1. Preheat oven to 180°C.\n2. In a big mixing bowl, mix flours, starch, and yeast using a whisk.\n3. Add salt, mix again to combine all dry ingredients.\n4. Add olive oil, 80 g warm water, and an egg. Mix until a sticky batter forms using a mixer with a paddle attachment on medium-high speed for about five minutes.\n5. Cover the bowl with the dough and leave it in a warm place (for example on top of the stove with turned on oven) for about 45 minutes or until the dough grows for about 150%.\n6. Place a sheet of baking paper on a table, sprinkle the paper and your hands with flour, and transfer the dough to the paper. If the dough is too wet and sticky, add more flour to it.\n7. Roll the dough on the paper and make a thin rectangle of it of the size of your baking tray.\n8. Transfer the paper onto the baking tray.\n9. Add the sauce and all the toppings (depending on the pizza you’re cooking).\n10. Bake for about 25 minutes.",
   "keywords": [],
   "notes": "Our favorite topping: Mozzarella cheese, red bell pepper, green bell pepper, cherry tomatoes, olives, jalapeños, and Parmesan cheese.",
   "overnight": false,
-  "time": "100 minutes",
-  "tools": "- mixer\n- rolling pin\n- oven",
+  "time": "100 min",
+  "tools": "* mixer\n* rolling pin\n* oven",
   "yields": "1 tray",
   "usedBy": []
 }

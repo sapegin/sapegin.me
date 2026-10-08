@@ -1,6 +1,6 @@
 {
   "slug": "kimchi-paste",
-  "createdAt": "2022-07-13T00:00:00.000Z",
+  "createdAt": "2022-07-13",
   "title": "Kimchi paste",
   "tags": [
     "foundation-recipes",
@@ -10,13 +10,13 @@
   "description": "This magic paste could be used not only to make kimchi but also to roast vegetables (try potatoes!), meat, chicken, or in soups.",
   "imageUrl": "/images/recipes/kimchi-paste.avif",
   "thumbnailUrl": "/images/recipes/kimchi-paste_thumb.avif",
-  "ingredients": "- 1 cup chile flakes\n- 6 teaspoons kosher salt\n- 3 teaspoons coconut sugar\n- 2 heads garlic\n- 100 g horseradish or 100 g ginger\n- 1 onion\n- 3 teaspoons fish sauce\n- 3 teaspoons oyster sauce\n- 6 teaspoons vinegar\n- 6 teaspoons soy sauce\n- 1/2 cup water",
-  "steps": "1. In a blender, combine all dry ingredients: chile flakes, salt, and coconut sugar. Mix until you have a consistent powder.\n2. Peel the garlic, horseradish or ginger, and onion. Quarter the onion.\n3. Add the remaining ingredients to the blender: garlic, horseradish or ginger, onion, 3 teaspoon fish sauce, 3 teaspoon oyster sauce, 6 teaspoon vinegar, 6 teaspoon soy sauce, and 1/2 cup water. Mix until they form a smooth paste. Add more water if the paste is too thick.",
+  "ingredients": "- 1 cup chile flakes\n- 6 teaspoons kosher salt\n- 3 teaspoons brown sugar\n- 2 heads garlic\n- 100 g horseradish or 100 g ginger\n- 1 onion\n- 3 teaspoons fish sauce\n- 3 teaspoons oyster sauce\n- 6 teaspoons vinegar\n- 6 teaspoons soy sauce\n- 1/2 cup water",
+  "steps": "1. In a blender, combine all dry ingredients: chile flakes, salt, and sugar. Mix until you have a consistent powder.\n2. Peel the garlic, horseradish or ginger, and onion. Quarter the onion.\n3. Add the remaining ingredients to the blender: garlic, horseradish or ginger, onion, 3 teaspoon fish sauce, 3 teaspoon oyster sauce, 6 teaspoon vinegar, 6 teaspoon soy sauce, and 1/2 cup water. Mix until they form a smooth paste. Add more water if the paste is too thick.",
   "keywords": [],
   "notes": "We use a mix of dry chiles we brought from Mexico (5-7 árbol, 2 guajillos, 1-2 ancho). You could use gochugaru or any spicy chile flakes you can find.\n\nThe paste will keep forever in a sealed container in the fridge.",
   "overnight": false,
-  "time": "10 minutes",
-  "tools": "- blender",
+  "time": "10 min",
+  "tools": "* blender",
   "yields": "600 ml",
   "source": "This recipe is based on Roy Choi’s recipe from MasterClass.",
   "usedBy": [

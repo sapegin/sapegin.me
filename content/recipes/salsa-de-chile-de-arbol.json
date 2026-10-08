@@ -1,7 +1,8 @@
 {
   "slug": "salsa-de-chile-de-arbol",
-  "createdAt": "2022-09-20T00:00:00.000Z",
+  "createdAt": "2022-09-20",
   "title": "Salsa de chile de árbol",
+  "titleEnglish": "Chile de árbol sauce",
   "tags": [
     "foundation-recipes",
     "mexican-cuisine",
@@ -17,8 +18,8 @@
   "keywords": [],
   "notes": "If you don’t have time to soak the chiles, cook them in water for 10-15 minutes, and let them rest for about 30 minutes.\n\nTo make the sauce spicier, add 2-3 morita chiles or 1-2 teaspoons of vinegar.",
   "overnight": false,
-  "time": "10 minutes",
-  "tools": "- blender",
+  "time": "10 min",
+  "tools": "* blender",
   "yields": "200 ml",
   "usedBy": [
     "pozole",

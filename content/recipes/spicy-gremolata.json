@@ -1,6 +1,6 @@
 {
   "slug": "spicy-gremolata",
-  "createdAt": "2022-08-09T00:00:00.000Z",
+  "createdAt": "2022-08-09",
   "title": "Spicy gremolata",
   "tags": [
     "dressing",
@@ -18,7 +18,7 @@
     "gremolada"
   ],
   "overnight": false,
-  "time": "10 minutes",
+  "time": "10 min",
   "yields": "100 ml",
   "usedBy": [
     "smashed-new-potatoes-with-spicy-gremolata"

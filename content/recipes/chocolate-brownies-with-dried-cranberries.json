@@ -1,11 +1,15 @@
 {
   "slug": "chocolate-brownies-with-dried-cranberries",
-  "createdAt": "2021-07-13T00:00:00.000Z",
+  "createdAt": "2021-07-13",
   "title": "Chocolate brownies with dried cranberries",
   "tags": [
     "american-cuisine",
+    "autumn",
     "baking",
-    "desserts"
+    "desserts",
+    "spring",
+    "summer",
+    "winter"
   ],
   "imageUrl": "/images/recipes/chocolate-brownies-with-dried-cranberries.avif",
   "thumbnailUrl": "/images/recipes/chocolate-brownies-with-dried-cranberries_thumb.avif",
@@ -14,8 +18,8 @@
   "keywords": [],
   "notes": "Serve warm or cool, sprinkled with icing sugar.",
   "overnight": false,
-  "time": "60 minutes",
-  "tools": "- mixer\n- 20x20 cm baking tray",
+  "time": "60 min",
+  "tools": "* mixer\n* 20x20 cm baking tray",
   "yields": "1 tray",
   "source": "This recipe is based on Paul Hollywood’s book “How to Bake”.",
   "usedBy": []

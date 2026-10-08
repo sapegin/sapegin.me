@@ -1,13 +1,17 @@
 {
   "slug": "burritos",
-  "createdAt": "2022-09-15T00:00:00.000Z",
+  "createdAt": "2022-09-15",
   "title": "Burritos",
   "tags": [
+    "autumn",
     "breakfasts",
     "lunches",
     "mexican-cuisine",
     "quick-recipes",
-    "travel"
+    "spring",
+    "summer",
+    "travel",
+    "winter"
   ],
   "description": "Burritos are best known as a Tex-Mex recipe, or served more commonly in the north of Mexico. However, Mexicans also eat them in the rest of the country with some different variations. Burritos are a great breakfast for the way, a road trip food, or just an easy-to-cook dish for any time. They are also great to make use of leftovers hanging around your fridge.",
   "imageUrl": "/images/recipes/burritos.avif",
@@ -17,7 +21,7 @@
   "keywords": [],
   "notes": "It’s important to keep out lettuce or too much salad from inside the burritos, since it will make the tortilla too soggy.",
   "overnight": false,
-  "time": "15 minutes",
+  "time": "15 min",
   "yields": "3 burritos",
   "usedBy": []
 }

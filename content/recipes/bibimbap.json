@@ -1,20 +1,27 @@
 {
   "slug": "bibimbap",
-  "createdAt": "2022-03-20T00:00:00.000Z",
+  "createdAt": "2022-03-20",
   "title": "Bibimbap",
   "tags": [
+    "autumn",
+    "bowls",
     "korean-cuisine",
     "lunches",
-    "spicy"
+    "spicy",
+    "spring",
+    "summer",
+    "winter"
   ],
   "description": "Our bibimbap recipe is a bit different that the traditional Korean bibimbap. We put a lot more vegetables, and we also rarely cook them separately — too much trouble. And if you’re supposed to mix everything (_bibimbap_ means “mixed rice”) — what’s the point?\n\nThis is a big diversion from the traditional bibimbap: the traditional bibimbap is drier with a distinct taste of each ingredient, our version is juicy, with a more blended taste and full of vegetables.\n\nYou could use any fillings you like or available. These are the ones that are easy to get and cook, but still taste great.",
   "imageUrl": "/images/recipes/bibimbap.avif",
   "thumbnailUrl": "/images/recipes/bibimbap_thumb.avif",
-  "ingredients": "### For the meat\n\n- 150 g ground beef\n- 150 g ground pork\n- 1 red onion\n- 3 cloves garlic\n- [Kimchi paste](/recipes/kimchi-paste/)\n- 9 teaspoons water\n  *hot*\n- soy sauce\n- olive oil\n- salt\n\n### For the fillings\n\n- 2 carrots\n- 1 zucchini\n- 1 green bell pepper\n- 2 handfuls green bean\n- 2 handfuls sugar pea\n- [Spicy quick-pickled cucumbers](/recipes/spicy-quick-pickled-cucumbers/) or regular pickled cucumbers\n- [Kimchi](/recipes/kimchi/)\n- olive oil\n\n### For serving\n\n- 3 portions cooked rice\n- 3 eggs\n- soy sauce\n- sesame seeds",
-  "steps": "### To cook the meat\n\n1. Prepare the vegetables.\n   - **Onion:** peel, halve and cut into thin slices.\n   - **Garlic:** peel, cut into very thin slices.\n2. Dilute the kimchi paste in hot water (the amount of kimchi paste depends on the desired level of spiciness).\n3. In a skillet on medium heat, sauté the onion for about 5-10 minutes with olive oil.\n4. Add the garlic, and cook for 3-5 minutes.\n5. Add the meat to the skillet, increase the heat, and cook until there are no pink spots in the meat, stirring continuously and breaking bigger clumps using a wooden spatula.\n6. Pour the diluted kimchi paste into the skillet, sprinkle soy sauce over, reduce the heat, and cook for another 5-10 minutes.\n\n### To cook the fillings\n\n1. Prepare the vegetables. **Carrot:** peel and cut into thick matchsticks. **Zucchini:** cut it into 1/4 cm half-moons. **Green beans:** trim ends, and halve. **Sugar peas:** nothing. **Bell pepper:** remove the root, and cut into 1/4 cm strips.\n2. In a large skillet, fry with a bit of olive oil until softened and browned a bit. Add vegetables one kind at a time, starting with the hard ones. (Green beans, carrots, zucchini, sugar peas, etc.)\n3. Season with a bit of salt, and thoroughly stir.\n\n### To serve\n\n1. Fry the eggs sunny side up.\n2. Slice pickled cucumbers diagonally (to make large, thin ovals).\n3. Coarsely chop the kimchi.\n4. Put the rice on the bottom of a large, deep plate. Layer the meat on top of the rice with all its juice. Put all the fillings over the meat: vegetables, pickled cucumbers, kimchi. Place the fried egg in the middle. Sprinkle with freshly ground sesame seeds.\n5. Serve. Mix everything before eating.",
-  "keywords": [],
+  "ingredients": "### For the meat\n- 150 g ground beef\n- 150 g ground pork\n- 1 red onion\n- 3 cloves garlic\n- [Kimchi paste](/recipes/kimchi-paste/)\n- 9 teaspoons water\n  *hot*\n- soy sauce\n- olive oil\n- salt\n### For the fillings\n- 2 carrots\n- 1 zucchini\n- 1 green bell pepper\n- 2 handfuls green bean or peas\n- cauliflower\n- [Spicy quick-pickled cucumbers](/recipes/spicy-quick-pickled-cucumbers/) or regular pickled cucumbers\n- [Kimchi](/recipes/kimchi/)\n- olive oil\n### For serving\n- 3 portions cooked rice\n- 3 eggs\n- soy sauce\n- sesame seeds",
+  "steps": "### To cook the meat\n1. Prepare the vegetables.\n   - **Onion:** peel, halve and cut into thin slices.\n   - **Garlic:** peel, cut into very thin slices.\n2. Dilute the kimchi paste in hot water (the amount of kimchi paste depends on the desired level of spiciness).\n3. In a skillet on medium heat, sauté the onion for about 5-10 minutes with olive oil.\n4. Add the garlic, and cook for 3-5 minutes.\n5. Add the meat to the skillet, increase the heat, and cook until there are no pink spots in the meat, stirring continuously and breaking bigger clumps using a wooden spatula.\n6. Pour the diluted kimchi paste into the skillet, sprinkle soy sauce over, reduce the heat, and cook for another 5-10 minutes.\n### To cook the fillings\n1. Prepare the vegetables. **Carrot:** peel and cut into thick matchsticks. **Zucchini:** cut it into 1/4 cm half-moons. **Green beans:** trim ends, and halve. **Sugar peas:** nothing. **Bell pepper:** remove the root, and cut into 1/4 cm strips.\n2. In a large skillet, fry with a bit of olive oil until softened and browned a bit. Add vegetables one kind at a time, starting with the hard ones. (Green beans, carrots, zucchini, sugar peas, etc.)\n3. Season with a bit of salt, and thoroughly stir.\n### To serve\n1. Fry the eggs sunny side up.\n2. Slice pickled cucumbers diagonally (to make large, thin ovals).\n3. Coarsely chop the kimchi.\n4. Put the rice on the bottom of a large, deep plate. Layer the meat on top of the rice with all its juice. Put all the fillings over the meat: vegetables, pickled cucumbers, kimchi. Place the fried egg in the middle. Sprinkle with freshly ground sesame seeds.\n5. Serve. Mix everything before eating.",
+  "keywords": [
+    "Бибимбап"
+  ],
   "overnight": false,
-  "time": "60 minutes",
+  "time": "60 min",
   "yields": "3 portions",
   "usedBy": []
 }

@@ -1,23 +1,27 @@
 {
   "slug": "grapefruit-bread",
-  "createdAt": "2021-08-17T00:00:00.000Z",
+  "createdAt": "2021-08-17",
   "title": "Grapefruit bread",
   "tags": [
     "baking",
     "desserts",
     "picnics",
-    "sweet-bread"
+    "spring",
+    "sweet-bread",
+    "winter"
   ],
   "description": "Easy and quick to make with whatever citruses you may have (not just grapefruits). A great option if your friends suddenly invited you over, or for a picnic with coffee — easy to transport too.",
   "imageUrl": "/images/recipes/grapefruit-bread.avif",
   "thumbnailUrl": "/images/recipes/grapefruit-bread_thumb.avif",
-  "ingredients": "- 330 g all-purpose flour\n- 12 g baking powder\n- 2 g salt\n- 175 g butter\n  *room temperature*\n- 2 grapefruits\n  *zest and juice*\n- 50 g coconut sugar\n- 50 g date sugar\n- 3 eggs\n- 75 ml milk or 90 ml yogurt",
-  "steps": "1. Preheat oven to 180C.\n2. Grease the baking form with butter.\n3. In a medium bowl, combine 330 g all-purpose flour, 12 g baking powder, and 2 g salt.\n4. In a big mixing bowl, combine 175 g butter, 50 g coconut sugar, and 50 g date sugar using a mixer.\n5. Zest grapefruits into the butter-sugar mix.\n6. Mix in 3 eggs into the butter-sugar mix one by one using a mixer.\n7. Add dry ingredients, grapefruit juice (keep about 1/2 grapefruit for the next steps), and milk – little by little of each – into the wet ingredients mixture, and carefully mix using a silicone spatula.\n8. Pour the batter into the baking form.\n9. Bake for 50-60 minutes.\n10. Once the bread is ready, pour the rest of the grapefruit juice over the bread.\n11. Let the bread cool down for 10 minutes and remove it from the baking form.",
-  "keywords": [],
-  "notes": "The more zest you add, the more flavor the bread will have. And don't forget to use only the most outer colorful part of the citrus skin.\n\nThis recipe works well with other citruses:\n- 4–5 limes;\n- 3 oranges, 1 lime, cinnamon.",
+  "ingredients": "- 330 g all-purpose flour\n- 12 g baking powder\n- 2 g salt\n- 175 g butter\n  *room temperature*\n- 2 grapefruits\n  *zest and juice*\n- 50 g brown sugar\n- 50 g date sugar\n- 3 eggs\n- 75 ml milk or 90 ml yogurt",
+  "steps": "1. Preheat oven to 180°C.\n2. Grease the baking form with butter.\n3. In a medium bowl, combine 330 g flour, 12 g baking powder, and 2 g salt.\n4. In a big mixing bowl, combine 175 g butter, 50 g sugar, and 50 g date sugar using a mixer.\n5. Zest grapefruits into the butter-sugar mix.\n6. Mix in 3 eggs into the butter-sugar mix one by one using a mixer.\n7. Add dry ingredients, grapefruit juice (keep about 1/2 grapefruit for the next steps), and milk – little by little of each – into the wet ingredients mixture, and carefully mix using a silicone spatula.\n8. Pour the batter into the baking form.\n9. Bake for 50-60 minutes.\n10. Once the bread is ready, pour the rest of the grapefruit juice over the bread.\n11. Let the bread cool down for 10 minutes and remove it from the baking form.",
+  "keywords": [
+    "Грейпфрутовый хлеб"
+  ],
+  "notes": "The more zest you add, the more flavor the bread will have. And don’t forget to use only the most outer colorful part of the citrus skin.\n\nThis recipe works well with other citruses:\n* 4–5 limes;\n* 3 oranges, 1 lime, cinnamon.",
   "overnight": false,
-  "time": "80 minutes",
-  "tools": "- mixer\n- oven\n- 21×10 cm baking form",
+  "time": "80 min",
+  "tools": "* mixer\n* oven\n* 21×10 cm baking form",
   "yields": "1 loaf",
   "source": "This recipe is based on [a recipe from Harper’s Bazaar](https://harpersbazaar.com.ua/beauty/diets/gotovim-vmeste-s-harpers-bazaar-rozoviy-greypfrutoviy-keks/).",
   "usedBy": []

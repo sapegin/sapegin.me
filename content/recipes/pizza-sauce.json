@@ -1,13 +1,13 @@
 {
   "slug": "pizza-sauce",
-  "createdAt": "2022-01-02T00:00:00.000Z",
+  "createdAt": "2022-01-02",
   "title": "Pizza sauce",
   "tags": [
     "foundation-recipes",
     "italian-cuisine",
     "sauces"
   ],
-  "description": "Very simple and universal pizza sauce. Works great with our gluten-free pizza dough.",
+  "description": "Very simple and universal pizza sauce. Works great with our [Gluten-free pizza dough](/recipes/gluten-free-pizza-dough/).",
   "imageUrl": "/images/recipes/pizza-sauce.avif",
   "thumbnailUrl": "/images/recipes/pizza-sauce_thumb.avif",
   "ingredients": "- 2 tomatoes\n- 2-3 cloves garlic\n- 2 sprigs fresh basil\n- 9 teaspoons tomato paste\n- olive oil\n- salt\n- dried rosemary\n- freshly ground black pepper",
@@ -15,8 +15,8 @@
   "keywords": [],
   "notes": "You can substitute basil with mint, it also tastes great.",
   "overnight": false,
-  "time": "10 minutes",
-  "tools": "- blender",
+  "time": "10 min",
+  "tools": "* blender",
   "yields": "200 ml",
   "usedBy": []
 }

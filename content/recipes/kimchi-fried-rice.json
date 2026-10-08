@@ -1,13 +1,17 @@
 {
   "slug": "kimchi-fried-rice",
-  "createdAt": "2022-08-23T00:00:00.000Z",
+  "createdAt": "2022-08-23",
   "title": "Kimchi fried rice",
   "tags": [
+    "autumn",
     "korean-cuisine",
     "leftovers",
     "lunches",
     "rice",
-    "spicy"
+    "spicy",
+    "spring",
+    "summer",
+    "winter"
   ],
   "description": "Got some leftover rice from the Indian food takeaway yesterday? With just a few more ingredients, and a bit of time, you could make this spicy (if you add a lot of kimchi) dish with a nice blend of crunchy rice and juicy vegetables.",
   "imageUrl": "/images/recipes/kimchi-fried-rice.avif",
@@ -16,7 +20,7 @@
   "steps": "1. Prepare the vegetables. **Zucchini:** halve, and cut into 1/2 half-moons. **Kimchi:** roughly chop.\n2. On a large frying pan, warming on medium-high heat with olive oil, distribute the rice and fry until the bottom side is brown and crispy.\n3. On a second, smaller, frying pan with olive oil, sauté the zucchini.\n4. While everything is cooking, thinly slice the scallions.\n5. Once the rice is brown and crispy, turn it and fry until the other side is brown and crispy.\n6. Add kimchi to the zucchini and cook for a few minutes to warm up the kimchi.\n7. Add 3 teaspoon butter to the vegetables, and stir until the butter has melted, remove the pan from the heat.\n8. Add the zucchini and kimchi to the rice, add a bit of kimchi juice, add 2 egg, reduce the heat to medium, and cook, constantly stirring, until the eggs are firm.\n9. Add more salt if needed, and serve topped with scallions.",
   "keywords": [],
   "overnight": false,
-  "time": "30 minutes",
+  "time": "30 min",
   "yields": "2 portions",
   "source": "This recipe is inspired by Roi Choi’s show The Chef Show, and [his course on MasterClass](https://www.masterclass.com/classes/roy-choi-teaches-intuitive-cooking).",
   "usedBy": []

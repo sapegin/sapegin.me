@@ -1,6 +1,6 @@
 {
   "slug": "first-world-salsa-verde",
-  "createdAt": "2023-09-18T00:00:00.000Z",
+  "createdAt": "2023-09-18",
   "title": "First world salsa verde",
   "tags": [
     "charring",
@@ -11,7 +11,7 @@
     "sauces",
     "spicy"
   ],
-  "description": "This is Artem’s attempt to find an alternative to _salsa verde_, traditionally made with _tomatillos_, but made from ingredients available in Germany. He wanted to achieve its sour-bitter freshness and is using green bell peppers for that. Of course, it’s incomparable to the original. Still, one has to be creative in a country where almost nothing grows, and even the most basic vegetables are imported and very expensive.",
+  "description": "This is Artem’s attempt to find an alternative to _salsa verde_, traditionally made with _tomatillos_, but made from ingredients available in Germany. He wanted to achieve its sour-bitter freshness and is using green bell peppers for that. Of course, it’s incomparable to the original. Still, one ought to be creative in a country where almost nothing grows, and even the most basic vegetables are imported and very expensive.",
   "imageUrl": "/images/recipes/first-world-salsa-verde.avif",
   "thumbnailUrl": "/images/recipes/first-world-salsa-verde_thumb.avif",
   "ingredients": "- 2 green bell peppers\n- 2 fresh jalapeños\n- 1 onion\n- 2-3 cloves of garlic\n- salt",
@@ -21,8 +21,8 @@
   ],
   "notes": "This salsa will keep in a sealed container in the fridge for one or two weeks.",
   "overnight": false,
-  "time": "40 minutes",
-  "tools": "- blender or food processor",
+  "time": "40 min",
+  "tools": "* blender or food processor",
   "yields": "200 ml",
   "usedBy": [
     "burgers",

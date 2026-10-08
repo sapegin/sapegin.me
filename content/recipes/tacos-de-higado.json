@@ -1,22 +1,27 @@
 {
   "slug": "tacos-de-higado",
-  "createdAt": "2024-12-24T00:00:00.000Z",
+  "createdAt": "2024-12-24",
   "title": "Tacos de hígado",
+  "titleEnglish": "Beef liver tacos",
   "tags": [
+    "autumn",
     "lunches",
     "mexican-cuisine",
     "spicy",
-    "tacos"
+    "spring",
+    "summer",
+    "tacos",
+    "winter"
   ],
-  "description": "Liver is one of those ingredients that divides opinions: some avoid it entirely, while others embrace it as a secret culinary delight. Growing up more than 10000 kilometers apart, we both grew up eating beef liver cooked by our grandmas in various traditional dishes.\n\nThese liver tacos are budget-friendly, quick to prepare (especially if you already have salsa on hand), require just a few ingredients, and result in tender, flavorful meat paired with your favorite salsa (we recommend salsa roja tatemada).",
+  "description": "Liver is one of those ingredients that divides opinions: some avoid it entirely, while others embrace it as a secret culinary delight. Growing up more than 10000 kilometers apart, we both grew up eating beef liver cooked by our grandmas in various traditional dishes.\n\nThese liver tacos are budget-friendly, quick to prepare (especially if you already have salsa on hand), require just a few ingredients, and result in tender, flavorful meat paired with your favorite salsa (we recommend [Salsa roja tatemada](/recipes/salsa-roja-tatemada/)).",
   "imageUrl": "/images/recipes/tacos-de-higado.avif",
   "thumbnailUrl": "/images/recipes/tacos-de-higado_thumb.avif",
   "ingredients": "- 500 g beef liver\n- 1 onion\n- 2 fresh jalapeños\n- olive oil\n- salt\n- corn tortilla\n- avocado\n- [Salsa roja tatemada](/recipes/salsa-roja-tatemada/)",
   "steps": "1. Slice the liver into 1/4 cm slices.\n2. Prepare the vegetables:\n   - **Onions:** peel, halve, and thinly slice. **Jalapeños:** slice, remove the roots and seeds, and thinly slice.\n3. Heat a medium-sized skillet with olive oil on medium heat. Sauté onions and chiles with a bit of salt until translucent.\n4. Increase the heat to medium-hight, add the liver, and more salt to the onions, and cook until no pink spots are left on the liver, for about 20 minutes, stirring regularly.\n5. Reduce the heat to medium-low, cover the skillet, and cook covered for about 20 minutes more, until the liver is soft.\n6. Add more salt if necessary.\n7. Warm up the tortillas: heat a non-sticking or cast iron skillet on medium-high until hot (don’t add oil). Warm the tortillas one by one: for about 30 seconds on one side, then for about one minute on the other side, then flip again and cook a bit more, until crispy but still slightly flexible (they shouldn’t be too soft because the meat is juicy, and they may break).\n8. Serve all the ingredients separately: meat, tortillas, avocado, and salsa so everyone can assemble a taco with the right amount of each ingredient.",
   "keywords": [],
   "overnight": false,
-  "time": "60 minutes",
-  "tools": "- medium-sized skillet with lid\n- medium-sized non-sticking skillet",
+  "time": "60 min",
+  "tools": "* medium-sized skillet with lid\n* medium-sized non-sticking skillet",
   "yields": "20 tacos",
   "usedBy": []
 }

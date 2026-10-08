@@ -1,19 +1,21 @@
 {
   "slug": "zucchini-bread",
-  "createdAt": "2021-08-17T00:00:00.000Z",
+  "createdAt": "2021-08-17",
   "title": "Zucchini bread",
   "tags": [
+    "autumn",
     "baking",
     "bread",
-    "breakfasts"
+    "breakfasts",
+    "summer"
   ],
   "imageUrl": "/images/recipes/zucchini-bread.avif",
   "thumbnailUrl": "/images/recipes/zucchini-bread_thumb.avif",
   "ingredients": "- 270 g spelt flour\n- 3 g nutmeg\n- 3 g salt\n- 10 g baking powder\n- 1 zucchini\n- a bit of ginger\n- 200 g olive oil\n- 3 eggs\n- sunflower and sesame seeds",
-  "steps": "1. Preheat oven to 155C.\n2. In a medium-size bowl, mix all dry ingredients: flour, nutmeg, salt, and baking powder using a whisk.\n3. Grate zucchini on a small side of a grater, use the smaller end of zucchini to make short pieces. Grate a bit of ginger on a small side of a grater (you could mix it with the zucchini). Make sure zucchini is not wet, otherwise, squeeze it to remove the moisture.\n4. In a big mixer bowl, mix in eggs into the olive oil one by one, using a mixer.\n5. Mix in dry ingredients.\n6. Mix in zucchini and ginger into the egg-oil mix, using a silicone spatula.\n7. Pour the batter into a baking form.\n8. Add some sunflower and sesame seeds on top.\n9. Bake for 50–60 minutes.\n10. Let the bread cool down for 10 minutes, and remove it from the baking form.",
+  "steps": "1. Preheat oven to 160°C.\n2. In a medium-size bowl, mix all dry ingredients: flour, nutmeg, salt, and baking powder using a whisk.\n3. Grate zucchini on a small side of a grater, use the smaller end of zucchini to make short pieces. Grate a bit of ginger on a small side of a grater (you could mix it with the zucchini). Make sure zucchini is not wet, otherwise, squeeze it to remove the moisture.\n4. In a big mixer bowl, mix in eggs into the olive oil one by one, using a mixer.\n5. Mix in dry ingredients.\n6. Mix in zucchini and ginger into the egg-oil mix, using a silicone spatula.\n7. Pour the batter into a baking form.\n8. Add some sunflower and sesame seeds on top.\n9. Bake for 50–60 minutes.\n10. Let the bread cool down for 10 minutes, and remove it from the baking form.",
   "keywords": [],
   "overnight": false,
-  "tools": "- mixer\n- oven\n- 21×10 cm baking form",
+  "tools": "* mixer\n* oven\n* 21×10 cm baking form",
   "yields": "1 loaf",
   "usedBy": []
 }

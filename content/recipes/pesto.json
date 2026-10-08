@@ -1,6 +1,6 @@
 {
   "slug": "pesto",
-  "createdAt": "2021-08-24T00:00:00.000Z",
+  "createdAt": "2021-08-24",
   "title": "Pesto",
   "tags": [
     "dips",
@@ -14,8 +14,8 @@
   "steps": "1. Pick basil and parsley leaves (only good ones, without black spots and not too wilted), wash them and roughly chop.\n2. Peel and roughly chop garlic.\n3. Grate Parmesan.\n4. Mix basil, parsley, garlic, sunflower seeds, Parmesan cheese, olive oil using a blender or a food processor until all bigger chunks are chopped. It shouldn’t be too smooth and creamy either: it’s nice when pesto has a rustic texture.\n5. Season with salt and pepper.",
   "keywords": [],
   "overnight": false,
-  "time": "10 minutes",
-  "tools": "- blender or food processor",
+  "time": "10 min",
+  "tools": "* blender or food processor",
   "yields": "100 ml",
   "usedBy": []
 }

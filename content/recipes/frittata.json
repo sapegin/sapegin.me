@@ -1,12 +1,14 @@
 {
   "slug": "frittata",
-  "createdAt": "2022-10-24T00:00:00.000Z",
+  "createdAt": "2022-10-24",
   "title": "Frittata with vegetables",
   "tags": [
     "breakfasts",
     "brunches",
     "eggs",
-    "italian-cuisine"
+    "italian-cuisine",
+    "spring",
+    "summer"
   ],
   "description": "This is the perfect brunch dish to eliminate leftovers in your fridge, and also quick to cook. Half of a bell pepper? Quarter of a zucchini? Cooked meat from lunch yesterday? Put it all in!",
   "imageUrl": "/images/recipes/frittata.avif",
@@ -18,7 +20,7 @@
   ],
   "notes": "If you have some chorizo, feel free to use it instead of bacon. Same with any vegetables you have left in the fridge.\n\nVariation of the filling: instead of zucchini and bell peppers, use a cauliflower.",
   "overnight": false,
-  "time": "30 minutes",
+  "time": "30 min",
   "yields": "2 portions",
   "usedBy": []
 }

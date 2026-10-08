@@ -1,14 +1,18 @@
 {
   "slug": "cochinita-pibil-tacos",
-  "createdAt": "2023-03-30T00:00:00.000Z",
+  "createdAt": "2023-03-30",
   "title": "Cochinita pibil tacos",
   "tags": [
+    "autumn",
     "crowd",
     "dinners",
     "holidays",
     "mexican-cuisine",
     "spicy",
-    "tacos"
+    "spring",
+    "summer",
+    "tacos",
+    "winter"
   ],
   "description": "Cochinita pibil is a traditional dish from the Yucatán Peninsula, renowned for its deep, smoky flavors and ancient cooking method. Traditionally, this dish is prepared by marinating pork in achiote and citrus, then wrapping it in maguey leaves and slow-cooking it underground for hours, resulting in a tender, flavorful meat. This recipe is for cooking at home in the oven.\n\nThis is our favorite taco, perfect for weekends and gatherings. The marinade and slow-cooking process make even cheaper cuts of pork tender and rich in flavor.",
   "imageUrl": "/images/recipes/cochinita-pibil-tacos.avif",
@@ -17,7 +21,7 @@
   "steps": "1. Warm up the tortillas: heat a non-sticking or cast iron skillet on medium-high until hot (don’t add oil). Warm the tortillas one by one: for about 30 seconds on one side, then for about one minute on the other side, then flip again and cook a bit more, until crispy but still slightly flexible (they shouldn’t be too soft because the meat is very juicy, and they may break).\n2. Serve all the ingredients — tortillas, avocado, cochinita pibil, pickled onions, frijoles refritos, and salsa roja tatemada — separately, so everyone could assemble the taco of their dreams (this also prevents tortillas to become soaked and break).",
   "keywords": [],
   "overnight": false,
-  "time": "400 minutes",
+  "time": "400 min",
   "yields": "30 tacos",
   "usedBy": []
 }

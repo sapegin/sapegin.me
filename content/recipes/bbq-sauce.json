@@ -1,6 +1,6 @@
 {
   "slug": "bbq-sauce",
-  "createdAt": "2022-03-20T00:00:00.000Z",
+  "createdAt": "2022-03-20",
   "title": "BBQ sauce",
   "tags": [
     "american-cuisine",
@@ -14,8 +14,8 @@
   "keywords": [],
   "notes": "You could use leftovers when you cook chicken-vegetable-noodles soup instead of blended tomatoes and tomato paste.",
   "overnight": false,
-  "time": "30 minutes",
-  "tools": "- blender",
+  "time": "30 min",
+  "tools": "* blender",
   "yields": "200 ml",
   "usedBy": []
 }

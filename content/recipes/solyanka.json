@@ -1,8 +1,9 @@
 {
   "slug": "solyanka",
-  "createdAt": "2022-01-03T00:00:00.000Z",
+  "createdAt": "2022-01-03",
   "title": "Solyanka",
   "tags": [
+    "autumn",
     "crowd",
     "dinners",
     "holidays",
@@ -10,7 +11,8 @@
     "new-year",
     "russian-cuisine",
     "soups",
-    "warming"
+    "warming",
+    "winter"
   ],
   "description": "The distinctive features of this recipe are the mix of three different types of meat (you could use any meats you like, not just the ones mentioned in the recipe) and the pleasant acidity from the capers, olives, fermented cucumbers, and lime. All this makes a very nice, complex flavor.",
   "imageUrl": "/images/recipes/solyanka.avif",
@@ -19,8 +21,8 @@
   "steps": "1. Rinse the pork in cold water, cut into big chunks, put it into a pot, and cover it with 2 liters of water. Add salt, 4 bay leaf, and cook until soft on medium heat, for about 30 minutes after the water starts to boil.\n2. While the pork is cooking, cut the ham and the sausages into 1/2 cm cubes.\n3. On a medium-sized skillet, heat olive oil on medium heat, cook the ham and the sausages for about 15 minutes, until brown on all sides.\n4. While the meats are cooking, prepare the vegetables.\n   - **Tomatoes:** quarter and remove the roots.\n   - **Onion:** peel and cut into small dice. **Garlic:** peel, and thinly slice. **Chile:** halve lengthwise, remove the root and seeds, and thinly slice.\n   - **Olives:** thinly slice.\n5. When the pork is ready, let it cool, and remove it from the broth. Filter the broth using a metal sieve.\n6. Blend the tomatoes using a blender.\n7. Sauté the onion and chiles on a skillet with a bit of salt (add more olive oil if necessary), on medium heat, for about 2-3 minutes.\n8. Add the garlic to the onions and chiles, and keep cooking for 2-3 minutes more, until transparent.\n9. Add 1 teaspoon cumin seeds, and 1 teaspoon coriander seeds, and cook for another 30 seconds.\n10. Transfer the pork, the ham and the sausages into the pot with the broth.\n11. Add the onion, chiles, garlic, and tomato sauce to the pot with the soup, and bring it to a boil.\n12. Add the olives and capers.\n13. Reduce the heat to medium-low, and simmer the soup for about 30 minutes, stirring occasionally, then remove from the heat.\n14. Add more salt if needed.\n15. Prepare the vegetables for serving.\n    - **Lime:** cut into 8 wedges. **Fermented cucumbers:** thinly slice.\n16. Serve: add into each plate of the soup two wedges of lime, 1/2 sliced pickled cucumber with a bit of its liquid, and a dollop of smetana.",
   "keywords": [],
   "overnight": false,
-  "time": "120 minutes",
-  "tools": "- medium-sized skillet\n- blender",
+  "time": "120 min",
+  "tools": "* medium-sized skillet\n* blender",
   "yields": "8 portions",
   "usedBy": []
 }

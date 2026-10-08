@@ -1,23 +1,27 @@
 {
   "slug": "hasselback-potatoes",
-  "createdAt": "2022-08-09T00:00:00.000Z",
+  "createdAt": "2022-08-09",
   "title": "Hasselback potatoes",
   "tags": [
+    "autumn",
     "dinners",
     "potatoes",
     "snacks",
-    "swedish-cuisine"
+    "spring",
+    "summer",
+    "swedish-cuisine",
+    "winter"
   ],
   "description": "Crispy, buttery, garlicky, and very pretty potatoes. Take some time to cut the potatoes, and probably you will not want to make enough of them to have a full meal. A great addition to any celebration feast, they are like gold — small and precious.",
   "imageUrl": "/images/recipes/hasselback-potatoes.avif",
   "thumbnailUrl": "/images/recipes/hasselback-potatoes_thumb.avif",
   "ingredients": "- 1 kg potatoes\n- olive oil\n- salt\n- freshly ground black pepper\n- 40 g butter\n- 2 cloves garlic",
-  "steps": "1. Preheat oven to 240C.\n2. Wash and dry potatoes.\n3. On each potato, make a series of cuts from the top around 3/4 deep with a sharp knife. Each potato should look like a comb with thin teeth.\n4. Lightly coat each potato with olive oil (for example, pour a bit of olive oil into a bowl, take a potato with one hand, and with your other hand rub a light coating of olive oil on a potato), place the potatoes on a baking sheet, sprinkle with salt and black pepper.\n5. Bake the potatoes until they start to crisp.\n6. While the potatoes are baking, put the butter into a saucepan, press the garlic into it, and melt the butter.\n7. Pour the garlic butter over the potatoes, and bake them more, until the garlic turns golden.",
+  "steps": "1. Preheat oven to 220°C.\n2. Wash and dry potatoes.\n3. On each potato, make a series of cuts from the top around 3/4 deep with a sharp knife. Each potato should look like a comb with thin teeth.\n4. Lightly coat each potato with olive oil (for example, pour a bit of olive oil into a bowl, take a potato with one hand, and with your other hand rub a light coating of olive oil on a potato), place the potatoes on a baking sheet, sprinkle with salt and black pepper.\n5. Bake the potatoes until they start to crisp.\n6. While the potatoes are baking, put the butter into a saucepan, press the garlic into it, and melt the butter.\n7. Pour the garlic butter over the potatoes, and bake them more, until the garlic turns golden.",
   "keywords": [],
   "notes": "Choose medium-size (but not too small) young potatoes that don’t need peeling.",
   "overnight": false,
-  "time": "80 minutes",
-  "tools": "- oven\n- baking tray",
+  "time": "80 min",
+  "tools": "* oven\n* baking tray",
   "yields": "1 portion",
   "usedBy": []
 }

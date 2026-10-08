@@ -1,20 +1,24 @@
 {
   "slug": "roasted-tomatoes",
-  "createdAt": "2021-09-08T00:00:00.000Z",
+  "createdAt": "2021-09-08",
   "title": "Roasted tomatoes",
   "tags": [
+    "autumn",
     "italian-cuisine",
-    "snacks"
+    "snacks",
+    "spring",
+    "summer",
+    "winter"
   ],
   "imageUrl": "/images/recipes/roasted-tomatoes.avif",
   "thumbnailUrl": "/images/recipes/roasted-tomatoes_thumb.avif",
   "ingredients": "- 500 g tomatoes\n- 4 cloves garlic\n- 1 sprig fresh rosemary\n- olive oil\n- salt\n- freshly ground black pepper",
-  "steps": "1. Preheat oven to 120C.\n2. Smash and peel garlic.\n3. Arrange tomatoes (whole) in a baking form or on a baking tray lined with baking paper.\n4. Liberally drizzle everything with olive oil, add rosemary; season with salt and black pepper.\n5. Roast tomatoes until they crack and are very wrinkled but still juicy inside, for about 2 hours.\n6. Remove rosemary before serving.",
+  "steps": "1. Preheat oven to 120°C.\n2. Smash and peel garlic.\n3. Arrange tomatoes (whole) in a baking form or on a baking tray lined with baking paper.\n4. Liberally drizzle everything with olive oil, add rosemary; season with salt and black pepper.\n5. Roast tomatoes until they crack and are very wrinkled but still juicy inside, for about 2 hours.\n6. Remove rosemary before serving.",
   "keywords": [],
   "notes": "Choose cherry tomatoes on a branch or a mix of cherry tomatoes or different colors.",
   "overnight": false,
-  "time": "130 minutes",
-  "tools": "- oven",
+  "time": "130 min",
+  "tools": "* oven",
   "yields": "2 portions",
   "source": "This recipe is based on a recipe from Suzanne Lenzer’s book “Graze”.",
   "usedBy": []

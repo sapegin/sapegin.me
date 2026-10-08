@@ -1,6 +1,6 @@
 {
   "slug": "garlic-butter",
-  "createdAt": "2022-03-19T00:00:00.000Z",
+  "createdAt": "2022-03-19",
   "title": "Garlic butter",
   "tags": [
     "foundation-recipes",
@@ -14,7 +14,7 @@
   "keywords": [],
   "notes": "You could keep the garlic butter in the fridge in a sealed container for at least one week.",
   "overnight": false,
-  "time": "10 minutes",
+  "time": "10 min",
   "yields": "150 g",
   "source": "This recipe is based on a [garlic bread recipe](https://www.youtube.com/watch?v=FkV_fU5GoXM) by Joshua Weissman.",
   "usedBy": [

@@ -1,6 +1,6 @@
 {
   "slug": "pickled-onions",
-  "createdAt": "2022-05-23T00:00:00.000Z",
+  "createdAt": "2022-05-23",
   "title": "Pickled onions",
   "tags": [
     "mexican-cuisine",
@@ -14,8 +14,8 @@
   "keywords": [],
   "notes": "Try using different types of chiles when preparing the onions, the original Mexican recipe calls for habaneros, but they can be too spicy for some people and also sometimes too expensive.\n\nIf you can prepare the onions 4 to 5 hours ahead of serving them, it will enhance their flavors.\n\nIf you use white or yellow onions, try adding extra lime juice to reach the right level of acidity.",
   "overnight": false,
-  "time": "10 minutes",
-  "tools": "- 500 ml container with a tight-fitting lid",
+  "time": "10 min",
+  "tools": "* 500 ml container with a tight-fitting lid",
   "yields": "100 g",
   "usedBy": [
     "cochinita-pibil-tacos",

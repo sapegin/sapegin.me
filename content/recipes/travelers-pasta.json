@@ -1,23 +1,27 @@
 {
   "slug": "travelers-pasta",
-  "createdAt": "2022-08-23T00:00:00.000Z",
+  "createdAt": "2022-08-23",
   "title": "Traveler’s pasta",
   "tags": [
+    "autumn",
     "dinners",
     "italian-cuisine",
     "lunches",
     "noodles",
-    "travel"
+    "spring",
+    "summer",
+    "travel",
+    "winter"
   ],
-  "description": "We don't cook pasta often but almost every time we travel, we cook a variation of this pasta with a lot of vegetables in a hotel or aribnb kitchen. It doesn't require many tools, doesn't leave too many leftover ingredients, could be cooked with whatever vegetables you find in a farmers' market or a supermarket, and with any pasta, you like and could get your hands on. And while cooking in a hotel or airbnb is usually extremely frustrating, it's a great pleasure to eat your own dinner after a full day of exploring a new (or not new, which is equally good) city.",
+  "description": "We don’t cook pasta often but almost every time we travel, we cook a variation of this pasta with a lot of vegetables in a hotel or aribnb kitchen. It doesn’t require many tools, doesn’t leave too many leftover ingredients, could be cooked with whatever vegetables you find in a farmers’ market or a supermarket, and with any pasta, you like and could get your hands on. While cooking in hotels and rental apartments is usually frustrating, it’s a great pleasure to eat your own dinner after a full day of exploring a new or already familiar city.",
   "imageUrl": "/images/recipes/travelers-pasta.avif",
   "thumbnailUrl": "/images/recipes/travelers-pasta_thumb.avif",
   "ingredients": "- 1 chile\n- 1 onion\n- 3 cloves garlic\n- 1 red bell pepper\n- 1 green bell pepper\n- 1/2 zucchini\n- 8-10 cherry tomatoes\n- olive\n- 250 g pasta\n- 100 g tomato paste\n- ground black pepper\n- chile flakes\n- 100 g cheese\n- salt\n- olive oil",
   "steps": "1. Put a pot of generously salted water to boil.\n2. Prepare the vegetables. **Onion:** peel, halve, and cut into 1/2 cm slices. **Garlic:** peel and roughly chop. **Chile:** remove the seeds, and cut as thing as possible. **Bell peppers:** remove the seeds, and roughly chop. **Zucchini:** remove the ends, halve lengthwise, and cut into 1/2 half-moons. **Cherry tomatoes:** halve. **Olives:** halve lengthwise.\n3. In a pan set on medium heat with olive oil or butter, sauté onions, chile, and garlic, until the onions are transparent.\n4. Add the zucchini to the pan, and cook for a few minutes.\n5. Add the bell pepper to the pan, and cook until the zucchini has softened but is still a bit crunchy.\n6. When the water starts to boil, add the pasta, and cook for 1-2 minutes less than recommended on a package.\n7. Save one cup of pasta water, and discard the rest. Put the pot with the pasta back on the stove, and reduce the heat to medium-low.\n8. Add the tomato sauce to the pasta (use a bit of pasta water to rinse the jar, and add this to the pasta too).\n9. Add the cherry tomatoes, the olives, and the vegetables to the pasta, and thoroughly mix everything. Add more salt if needed, and add black pepper and chile flakes. Cook for a few minutes to warm up all the ingredients and finish cooking the pasta.\n10. Add pieces of cheese to the pasta, mix thoroughly, and serve.",
   "keywords": [],
-  "notes": "We usually take with us a small jar of salt, and small mills with black pepper and chile flakes. Spices in hotels are usually very old, and sometimes there are none at all.\n\nIf there’s no cooking oil of any kind, feel free to use butter.",
+  "notes": "If there’s no cooking oil of any kind, feel free to use butter, but be careful not to burn it.",
   "overnight": false,
-  "time": "30 minutes",
+  "time": "30 min",
   "yields": "4 portions",
   "usedBy": []
 }

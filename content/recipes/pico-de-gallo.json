@@ -1,6 +1,6 @@
 {
   "slug": "pico-de-gallo",
-  "createdAt": "2022-08-01T00:00:00.000Z",
+  "createdAt": "2022-08-01",
   "title": "Pico de gallo",
   "tags": [
     "cold",
@@ -8,7 +8,7 @@
     "salads",
     "salsas"
   ],
-  "description": "Pico de gallo also known as _salsa Mexicana_, is a great garnishing for tacos, burritos, tamales, salads, quesadillas, steaks, or basically any dish (even just to eat it with tortilla chips while watching TV). Try to have it ready before starting to cook the rest of your dishes — it will be perfect when serving!",
+  "description": "Pico de gallo also known as _salsa Mexicana_, is a great garnishing for tacos, burritos, tamales, salads, quesadillas, steaks, or any dish (even just to eat it with tortilla chips while watching TV). Try to have it ready before starting to cook the rest of your dishes — it will be perfect when serving!",
   "imageUrl": "/images/recipes/pico-de-gallo.avif",
   "thumbnailUrl": "/images/recipes/pico-de-gallo_thumb.avif",
   "ingredients": "- 2 tomatoes\n- 1 onion\n- 1 chile\n- 1 bunch parsley\n- 2 limes\n  *juice*\n- salt",
@@ -18,7 +18,7 @@
   ],
   "notes": "Pico de gallo tastes better when prepared on the same day, but a couple of hours ahead of eating it, to maximize flavors.\n\nTry different types of chiles to find the suitable ones for you, also try different amounts of chiles when preparing pico de gallo to find the right level of spiciness.",
   "overnight": false,
-  "time": "10 minutes",
+  "time": "10 min",
   "yields": "1 portion",
   "usedBy": [
     "tacos-al-pastor"

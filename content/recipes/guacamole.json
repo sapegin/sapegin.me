@@ -1,6 +1,6 @@
 {
   "slug": "guacamole",
-  "createdAt": "2022-03-19T00:00:00.000Z",
+  "createdAt": "2022-03-19",
   "title": "Guacamole",
   "tags": [
     "dips",
@@ -13,7 +13,7 @@
   "steps": "1. Peel avocados (cut all the way around the stone using a paring knife, then remove the stone and scoop the flesh using a spoon), put them into a medium-sized bowl, and smash them using a small masher or a fork.\n2. Halve the tomato, remove the root and cut into 1/4 cm cubes, put into a bowl with avocados.\n3. Peel the onion and cut 1/2 into small dice, add into the bowl.\n4. Quarter the chile lengthwise, remove the seeds, thinly slice each quarter, and add the chiles into the bowl.\n5. Discard large stems of the parsley and finely chop the rest, add the chopped parsley into the bowl.\n6. Juice one lime into the bowl.\n7. Add salt, and thoroughly mix everything.",
   "keywords": [],
   "overnight": false,
-  "time": "10 minutes",
+  "time": "10 min",
   "yields": "100 ml",
   "usedBy": [
     "huevos-rancheros-en-sombrero"

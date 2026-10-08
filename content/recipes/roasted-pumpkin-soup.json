@@ -1,23 +1,25 @@
 {
   "slug": "roasted-pumpkin-soup",
-  "createdAt": "2021-08-04T00:00:00.000Z",
+  "createdAt": "2021-08-04",
   "title": "Roasted pumpkin soup",
   "tags": [
+    "autumn",
     "cream-soups",
     "lunches",
     "soups",
-    "warming"
+    "warming",
+    "winter"
   ],
   "description": "Cozy and warm, especially spiced with some chile flakes. The best choice for lunch in autumn (and when pumpkins are conveniently in season), when the weather is gray and grumpy and raining. It takes some time to prepare (mainly to roast the pumpkins and scoop out all the flesh) but it’s definitely worth it!",
   "imageUrl": "/images/recipes/roasted-pumpkin-soup.avif",
   "thumbnailUrl": "/images/recipes/roasted-pumpkin-soup_thumb.avif",
   "ingredients": "- 1.5 kg whole pumpkin\n  *about 2 medium ones*\n- 1 onion\n- 10 g butter\n- 1 teaspoon ground cinnamon\n- 1 teaspoon ground nutmeg\n- 1 teaspoon ground cumin seeds\n- chile flakes\n- 500 ml chicken broth\n- 6 teaspoons maple syrup\n- olive oil\n- salt\n- freshly ground black pepper",
-  "steps": "1. Preheat oven to 180C. Line a baking sheet with parchment paper.\n2. Halve the pumpkins lengthwise, scoop out and discard the seeds using a large spoon.\n3. Put the pumpkins onto the baking sheet cut side up. Rub all over with olive oil and season with salt and pepper. Roast until the flesh is very tender and shows no resistance when poked with a sharp knife, for about 1 hour.\n4. While the pumpkins are roasting, peel the onion, halve, and cut into 1/2 cm slices.\n5. When the pumpkins are ready, remove them from the oven, and cool down.\n6. While the pumpkins are cooling, melt the butter in a large pot over medium-low heat.\n7. Add the onion to the pot. Cook, frequently stirring, until transparent, for several minutes.\n8. Add 1 teaspoon ground cinnamon, 1 teaspoon ground nutmeg, 1 teaspoon ground cumin seeds, and chile flakes to the pot, and stir until fragrant, for about 30 seconds.\n9. Add the chicken stock to the pot.\n10. Using a large spoon, carefully scoop out the roasted pumpkin flesh, and transfer it to the pot.\n11. Add enough water to barely cover the pumpkin and bring it to a boil.\n12. Puree the soup using a blender until completely smooth. Add more stock or water to achieve the desired consistency. Add more salt and pepper if needed.\n13. Stir in the maple syrup, and serve.",
+  "steps": "1. Preheat oven to 180°C. Line a baking sheet with parchment paper.\n2. Halve the pumpkins lengthwise, scoop out and discard the seeds using a large spoon.\n3. Put the pumpkins onto the baking sheet cut side up. Rub all over with olive oil and season with salt and pepper. Roast until the flesh is very tender and shows no resistance when poked with a sharp knife, for about 1 hour.\n4. While the pumpkins are roasting, peel the onion, halve, and cut into 1/2 cm slices.\n5. When the pumpkins are ready, remove them from the oven, and cool down.\n6. While the pumpkins are cooling, melt the butter in a large pot over medium-low heat.\n7. Add the onion to the pot. Cook, stirring often, until transparent, for several minutes.\n8. Add 1 teaspoon ground cinnamon, 1 teaspoon ground nutmeg, 1 teaspoon ground cumin seeds, and chile flakes to the pot, and stir until fragrant, for about 30 seconds.\n9. Add the chicken stock to the pot.\n10. Using a large spoon, carefully scoop out the roasted pumpkin flesh, and transfer it to the pot.\n11. Add enough water to barely cover the pumpkin and bring it to a boil.\n12. Purée the soup using a blender until completely smooth. Add more stock or water to achieve the desired consistency. Add more salt and pepper if needed.\n13. Stir in the maple syrup, and serve.",
   "keywords": [],
   "notes": "A mix of pumpkins and winter squashes works best for this recipe.\n\nFor dried chiles, we prefer a mix of jalapeño and habanero flakes.",
   "overnight": false,
-  "time": "90 minutes",
-  "tools": "- oven\n- blender",
+  "time": "90 min",
+  "tools": "* oven\n* blender",
   "yields": "6 portions",
   "source": "This recipe is based on J. Kenji Lopez-Alt’s book “The Food Lab: Better Home Cooking Through Science”.",
   "usedBy": []

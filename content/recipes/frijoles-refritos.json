@@ -1,7 +1,8 @@
 {
   "slug": "frijoles-refritos",
-  "createdAt": "2023-03-30T00:00:00.000Z",
+  "createdAt": "2023-03-30",
   "title": "Frijoles refritos",
+  "titleEnglish": "Refried beans",
   "tags": [
     "dips",
     "foundation-recipes",
@@ -17,8 +18,8 @@
   "keywords": [],
   "notes": "The use of chile to prepare frijoles refritos is optional, it was the way of Margarita’s grandma.",
   "overnight": true,
-  "time": "90 minutes",
-  "tools": "- potato masher",
+  "time": "90 min",
+  "tools": "* potato masher",
   "yields": "300 g",
   "usedBy": [
     "burritos",

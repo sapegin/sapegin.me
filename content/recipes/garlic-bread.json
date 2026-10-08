@@ -1,21 +1,25 @@
 {
   "slug": "garlic-bread",
-  "createdAt": "2022-03-22T00:00:00.000Z",
+  "createdAt": "2022-03-22",
   "title": "Garlic bread",
   "tags": [
+    "autumn",
     "bread",
     "breakfasts",
-    "italian-cuisine"
+    "italian-cuisine",
+    "spring",
+    "summer",
+    "winter"
   ],
-  "description": "This is a perfect Sunday breakfast recipe — the smell and the taste of just baked garlic bread are amazing. You could do it with any kind of bread, we like to make it with our own easy bread, baked the evening before.",
+  "description": "This is a perfect Sunday breakfast recipe — the smell and the taste of just baked garlic bread are amazing. You could do it with any kind of bread, we like to make it with our own [Easy bread](/recipes/easy-bread/), baked the evening before.",
   "imageUrl": "/images/recipes/garlic-bread.avif",
   "thumbnailUrl": "/images/recipes/garlic-bread_thumb.avif",
   "ingredients": "- bread\n  *of your choice*\n- [Garlic butter](/recipes/garlic-butter/)",
-  "steps": "1. Preheat oven to 200C.\n2. Halve the bread lengthwise.\n3. Spread the garlic butter on both halves of the bread, coating the whole area (put a bit more in the middle so melting butter soaks the bread but doesn’t drip too much from the edges).\n4. Put the bread on a grid, and put a baking tray under (there should be something to catch the dripping butter, otherwise it’ll burn on the bottom of the oven).\n5. Bake for 10-20 minutes, until golden. (If the bread was just baked and still hot, 7-10 minutes should be enough.)",
+  "steps": "1. Preheat oven to 200°C.\n2. Halve the bread lengthwise.\n3. Spread the garlic butter on both halves of the bread, coating the whole area (put a bit more in the middle so melting butter soaks the bread but doesn’t drip too much from the edges).\n4. Put the bread on a grid, and put a baking tray under (there should be something to catch the dripping butter, otherwise it’ll burn on the bottom of the oven).\n5. Bake for 10-20 minutes, until golden. (If the bread was just baked and still hot, 7-10 minutes should be enough.)",
   "keywords": [],
   "overnight": false,
-  "time": "25 minutes",
-  "tools": "- oven\n- baking grid\n- baking tray\n- medium oven-safe glass bowl",
+  "time": "25 min",
+  "tools": "* oven\n* baking grid\n* baking tray\n* medium oven-safe glass bowl",
   "yields": "1 loaf",
   "usedBy": []
 }

@@ -1,12 +1,14 @@
 {
   "slug": "feta-olive-salad",
-  "createdAt": "2024-01-23T00:00:00.000Z",
+  "createdAt": "2024-01-23",
   "title": "Feta olive salad",
   "tags": [
     "mediterranean-cuisine",
     "picnics",
     "quick-recipes",
-    "salads"
+    "salads",
+    "spring",
+    "summer"
   ],
   "description": "This super simple salad works great with [roasted chicken and potatoes](/recipes/air-fried-chicken-wings/)…",
   "imageUrl": "/images/recipes/feta-olive-salad.avif",
@@ -15,6 +17,6 @@
   "steps": "1. Cut the Feta cheese into 2 cm cubes.\n2. In a bowl, add the feta cheese, olives, and a bit of olive oil.\n3. Grind the cumin, coriander, and fennel seeds into the salad.\n4. Thoroughly mix everything.",
   "keywords": [],
   "overnight": false,
-  "time": "10 minutes",
+  "time": "10 min",
   "usedBy": []
 }

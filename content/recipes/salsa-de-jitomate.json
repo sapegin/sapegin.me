@@ -1,7 +1,8 @@
 {
   "slug": "salsa-de-jitomate",
-  "createdAt": "2024-08-06T00:00:00.000Z",
+  "createdAt": "2024-08-06",
   "title": "Salsa de jitomate",
+  "titleEnglish": "Tomato sauce",
   "tags": [
     "dips",
     "foundation-recipes",
@@ -9,15 +10,15 @@
     "salsas",
     "sauces"
   ],
-  "description": "This salsa is typically used for serving tacos dorados or tostadas, but is very versatile. It's usually not spicy, but you can add one or two chiles or combine it with another salsa, such as salsa de chile de árbol.",
+  "description": "This salsa is typically used for serving [Tacos dorados](/recipes/tacos-dorados/) or tostadas, but is very versatile. It’s usually not spicy, but you can add one or two chiles or combine it with another salsa, such as [Salsa de chile de árbol](/recipes/salsa-de-chile-de-arbol/).",
   "imageUrl": "/images/recipes/salsa-de-jitomate.avif",
   "thumbnailUrl": "/images/recipes/salsa-de-jitomate_thumb.avif",
   "ingredients": "- 3-4 tomato\n- 1 small cinnamon stick\n- 2 cloves\n- salt\n- oregano\n- 1 onion",
   "steps": "1. In a saucepan sat on medium-high heat, cook the tomatoes with cinnamon and cloves in water (the water should cover around half of the height of the tomatoes) until the tomatoes start to soften.\n2. While the tomatoes are cooking, peel the onion, halve it and thinly slice.\n3. Let the tomatoes cool down a bit.\n4. Blend the tomatoes in a blender with a bit of cinnamon (discard the rest), cloves, a pinch of salt, and a bit of cooking water.\n5. Add more cooking water and salt if needed to reach the desired thickness.\n6. Add the onions to the salsa.",
   "keywords": [],
   "overnight": false,
-  "time": "30 minutes",
-  "tools": "- blender or mixer",
+  "time": "30 min",
+  "tools": "* blender or mixer",
   "yields": "500 ml",
   "usedBy": [
     "tacos-dorados"

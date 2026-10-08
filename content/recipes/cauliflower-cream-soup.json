@@ -1,20 +1,23 @@
 {
   "slug": "cauliflower-cream-soup",
-  "createdAt": "2021-08-23T00:00:00.000Z",
+  "createdAt": "2021-08-23",
   "title": "Cauliflower cream soup",
   "tags": [
+    "autumn",
     "cream-soups",
     "lunches",
-    "soups"
+    "soups",
+    "spring",
+    "winter"
   ],
   "imageUrl": "/images/recipes/cauliflower-cream-soup.avif",
   "thumbnailUrl": "/images/recipes/cauliflower-cream-soup_thumb.avif",
   "ingredients": "- 1 head cauliflower\n- 3 cloves garlic\n- 1 medium onion\n- 2 sprigs parsley\n- 500 ml chicken broth\n- 2 limes;\n  *zest and juice*\n- 1 teaspoon ground cinnamon\n- 1 teaspoon ground cumin seeds\n- 1 teaspoon curry powder\n- chile flakes\n- olive oil\n- salt\n- freshly ground black pepper",
-  "steps": "1. Preheat oven to 200C. Line a baking sheet with parchment paper.\n2. Prepare the vegetables. **Cauliflower:** separate florets from the root, remove green leaves from the root and discard the leaves, halve the root. **Garlic:** peel. **Onion:** dice. **Parsley:** finely chop.\n3. Distribute the cauliflower and garlic on the baking sheet. Grease using olive oil, and season with salt, black pepper, and a sprinkle of dried jalapeños.\n4. Roast for about 15 minutes, toss and roast for another 15 minutes until the cauliflower is soft and charred a bit. Remove from the oven, and cool down.\n5. While the cauliflower is cooling, put a large pot over medium-high heat with a bit of olive oil.\n6. Add the onion to the pot. Cook, frequently stirring, until softened but not browned, about 4 minutes.\n7. Add the chicken stock to the pot.\n8. Add the lime zest, 1 teaspoon ground cinnamon, 1 teaspoon curry powder, and chile flakes to the pot, and stir until fragrant, about 30 seconds.\n9. Transfer cauliflower (except the smallest florets) and garlic to the pot. Add enough water to barely cover the cauliflower and bring to a simmer.\n10. Purée the soup using a blender until completely smooth. Add lime juice and more stock or water to achieve desired consistency.\n11. Season with salt and pepper.\n12. Serve topped with the rest of the cauliflower florets, and parsley.",
+  "steps": "1. Preheat oven to 200°C. Line a baking sheet with parchment paper.\n2. Prepare the vegetables. **Cauliflower:** separate florets from the root, remove green leaves from the root and discard the leaves, halve the root. **Garlic:** peel. **Onion:** dice. **Parsley:** finely chop.\n3. Distribute the cauliflower and garlic on the baking sheet. Grease using olive oil, and season with salt, black pepper, and a sprinkle of dried jalapeños.\n4. Roast for about 15 minutes, toss and roast for another 15 minutes until the cauliflower is soft and charred a bit. Remove from the oven, and cool down.\n5. While the cauliflower is cooling, put a large pot over medium-high heat with a bit of olive oil.\n6. Add the onion to the pot. Cook, stirring often, until softened but not browned, about 4 minutes.\n7. Add the chicken stock to the pot.\n8. Add the lime zest, 1 teaspoon ground cinnamon, 1 teaspoon curry powder, and chile flakes to the pot, and stir until fragrant, about 30 seconds.\n9. Transfer cauliflower (except the smallest florets) and garlic to the pot. Add enough water to barely cover the cauliflower and bring to a simmer.\n10. Purée the soup using a blender until completely smooth. Add lime juice and more stock or water to achieve desired consistency.\n11. Season with salt and pepper.\n12. Serve topped with the rest of the cauliflower florets, and parsley.",
   "keywords": [],
   "overnight": false,
-  "time": "60 minutes",
-  "tools": "- blender or food processor\n- oven",
+  "time": "60 min",
+  "tools": "* blender or food processor\n* oven",
   "yields": "2 portions",
   "usedBy": []
 }

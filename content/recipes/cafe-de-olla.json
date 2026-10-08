@@ -1,7 +1,8 @@
 {
   "slug": "cafe-de-olla",
-  "createdAt": "2021-08-29T00:00:00.000Z",
+  "createdAt": "2021-08-29",
   "title": "Café de olla",
+  "titleEnglish": "Mexican pot coffee",
   "tags": [
     "breakfasts",
     "brunches",
@@ -16,9 +17,9 @@
   "keywords": [
     "coffee"
   ],
-  "notes": "For coffee, we like more neutral ones, like from Ethiopia, Guatemala, or Peru. But you could use Mexican coffee too.\n\nThe grind is a bit coarser than for espresso (3 on Fellow Opus, 11 on Baratza Encore).\n\nIf you don't have Mexican cinnamon, Ceylon cinnamon would also work.",
+  "notes": "For coffee, we like more neutral ones, like from Ethiopia, Guatemala, or Peru. But you could use Mexican coffee too.\n\nThe grind is a bit coarser than for espresso (3 on Fellow Opus, 11 on Baratza Encore).\n\nIf you don’t have Mexican cinnamon, Ceylon cinnamon would also work.",
   "overnight": false,
-  "time": "10 minutes",
+  "time": "10 min",
   "yields": "500 ml",
   "usedBy": []
 }

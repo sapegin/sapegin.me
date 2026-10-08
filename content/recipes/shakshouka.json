@@ -1,13 +1,17 @@
 {
   "slug": "shakshouka",
-  "createdAt": "2022-08-09T00:00:00.000Z",
+  "createdAt": "2022-08-09",
   "title": "Shakshouka",
   "tags": [
+    "autumn",
     "breakfasts",
     "brunches",
     "crowd",
     "middle-eastern-cuisine",
-    "warming"
+    "spring",
+    "summer",
+    "warming",
+    "winter"
   ],
   "description": "Shakshouka is a North African dish, most closely associated with Tunisia, that emerged after tomatoes and chili peppers were introduced from the Americas and integrated into local cooking. Its name comes from Arabic, meaning “a mixture,” reflecting eggs cooked in a spiced tomato base. It later spread to the Middle East, where it became a popular breakfast dish.\n\nThis version keeps the classic base — eggs in a tomato sauce with olive oil, garlic, cumin, and peppers — but adds a few modern touches. Smoked paprika brings a deeper flavor than the more typical sweet paprika, turmeric appears occasionally but isn’t essential, and Feta is a common contemporary addition rather than a traditional one. A longer simmer also makes the sauce thicker than usual.\n\nShakshouka makes a great brunch when it’s cold outside, with its bright acidity and warming spices. The key is to cook the eggs to your preferred doneness. However, even if you slightly overcook them, it will still taste great  (and some may actually prefer it).",
   "imageUrl": "/images/recipes/shakshouka.avif",
@@ -16,11 +20,12 @@
   "steps": "1. Prepare the vegetables.\n\t- **Onion:** peel, halve, and cut into 1/2 cm slices. **Chile:** halve lengthwise, remove the seeds, and thinly slice. **Garlic:** crush, peel and roughly chop.\n\t- **Bell pepper:** remove the seeds, and cut into 1 cm squares.\n\t- **Tomatoes:** remove the cores, and coarsely chop.\n2. Heat a skillet on medium heat, and add a generous amount of olive oil.\n3. Add the onion, chile, garlic, and salt. Cook until the onions start to get transparent.\n4. Add the bell peppers, and cook a few minutes more.\n5. Add the chopped tomatoes, crushed coriander and cumin seeds, and cook for some a few minutes more.\n6. Add the tomato purée, smoked paprikaa and curcuma. Bring it to simmer, and reduce the heat to medium-low. Cook for 30-40 minutes uncovered stirring occasionally, until the tomatoes soften and the liquid thickens.\n7. And add more salt if necessary.\n8. Using a spoon, push the vegetables to create a space for each egg. Crack the eggs into each space. Gently spoon a bit of tomato juice from the skillet over the whites, to help contain the eggs. Season each egg with a bit of salt.\n9. Cook covered for 6-10 minutes, until the egg whites are opaque and yolks have risen a bit but are still soft. The egg should move a bit when you gently shake the skillet.\n10. To server, crumble some Feta cheese over the shakshuka, and sprinkle with parsley or spring onions.",
   "keywords": [
     "Shakshuka",
-    "Chakchouka"
+    "Chakchouka",
+    "Шакшука"
   ],
   "overnight": false,
   "time": "1.5 hours",
-  "tools": "- medium skillet with a lid",
+  "tools": "* medium skillet with a lid",
   "yields": "3 portions",
   "usedBy": []
 }

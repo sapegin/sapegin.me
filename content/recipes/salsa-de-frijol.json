@@ -1,7 +1,8 @@
 {
   "slug": "salsa-de-frijol",
-  "createdAt": "2022-09-12T00:00:00.000Z",
+  "createdAt": "2022-09-12",
   "title": "Salsa de frijol",
+  "titleEnglish": "Bean sauce",
   "tags": [
     "dips",
     "foundation-recipes",
@@ -13,14 +14,14 @@
   "imageUrl": "/images/recipes/salsa-de-frijol.avif",
   "thumbnailUrl": "/images/recipes/salsa-de-frijol_thumb.avif",
   "ingredients": "- 200 g beans\n- salt",
-  "steps": "1. Soak the beans overnight.\n2. Cook the beans in lightly salted water on medium heat until tender.\n3. Cool down the beans in their cooking liquid.\n4. Pour most of the bean liquid into a bowl or a pot.\n5. Using an immersion blender, mix the beans until they form a paste. Add as much bean liquid as needed to achieve a creamy consistency. (Add more if you want to make a sauce, and less if you want to make a paste.)\n6. Add more salt if needed.",
+  "steps": "1. Soak the beans overnight.\n2. Cook the beans in lightly salted water on medium heat until tender.\n3. Cool down the beans in their cooking liquid.\n4. Pour most of the bean liquid into a bowl or a pot.\n5. Using an immersion blender, mix the beans until they form a paste. Add as much bean liquid as needed to achieve a creamy consistency. (Add more to make a sauce, and less to make a paste.)\n6. Add more salt if needed.",
   "keywords": [
     "bean sauce"
   ],
   "notes": "There are many types of beans on the market (white, peruanos, pintos, red, black, etc.) — try the ones you could get your hands on, and choose your favorites.",
   "overnight": true,
-  "time": "60 minutes",
-  "tools": "- blender",
+  "time": "60 min",
+  "tools": "* blender",
   "yields": "300 g",
   "usedBy": [
     "burritos",

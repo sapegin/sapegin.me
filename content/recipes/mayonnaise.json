@@ -1,6 +1,6 @@
 {
   "slug": "mayonnaise",
-  "createdAt": "2022-01-02T00:00:00.000Z",
+  "createdAt": "2022-01-02",
   "title": "Mayonnaise",
   "tags": [
     "dips",
@@ -17,8 +17,8 @@
   "keywords": [],
   "notes": "The flavor of the mayonnaise depends a lot on the olive oil you’re using. If olive oil has bitter flavor, mayonnaise will be bitter too, so choose lighter, more fruity olive oil.\n\nThe mayonnaise can be stored in the fridge in airtight container for up to two weeks.",
   "overnight": false,
-  "time": "15 minutes",
-  "tools": "- immersion blender",
+  "time": "15 min",
+  "tools": "* immersion blender",
   "yields": "100 ml",
   "source": "This recipe is based on J. Kenji Lopez-Alt’s book “The Food Lab: Better Home Cooking Through Science”",
   "usedBy": [

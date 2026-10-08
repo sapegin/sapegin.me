@@ -1,8 +1,9 @@
 {
   "slug": "caprese-salad",
-  "createdAt": "2021-08-24T00:00:00.000Z",
+  "createdAt": "2021-08-24",
   "title": "Caprese salad",
   "tags": [
+    "autumn",
     "cold",
     "italian-cuisine",
     "salads",
@@ -15,7 +16,7 @@
   "steps": "1. Slice the tomatoes into 1/2 cm slices, and arrange them on a big plate.\n2. Sprinkle salt over tomatoes.\n3. Slice the Mozzarella into the same amount of slices as you have tomato slices (if you can), and put it on top of the tomatoes.\n4. Sprinkle with olive oil and freshly ground coriander seeds, cumin seeds, and black pepper.",
   "keywords": [],
   "overnight": false,
-  "time": "15 minutes",
+  "time": "15 min",
   "yields": "2 portions",
   "usedBy": []
 }

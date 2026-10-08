@@ -1,24 +1,28 @@
 {
   "slug": "chicken-pho",
-  "createdAt": "2024-02-18T00:00:00.000Z",
+  "createdAt": "2024-02-18",
   "title": "Chicken pho",
+  "titleEnglish": "Vietnamese noodle soup",
   "tags": [
+    "autumn",
     "lunches",
     "noodles",
     "soups",
+    "spring",
     "vietnamese-cuisine",
-    "warming"
+    "warming",
+    "winter"
   ],
   "description": "We love all kinds of soups, and pho is one of our favorites when visiting a Vietnamese restaurant. This recipe tries to recreate the pho vibe without being too complex. What makes it different from a regular chicken soup with noodles is charred ginger and onions, a whole bunch of toasted spices, and fish and soy sauces instead of salt.",
   "imageUrl": "/images/recipes/chicken-pho.avif",
   "thumbnailUrl": "/images/recipes/chicken-pho_thumb.avif",
-  "ingredients": "- 1 onion\n- 1 piece ginger\n- 1.5 l chicken broth\n- boiled chicken\n- 1 star anise\n- 4 cloves\n- 1 cinnamon stick\n- 2 cardamom pods\n- 1 teaspoon fennel seeds\n- 1 teaspoon coriander seeds\n- 1 teaspoon fish sauce\n- 3 teaspoons soy sauce\n- 360 g rice noodle\n- lime\n  *for serving*\n- fresh chile\n  *for serving*\n- scallion\n  *for serving*",
+  "ingredients": "- 1 onion\n- 1 piece ginger\n- 1.5 l chicken broth\n- boiled chicken\n- 1 star anise\n- 4 cloves\n- 1 cinnamon stick\n- 2 cardamom pods\n- 1 teaspoon fennel seeds\n- 1 teaspoon coriander seeds\n- 1 teaspoon fish sauce\n- 3 teaspoons soy sauce\n- 360 g Rice stick noodles\n- lime\n  *for serving*\n- fresh chile\n  *for serving*\n- scallion\n  *for serving*",
   "steps": "1. Prepare the vegetables. **Ginger:** halve lengthwise (don’t peel). **Onion:** peel and halve.\n2. Start warming the chicken broth.\n3. On a dry (no oil) stainless steel skillet set at medium heat, char the ginger and the onion.\n4. Reduce the heat of the skillet to medium-low, and toast the spices (1 star anise, 4 cloves, 1 cinnamon stick, 2 cardamom pods, 1 teaspoon of fennel seeds, and 1 teaspoon of coriander seeds) for about 3 minutes, until fragrant.\n5. Deglaze the spices with a few tablespoons of chicken broth.\n6. Scrub all the juice from the pan, and transfer all the spices, ginger, and onion to the pot with chicken broth.\n7. Reduce the heat of the pot to medium-low, add 1 teaspoon fish sauce, and 3 teaspoon soy sauce, cover the pot, and continue simmering for another 4 hours.\n8. Filter the broth using a metal sieve to remove the spices, ginger, and onion (you could discard them).\n9. While the soup is cooking, shred the chicken.\n10. When the soup is almost ready, cook the noodles (just enough for one meal — about 60 g per portion) separately, according to the instructions on the package.\n11. To serve each plate: put some shredded chicken on the bottom of the plate, place the noodles, pour the broth, squeeze a bit of lime juice, and sprinkle with thinly sliced fresh chile and scallions.",
   "keywords": [],
   "notes": "We usually make the broth from one whole chicken (with legs and wings removed), and then we shred all the meat.",
   "overnight": false,
-  "time": "270 minutes",
-  "tools": "- two medium-sized pots\n- metal sieve\n- stainless steel skillet",
+  "time": "270 min",
+  "tools": "* two medium-sized pots\n* metal sieve\n* stainless steel skillet",
   "yields": "6 portions",
   "source": "This recipe is based on two recipes from The Woks of Life: [20-Minute Chicken Pho](https://thewoksoflife.com/chicken-pho/) and [Pho (Vietnamese Noodle Soup)](https://thewoksoflife.com/pho-vietnamese-noodle-soup/).",
   "usedBy": []
