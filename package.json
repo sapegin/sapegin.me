@@ -85,7 +85,7 @@
     "vitest": "4.1.4"
   },
   "nano-staged": {
-    "*.{js,cjs,mjs,ts,tsx,css,json,md}": "oxfmt",
+    "*.{js,cjs,mjs,ts,tsx,css,json,md}": "oxfmt --no-error-on-unmatched-pattern",
     "*.astro": "prettier --write",
     "*.{js,cjs,mjs,ts,tsx,astro}": "oxlint --fix"
   },

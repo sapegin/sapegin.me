@@ -1,28 +1,33 @@
 {
   "slug": "plov",
-  "createdAt": "2022-08-09T00:00:00.000Z",
+  "createdAt": "2022-08-09",
   "title": "Plov",
   "tags": [
-    "air-fryer",
+    "autumn",
     "crowd",
     "dinners",
     "dutch-oven",
     "holidays",
     "rice",
-    "uzbek-cuisine"
+    "spring",
+    "uzbek-cuisine",
+    "winter"
   ],
   "description": "This is our simplified variation of a famous Uzbek rice dish plov (or pilaf). It may not be very authentic and uses the wrong meat (pork instead of lamb) but it’s still full of flavor that will make you smile and want to eat more. And you could make enough for all your friends or eat it yourself for several days.",
   "imageUrl": "/images/recipes/plov.avif",
   "thumbnailUrl": "/images/recipes/plov_thumb.avif",
-  "ingredients": "- 500 g rice\n- 1 kg pork\n- 2 onions\n- 5 carrots\n- 2 fresh chiles\n- 2 head garlic\n- 2 teaspoon cumin seeds\n- 1 teaspoon cardamom\n- 3 teaspoons curcuma powder\n- 1 teaspoon black peppercorns\n- 3 star anises\n- 1 handful raisins\n- olive oil\n- salt\n- 1 l boiling water",
-  "steps": "1. Rinse the meat in cold water, dry using paper towels, season it with salt, and refrigerate it in a sealed container (or wrapped in a film) overnight.\n2. Rinse the rice in cold water until the water is clear, remove the stones from the rice, and soak it in warm water (30-35C).\n3. Cut the meat into 3 cm cubes.\n4. Prepare the vegetables. **Onions:** peel, halve it and cut into 1/2 cm slices. **Carrots:** peel, halve lengthwise, and cut into 1/2 cm half-moons. **Chiles:** halve lengthwise, remove the seeds, and thinly slice. **Garlic:** remove the outer peels, and cut the top part of the heads to expose the cloves (but keep them attached together).\n5. Brown the meat in a dutch oven with olive oil on medium heat until golden on all sides, stirring occasionally, for about 10-15 minutes.\n6. Add onions, carrots, and chiles to the dutch oven, and cook for 10 more minutes, stirring occasionally.\n7. Cover with boiling water, so all the vegetables and meat are underwater.\n8. Add 2 teaspoon cumin seeds, 1 teaspoon cardamom, 3 teaspoon curcuma powder, 1 teaspoon black peppercorn, 3 star anise, and 1 handful raisin, then stir gently.\n9. Place the garlic head in the middle, bring to a boil, then reduce the heat to low and simmer for 30-40 minutes.\n10. Discard the rice water, and add the rice to the vegetables and meat, gently stir.\n11. If needed, add more boiling water, so there’s around 1 cm of water on top of everything.\n12. Add more salt if needed.\n13. Cook covered for 15-25 minutes.",
+  "ingredients": "- 500 g rice\n- 1 kg pork\n- 2 onions\n- 5 carrots\n- 2 fresh chiles\n- 2 head garlic\n- 2 teaspoon cumin seeds\n- 1 teaspoon cardamom\n* 3 teaspoons curcuma powder\n- 1 teaspoon black peppercorns\n- 3 star anises\n- 1 handful raisins\n- olive oil\n- salt\n- 1 l boiling water",
+  "steps": "1. Rinse the meat in cold water, dry using paper towels, season it with salt, and refrigerate it in a sealed container (or wrapped in a film) overnight.\n2. Prepare the vegetables:\n\t* **Onions:** peel, halve it and cut into 1/2 cm slices. **Carrots:** peel, halve lengthwise, and cut into 1/2 cm half-moons. **Chiles:** halve lengthwise, remove the seeds, and thinly slice.\n\t* **Garlic:** remove the outer peels, and cut the top part of the heads to expose the cloves (but keep them attached together).\n3. Rinse the rice in cold water until the water is clear, and soak it in warm water (30-35C).\n4. Cut the meat into 3 cm cubes.\n5. Brown the meat in a dutch oven with olive oil on high heat until golden on all sides, stirring occasionally, for about 10-15 minutes.\n6. Reduce the heat to medium-high, add onions, carrots, and chiles to the dutch oven, and cook for 10 more minutes, stirring occasionally.\n7. Cover with boiling water, so all the vegetables and meat are underwater.\n8. Add 2 teaspoon cumin seeds, 3 cardamom pods, 3 teaspoon curcuma powder, 1 teaspoon black peppercorn, 3 star anise, and 1 handful raisin, then stir gently.\n9. Place the garlic head in the middle, bring to a boil, then reduce the heat to low and simmer covered for 30-40 minutes, until the meat is tender.\n10. Add more salt if needed.\n11. Discard the rice water. Place the rice on top of the meat and vegetables, don’t stir. If needed, very gently add more boiling water, so there’s around 1 cm of water on top of everything. Add a few holes with a handle of a wooden spoon to allow steam to escape.\n12. Cook covered for 15-25 minutes.",
   "keywords": [
-    "pilaf",
-    "palov"
+    "Плов",
+    [
+      "pilaf",
+      "palov"
+    ]
   ],
   "overnight": true,
-  "time": "120 minutes",
-  "tools": "- dutch oven",
+  "time": "120 min",
+  "tools": "* dutch oven",
   "yields": "6 portions",
   "source": "This recipe was inspired by the recipes in Hakim Ganiev’s “Plov” book.",
   "usedBy": []
