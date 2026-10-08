@@ -481,9 +481,10 @@ _Function declarations_ and _comment blocks_ create distinct _sections_ in the c
 ```js
 /**
  * Return the range for the:
- * - selection
- * - word + tags under cursor
- * - word under cursor
+ *
+ * - Selection
+ * - Word + tags under cursor
+ * - Word under cursor
  */
 function getWordRange(pattern) {
   /* … */

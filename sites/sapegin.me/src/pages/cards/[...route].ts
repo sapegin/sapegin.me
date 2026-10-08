@@ -10,7 +10,6 @@ const COLOR_TEXT: RgbColor = [190, 75, 131];
 const COLOR_ACCENT: RgbColor = [190, 75, 131];
 
 export const { getStaticPaths, GET } = await OGImageRoute({
-	param: 'route',
 	pages: import.meta.glob<{ frontmatter: Post }>('/src/content/**/*.md', {
 		eager: true,
 	}),

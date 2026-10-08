@@ -57,12 +57,10 @@ const imageUrl = image ? `${SITE_URL}${image}` : undefined;
 	href={`${SITE_URL}/atom.xml`}
 />
 <link rel="sitemap" href={`${SITE_URL}/sitemap-index.xml`} />
-{
-	imageUrl && (
-		<>
-			<meta property="og:image" content={imageUrl} />
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:image" content={imageUrl} />
-		</>
-	)
-}
+{imageUrl && (
+	<>
+		<meta property="og:image" content={imageUrl} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content={imageUrl} />
+	</>
+)}

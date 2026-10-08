@@ -65,7 +65,9 @@ export function SearchForm({ items, value, onChange }: Props) {
 				return;
 			}
 			if (selectedItem.type === 'recipe' && selectedItem.recipe) {
-				globalThis.location.href = `${globalThis.location.origin}/recipes/${selectedItem.recipe.slug}/`;
+				globalThis.location.assign(
+					`${globalThis.location.origin}/recipes/${selectedItem.recipe.slug}/`
+				);
 				return;
 			}
 			onChange(selectedItem.value);

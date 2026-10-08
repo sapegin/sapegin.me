@@ -3,6 +3,7 @@ import { getPhotoUrl } from '../util/getPhotoUrl';
 
 /**
  * Render a Photo object.
+ *
  * - Responsive with max height
  * - Lazy loaded
  * - Fallback to dominant color

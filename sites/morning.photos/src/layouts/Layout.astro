@@ -42,15 +42,13 @@ const getTitle = ({
 		<Page {...Astro.props} {...Astro.props.props}>
 			<slot />
 		</Page>
-		{
-			import.meta.env.PROD && (
-				<script
-					is:inline
-					src="/counter/count.min.js"
-					data-goatcounter="https://morning-photos.goatcounter.com/count"
-					defer
-				/>
-			)
-		}
+		{import.meta.env.PROD && (
+			<script
+				is:inline
+				src="/counter/count.min.js"
+				data-goatcounter="https://morning-photos.goatcounter.com/count"
+				defer
+			/>
+		)}
 	</body>
 </html>

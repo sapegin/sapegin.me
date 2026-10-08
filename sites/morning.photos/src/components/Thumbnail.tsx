@@ -3,6 +3,7 @@ import { getPhotoUrl, type PhotoSize } from '../util/getPhotoUrl';
 
 /**
  * Render a Photo object.
+ *
  * - Basic responsiveness
  * - Lazy loaded
  * - Fallback to dominant color

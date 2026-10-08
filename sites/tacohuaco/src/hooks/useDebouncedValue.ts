@@ -1,29 +1,15 @@
-import { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
- * Debounces the provided value in render.pm Based on
- * https://github.com/amannn/react-hooks/tree/main/packages/use-debounced
+ * Debounces the provided value in render.
  */
 export function useDebouncedValue<T>(value: T, delay = 300) {
-	const [, forceUpdate] = useReducer(() => ({}), {});
-
-	const debouncedValueRef = useRef<T>(value);
-
-	const returnedValue = debouncedValueRef.current;
+	const [debouncedValue, setDebouncedValue] = useState(value);
 
 	useEffect(() => {
-		// When the delay increases, we need to be able to return
-		// the previous value until the new one is applied.
-		const timeoutId = setTimeout(() => {
-			debouncedValueRef.current = value;
-
-			if (value !== returnedValue) {
-				forceUpdate();
-			}
-		}, delay);
-
+		const timeoutId = setTimeout(() => setDebouncedValue(value), delay);
 		return () => clearTimeout(timeoutId);
-	}, [delay, value, returnedValue]);
+	}, [value, delay]);
 
-	return returnedValue;
+	return debouncedValue;
 }

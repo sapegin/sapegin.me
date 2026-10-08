@@ -273,9 +273,10 @@ There might be another condition, like a dependency upgrade, required to complet
  * https://github.com/tailwindlabs/headlessui/issues/1199
  * The clean up is called after the modal is open and when
  * closed.
+ *
  * @todo [headlessui/react@>=2.0.0]: review if the issue is
- * fixed in HeadlessUI, debug in WebDev tools using the 6x
- * CPU slowdown
+ *   fixed in HeadlessUI, debug in WebDev tools using the 6x
+ *   CPU slowdown
  */
 function blockWindowScroll(active) {
   /* … */
@@ -400,9 +401,9 @@ Usage examples are another thing to include in function comments:
  * there is an active authenticated user session
  *
  * @example
- * <AuthenticatedOnly>
- *   <button>Add to favorites</button>
- * </AuthenticatedOnly>
+ *   <AuthenticatedOnly>
+ *     <button>Add to favorites</button>
+ *   </AuthenticatedOnly>;
  */
 function AuthenticatedOnly({ children }) {
   /* … */

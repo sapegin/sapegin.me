@@ -1,9 +1,9 @@
+import { currentYear } from '@shared/util/currentYear';
+
 export function Footer() {
 	return (
 		<footer>
-			<p className="typo-small mb-1">
-				© Artem Sapegin, 1999—{new Date().getFullYear()}
-			</p>
+			<p className="typo-small mb-1">© Artem Sapegin, 1999—{currentYear}</p>
 			<p className="typo-small">
 				Powered by{' '}
 				<a className="link" href="https://astro.build/">

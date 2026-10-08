@@ -1,3 +1,4 @@
+import { currentYear } from '@shared/util/currentYear';
 import { type ReactNode } from 'react';
 
 interface Props {
@@ -17,7 +18,7 @@ export function Footer({ extraFooter }: Props) {
 					Artem Sapegin
 				</a>
 				{', '}
-				{new Date().getFullYear()}
+				{currentYear}
 			</p>
 			<p className="typo-small-ui">
 				Made with The&nbsp;Secret Ingredient™ in&nbsp;miserable Berlin

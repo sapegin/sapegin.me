@@ -143,8 +143,8 @@ I use selectors as the only way to access Redux state in components. So I connec
 
 ```jsx
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as duck from '../duck';
 import FeatureNameLayout from './FeatureNameLayout';
 

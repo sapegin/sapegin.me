@@ -365,7 +365,7 @@ it('should show success page after submission', () => {
 });
 ```
 
-Here we’re using Testing Library’s [findByLabelText()](https://testing-library.com/docs/dom-testing-library/api-queries#bytext) and [findByRole()](https://testing-library.com/docs/dom-testing-library/api-queries#byrole) methods to find elements by their label text or ARIA role. Then we’re using Cypress’ [clear()](https://docs.cypress.io/api/commands/clear.html), [type()](https://docs.cypress.io/api/commands/type.html), [select()](https://docs.cypress.io/api/commands/select.html) and [check()](https://docs.cypress.io/api/commands/check.html) methods to fill the form, and the [click()]() method to submit it by clicking the submit button.
+Here we’re using Testing Library’s [findByLabelText()](https://testing-library.com/docs/dom-testing-library/api-queries#bytext) and [findByRole()](https://testing-library.com/docs/dom-testing-library/api-queries#byrole) methods to find elements by their label text or ARIA role. Then we’re using Cypress’ [clear()](https://docs.cypress.io/api/commands/clear.html), [type()](https://docs.cypress.io/api/commands/type.html), [select()](https://docs.cypress.io/api/commands/select.html) and [check()](https://docs.cypress.io/api/commands/check.html) methods to fill the form, and the [click()](https://docs.cypress.io/api/commands/click.html) method to submit it by clicking the submit button.
 
 ### Testing complex forms
 

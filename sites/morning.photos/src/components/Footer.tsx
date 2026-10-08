@@ -1,10 +1,12 @@
+import { currentYear } from '@shared/util/currentYear';
+
 export function Footer() {
 	return (
 		<footer>
 			<p className="typo-small mb-1">
 				© Artem Sapegin
 				{', '}
-				2004—{new Date().getFullYear()}
+				2004—{currentYear}
 			</p>
 			<p className="typo-small">
 				Powered by{' '}

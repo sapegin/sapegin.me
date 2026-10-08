@@ -39,14 +39,12 @@ function getTitle<P>({
 		<Metatags {...Astro.props} />
 	</head>
 	<body>
-		{
-			Page ? (
-				<Page {...Astro.props.props} {...Astro.props}>
-					<slot />
-				</Page>
-			) : (
+		{Page ? (
+			<Page {...Astro.props.props} {...Astro.props}>
 				<slot />
-			)
-		}
+			</Page>
+		) : (
+			<slot />
+		)}
 	</body>
 </html>

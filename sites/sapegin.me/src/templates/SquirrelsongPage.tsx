@@ -168,7 +168,7 @@ function Features({ codes }: Pick<Props, 'codes'>) {
 									height={446}
 									alt="Squirrelsong light theme for for Chrome"
 									loading="lazy"
-									className="rounded-tl-[12px] rounded-bl-[12px]"
+									className="rounded-l-[12px]"
 								/>
 							</div>
 							<figcaption className="typo-small">

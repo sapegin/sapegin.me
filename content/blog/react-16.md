@@ -130,14 +130,7 @@ class Root extends React.Component {
 
 // Many layers below
 const Header = ({ theme, onThemeToggle }) => (
-  <header
-    className={cx(
-      'header',
-      `
-        header--${theme}
-      `
-    )}
-  >
+  <header className={cx('header', ` header--${theme} `)}>
     ...
     <button onClick={onThemeToggle}>Toggle theme</button>
   </header>
@@ -174,14 +167,7 @@ class ThemeProvider extends React.Component {
 const Header = () => (
   <ThemeContext.Consumer>
     {({ theme, onThemeToggle }) => (
-      <header
-        className={cx(
-          'header',
-          `
-            header--${theme}
-          `
-        )}
-      >
+      <header className={cx('header', ` header--${theme} `)}>
         ...
         <button onClick={onThemeToggle}>Toggle theme</button>
       </header>

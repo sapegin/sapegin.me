@@ -3,7 +3,8 @@
  */
 @utility button {
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	padding: --spacing(2) --spacing(4);
 	font-size: var(--text-ui);
 	font-family: var(--font-ui);
@@ -44,6 +45,7 @@
  * Large button.
  */
 @utility button-large {
+	@apply button;
 	padding: --spacing(4) --spacing(4);
 	font-size: var(--text-lg);
 	border-width: 2px;

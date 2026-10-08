@@ -45,7 +45,7 @@ export function ZinePage({ url, title, issues }: Props) {
 										>
 											Buy now!
 											<span
-												className="typo-body px-2 align-middle text-xs text-inherit"
+												className="px-2 align-middle text-xs text-inherit"
 												aria-hidden="true"
 											>
 												■
