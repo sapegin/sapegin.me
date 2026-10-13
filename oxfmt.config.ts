@@ -3,6 +3,7 @@ import oxfmt from 'oxlint-config-raccoon/oxfmt';
 
 export default defineConfig({
 	...oxfmt,
+	astro: true,
 	ignorePatterns: [
 		'sites/*/.astro/',
 		'sites/*/dist/',

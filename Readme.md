@@ -46,8 +46,8 @@ npm run build:morning
 ### Lint & test
 
 ```bash
-npm run lint:js          # ESLint
-npm test                 # Astro check → lint → prettier format
+npm run lint          # Lint
+npm test              # Astro check + lint
 ```
 
 ### Netlify

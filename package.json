@@ -19,9 +19,9 @@
     "check:sapegin": "astro check --root ./sites/sapegin.me",
     "check:morning": "astro check --root ./sites/morning.photos",
     "check:tacohuaco": "astro check --root ./sites/tacohuaco",
-    "lint:js": "oxlint",
-    "lint:fix": "oxlint --fix && oxfmt --write && prettier --write \"sites/**/*.astro\"",
-    "test": "npm run check:sapegin && npm run check:morning && npm run check:tacohuaco && npm run lint:js",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "test": "npm run check:sapegin && npm run check:morning && npm run check:tacohuaco && npm run lint",
     "sync:book": "node --experimental-strip-types scripts/sync-book.ts",
     "sync:squirrelsong": "node --experimental-strip-types scripts/sync-squirrelsong.ts",
     "sync:sapegin": "npm run sync:book && npm run sync:squirrelsong",
@@ -66,7 +66,8 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
-    "@oxlint/plugins": "1.87.0",
+    "@astrojs/compiler-rs": "0.5.1",
+    "@oxlint/plugins": "1.88.0",
     "@types/lunr": "2.3.7",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "24.19.1",
@@ -74,19 +75,16 @@
     "@types/sanitize-html": "^2.16.1",
     "husky": "^9.1.7",
     "nano-staged": "1.0.2",
-    "oxfmt": "0.72.0",
-    "oxlint": "1.87.0",
-    "oxlint-config-raccoon": "10.9.0",
-    "oxlint-tailwindcss": "1.14.0",
-    "oxlint-tsgolint": "7.0.2003",
-    "prettier": "3.9.9",
-    "prettier-plugin-astro": "1.1.0",
+    "oxfmt": "0.73.0",
+    "oxlint": "1.88.0",
+    "oxlint-config-raccoon": "10.10.0",
+    "oxlint-tailwindcss": "1.16.0",
+    "oxlint-tsgolint": "7.0.2004",
     "typescript": "6.0.3",
     "vitest": "5.0.3"
   },
   "nano-staged": {
-    "*.{js,cjs,mjs,ts,tsx,css,json,md}": "oxfmt --no-error-on-unmatched-pattern",
-    "*.astro": "prettier --write",
+    "*.{js,cjs,mjs,ts,tsx,css,json,md,astro}": "oxfmt --no-error-on-unmatched-pattern",
     "*.{js,cjs,mjs,ts,tsx,astro}": "oxlint --fix"
   },
   "browserslist": [
@@ -100,11 +98,8 @@
   },
   "packageManager": "npm@11.11.0",
   "allowScripts": {
-    "esbuild@0.27.7": true,
-    "esbuild@0.28.2": true,
-    "fsevents@2.3.3": true,
-    "fsevents@1.2.13": true,
-    "sharp@0.34.4": true,
-    "sharp@0.34.5": true
+    "esbuild": true,
+    "fsevents": true,
+    "sharp": true
   }
 }

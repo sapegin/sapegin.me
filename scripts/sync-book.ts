@@ -414,7 +414,7 @@ ${chapterContents}
 
 console.log('[BOOK] Formatting...');
 
-execSync(`prettier --log-level warn --write "${BLOG_CONTENT_DIR}/**/*.md"`);
-execSync(`prettier --log-level warn --write "${BOOK_CONTENT_DIR}/**/*.md"`);
+execSync(`oxfmt --write "${BLOG_CONTENT_DIR}/**/*.md"`);
+execSync(`oxfmt --write "${BOOK_CONTENT_DIR}/**/*.md"`);
 
 console.log('[BOOK] Done 🦜');
