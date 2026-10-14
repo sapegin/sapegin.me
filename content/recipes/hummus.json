@@ -12,19 +12,15 @@
     "winter"
   ],
   "description": "Homemade hummus is way creamier and brighter than anything you’ll find in a store. It takes a little planning ahead to soak the chickpeas, but the result is totally worth it. With plenty of lime, tahini, and good olive oil, this recipe gives you a smooth, fresh dip that tastes amazing with warm bread or lavash.",
-  "imageUrl": "/images/recipes/hummus.avif",
-  "thumbnailUrl": "/images/recipes/hummus_thumb.avif",
-  "ingredients": "- 100 g dry chickpeas\n- 1 clove garlic\n- 30 g tahini paste\n- 1 lime\n  *zest and juice*\n- 30-50 g olive oil\n- salt\n- freshly-ground black pepper",
-  "steps": "1. Soak the chickpeas in water overnight.\n2. Discard the soaking water, and cook the chickpeas in fresh water and a generous amount of salt. Bring to a boil, then reduce the heat to medium-low and cook until very tender, for 40-60 minutes.\n3. While the chickpeas are cooking, peel and roughly chop the garlic.\n4. When the chickpeas are cooked, discard the water.\n5. In a food processor or a mixer, put the chickpeas, tahini paste, zest and juice of a lime, and olive oil (start with half of the amount).\n6. Mix until you have a uniform paste.\n7. Add more lime juice or olive oil if the hummus is too dry. Season with salt and black pepper.",
+  "ingredients": "- 200 g dry chickpeas\n- 2 cloves garlic\n- 60 g tahini paste\n- 2–3 limes *(zest and juice)*\n- 1 teaspoon cumin seeds\n- 30–50 g olive oil\n- salt\n- freshly ground black pepper",
+  "steps": "1. Soak the chickpeas in water overnight.\n2. Drain the soaking water. In a large pot, cover the chickpeas with fresh water and add a generous amount of salt. Bring to a boil, then reduce the heat to medium-low and simmer until the chickpeas are very soft and starting to fall apart, for 45–75 min (old or dry chickpeas may need even more time to fall apart).\n3. While the chickpeas cook, peel and thinly slice the garlic. In a small bowl, combine the garlic and the juice of 1 lime, and let soak for 10–20 min.\n4. Reserve about 200 ml of the cooking water, then drain the chickpeas.\n5. In a food processor, combine the warm chickpeas, the garlic in lime juice, the zest and juice of the remaining limes, 1 teaspoon cumin seeds, salt, and black pepper. Add 3–4 tablespoons of the reserved cooking water. Process until completely smooth.\n6. Add the tahini paste. Process until the hummus is creamy and pale.\n7. With the processor running, drizzle in the olive oil, starting with about half the amount. Thin with more reserved cooking water if the hummus is too thick; add more oil only if you need it.\n8. Taste, and adjust salt, lime, pepper, water, or oil.",
   "keywords": [
     "Humus",
     "Houmous",
     "Хумус"
   ],
-  "notes": "The amounts of ingredients are average and depend on the quality of ingredients, and the age of the chickpeas. You need to taste the hummus and adjust the amounts every time.",
   "overnight": true,
   "time": "1.5 hours",
   "tools": "* blender or food processor",
-  "yields": "750 ml",
   "usedBy": []
 }

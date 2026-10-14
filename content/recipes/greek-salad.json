@@ -1,0 +1,23 @@
+{
+  "slug": "greek-salad",
+  "createdAt": "2026-10-14",
+  "title": "Greek salad",
+  "tags": [
+    "autumn",
+    "greek-cuisine",
+    "picnics",
+    "salads",
+    "summer"
+  ],
+  "description": "This is our default base for summer lunches, often combined with fish or chicken: fast to make and doesn’t involve any heating. And it’s utterly delicious when the vegetables are in season.\n\nOur version uses lime instead of lemon, and cubed Feta cheese instead of the more traditional huge-slab-on-top style.",
+  "ingredients": "### For the salad\n* tomatoes\n* cucumbers\n* 1/2 red onion\n* Feta cheese\n* olives\n### For the dressing\n* olive oil\n* lime juice\n* oregano\n* salt",
+  "steps": "1. Prepare the vegetables:\n\t- **Tomatoes:** halve, remove core, and cut into wedges. **Cucumbers:** partially peel to make a striped pattern, remove the ends, halve lengthwise, and cut into large half-moons.\n\t- **Onion:** halve, and thinly slice.\n2. Soak the onion in water to make it less strong (you can also add a bit of vinegar).\n3. Cut Feta cheese into 3 cm cubes.\n4. Prepare the dressing:\n\t1. Combine olive oil, lime juice, and salt using an immersion blender.\n\t2. Add oregano.\n5. Mix everything together: tomatoes, cucumbers, onion (discard the water), Feta cheese, olives, and the dressing.",
+  "keywords": [
+    "Греческий салат"
+  ],
+  "overnight": false,
+  "time": "20 min",
+  "tools": "* immersion blender",
+  "source": "This recipe is based on The Mediterranean Dish’s [Traditional Greek Salad](https://www.themediterraneandish.com/traditional-greek-salad-recipe/).",
+  "usedBy": []
+}

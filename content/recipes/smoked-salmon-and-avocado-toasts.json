@@ -11,14 +11,12 @@
     "summer"
   ],
   "description": "This is one of our favorite weekend breakfasts, especially in summer when it’s too hot for a warm meal. It’s quick, fresh, and satisfying. You can use any good bread you like as the base, and the rest comes together in just a few minutes (as long as you don’t forget to soak the onion some 20 minutes in advance).",
-  "imageUrl": "/images/recipes/smoked-salmon-and-avocado-toasts.avif",
-  "thumbnailUrl": "/images/recipes/smoked-salmon-and-avocado-toasts_thumb.avif",
-  "ingredients": "- 1/2 red onion\n- 1 avocado\n- 1/2 lime\n  *juice*\n- 1 few sprigs dill\n- 6 slices bread\n- 150 g smoked salmon\n- salt\n- freshly ground black pepper",
-  "steps": "1. **Prepare the onion:** peel and thinly slice the onion. Soak it in water for at least 20 minutes. This will make it taste milder and much nicer to eat.\n2. **Prepare the avocado:** peel the avocado, remove stone, and smash it using a fork (or a small masher). Juice lime, season with a bit of salt (don’t put too much, as the salmon is salty). Thoroughly mix everything.\n3. **Prepare the dill:** remove the thick stems and roughly chop.\n4. **Prepare the bread:** Slice the bread and toast in air fryer for about 5 minutes.\n5. **Prepare the toasts:** spread the avocado over each slice of bread, put a few slices of salmon on top, a few pieces of onion, dill, and freshly ground black pepper.",
+  "ingredients": "- 1/2 red onion\n- 1 avocado\n- 1/2 lime\n  *juice*\n- 1–2 sprigs dill\n- bread\n- 150 g smoked salmon\n- salt\n- freshly ground black pepper",
+  "steps": "1. **Prepare the onion:** peel and thinly slice the onion. Soak it in water for at least 20 min. This will make it taste milder and much nicer to eat.\n2. **Prepare the avocado:** peel the avocado, remove the pit, and smash it using a fork (or a small masher) in a medium shallow bowl. Juice the lime, season with a bit of salt (don’t put too much, as the salmon is salty). Thoroughly mix everything.\n3. **Prepare the dill:** remove the thick stems and roughly chop.\n4. **Prepare the bread:** Slice the bread and toast in the air fryer or toaster.\n5. **Prepare the toasts:** spread the avocado over each slice of bread, put a few slices of salmon on top, a few pieces of onion (discard the water), dill, and freshly ground black pepper.",
   "keywords": [],
-  "notes": "Pairs well with [Feta olive salad](/recipes/feta-olive-salad/).",
   "overnight": false,
   "time": "30 min",
+  "tools": "- air fryer or toaster",
   "yields": "3 portions",
   "usedBy": []
 }

@@ -14,14 +14,12 @@
     "winter"
   ],
   "description": "Yet another way of cooking potatoes: moderately spicy, and rich in flavors of bell peppers.",
-  "imageUrl": "/images/recipes/spanish-peasant-potatoes.avif",
-  "thumbnailUrl": "/images/recipes/spanish-peasant-potatoes_thumb.avif",
-  "ingredients": "- 1.5 kg floury potatoes\n- 250 g bacon\n- 1 red bell pepper\n- 1 green bell pepper\n- 2 chiles\n- 1 onion\n- 6 cloves garlic\n- olive oil\n- salt\n- coriander seeds\n- fennel seeds\n- parsley\n  *for serving*",
-  "steps": "1. Pre-cook potatoes: Cut potatoes into large chunks. Boil in salted water for ~15 min until *almost tender*, or air-fry at 200°C for ~18 min with olive oil and salt. Drain well and let dry completely.\n2. Prepare the vegetables:\n\t- **Onion:** peel, halve, slice into 1/2 cm slices. **Chile:** remove seeds and stem, slice thinly. **Garlic:** crush and peel. **Bell peppers:** remove core and seeds, cut into 1/2 cm strips.\n3. In a large skillet or Dutch oven, cook bacon over medium heat until crispy. Remove bacon and set aside, leaving fat in the pan.\n4. Add potatoes to the hot bacon fat. Fry over medium-high heat, spreading them out as much as possible. Let them sit undisturbed at first, then stir occasionally. Continue until: bottoms develop light golden browning, potatoes release easily from the pan, sizzle becomes more dry and sharp (less watery steam).\n5. Add coriander and fennel seeds. Stir and cook for about 1 minute until fragrant.\n6. Add the bacon, onion, garlic, chile, and bell peppers. Stir and cook until onion becomes translucent but still structured.\n7. Adjust salt to taste.\n8. Serve sprinkled with chopped parsley.",
+  "ingredients": "- 1.5 kg floury potatoes\n- 250 g bacon\n- 1 onion\n- 2 chiles\n- 6 cloves garlic\n- 1 red bell pepper\n- 1 green bell pepper\n- olive oil\n- salt\n- coriander seeds\n- fennel seeds\n- parsley *(for serving)*",
+  "steps": "1. Pre-cook potatoes: Cut potatoes into large chunks, toss with olive oil and salt so all the potatoes are coated in oil. Air-fry at 200°C for ~18 min.\n2. Cut the bacon in 1/2 strips.\n3. Prepare the vegetables:\n\t- **Onion:** peel, halve, slice into 1/2 cm slices. **Chile:** remove seeds and stem, slice thinly. **Garlic:** crush and peel. **Bell peppers:** remove core and seeds, cut into 1/2 cm strips.\n4. In Dutch oven over medium heat, cook bacon until crispy. Remove bacon and set aside, leaving fat in the Dutch oven.\n5. Add potatoes to the hot bacon fat. Fry over medium-high heat, spreading them out as much as possible. Let them sit undisturbed at first, then stir occasionally. Continue until: bottoms develop light golden browning, potatoes release easily from the Dutch oven, sizzle becomes more dry and sharp (less watery steam).\n6. Add coriander and fennel seeds. Stir and cook for about 1 min until fragrant.\n7. Add the bacon, onion, chile, garlic, and bell peppers. Stir and cook until onion becomes translucent but still structured.\n8. Adjust salt to taste.\n9. Serve sprinkled with chopped parsley.",
   "keywords": [],
   "overnight": false,
-  "time": "60 min",
-  "tools": "* very large skillet or Dutch oven",
+  "time": "1 hour",
+  "tools": "* air fryer\n* Dutch oven",
   "yields": "4 portions",
   "source": "This recipe is based on [Spanish poor man’s potatoes recipe](https://spainonafork.com/spanish-poor-mans-potatoes-one-of-spains-most-iconic-dishes/) by Spain on a Fork.",
   "usedBy": []

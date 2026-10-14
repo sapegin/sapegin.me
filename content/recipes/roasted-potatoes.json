@@ -1,0 +1,22 @@
+{
+  "slug": "roasted-potatoes",
+  "createdAt": "2026-10-14",
+  "title": "Roasted potatoes",
+  "tags": [
+    "air-fryer",
+    "autumn",
+    "food",
+    "potatoes",
+    "spring",
+    "summer",
+    "winter"
+  ],
+  "description": "The most simple potato recipe you can imagine, but still delicious. Can be consumed on its own or used as a base for other recipes, such as the immigrant breakfast.",
+  "ingredients": "* potatoes\n* olive oil\n* coriander seeds\n* cumin seeds\n* fennel seeds\n* salt",
+  "steps": "1. Scrub the potatoes, and cut into wedges.\n2. In a large bowl, put the potatoes, add olive oil, crushed coriander, cumin and fennel seeds, salt. Thoroughly mix everything, so the potatoes are coated with olive oil and spices.\n3. Roast in the air fryer at 200°C for about 30 min. Shake halfway through.",
+  "keywords": [],
+  "overnight": false,
+  "time": "40 min",
+  "tools": "* air fryer",
+  "usedBy": []
+}
