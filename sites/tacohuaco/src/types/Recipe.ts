@@ -4,7 +4,6 @@ export interface RecipeFragment {
 	overnight: boolean;
 	slug: string;
 	tags: string[];
-	thumbnailUrl?: string;
 	time?: string;
 	title: string;
 	titleEnglish?: string;
@@ -12,7 +11,6 @@ export interface RecipeFragment {
 
 export interface Recipe extends RecipeFragment {
 	description?: string;
-	imageUrl?: string;
 	ingredients: string;
 	notes?: string;
 	source?: string;

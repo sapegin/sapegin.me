@@ -6,6 +6,7 @@ import { RecipeBody } from '../../components/RecipeBody';
 import Layout from '../../layouts/Layout.astro';
 import { RecipePage } from '../../templates/RecipePage';
 import { type Recipe, type RecipeFragment } from '../../types/Recipe';
+import { getRecipeThumbnailUrl } from '../../util/recipeImages';
 
 export async function getStaticPaths() {
 	const entries = await getCollection('recipes');
@@ -71,7 +72,7 @@ const relatedRecipes = getRelatedRecipes(allRecipes, recipe);
 	title={recipe.title}
 	pageTitle={`${recipe.title} recipe by Tacohuaco`}
 	description={recipe.description}
-	image={recipe.thumbnailUrl}
+	image={getRecipeThumbnailUrl(recipe.slug)}
 >
 	<RecipePage
 		url={url}

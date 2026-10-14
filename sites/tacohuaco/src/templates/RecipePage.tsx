@@ -3,6 +3,7 @@ import { Markdown } from '../components/Markdown';
 import { RecipeList } from '../components/RecipeList';
 import { RecipeMeta } from '../components/RecipeMeta';
 import { type Recipe, type RecipeFragment } from '../types/Recipe';
+import { getRecipeImageUrl } from '../util/recipeImages';
 import { Page } from './Page';
 
 type Props = Recipe & {
@@ -15,7 +16,7 @@ type Props = Recipe & {
 export function RecipePage(props: Props) {
 	const {
 		url,
-		imageUrl,
+		slug,
 		keywords,
 		title,
 		titleEnglish,
@@ -47,7 +48,7 @@ export function RecipePage(props: Props) {
 					{keywords.length > 0 && (
 						<span className="sr-only">Keywords: {keywords.join(', ')}</span>
 					)}
-					{imageUrl && <img src={imageUrl} alt="" />}
+					<img src={getRecipeImageUrl(slug)} alt="" />
 					{children}
 					{madeWithRecipes.length > 0 && (
 						<div className="flex flex-col gap-4">

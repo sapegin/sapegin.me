@@ -8,7 +8,6 @@ import { type RecipeFragment } from '../types/Recipe';
 const entries = await getCollection('recipes');
 const recipes: RecipeFragment[] = entries.map(({ data }) => ({
 	createdAt: data.createdAt,
-	thumbnailUrl: data.thumbnailUrl,
 	keywords: data.keywords,
 	overnight: data.overnight,
 	slug: data.slug,
