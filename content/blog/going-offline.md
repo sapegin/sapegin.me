@@ -104,7 +104,7 @@ I was always disappointed in social networks. During the past 20 years, I’ve t
 
 However, I kept trying until I read Cal Newport’s book [Digital minimalism](https://www.calnewport.com/books/digital-minimalism/). This book made me rethink what I was doing, I stopped using Facebook and reduced my feeds on other social networks.
 
-I’ve tried many places to share my photography: 500px, [Instagram](http://instagram.com/sapegin/), [Unsplash](https://unsplash.com/@sapegin), and ended up buying photography books and publishing [my own photo zine](https://morning.photos/zine/). And [my site](https://morning.photos/) now is the only place to see my photos online.
+I’ve tried many places to share my photography: 500px, Instagram, [Unsplash](https://unsplash.com/@sapegin), and ended up buying photography books and publishing [my own photo zine](https://morning.photos/zine/). And [my site](https://morning.photos/) now is the only place to see my photos online.
 
 ![My photography zine](/images/blog/zine.jpg)
 
