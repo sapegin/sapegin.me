@@ -20,5 +20,8 @@
   "tools": "* mixer\n* 20x20 cm baking tray",
   "yields": "1 tray",
   "source": "This recipe is based on Paul Hollywood’s book “How to Bake”.",
-  "usedBy": []
+  "usedBy": [],
+  "width": 1428,
+  "height": 2048,
+  "color": "#c8c8b8"
 }

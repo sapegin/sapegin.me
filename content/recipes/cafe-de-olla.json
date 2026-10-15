@@ -19,5 +19,8 @@
   "overnight": false,
   "time": "10 min",
   "yields": "500 ml",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1459,
+  "color": "#483828"
 }

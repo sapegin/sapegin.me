@@ -21,5 +21,8 @@
   "time": "100 min",
   "tools": "* mixer\n* rolling pin\n* oven",
   "yields": "1 tray",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1459,
+  "color": "#382828"
 }

@@ -26,5 +26,8 @@
   "tools": "* mixer\n* blender\n* round baking form (about 20 cm)\n* 2 deep dishes (larger than the baking form)",
   "yields": "1 cake",
   "source": "This recipe is based on [Pastel de tres leches](https://thesweetmolcajete.com/pastel-de-tres-leches/) by Michelle Chavez.",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1425,
+  "color": "#382828"
 }

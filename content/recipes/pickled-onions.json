@@ -18,5 +18,8 @@
   "usedBy": [
     "cochinita-pibil-tacos",
     "tacos-al-pastor"
-  ]
+  ],
+  "width": 2048,
+  "height": 1460,
+  "color": "#281818"
 }

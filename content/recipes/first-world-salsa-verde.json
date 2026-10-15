@@ -25,5 +25,8 @@
   "usedBy": [
     "burgers",
     "tacos-al-pastor"
-  ]
+  ],
+  "width": 2047,
+  "height": 1562,
+  "color": "#584838"
 }

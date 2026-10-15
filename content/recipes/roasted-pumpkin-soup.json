@@ -20,5 +20,8 @@
   "tools": "* oven\n* blender",
   "yields": "6 portions",
   "source": "This recipe is based on J. Kenji Lopez-Alt’s book “The Food Lab: Better Home Cooking Through Science”.",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1571,
+  "color": "#584838"
 }

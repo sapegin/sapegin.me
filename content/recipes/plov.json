@@ -26,5 +26,8 @@
   "tools": "* dutch oven",
   "yields": "6 portions",
   "source": "This recipe was inspired by the recipes in Hakim Ganiev’s “Plov” book.",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1660,
+  "color": "#383838"
 }

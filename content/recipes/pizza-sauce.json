@@ -16,5 +16,8 @@
   "time": "10 min",
   "tools": "* blender",
   "yields": "200 ml",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1808,
+  "color": "#282838"
 }

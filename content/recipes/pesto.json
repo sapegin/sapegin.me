@@ -15,5 +15,8 @@
   "time": "10 min",
   "tools": "* blender or food processor",
   "yields": "100 ml",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1716,
+  "color": "#383828"
 }

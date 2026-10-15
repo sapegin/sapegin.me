@@ -25,5 +25,8 @@
   "usedBy": [
     "bibimbap",
     "kimchi-lava-soup"
-  ]
+  ],
+  "width": 2048,
+  "height": 1536,
+  "color": "#384868"
 }

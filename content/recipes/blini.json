@@ -23,5 +23,8 @@
   "tools": "* mixer\n* pancake pan\n* wide pot with cover",
   "yields": "12 blini",
   "source": "This recipe is adapted from Artem’s grandma recipe.",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1638,
+  "color": "#c88888"
 }

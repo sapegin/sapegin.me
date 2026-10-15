@@ -20,5 +20,8 @@
   "overnight": false,
   "time": "30 min",
   "yields": "2 portions",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1797,
+  "color": "#282828"
 }

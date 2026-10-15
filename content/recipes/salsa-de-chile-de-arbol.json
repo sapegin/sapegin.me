@@ -22,5 +22,8 @@
   "usedBy": [
     "pozole",
     "tacos-dorados"
-  ]
+  ],
+  "width": 2048,
+  "height": 1329,
+  "color": "#182828"
 }

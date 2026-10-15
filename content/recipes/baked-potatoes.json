@@ -21,5 +21,8 @@
   "overnight": false,
   "time": "120 min",
   "tools": "* oven\n* foil",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1536,
+  "color": "#b8a898"
 }

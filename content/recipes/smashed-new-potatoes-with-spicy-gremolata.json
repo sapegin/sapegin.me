@@ -20,5 +20,8 @@
   "time": "60 min",
   "tools": "* oven\n* baking tray",
   "yields": "2 portions",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1365,
+  "color": "#181818"
 }

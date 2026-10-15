@@ -20,5 +20,8 @@
   "overnight": false,
   "time": "45 min",
   "yields": "6 hot dogs",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1647,
+  "color": "#b8b8b8"
 }

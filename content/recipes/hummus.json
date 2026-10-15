@@ -22,5 +22,8 @@
   "overnight": true,
   "time": "1.5 hours",
   "tools": "* blender or food processor",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1463,
+  "color": "#282828"
 }

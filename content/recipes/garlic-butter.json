@@ -17,5 +17,8 @@
   "source": "This recipe is based on a [garlic bread recipe](https://www.youtube.com/watch?v=FkV_fU5GoXM) by Joshua Weissman.",
   "usedBy": [
     "garlic-bread"
-  ]
+  ],
+  "width": 2048,
+  "height": 1808,
+  "color": "#583828"
 }

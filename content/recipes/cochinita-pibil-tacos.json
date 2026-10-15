@@ -21,5 +21,8 @@
   "overnight": false,
   "time": "400 min",
   "yields": "30 tacos",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1608,
+  "color": "#d8d8d8"
 }

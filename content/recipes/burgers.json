@@ -22,5 +22,8 @@
   "time": "40 min",
   "tools": "* two medium skillets (one with lid)",
   "yields": "3 burgers",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1365,
+  "color": "#282828"
 }

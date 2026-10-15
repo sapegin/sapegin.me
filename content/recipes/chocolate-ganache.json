@@ -19,5 +19,8 @@
   "usedBy": [
     "chocolate-granola-bars",
     "triple-layer-chocolate-cake"
-  ]
+  ],
+  "width": 2048,
+  "height": 1366,
+  "color": "#582828"
 }

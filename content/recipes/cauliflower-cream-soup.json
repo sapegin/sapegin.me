@@ -17,5 +17,8 @@
   "time": "60 min",
   "tools": "* blender or food processor\n* oven",
   "yields": "2 portions",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 2048,
+  "color": "#181818"
 }

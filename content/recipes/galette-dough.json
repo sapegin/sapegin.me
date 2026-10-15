@@ -18,5 +18,8 @@
   "tools": "* food processor\n* oven\n* container with a lid, about 15x20 cm\n* baking paper",
   "yields": "1 cake",
   "source": "This recipe is based on Athena Calderone’s “Cook Beautiful” book.",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1462,
+  "color": "#e8e8e8"
 }

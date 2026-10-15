@@ -23,5 +23,8 @@
   ],
   "overnight": false,
   "time": "1.5 hours",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1537,
+  "color": "#384848"
 }

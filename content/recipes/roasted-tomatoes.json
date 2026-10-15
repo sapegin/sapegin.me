@@ -19,5 +19,8 @@
   "tools": "* oven",
   "yields": "2 portions",
   "source": "This recipe is based on a recipe from Suzanne Lenzer’s book “Graze”.",
-  "usedBy": []
+  "usedBy": [],
+  "width": 2048,
+  "height": 1674,
+  "color": "#485858"
 }
