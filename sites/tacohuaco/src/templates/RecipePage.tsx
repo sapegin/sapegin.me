@@ -1,9 +1,9 @@
 import { type ReactNode } from 'react';
 import { Markdown } from '../components/Markdown';
+import { RecipeImage } from '../components/RecipeImage';
 import { RecipeList } from '../components/RecipeList';
 import { RecipeMeta } from '../components/RecipeMeta';
 import { type Recipe, type RecipeFragment } from '../types/Recipe';
-import { getRecipeImageUrl } from '../util/recipeImages';
 import { Page } from './Page';
 
 type Props = Recipe & {
@@ -17,6 +17,9 @@ export function RecipePage(props: Props) {
 	const {
 		url,
 		slug,
+		width,
+		height,
+		color,
 		keywords,
 		title,
 		titleEnglish,
@@ -48,7 +51,13 @@ export function RecipePage(props: Props) {
 					{keywords.length > 0 && (
 						<span className="sr-only">Keywords: {keywords.join(', ')}</span>
 					)}
-					<img src={getRecipeImageUrl(slug)} alt="" />
+					<RecipeImage
+						variant="hero"
+						slug={slug}
+						width={width}
+						height={height}
+						color={color}
+					/>
 					{children}
 					{madeWithRecipes.length > 0 && (
 						<div className="flex flex-col gap-4">

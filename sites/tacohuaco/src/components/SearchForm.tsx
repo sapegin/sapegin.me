@@ -2,7 +2,7 @@ import { useCombobox } from 'downshift';
 import { matchSorter } from 'match-sorter';
 import { type SubmitEventHandler, useSyncExternalStore } from 'react';
 import { type AutocompleteItem } from '../hooks/useSearch';
-import { getRecipeThumbnailUrl } from '../util/recipeImages';
+import { RecipeImage } from './RecipeImage';
 
 const MAX_ITEMS_TO_SHOW = 12;
 
@@ -105,12 +105,13 @@ export function SearchForm({ items, value, onChange }: Props) {
 								if (item.type === 'recipe' && item.recipe) {
 									return (
 										<ItemContainer key={item.value} isHighlighted={hl} {...ip}>
-											<div className="bg-light size-9 shrink-0">
-												<img
-													src={getRecipeThumbnailUrl(item.recipe.slug)}
-													alt=""
-													loading="lazy"
-													className="size-full object-cover"
+											<div className="bg-light size-9 shrink-0 overflow-hidden">
+												<RecipeImage
+													variant="mini-thumbnail"
+													slug={item.recipe.slug}
+													width={item.recipe.width}
+													height={item.recipe.height}
+													color={item.recipe.color}
 												/>
 											</div>
 											<div className="flex flex-col">

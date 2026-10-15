@@ -1,5 +1,7 @@
 export interface RecipeFragment {
+	color: string;
 	createdAt: Date;
+	height: number;
 	keywords: string[];
 	overnight: boolean;
 	slug: string;
@@ -7,6 +9,7 @@ export interface RecipeFragment {
 	time?: string;
 	title: string;
 	titleEnglish?: string;
+	width: number;
 }
 
 export interface Recipe extends RecipeFragment {
