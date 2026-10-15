@@ -3,7 +3,7 @@ import { type RecipeFragment } from '../types/Recipe';
 import { getRecipeImageUrl, getRecipeThumbnailUrl } from '../util/recipeImages';
 
 type Props = Pick<RecipeFragment, 'slug' | 'width' | 'height' | 'color'> & {
-	variant: 'hero' | 'thumbnail' | 'mini-thumbnail';
+	variant: 'hero' | 'thumbnail' | 'square-thumbnail';
 	className?: string;
 };
 
@@ -33,7 +33,7 @@ export function RecipeImage({
 			className={clsx(
 				variant === 'hero' ? 'h-auto max-w-full' : 'block w-full object-cover',
 				variant === 'thumbnail' && 'aspect-9/6',
-				variant === 'mini-thumbnail' && 'aspect-1/1',
+				variant === 'square-thumbnail' && 'aspect-1/1',
 				className
 			)}
 			style={{ backgroundColor: color }}

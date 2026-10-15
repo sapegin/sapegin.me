@@ -107,7 +107,7 @@ export function SearchForm({ items, value, onChange }: Props) {
 										<ItemContainer key={item.value} isHighlighted={hl} {...ip}>
 											<div className="bg-light size-9 shrink-0 overflow-hidden">
 												<RecipeImage
-													variant="mini-thumbnail"
+													variant="square-thumbnail"
 													slug={item.recipe.slug}
 													width={item.recipe.width}
 													height={item.recipe.height}
